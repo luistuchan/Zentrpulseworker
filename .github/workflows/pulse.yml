@@ -1,0 +1,38 @@
+
+name: ZENTR Pulse Worker
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 9,15,21 * * *'
+
+permissions:
+  contents: read
+
+jobs:
+  process-videos:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Get project files
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Run ZENTR Pulse worker
+        run: python worker.py
+
+      - name: Save processed videos
+        uses: actions/upload-artifact@v4
+        with:
+          name: zentr-pulse-videos
+          path: output/
+          if-no-files-found: warn
