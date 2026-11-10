@@ -12,6 +12,7 @@ permissions:
 jobs:
   process-videos:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
 
     steps:
       - name: Get project files
@@ -24,15 +25,28 @@ jobs:
 
       - name: Install FFmpeg
         run: |
-          sudo apt-get update
-          sudo apt-get install -y ffmpeg
+          if ! command -v ffmpeg >/dev/null 2>&1; then
+            sudo apt-get update
+            sudo apt-get install -y ffmpeg
+          fi
 
       - name: Run ZENTR Pulse worker
         run: python worker.py
 
+      - name: Save viral research reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: zentr-pulse-viral-radar
+          path: output/research/
+          if-no-files-found: warn
+          retention-days: 30
+
       - name: Save processed videos
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: zentr-pulse-videos
-          path: output/
-          if-no-files-found: warn
+          path: output/*.mp4
+          if-no-files-found: ignore
+          retention-days: 7
