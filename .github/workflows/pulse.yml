@@ -33,6 +33,15 @@ jobs:
       - name: Run ZENTR Pulse worker
         run: python worker.py
 
+      - name: Display ZENTR Viral Radar
+        if: always()
+        run: |
+          if [ -f output/research/viral_radar.md ]; then
+            cat output/research/viral_radar.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "No research report generated." >> "$GITHUB_STEP_SUMMARY"
+          fi
+
       - name: Save viral research reports
         if: always()
         uses: actions/upload-artifact@v4
