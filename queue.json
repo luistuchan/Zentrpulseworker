@@ -77,9 +77,20 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T06:30:42.832130+00:00",
       "id": "d1681e7170342a68",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-14T06:30:43.880314+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "youtube_signal": {
+        "status": "discovery_only",
+        "examples": [
+          {
+            "title": "Gene that guides earliest social behaviors could be key to understanding autism",
+            "url": "https://www.youtube.com/watch?v=DEFla-Y-v2Q"
+          }
+        ],
+        "note": "Search matches do not establish popularity or permission to reuse footage."
+      },
+      "blocker": "Need two readable source URLs; RSS/YouTube links alone are insufficient. Google News discovery link did not resolve to a publisher article"
     },
     "9f0e6db268e93a0c": {
       "title": "Why Live ‘Unplugged’ Versions of Old Hits Keep Finding New Audiences - That Eric Alper",
@@ -168,6 +179,6 @@
   },
   "budget": {
     "day": "2026-11-14",
-    "youtube": 2
+    "youtube": 3
   }
 }
