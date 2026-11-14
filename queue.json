@@ -1,0 +1,140 @@
+{
+  "schema_version": 3,
+  "jobs": {
+    "c32fb0cbf637ee8b": {
+      "title": "Who Is 'French Midas'? The Viral 'Fortnite' Cosplayer Dancing At Protests In France And Spawning Memes Explained - Know Your Meme",
+      "category": "culture",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi8AFBVV95cUxNd3pfZ0RwMlhNUVhld050YU95Y0gtWHdOWjhoMW13THdna1ZUVWdma2lUMXQtZEZ4UFpKUDE0Um05YnZkUlQzZ2VPbWNoRHhzWGdGSWRTUzlSR1N4a3YzNG00dE82RkFDYjFGRmtmVEdtSEVfTkhPU2VjNXo1djRJSEZucDNJanBmNkN6aTB4SGpSeEo1OUZ6WVIzX3hWUGpyRXFZa3FiNElmc2xGQ0lLVU5kNDVQTDJyeVExM0xJQVhaZm93eUVmMTRKeUc3dFF3TE0xT2hWWjFjeDBHdGFidVpwU2N3OWplYU5sRmdaakw?oc=5"
+      ],
+      "content_type": "explainer",
+      "headline_score": 1,
+      "discovered_at": "2026-11-14T06:30:42.533697+00:00",
+      "id": "c32fb0cbf637ee8b",
+      "status": "HOLD",
+      "created_at": "2026-11-14T06:30:43.879714+00:00",
+      "attempts": 1,
+      "youtube_signal": {
+        "status": "discovery_only",
+        "examples": [
+          {
+            "title": "French moroccan Fortnite Midas dancing during french riot 17 of october 2026 #foryou #trending",
+            "url": "https://www.youtube.com/watch?v=3gWKMAnjl5k"
+          },
+          {
+            "title": "France Got the Whole Multiverse 😭✌️",
+            "url": "https://www.youtube.com/watch?v=U6PJxgQMBHw"
+          },
+          {
+            "title": "Why is chamber in France 👀 #fortnite #midas #trending  #sub  #viral",
+            "url": "https://www.youtube.com/watch?v=aRi7MEmUyvs"
+          }
+        ],
+        "note": "Search matches do not establish popularity or permission to reuse footage."
+      },
+      "blocker": "Need two readable source URLs; RSS/YouTube links alone are insufficient. Source text missing, too short, or blocked"
+    },
+    "eaad4f96e7f14af7": {
+      "title": "University of Manchester Researchers Launch Podcast Exploring the Process of Scientific Discovery - Bioengineer.org",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMivwFBVV95cUxPSl9HYU5tbi1WT2NyRE1mVkVDdTZ6ZmZLbGlTdjg0OHhvX1ZvN1lkMGNZY2R3QmNIR0VmSzRLQ2ZkMFhTODBUNjFFaGZ3d29rYVdLLW5EWVRCTzE4MDltT1FmcGZySHBKQk1FZFplYlBJekh0cUxIV0RPdDhmU29melFiVGllSjRyT3ZGZDRYTmgxUlNRQlA0Y3dKYWcyRzdyUkRNMjl3OS13bUY1eU9NWnJTNjdxQ2ZUYVZsNHBhdw?oc=5"
+      ],
+      "content_type": "explainer",
+      "headline_score": 1,
+      "discovered_at": "2026-11-14T06:30:42.829350+00:00",
+      "id": "eaad4f96e7f14af7",
+      "status": "QUEUED",
+      "created_at": "2026-11-14T06:30:43.879985+00:00",
+      "attempts": 0
+    },
+    "d1681e7170342a68": {
+      "title": "Zebrafish Could Advance Autism Drug Discovery - Technology Networks",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxNY0NVb0xWV3JsZnpBRnhXdWRpb1RwU3lDUUlHRVdCV05rSHR5c1pac0F4YTdnNnBhczdPMjNUNko4UXNaZUszcFppcWJrem9GMjNkblpTUVJrQjQ4WHd2OVNwRG4xLVMxTWNsdjA4NEl5YWF6VkNnU1dqT2czQVVZcEVUV1V3NTlVOGQtMkZpZTZ1TWFOMnQ3NW5XWDBNem5j?oc=5"
+      ],
+      "content_type": "explainer",
+      "headline_score": 1,
+      "discovered_at": "2026-11-14T06:30:42.832130+00:00",
+      "id": "d1681e7170342a68",
+      "status": "QUEUED",
+      "created_at": "2026-11-14T06:30:43.880314+00:00",
+      "attempts": 0
+    },
+    "9f0e6db268e93a0c": {
+      "title": "Why Live ‘Unplugged’ Versions of Old Hits Keep Finding New Audiences - That Eric Alper",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMirAFBVV95cUxQWV8zX0ticlRRMjZCdGVMVFNjZ1dZMVdDLVBpNkdJYjNFbHlKc3A1OVhiRm1uME1tdzlBWi1KZHBlYzF4N0FvaWROYUNJSVZzLXMtb0wwd0M4RUdoZ1dfYWtRVnlLUFhDSzF6Vm83b05FT1dxUnQyc2lzZF80dWI0Z213M2dFT08xUUU2cDhIQ3Bub2s5c0xiNUJCX1lhVHJsQnBLV20za0FwNEww?oc=5"
+      ],
+      "content_type": "explainer",
+      "headline_score": 1,
+      "discovered_at": "2026-11-14T06:30:43.870391+00:00",
+      "id": "9f0e6db268e93a0c",
+      "status": "QUEUED",
+      "created_at": "2026-11-14T06:30:43.880904+00:00",
+      "attempts": 0
+    },
+    "4264468155308d0d": {
+      "title": "What Is “Ezio’s Family” in Assassin’s Creed? Composer and Theme Explained - RouteNote",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxNeTJRbHB5TFo0VmJvMHQzTkJ2dHJ1eFNHZjNDUWI4U24zTUJocTlNakZObUkyMi1MYjA2alI0S0I5OGNhYkZXY0tvalBRb2lweWc5N0hWcXFrVm9XcTA4OElQak40c254STliQmFOUHlvZDVDeERWQVlKbXVidVZxMFB4TW9MZGVZVWdDUGEtSW5HbXItN1hvVG5lZ2dFQQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "headline_score": 1,
+      "discovered_at": "2026-11-14T06:30:43.872170+00:00",
+      "id": "4264468155308d0d",
+      "status": "QUEUED",
+      "created_at": "2026-11-14T06:30:43.881621+00:00",
+      "attempts": 0
+    },
+    "b890da7c8bb20e5f": {
+      "title": "xQc explains what his viral “six console” rant was really about - Dexerto",
+      "category": "creators",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMirAFBVV95cUxPM3Z4RDNwS1p2S19PNnF2dWh3S3FHYzBJY0c5NTMwdzZ6bG83bUJBTTBNZTg1eUZyTERPQlRSRlREQnJVaWx2Qjh0Vm9jRk5HajQ1MkpDb1l4WThvY2N3THc4aWdXSzlqRGsxX1VrQlVJOXJuejRLbEVUQUFqV29xX3RBUXhxWmRxN2E5cjJhSnI3U3lGN0lhOS02RG1oQkZUVnkzalp3VkxCRzRG?oc=5"
+      ],
+      "content_type": "explainer",
+      "headline_score": 0,
+      "discovered_at": "2026-11-14T06:30:42.245237+00:00",
+      "id": "b890da7c8bb20e5f",
+      "status": "QUEUED",
+      "created_at": "2026-11-14T06:30:43.882354+00:00",
+      "attempts": 0
+    },
+    "43fb6481ef119e61": {
+      "title": "Ground stop lifted hours after stranding thousands of flights across the U.S. - NBC News",
+      "category": "true_events",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxOcFpNUWJMU2ppemowM1BHcmRhZTc0YkhQTjl5ZVdTX0VIVlhwOGJESXdjcUhiM1lkbWZHUTJManlCYWRWc3FGWVpIUUNSSWhNeGM1TDN6UnJKSUZUUnlpS2Rac3J0M1RNcTg0WmRGYXlfRjlLTmtwd1FXcmpCU1hBX0sxUW4xbTczY1BOcUt6RkhyMzN5Y2x2TTg3MkJlTzBFLWxmdlNQbnlHVkRPeHg0TEI3VWg?oc=5"
+      ],
+      "content_type": "explainer",
+      "headline_score": 0,
+      "discovered_at": "2026-11-14T06:30:43.384449+00:00",
+      "id": "43fb6481ef119e61",
+      "status": "QUEUED",
+      "created_at": "2026-11-14T06:30:43.883409+00:00",
+      "attempts": 0
+    },
+    "6832207212ec0e88": {
+      "title": "New Genome Studies Revisit How Andes Hantavirus Spread on a Cruise Ship - Nature World News",
+      "category": "true_events",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMixAFBVV95cUxOekF0SjJsRkFQNUstSU9ORFkwTTBrNGtXaVIxM3ZVQ1IzYjU3eXctbTNRUVByYnRpeXVrUktIamZaajhZTmloVFpuZldmTDF6UDMwUldITmxDSjQ5QjBubTRqbE5LT2ZuaV9PVjUzQUt6bWJPbUZHSXFQWlJzWE9sTEs4MFVxa1l2UVFfWEpFNkxjVl9JdEFKWmZ2STI0dXNGRDlvWDBQS2FfM3ppRWVvSXUxZWxUZDNoS0xmUnZNSGtZUlpV?oc=5"
+      ],
+      "content_type": "explainer",
+      "headline_score": 0,
+      "discovered_at": "2026-11-14T06:30:43.386524+00:00",
+      "id": "6832207212ec0e88",
+      "status": "QUEUED",
+      "created_at": "2026-11-14T06:30:43.884890+00:00",
+      "attempts": 0
+    }
+  },
+  "budget": {
+    "day": "2026-11-14",
+    "youtube": 1
+  }
+}
