@@ -1,65 +1,123 @@
-
-name: ZENTR Pulse Worker
+name: ZENTR Pulse Production
 
 on:
   workflow_dispatch:
+    inputs:
+      retry_job:
+        description: 'Optional: exact held job ID to retry after correcting queue.json'
+        required: false
+        type: string
   schedule:
-    - cron: '0 9,15,21 * * *'
+    - cron: '0 1,9,17 * * *'
 
+# Never run this secret-bearing workflow on pull_request or untrusted code.
 permissions:
-  contents: read
+  contents: write
+
+concurrency:
+  group: zentr-pulse-production
+  cancel-in-progress: false
 
 jobs:
   process-videos:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
-
+    timeout-minutes: 40
     steps:
-      - name: Get project files
-        uses: actions/checkout@v4
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-
-      - name: Install FFmpeg
+      - name: Install media dependencies
         run: |
-          if ! command -v ffmpeg >/dev/null 2>&1; then
-            sudo apt-get update
-            sudo apt-get install -y ffmpeg
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg fonts-dejavu-core
+          python -m pip install -r requirements.txt
+      - name: Test worker before using credentials
+        run: python -m unittest discover -s tests -v
+      - name: Restore authoritative queue state
+        run: |
+          mkdir -p state
+          if git ls-remote --exit-code --heads origin pulse-state >/dev/null 2>&1; then
+            git fetch origin pulse-state --depth=1
+            git show FETCH_HEAD:queue.json > state/queue.json
           fi
-
-      - name: Run ZENTR Pulse worker
+      - name: Restore resumable media stages
+        uses: actions/cache/restore@v4
+        with:
+          path: .work
+          key: pulse-media-v3-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: pulse-media-v3-
+      - name: Check configuration
         env:
-          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          ENABLE_AI: ${{ vars.ENABLE_AI || '0' }}
-        run: python worker.py
-
-      - name: Display ZENTR Viral Radar
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          FREE_TIER_CONFIRMED: ${{ vars.FREE_TIER_CONFIRMED || '0' }}
+        run: python worker.py --doctor
+      - name: Produce video drafts
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
+          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          FREE_TIER_CONFIRMED: ${{ vars.FREE_TIER_CONFIRMED || '0' }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
+          TTS_VOICE: ${{ vars.TTS_VOICE || 'en-US-AriaNeural' }}
+          TARGET_SECONDS: ${{ vars.TARGET_SECONDS || '30' }}
+          MAX_JOBS_PER_RUN: '1'
+          MAX_AI_CALLS: '12'
+          MAX_YOUTUBE_SEARCHES: '3'
+          MAX_PEXELS_SEARCHES: '24'
+          RETRY_JOB: ${{ inputs.retry_job }}
+        run: python worker.py --discover --retry "$RETRY_JOB"
+      - name: Save authoritative queue state
         if: always()
         run: |
-          if [ -f output/research/viral_radar.md ]; then
-            cat output/research/viral_radar.md >> "$GITHUB_STEP_SUMMARY"
+          if [ ! -s state/queue.json ]; then exit 0; fi
+          if git ls-remote --exit-code --heads origin pulse-state >/dev/null 2>&1; then
+            git fetch origin pulse-state --depth=1
+            git worktree add --detach .state-persist FETCH_HEAD
           else
-            echo "No research report generated." >> "$GITHUB_STEP_SUMMARY"
+            git worktree add --detach .state-persist HEAD
+            git -C .state-persist checkout --orphan pulse-state
+            git -C .state-persist rm -rf .
           fi
-
-      - name: Save viral research reports
+          cp state/queue.json .state-persist/queue.json
+          git -C .state-persist config user.name 'ZENTR Pulse Worker'
+          git -C .state-persist config user.email 'pulse-worker@users.noreply.github.com'
+          git -C .state-persist add queue.json
+          if ! git -C .state-persist diff --cached --quiet; then
+            git -C .state-persist commit -m 'Checkpoint Pulse production queue'
+            git -C .state-persist push origin HEAD:refs/heads/pulse-state
+          fi
+      - name: Save resumable media stages
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: .work
+          key: pulse-media-v3-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Show production status
+        if: always()
+        run: |
+          if [ -f output/status.md ]; then
+            cat output/status.md >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo 'Worker did not produce a status report. Inspect the failing step.' >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Save review-ready outputs and reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: zentr-pulse-viral-radar
-          path: output/research/
+          name: pulse-review-${{ github.run_number }}
+          path: output/
           if-no-files-found: warn
-          retention-days: 30
-
-      - name: Save processed videos
+          retention-days: 7
+      - name: Save recovery queue snapshot
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: zentr-pulse-videos
-          path: output/*.mp4
+          name: pulse-state-${{ github.run_number }}
+          path: state/queue.json
           if-no-files-found: ignore
-          retention-days: 7
+          retention-days: 30
