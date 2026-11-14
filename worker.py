@@ -168,6 +168,8 @@ class ArticleText(HTMLParser):
 
 def source_text(url):
     raw, final_url, content_type = http(url)
+    if urllib.parse.urlsplit(final_url).hostname == 'news.google.com':
+        raise Hold('Google News discovery link did not resolve to a publisher article')
     if 'html' not in content_type and 'text/plain' not in content_type:
         raise Hold('Source is not readable HTML or text')
     parser = ArticleText()
@@ -237,20 +239,27 @@ def corroborating_urls(title):
              if x.lower() not in STOPWORDS and len(x) > 2][:7]
     if len(terms) < 3:
         return []
-    params = urllib.parse.urlencode({'query': ' '.join(terms), 'mode': 'artlist',
-                                    'format': 'json', 'maxrecords': 8, 'timespan': '14d',
-                                    'sort': 'HybridRel'})
-    try:
-        articles = json_http('https://api.gdeltproject.org/api/v2/doc/doc?' + params).get('articles', [])
-    except (Hold, ValueError):
-        return []
     urls, hosts = [], set()
-    for item in articles:
-        url = item.get('url', '')
-        host = urllib.parse.urlsplit(url).hostname
-        if url.startswith('https://') and host and host not in hosts:
-            hosts.add(host)
-            urls.append(url)
+    # Retry a shorter query when the entire headline is too restrictive.
+    for query in dict.fromkeys((' '.join(terms), ' '.join(terms[:3]))):
+        params = urllib.parse.urlencode({'query': query, 'mode': 'artlist',
+                                        'format': 'json', 'maxrecords': 8, 'timespan': '14d',
+                                        'sort': 'HybridRel'})
+        try:
+            articles = json_http('https://api.gdeltproject.org/api/v2/doc/doc?' + params,
+                                 retries=0).get('articles', [])
+        except (Hold, Wait, ValueError):
+            continue
+        for item in articles:
+            url = item.get('url', '')
+            host = (urllib.parse.urlsplit(url).hostname or '').removeprefix('www.')
+            words = set(re.findall(r'[a-z0-9]+', item.get('title', '').lower()))
+            overlap = words.intersection(x.lower() for x in terms)
+            if url.startswith('https://') and host and host != 'news.google.com' and host not in hosts and len(overlap) >= 3:
+                hosts.add(host)
+                urls.append(url)
+        if len(urls) >= 2:
+            break
     return urls[:5]
 
 
@@ -265,8 +274,8 @@ class Budget:
 
     def take(self, name, amount=1):
         cap = int(os.getenv({'ai': 'MAX_AI_CALLS', 'youtube': 'MAX_YOUTUBE_SEARCHES',
-                             'pexels': 'MAX_PEXELS_SEARCHES'}[name],
-                            {'ai': '12', 'youtube': '3', 'pexels': '24'}[name]))
+                             'pexels': 'MAX_PEXELS_SEARCHES', 'pixabay': 'MAX_PIXABAY_SEARCHES'}[name],
+                            {'ai': '12', 'youtube': '3', 'pexels': '24', 'pixabay': '12'}[name]))
         if self.counts.get(name, 0) + amount > cap:
             return False
         self.counts[name] = self.counts.get(name, 0) + amount
@@ -421,6 +430,59 @@ def narration(scene, folder, entry):
     return path, seconds
 
 
+def pixabay_candidates(query, budget):
+    query = ' '.join(query.split())[:100]
+    cache = WORK / 'stock-searches' / (hashlib.sha256(query.encode()).hexdigest() + '.json')
+    cached = load(cache, {})
+    if cached and 0 <= time.time() - cached.get('time', 0) < 86400:
+        return cached.get('hits', [])
+    key = os.getenv('PIXABAY_API_KEY', '').strip()
+    if not key:
+        raise Hold('PIXABAY_API_KEY missing')
+    if not budget.take('pixabay'):
+        raise Wait('Daily Pixabay search cap reached')
+    params = urllib.parse.urlencode({'key': key, 'q': query, 'per_page': 3,
+                                    'safesearch': 'true', 'video_type': 'film'})
+    # Never save or print the request URL, which contains the credential.
+    result = json_http('https://pixabay.com/api/videos/?' + params, retries=0)
+    hits = result.get('hits', [])
+    atomic_json(cache, {'time': time.time(), 'hits': hits})
+    return hits
+
+
+def select_pixabay_asset(scene, entry, folder, budget):
+    used = entry.setdefault('_used_stock', [])
+    for candidate in pixabay_candidates(scene['visual_query'], budget):
+        asset_id = 'pixabay:' + str(candidate['id'])
+        if asset_id in used:
+            continue
+        files = [f for f in candidate.get('videos', {}).values()
+                 if 600 <= (f.get('width') or 0) <= 1920 and f.get('height')
+                 and 0 < (f.get('size') or 0) <= 60_000_000]
+        if not files:
+            continue
+        file = min(files, key=lambda f: abs(f['width'] - 1080))
+        host = urllib.parse.urlsplit(file.get('url', '')).hostname or ''
+        if not (host == 'pixabay.com' or host.endswith('.pixabay.com')):
+            continue
+        path = folder / ('pixabay_' + str(candidate['id']) + '.mp4')
+        path.write_bytes(http(file['url'], limit=60_000_000)[0])
+        thumb = folder / 'match.jpg'
+        run(['ffmpeg', '-v', 'error', '-y', '-ss', '0.5', '-i', str(path),
+             '-frames:v', '1', '-vf', 'scale=480:-2', str(thumb)])
+        match = ai('Evaluate this frame as ILLUSTRATIVE stock. Reject unrelated objects, text, logos, '
+                   'graphic material, or misleading depictions. Return JSON {"matches": boolean, '
+                   '"reason": string}. Scene: ' + scene['visual_description'], budget, thumb)
+        if match.get('matches') is not True:
+            path.unlink(missing_ok=True)
+            continue
+        used.append(asset_id)
+        return path, {'provider': 'Pixabay', 'id': candidate['id'], 'url': candidate.get('pageURL'),
+                      'creator': candidate.get('user'), 'license_url': 'https://pixabay.com/service/license-summary/',
+                      'illustrative': True, 'match_check': match, 'sha256': digest(path)}
+    raise Hold('No matching Pixabay footage passed checks for ' + scene['id'])
+
+
 def select_asset(scene, entry, folder, budget):
     manifest = entry.get('assets', {}).get(scene['id'])
     if manifest:
@@ -432,6 +494,8 @@ def select_asset(scene, entry, folder, budget):
         return path, {'provider': 'local', **manifest}
     if scene['requires_exact_footage']:
         raise Hold('Exact footage required for ' + scene['id'] + '; provide scene-matched local footage')
+    if os.getenv('PIXABAY_API_KEY', '').strip():
+        return select_pixabay_asset(scene, entry, folder, budget)
     key = os.getenv('PEXELS_API_KEY', '').strip()
     if not key:
         raise Hold('Matching visual missing: add local assets or optional PEXELS_API_KEY')
@@ -685,6 +749,7 @@ def main():
                           'gemini_key_present': bool(os.getenv('GEMINI_API_KEY')),
                           'youtube_key_present': bool(os.getenv('YOUTUBE_API_KEY')),
                           'pexels_key_present': bool(os.getenv('PEXELS_API_KEY')),
+                          'pixabay_key_present': bool(os.getenv('PIXABAY_API_KEY')),
                           'free_tier_confirmed': os.getenv('FREE_TIER_CONFIRMED') == '1',
                           'publishing': 'disabled'}, indent=2))
         return 0
