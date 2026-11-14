@@ -54,6 +54,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           FREE_TIER_CONFIRMED: ${{ vars.FREE_TIER_CONFIRMED || '0' }}
         run: python worker.py --doctor
       - name: Produce video drafts
@@ -61,6 +62,7 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
+          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           FREE_TIER_CONFIRMED: ${{ vars.FREE_TIER_CONFIRMED || '0' }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
           TTS_VOICE: ${{ vars.TTS_VOICE || 'en-US-AriaNeural' }}
@@ -69,6 +71,7 @@ jobs:
           MAX_AI_CALLS: '12'
           MAX_YOUTUBE_SEARCHES: '3'
           MAX_PEXELS_SEARCHES: '24'
+          MAX_PIXABAY_SEARCHES: '12'
           RETRY_JOB: ${{ inputs.retry_job }}
         run: python worker.py --discover --retry "$RETRY_JOB"
       - name: Save authoritative queue state
