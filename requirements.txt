@@ -1,0 +1,2 @@
+# Bounded major version; online voice service can change independently.
+edge-tts>=7.2.3,<8
