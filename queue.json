@@ -138,9 +138,20 @@
       "headline_score": 0,
       "discovered_at": "2026-11-14T06:30:42.245237+00:00",
       "id": "b890da7c8bb20e5f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-14T06:30:43.882354+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "youtube_signal": {
+        "status": "discovery_only",
+        "examples": [
+          {
+            "title": "Gta6 - STREET RACING -grand theft auto ",
+            "url": "https://www.youtube.com/watch?v=xU676F7SC2o"
+          }
+        ],
+        "note": "Search matches do not establish popularity or permission to reuse footage."
+      },
+      "blocker": "Need two readable source URLs; RSS/YouTube links alone are insufficient. Google News discovery link did not resolve to a publisher article"
     },
     "43fb6481ef119e61": {
       "title": "Ground stop lifted hours after stranding thousands of flights across the U.S. - NBC News",
@@ -197,10 +208,24 @@
       "status": "QUEUED",
       "created_at": "2026-11-14T17:29:08.576584+00:00",
       "attempts": 0
+    },
+    "e95fac783fd7233f": {
+      "title": "Behind The Curtain - People's Defender",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMib0FVX3lxTE5TUTAzd1A5SHlzOUowNUhBbHF5bEFDSUdOc1MtUEYyWC0yODF4LW9YcWw5R1BHc3lwd2dGcUlnMGdJVW5wSGdKZWtScjBnOGlVLVpuUTBoVDE0SlQtallxaVlTVXFuNnQyMWhCX1B4VQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "headline_score": 0,
+      "discovered_at": "2026-11-15T01:57:48.651386+00:00",
+      "id": "e95fac783fd7233f",
+      "status": "QUEUED",
+      "created_at": "2026-11-15T01:57:48.657721+00:00",
+      "attempts": 0
     }
   },
   "budget": {
-    "day": "2026-11-14",
-    "youtube": 3
+    "day": "2026-11-15",
+    "youtube": 1
   }
 }
