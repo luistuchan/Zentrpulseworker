@@ -163,9 +163,28 @@
       "headline_score": 0,
       "discovered_at": "2026-11-14T06:30:43.384449+00:00",
       "id": "43fb6481ef119e61",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-14T06:30:43.883409+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "youtube_signal": {
+        "status": "discovery_only",
+        "examples": [
+          {
+            "title": "Special Report: FAA orders nationwide ground stop after &#39;telecommunications outage&#39;",
+            "url": "https://www.youtube.com/watch?v=lU0PHCZ_FsU"
+          },
+          {
+            "title": "Watch NBC Los Angeles News: Friday, Nov. 13, 2026",
+            "url": "https://www.youtube.com/watch?v=sDcakXzL4aw"
+          },
+          {
+            "title": "Top Story with Tom Llamas - Nov.13 | NBC News NOW",
+            "url": "https://www.youtube.com/watch?v=rZ_jgZrDhLY"
+          }
+        ],
+        "note": "Search matches do not establish popularity or permission to reuse footage."
+      },
+      "blocker": "Need two readable source URLs; RSS/YouTube links alone are insufficient. Google News discovery link did not resolve to a publisher article"
     },
     "6832207212ec0e88": {
       "title": "New Genome Studies Revisit How Andes Hantavirus Spread on a Cruise Ship - Nature World News",
@@ -222,10 +241,24 @@
       "status": "QUEUED",
       "created_at": "2026-11-15T01:57:48.657721+00:00",
       "attempts": 0
+    },
+    "431248277a0f3c0b": {
+      "title": "Abhijat Joshi reveals the HIDDEN writing trick used in 3 Idiots: EVERY scene had an object helping tell the story - Bollywood Hungama",
+      "category": "movies",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi8gFBVV95cUxNVkZtVU9CMkxvMVpiS2toVmNaY1R5X21uejhlSi02QlBBWWNLbEViblcwMnh1d0NBLWkwbjNxZ256am16bjV2OE9nejRwU241WHFxWmVvMnN4anA4RG90U2pNV2pRRkx1eTZmQVc5QkFxSklvUENJRmp2bW5XZlQyamdpaG5CNnpyQmxlWTNSa295SWYzT3hLMElQWnktMXEtNDNnVmFxUXpLTGxNTk9Gd2c0b1F4TUNIUUVfOHdkeVVNbThmMEh3WjllTUl4WGw3LU0xZldhSU9GR0w5bjlYMDBpXzl4ano4LWZ3V3BFblEtd9IB9wFBVV95cUxPbkJldDc1eVVWME8wY3Z0WmhteGR1VG81d1RXQm5jVGRCSGVXR1VQemNRYXdkS2xhdkF3SUtfYUc0ZXhaS2R5c3pRVGE4alFIa1MwM2pYbTYzMV91SUQ2ek5YeWVrUE55QkxMSUxQai1CX3phWjZlZVFZdDBaWjM5QVdUSllwcEZvN25xX2FOQmx0Z2toV1haRzRsaUdoRzg1QXI5NloyVUpJakNrVF84Sjc5U2l4RDZ3a3dUbkdxMXFGbjNBSnc3LVZNX2ZYRUM0VHR6T09FaTQwVWJ6bDFHNnRLZlliSlhhRWpHZG04Q2tZYlY1LURZ?oc=5"
+      ],
+      "content_type": "explainer",
+      "headline_score": 1,
+      "discovered_at": "2026-11-15T09:41:13.455897+00:00",
+      "id": "431248277a0f3c0b",
+      "status": "QUEUED",
+      "created_at": "2026-11-15T09:41:15.627980+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-15",
-    "youtube": 1
+    "youtube": 2
   }
 }
