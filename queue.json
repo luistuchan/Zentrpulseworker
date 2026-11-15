@@ -196,9 +196,15 @@
       "headline_score": 0,
       "discovered_at": "2026-11-14T06:30:43.386524+00:00",
       "id": "6832207212ec0e88",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-14T06:30:43.884890+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "youtube_signal": {
+        "status": "discovery_only",
+        "examples": [],
+        "note": "Search matches do not establish popularity or permission to reuse footage."
+      },
+      "blocker": "Need two readable source URLs; RSS/YouTube links alone are insufficient. Google News discovery link did not resolve to a publisher article"
     },
     "15ed27b00a04aaa4": {
       "title": "The mystery of how hair knows where to grow may finally be solved - Science Daily",
@@ -255,10 +261,24 @@
       "status": "QUEUED",
       "created_at": "2026-11-15T09:41:15.627980+00:00",
       "attempts": 0
+    },
+    "09d9f47c5e021faf": {
+      "title": "30+ Can't-Miss Shows on Philly Stages for Fall & the Holidays - Visit Philadelphia",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMivAFBVV95cUxOMElmZ0thNnpkZE5DUXIzSFF0X0N4WVVndlU2VzVXb1FqMmxPUU1RSGhxZllfQ0hWc2JWQm9UOVM5NEwtU29rNWtYOTJndXFJekZfZ1owcG5xM1NBRDVPNmUzdHBxM2Q3eW9vUUJHQktJZ3pycTJleTRiZVJyRktidWVteHJpMU9Lc0M0eDJyY0daeDZsaEhQaVpZd2VDSzl5TlpjOFAyWjFkQUxKLXRSamlBYkJJRWpKVEFQRg?oc=5"
+      ],
+      "content_type": "explainer",
+      "headline_score": 0,
+      "discovered_at": "2026-11-15T17:29:14.634009+00:00",
+      "id": "09d9f47c5e021faf",
+      "status": "QUEUED",
+      "created_at": "2026-11-15T17:29:14.647911+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-15",
-    "youtube": 2
+    "youtube": 3
   }
 }
