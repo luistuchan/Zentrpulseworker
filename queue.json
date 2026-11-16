@@ -1474,9 +1474,9 @@
       "id": "97f08a638402365d",
       "status": "HOLD",
       "created_at": "2026-11-16T17:55:47.930822+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-16T17:55:48.008398+00:00",
+      "last_attempt_at": "2026-11-16T23:19:55.774191+00:00",
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -1495,6 +1495,7 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
+      "stock_pipeline_version": 1,
       "blocker": "No matching Pixabay footage for s02: 9 hits for 'digital petition'; inspect diagnostics in review artifact"
     },
     "1f246426854f69a7": {
@@ -1524,11 +1525,11 @@
       "discovered_at": "2026-11-16T17:55:43.917320+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "16d4714fd98ea0e0",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-16T17:55:47.959234+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-16T17:56:51.507148+00:00",
+      "last_attempt_at": "2026-11-16T23:21:41.991431+00:00",
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -1547,7 +1548,7 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
+      "blocker": "Editor rejected candidate: The candidate data consists of syndicated copies from the same underlying publisher domain (bbc.co.uk and bbc.com), failing the requirement to use at least two independent source d"
     },
     "258ab8d59ad6c8b6": {
       "title": "Man sentenced over 'horrific' attempted murder of three children",
@@ -1561,9 +1562,30 @@
       "discovered_at": "2026-11-16T17:55:43.926172+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "258ab8d59ad6c8b6",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T17:55:47.968199+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-16T23:20:10.898298+00:00",
+      "youtube_signal": {
+        "status": "discovery_only",
+        "examples": [
+          {
+            "title": "Mother Questioned Over Deaths of Her Three Children (S4, E5) | Cold Case Files | Full Episode",
+            "url": "https://www.youtube.com/watch?v=y2qXss0ICu8"
+          },
+          {
+            "title": "Mother Shot Her 3 Children to Be With a Married Man?! Diane Downs",
+            "url": "https://www.youtube.com/watch?v=4exdyVmEfdw"
+          },
+          {
+            "title": "Nurse Accused of Strangling Her 3 Kids Before Trying to Kill Herself Jumping Out Window",
+            "url": "https://www.youtube.com/watch?v=URf-7EC8ti4"
+          }
+        ],
+        "note": "Search matches do not establish popularity or permission to reuse footage."
+      },
+      "blocker": "No matching Pixabay footage for s02: 9 hits for 'street'; inspect diagnostics in review artifact"
     },
     "4262db185452f20e": {
       "title": "Best Sennheiser Headphones 2026 - Every Category - Audiophile ON",
@@ -1609,13 +1631,239 @@
       "status": "QUEUED",
       "created_at": "2026-11-16T17:55:48.006700+00:00",
       "attempts": 0
+    },
+    "53fee51de791a86f": {
+      "title": "EU agrees to resurrect cooperation deal with Syria",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/16/eu-agrees-to-resurrect-cooperation-deal-with-syria?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T23:00:36+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-16T23:19:47.534128+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "53fee51de791a86f",
+      "status": "HOLD",
+      "created_at": "2026-11-16T23:19:55.602538+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-16T23:21:43.040722+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "Evidence quote not found in fetched source"
+    },
+    "17fc3434661f16ac": {
+      "title": "Video: Leaders Among Us—President Gilliam in Conversation with Taylor Hardner (CGS’25, Questrom’27) - Boston University",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOT0JQcl93bTFYZVBUS1hTdlFSME15ZkxwRVhpWTRCb2xKZm55UjVMLXdxb1lHRW1OSzFhbUxZZFlfUE0ycHdCTEFBQVlhSjl6a0ZDbmlHU0h4bmdpUGY4a2d1bVhFRENTS1M3eHhra1RRSDU2b2VnaUI1RUd4RzJTZmo1SV9OUm5sV1hV?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T21:59:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T23:19:53.964103+00:00",
+      "id": "17fc3434661f16ac",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T23:19:55.621678+00:00",
+      "attempts": 0
+    },
+    "f04ef15f7f1f2b09": {
+      "title": "Houthi rebel advance in Yemen may further destabilise global economy",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cmy97qperq9eo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T21:40:07+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-16T23:19:47.138080+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "f04ef15f7f1f2b09",
+      "status": "HOLD",
+      "created_at": "2026-11-16T23:19:55.634358+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-16T23:22:18.602191+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "Need evidence from two distinct source domains; independence still needs review"
+    },
+    "c0ed1394e8625198": {
+      "title": "Nvidia dismisses 'Bring Jensen Back' campaign as Trump backs effort to reinstate ex CEO",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cry49plv8v3go?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T22:21:27+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-16T23:19:47.152736+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "c0ed1394e8625198",
+      "status": "WAITING",
+      "created_at": "2026-11-16T23:19:55.649532+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-16T23:23:07.181153+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "AI request cap reached; job saved for next run"
+    },
+    "c07609c6a448c9fc": {
+      "title": "Record, Song and Album of the Year: Grammy awards explained - qz.com",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBZWWdTbzQ0YThwWTNQdWpVNmFxYU1EWDZQRE1fcnZyMkxhMEpoUWd5WjVtTmZCN1F4aHpKR293b0RGQ2toOUFEMENfcEZuU3dNeXhCNDZaWDNfZUNOY3U5QWFFQWc?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 1,
+      "discovered_at": "2026-11-16T23:19:53.338174+00:00",
+      "id": "c07609c6a448c9fc",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T23:19:55.661056+00:00",
+      "attempts": 0
+    },
+    "b18da6d46d657ecb": {
+      "title": "US judge tosses new visa rules for foreign students, journalists - France 24",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxPaHRJVEdZcWZuclVZcFhobmozcGhaZHJWajI5ZUg4NXdQbi0tSTJoZXBvZGYyT2VBVVlLalMxcGtia21XTzhJUHQ1QS03Vk9tb2twMlc4V2Mtb01zVkQ0NmxFYTNnX2oyemVTOUZac1liS0ZHaVVNS0xCZ2tWUF9yekJvNDBadHhQQVlLSFVHVGNIbF9UMFlLRWc2YlNsNG1KQkN6S0ttSEl5RjgzQ2VJ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T21:23:21+00:00",
+      "headline_score": 1,
+      "discovered_at": "2026-11-16T23:19:54.015092+00:00",
+      "id": "b18da6d46d657ecb",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T23:19:55.674743+00:00",
+      "attempts": 0
+    },
+    "0b2a6a0ba6591c31": {
+      "title": "CU Anschutz Led Study Finds That Genetic Risk Does Not Explain the Maternal Effect in Type 1 Diabetes - University of Colorado Anschutz",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi2gFBVV95cUxPSHFkc21rVWM1TGNUUXpob3k5UTNvOVl1Q2tIVEprdHhkVGpDcXB1Q0pIdS1Oem5BRjZ1ekZjQmpMWG91ZzZ3YXdKZExBbUVCRVdtR3ZHRUJ6UDgtT3JxeF84d3Q2cXk0VWgySFVnVHN1M2F1YS1UWXkxYV9TVVhaQzJkbXZVcXVncGVISTU5UG1tN2lDYTVYMTR4TUw4SmxvVkxNWm93ZFFUcWFzMnUzX0p1YmViMVNDNERybFlYUTdyc25jemkwSGZUbnhaSUJHa1duOWJVVUo5Z9IB6gFBVV95cUxQWmJUTWY0eGxWc1dPa1JWaEU3X2pKYVZYS3I0eDNpcGxHek9XLU50cjJGT2dpQjd6bU5HUEF3V29kWDExdlViNmI0V1lYSGdlVFFGOFRiRnBKVUQtRVAySEZPRWdldTZVNEMtYmZMUDFrRWlHTjE3bFpzelpCX3BEbExDX2diZFl5VDg2Q3pMWXVBeXFYdlB0QTQ0OXJEVnlfYmJkY0RSVHFycW92dEZPc2FGYmgzaHpxS0JJWVE4dVh0VDNuVXcwTEcxZjBhT2RwRXRTcWhvUVF0ZkszMDJZMTYwQTBHR0dfUXc?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T23:19:50.670215+00:00",
+      "id": "0b2a6a0ba6591c31",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T23:19:55.698105+00:00",
+      "attempts": 0
+    },
+    "25e5a2423422557d": {
+      "title": "seafloor spreading - Britannica",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5Hby1TamRWd2lHM3ZxLTVia0NKUi1YWGw4a2xNR2tLOG5JeEo2WE9CaWhjZjFYRlg3a0pSenhMT1N2TG1taUtFNWdEY1pKOExVTm5RWFVEMmJQMzRoNk55akVtVQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T23:19:50.689678+00:00",
+      "id": "25e5a2423422557d",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T23:19:55.704442+00:00",
+      "attempts": 0
+    },
+    "d450f3e0abdc8e4f": {
+      "title": "What Max Martin Can Teach You About Consistency - That Eric Alper",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMikwFBVV95cUxOZGFtQ3htcTh5Tjk2NG1hXzVfUjdBeVJyd0Q5UDBKMml6RFJnNGZ6YWc1bWdPVUNhUWk0ZTNtRjVnV05Ub2VBbDI0Y0pkcGk3VTZTNXdVQU1FREpEdmY2ZlNVMXlqUDJzRURXcFZZTzMtYm84Z0x0d0tEVHZhZ0lNa3RhOWVKeHZQYnNYM3YxRXRDaVU?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T23:19:53.356179+00:00",
+      "id": "d450f3e0abdc8e4f",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T23:19:55.717161+00:00",
+      "attempts": 0
+    },
+    "395533dfbf3d1fa3": {
+      "title": "The Prodigy in Vienna: tickets for the 2026 concert - KarloBag.eu",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxPOUhJZmRqNFBYaUtqZ2JXazJ3Zk9ZX0ZUamVNdzQxTXV1TWNJWWc5VTVRLW5NYWJ3enpiYUZHZ25VTjFFaWlqVl9uS2YzN1dzcmNTZ3ZuRi1ycFRXLVp5WnVmT0g0VGdEWW1ockl0Vy1wa2k3a1FYWkRvYU8xYXQycldSN29WSjhaN0hmVkl1dXlrMXhIb0E?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T23:19:53.410320+00:00",
+      "id": "395533dfbf3d1fa3",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T23:19:55.729633+00:00",
+      "attempts": 0
+    },
+    "612ecb1f498f0cab": {
+      "title": "Will the Midterms Hurt J.D. Vance’s Presidential Chances in 2028? - Time Magazine",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMikgFBVV95cUxQNlBtWWRzc1pEcGxUbl93NHZUMEp5QmtDMWNtNW5ianpaeXMtZnotSk9lVW5xMTVWbEVnZXYzcFBoNlR2V3REeC1BMTF3NGZBbkthb295cm1JNXdXN242V05OclV2RlBfQUZBaFlYdXc3Rno2WG9SUFpCQXBNdG1LNGFKSlhXTE1abzVjQmJ1ZEl3Zw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T19:42:41+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T23:19:53.888754+00:00",
+      "id": "612ecb1f498f0cab",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T23:19:55.744342+00:00",
+      "attempts": 0
+    },
+    "149757e91e761915": {
+      "title": "Clip highlight: FUNNIEST ANIMAL MOMENTS EVER! 😂🐒 You Won't Stop Laughing!",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "mJ7xDVlb85M",
+      "discovery_bucket": "animals",
+      "release_candidate": false,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=mJ7xDVlb85M",
+        "license": "creativeCommon",
+        "license_checked_at": "2026-11-16T23:19:55.592010+00:00",
+        "creator": "FaunaVerse",
+        "rights_note": "YouTube API reports Creative Commons; attribution and final rights require review"
+      },
+      "discovered_at": "2026-11-16T23:19:55.592024+00:00",
+      "id": "149757e91e761915",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T23:19:55.757715+00:00",
+      "attempts": 0
+    },
+    "71df9ccee3ea9cca": {
+      "title": "Clip highlight: REACTING to FUNNY Animal Videos That Made Me Lose It 😂",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "LZU_C9itaSg",
+      "discovery_bucket": "animals",
+      "release_candidate": false,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=LZU_C9itaSg",
+        "license": "creativeCommon",
+        "license_checked_at": "2026-11-16T23:19:55.592033+00:00",
+        "creator": "Laughing Tails",
+        "rights_note": "YouTube API reports Creative Commons; attribution and final rights require review"
+      },
+      "discovered_at": "2026-11-16T23:19:55.592035+00:00",
+      "id": "71df9ccee3ea9cca",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T23:19:55.771627+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-16",
-    "youtube": 13,
-    "ai": 79,
-    "pixabay": 10
+    "youtube": 18,
+    "ai": 96,
+    "pixabay": 12
   },
   "content_cycle_index": 0,
   "content_batch": {
@@ -1627,16 +1875,20 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-16T17:55:48.007027+00:00",
+    "started_at": "2026-11-16T23:19:55.772066+00:00",
     "attempted_ids": [
       "97f08a638402365d",
-      "16d4714fd98ea0e0"
+      "258ab8d59ad6c8b6",
+      "16d4714fd98ea0e0",
+      "53fee51de791a86f",
+      "f04ef15f7f1f2b09",
+      "c0ed1394e8625198"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "pause_reason": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted",
-    "finished_at": "2026-11-16T17:57:29.042348+00:00",
-    "attempted": 2,
+    "pause_reason": "AI request cap reached; job saved for next run",
+    "finished_at": "2026-11-16T23:23:37.933205+00:00",
+    "attempted": 6,
     "completed": 0
   }
 }
