@@ -12,6 +12,7 @@ from datetime import datetime, timezone, timedelta
 from difflib import SequenceMatcher
 from email.utils import parsedate_to_datetime
 import hashlib
+import html
 from html.parser import HTMLParser
 import ipaddress
 import json
@@ -49,6 +50,11 @@ CATEGORIES = {
 }
 NEWS_CATEGORIES = {'world_news', 'president'}
 NEWS_MAX_AGE_HOURS = 48
+NEWS_TOPIC_VERSION = 1
+NEWS_OFF_TOPIC = re.compile(
+    r'\b(golf|golfers?|DP World Tour|PGA|LPGA|ATP|WTA|NBA|NFL|NHL|MLB|'
+    r'Fortnite|Minecraft|Call of Duty|box office|movie trailer|album review|'
+    r'concert tickets|horoscope|World of Warcraft)\b', re.I)
 CONTENT_CYCLE = ('world_news', 'clipper', 'creators', 'science', 'movies', 'culture',
                  'world_news', 'gaming', 'sports', 'president', 'true_events', 'music')
 BATCH_SIZE = 3
@@ -238,6 +244,10 @@ def news_is_fresh(published_at):
         return False
 
 
+def news_topic_allowed(title):
+    return not NEWS_OFF_TOPIC.search(title)
+
+
 def discover(limit, existing_titles=()):
     """Free RSS discovery. Headlines are leads, not evidence or virality proof."""
     leads = []
@@ -258,6 +268,8 @@ def discover(limit, existing_titles=()):
                 if is_news and (re.search(r'\b(opinion|editorial|commentary)\b', title, re.I)
                                 or title.rsplit(' - ', 1)[-1].lower() in
                                 ('facebook', 'instagram', 'tiktok', 'youtube')):
+                    continue
+                if is_news and not news_topic_allowed(title):
                     continue
                 if category == 'president' and re.search(r'\b(polls?|campaign|fundraising|partisan)\b', title, re.I):
                     continue
@@ -374,14 +386,18 @@ class Budget:
         if state.get('budget', {}).get('day') != day:
             state['budget'] = {'day': day}
         self.counts = state['budget']
+        self.run_counts = Counter()
 
     def take(self, name, amount=1):
         cap = int(os.getenv({'ai': 'MAX_AI_CALLS', 'youtube': 'MAX_YOUTUBE_SEARCHES',
                              'pexels': 'MAX_PEXELS_SEARCHES', 'pixabay': 'MAX_PIXABAY_SEARCHES'}[name],
-                            {'ai': '12', 'youtube': '3', 'pexels': '24', 'pixabay': '12'}[name]))
+                            {'ai': '96', 'youtube': '18', 'pexels': '96', 'pixabay': '72'}[name]))
         if self.counts.get(name, 0) + amount > cap:
             return False
+        if name == 'ai' and self.run_counts[name] + amount > int(os.getenv('MAX_AI_CALLS_PER_RUN', '32')):
+            return False
         self.counts[name] = self.counts.get(name, 0) + amount
+        self.run_counts[name] += amount
         atomic_json(STATE / 'queue.json', self.state)
         return True
 
@@ -393,8 +409,6 @@ def ai(prompt, budget, image_path=None, response_schema=None):
     key = os.getenv('GEMINI_API_KEY', '').strip()
     if not key:
         raise Hold('GEMINI_API_KEY missing')
-    if not budget.take('ai'):
-        raise Wait('Daily AI request cap reached; job saved for next run')
     model = os.getenv('GEMINI_MODEL', 'gemini-3.5-flash-lite')
     if not re.fullmatch(r'[a-zA-Z0-9._-]+', model):
         raise Hold('Invalid GEMINI_MODEL')
@@ -406,12 +420,23 @@ def ai(prompt, budget, image_path=None, response_schema=None):
               'responseMimeType': 'application/json'}
     if response_schema is not None:
         config['responseSchema'] = response_schema
-    try:
-        response = json_http('https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent',
-                             payload={'contents': [{'parts': parts}], 'generationConfig': config},
-                             headers={'x-goog-api-key': key}, retries=0)
-    except Hold as exc:
-        raise type(exc)(f'Gemini model {model}: {exc}') from None
+    # Retry temporary failures once. Each physical request consumes the same
+    # persistent free-tier budget; do not retry permanent errors or change models.
+    for attempt in range(2):
+        if not budget.take('ai'):
+            raise Wait('AI request cap reached; job saved for next run')
+        try:
+            response = json_http('https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent',
+                                 payload={'contents': [{'parts': parts}], 'generationConfig': config},
+                                 headers={'x-goog-api-key': key}, retries=0)
+            break
+        except Wait as exc:
+            # Quota failures need time to reset, not another immediate request.
+            if attempt or 'HTTP 429' in str(exc):
+                raise Wait(f'Gemini model {model}: {exc}') from None
+            time.sleep(2)
+        except Hold as exc:
+            raise Hold(f'Gemini model {model}: {exc}') from None
     candidates = response.get('candidates', [])
     if not candidates or candidates[0].get('finishReason') != 'STOP':
         raise Hold('AI response blocked, truncated, or empty')
@@ -465,6 +490,11 @@ and quotes must actually appear in supplied sources. Do not call stock footage t
 Set requires_exact_footage=true whenever the actual person, film/game scene, demonstration,
 or sports play is needed. Do not substitute stock for that. 30 seconds is the default;
 if target_seconds differs, use roughly target_seconds*2.4 words and a cut every 2-5 seconds.
+For automatic news/explainers without supplied assets, prefer an explanation that
+can honestly use illustrative footage of places, infrastructure, objects or mechanisms.
+Never depict stock actors as the actual people involved. If the explanation needs
+an actual person's speech, a specific action, film, game or play that was not supplied,
+reject it. Do not mark exact footage as unnecessary merely to pass production.
 '''
 
 NEWS_PROMPT = '''\nFor content_type=news_update, make a concise, neutral news bulletin instead
@@ -595,7 +625,14 @@ async def speech(text, path, voice):
 
 def narration(scene, folder, entry):
     path = folder / (scene['id'] + '.mp3')
+    meta_path = folder / (scene['id'] + '.audio.json')
     supplied = entry.get('audio', {}).get(scene['id'])
+    key = hashlib.sha256(json.dumps({'text': scene['narration'],
+        'voice': os.getenv('TTS_VOICE', 'en-US-AriaNeural'), 'supplied': supplied,
+        'source_hash': digest(local_file(supplied)) if supplied else None}, sort_keys=True).encode()).hexdigest()
+    cached = load(meta_path, {})
+    if path.exists() and cached.get('key') != key:
+        path.unlink()
     if supplied:
         original = local_file(supplied)
         run(['ffmpeg', '-v', 'error', '-y', '-i', str(original), '-vn', '-ar', '48000', '-ac', '1', str(path)])
@@ -607,6 +644,7 @@ def narration(scene, folder, entry):
     seconds = duration(path)
     if seconds < 1 or seconds > 8:
         raise Hold('Scene narration must last 1-8 seconds; revise scene or supplied audio')
+    atomic_json(meta_path, {'key': key})
     return path, seconds
 
 
@@ -633,6 +671,8 @@ def pixabay_candidates(query, budget):
 def select_pixabay_asset(scene, entry, folder, budget):
     used = entry.setdefault('_used_stock', [])
     for candidate in pixabay_candidates(scene['visual_query'], budget):
+        if candidate.get('duration', 0) < scene.get('_required_seconds', 0):
+            continue
         asset_id = 'pixabay:' + str(candidate['id'])
         if asset_id in used:
             continue
@@ -647,6 +687,9 @@ def select_pixabay_asset(scene, entry, folder, budget):
             continue
         path = folder / ('pixabay_' + str(candidate['id']) + '.mp4')
         path.write_bytes(http(file['url'], limit=60_000_000)[0])
+        if duration(path) + .05 < scene.get('_required_seconds', 0):
+            path.unlink(missing_ok=True)
+            continue
         thumb = folder / 'match.jpg'
         run(['ffmpeg', '-v', 'error', '-y', '-ss', '0.5', '-i', str(path),
              '-frames:v', '1', '-vf', 'scale=480:-2', str(thumb)])
@@ -685,6 +728,8 @@ def select_asset(scene, entry, folder, budget):
     result = json_http('https://api.pexels.com/v1/videos/search?' + query, headers={'Authorization': key})
     used = entry.setdefault('_used_stock', [])
     for candidate in result.get('videos', []):
+        if candidate.get('duration', 0) < scene.get('_required_seconds', 0):
+            continue
         if candidate['id'] in used:
             continue
         files = [x for x in candidate.get('video_files', []) if x.get('file_type') == 'video/mp4'
@@ -698,6 +743,9 @@ def select_asset(scene, entry, folder, budget):
         raw = http(file['link'], limit=60_000_000)[0]
         path = folder / ('stock_' + str(candidate['id']) + '.mp4')
         path.write_bytes(raw)
+        if duration(path) + .05 < scene.get('_required_seconds', 0):
+            path.unlink(missing_ok=True)
+            continue
         thumb = folder / 'match.jpg'
         run(['ffmpeg', '-v', 'error', '-y', '-ss', '0.5', '-i', str(path), '-frames:v', '1', '-vf', 'scale=480:-2', str(thumb)])
         match = ai('Evaluate this frame as ILLUSTRATIVE stock for this scene. Reject unrelated objects, text, '
@@ -787,11 +835,14 @@ def render(plan, entry, folder, budget, target):
     if not shutil.which('ffmpeg') or not shutil.which('ffprobe'):
         raise Hold('FFmpeg/ffprobe missing')
     parts, asset_log, total = [], [], 0.
+    entry['_used_stock'] = []
     for scene in plan['scenes']:
         out = folder / (scene['id'] + '.mp4')
         meta_path = folder / (scene['id'] + '.json')
         scene_key = hashlib.sha256(json.dumps({'scene': scene, 'assets': entry.get('assets', {}),
                                               'audio': entry.get('audio', {}),
+                                              'audio_sha256': digest(local_file(entry['audio'][scene['id']]))
+                                              if entry.get('audio', {}).get(scene['id']) else None,
                                               'voice': os.getenv('TTS_VOICE', 'en-US-AriaNeural')}, sort_keys=True).encode()).hexdigest()
         prior = load(meta_path, {})
         if out.exists() and prior.get('scene_key') == scene_key and prior.get('render_sha256') == digest(out):
@@ -800,9 +851,11 @@ def render(plan, entry, folder, budget, target):
             asset_log.append(prior['asset'])
             if prior['asset'].get('provider') == 'Pexels':
                 entry.setdefault('_used_stock', []).append(prior['asset']['id'])
+            elif prior['asset'].get('provider') == 'Pixabay':
+                entry.setdefault('_used_stock', []).append('pixabay:' + str(prior['asset']['id']))
             continue
         audio, seconds = narration(scene, folder, entry)
-        asset, metadata = select_asset(scene, entry, folder, budget)
+        asset, metadata = select_asset({**scene, '_required_seconds': seconds}, entry, folder, budget)
         sub = folder / (scene['id'] + '.ass')
         captions(scene['narration'], seconds, sub)
         # Portrait foreground retains the full subject; landscape foreground is 65%
@@ -929,6 +982,10 @@ def process(entry, budget, target):
         plan = generate_plan(entry, sources, target, budget, folder)
         atomic_json(plan_path, plan)
     validate_plan(plan, sources, target)
+    unavailable = [scene['id'] for scene in plan['scenes']
+                   if scene['requires_exact_footage'] and scene['id'] not in entry.get('assets', {})]
+    if unavailable:
+        raise Hold('Automatic footage unavailable: exact local footage needed for ' + ', '.join(unavailable))
     critique_path = folder / 'critique.json'
     critique = load(critique_path, None)
     if not critique:
@@ -960,7 +1017,11 @@ def process(entry, budget, target):
 def report(state, warnings):
     OUTPUT.mkdir(exist_ok=True)
     counts = Counter(job['status'] for job in state['jobs'].values())
-    rendered = len(list(OUTPUT.glob('*/video.mp4')))
+    ready = [folder for folder in OUTPUT.iterdir() if folder.is_dir()
+             and (folder / 'video.mp4').is_file() and (folder / 'review.json').is_file()
+             and load(folder / 'review.json', {}).get('video_sha256') == digest(folder / 'video.mp4')]
+    rendered = len(ready)
+    outcome = 'REVIEW_READY' if rendered else 'NO_VIDEO_PRODUCED'
     lines = ['# ZENTR Pulse production status', '', 'Generated: ' + now(), '',
              f'Video files in this run: **{rendered}**. Queue statuses: ' + ', '.join(f'{k}: {v}' for k, v in sorted(counts.items())), '',
              'Drafts require review. Publishing is disabled.', '',
@@ -972,14 +1033,33 @@ def report(state, warnings):
         clean = lambda x: str(x).replace('|', '/').replace('\n', ' ').replace('<', '').replace('>', '')[:220]
         lines.append('| ' + ' | '.join(clean(x) for x in (job['id'], job['status'], job.get('blocker', job['title']))) + ' |')
     lines += ['', 'Request counters: ' + json.dumps(state.get('budget', {}))]
+    lines += ['', 'This run: **' + outcome + '**',
+              'Attempts this run: ' + str(len(state.get('last_run', {}).get('attempted_ids', [])))]
+    if not any(job_category(j) == 'clipper' and j['status'] in ('QUEUED', 'WAITING', 'PRODUCING')
+               for j in state['jobs'].values()):
+        warnings.append('Clipper has no eligible source videos in the queue; YouTube discovery has not supplied a usable clip.')
     lines += ['', *warnings]
     (OUTPUT / 'status.md').write_text('\n'.join(lines) + '\n')
     atomic_json(OUTPUT / 'status.json', {'generated_at': now(), 'warnings': warnings,
+                                      'outcome': outcome, 'run': state.get('last_run', {}),
                                       'video_files_this_run': rendered, 'status_counts': dict(counts),
                                       'jobs': [{k: j.get(k) for k in ('id', 'title', 'status', 'blocker', 'attempts')}
                                                for j in state['jobs'].values()]})
     # Also show the report in mobile job logs, not only GitHub's web summary.
     print('\n'.join(lines))
+    cards = []
+    for folder in ready:
+        title = state['jobs'].get(folder.name, {}).get('title', folder.name)
+        relative = html.escape(folder.name, quote=True)
+        cards.append(f'<article><h2>{html.escape(title)}</h2><video controls playsinline src="{relative}/video.mp4"></video>'
+                     f'<p><a href="{relative}/video.mp4" download>Download MP4</a> · '
+                     f'<a href="{relative}/review.json">Review and sources</a></p></article>')
+    if not cards:
+        cards.append('<p>No review-ready video was produced in this run. Read status.md for blockers.</p>')
+    (OUTPUT / 'index.html').write_text('<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width">'
+        '<title>Pulse review</title><style>body{font:18px system-ui;background:#101216;color:#eee;max-width:800px;margin:auto;padding:24px}'
+        'video{width:min(100%,360px)}a{color:#9af}article{margin-bottom:32px}</style><h1>Pulse review</h1>'
+        '<p>Drafts for review. Publishing is disabled.</p>' + ''.join(cards))
 
 
 def job_category(job):
@@ -1013,6 +1093,82 @@ def current_batch(state):
         category = 'custom'
     batch = {'category': category, 'completed': 0, 'story_keys': [], 'media_hashes': [], 'source_urls': []}
     state['content_batch'] = batch
+    return batch
+
+
+def produce_batch(state, budget, target):
+    """Finish up to three different stories, trying bounded replacements for holds."""
+    batch = current_batch(state)
+    attempted, completed = [], []
+    state['last_run'] = {'started_at': now(), 'attempted_ids': attempted, 'completed_ids': completed,
+                         'model': os.getenv('GEMINI_MODEL', 'gemini-3.5-flash-lite')}
+    max_ready = max(1, min(3, int(os.getenv('MAX_JOBS_PER_RUN', '3'))))
+    max_attempts = max(1, min(12, int(os.getenv('MAX_CANDIDATES_PER_RUN', '9'))))
+    deadline = time.monotonic() + max(60, min(1200, int(os.getenv('PRODUCTION_SECONDS', '900'))))
+    def priority(job):
+        folder = WORK / job['id']
+        progress = len(list(folder.glob('s[0-9][0-9].mp4'))) if folder.exists() else 0
+        has_plan = (folder / 'plan.json').is_file()
+        return (-progress, -int(has_plan), job.get('last_attempt_at', job.get('created_at', '')))
+    pending = sorted(state['jobs'].values(), key=priority)
+    for job in pending:
+        if (not batch or batch['completed'] >= BATCH_SIZE or len(completed) >= max_ready
+                or len(attempted) >= max_attempts or time.monotonic() >= deadline):
+            break
+        if job_category(job) != batch['category'] or job['status'] not in ('QUEUED', 'PRODUCING', 'WAITING'):
+            continue
+        key = story_key(job)
+        if key in batch['story_keys']:
+            job.update(status='HOLD', blocker='A different story/source video is required for this three-video batch')
+            continue
+        attempted.append(job['id'])
+        job.update(status='PRODUCING', attempts=job.get('attempts', 0) + 1,
+                   source_pipeline_version=SOURCE_PIPELINE_VERSION, last_attempt_at=now())
+        atomic_json(STATE / 'queue.json', state)
+        stop = False
+        try:
+            if job.get('content_type') != 'clipper' and not job.get('youtube_signal'):
+                try:
+                    job['youtube_signal'] = youtube_signal(job['title'], budget)
+                except Hold as exc:
+                    job['youtube_signal'] = {'status': 'unavailable', 'reason': str(exc)}
+            job['_excluded_media_hashes'] = batch.get('media_hashes', [])
+            job['_excluded_story_sources'] = batch.get('source_urls', [])
+            process(job, budget, target)
+            if job['status'] == 'REVIEW_REQUIRED':
+                folder = OUTPUT / job['id']
+                review = load(folder / 'review.json', {})
+                if not (folder / 'video.mp4').is_file() or review.get('video_sha256') != digest(folder / 'video.mp4'):
+                    raise Hold('Completion record has no matching review-ready MP4')
+                completed.append(job['id'])
+                batch['completed'] += 1
+                batch['story_keys'].append(key)
+                batch.setdefault('source_urls', []).extend(job.get('source_story_urls', []))
+                if job.get('source_media_sha256'):
+                    batch['media_hashes'].append(job['source_media_sha256'])
+                if batch['completed'] == BATCH_SIZE:
+                    state['content_cycle_index'] = (state.get('content_cycle_index', 0) + 1) % len(CONTENT_CYCLE)
+        except Wait as exc:
+            job.update(status='WAITING', blocker=str(exc))
+            stop = (str(exc).startswith('Gemini model ') or 'AI request cap' in str(exc)
+                    or 'narration service unavailable' in str(exc))
+        except Hold as exc:
+            job.update(status='HOLD', blocker=str(exc))
+            stop = (str(exc).startswith(('Gemini model ', 'GEMINI_API_KEY missing',
+                                         'Confirm the API project is free-tier')))
+        except Exception:
+            job.update(status='FAILED', blocker='Unexpected worker error; inspect inputs and run tests. Secrets omitted.')
+        finally:
+            job.pop('_excluded_media_hashes', None)
+            job.pop('_excluded_story_sources', None)
+            job.pop('_used_stock', None)
+            atomic_json(STATE / 'queue.json', state)
+        if stop:
+            state['last_run']['pause_reason'] = job['blocker']
+            break
+    state['last_run']['finished_at'] = now()
+    state['last_run']['attempted'] = len(attempted)
+    state['last_run']['completed'] = len(completed)
     return batch
 
 
@@ -1079,66 +1235,34 @@ def main():
         for job in state['jobs'].values():
             if (job.get('content_type') == 'news_update'
                     and job['status'] in ('QUEUED', 'WAITING', 'PRODUCING')
+                    and not news_topic_allowed(job['title'])):
+                job.update(status='HOLD', blocker='Off-topic news lead; use a world development',
+                           news_topic_version=NEWS_TOPIC_VERSION)
+            if (job.get('content_type') == 'news_update'
+                    and job['status'] in ('QUEUED', 'WAITING', 'PRODUCING')
                     and not news_is_fresh(job.get('source_published_at'))):
                 job.update(status='HOLD', blocker='News candidate expired; discover a recent story')
-        count = 0
+        if args.retry:
+            retry = state['jobs'].get(args.retry)
+            if retry is None:
+                warnings.append('Requested retry job was not found')
+            elif retry['status'] in ('HOLD', 'FAILED'):
+                retry.update(status='QUEUED', attempts=0)
+                retry.pop('blocker', None)
+                shutil.rmtree(WORK / args.retry, ignore_errors=True)
         target = int(os.getenv('TARGET_SECONDS', '30'))
         if not 20 <= target <= 70:
             raise Hold('TARGET_SECONDS must be between 20 and 70')
-        max_jobs = max(1, min(3, int(os.getenv('MAX_JOBS_PER_RUN', '1'))))
         try:
-            # A temporarily unavailable source must not occupy the first slot on
-            # every scheduled run and prevent the rest of the queue progressing.
-            batch = current_batch(state)
-            pending = sorted(state['jobs'].values(), key=lambda j: j.get('last_attempt_at', j.get('created_at', '')))
-            for job in pending:
-                if (not batch or batch['completed'] >= BATCH_SIZE or job_category(job) != batch['category']
-                        or job['status'] not in ('QUEUED', 'PRODUCING', 'WAITING') or count >= max_jobs):
-                    continue
-                key = story_key(job)
-                if key in batch['story_keys']:
-                    job.update(status='HOLD', blocker='A different story/source video is required for this three-video batch')
-                    continue
-                count += 1
-                if count == 1:
-                    state['production_runs'] = state.get('production_runs', 0) + 1
-                job.update(status='PRODUCING', attempts=job.get('attempts', 0) + 1,
-                           source_pipeline_version=SOURCE_PIPELINE_VERSION, last_attempt_at=now())
-                atomic_json(STATE / 'queue.json', state)
-                try:
-                    if job.get('content_type') != 'clipper' and not job.get('youtube_signal'):
-                        try:
-                            job['youtube_signal'] = youtube_signal(job['title'], budget)
-                        except Hold as exc:
-                            job['youtube_signal'] = {'status': 'unavailable', 'reason': str(exc)}
-                    job['_excluded_media_hashes'] = batch.get('media_hashes', [])
-                    job['_excluded_story_sources'] = batch.get('source_urls', [])
-                    process(job, budget, target)
-                    if job['status'] == 'REVIEW_REQUIRED':
-                        batch['completed'] += 1
-                        batch['story_keys'].append(key)
-                        batch.setdefault('source_urls', []).extend(job.get('source_story_urls', []))
-                        if job.get('source_media_sha256'):
-                            batch['media_hashes'].append(job['source_media_sha256'])
-                        if batch['completed'] == BATCH_SIZE:
-                            state['content_cycle_index'] = (state.get('content_cycle_index', 0) + 1) % len(CONTENT_CYCLE)
-                except Wait as exc:
-                    job.update(status='WAITING', blocker=str(exc))
-                except Hold as exc:
-                    job.update(status='HOLD', blocker=str(exc))
-                except Exception:
-                    job.update(status='FAILED', blocker='Unexpected worker error; inspect inputs and run tests. Secrets omitted.')
-                finally:
-                    job.pop('_excluded_media_hashes', None)
-                    job.pop('_excluded_story_sources', None)
-                atomic_json(STATE / 'queue.json', state)
+            batch = produce_batch(state, budget, target)
             if batch and batch['completed'] < BATCH_SIZE:
                 warnings.append(f'Rotation stays on {batch["category"]} until {BATCH_SIZE} distinct review-ready videos exist; holds do not count.')
         finally:
             atomic_json(STATE / 'queue.json', state)
             report(state, warnings)
         print('Status saved to output/status.md. Videos remain drafts.')
-        return 1 if any(j['status'] == 'FAILED' for j in state['jobs'].values()) else 0
+        # A green production run means a real, reviewed MP4 exists this run.
+        return 0 if state.get('last_run', {}).get('completed', 0) > 0 else 2
 
 
 if __name__ == '__main__':
