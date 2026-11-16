@@ -872,12 +872,210 @@
       "status": "QUEUED",
       "created_at": "2026-11-16T10:36:13.885889+00:00",
       "attempts": 0
+    },
+    "ca7e3c0c496a8889": {
+      "title": "BCCI congratulates Jay Shah on reappointment as ICC Chair - Telangana Today",
+      "category": "world_news",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxQMFRwZDJuMnp2RW9Gbk1fbVJxNkVtZnRKVWxsTmg0R0kzU25uVUJ2X3NmVWl5c0ZzdGtFU1YtNE55bWVveG1ud1dWT2VhZENFOXZxTk8wcjI1LUR6VjhnNUVvcHRNVU1BZ0FMdVVWalZDZ2MzMWRJYjJnWDZrMHN5aEU3RnNTTHg0R2lXRA?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T11:36:34+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T11:48:48.986382+00:00",
+      "id": "ca7e3c0c496a8889",
+      "status": "HOLD",
+      "created_at": "2026-11-16T11:48:49.878881+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 1,
+      "last_attempt_at": "2026-11-16T11:48:49.993484+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "Invalid claims or scene count"
+    },
+    "b60052a301fe6ad1": {
+      "title": "Host Hotels & Resorts President James Risoleo Sells 25% Of Holding - Simply Wall St",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi1wFBVV95cUxNUmZhYnNYdDVqb3ROM09BM0ZFRHI3TWdxQlp3V0NqMTZsQWxhdW05TzZvc1hBZ1RWUXFXbUpqMnhvcFotSHFxQk1PUUFkRHBSbDRqVlZQMWZIcW1CaDFUaU1abzVpNmVjYU82NEpFbUVZZm9oOTFwYk5CdFpGQ0w1QmVDWHQ0VDNWVjJBZ2J0R0tkNjJjZmFwUUJRcXc5dlV0OWZVVmxfWjBFWmZFdkxyY2lBOFk3WlZwbTY4SVQyUFpMVEFuLThfeDM2SmpPUGNkcHVuVGtIRdIB3AFBVV95cUxPdThjbWpmNGlpRmVCMm5FT0Z5ZmFWb3JxckdkaVUyRExjb2twSUdPX2RhbmdRRGZ0dldldk9iQXFRQ19IaVZ0N1lVeXFHSjlYRzZGR3BrcVctejRkZzc5alRmRmZyT0k1YXB5OHE5anpLVXhBWnl3OXlDUHAtWnlPWW9Sc09wSDZ2SnlWanRodS1vTURjaFJna2dpSUdrN3NkaF9oQW9YZUExc3UtMHNGTDN3cmNUaGh5MS1WUGU2WjlZRERRLURIdEs1Qm1Rd1JGZGpDd3ZCcktDd1lr?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T10:39:15+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T11:48:49.864816+00:00",
+      "id": "b60052a301fe6ad1",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T11:48:49.887346+00:00",
+      "attempts": 0
+    },
+    "653ca9008bb7ba75": {
+      "title": "Plate tectonics - Continental Drift, Subduction, Earthquakes - Britannica",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMigAFBVV95cUxNY1ZCQTA2amFISDRCMEVUUDlVeFFLamJuTWhBQzJRRVBseDR5SlY3S210UU13T3AzR0xLUjV6RVRCVkcxZ09PekFheHhFWDRkajhwT1Z3dFFZOVFlWkV5SXFGeEpKQlctSW5fYkJNRS1OY2ROdXVBVmoyaklpZGp4ZA?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T11:48:47.107514+00:00",
+      "id": "653ca9008bb7ba75",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T11:48:49.895099+00:00",
+      "attempts": 0
+    },
+    "985b900a06bf20fe": {
+      "title": "Tsinghua Team Tops Global Rankings, Secures 4 Consecutive Rounds of Financing - 36Kr",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1uMzFsdTZxYnVIZVd6RlFQaWlRajVRRENkV1R4TmsyWHJyVFFLMlNIdjhySm1Tb2FvOXRuR2k5VTBDaWhPeTRBZ0t3ZVo3X1FoaE1F?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T11:48:47.116024+00:00",
+      "id": "985b900a06bf20fe",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T11:48:49.903881+00:00",
+      "attempts": 0
+    },
+    "6bbfe619c6dcfb0e": {
+      "title": "Without this protein, damaged muscle fills with fat and scar tissue - Science Daily",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMib0FVX3lxTFBycjR1azdsWHZKLXJNby1VcTc1ZzJwQWxnY01yRU83anVlbmpMSVhUS0RKRnhnZVBTLS1fZ3BlSF9OSF9ncjY1UDlGQ2lUN2ZjR2xMeG53X2tEd1BISXhYekhRQ1RPU3ZsMjZySnhRWQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T11:48:47.125020+00:00",
+      "id": "6bbfe619c6dcfb0e",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T11:48:49.913381+00:00",
+      "attempts": 0
+    },
+    "4295ea495a5fef7d": {
+      "title": "Kate Nash turns to OnlyFans to partly fund her tour - KarloBag.eu",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxNYWRwaHZJVW1idEY0eGVNOVpJZm91d2h3U1kwMndvM2dZVG1sVUJVMGcwcnM1eEk3ZmVmQ2NXSzRuU0o1ZGlsWWx1TDUyUFE2WnpSSlZUOWtyVnJVclRacHlmT09sQlNZVXZBNEpuNWRUWlVZVXV5WUFnSXFyVjdTLUg5MFl6dEI0dW1USjc4X1NRVE92Y3NOMnlVMV94Zzk4NXhSUGc1eXNyR0Vta25lY3dBV0xqclk?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T11:48:48.388423+00:00",
+      "id": "4295ea495a5fef7d",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T11:48:49.921453+00:00",
+      "attempts": 0
+    },
+    "5e7d69f02e5fd522": {
+      "title": "Milwaukee Holiday Shows 2026: Family-Friendly Performances for the Season - Milwaukee With Kids",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiYkFVX3lxTE40dEpLWXMwM0RrUV9XZWxhMUY4bE1EaDZlbTI3Sy1tMkZ0eGltREhIbzh3REMwanN5bW1QVERMd1lDby1mOG45aTFtV1pyX25xYlEyblJ6VW5QRVJUb2JSaGdn?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T11:48:48.425177+00:00",
+      "id": "5e7d69f02e5fd522",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T11:48:49.932132+00:00",
+      "attempts": 0
+    },
+    "ea24423f5c499c67": {
+      "title": "John Mayer Strips “Tom And Jerry” Down To Its Heart With New Acoustic Performance - That Eric Alper",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMivgFBVV95cUxOS1BCamVCQTNja2VnMXdmTTJoUU1aNWJUZkNUSGNwWnUtcUZsU2lHdTk4dHJaU3FneExtcEJsMkNLX010Zm90NlpOMWhJdWE5WXpzMk9nYjN0SkxwRVNmX0ROV0E3ZmMwdnpkNTNtcVZpaG4yNjlHMF91UUVDVjk2SWNiZGVtallEbUExRzZ6VTdNRmlLSGxuZUE5cGNBTl9FQk5FeGc2TVp2WENwYlJjamp0OHBtOWhGQ0ViTzlR?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T11:48:48.436465+00:00",
+      "id": "ea24423f5c499c67",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T11:48:49.944268+00:00",
+      "attempts": 0
+    },
+    "15860f5ee187cf77": {
+      "title": "MISUMI Advances Smarter Manufacturing Through AI, Digital Procurement and Automation - The Worldfolio",
+      "category": "world_news",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxPMllUdjlpdmVNemdBWHc2Uzdod3pHV094Wm5Fa1NCc05KNGZYdFhaNnVnNEQxOFJKN19QVTN2YURkQUpfMk5aVXBLckZVcE9KV2JUZWJVZXFNYzJjNi1GcFJPYzdCNzNCVktNUmxueXBTdTlMaUJGcV8wa29fb19vSUxoWTVDU2NtcUdBYTAtM0l1Z1ZFVXZWUVNzMVdpcXFGX3V0T3RVaHI0bkNyQ0R5dg?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T04:59:17+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T11:48:48.853262+00:00",
+      "id": "15860f5ee187cf77",
+      "status": "HOLD",
+      "created_at": "2026-11-16T11:48:49.955754+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 1,
+      "last_attempt_at": "2026-11-16T11:49:19.550163+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+    },
+    "5abd758d65b5fa5e": {
+      "title": "Alberta Anticipates Immediate Oil Sands Investment After Royalty Changes - News and Statistics - IndexBox",
+      "category": "world_news",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMinwFBVV95cUxOQXY0MWgzX3lLNWpWYmwzbmpkWXFTUzgxd3QtS3dnMkhsZlBGUS05LW5wRFNoU3lzcmlBLWJVd0ZxeHRicXY3eHA1dFhiVUpOLVQwUWFyUmZzeWczX2taeFZ3VEhzeU9xVXl5MW85eTJ4TVgySW1FS29kX3FTYzZCQWpZOUVLRXdRTHZlMVpjUTJPa1YzX0lUY0RoZ1lnclU?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T10:43:18+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T11:48:48.865843+00:00",
+      "id": "5abd758d65b5fa5e",
+      "status": "HOLD",
+      "created_at": "2026-11-16T11:48:49.968684+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 1,
+      "last_attempt_at": "2026-11-16T11:49:48.087029+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "Invalid claims or scene count"
+    },
+    "bcb92c282da95057": {
+      "title": "Trump heads to Asia to meet with Xi and Putin amid Nvidia fallout - KGOU",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMivgFBVV95cUxQMjVYanc0cllZVElGSXBlZkIzdnZpOGxLdFBJNWRXWVQ5cURuRExKdTNjdWRGQXhyS1U5bXdKaDAwOVF1ZEk1YmdmTUloSGFwWjZSaGozTWpUVWhnd3NBYVZOZEZpWDRZSWJDcmRoekFHUkc5YlZCVVZ5QTByTzI3VXdFNjB2Z2tkTl82bVJjdzhUNmlVSUJvcTlUbTkxam4zM0cxYTRZMmFmaVZxVHA4OEhnbFc0Mlo0Z2VCeFF3?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T10:02:26+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T11:48:49.599106+00:00",
+      "id": "bcb92c282da95057",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T11:48:49.978644+00:00",
+      "attempts": 0
+    },
+    "a8d17b40121263e1": {
+      "title": "US offers millions for information on Iran’s nuclear program despite Trump’s claims of obliteration - Scripps News",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi2gFBVV95cUxQdEZHWF81Z1hyOVQzLUlkQjNxVko1Qk9iMjJjZFlObWU3cWVod2hrUUhyWVJZZ242RUpMc1c3cktPMHo4VmoyNXo5YkFhakVfUzNqLXd5NUFVd2liU19FSlpPcG9CNERxZmdyaUNuaWhvb01jSXhoS2RuQ3NTTExmLXhQQkRuR1RmZUpLdWJ3VGp1cVF0LVcwQjkwWVduWUxjbWhISk1BcUNJOFFxUGgwVzA1ZTZwOUsySTV3UFhqbjI0THVxWDNmcjdoWXJ5ZzJaVDBGRmp1VllDUQ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-15T17:05:46+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T11:48:49.618829+00:00",
+      "id": "a8d17b40121263e1",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T11:48:49.993385+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-16",
     "youtube": 3,
-    "ai": 4
+    "ai": 6
   },
   "content_cycle_index": 0,
   "content_batch": {
@@ -887,5 +1085,5 @@
     "media_hashes": [],
     "source_urls": []
   },
-  "production_runs": 3
+  "production_runs": 4
 }
