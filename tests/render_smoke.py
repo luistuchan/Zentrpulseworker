@@ -3,6 +3,8 @@ Run manually: python tests/render_smoke.py. No API calls or keys needed.
 """
 from pathlib import Path
 import tempfile
+import os
+import shutil
 from unittest.mock import patch
 from test_worker import w
 
@@ -39,6 +41,11 @@ def main():
                 assert w.digest(result2) == first_digest
             print('OFFLINE RENDER PASSED: six scenes, 1080x1920, audio, captions, full decode, resume.')
             print(quality)
+            if os.getenv('RENDER_TEST_OUTPUT'):
+                destination = Path(os.environ['RENDER_TEST_OUTPUT'])
+                destination.mkdir(parents=True, exist_ok=True)
+                shutil.copy2(result, destination / 'synthetic-render-test.mp4')
+                (destination / 'README.txt').write_text('Synthetic renderer diagnostic: color scenes and test tones. Not a production draft.\n' + str(quality))
 
 
 if __name__ == '__main__':
