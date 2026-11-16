@@ -20,7 +20,7 @@ def discover(budget, *, api):
         return []
     custom = os.getenv('CLIPPER_SEARCH_QUERY', '').strip()
     searches = [('creators', custom or 'streamer interview funny moments highlights'),
-                ('gaming_releases', 'new game reveal trailer announcement gameplay'),
+                ('animals', 'funny animals pets unexpected moments'),
                 ('entertainment_releases', 'new movie trailer music release announcement')]
     candidates_by_id = {}
     for bucket, query in searches:
@@ -51,6 +51,8 @@ def discover(budget, *, api):
         snippet = video.get('snippet', {})
         bucket = candidates_by_id.get(video['id'], 'creators')
         title = snippet.get('title', video['id'])
+        if re.search(r'\b(?:GTA\s*(?:6|VI)|Grand Theft Auto\s*(?:6|VI))\b', title, re.I):
+            continue  # GTA 6 coverage is paused by the user.
         is_gta = bool(re.search(r'\bGTA\b|Grand Theft Auto', title, re.I))
         if bucket_counts.get(bucket, 0) >= 2 or (is_gta and gta_selected):
             continue
