@@ -67,7 +67,7 @@ jobs:
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
           TTS_VOICE: ${{ vars.TTS_VOICE || 'en-US-AriaNeural' }}
           TARGET_SECONDS: ${{ vars.TARGET_SECONDS || '30' }}
-          MAX_JOBS_PER_RUN: '1'
+          MAX_JOBS_PER_RUN: '3'
           MAX_AI_CALLS: '12'
           MAX_YOUTUBE_SEARCHES: '3'
           MAX_PEXELS_SEARCHES: '24'
@@ -124,3 +124,4 @@ jobs:
           path: state/queue.json
           if-no-files-found: ignore
           retention-days: 30
+
