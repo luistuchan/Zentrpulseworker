@@ -70,19 +70,7 @@ jobs:
           MAX_PEXELS_SEARCHES: '96'
           MAX_PIXABAY_SEARCHES: '72'
           RETRY_JOB: ${{ inputs.retry_job }}
-        run: |
-          python - <<'PY'
-          import os, ssl
-          from pathlib import Path
-          print('TLS trust paths:', ssl.get_default_verify_paths())
-          for key in ('SSL_CERT_FILE', 'SSL_CERT_DIR', 'REQUESTS_CA_BUNDLE', 'CURL_CA_BUNDLE'):
-              value = os.getenv(key)
-              print(key, value if value and Path(value).exists() else 'unset or unavailable')
-          print('Additional CA files:', [p.name for p in Path('/usr/local/share/ca-certificates').glob('*')])
-          PY
-          openssl s_client -connect svs.gsfc.nasa.gov:443 -servername svs.gsfc.nasa.gov </dev/null 2>/dev/null | openssl x509 -noout -issuer -subject -ext authorityInfoAccess
-          sudo update-ca-certificates
-          python curated_moon.py
+        run: python curated_moon.py
       - name: Save authoritative queue state
         if: always()
         run: |
