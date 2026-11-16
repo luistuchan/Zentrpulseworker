@@ -70,7 +70,7 @@ jobs:
           MAX_PEXELS_SEARCHES: '96'
           MAX_PIXABAY_SEARCHES: '72'
           RETRY_JOB: ${{ inputs.retry_job }}
-        run: python recover_clips.py
+        run: python recover_clips.py || python curated_moon.py
       - name: Save authoritative queue state
         if: always()
         run: |
