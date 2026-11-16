@@ -16,28 +16,50 @@ import urllib.parse
 
 def discover(budget, *, api):
     key = os.getenv('YOUTUBE_API_KEY', '').strip()
-    if not key or not budget.take('youtube'):
+    if not key:
         return []
-    query = os.getenv('CLIPPER_SEARCH_QUERY', 'streamer interview funny moments highlights')[:120]
-    params = urllib.parse.urlencode({'key': key, 'part': 'snippet', 'type': 'video',
-        'q': query, 'videoLicense': 'creativeCommon', 'relevanceLanguage': 'en',
-        'safeSearch': 'strict', 'order': 'viewCount', 'maxResults': 6,
-        'publishedAfter': (datetime.now(timezone.utc) - timedelta(days=7)).isoformat()})
-    results = api.json_http('https://www.googleapis.com/youtube/v3/search?' + params, retries=0)
-    candidates = [x for x in results.get('items', []) if re.fullmatch(r'[\w-]{11}', x.get('id', {}).get('videoId', ''))]
+    custom = os.getenv('CLIPPER_SEARCH_QUERY', '').strip()
+    searches = [('creators', custom or 'streamer interview funny moments highlights'),
+                ('gaming_releases', 'new game reveal trailer announcement gameplay'),
+                ('entertainment_releases', 'new movie trailer music release announcement')]
+    candidates_by_id = {}
+    for bucket, query in searches:
+        if not budget.take('youtube'):
+            break
+        params = urllib.parse.urlencode({'key': key, 'part': 'snippet', 'type': 'video',
+            'q': query[:120], 'videoLicense': 'creativeCommon', 'relevanceLanguage': 'en',
+            'safeSearch': 'strict', 'order': 'viewCount', 'maxResults': 6,
+            'publishedAfter': (datetime.now(timezone.utc) - timedelta(days=7)).isoformat()})
+        results = api.json_http('https://www.googleapis.com/youtube/v3/search?' + params, retries=0)
+        for item in results.get('items', []):
+            video_id = item.get('id', {}).get('videoId', '')
+            if re.fullmatch(r'[\w-]{11}', video_id):
+                candidates_by_id.setdefault(video_id, bucket)
+    candidates = [{'id': {'videoId': video_id}} for video_id in candidates_by_id]
     if not candidates or not budget.take('youtube'):
         return []
     params = urllib.parse.urlencode({'key': key, 'part': 'status,snippet',
                                     'id': ','.join(x['id']['videoId'] for x in candidates)})
     videos = api.json_http('https://www.googleapis.com/youtube/v3/videos?' + params, retries=0).get('items', [])
     leads = []
+    bucket_counts = {}
+    gta_selected = False
+    videos.sort(key=lambda video: video.get('snippet', {}).get('publishedAt', ''), reverse=True)
     for video in videos:
         if video.get('status', {}).get('license') != 'creativeCommon':
             continue
         snippet = video.get('snippet', {})
+        bucket = candidates_by_id.get(video['id'], 'creators')
+        title = snippet.get('title', video['id'])
+        is_gta = bool(re.search(r'\bGTA\b|Grand Theft Auto', title, re.I))
+        if bucket_counts.get(bucket, 0) >= 2 or (is_gta and gta_selected):
+            continue
+        bucket_counts[bucket] = bucket_counts.get(bucket, 0) + 1
+        gta_selected = gta_selected or is_gta
         url = 'https://www.youtube.com/watch?v=' + video['id']
         leads.append({'title': 'Clip highlight: ' + snippet.get('title', video['id']),
             'category': 'clipper', 'content_type': 'clipper', 'source_video_id': video['id'],
+            'discovery_bucket': bucket, 'release_candidate': bucket.endswith('_releases'),
             'media': {'source_url': url, 'license': 'creativeCommon',
                       'license_checked_at': api.now(), 'creator': snippet.get('channelTitle', ''),
                       'rights_note': 'YouTube API reports Creative Commons; attribution and final rights require review'},
