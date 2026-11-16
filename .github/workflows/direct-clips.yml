@@ -80,6 +80,7 @@ jobs:
               print(key, value if value and Path(value).exists() else 'unset or unavailable')
           print('Additional CA files:', [p.name for p in Path('/usr/local/share/ca-certificates').glob('*')])
           PY
+          openssl s_client -connect svs.gsfc.nasa.gov:443 -servername svs.gsfc.nasa.gov </dev/null 2>/dev/null | openssl x509 -noout -issuer -subject -ext authorityInfoAccess
           sudo update-ca-certificates
           python curated_moon.py
       - name: Save authoritative queue state
