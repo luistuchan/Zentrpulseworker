@@ -659,12 +659,225 @@
       "status": "QUEUED",
       "created_at": "2026-11-16T08:45:49.305423+00:00",
       "attempts": 0
+    },
+    "90013fc7b1b6bdc3": {
+      "title": "TNA Destination X Takes Place With Major Changes Due To FAA Ground Stop - Howl.Link",
+      "category": "world_news",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiO0FVX3lxTE82d1dMdGZ1VHZPUE5qUE4wWG5xWmZaS1BoSGVEVzFodnl4NUxTZWpYVzZoODZmWmxVU0RF?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T09:58:33+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T10:36:12.794220+00:00",
+      "id": "90013fc7b1b6bdc3",
+      "status": "HOLD",
+      "created_at": "2026-11-16T10:36:13.768077+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 1,
+      "last_attempt_at": "2026-11-16T10:36:13.886022+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+    },
+    "de632a0cc6ccbd09": {
+      "title": "Carney says US tariffs could turn Canada's carmakers to China - Yahoo News Singapore",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMieEFVX3lxTE15cWxKS2pXa1dlVzdaQlVHTzRObkdrLXRsalQwM25QSUFrSll5MS1Jc0RfbFpLYU5oN3JZYzUzOHdoZF8xcDlvTlNHVkZwZTBBWUFwMEhGVV9MbkdLQXhEVXZNOGQzaXhXRXp0eTloYmNYWUJCYzBBVQ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T10:14:13+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T10:36:13.678632+00:00",
+      "id": "de632a0cc6ccbd09",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T10:36:13.775739+00:00",
+      "attempts": 0
+    },
+    "0935eff17b9774de": {
+      "title": "Bhairadevi Ending Explained: A Shocking Story of Betrayal, Murder and Supernatural Revenge (Spoilers) - Vocal",
+      "category": "true_events",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOaHpxS0xQUjNWenZSUXdRalF2bGlqdndaUkx5bHZWOXdpQXVXVE5aZmQwMEJockdyclAwSGRmWG5ma2ZNQ2cyTXgzNDVJcWFiR1VQME1JbFl5TlhmWGN3LWJrMnVBRzc2cllOZGZXVkc3ZEdQT3NLdUFXSGRYaFNGUHJEUjEwMTBVT0ZvVkhDcTVPb0pHekVZR2M5UVJacXJOTTdDLWFuMGllWU13TUJ1cjVzUEpOdHJtSnhBQTF3T04?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 1,
+      "discovered_at": "2026-11-16T10:36:11.777709+00:00",
+      "id": "0935eff17b9774de",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T10:36:13.784978+00:00",
+      "attempts": 0
+    },
+    "3a44bdb665e0ff78": {
+      "title": "Hair Relaxer Lawsuit Settlement | November 2026 Litigation Update - Lawsuit Information Center",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMid0FVX3lxTE5TeE1JSEYxeklQWlpCaXNCM21UUzZ5ZHVwREJKOXhCbDhnWGZOcW11WDNYREtvMEpZVmVwVzF3a0lGOGhKcmhYaWhTMnIzQmJkQW9GQXhmbWY0S3gzQ2tILTNWYkpWbjVuVTFJRlRqZ0NfdEdFblhV?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T10:36:11.187561+00:00",
+      "id": "3a44bdb665e0ff78",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T10:36:13.793151+00:00",
+      "attempts": 0
+    },
+    "4203fb43629a358c": {
+      "title": "Earth's fiery birth may have created hundreds of oceans' worth of water - Science Daily",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMib0FVX3lxTE5BUHZ4X09jY2EyNGFPSXljbHFneHkyeGRBcFZ1dDUwRFp1Nks3NWo2Z2pXS0hONENVWWJBZDM3SEI1eGU2VjhNZVotLUs1NVM3RXZlMEpUMHN4U2FOcmJUMnBJSHNrWmhXVW1BSXBodw?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T10:36:11.195241+00:00",
+      "id": "4203fb43629a358c",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T10:36:13.801657+00:00",
+      "attempts": 0
+    },
+    "98b508551dbc799e": {
+      "title": "Some immune cells meant to fight cancer end up helping tumors grow. In mice, blocking one signal they send slowed the tumors down - Futura, le média qui explore le monde",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi_wFBVV95cUxOTXhSMTYzTkdUYlgyV2d6TzVqaXdielhBd0lWMFprbHBpSXJKd3pkM2FTcVpjd3BSSDFrNWFSMWFJSWdqRWJERGN3RzF3bEpHR1F6X2J4czdKaGxjUXNobDNLZTRmc201U0gzeEUxUWpDc2FyTWgtSFRmeG5iaE9LTlpiVUM0RThPN0NQU2pNX0lSSlN0eWY3eWZnaWRDNElIT2tzQlhLZ2tZclRHdGZTdENFUEkyUlZzRHhPREJCS21aZHFPamVHYnNfN0xod2pVNE5wN3FSYWwwNXI3WlBSSGYzbTNYeTd4eEFJNWkwUl91eUhzUk8zcFRDdmU0ekk?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T10:36:11.208547+00:00",
+      "id": "98b508551dbc799e",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T10:36:13.816540+00:00",
+      "attempts": 0
+    },
+    "5c2fc0b7929fbd7e": {
+      "title": "Call of Duty enlists JAMBINAI to give its score a Korean touch - The Korea Times",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMivAFBVV95cUxNemdjX3pYQU41eGJNbjR5aWVYQjQwZ2ZTUjgyLXlrMXNhZXlCQnMxaGlMRERCX1VnMlBnS0dyVWNwTHllV3hFYTdEZi0yaDRuanJUeGRLWU02ZnF1dEZTeURVMWhnOTVoQzlrQ2RnNi00cG9pSHJPaE91c1dCVDFLMm0wbXN6NHFPZl9jTUhONTBYbGRFdkZXU19rbmJCVW1TaTRmNFpGMlNteG4zamloLXg2Q3hMRVQ5eE5FOdIBwgFBVV95cUxPYTZPeVZ4ZzFtQ2NBUkkzZXZ2XzZITmlVMndneG8wT01wd190WlJYNWtZODJJTUk1QkF3RW5UU1JJWTJUWHBlOUVBVzJwVTdNT3ZpT2VvNWJZVmtlZkVtNkJTRWl4aVVoNFdmSVAxSzQ4eWpjYjNaRmUwa2M2OUdQb21WRTlEZG91am81Vk1mdU5Ib3lHQ3p4OWpmdGRITTl6VkE0bTRueGN0czBPUGpFX3VaQ1ZHTHV3MEZUeFdQeUVrdw?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T10:36:12.396048+00:00",
+      "id": "5c2fc0b7929fbd7e",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T10:36:13.824771+00:00",
+      "attempts": 0
+    },
+    "1dc34d956ddca456": {
+      "title": "Virtual creators team with HYBE unit NEWEPICBASE to release single and YouTube series - Chosunbiz",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOVkNxbnJyVUowQ083WHRiSGFtWHNERlBDVjVjSG1ndGoxMzZPbVdYNEk3dkROYVhrcWNHMWZOQ1I1MkxHWEpONUo2bzJPZ0dwMWpfamQzWDFIaFkxWnk2Q2xjQVowdHQ2ZU5KT0pVS215ei10dktlbHRKd2dHeWFwTi1CWGptS2pq0gGcAUFVX3lxTE9NazFmZFhXSmdCZnFKLTZuZ0JXODZyeVhuMkw1UUZEOWF1bWd2R1ZqRG9vYWNYUTBWQ2Q1ajA3WExDWlBzWkhOYy1nVFk0b0JuN1pMMzNGWW1rS1BtaGNPVGtEckJ5U1BsY1BBVVRhSEh1U1dpbWZwamxpM1FqRUJ0dHIwcTE2ZVpkMW55TTFoZTZsOXBfZjBBM21MZg?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T10:36:12.405992+00:00",
+      "id": "1dc34d956ddca456",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T10:36:13.834418+00:00",
+      "attempts": 0
+    },
+    "5f0ddd8b703bd3b9": {
+      "title": "'Female musicians work ten times harder than men to gain recognition' — Wendy Shay - Modern Ghana",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxNMFhFUmRXQVNOT0NCTDZhMDc2MlAwVVJsWnRrWG5ISWhyOUVVTTd5T0owNS1UVlU1N3ltcWpXamNTeC1keEg3Yy1NZTFrRy1ZdVpBSHVfUTRkZ2Jpem1Kb1JTTXRpT2RfOXdZOGgxajNJWmQzc0kybEFIRTVOZmhMMFBjeXFmelJQWG95T1Qza01tZ2V5eUEyUDJoaUxud1pPQmfSAaABQVVfeXFMT2Y0bU10QTBVUFBMNTFzWGFucVd0YUF4NVFBaXQ5OXNDZG5MNy05XzdZNXBUSWQ2djhSc0pnQy1qQXcxbENJSUhIak12bHRxajdEb2xNMTRQUTIwOTQ0cjRMMXNuaENDb1l1cF92NllZSzJHc3VUVTYwbXVvZTRwYlBxM1BveUtnQnV3TVR1TEszbDVheFh3dDJZcmlveV9iMA?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T10:36:12.415707+00:00",
+      "id": "5f0ddd8b703bd3b9",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T10:36:13.843792+00:00",
+      "attempts": 0
+    },
+    "710b1ac83d1df7c7": {
+      "title": "PGA Tour 2026 schedule: Winners from FedExCup, Signature Events and golf majors, including The Masters and US Open - Sky Sports",
+      "category": "world_news",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi4gFBVV95cUxOU3l1eXd3VGhha2pJbmpVbDFva2wtdjg5bXhRal9nSk9OZkMxSmVHVXlENG5zY2VPX1JDTFV6b2ZDOTYxTnY1dlFkd0t1VERNSGxUUFotdkJyVTVqTVRpMmhuM2E1VUgyZ3NVTzdBdktoVmtsdVFWb2tXeFVsMGpMZ3lvZDRTT0ZfcVdSUm5FTDZYX3haT19Ib0MzNHJwaHRDMW5JbzVQZXhVbV9SSWw4QlNXa045b0h5RlVkSHhzdWhCeUJKdHpkU0xWWW84NUVhMmRSUklKOFhZaXVWNTBFWUp3?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T07:24:26+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T10:36:12.808245+00:00",
+      "id": "710b1ac83d1df7c7",
+      "status": "HOLD",
+      "created_at": "2026-11-16T10:36:13.855991+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 1,
+      "last_attempt_at": "2026-11-16T10:36:45.280665+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "Gemini model gemini-2.5-flash: Service HTTP 404; no paid fallback attempted"
+    },
+    "0aaf5f5a7d9c99de": {
+      "title": "RANKED: The Top Crude Oil Producers in 2025 – Visual Capitalist – See How Countries Rank - EnergyNow.com",
+      "category": "world_news",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxQc043cHk1ZjIxLWc2RVJUX2p1NnRHMmpRamNpNkVJNTBkNjliR1Z4amtCdkdVUzkzUnBRQ2ZpWFhHdGRUUWtybzFieTY2ek9qazdPaG5Ec0d3akx6a24wMlYzaDdnbjZrbmNVdTdZdXZSYlhGTVFUOHJoTGZhQ1RJR2tyaDNGckF0OWM0QW1ta2lVbnFoOFE?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-15T13:20:58+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T10:36:12.820893+00:00",
+      "id": "0aaf5f5a7d9c99de",
+      "status": "HOLD",
+      "created_at": "2026-11-16T10:36:13.866888+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 1,
+      "last_attempt_at": "2026-11-16T10:37:10.721213+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. Service HTTP 403; no paid fallback attempted"
+    },
+    "e6e9e1c5fb72136e": {
+      "title": "China confirms Xi-Trump-Putin historic summit. What will be on the agenda? - CNBC",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMikgFBVV95cUxOd3F0YmYwUDBReEkyTFRDWnc5b2k2cnVQQ3l5WExtZzdtRi0yT1J6OXdjWUFRb05YYl9ZSHo4bFpJbkRkR29oUVJMRWE1LXRJNnRzMnFVclY1STFjOUE1X2xBajBsQXRyUjNuVkZ1TEhmOG1RRUdHeUxwR1Q5Zk1JeHNKa3EzZHpPdWE3X2lQX1hJZ9IBlwFBVV95cUxQdXFsN29GRHBmQVZoUWlBSk8zRkRsUG02WDR3QVlveTF3RDhUNU9oamxncXNNWFRvMGdpVmR0WkhycnUtdHJQSWJRRlA4VXY3MURUMXQxLXVMeG1PMnBqd1RWaGNfSWtGX1NheTdPYUtUcTNIX2xkbHhhMTRNdlhoVTd5X09oMnBsb3llSmVRNHhKVFU0bGc0?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T04:34:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T10:36:13.435593+00:00",
+      "id": "e6e9e1c5fb72136e",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T10:36:13.875678+00:00",
+      "attempts": 0
+    },
+    "71d12c042675219e": {
+      "title": "China Says Xi-Putin-Trump Meeting Has 'Groundbreaking Significance' - U.S. News & World Report",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxOZUVycDZ3LXlSeUtRcm9LQzM3emVqTm5fa0lhY2dOaW1yOGhLbmpONjFjQ1dOZ2lKNE5uR01Pd210RzNVRnF1alYyeTBHa2YyUm9meFlHemdJS1kwejRyRGdqS1IzRDNpWFE5emZaWEVtZWNYTXI0UUVyUGw0WVpmaVdLWWFGUVVWTXV4eVZCWjhtUi1DQzFhNlc4ZHhfc1BRRGJJNm00b1AtcEE2YWxyTTQ3by15UTRGbFRN?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T07:45:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T10:36:13.451821+00:00",
+      "id": "71d12c042675219e",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T10:36:13.885889+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-16",
     "youtube": 3,
-    "ai": 3
+    "ai": 4
   },
   "content_cycle_index": 0,
   "content_batch": {
@@ -674,5 +887,5 @@
     "media_hashes": [],
     "source_urls": []
   },
-  "production_runs": 2
+  "production_runs": 3
 }
