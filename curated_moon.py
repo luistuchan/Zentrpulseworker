@@ -15,14 +15,18 @@ def main():
         if result.returncode == 60:
             # NASA's peer advertises this intermediate in Authority Information Access.
             # Fetch it over verified HTTPS, then let OpenSSL validate the whole chain.
-            issuer_der, issuer_pem = folder / 'issuer.der', folder / 'issuer.pem'
-            subprocess.run(['curl', '--fail', '--location', '--max-time', '30',
-                            '--output', str(issuer_der), 'https://yr2.i.lencr.org/'], check=True)
-            subprocess.run(['openssl', 'x509', '-inform', 'DER', '-in', str(issuer_der),
-                            '-out', str(issuer_pem)], check=True)
+            issuer_pem, cross_pem = folder / 'issuer.pem', folder / 'root-cross.pem'
+            for filename, cert_url in (
+                (issuer_pem, 'https://letsencrypt.org/certs/gen-y/int-yr2.pem'),
+                (cross_pem, 'https://letsencrypt.org/certs/gen-y/root-yr-by-x1.pem')):
+                subprocess.run(['curl', '--fail', '--location', '--max-time', '30',
+                                '--output', str(filename), cert_url], check=True)
+            system_ca = '/etc/ssl/certs/ca-certificates.crt'
+            subprocess.run(['openssl', 'verify', '-CAfile', system_ca,
+                            '-untrusted', str(cross_pem), str(issuer_pem)], check=True)
             bundle = folder / 'nasa-ca-bundle.pem'
-            bundle.write_bytes(w.Path('/etc/ssl/certs/ca-certificates.crt').read_bytes()
-                               + b'\n' + issuer_pem.read_bytes())
+            bundle.write_bytes(w.Path(system_ca).read_bytes() + bytes([10])
+                               + issuer_pem.read_bytes() + bytes([10]) + cross_pem.read_bytes())
             result = subprocess.run(['curl', '--fail', '--location', '--max-time', '60',
                                      '--cacert', str(bundle), '--output', str(source), url],
                                     capture_output=True, text=True)
