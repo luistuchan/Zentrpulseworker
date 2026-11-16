@@ -1,2 +1,8 @@
 # Bounded major version; online voice service can change independently.
 edge-tts>=7.2.3,<8
+# Explicit API pin: older releases use a different decoder entry point.
+googlenewsdecoder==0.2.2
+yt-dlp>=2026.1.1,<2027
+faster-whisper>=1.2,<2
+opencv-python-headless>=4.10,<5
+

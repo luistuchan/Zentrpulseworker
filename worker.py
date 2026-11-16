@@ -10,6 +10,7 @@ import base64
 from collections import Counter
 from datetime import datetime, timezone, timedelta
 from difflib import SequenceMatcher
+from email.utils import parsedate_to_datetime
 import hashlib
 from html.parser import HTMLParser
 import ipaddress
@@ -32,6 +33,7 @@ OUTPUT = ROOT / 'output'
 WORK = ROOT / '.work'
 USER_AGENT = 'ZENTR-Pulse/3.0 (source-linked video drafts)'
 SCHEMA_VERSION = 3
+SOURCE_PIPELINE_VERSION = 1
 CATEGORIES = {
     'movies': 'movie scene hidden clue explained',
     'creators': 'streamer viral moment context explained',
@@ -41,8 +43,19 @@ CATEGORIES = {
     'true_events': 'unusual true event investigation explained',
     'gaming': 'game hidden mechanic discovery explained',
     'music': 'music performance production detail explained',
+    'world_news': 'world news major developments -opinion -editorial',
+    'president': 'US president latest news -polls -campaign -fundraising -opinion',
 }
+NEWS_CATEGORIES = {'world_news', 'president'}
+NEWS_MAX_AGE_HOURS = 48
+CONTENT_CYCLE = ('world_news', 'clipper', 'creators', 'science', 'movies', 'culture',
+                 'world_news', 'gaming', 'sports', 'president', 'true_events', 'music')
+BATCH_SIZE = 3
 STOPWORDS = set('the a an and or of on in at is to for with this that video footage'.split())
+SEARCH_STOPWORDS = STOPWORDS | set('''who what when where why how does do did has have had
+    may might could would should will can new finally really just more most into from
+    about explained explains explanation mystery solved knows know reveals revealed
+    discovery discovered scientists researchers study research'''.split())
 
 
 class Hold(Exception):
@@ -166,8 +179,35 @@ class ArticleText(HTMLParser):
             self.parts.append(text)
 
 
+def publisher_url(url):
+    """Resolve discovery wrappers; a decoded URL is still not article evidence."""
+    if urllib.parse.urlsplit(url).hostname != 'news.google.com':
+        return public_url(url)
+    cache = WORK / 'source-urls' / (hashlib.sha256(url.encode()).hexdigest() + '.json')
+    cached = load(cache, {})
+    if cached.get('url'):
+        return public_url(cached['url'])
+    try:
+        from googlenewsdecoder import GoogleDecoder
+        with GoogleDecoder(timeout=15, user_agent=USER_AGENT) as decoder:
+            result = decoder.decode_google_news_url(url)
+    except ImportError:
+        raise Hold('Article decoder missing; install requirements.txt') from None
+    except Exception:
+        raise Wait('Google News article decoding unavailable; retry later') from None
+    decoded = result.get('decoded_url', '')
+    if not result.get('success') or not decoded:
+        # Never log decoder messages: they may contain untrusted URLs or responses.
+        raise Wait('Google News article decoding unavailable; retry later')
+    decoded = public_url(decoded)
+    if urllib.parse.urlsplit(decoded).hostname == 'news.google.com':
+        raise Hold('Google News link did not resolve to a publisher article')
+    atomic_json(cache, {'url': decoded})
+    return decoded
+
+
 def source_text(url):
-    raw, final_url, content_type = http(url)
+    raw, final_url, content_type = http(publisher_url(url), retries=0)
     if urllib.parse.urlsplit(final_url).hostname == 'news.google.com':
         raise Hold('Google News discovery link did not resolve to a publisher article')
     if 'html' not in content_type and 'text/plain' not in content_type:
@@ -186,13 +226,25 @@ def duplicate(title, existing):
     return any(SequenceMatcher(None, title, normalized(x)).ratio() > .84 for x in existing)
 
 
+def news_is_fresh(published_at):
+    try:
+        published = datetime.fromisoformat(published_at)
+        if published.tzinfo is None:
+            return False
+        age = datetime.now(timezone.utc) - published
+        return -timedelta(minutes=15) <= age <= timedelta(hours=NEWS_MAX_AGE_HOURS)
+    except (TypeError, ValueError):
+        return False
+
+
 def discover(limit):
     """Free RSS discovery. Headlines are leads, not evidence or virality proof."""
     leads = []
     errors = []
     for category, query in CATEGORIES.items():
+        is_news = category in NEWS_CATEGORIES
         url = 'https://news.google.com/rss/search?' + urllib.parse.urlencode({
-            'q': query + ' when:7d', 'hl': 'en-US', 'gl': 'US', 'ceid': 'US:en'})
+            'q': query + (' when:1d' if is_news else ' when:7d'), 'hl': 'en-US', 'gl': 'US', 'ceid': 'US:en'})
         try:
             root = ET.fromstring(http(url)[0])
             for item in root.findall('./channel/item')[:6]:
@@ -201,17 +253,39 @@ def discover(limit):
                     continue
                 if any(x in title.lower() for x in ('coupon', 'tickets on sale', 'shopping guide', 'horoscope')):
                     continue
+                if is_news and re.search(r'\b(opinion|editorial|commentary)\b', title, re.I):
+                    continue
+                if category == 'president' and re.search(r'\b(polls?|campaign|fundraising|partisan)\b', title, re.I):
+                    continue
+                published_at = None
+                if is_news:
+                    try:
+                        published_at = parsedate_to_datetime(item.findtext('pubDate') or '').isoformat()
+                    except (TypeError, ValueError, OverflowError):
+                        continue
+                    if not news_is_fresh(published_at):
+                        continue
                 score = sum(x in title.lower() for x in ('hidden', 'why', 'explained', 'discovery', 'unexpected', 'rule', 'secret'))
                 leads.append({'title': title, 'category': category, 'source_urls': [item.findtext('link')],
-                              'content_type': 'explainer', 'headline_score': score,
+                              'content_type': 'news_update' if is_news else 'explainer',
+                              'source_published_at': published_at, 'headline_score': score,
                               'discovered_at': now()})
         except (Hold, ET.ParseError):
             errors.append(category)
     # Round-robin categories; do not let one category consume the queue.
     leads.sort(key=lambda x: x['headline_score'], reverse=True)
     selected, counts = [], Counter()
+    # Reserve a small share for the user's news updates while retaining explainers.
+    for category in ('world_news', 'president'):
+        candidates = [x for x in leads if x['category'] == category]
+        if candidates and len(selected) < limit:
+            lead = max(candidates, key=lambda x: x['source_published_at'])
+            selected.append(lead)
+            counts[category] += 1
     for lead in leads:
-        if counts[lead['category']] >= 2:
+        if len(selected) >= limit:
+            break
+        if lead in selected or counts[lead['category']] >= 3:
             continue
         selected.append(lead)
         counts[lead['category']] += 1
@@ -235,11 +309,20 @@ def youtube_signal(title, budget):
 
 def corroborating_urls(title):
     """Best-effort, no-key direct article discovery; relevance is checked by editors."""
-    terms = [x for x in re.findall(r'[A-Za-z0-9]+', title.rsplit(' - ', 1)[0])
-             if x.lower() not in STOPWORDS and len(x) > 2][:7]
-    if len(terms) < 3:
+    terms = list(dict.fromkeys(x.lower() for x in re.findall(r'[A-Za-z0-9]+', title.rsplit(' - ', 1)[0])
+                              if x.lower() not in SEARCH_STOPWORDS and len(x) > 2))[:7]
+    if len(terms) < 2:
         return []
+    min_overlap = min(3, len(terms))
     urls, hosts = [], set()
+
+    def add(url, headline):
+        host = (urllib.parse.urlsplit(url).hostname or '').removeprefix('www.')
+        words = set(re.findall(r'[a-z0-9]+', headline.lower()))
+        overlap = words.intersection(x.lower() for x in terms)
+        if url.startswith('https://') and host and host != 'news.google.com' and host not in hosts and len(overlap) >= min_overlap:
+            hosts.add(host)
+            urls.append(url)
     # Retry a shorter query when the entire headline is too restrictive.
     for query in dict.fromkeys((' '.join(terms), ' '.join(terms[:3]))):
         params = urllib.parse.urlencode({'query': query, 'mode': 'artlist',
@@ -248,18 +331,34 @@ def corroborating_urls(title):
         try:
             articles = json_http('https://api.gdeltproject.org/api/v2/doc/doc?' + params,
                                  retries=0).get('articles', [])
-        except (Hold, Wait, ValueError):
-            continue
+        except (Hold, ValueError):
+            articles = []
         for item in articles:
-            url = item.get('url', '')
-            host = (urllib.parse.urlsplit(url).hostname or '').removeprefix('www.')
-            words = set(re.findall(r'[a-z0-9]+', item.get('title', '').lower()))
-            overlap = words.intersection(x.lower() for x in terms)
-            if url.startswith('https://') and host and host != 'news.google.com' and host not in hosts and len(overlap) >= 3:
-                hosts.add(host)
-                urls.append(url)
+            add(item.get('url', ''), item.get('title', ''))
         if len(urls) >= 2:
             break
+    # GDELT can be unavailable or have no matches. Google RSS is a discovery
+    # fallback, but only decoded publisher URLs are returned as candidates.
+    if len(urls) < 2:
+        for query in dict.fromkeys((' '.join(terms), ' '.join(terms[:4]))):
+            params = urllib.parse.urlencode({'q': query, 'hl': 'en-US', 'gl': 'US', 'ceid': 'US:en'})
+            try:
+                root = ET.fromstring(http('https://news.google.com/rss/search?' + params, retries=0)[0])
+            except (Hold, ET.ParseError):
+                continue
+            for item in root.findall('./channel/item')[:5]:
+                headline = item.findtext('title') or ''
+                words = set(normalized(headline).split())
+                if len(words.intersection(terms)) < min_overlap:
+                    continue
+                try:
+                    add(publisher_url(item.findtext('link') or ''), headline)
+                except Hold:
+                    continue
+                if len(urls) >= 4:
+                    break
+            if len(urls) >= 2:
+                break
     return urls[:5]
 
 
@@ -336,6 +435,20 @@ and quotes must actually appear in supplied sources. Do not call stock footage t
 Set requires_exact_footage=true whenever the actual person, film/game scene, demonstration,
 or sports play is needed. Do not substitute stock for that. 30 seconds is the default;
 if target_seconds differs, use roughly target_seconds*2.4 words and a cut every 2-5 seconds.
+'''
+
+NEWS_PROMPT = '''\nFor content_type=news_update, make a concise, neutral news bulletin instead
+of a hidden-detail explainer. Use recent world developments or major actions and
+announcements involving the U.S. president. Avoid campaign chatter, polling,
+partisan arguments and extended political analysis. Lead with what happened,
+then explain the practical significance briefly. Distinguish an announcement
+from an implemented action and confirmed facts from claims or estimates.
+Use source_published_at and as_of to anchor dates; do not call an older event
+new or breaking merely because an article was recently published. Reject if
+the evidence cannot establish the timing of the reported development.
+Keep the same two-domain evidence, source-independence, claim-validation and
+scene requirements. If sources disagree materially, reject or clearly attribute
+the uncertainty. No invented quotes, speculation, or sensational claims.
 '''
 
 
@@ -663,34 +776,78 @@ def render(plan, entry, folder, budget, target):
     return result, quality, asset_log
 
 
-def process(entry, budget, target):
-    if entry.get('content_type', 'explainer') not in ('explainer', 'info', 'clip_commentary'):
-        raise Hold('Unsupported content type')
-    folder = WORK / entry['id']
-    folder.mkdir(parents=True, exist_ok=True)
+def collect_sources(entry, folder):
+    """Fetch the original article first, then seek independent corroboration."""
     evidence_path = folder / 'sources.json'
     sources = load(evidence_path, [])
-    if not sources:
-        errors = []
-        urls = list(dict.fromkeys(entry.get('source_urls', [])))
-        if len(urls) < 2 or all('news.google.com' in u for u in urls):
-            urls = corroborating_urls(entry['title']) + urls
-        for url in urls[:5]:
+    errors, attempted = [], set()
+    domains = {urllib.parse.urlsplit(s['url']).hostname.removeprefix('www.') for s in sources}
+
+    def fetch(urls):
+        for url in urls:
+            if not isinstance(url, str) or url in attempted or len(attempted) >= 8:
+                continue
+            attempted.add(url)
             try:
                 source = source_text(url)
+                host = urllib.parse.urlsplit(source['url']).hostname.removeprefix('www.')
+                if host in domains:
+                    continue
                 source['id'] = 's' + str(len(sources) + 1)
                 sources.append(source)
+                domains.add(host)
+                # Keep successful article fetches even if the next source fails.
+                atomic_json(evidence_path, sources)
             except Hold as exc:
-                errors.append(str(exc))
-        if len(sources) < 2:
-            raise Hold('Need two readable source URLs; RSS/YouTube links alone are insufficient. ' + '; '.join(errors[:1]))
-        atomic_json(evidence_path, sources)
+                errors.append(exc)
+            if len(domains) >= 2:
+                break
+
+    if len(domains) < 2:
+        fetch(entry.get('source_urls', [])[:5])
+    if len(domains) < 2:
+        fetch(corroborating_urls(entry['title']))
+    if len(domains) < 2:
+        reason = ('Need two readable source URLs from distinct domains; '
+                  f'retrieved {len(domains)}. ')
+        reason += str(errors[0]) if errors else 'No relevant publisher articles found'
+        kind = Wait if any(isinstance(exc, Wait) for exc in errors) else Hold
+        raise kind(reason)
+    return sources
+
+
+def reopen_source_holds(state):
+    """Retry old retrieval failures once after this source-pipeline repair."""
+    for job in state['jobs'].values():
+        if (job['status'] == 'HOLD'
+                and str(job.get('blocker', '')).startswith('Need two readable source URLs')
+                and job.get('source_pipeline_version', 0) < SOURCE_PIPELINE_VERSION):
+            job.update(status='QUEUED', source_pipeline_version=SOURCE_PIPELINE_VERSION)
+            job.pop('blocker', None)
+
+
+def process(entry, budget, target):
+    content_type = entry.get('content_type', 'explainer')
+    if content_type == 'clipper':
+        import clipper
+        clipper.process(entry, target, api=__import__(__name__))
+        return
+    if content_type not in ('explainer', 'info', 'clip_commentary', 'news_update'):
+        raise Hold('Unsupported content type')
+    if content_type == 'news_update' and not news_is_fresh(entry.get('source_published_at')):
+        raise Hold('News candidate expired or publication time missing; discover a recent story')
+    folder = WORK / entry['id']
+    folder.mkdir(parents=True, exist_ok=True)
+    sources = collect_sources(entry, folder)
+    source_urls = [s['url'] for s in sources]
+    if set(source_urls).intersection(entry.get('_excluded_story_sources', [])):
+        raise Hold('This story was already used in the current batch; choose a different story')
     plan_path = folder / 'plan.json'
     plan = load(plan_path, None)
     if not plan:
-        plan = ai(SCRIPT_PROMPT + '\nCANDIDATE DATA:\n' + json.dumps({
+        plan = ai(SCRIPT_PROMPT + (NEWS_PROMPT if content_type == 'news_update' else '') + '\nCANDIDATE DATA:\n' + json.dumps({
             'title': entry['title'], 'category': entry.get('category'), 'target_seconds': target,
-            'content_type': entry.get('content_type', 'explainer'),
+            'content_type': content_type, 'source_published_at': entry.get('source_published_at'), 'as_of': now(),
             'transcript': entry.get('transcript', '')[:20000], 'sources': sources}), budget)
         validate_plan(plan, sources, target)
         atomic_json(plan_path, plan)
@@ -719,14 +876,21 @@ def process(entry, budget, target):
     entry['status'] = 'REVIEW_REQUIRED'
     entry['video_sha256'] = review['video_sha256']
     entry['completed_at'] = now()
+    entry['source_story_urls'] = source_urls
     entry.pop('blocker', None)
 
 
 def report(state, warnings):
     OUTPUT.mkdir(exist_ok=True)
+    counts = Counter(job['status'] for job in state['jobs'].values())
+    rendered = len(list(OUTPUT.glob('*/video.mp4')))
     lines = ['# ZENTR Pulse production status', '', 'Generated: ' + now(), '',
+             f'Video files in this run: **{rendered}**. Queue statuses: ' + ', '.join(f'{k}: {v}' for k, v in sorted(counts.items())), '',
              'Drafts require review. Publishing is disabled.', '',
              '| Job | Status | Reason |', '|---|---|---|']
+    batch = state.get('content_batch')
+    if batch:
+        lines[4:4] = [f'Current rotation: **{batch["category"]} — {batch["completed"]}/{BATCH_SIZE} completed, distinct stories/videos**.', '']
     for job in state['jobs'].values():
         clean = lambda x: str(x).replace('|', '/').replace('\n', ' ').replace('<', '').replace('>', '')[:220]
         lines.append('| ' + ' | '.join(clean(x) for x in (job['id'], job['status'], job.get('blocker', job['title']))) + ' |')
@@ -734,8 +898,45 @@ def report(state, warnings):
     lines += ['', *warnings]
     (OUTPUT / 'status.md').write_text('\n'.join(lines) + '\n')
     atomic_json(OUTPUT / 'status.json', {'generated_at': now(), 'warnings': warnings,
+                                      'video_files_this_run': rendered, 'status_counts': dict(counts),
                                       'jobs': [{k: j.get(k) for k in ('id', 'title', 'status', 'blocker', 'attempts')}
                                                for j in state['jobs'].values()]})
+    # Also show the report in mobile job logs, not only GitHub's web summary.
+    print('\n'.join(lines))
+
+
+def job_category(job):
+    return job.get('category') or ('clipper' if job.get('content_type') == 'clipper' else 'custom')
+
+
+def story_key(job):
+    if job.get('content_type') == 'clipper':
+        return str(job.get('source_video_id') or job.get('media', {}).get('source_url')
+                   or job.get('media', {}).get('path') or job['id'])
+    # The existing title-similarity check removes near-duplicate queue entries.
+    return normalized(job.get('story_id') or job['title'].rsplit(' - ', 1)[0])
+
+
+def current_batch(state):
+    batch = state.get('content_batch')
+    if batch and batch.get('completed', 0) < BATCH_SIZE:
+        return batch
+    cursor = state.get('content_cycle_index', 0) % len(CONTENT_CYCLE)
+    eligible = {job_category(j) for j in state['jobs'].values()
+                if j['status'] in ('QUEUED', 'PRODUCING', 'WAITING')}
+    for offset in range(len(CONTENT_CYCLE)):
+        index = (cursor + offset) % len(CONTENT_CYCLE)
+        if CONTENT_CYCLE[index] in eligible:
+            category = CONTENT_CYCLE[index]
+            state['content_cycle_index'] = index
+            break
+    else:
+        if 'custom' not in eligible:
+            return None
+        category = 'custom'
+    batch = {'category': category, 'completed': 0, 'story_keys': [], 'media_hashes': [], 'source_urls': []}
+    state['content_batch'] = batch
+    return batch
 
 
 def main():
@@ -769,7 +970,12 @@ def main():
         if not isinstance(queue, list):
             raise Hold('queue.json must be an array')
         if args.discover:
-            leads, errors = discover(9)
+            leads, errors = discover(30)
+            try:
+                import clipper
+                leads += clipper.discover(budget, api=__import__(__name__))
+            except Hold as exc:
+                errors.append('clipper: ' + str(exc))
             warnings += ['Discovery unavailable: ' + x for x in errors]
             atomic_json(OUTPUT / 'research' / 'leads.json', leads)
             # Discovery candidates are held until readable corroborating URLs exist.
@@ -791,32 +997,65 @@ def main():
             if duplicate(item['title'], [x['title'] for x in state['jobs'].values()]):
                 continue
             state['jobs'][job_id] = {**item, 'id': job_id, 'status': 'QUEUED', 'created_at': now(), 'attempts': 0}
+        reopen_source_holds(state)
+        for job in state['jobs'].values():
+            if (job.get('content_type') == 'news_update'
+                    and job['status'] in ('QUEUED', 'WAITING', 'PRODUCING')
+                    and not news_is_fresh(job.get('source_published_at'))):
+                job.update(status='HOLD', blocker='News candidate expired; discover a recent story')
         count = 0
         target = int(os.getenv('TARGET_SECONDS', '30'))
         if not 20 <= target <= 70:
             raise Hold('TARGET_SECONDS must be between 20 and 70')
         max_jobs = max(1, min(3, int(os.getenv('MAX_JOBS_PER_RUN', '1'))))
         try:
-            for job in state['jobs'].values():
-                if job['status'] not in ('QUEUED', 'PRODUCING', 'WAITING') or count >= max_jobs:
+            # A temporarily unavailable source must not occupy the first slot on
+            # every scheduled run and prevent the rest of the queue progressing.
+            batch = current_batch(state)
+            pending = sorted(state['jobs'].values(), key=lambda j: j.get('last_attempt_at', j.get('created_at', '')))
+            for job in pending:
+                if (not batch or batch['completed'] >= BATCH_SIZE or job_category(job) != batch['category']
+                        or job['status'] not in ('QUEUED', 'PRODUCING', 'WAITING') or count >= max_jobs):
+                    continue
+                key = story_key(job)
+                if key in batch['story_keys']:
+                    job.update(status='HOLD', blocker='A different story/source video is required for this three-video batch')
                     continue
                 count += 1
-                job.update(status='PRODUCING', attempts=job.get('attempts', 0) + 1)
+                if count == 1:
+                    state['production_runs'] = state.get('production_runs', 0) + 1
+                job.update(status='PRODUCING', attempts=job.get('attempts', 0) + 1,
+                           source_pipeline_version=SOURCE_PIPELINE_VERSION, last_attempt_at=now())
                 atomic_json(STATE / 'queue.json', state)
                 try:
-                    if not job.get('youtube_signal'):
+                    if job.get('content_type') != 'clipper' and not job.get('youtube_signal'):
                         try:
                             job['youtube_signal'] = youtube_signal(job['title'], budget)
                         except Hold as exc:
                             job['youtube_signal'] = {'status': 'unavailable', 'reason': str(exc)}
+                    job['_excluded_media_hashes'] = batch.get('media_hashes', [])
+                    job['_excluded_story_sources'] = batch.get('source_urls', [])
                     process(job, budget, target)
+                    if job['status'] == 'REVIEW_REQUIRED':
+                        batch['completed'] += 1
+                        batch['story_keys'].append(key)
+                        batch.setdefault('source_urls', []).extend(job.get('source_story_urls', []))
+                        if job.get('source_media_sha256'):
+                            batch['media_hashes'].append(job['source_media_sha256'])
+                        if batch['completed'] == BATCH_SIZE:
+                            state['content_cycle_index'] = (state.get('content_cycle_index', 0) + 1) % len(CONTENT_CYCLE)
                 except Wait as exc:
                     job.update(status='WAITING', blocker=str(exc))
                 except Hold as exc:
                     job.update(status='HOLD', blocker=str(exc))
                 except Exception:
                     job.update(status='FAILED', blocker='Unexpected worker error; inspect inputs and run tests. Secrets omitted.')
+                finally:
+                    job.pop('_excluded_media_hashes', None)
+                    job.pop('_excluded_story_sources', None)
                 atomic_json(STATE / 'queue.json', state)
+            if batch and batch['completed'] < BATCH_SIZE:
+                warnings.append(f'Rotation stays on {batch["category"]} until {BATCH_SIZE} distinct review-ready videos exist; holds do not count.')
         finally:
             atomic_json(STATE / 'queue.json', state)
             report(state, warnings)
@@ -832,3 +1071,4 @@ if __name__ == '__main__':
         (OUTPUT / 'status.md').write_text('# ZENTR Pulse blocked\n\n' + str(exc) + '\n')
         print('Worker blocked: ' + str(exc))
         raise SystemExit(1)
+
