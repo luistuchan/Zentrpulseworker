@@ -22,7 +22,7 @@ def main():
                             '-out', str(issuer_pem)], check=True)
             bundle = folder / 'nasa-ca-bundle.pem'
             bundle.write_bytes(w.Path('/etc/ssl/certs/ca-certificates.crt').read_bytes()
-                               + b'\\n' + issuer_pem.read_bytes())
+                               + b'\n' + issuer_pem.read_bytes())
             result = subprocess.run(['curl', '--fail', '--location', '--max-time', '60',
                                      '--cacert', str(bundle), '--output', str(source), url],
                                     capture_output=True, text=True)
