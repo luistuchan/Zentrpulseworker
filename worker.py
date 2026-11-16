@@ -237,7 +237,7 @@ def news_is_fresh(published_at):
         return False
 
 
-def discover(limit):
+def discover(limit, existing_titles=()):
     """Free RSS discovery. Headlines are leads, not evidence or virality proof."""
     leads = []
     errors = []
@@ -247,13 +247,16 @@ def discover(limit):
             'q': query + (' when:1d' if is_news else ' when:7d'), 'hl': 'en-US', 'gl': 'US', 'ceid': 'US:en'})
         try:
             root = ET.fromstring(http(url)[0])
-            for item in root.findall('./channel/item')[:6]:
+            for item in root.findall('./channel/item')[:30]:
                 title = (item.findtext('title') or '').strip()
-                if len(title) < 20 or duplicate(title, [x['title'] for x in leads]):
+                if (len(title) < 20 or duplicate(title, existing_titles)
+                        or duplicate(title, [x['title'] for x in leads])):
                     continue
                 if any(x in title.lower() for x in ('coupon', 'tickets on sale', 'shopping guide', 'horoscope')):
                     continue
-                if is_news and re.search(r'\b(opinion|editorial|commentary)\b', title, re.I):
+                if is_news and (re.search(r'\b(opinion|editorial|commentary)\b', title, re.I)
+                                or title.rsplit(' - ', 1)[-1].lower() in
+                                ('facebook', 'instagram', 'tiktok', 'youtube')):
                     continue
                 if category == 'president' and re.search(r'\b(polls?|campaign|fundraising|partisan)\b', title, re.I):
                     continue
@@ -398,10 +401,13 @@ def ai(prompt, budget, image_path=None):
     if image_path:
         parts.append({'inlineData': {'mimeType': 'image/jpeg',
                                     'data': base64.b64encode(Path(image_path).read_bytes()).decode()}})
-    response = json_http('https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent',
-                         payload={'contents': [{'parts': parts}], 'generationConfig': {
-                             'temperature': .15, 'maxOutputTokens': 8000, 'responseMimeType': 'application/json'}},
-                         headers={'x-goog-api-key': key}, retries=0)
+    try:
+        response = json_http('https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent',
+                             payload={'contents': [{'parts': parts}], 'generationConfig': {
+                                 'temperature': .15, 'maxOutputTokens': 8000, 'responseMimeType': 'application/json'}},
+                             headers={'x-goog-api-key': key}, retries=0)
+    except Hold as exc:
+        raise type(exc)(f'Gemini model {model}: {exc}') from None
     candidates = response.get('candidates', [])
     if not candidates or candidates[0].get('finishReason') != 'STOP':
         raise Hold('AI response blocked, truncated, or empty')
@@ -970,7 +976,7 @@ def main():
         if not isinstance(queue, list):
             raise Hold('queue.json must be an array')
         if args.discover:
-            leads, errors = discover(30)
+            leads, errors = discover(30, [j['title'] for j in state['jobs'].values()])
             try:
                 import clipper
                 leads += clipper.discover(budget, api=__import__(__name__))
