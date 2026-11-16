@@ -1,6 +1,10 @@
 name: ZENTR Pulse Production
 
 on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/pulse.yml'
   workflow_dispatch:
     inputs:
       retry_job:
