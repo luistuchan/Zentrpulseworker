@@ -1834,9 +1834,11 @@
       },
       "discovered_at": "2026-11-16T23:19:55.592024+00:00",
       "id": "149757e91e761915",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T23:19:55.757715+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "last_attempt_at": "2026-11-16T23:43:55.091954+00:00",
+      "blocker": "Clipper source could not be downloaded; supply local footage or another source"
     },
     "71df9ccee3ea9cca": {
       "title": "Clip highlight: REACTING to FUNNY Animal Videos That Made Me Lose It 😂",
@@ -1854,9 +1856,11 @@
       },
       "discovered_at": "2026-11-16T23:19:55.592035+00:00",
       "id": "71df9ccee3ea9cca",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T23:19:55.771627+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "last_attempt_at": "2026-11-16T23:43:56.263219+00:00",
+      "blocker": "Clipper source could not be downloaded; supply local footage or another source"
     }
   },
   "budget": {
@@ -1875,20 +1879,15 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-16T23:19:55.772066+00:00",
+    "started_at": "2026-11-16T23:43:55.091864+00:00",
+    "mode": "direct_clip_recovery",
     "attempted_ids": [
-      "97f08a638402365d",
-      "258ab8d59ad6c8b6",
-      "16d4714fd98ea0e0",
-      "53fee51de791a86f",
-      "f04ef15f7f1f2b09",
-      "c0ed1394e8625198"
+      "149757e91e761915",
+      "71df9ccee3ea9cca"
     ],
     "completed_ids": [],
-    "model": "gemini-3.5-flash-lite",
-    "pause_reason": "AI request cap reached; job saved for next run",
-    "finished_at": "2026-11-16T23:23:37.933205+00:00",
-    "attempted": 6,
+    "finished_at": "2026-11-16T23:43:57.488567+00:00",
+    "attempted": 2,
     "completed": 0
   }
 }
