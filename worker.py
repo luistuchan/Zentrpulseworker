@@ -453,7 +453,7 @@ def ai(prompt, budget, image_path=None, response_schema=None):
         config['responseSchema'] = response_schema
     # Retry temporary failures once. Each physical request consumes the same
     # persistent free-tier budget; do not retry permanent errors or change models.
-    for attempt in range(2):
+    for attempt in range(3):
         if not budget.take('ai'):
             raise Wait('AI request cap reached; job saved for next run')
         try:
@@ -463,9 +463,9 @@ def ai(prompt, budget, image_path=None, response_schema=None):
             break
         except Wait as exc:
             # Quota failures need time to reset, not another immediate request.
-            if attempt or 'HTTP 429' in str(exc):
+            if attempt >= 2 or 'HTTP 429' in str(exc):
                 raise Wait(f'Gemini model {model}: {exc}') from None
-            time.sleep(2)
+            time.sleep(5 * (2 ** attempt))
         except Hold as exc:
             raise Hold(f'Gemini model {model}: {exc}') from None
     candidates = response.get('candidates', [])
@@ -731,6 +731,7 @@ def select_pixabay_asset(scene, entry, folder, budget):
         atomic_json(diagnostics, {'scene_id': scene['id'], 'visual_description': scene['visual_description'],
                                  'searches': logs, 'evaluated_frames': evaluated})
     for query in stock_queries(scene):
+        query_evaluated = 0
         candidates = pixabay_candidates(query, budget)
         log = {'query': query, 'returned': len(candidates), 'candidates': []}
         logs.append(log)
@@ -767,10 +768,11 @@ def select_pixabay_asset(scene, entry, folder, budget):
                 record['result'] = 'download temporarily unavailable'; save(); continue
             except Hold as exc:
                 record['result'] = str(exc); save(); continue
-            if evaluated >= 6:
-                record['result'] = 'per-scene evaluation cap reached'; save()
+            if query_evaluated >= 2:
+                record['result'] = 'per-query evaluation cap reached'; save()
                 break
             evaluated += 1
+            query_evaluated += 1
             try:
                 match = ai('Evaluate this frame as clearly ILLUSTRATIVE stock, never as footage of the real event. '
                            'The core subject and activity must match. Camera angle, lighting and weather may vary '
@@ -789,8 +791,6 @@ def select_pixabay_asset(scene, entry, folder, budget):
             return path, {'provider': 'Pixabay', 'id': candidate['id'], 'url': candidate.get('pageURL'),
                           'creator': candidate.get('user'), 'license_url': 'https://pixabay.com/service/license-summary/',
                           'illustrative': True, 'search_query': query, 'match_check': match, 'sha256': digest(path)}
-        if evaluated >= 6:
-            break
     save()
     summary = ', '.join(str(x['returned']) + ' hits for ' + repr(x['query']) for x in logs)
     raise Hold('No matching Pixabay footage for ' + scene['id'] + ': ' + summary[:150]
