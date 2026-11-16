@@ -35,7 +35,7 @@ WORK = ROOT / '.work'
 USER_AGENT = 'ZENTR-Pulse/3.0 (source-linked video drafts)'
 SCHEMA_VERSION = 3
 SOURCE_PIPELINE_VERSION = 2
-STOCK_PIPELINE_VERSION = 1
+STOCK_PIPELINE_VERSION = 2
 SCRIPT_PIPELINE_VERSION = 1
 CATEGORIES = {
     'movies': 'movie scene hidden clue explained',
@@ -1215,7 +1215,7 @@ def produce_batch(state, budget, target):
         progress = len(list(folder.glob('s[0-9][0-9].mp4'))) if folder.exists() else 0
         has_plan = (folder / 'plan.json').is_file()
         trusted_lead = job.get('discovery_quality') == 'publisher_feed_v1'
-        return (-progress, -int(trusted_lead), -int(has_plan), job.get('last_attempt_at', job.get('created_at', '')))
+        return (-progress, -int(has_plan), -int(trusted_lead), job.get('last_attempt_at', job.get('created_at', '')))
     pending = sorted(state['jobs'].values(), key=priority)
     for job in pending:
         if (not batch or batch['completed'] >= BATCH_SIZE or len(completed) >= max_ready
