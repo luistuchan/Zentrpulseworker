@@ -1459,13 +1459,163 @@
       "status": "QUEUED",
       "created_at": "2026-11-16T12:47:37.019472+00:00",
       "attempts": 0
+    },
+    "97f08a638402365d": {
+      "title": "Silicon Valley insiders urge Nvidia to restore Jensen Huang’s CEO role",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/economy/2026/11/16/silicon-valley-insiders-urge-nvidia-to-restore-jensen-huangs-ceo-role?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T17:24:26+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-16T17:55:44.261712+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "97f08a638402365d",
+      "status": "HOLD",
+      "created_at": "2026-11-16T17:55:47.930822+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-16T17:55:48.008398+00:00",
+      "youtube_signal": {
+        "status": "discovery_only",
+        "examples": [
+          {
+            "title": "EP 123. 한 치 앞도 모르는 미래: 젠슨 황 사임, Fable 5.2, weight-space programming",
+            "url": "https://www.youtube.com/watch?v=a54SsPl5iQ0"
+          },
+          {
+            "title": "Why Jensen Huang REALLY Stepped Down (NVIDIA&#39;s $2T Collapse)",
+            "url": "https://www.youtube.com/watch?v=PN7uqkVuqRo"
+          },
+          {
+            "title": "Trump brushes off calls for AI slowdown from tech CEOs",
+            "url": "https://www.youtube.com/watch?v=XZN290QjrFI"
+          }
+        ],
+        "note": "Search matches do not establish popularity or permission to reuse footage."
+      },
+      "blocker": "No matching Pixabay footage for s02: 9 hits for 'digital petition'; inspect diagnostics in review artifact"
+    },
+    "1f246426854f69a7": {
+      "title": "European soccer body UEFA proposes Philippe Diallo as FIFA presidential election candidate - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMipAFBVV95cUxNN3JEY2ZOb0xWc2U0cGpfbEJPTW9UZkVqQldmV2VtajA0YUVCUGRLSHJEQmlBOTBfRFdQeTlDQ2N5M2M4THNQSlBkdWpvQVozSnpsUm1VNW8wYUp5X1I5R0VMOGVpYnQwVTU2OERlOWhrdEktc3N2anJFbTFkeU16ajE1STZQdmxjb0dYdml5U3JrUHBiX2NaX0JLeXhUQUJsTmk1X9IBqgFBVV95cUxPcmZRdWZQaFVRMWlab1ktcWs3V1BVUlRuWlhBcTN0aTR2Q2FaamlxTHFIczR0cFlhXzNFb2lKN1lxQWp1aGh1OHJfYURjQ21IT0VMdVQzcktCSGZqZGdzQlQzQ3lZZ2ZmRi16RUlobWxGNlN5eU1Pb0NMQ3JyNjdhc2lqRXpxck9pMEp4UGdaQWNnWllDTW9BSlFFNGU1eDZHczkxWHg1T3JoZw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T16:55:21+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T17:55:47.608927+00:00",
+      "id": "1f246426854f69a7",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T17:55:47.948128+00:00",
+      "attempts": 0
+    },
+    "16d4714fd98ea0e0": {
+      "title": "Trump backs return of ex-Nvidia boss after 'Bring Jensen Back' campaign launched",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cry49plv8v3go?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T17:07:55+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-16T17:55:43.917320+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "16d4714fd98ea0e0",
+      "status": "WAITING",
+      "created_at": "2026-11-16T17:55:47.959234+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-16T17:56:51.507148+00:00",
+      "youtube_signal": {
+        "status": "discovery_only",
+        "examples": [
+          {
+            "title": "Trump backs return of ex-Nvidia boss after &#39;Bring Jensen Back&#39; campaign launched",
+            "url": "https://www.youtube.com/watch?v=JBCfy8VB-_c"
+          },
+          {
+            "title": "Trump backs return of ex-Nvidia boss after &#39;Bring Jensen Back&#39; campaign launched",
+            "url": "https://www.youtube.com/watch?v=NfsDTCA5F6Q"
+          },
+          {
+            "title": "Jensen Huang Lost Nvidia. What Does He Do Now?",
+            "url": "https://www.youtube.com/watch?v=7J2mQRMCH8E"
+          }
+        ],
+        "note": "Search matches do not establish popularity or permission to reuse footage."
+      },
+      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
+    },
+    "258ab8d59ad6c8b6": {
+      "title": "Man sentenced over 'horrific' attempted murder of three children",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cr0qj0nzwj34o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T12:27:15+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-16T17:55:43.926172+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "258ab8d59ad6c8b6",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T17:55:47.968199+00:00",
+      "attempts": 0
+    },
+    "4262db185452f20e": {
+      "title": "Best Sennheiser Headphones 2026 - Every Category - Audiophile ON",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5SaXFLVEpxeHFNd1l1emxNbEZCT3dHZzd0ZUhLb0h3VmZWOVFOSzNZWWpXZlAzZ1pkMjFtaUdERndVY1JVbTZ4UmpESHBZVmVXdjdHSkRpeGFwckxfNldFQmcyS2ZCQQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T17:55:46.957451+00:00",
+      "id": "4262db185452f20e",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T17:55:47.977288+00:00",
+      "attempts": 0
+    },
+    "fc8eca1407639ebc": {
+      "title": "Trump's Asia reset: Deals in Manila and Shenzhen, then a rare nuclear summit with Xi and Putin - PBS",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMizgFBVV95cUxNVTJ5VUt1Um1pcXV5T3dpWjhOMGZFRnotbF9jZ19GZEZqV2tBcFFRN2xnS25EYTJnZkxvN2JuSG8tVUpWbDczMWRKMXQ1Qy0zaVVidm9iYUZvbG5YQ1g2eV8ydUxFdVdlRDZQczdxOXUydDdQTXFud1FLQTZIUkRBNG10VFZSUXZhVldDR2x3LVpfbWo4RG40WWlQNEVrbmkySlVyNHZ5VVoxdGEzUGNwY05lNlAtT1Bydjhzb3B2eEhPVGdTaVo3WGVHcjVxQdIBzgFBVV95cUxNVTJ5VUt1Um1pcXV5T3dpWjhOMGZFRnotbF9jZ19GZEZqV2tBcFFRN2xnS25EYTJnZkxvN2JuSG8tVUpWbDczMWRKMXQ1Qy0zaVVidm9iYUZvbG5YQ1g2eV8ydUxFdVdlRDZQczdxOXUydDdQTXFud1FLQTZIUkRBNG10VFZSUXZhVldDR2x3LVpfbWo4RG40WWlQNEVrbmkySlVyNHZ5VVoxdGEzUGNwY05lNlAtT1Bydjhzb3B2eEhPVGdTaVo3WGVHcjVxQQ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T14:38:11+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T17:55:47.400923+00:00",
+      "id": "fc8eca1407639ebc",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T17:55:47.991655+00:00",
+      "attempts": 0
+    },
+    "c963ba5193a35a79": {
+      "title": "Trump says he's OK with Jensen Huang returning as Nvidia CEO, sees no national security risk - CNBC",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMikgFBVV95cUxONVZuVWJHaTJ6elZWYk81VFhVenZSVVJVa1NHb0lycThIQVBXZFNyNHZpNHVzZnNib28tOGt0XzdOMmotZkxCVXhnNFlrMk9wb09uRTZxdVBkSkNYbDVUcDFWV0M2czFlNmd2MzQ3RGMxdmp4elBTeGY1aGpteVB2TTNKeG9FUUpCaVBwRHAzbmNCUdIBlwFBVV95cUxPeDdvNW94aFJlaVExSzIyR19OWERVUGV2SWdiNUFkWWxQSF80U1VzTU90Z0FVX3BKMDl5LTJKZGRoNDl0MzNNWVdfX2t5R19KV0ZueGh5aU1zQ1FVTDduRXlIVTZLdV9tdFJBcmJ5VVlIbU9PdFVjT2tmaXlDV194NUY3UmF1Y3R4UGhteVdmUWo5eUUtSlBJ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T14:58:09+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T17:55:47.421440+00:00",
+      "id": "c963ba5193a35a79",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T17:55:48.006700+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-16",
-    "youtube": 10,
-    "ai": 64,
-    "pixabay": 8
+    "youtube": 13,
+    "ai": 79,
+    "pixabay": 10
   },
   "content_cycle_index": 0,
   "content_batch": {
@@ -1477,20 +1627,16 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-16T12:47:37.019727+00:00",
+    "started_at": "2026-11-16T17:55:48.007027+00:00",
     "attempted_ids": [
-      "90013fc7b1b6bdc3",
-      "92c3e81b06d61ad7",
-      "4f1fad88bc739bb3",
-      "9936d1368619e214",
-      "98b05cefbe0e3d1c",
-      "5abd758d65b5fa5e"
+      "97f08a638402365d",
+      "16d4714fd98ea0e0"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "pause_reason": "Gemini model gemini-3.5-flash-lite: Service HTTP 429; no paid fallback attempted",
-    "finished_at": "2026-11-16T12:50:28.333183+00:00",
-    "attempted": 6,
+    "pause_reason": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted",
+    "finished_at": "2026-11-16T17:57:29.042348+00:00",
+    "attempted": 2,
     "completed": 0
   }
 }
