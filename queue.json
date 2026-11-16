@@ -461,12 +461,210 @@
       "status": "QUEUED",
       "created_at": "2026-11-16T02:18:44.194997+00:00",
       "attempts": 0
+    },
+    "e0566f04476019e4": {
+      "title": "Energy to 2060: Africa’s dilemma, Nigeria’s strategic imperative - Businessamlive",
+      "category": "world_news",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMikgFBVV95cUxOUno1UmhMc0UzZkpackRiMnc2WlZoc09RdFh6akJEbGJkTGxIcjJXd1JPUFRWOFFOU085d1VONWVMYU1Xd1YtQTZMeTBYRGtSUTVuQTVZRnkyYWNrZE93S2tvTWtESU1tZnRyN3VaS2hqcVRvZWRwTExOM25yQzZiOG9CZXE5NTIzbmdDTGpHekVmZw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T08:27:56+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T08:45:48.554144+00:00",
+      "id": "e0566f04476019e4",
+      "status": "HOLD",
+      "created_at": "2026-11-16T08:45:49.246334+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 1,
+      "last_attempt_at": "2026-11-16T08:45:49.305499+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "Gemini model gemini-2.5-flash: Service HTTP 404; no paid fallback attempted"
+    },
+    "a598287b8ec3135f": {
+      "title": "Martine Moise, wife of assassinated ex-Haitian leader, registers for presidential election - BBC",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9yamFTb2tCZ1NtbmYtZkprVVpwMWN1dHVsNEJQWW11NWZKRTJJLTd3bUJRbDJCWUFsSzIzWVBfd1VsUlNhbkxHMUFUYkNSckxVVjVzWnUyTEFEdTFJd3c?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T05:06:59+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T08:45:49.237040+00:00",
+      "id": "a598287b8ec3135f",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T08:45:49.251191+00:00",
+      "attempts": 0
+    },
+    "0354903e9a288236": {
+      "title": "Boundless Evolution Secures Over ¥100M Pre-A Financing: Reshaping Life Science Dry-Wet Closed Loop via \"Recursive Scientific Discovery\" | Xinglian Portfolio Update - 36Kr",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiU0FVX3lxTE4ySk1OMGV3c085cmZscWhQdEVTUHd5bEZJUUdvdWVjVjFwdGNYY1N5TmcwQkJGOE5uTFdVeHIxeXUwa1JybGdwM3l0MXc5WXhmVlFv?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 1,
+      "discovered_at": "2026-11-16T08:45:46.865697+00:00",
+      "id": "0354903e9a288236",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T08:45:49.259515+00:00",
+      "attempts": 0
+    },
+    "4a03d7045c09c5c1": {
+      "title": "Sen. Bill Cassidy slams RFK Jr. for \"series of failures\" as Health Secretary - CBS News",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMijwFBVV95cUxQRUc2djFCNUJLUFUxSE9OVEdFaTJXekJTNElLUVU4dEVVNFdPNThfZzlLQUtWTUFuaGdEaTM1SG1ucDFScVFhUlk1aE9VUURUbTFuNUVRMmdpVWt0ZkJmVDIybnNnQ3hZZGJGQ0NlSjlGY2VOU0NIS080cWpMTXVWeEVQUktqUW1FYnFtLVM4MA?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-15T19:26:00+00:00",
+      "headline_score": 1,
+      "discovered_at": "2026-11-16T08:45:49.098710+00:00",
+      "id": "4a03d7045c09c5c1",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T08:45:49.264129+00:00",
+      "attempts": 0
+    },
+    "864af83118fb549d": {
+      "title": "Biology - Evolution, Genetics, Microbiology - Britannica",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMie0FVX3lxTE96RkNKaXROdGxob3gtN1FaQktlMHFKZVgyeG9RbVBnc1dDVEUybHY4eWRlbjIxcWkwY3dsdjZYM0dTUVliSDJUVWFRY08tdkJEM21IajAwNm5FXzJLX3dWZVhHUW9MOThNOWFXRGJfLXN1MFh6UzRERGc3bw?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T08:45:46.876274+00:00",
+      "id": "864af83118fb549d",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T08:45:49.267204+00:00",
+      "attempts": 0
+    },
+    "a3752a6421556c74": {
+      "title": "Rice Protein Senses Stinkbug Saliva Signal to Trigger Plant Defense - Nature World News",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQejZQUHp6TWFVNVNFdFFSSE5kblpkeHlOalgzSjRPLVIzcURYdFljSm1TQnBaTVNiVzhPU0Zlem1nUnJrd1laejZiRzVDa0g3Tmh6TWNvaDcza1JDbXNTQVhucXh6Z3E5bkRHY094VjBGSkhCaWVreHBFVHN4OVktZnh3QzZGSWNYNDBFaDhrMjUyQzBuenFWMElmc3VXTGI3YzdkcmZzYktSMWV4OEtmd3A3WDVmWlM5SWVhSjZyVjY5N2M?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T08:45:46.881066+00:00",
+      "id": "a3752a6421556c74",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T08:45:49.272608+00:00",
+      "attempts": 0
+    },
+    "43c4c9a84bc6fb60": {
+      "title": "How Old-School Music Producers Became In-Demand Again and Brought the Studio Back to Life - That Eric Alper",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiywFBVV95cUxQZmFrcUttM0M1VlpocWZ2anpTSEJ2RWtSVEpHQ1E2ZlVkaFYtM0RDdXZXTFYwdllEZmYxUW9CWEJra1ZhX2VUY2tmNUFWUmtxanluNVRWM3N4UFNuckhxUnlJdlcwNF9qa2EzcHduOUtSeHlya1pEQmNaM3ZwbGZYSVdGZGxwWmoxU19kdWVoQkdxcl8wWUtJNGg2TndMeW9ITjdtcjhiV1plU3ZVQ1lYY2lXYjZiX1ktUFNzWFFicUVQdFBzbUhhdC1yQQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T08:45:47.992170+00:00",
+      "id": "43c4c9a84bc6fb60",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T08:45:49.278974+00:00",
+      "attempts": 0
+    },
+    "3155481e232beffb": {
+      "title": "Best audio interface 2026: Expert-reviewed Thunderbolt and USB interfaces for every budget - MusicRadar",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1ibUktWkd1RF83M2JRd1dialhVQW9NMGI5S1F0UDRjalJGbjlGNzNVOHl1RUZSa2tlMlNCT2JPVWEzWnVOdUtleU5KeHhoUTNMMElpWjU0LXVzd1l0aVYwOENyM1FGR1Fa?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T08:45:47.998964+00:00",
+      "id": "3155481e232beffb",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T08:45:49.285032+00:00",
+      "attempts": 0
+    },
+    "b9bec980ee3acc4a": {
+      "title": "Lady Gaga | Biography, Grammys, Songs, Oscar, & Facts - Britannica",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiWkFVX3lxTE41c04tWmJLdkY3UGwwOE9zckhSYlg3YjlEaVRSeEdVUDdZajFBNTVvZkt3M212Q1NiOGUyTDZ3V1M2cFZkYlpmR1RzRmU5Q19RaXlHZDFGS0lqUQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T08:45:48.003297+00:00",
+      "id": "b9bec980ee3acc4a",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T08:45:49.288892+00:00",
+      "attempts": 0
+    },
+    "98b05cefbe0e3d1c": {
+      "title": "Norfolk council considers 'unfair burden' of major energy schemes - BBC",
+      "category": "world_news",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9tWmsyY3VYSGZFMDNMUHRoYXpYckZ0Sm5CMjdaQWtLOEE0b3NEeVBYYTJuRHRaWS1pUXNpX1h5NGR6ZzdMZ2NDOEZla0t2a1hmeWs2cWZIRklBZU0?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T06:25:47+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T08:45:48.322873+00:00",
+      "id": "98b05cefbe0e3d1c",
+      "status": "HOLD",
+      "created_at": "2026-11-16T08:45:49.293524+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 1,
+      "last_attempt_at": "2026-11-16T08:46:18.724723+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+    },
+    "086cd7ab38725e97": {
+      "title": "Economics of the World Cup | Ticket Prices, Revenue, Costs, & Social Impact - Britannica",
+      "category": "world_news",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMickFVX3lxTE9HNmJ3clJKQTExMFBrYTBIeWM5SkZFd1BiZlJicjhuOEZSa2wwMjlUbU0zX3RfT3hzSDl1QUJSUnBabGRaTHlVaFBBREZnWHkySDJNdVZaS1hRS20zcU9OdDVQVlA0c3A1c0ZNS2g0TkFqdw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T03:59:58+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T08:45:48.329924+00:00",
+      "id": "086cd7ab38725e97",
+      "status": "HOLD",
+      "created_at": "2026-11-16T08:45:49.299420+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 1,
+      "last_attempt_at": "2026-11-16T08:46:42.292641+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "Gemini model gemini-2.5-flash: Service HTTP 404; no paid fallback attempted"
+    },
+    "1c01c7cbdf8cd474": {
+      "title": "Israel warns US of alleged Iranian plot to attack President Trump - Fox News",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiVkFVX3lxTE9wR3k5WDZsN20xRWFvN0w3MlY1SDZCVmYwQkJlQ3RUMEE2d3RpSnVnaHVkdkh1VTNBSFdKUDUxaWU4ZXpoVXh6SGRhU19xV00zSW1jRnZR?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-15T22:32:14+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T08:45:48.937832+00:00",
+      "id": "1c01c7cbdf8cd474",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T08:45:49.305423+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-16",
     "youtube": 3,
-    "ai": 1
+    "ai": 3
   },
   "content_cycle_index": 0,
   "content_batch": {
@@ -476,5 +674,5 @@
     "media_hashes": [],
     "source_urls": []
   },
-  "production_runs": 1
+  "production_runs": 2
 }
