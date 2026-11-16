@@ -216,9 +216,28 @@
       "headline_score": 0,
       "discovered_at": "2026-11-14T06:53:25.099362+00:00",
       "id": "15ed27b00a04aaa4",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-14T06:53:26.242133+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "youtube_signal": {
+        "status": "discovery_only",
+        "examples": [
+          {
+            "title": "HAIR GROWTH MYSTERY SOLVED! | The mystery of how hair knows where to grow may finally be so #Shorts",
+            "url": "https://www.youtube.com/watch?v=Ow3uo0XRhTU"
+          },
+          {
+            "title": "Nobody Told Your Hair Where to Grow",
+            "url": "https://www.youtube.com/watch?v=81eVP82xnNE"
+          },
+          {
+            "title": "The Science of Healthy Hair, Hair Loss and How to Regrow Hair",
+            "url": "https://www.youtube.com/watch?v=6ZrlsVx85ek"
+          }
+        ],
+        "note": "Search matches do not establish popularity or permission to reuse footage."
+      },
+      "blocker": "Need two readable source URLs; RSS/YouTube links alone are insufficient. Google News discovery link did not resolve to a publisher article"
     },
     "0d3903eaaa721d2d": {
       "title": "What Song Does Ellie Play in The Last of Us Part II? “Take On Me” Explained - RouteNote",
@@ -275,10 +294,24 @@
       "status": "QUEUED",
       "created_at": "2026-11-15T17:29:14.647911+00:00",
       "attempts": 0
+    },
+    "c7342faafbcb636a": {
+      "title": "Our new blog for science - OpenAI",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiX0FVX3lxTE0xMG5vSllDdjVHa3N1MmhSV2VBMnJIZ0tMcXg3dzJmY2ZvS2V3Zk9zaXRZY1h5enlLRzJDMURCbUZjN3ZJNnJuR1g2TnMxZ1hOaXdZQ21paTRXLWJ4dDl3?oc=5"
+      ],
+      "content_type": "explainer",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T02:01:45.488557+00:00",
+      "id": "c7342faafbcb636a",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T02:01:46.865286+00:00",
+      "attempts": 0
     }
   },
   "budget": {
-    "day": "2026-11-15",
-    "youtube": 3
+    "day": "2026-11-16",
+    "youtube": 1
   }
 }
