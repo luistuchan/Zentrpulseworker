@@ -9,7 +9,12 @@ def main():
     source = folder / 'nasa-orbit.mp4'
     url = 'https://svs.gsfc.nasa.gov/vis/a000000/a004700/a004709/orbit_1080p30.mp4'
     if not source.is_file():
-        source.write_bytes(w.http(url, limit=30_000_000)[0])
+        import subprocess
+        result = subprocess.run(['curl', '--fail', '--location', '--max-time', '60',
+                                 '--output', str(source), url], capture_output=True, text=True)
+        if result.returncode:
+            source.unlink(missing_ok=True)
+            raise w.Hold('NASA direct download failed: ' + result.stderr[-1500:])
     total_source = w.duration(source)
     lines = [
         'The Moon is spinning. So why do we keep seeing the same face?',
