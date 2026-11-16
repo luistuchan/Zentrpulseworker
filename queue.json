@@ -1879,15 +1879,12 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-16T23:43:55.091864+00:00",
+    "started_at": "2026-11-16T23:46:10.448965+00:00",
     "mode": "direct_clip_recovery",
-    "attempted_ids": [
-      "149757e91e761915",
-      "71df9ccee3ea9cca"
-    ],
+    "attempted_ids": [],
     "completed_ids": [],
-    "finished_at": "2026-11-16T23:43:57.488567+00:00",
-    "attempted": 2,
+    "finished_at": "2026-11-16T23:46:10.448996+00:00",
+    "attempted": 0,
     "completed": 0
   }
 }
