@@ -11,7 +11,7 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T06:30:42.533697+00:00",
       "id": "c32fb0cbf637ee8b",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-14T06:30:43.879714+00:00",
       "attempts": 1,
       "youtube_signal": {
@@ -32,7 +32,7 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "blocker": "Need two readable source URLs; RSS/YouTube links alone are insufficient. Source text missing, too short, or blocked"
+      "source_pipeline_version": 1
     },
     "eaad4f96e7f14af7": {
       "title": "University of Manchester Researchers Launch Podcast Exploring the Process of Scientific Discovery - Bioengineer.org",
@@ -44,7 +44,7 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T06:30:42.829350+00:00",
       "id": "eaad4f96e7f14af7",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-14T06:30:43.879985+00:00",
       "attempts": 1,
       "youtube_signal": {
@@ -65,7 +65,7 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "blocker": "Need two readable source URLs; RSS/YouTube links alone are insufficient. Google News discovery link did not resolve to a publisher article"
+      "source_pipeline_version": 1
     },
     "d1681e7170342a68": {
       "title": "Zebrafish Could Advance Autism Drug Discovery - Technology Networks",
@@ -77,7 +77,7 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T06:30:42.832130+00:00",
       "id": "d1681e7170342a68",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-14T06:30:43.880314+00:00",
       "attempts": 1,
       "youtube_signal": {
@@ -90,7 +90,7 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "blocker": "Need two readable source URLs; RSS/YouTube links alone are insufficient. Google News discovery link did not resolve to a publisher article"
+      "source_pipeline_version": 1
     },
     "9f0e6db268e93a0c": {
       "title": "Why Live ‘Unplugged’ Versions of Old Hits Keep Finding New Audiences - That Eric Alper",
@@ -102,13 +102,13 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T06:30:43.870391+00:00",
       "id": "9f0e6db268e93a0c",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-14T06:30:43.880904+00:00",
       "attempts": 1,
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "Need two readable source URLs; RSS/YouTube links alone are insufficient. Google News discovery link did not resolve to a publisher article"
+      "source_pipeline_version": 1
     },
     "4264468155308d0d": {
       "title": "What Is “Ezio’s Family” in Assassin’s Creed? Composer and Theme Explained - RouteNote",
@@ -120,13 +120,13 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T06:30:43.872170+00:00",
       "id": "4264468155308d0d",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-14T06:30:43.881621+00:00",
       "attempts": 1,
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "Need two readable source URLs; RSS/YouTube links alone are insufficient. Google News discovery link did not resolve to a publisher article"
+      "source_pipeline_version": 1
     },
     "b890da7c8bb20e5f": {
       "title": "xQc explains what his viral “six console” rant was really about - Dexerto",
@@ -138,7 +138,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-14T06:30:42.245237+00:00",
       "id": "b890da7c8bb20e5f",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-14T06:30:43.882354+00:00",
       "attempts": 1,
       "youtube_signal": {
@@ -151,7 +151,7 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "blocker": "Need two readable source URLs; RSS/YouTube links alone are insufficient. Google News discovery link did not resolve to a publisher article"
+      "source_pipeline_version": 1
     },
     "43fb6481ef119e61": {
       "title": "Ground stop lifted hours after stranding thousands of flights across the U.S. - NBC News",
@@ -163,7 +163,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-14T06:30:43.384449+00:00",
       "id": "43fb6481ef119e61",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-14T06:30:43.883409+00:00",
       "attempts": 1,
       "youtube_signal": {
@@ -184,7 +184,7 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "blocker": "Need two readable source URLs; RSS/YouTube links alone are insufficient. Google News discovery link did not resolve to a publisher article"
+      "source_pipeline_version": 1
     },
     "6832207212ec0e88": {
       "title": "New Genome Studies Revisit How Andes Hantavirus Spread on a Cruise Ship - Nature World News",
@@ -196,7 +196,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-14T06:30:43.386524+00:00",
       "id": "6832207212ec0e88",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-14T06:30:43.884890+00:00",
       "attempts": 1,
       "youtube_signal": {
@@ -204,7 +204,7 @@
         "examples": [],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "blocker": "Need two readable source URLs; RSS/YouTube links alone are insufficient. Google News discovery link did not resolve to a publisher article"
+      "source_pipeline_version": 1
     },
     "15ed27b00a04aaa4": {
       "title": "The mystery of how hair knows where to grow may finally be solved - Science Daily",
@@ -216,7 +216,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-14T06:53:25.099362+00:00",
       "id": "15ed27b00a04aaa4",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-14T06:53:26.242133+00:00",
       "attempts": 1,
       "youtube_signal": {
@@ -237,7 +237,7 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "blocker": "Need two readable source URLs; RSS/YouTube links alone are insufficient. Google News discovery link did not resolve to a publisher article"
+      "source_pipeline_version": 1
     },
     "0d3903eaaa721d2d": {
       "title": "What Song Does Ellie Play in The Last of Us Part II? “Take On Me” Explained - RouteNote",
@@ -308,10 +308,173 @@
       "status": "QUEUED",
       "created_at": "2026-11-16T02:01:46.865286+00:00",
       "attempts": 0
+    },
+    "03ebea88c0ac963c": {
+      "title": "DP World Tour 2026 schedule: Latest results, events and winners for golf majors, Rolex Series events and more - Sky Sports",
+      "category": "world_news",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi3gFBVV95cUxOSnZ4TXNkQ2xDWmp4NkhublZWV09kaXN3cEs2cTdkRGVhb0tJMjE4WVlpanhicW9WM2xJa19peFZnNExtN1BUYlVMRjJZaGRsUHB0ZkJQeVh5TUdVeUY0c2Q3SlRTQ3JBVVpyNTQ4MFJONnJ5WVRLclJtTFIwdXFmT0JubzVJX3lZc2d1SGlqSm9mbHdZNVpkaWthek44b1BSUUphbjRSSGYxTFNPT2dKbklqbmljN083OU9TcmVVUmNaVWlRdmNpVGdMOXdnV1l5TXVtZnBZcGNKTldqdGc?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T00:22:39+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T02:18:43.479153+00:00",
+      "id": "03ebea88c0ac963c",
+      "status": "HOLD",
+      "created_at": "2026-11-16T02:18:44.171746+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 1,
+      "last_attempt_at": "2026-11-16T02:18:44.195255+00:00",
+      "youtube_signal": {
+        "status": "discovery_only",
+        "examples": [
+          {
+            "title": "Final Round Highlights | 2026 DP World India Championship",
+            "url": "https://www.youtube.com/watch?v=4294sDLyS4I"
+          },
+          {
+            "title": "Round 4 Highlights | 2026 Abu Dhabi Aldar Championship",
+            "url": "https://www.youtube.com/watch?v=EGVl393FXqs"
+          },
+          {
+            "title": "Every Shot of Jon Rahm’s Winning Back Nine | 2026 Abu Dhabi Aldar Championship",
+            "url": "https://www.youtube.com/watch?v=Q-Tex_bPiiY"
+          }
+        ],
+        "note": "Search matches do not establish popularity or permission to reuse footage."
+      },
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. Service HTTP 403; no paid fallback attempted"
+    },
+    "8b9d249448d5bc8e": {
+      "title": "Japan should boost strategic autonomy regardless of U.S. politics: analyst - Japan Wire by Kyodo News",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBLSThoRVkzeDh3NXNtWThNWDFrWUxZaWE1Ri1KbW1hT1RreGxVU2UzeEVPSnRzSzJrWWVQeWdodXlCNkp3QWp6VW4zMW1HY1g2QTFyOExHdG4tQQ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T02:05:01+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T02:18:43.892241+00:00",
+      "id": "8b9d249448d5bc8e",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T02:18:44.173844+00:00",
+      "attempts": 0
+    },
+    "00effa213518cc61": {
+      "title": "Brazil Feeds the World but Imports Its Fertilizers: Why Global Agriculture Is at Risk - AgroLatam",
+      "category": "world_news",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiigFBVV95cUxQSVZ5VTMydjY1Y2tXcXhYMlRqUlE0c2RqNEFtYUpVOS1XNDdwMXFHeTJ1RDV6WmFQZlhiWUk4V01Id180WUdZclpwZ19lbWNQR19oNnlSRXJZV2pxYmRkcThidkhSU0ROUm9Pd25uaVlZc3Zhazd5WldJMlZCNFBvQkFtZ1VvUlJBb0E?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-15T12:40:45+00:00",
+      "headline_score": 1,
+      "discovered_at": "2026-11-16T02:18:43.484131+00:00",
+      "id": "00effa213518cc61",
+      "status": "HOLD",
+      "created_at": "2026-11-16T02:18:44.175906+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 1,
+      "last_attempt_at": "2026-11-16T02:19:09.966290+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 0. Source text missing, too short, or blocked"
+    },
+    "a41572bc81f78f08": {
+      "title": "TODAY’S HEADLINES (Monday, November 16, 2026) Subscribe to the paper: https://philstarsubscribe.com/ No final code of conduct on South China Sea – DFA https://tinyurl.com/jnbuyaau 12 Cabinet secretaries await CA confirmation https://tinyurl.com/muyp - Facebook",
+      "category": "world_news",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi3AFBVV95cUxQLU11RjdaZGRJZmlZZmxtTWlBY3NjQzlJZ3NFNk1ORG1naEpQNUZyeGhRNTliWFJ2SDJkV1FLRW1NWU5OUUtvQXR3bGNpT0g4b3dvZktLUGNXMF9NUHRzMlJBT0VhWlRvel9jd3F2QjVKTXkxRHUtb1Z3V19WZWh0bE1fVm9Da0E4U2xOcEk1YzZ0ckxhLTlseTl3dlp5T3pSSWJTaHA0aGVVZlRXamhmUW9odUhUWm9URmdBV1hPNWxCM1VDZ2VDRzVmSVhSaXkzQXBLYXdXT2VFRE9f?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-15T23:03:50+00:00",
+      "headline_score": 1,
+      "discovered_at": "2026-11-16T02:18:43.493032+00:00",
+      "id": "a41572bc81f78f08",
+      "status": "HOLD",
+      "created_at": "2026-11-16T02:18:44.181299+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 1,
+      "last_attempt_at": "2026-11-16T02:19:44.443436+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "Service HTTP 404; no paid fallback attempted"
+    },
+    "786c160a985a95b0": {
+      "title": "Transportation secretary says he doesn’t apologize for FAA’s nationwide ground stop - NBC News",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiywFBVV95cUxOa3RIWXBhc1Z1ZzBMWXZHTG5qYkx3dVh2VGFHbmdiMUNvbjFLM2hsaHNWNlZfdDlMZ0VmNERIVWRoekF0Y0gwLXA5ZmtjYkpvTkVwOFNvdERGSlRGZkZXNUpHS2NVWGlMM0dnSTZUSHJsSVJMSERUUlV4Wjg2eW1GX2kzQnVZTGJSSm1RWEJxODVkNGxpNG9RNUtOY1A3YWVKU3VoYS1MOTVkYnpoaFNDX3A0MmNZQ3lfSVlFV2ZBRGRHUDJzWlRHSEtUYw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-15T17:42:17+00:00",
+      "headline_score": 1,
+      "discovered_at": "2026-11-16T02:18:43.900993+00:00",
+      "id": "786c160a985a95b0",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T02:18:44.183613+00:00",
+      "attempts": 0
+    },
+    "b5642575d9486d7d": {
+      "title": "What would the Earth's evolution have looked like without life? - Universe Space Tech",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMikgFBVV95cUxPYzhFQmlkMWNwM0JjeW01MFRWcHAzYjJYSEgzRjdCLUZhaUJvU2U3NFFXbUE3TFMxemxmY0UzNVFEQlBUSkNrRThNRFljRkhEQmJDT3haemlqLXM1Z1JwdGxVRVFfWkVEYVM2WUNBcVBJOVZaUlZOUnNaaDZMaFlrZHY1cWhOdDhzWDlPTHFIZFNhZw?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T02:18:41.849835+00:00",
+      "id": "b5642575d9486d7d",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T02:18:44.188283+00:00",
+      "attempts": 0
+    },
+    "9dd45c78ff119243": {
+      "title": "Neil Thomas Asks: Is Natural Selection a Mechanism? - Science and Culture Today",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMikgFBVV95cUxPejVyckNHRFd3VnRpRlpxdUZmQmdRNkI1OXNjdWhoeVZxMzliOE1GUGhLTkpUWktMVm1LdG5MUWJqSHdvV3dPTmZKMWRIemQxWWtxZlNhbFV4NXVwMTZxOHEtdGdpYlJEOEtKTUVHc2dIcEZFWVJXbEk5aEVFMmUyeFBmbXh4NWlDdjdMLS1hbmhhUQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T02:18:41.850283+00:00",
+      "id": "9dd45c78ff119243",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T02:18:44.191591+00:00",
+      "attempts": 0
+    },
+    "870be4fd937a8c6d": {
+      "title": "Transportation head vows to find 'root cause' of ground stop. Trump breaks his silence on breakdown - PBS",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMivgFBVV95cUxQQlN2bms3WThwX1hyY1pvcjVBa0FJeUNjaWE5Mll0MzNRVTZKUHltaDZwZlVLb3RtSHc3VjZEQzVkd29NbXpGZjdRTEQ5MjRTU3VMRWRiNHVjOUk3cU9jaUNzeGF3VWVyUDF0LW45bEZ4anNYcVRYQTNHVVd2OXZiY0s5ZWtMbnZlVlAxb1NkUjFyaFZtMTEwOXNiclMyM0VUOHVvWThCQnpzM2kxM1I3Q0k2QTltY0hMakJja3J30gHDAUFVX3lxTFBVMmdTSjk0cS12a29lalFrWVVtSXVHWFFycV9SS00yMTJvUGNYbVNkS01BV2o3ajFuR01xTmQ0MVhTYUhITGdQb0NGQzh0YVpacGVpWWZkRDhEYk5ValFhSjgwbUtNM3hTbkNTVjM5ZEswT2hHakZkRmZwRF9LTjBtUUJnX0g5QkJ5Y1ZPVGdldnJObEVBeHFmVTUxbllBLTJQQlc0ZF8tVG1wNXdhTURtTnBnTDN2MDBlNWdVTU1VWnFHdw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-15T16:32:43+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T02:18:43.886629+00:00",
+      "id": "870be4fd937a8c6d",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T02:18:44.194997+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-16",
-    "youtube": 1
-  }
+    "youtube": 3,
+    "ai": 1
+  },
+  "content_cycle_index": 0,
+  "content_batch": {
+    "category": "world_news",
+    "completed": 0,
+    "story_keys": [],
+    "media_hashes": [],
+    "source_urls": []
+  },
+  "production_runs": 1
 }
