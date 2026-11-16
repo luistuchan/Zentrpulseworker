@@ -35,6 +35,7 @@ WORK = ROOT / '.work'
 USER_AGENT = 'ZENTR-Pulse/3.0 (source-linked video drafts)'
 SCHEMA_VERSION = 3
 SOURCE_PIPELINE_VERSION = 2
+STOCK_PIPELINE_VERSION = 1
 SCRIPT_PIPELINE_VERSION = 1
 CATEGORIES = {
     'movies': 'movie scene hidden clue explained',
@@ -248,11 +249,41 @@ def news_topic_allowed(title):
     return not NEWS_OFF_TOPIC.search(title)
 
 
+def publisher_news_leads(existing_titles=()):
+    leads, errors = [], []
+    for url in ('https://feeds.bbci.co.uk/news/world/rss.xml',
+                'https://www.aljazeera.com/xml/rss/all.xml'):
+        try:
+            root = ET.fromstring(http(url, retries=0)[0])
+            for item in root.findall('./channel/item')[:30]:
+                title = (item.findtext('title') or '').strip()
+                link = (item.findtext('link') or '').strip()
+                if (len(title) < 20 or not news_topic_allowed(title)
+                        or not link.startswith('https://') or '/sport/' in link
+                        or '/sports/' in link or '/opinion/' in link
+                        or duplicate(title, existing_titles) or duplicate(title, [x['title'] for x in leads])):
+                    continue
+                try:
+                    published = parsedate_to_datetime(item.findtext('pubDate') or '').isoformat()
+                except (TypeError, ValueError, OverflowError):
+                    continue
+                if not news_is_fresh(published):
+                    continue
+                leads.append({'title': title, 'category': 'world_news', 'source_urls': [link],
+                              'content_type': 'news_update', 'source_published_at': published,
+                              'headline_score': 10, 'discovered_at': now(),
+                              'discovery_quality': 'publisher_feed_v1'})
+        except (Hold, ET.ParseError):
+            errors.append('publisher feed: ' + (urllib.parse.urlsplit(url).hostname or 'unknown'))
+    return leads, errors
+
+
 def discover(limit, existing_titles=()):
     """Free RSS discovery. Headlines are leads, not evidence or virality proof."""
-    leads = []
-    errors = []
+    leads, errors = publisher_news_leads(existing_titles)
     for category, query in CATEGORIES.items():
+        if category == 'world_news':
+            continue  # World news uses the direct publisher feeds above.
         is_news = category in NEWS_CATEGORIES
         url = 'https://news.google.com/rss/search?' + urllib.parse.urlencode({
             'q': query + (' when:1d' if is_news else ' when:7d'), 'hl': 'en-US', 'gl': 'US', 'ceid': 'US:en'})
@@ -454,6 +485,11 @@ def object_schema(properties):
     return {'type': 'OBJECT', 'properties': properties, 'required': list(properties)}
 
 
+MATCH_SCHEMA = object_schema({'matches': {'type': 'BOOLEAN'}, 'reason': {'type': 'STRING'}})
+CRITIQUE_SCHEMA = object_schema({'pass': {'type': 'BOOLEAN'},
+    'issues': {'type': 'ARRAY', 'items': {'type': 'STRING'}}, 'source_independence': {'type': 'BOOLEAN'}})
+
+
 SCRIPT_SCHEMA = object_schema({
     'decision': {'type': 'STRING', 'enum': ['draft', 'reject']},
     'reason': {'type': 'STRING'}, 'title': {'type': 'STRING'},
@@ -495,6 +531,11 @@ can honestly use illustrative footage of places, infrastructure, objects or mech
 Never depict stock actors as the actual people involved. If the explanation needs
 an actual person's speech, a specific action, film, game or play that was not supplied,
 reject it. Do not mark exact footage as unnecessary merely to pass production.
+Stock visual_query must use 1-3 concrete searchable keywords, such as "solar panels"
+or "oil refinery", without names, dates, camera instructions or a full sentence.
+visual_description should describe only the subject and activity required to explain
+the narration. Avoid unnecessary requirements for lighting, weather, camera movement,
+on-screen text, a named facility or an exact place that generic stock cannot establish.
 '''
 
 NEWS_PROMPT = '''\nFor content_type=news_update, make a concise, neutral news bulletin instead
@@ -578,6 +619,9 @@ def generate_plan(entry, sources, target, budget, folder):
             'source_published_at': entry.get('source_published_at'), 'as_of': now(),
             'transcript': entry.get('transcript', '')[:20000], 'sources': sources}
     prompt = SCRIPT_PROMPT + (NEWS_PROMPT if data['content_type'] == 'news_update' else '')
+    if data['content_type'] == 'news_update' and entry.get('category') == 'world_news':
+        prompt += ('\nCATEGORY: world_news. The U.S. president is NOT required. '
+                   'Report the supplied world development neutrally, if adequately supported.')
     prompt += '\nCANDIDATE DATA:\n' + json.dumps(data)
     for attempt in range(2):
         plan = ai(prompt, budget, response_schema=schema)
@@ -650,7 +694,7 @@ def narration(scene, folder, entry):
 
 def pixabay_candidates(query, budget):
     query = ' '.join(query.split())[:100]
-    cache = WORK / 'stock-searches' / (hashlib.sha256(query.encode()).hexdigest() + '.json')
+    cache = WORK / 'stock-searches-v2' / (hashlib.sha256(query.encode()).hexdigest() + '.json')
     cached = load(cache, {})
     if cached and 0 <= time.time() - cached.get('time', 0) < 86400:
         return cached.get('hits', [])
@@ -659,7 +703,7 @@ def pixabay_candidates(query, budget):
         raise Hold('PIXABAY_API_KEY missing')
     if not budget.take('pixabay'):
         raise Wait('Daily Pixabay search cap reached')
-    params = urllib.parse.urlencode({'key': key, 'q': query, 'per_page': 3,
+    params = urllib.parse.urlencode({'key': key, 'q': query, 'per_page': 9,
                                     'safesearch': 'true', 'video_type': 'film'})
     # Never save or print the request URL, which contains the credential.
     result = json_http('https://pixabay.com/api/videos/?' + params, retries=0)
@@ -668,42 +712,89 @@ def pixabay_candidates(query, budget):
     return hits
 
 
+def stock_queries(scene):
+    original = ' '.join(scene['visual_query'].split())[:100]
+    style = set('aerial cinematic shot shots view views close up wide medium slow motion footage '
+                'sunset sunrise dusk dawn dramatic beautiful realistic vertical horizontal '
+                'camera pan zoom tracking high quality resolution 4k 1080p'.split())
+    words = [x for x in re.findall(r'[a-zA-Z0-9]+', original.lower())
+             if x not in style and x not in SEARCH_STOPWORDS]
+    return list(dict.fromkeys(x for x in (original, ' '.join(words[:3]), ' '.join(words[:2])) if x))[:3]
+
+
 def select_pixabay_asset(scene, entry, folder, budget):
     used = entry.setdefault('_used_stock', [])
-    for candidate in pixabay_candidates(scene['visual_query'], budget):
-        if candidate.get('duration', 0) < scene.get('_required_seconds', 0):
-            continue
-        asset_id = 'pixabay:' + str(candidate['id'])
-        if asset_id in used:
-            continue
-        files = [f for f in candidate.get('videos', {}).values()
-                 if 600 <= (f.get('width') or 0) <= 1920 and f.get('height')
-                 and 0 < (f.get('size') or 0) <= 60_000_000]
-        if not files:
-            continue
-        file = min(files, key=lambda f: abs(f['width'] - 1080))
-        host = urllib.parse.urlsplit(file.get('url', '')).hostname or ''
-        if not (host == 'pixabay.com' or host.endswith('.pixabay.com')):
-            continue
-        path = folder / ('pixabay_' + str(candidate['id']) + '.mp4')
-        path.write_bytes(http(file['url'], limit=60_000_000)[0])
-        if duration(path) + .05 < scene.get('_required_seconds', 0):
-            path.unlink(missing_ok=True)
-            continue
-        thumb = folder / 'match.jpg'
-        run(['ffmpeg', '-v', 'error', '-y', '-ss', '0.5', '-i', str(path),
-             '-frames:v', '1', '-vf', 'scale=480:-2', str(thumb)])
-        match = ai('Evaluate this frame as ILLUSTRATIVE stock. Reject unrelated objects, text, logos, '
-                   'graphic material, or misleading depictions. Return JSON {"matches": boolean, '
-                   '"reason": string}. Scene: ' + scene['visual_description'], budget, thumb)
-        if match.get('matches') is not True:
-            path.unlink(missing_ok=True)
-            continue
-        used.append(asset_id)
-        return path, {'provider': 'Pixabay', 'id': candidate['id'], 'url': candidate.get('pageURL'),
-                      'creator': candidate.get('user'), 'license_url': 'https://pixabay.com/service/license-summary/',
-                      'illustrative': True, 'match_check': match, 'sha256': digest(path)}
-    raise Hold('No matching Pixabay footage passed checks for ' + scene['id'])
+    checked, evaluated = set(), 0
+    logs = []
+    diagnostics = OUTPUT / 'diagnostics' / entry['id'] / (scene['id'] + '-stock.json')
+    def save():
+        atomic_json(diagnostics, {'scene_id': scene['id'], 'visual_description': scene['visual_description'],
+                                 'searches': logs, 'evaluated_frames': evaluated})
+    for query in stock_queries(scene):
+        candidates = pixabay_candidates(query, budget)
+        log = {'query': query, 'returned': len(candidates), 'candidates': []}
+        logs.append(log)
+        save()
+        for candidate in candidates:
+            asset_id = 'pixabay:' + str(candidate['id'])
+            if asset_id in checked:
+                continue
+            checked.add(asset_id)
+            record = {'id': candidate['id'], 'duration': candidate.get('duration'), 'result': 'pending'}
+            log['candidates'].append(record)
+            if asset_id in used:
+                record['result'] = 'already used'; save(); continue
+            if candidate.get('duration', 0) < scene.get('_required_seconds', 0):
+                record['result'] = 'too short'; save(); continue
+            files = [f for f in candidate.get('videos', {}).values()
+                     if 600 <= (f.get('width') or 0) <= 1920 and f.get('height')
+                     and 0 < (f.get('size') or 0) <= 60_000_000]
+            if not files:
+                record['result'] = 'no suitable file dimensions or size'; save(); continue
+            file = min(files, key=lambda f: abs(f['width'] - 1080))
+            host = urllib.parse.urlsplit(file.get('url', '')).hostname or ''
+            if not (host == 'pixabay.com' or host.endswith('.pixabay.com')):
+                record['result'] = 'unsupported download host'; save(); continue
+            path = folder / ('pixabay_' + str(candidate['id']) + '.mp4')
+            try:
+                path.write_bytes(http(file['url'], limit=60_000_000, retries=0)[0])
+                if duration(path) + .05 < scene.get('_required_seconds', 0):
+                    record['result'] = 'download shorter than narration'; save(); continue
+                thumb = folder / 'match.jpg'
+                run(['ffmpeg', '-v', 'error', '-y', '-ss', '0.5', '-i', str(path),
+                     '-frames:v', '1', '-vf', 'scale=480:-2', str(thumb)])
+            except Wait:
+                record['result'] = 'download temporarily unavailable'; save(); continue
+            except Hold as exc:
+                record['result'] = str(exc); save(); continue
+            if evaluated >= 6:
+                record['result'] = 'per-scene evaluation cap reached'; save()
+                break
+            evaluated += 1
+            try:
+                match = ai('Evaluate this frame as clearly ILLUSTRATIVE stock, never as footage of the real event. '
+                           'The core subject and activity must match. Camera angle, lighting and weather may vary '
+                           'when they do not change the explanation. Reject unrelated subjects, misleading '
+                           'depictions, prominent text/logos or graphic material. Return JSON {"matches": boolean, '
+                           '"reason": string}. Required subject/activity: ' + scene['visual_description'], budget, thumb,
+                           response_schema=MATCH_SCHEMA)
+            except Hold:
+                record['result'] = 'visual evaluation unavailable'; save(); raise
+            record.update(result='accepted' if match.get('matches') is True else 'visual mismatch',
+                          reason=str(match.get('reason', ''))[:500])
+            save()
+            if match.get('matches') is not True:
+                continue
+            used.append(asset_id)
+            return path, {'provider': 'Pixabay', 'id': candidate['id'], 'url': candidate.get('pageURL'),
+                          'creator': candidate.get('user'), 'license_url': 'https://pixabay.com/service/license-summary/',
+                          'illustrative': True, 'search_query': query, 'match_check': match, 'sha256': digest(path)}
+        if evaluated >= 6:
+            break
+    save()
+    summary = ', '.join(str(x['returned']) + ' hits for ' + repr(x['query']) for x in logs)
+    raise Hold('No matching Pixabay footage for ' + scene['id'] + ': ' + summary[:150]
+               + '; inspect diagnostics in review artifact')
 
 
 def select_asset(scene, entry, folder, budget):
@@ -718,7 +809,13 @@ def select_asset(scene, entry, folder, budget):
     if scene['requires_exact_footage']:
         raise Hold('Exact footage required for ' + scene['id'] + '; provide scene-matched local footage')
     if os.getenv('PIXABAY_API_KEY', '').strip():
-        return select_pixabay_asset(scene, entry, folder, budget)
+        try:
+            return select_pixabay_asset(scene, entry, folder, budget)
+        except Wait:
+            raise
+        except Hold:
+            if not os.getenv('PEXELS_API_KEY', '').strip():
+                raise
     key = os.getenv('PEXELS_API_KEY', '').strip()
     if not key:
         raise Hold('Matching visual missing: add local assets or optional PEXELS_API_KEY')
@@ -751,7 +848,7 @@ def select_asset(scene, entry, folder, budget):
         match = ai('Evaluate this frame as ILLUSTRATIVE stock for this scene. Reject unrelated objects, text, '
                    'logos, graphic material, or misleading depictions. It must clearly match the concrete '
                    'visual request. Return JSON {"matches": boolean, "reason": string}. Scene: '
-                   + scene['visual_description'], budget, thumb)
+                   + scene['visual_description'], budget, thumb, response_schema=MATCH_SCHEMA)
         if match.get('matches') is not True:
             path.unlink(missing_ok=True)
             continue
@@ -960,6 +1057,14 @@ def reopen_script_holds(state):
             job.pop('blocker', None)
 
 
+def reopen_stock_holds(state):
+    for job in state['jobs'].values():
+        if (job['status'] == 'HOLD' and str(job.get('blocker', '')).startswith('No matching Pixabay footage')
+                and job.get('stock_pipeline_version', 0) < STOCK_PIPELINE_VERSION):
+            job.update(status='QUEUED', stock_pipeline_version=STOCK_PIPELINE_VERSION)
+            job.pop('blocker', None)
+
+
 def process(entry, budget, target):
     content_type = entry.get('content_type', 'explainer')
     if content_type == 'clipper':
@@ -994,7 +1099,7 @@ def process(entry, budget, target):
                       'invented facts, weak hook, obvious recap, and misleading visuals. Reject if anything '
                       'material is unsupported. Return JSON {"pass": boolean, "issues": [string], '
                       '"source_independence": boolean}. Model review is not factual verification.\n'
-                      + json.dumps({'plan': plan, 'sources': sources}), budget)
+                      + json.dumps({'plan': plan, 'sources': sources}), budget, response_schema=CRITIQUE_SCHEMA)
         atomic_json(critique_path, critique)
     if critique.get('pass') is not True or critique.get('source_independence') is not True or critique.get('issues'):
         raise Hold('Independent editorial pass failed; revise candidate rather than publishing')
@@ -1109,7 +1214,8 @@ def produce_batch(state, budget, target):
         folder = WORK / job['id']
         progress = len(list(folder.glob('s[0-9][0-9].mp4'))) if folder.exists() else 0
         has_plan = (folder / 'plan.json').is_file()
-        return (-progress, -int(has_plan), job.get('last_attempt_at', job.get('created_at', '')))
+        trusted_lead = job.get('discovery_quality') == 'publisher_feed_v1'
+        return (-progress, -int(trusted_lead), -int(has_plan), job.get('last_attempt_at', job.get('created_at', '')))
     pending = sorted(state['jobs'].values(), key=priority)
     for job in pending:
         if (not batch or batch['completed'] >= BATCH_SIZE or len(completed) >= max_ready
@@ -1232,6 +1338,7 @@ def main():
             state['jobs'][job_id] = {**item, 'id': job_id, 'status': 'QUEUED', 'created_at': now(), 'attempts': 0}
         reopen_source_holds(state)
         reopen_script_holds(state)
+        reopen_stock_holds(state)
         for job in state['jobs'].values():
             if (job.get('content_type') == 'news_update'
                     and job['status'] in ('QUEUED', 'WAITING', 'PRODUCING')
