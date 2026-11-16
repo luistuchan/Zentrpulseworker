@@ -64,14 +64,16 @@ jobs:
           PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           FREE_TIER_CONFIRMED: ${{ vars.FREE_TIER_CONFIRMED || '0' }}
-          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-2.5-flash' }}
+          GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-3.5-flash-lite' }}
           TTS_VOICE: ${{ vars.TTS_VOICE || 'en-US-AriaNeural' }}
           TARGET_SECONDS: ${{ vars.TARGET_SECONDS || '30' }}
           MAX_JOBS_PER_RUN: '3'
-          MAX_AI_CALLS: '12'
-          MAX_YOUTUBE_SEARCHES: '3'
-          MAX_PEXELS_SEARCHES: '24'
-          MAX_PIXABAY_SEARCHES: '12'
+          MAX_AI_CALLS: '96'
+          MAX_AI_CALLS_PER_RUN: '32'
+          MAX_CANDIDATES_PER_RUN: '9'
+          MAX_YOUTUBE_SEARCHES: '18'
+          MAX_PEXELS_SEARCHES: '96'
+          MAX_PIXABAY_SEARCHES: '72'
           RETRY_JOB: ${{ inputs.retry_job }}
         run: python worker.py --discover --retry "$RETRY_JOB"
       - name: Save authoritative queue state
@@ -124,4 +126,5 @@ jobs:
           path: state/queue.json
           if-no-files-found: ignore
           retention-days: 30
+
 
