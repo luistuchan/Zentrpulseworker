@@ -12,6 +12,20 @@ def main():
         import subprocess
         result = subprocess.run(['curl', '--fail', '--location', '--max-time', '60',
                                  '--output', str(source), url], capture_output=True, text=True)
+        if result.returncode == 60:
+            # NASA's peer advertises this intermediate in Authority Information Access.
+            # Fetch it over verified HTTPS, then let OpenSSL validate the whole chain.
+            issuer_der, issuer_pem = folder / 'issuer.der', folder / 'issuer.pem'
+            subprocess.run(['curl', '--fail', '--location', '--max-time', '30',
+                            '--output', str(issuer_der), 'https://yr2.i.lencr.org/'], check=True)
+            subprocess.run(['openssl', 'x509', '-inform', 'DER', '-in', str(issuer_der),
+                            '-out', str(issuer_pem)], check=True)
+            bundle = folder / 'nasa-ca-bundle.pem'
+            bundle.write_bytes(w.Path('/etc/ssl/certs/ca-certificates.crt').read_bytes()
+                               + b'\\n' + issuer_pem.read_bytes())
+            result = subprocess.run(['curl', '--fail', '--location', '--max-time', '60',
+                                     '--cacert', str(bundle), '--output', str(source), url],
+                                    capture_output=True, text=True)
         if result.returncode:
             source.unlink(missing_ok=True)
             raise w.Hold('NASA direct download failed: ' + result.stderr[-1500:])
