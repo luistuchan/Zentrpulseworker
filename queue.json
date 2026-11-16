@@ -615,14 +615,15 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:48.322873+00:00",
       "id": "98b05cefbe0e3d1c",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T08:45:49.293524+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-16T08:46:18.724723+00:00",
+      "last_attempt_at": "2026-11-16T12:29:12.986841+00:00",
       "youtube_signal": {
         "status": "not_checked"
-      }
+      },
+      "blocker": "No matching Pixabay footage passed checks for s01"
     },
     "086cd7ab38725e97": {
       "title": "Economics of the World Cup | Ticket Prices, Revenue, Costs, & Social Impact - Britannica",
@@ -635,15 +636,16 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:48.329924+00:00",
       "id": "086cd7ab38725e97",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T08:45:49.299420+00:00",
-      "attempts": 1,
-      "source_pipeline_version": 1,
-      "last_attempt_at": "2026-11-16T08:46:42.292641+00:00",
+      "attempts": 2,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-16T12:29:54.610492+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
-      "script_pipeline_version": 1
+      "script_pipeline_version": 1,
+      "blocker": "Script length outside target range"
     },
     "1c01c7cbdf8cd474": {
       "title": "Israel warns US of alleged Iranian plot to attack President Trump - Fox News",
@@ -671,14 +673,15 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:12.794220+00:00",
       "id": "90013fc7b1b6bdc3",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.768077+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-16T10:36:13.886022+00:00",
+      "last_attempt_at": "2026-11-16T12:29:59.958683+00:00",
       "youtube_signal": {
         "status": "not_checked"
-      }
+      },
+      "blocker": "No matching Pixabay footage passed checks for s02"
     },
     "de632a0cc6ccbd09": {
       "title": "Carney says US tariffs could turn Canada's carmakers to China - Yahoo News Singapore",
@@ -811,7 +814,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:12.808245+00:00",
       "id": "710b1ac83d1df7c7",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.855991+00:00",
       "attempts": 1,
       "source_pipeline_version": 1,
@@ -819,7 +822,9 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "script_pipeline_version": 1
+      "script_pipeline_version": 1,
+      "blocker": "Off-topic news lead; use a world development",
+      "news_topic_version": 1
     },
     "0aaf5f5a7d9c99de": {
       "title": "RANKED: The Top Crude Oil Producers in 2025 – Visual Capitalist – See How Countries Rank - EnergyNow.com",
@@ -832,14 +837,15 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:12.820893+00:00",
       "id": "0aaf5f5a7d9c99de",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.866888+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-16T10:37:10.721213+00:00",
+      "last_attempt_at": "2026-11-16T12:30:55.123849+00:00",
       "youtube_signal": {
         "status": "not_checked"
-      }
+      },
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. Service HTTP 403; no paid fallback attempted"
     },
     "e6e9e1c5fb72136e": {
       "title": "China confirms Xi-Trump-Putin historic summit. What will be on the agenda? - CNBC",
@@ -882,15 +888,16 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:48.986382+00:00",
       "id": "ca7e3c0c496a8889",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:48:49.878881+00:00",
-      "attempts": 1,
-      "source_pipeline_version": 1,
-      "last_attempt_at": "2026-11-16T11:48:49.993484+00:00",
+      "attempts": 2,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-16T12:31:30.683124+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
-      "script_pipeline_version": 1
+      "script_pipeline_version": 1,
+      "blocker": "Editor rejected candidate: The content type is specified as a news_update involving the U.S. president, but the supplied candidate data concerns cricket administrator Jay Shah and the International Cricket C"
     },
     "b60052a301fe6ad1": {
       "title": "Host Hotels & Resorts President James Risoleo Sells 25% Of Holding - Simply Wall St",
@@ -1008,14 +1015,15 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:48.853262+00:00",
       "id": "15860f5ee187cf77",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:48:49.955754+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-16T11:49:19.550163+00:00",
+      "last_attempt_at": "2026-11-16T12:31:32.061118+00:00",
       "youtube_signal": {
         "status": "not_checked"
-      }
+      },
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
     },
     "5abd758d65b5fa5e": {
       "title": "Alberta Anticipates Immediate Oil Sands Investment After Royalty Changes - News and Statistics - IndexBox",
@@ -1028,15 +1036,16 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:48.865843+00:00",
       "id": "5abd758d65b5fa5e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:48:49.968684+00:00",
-      "attempts": 1,
-      "source_pipeline_version": 1,
-      "last_attempt_at": "2026-11-16T11:49:48.087029+00:00",
+      "attempts": 2,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-16T12:32:04.339780+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
-      "script_pipeline_version": 1
+      "script_pipeline_version": 1,
+      "blocker": "No matching Pixabay footage passed checks for s01"
     },
     "bcb92c282da95057": {
       "title": "Trump heads to Asia to meet with Xi and Putin amid Nvidia fallout - KGOU",
@@ -1079,9 +1088,30 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:59:10.076272+00:00",
       "id": "968d462433f4ef19",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:59:10.789148+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-16T12:32:15.103495+00:00",
+      "youtube_signal": {
+        "status": "discovery_only",
+        "examples": [
+          {
+            "title": "Why Vietnam Is Becoming Asia&#39;s Next Business Hub | LTS LAW FIRM",
+            "url": "https://www.youtube.com/watch?v=K2xYr9p6bUs"
+          },
+          {
+            "title": "Không thể tin nổi: Vệ tinh &quot;hộp sữa&quot; giúp Việt Nam đổi luật chơi vũ trụ",
+            "url": "https://www.youtube.com/watch?v=4aqe66WlX0Q"
+          },
+          {
+            "title": "Vietnamese PM backs central role for UN in human progress",
+            "url": "https://www.youtube.com/watch?v=VwOX6cYKGYk"
+          }
+        ],
+        "note": "Search matches do not establish popularity or permission to reuse footage."
+      },
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
     },
     "fe0d2e797c3d9181": {
       "title": "China says Xi, Trump, Putin to discuss 'world peace' - France 24",
@@ -1109,9 +1139,17 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:59:10.013407+00:00",
       "id": "b371b61c2cc0b758",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:59:10.800646+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-16T12:32:42.898440+00:00",
+      "youtube_signal": {
+        "status": "discovery_only",
+        "examples": [],
+        "note": "Search matches do not establish popularity or permission to reuse footage."
+      },
+      "blocker": "No matching Pixabay footage passed checks for s01"
     },
     "dc65dbf3c33e2286": {
       "title": "New World Development Plans Massive 11-for-1 Rights Issue at 81.5% Discount; Shares Plunge as Controlling Shareholder Commits to Full Subscription - BigGo Finance",
@@ -1157,12 +1195,118 @@
       "status": "QUEUED",
       "created_at": "2026-11-16T11:59:10.823798+00:00",
       "attempts": 0
+    },
+    "100d26bd62ec1d68": {
+      "title": "Jay Shah re-elected unopposed as ICC chair as calendar changes open door to IPL expansion - Mezha.net",
+      "category": "world_news",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMihAFBVV95cUxQVGdVckp2eFFucmREdkVmUEVISGF3aGVScW9IMHMtQ2xPbXVTcld1TElZSm5XaHhTd1ZkNWc3V2Y3a28zRWd1cmJsaVpoRklXWkRBNElJTnM1dFJNcTIyNS1aSU1FWUp2ai1FMldrOV9WUGcyNy1KTWZHeV90NFc0MEc2MG0?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T12:24:50+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T12:29:11.789306+00:00",
+      "id": "100d26bd62ec1d68",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T12:29:12.884248+00:00",
+      "attempts": 0
+    },
+    "1c914ef47aed95cd": {
+      "title": "Widow of Haiti's Slain Leader Moise to Contest Presidential Election - U.S. News & World Report",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQZ0w1dW44blR5SnpUdExYRmM0VUtWdERycWx0OHpVcDhtLXY5WjlhU2l4M0RfTVA3Y2ZRakJ6TWwwVmhRenQwWHJIbkQ0dHRjenFVTUtodURXb3ptMHMzSFpfTlRJSVlMUUU5QWxxclJaUWpna2dOU1VhWlFJekJQRnlIXzJqY1NwTkN5a1VrRmdLX2R2b1BLMGw2ckt2T1lJYW5HOUc5SVBrZlZ4TzdyVHFZT1kzZkVxWEZxcWR2TnhtNTJnUlRTNVVhNmQ2QnVy?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T01:25:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T12:29:12.567277+00:00",
+      "id": "1c914ef47aed95cd",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T12:29:12.899752+00:00",
+      "attempts": 0
+    },
+    "389eee739b9b671e": {
+      "title": "Best PA speakers 2026: Active and passive sound systems for any use - MusicRadar",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxON2RfV1h6eHFZWU5Gb1hDZWRiV0ZDRUdCMVkydFluTlhtRFh5cTQ5M0lFbDRtQm5QYXJUcmltX0ItNm5icm1RZnc1Y2VjRlBvSzJhX1lNTXk4S2pjaE1xMkFyQ2s5cDlIUzE0MVN5ekR3ZEpjNXFOdjJiSWxUSzA2YXlCNEl5empaQnFldC1RVWx5Um5laUlacktxRWI?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T12:29:11.328166+00:00",
+      "id": "389eee739b9b671e",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T12:29:12.913341+00:00",
+      "attempts": 0
+    },
+    "b1c8cf283e2fa709": {
+      "title": "ICC BOARD CONFIRMS JAY SHAH'S UNOPPOSED REAPPOINTMENT AS CHAIR FOR SECOND TERM - ICC",
+      "category": "world_news",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMivgFBVV95cUxNQjdHekFPclJDMm1qLVl6alI1QWxZSFJhVko3bHJjaFMtYkNxTTQxM2t2UVZnMjRkbmhQYVNrNjhNOS1kUTRvQXR0dndMSXVWNlJnazZoakg2S09NN0FJUkwzMDJfMEhFTDVzTjZMQ19ibEs0RzJqeTcyb1A5NkR5X1N1eWw4YUpHSUJxRG5yaEFiTFpkYUp6VE11Mks1cGFyU25Gemc2RjVOUFhCcmVxUmtFYmlJU08zT2kxdmF3?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T05:02:02+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T12:29:11.727255+00:00",
+      "id": "b1c8cf283e2fa709",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T12:29:12.927618+00:00",
+      "attempts": 0
+    },
+    "ed6b842454d90be4": {
+      "title": "HKU President Calls on Universities to Help Drive Northern Metropolis Development Amid Global Challenges - The University of Hong Kong (HKU)",
+      "category": "world_news",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMifEFVX3lxTE1qQmdrZ2NWRW9TSGNudFQ0anFSTjJQUGhPWUJkdXlYLTRwMjV2RnkxNGc3ZVRVcEdsc2pkS0pQZXVKMU9vbzF1Q3BpYUMyZHp1c3h3blpwTTlKbm85dEZfYTFKMmtYNlo4cHd1VXcxLV9vNDBlaERWSjR1SjU?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T07:22:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T12:29:11.759672+00:00",
+      "id": "ed6b842454d90be4",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T12:29:12.949412+00:00",
+      "attempts": 0
+    },
+    "27b0e150c70c506f": {
+      "title": "Zelensky urges US and Musk to lift Starlink restrictions and be on 'right side of history' - BBC",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiW0FVX3lxTFBKRV92VVNvRTJsaGp2REVNVTkxQVgtRllsdDUydFV0Ym9hcklORXo0UjFwR1lIOVBTYm5Ed3hfenpzV2tfLVl0N3ZhVUcwZ3gzaFpQcGRTTlNYRzQ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-15T19:32:39+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T12:29:12.380387+00:00",
+      "id": "27b0e150c70c506f",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T12:29:12.965904+00:00",
+      "attempts": 0
+    },
+    "912b4fb64a5bbff9": {
+      "title": "Southeast Asian leaders open annual summit with major conflicts and their impact topping the agenda - PBS",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMizwFBVV95cUxQNkhyWVBDd29nSk9adWt5a0NSZGJSSGc0YTd0TC16UE5ISGRONGJzX1hfYkFkbFlDXzE0WWRuVjg4al9EbEVHODRubGplMnlMUkgtX20ybDhQeEhpNWpHN29HcVhPU1I2UFlIWXVFeDRMb0dhcXhKLURMSlZoZXFVV3FiZlhNb0FDc2YzN0dOQ2lXeTdEazR0NXZ3eW5yT1BRUDk2M182OGttaWgwSzdkV09TaXdrU3RsRndIOGJOX1JwR01OUE9lQy15ZlVQRGPSAdQBQVVfeXFMTkEyYU1HX1lLeUNZMEYxSk5Cd05MUHg3LUhPOThPVndLUzduT3RpYjhISVhRVDhLeFkya0c1STRkRVhyOWxrUGN1SV9QMlhiV0YxN3oyeFdnbTMxeU14VnBhZWppR0ZqN2R2YkVzajRra05feFg1Y0szdGdMcnZyNnppTlA5TUZudlRBbDQyeG1RNm5udjlCX0Q4RFFIMGF0eEZJVFkxWXh3elh3Mk1leWNyWnJ5Qzdaa1k0aENoLWJXX1J5ME50WTBEQm9pRmZpVlg0YVo?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-15T21:21:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T12:29:12.422267+00:00",
+      "id": "912b4fb64a5bbff9",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T12:29:12.984281+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-16",
-    "youtube": 3,
-    "ai": 9
+    "youtube": 6,
+    "ai": 38,
+    "pixabay": 5
   },
   "content_cycle_index": 0,
   "content_batch": {
@@ -1172,5 +1316,24 @@
     "media_hashes": [],
     "source_urls": []
   },
-  "production_runs": 5
+  "production_runs": 5,
+  "last_run": {
+    "started_at": "2026-11-16T12:29:12.984680+00:00",
+    "attempted_ids": [
+      "98b05cefbe0e3d1c",
+      "086cd7ab38725e97",
+      "90013fc7b1b6bdc3",
+      "0aaf5f5a7d9c99de",
+      "ca7e3c0c496a8889",
+      "15860f5ee187cf77",
+      "5abd758d65b5fa5e",
+      "968d462433f4ef19",
+      "b371b61c2cc0b758"
+    ],
+    "completed_ids": [],
+    "model": "gemini-3.5-flash-lite",
+    "finished_at": "2026-11-16T12:33:20.534934+00:00",
+    "attempted": 9,
+    "completed": 0
+  }
 }
