@@ -3,7 +3,8 @@ on:
   push:
     paths:
       - '.github/workflows/render-check.yml'
-      - 'tests/render_smoke.py'
+      - 'worker.py'
+      - 'tests/**'
   workflow_dispatch:
 permissions:
   contents: read
