@@ -617,13 +617,14 @@
       "id": "98b05cefbe0e3d1c",
       "status": "HOLD",
       "created_at": "2026-11-16T08:45:49.293524+00:00",
-      "attempts": 2,
+      "attempts": 3,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-16T12:29:12.986841+00:00",
+      "last_attempt_at": "2026-11-16T12:49:50.219479+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "No matching Pixabay footage passed checks for s01"
+      "stock_pipeline_version": 1,
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'Norfolk countryside landscape aerial view'; inspect diagnostics in review artifact"
     },
     "086cd7ab38725e97": {
       "title": "Economics of the World Cup | Ticket Prices, Revenue, Costs, & Social Impact - Britannica",
@@ -675,13 +676,14 @@
       "id": "90013fc7b1b6bdc3",
       "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.768077+00:00",
-      "attempts": 2,
+      "attempts": 3,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-16T12:29:59.958683+00:00",
+      "last_attempt_at": "2026-11-16T12:47:37.021244+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "No matching Pixabay footage passed checks for s02"
+      "stock_pipeline_version": 1,
+      "blocker": "No matching Pixabay footage for s02: 9 hits for 'modern flight control radar screen'; inspect diagnostics in review artifact"
     },
     "de632a0cc6ccbd09": {
       "title": "Carney says US tariffs could turn Canada's carmakers to China - Yahoo News Singapore",
@@ -1036,16 +1038,17 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:48.865843+00:00",
       "id": "5abd758d65b5fa5e",
-      "status": "HOLD",
+      "status": "WAITING",
       "created_at": "2026-11-16T11:48:49.968684+00:00",
-      "attempts": 2,
+      "attempts": 3,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-16T12:32:04.339780+00:00",
+      "last_attempt_at": "2026-11-16T12:50:04.344013+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
       "script_pipeline_version": 1,
-      "blocker": "No matching Pixabay footage passed checks for s01"
+      "stock_pipeline_version": 1,
+      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 429; no paid fallback attempted"
     },
     "bcb92c282da95057": {
       "title": "Trump heads to Asia to meet with Xi and Putin amid Nvidia fallout - KGOU",
@@ -1139,7 +1142,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:59:10.013407+00:00",
       "id": "b371b61c2cc0b758",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T11:59:10.800646+00:00",
       "attempts": 1,
       "source_pipeline_version": 2,
@@ -1149,7 +1152,7 @@
         "examples": [],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "blocker": "No matching Pixabay footage passed checks for s01"
+      "stock_pipeline_version": 1
     },
     "dc65dbf3c33e2286": {
       "title": "New World Development Plans Massive 11-for-1 Rights Issue at 81.5% Discount; Shares Plunge as Controlling Shareholder Commits to Full Subscription - BigGo Finance",
@@ -1300,13 +1303,169 @@
       "status": "QUEUED",
       "created_at": "2026-11-16T12:29:12.984281+00:00",
       "attempts": 0
+    },
+    "92c3e81b06d61ad7": {
+      "title": "Five EU countries expected to announce migrant deportation centre in Rwanda",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cw987343352go?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T12:36:17+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-16T12:47:32.364939+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "92c3e81b06d61ad7",
+      "status": "HOLD",
+      "created_at": "2026-11-16T12:47:36.975273+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-16T12:47:55.669709+00:00",
+      "youtube_signal": {
+        "status": "discovery_only",
+        "examples": [
+          {
+            "title": "Rwanda Deportation Hub: Europe’s Controversial Plan for Rejected Asylum Seekers.",
+            "url": "https://www.youtube.com/watch?v=E6kRi8Z-2Aw"
+          },
+          {
+            "title": "Five EU Countries Set to Unveil Plan to Send Rejected Asylum Seekers to Rwanda",
+            "url": "https://www.youtube.com/watch?v=1dEkrNi8Bfg"
+          },
+          {
+            "title": "British Plan to Fly Asylum-Seekers to Rwanda Faces Last-Minute Legal Challenge",
+            "url": "https://www.youtube.com/watch?v=G-VtiTMBdlM"
+          }
+        ],
+        "note": "Search matches do not establish popularity or permission to reuse footage."
+      },
+      "blocker": "Evidence quote not found in fetched source"
+    },
+    "08021989eaf1ac80": {
+      "title": "Lithuanian president says US troop rotations will continue beyond latest deployment - WTAQ",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxPa0VHektaN3JSNXZYTUphMGdBYTB6SGNONHR2M1pXSGdabUFlUkNFRWgtcGJQbGRLcDcxdDBwdEZaamQ1SjBEVjREejlWS0dWbnZSZTJzRE5Jbmo1OGlCSjFXcHprMThqLWZrSTlOMzNmaGRjd0FaeUFmaHBVZ01iMVZHT25kYTJ5dXlvTUhUeVJLalRtQk5NdEpzRDF5TkFJd2dQbmpNaHVyRS1GVnFqM3dB?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T12:36:59+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T12:47:36.552943+00:00",
+      "id": "08021989eaf1ac80",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T12:47:36.984387+00:00",
+      "attempts": 0
+    },
+    "4f1fad88bc739bb3": {
+      "title": "Yemeni forces retreat to defend port city from Houthis",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cqvg2xgyvnjpo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T11:09:38+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-16T12:47:32.348455+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "4f1fad88bc739bb3",
+      "status": "HOLD",
+      "created_at": "2026-11-16T12:47:36.990401+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-16T12:48:29.986503+00:00",
+      "youtube_signal": {
+        "status": "discovery_only",
+        "examples": [
+          {
+            "title": "Houthis Take Control of Bab el-Mandeb as Saudi-Backed Forces Retreat",
+            "url": "https://www.youtube.com/watch?v=p_ZapKEM27w"
+          },
+          {
+            "title": "Saudi Arabia Is Going Back to War in Yemen",
+            "url": "https://www.youtube.com/watch?v=W4b2EHmdvq4"
+          },
+          {
+            "title": "Yemen: Civilians flee as Saudi-led coalition pounds port of Hodeidah",
+            "url": "https://www.youtube.com/watch?v=CCKSRArWQSw"
+          }
+        ],
+        "note": "Search matches do not establish popularity or permission to reuse footage."
+      },
+      "blocker": "Script length outside target range"
+    },
+    "9936d1368619e214": {
+      "title": "Elon Musk joins 'Bring Jensen Back' campaign to reinstate the ex-Nvidia boss",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cry49plv8v3go?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T12:20:49+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-16T12:47:32.356630+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "9936d1368619e214",
+      "status": "HOLD",
+      "created_at": "2026-11-16T12:47:36.998428+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-16T12:49:02.026135+00:00",
+      "youtube_signal": {
+        "status": "discovery_only",
+        "examples": [
+          {
+            "title": "Nvidia Preparing to Oust CEO Jensen Huang: WSJ",
+            "url": "https://www.youtube.com/watch?v=2jwTRDvQtUo"
+          },
+          {
+            "title": "Jensen Huang resigned as Nvidia chief executive, and allies are campaigning for his return",
+            "url": "https://www.youtube.com/watch?v=iTjv3X6yk_k"
+          },
+          {
+            "title": "NVIDIA CEO TARGETED by CHINESE SPY? Russell Brand JAILED &amp; Trump’s Iran Claim | ENDstream Ep.38",
+            "url": "https://www.youtube.com/watch?v=tSq5hyJ0r3s"
+          }
+        ],
+        "note": "Search matches do not establish popularity or permission to reuse footage."
+      },
+      "blocker": "Need evidence from two distinct source domains; independence still needs review"
+    },
+    "6acb0083e97f714d": {
+      "title": "Trump heads to Asia with hopes of shifting the momentum after midterm setbacks hurt him at home - News4JAX",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPRjE5YTdPMnJkM0VIVUl5X0lVd184VXhFMTdKWThZeWdBTnZCSFNUcUdJZlM5OEEyUllmdEtZYzFQZ0ktRHdCbjNGRVlGUEV0RlZtVmgwU05oOHJUdmNDTHQ1LUZvQ21TQUw5M0pXdF95NzVZVlFDdGZJWXlwZ0lPdjlrbkNXaHlyR3N2aEVPTFQ3bzN2eGFqYm1tOFl1SDYtcmp2T3doeWRNUHRnY1VVZ0UyYlczQTBOVHZRSTV2d2lZejBNZmhpdndOYXZTVUM4ZUpYUWFVNTA?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-15T13:28:16+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T12:47:36.599218+00:00",
+      "id": "6acb0083e97f714d",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T12:47:37.009237+00:00",
+      "attempts": 0
+    },
+    "1ca49f720c85f289": {
+      "title": "Seattle to rename Jackson Park, citing former president’s forced removal of Native peoples - KOMO",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMivAJBVV95cUxNLWwtTnRtNEFwMjV0V0dEVGZFQzdmR25TNENReHZ1M1dnSk1pYXVMU0FwM0d3Ym5JbThaanMycjhMeVdCaU90eG9VY3RuQzByRUdURTluWDRUSDVvdmhnVWQ4MGRScE5ScXNfZWRYb1VRcVk3dGdVZWluZmFXTThrbE5rbURNWjVydl92ZDNJTDBMWUhrc09qdk5Pa1I3a2dhRVBUcnJaQjR0d0h5aGVnOXlXSFM2SzNoNXV6d1ZPdnU1anh4TkgwN1JlUDJraHQwUWNsdER4S1BqNlFZeXd1bEVXQTUwMnRUR196Q3ZuWDlDM1B1Ny1nQzhYd2dKSDRGQTBUNW9XaFJ5SXdodVNRVHM1MFFLYmRWQnF4cU10em9Oamt4ODZLWDQ5SU9GYXBZOUVvUDZhWERieXlh?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-15T22:07:19+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T12:47:36.616668+00:00",
+      "id": "1ca49f720c85f289",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T12:47:37.019472+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-16",
-    "youtube": 6,
-    "ai": 38,
-    "pixabay": 5
+    "youtube": 10,
+    "ai": 64,
+    "pixabay": 8
   },
   "content_cycle_index": 0,
   "content_batch": {
@@ -1318,22 +1477,20 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-16T12:29:12.984680+00:00",
+    "started_at": "2026-11-16T12:47:37.019727+00:00",
     "attempted_ids": [
-      "98b05cefbe0e3d1c",
-      "086cd7ab38725e97",
       "90013fc7b1b6bdc3",
-      "0aaf5f5a7d9c99de",
-      "ca7e3c0c496a8889",
-      "15860f5ee187cf77",
-      "5abd758d65b5fa5e",
-      "968d462433f4ef19",
-      "b371b61c2cc0b758"
+      "92c3e81b06d61ad7",
+      "4f1fad88bc739bb3",
+      "9936d1368619e214",
+      "98b05cefbe0e3d1c",
+      "5abd758d65b5fa5e"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "finished_at": "2026-11-16T12:33:20.534934+00:00",
-    "attempted": 9,
+    "pause_reason": "Gemini model gemini-3.5-flash-lite: Service HTTP 429; no paid fallback attempted",
+    "finished_at": "2026-11-16T12:50:28.333183+00:00",
+    "attempted": 6,
     "completed": 0
   }
 }
