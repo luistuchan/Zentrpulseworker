@@ -322,9 +322,9 @@
       "id": "03ebea88c0ac963c",
       "status": "HOLD",
       "created_at": "2026-11-16T02:18:44.171746+00:00",
-      "attempts": 1,
-      "source_pipeline_version": 1,
-      "last_attempt_at": "2026-11-16T02:18:44.195255+00:00",
+      "attempts": 2,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-16T11:59:10.823921+00:00",
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -343,7 +343,7 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. Service HTTP 403; no paid fallback attempted"
+      "blocker": "Editor rejected candidate: The prompt specifies content_type=news_update focusing on recent world developments or major actions involving the U.S. president, while the provided sources cover the DP World Tou"
     },
     "8b9d249448d5bc8e": {
       "title": "Japan should boost strategic autonomy regardless of U.S. politics: analyst - Japan Wire by Kyodo News",
@@ -373,9 +373,9 @@
       "id": "00effa213518cc61",
       "status": "HOLD",
       "created_at": "2026-11-16T02:18:44.175906+00:00",
-      "attempts": 1,
-      "source_pipeline_version": 1,
-      "last_attempt_at": "2026-11-16T02:19:09.966290+00:00",
+      "attempts": 2,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-16T11:59:42.278977+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
@@ -473,15 +473,16 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:48.554144+00:00",
       "id": "e0566f04476019e4",
-      "status": "HOLD",
+      "status": "WAITING",
       "created_at": "2026-11-16T08:45:49.246334+00:00",
-      "attempts": 1,
-      "source_pipeline_version": 1,
-      "last_attempt_at": "2026-11-16T08:45:49.305499+00:00",
+      "attempts": 2,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-16T12:00:42.322801+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "Gemini model gemini-2.5-flash: Service HTTP 404; no paid fallback attempted"
+      "script_pipeline_version": 1,
+      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
     },
     "a598287b8ec3135f": {
       "title": "Martine Moise, wife of assassinated ex-Haitian leader, registers for presidential election - BBC",
@@ -614,15 +615,14 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:48.322873+00:00",
       "id": "98b05cefbe0e3d1c",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T08:45:49.293524+00:00",
       "attempts": 1,
-      "source_pipeline_version": 1,
+      "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-16T08:46:18.724723+00:00",
       "youtube_signal": {
         "status": "not_checked"
-      },
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      }
     },
     "086cd7ab38725e97": {
       "title": "Economics of the World Cup | Ticket Prices, Revenue, Costs, & Social Impact - Britannica",
@@ -635,7 +635,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:48.329924+00:00",
       "id": "086cd7ab38725e97",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T08:45:49.299420+00:00",
       "attempts": 1,
       "source_pipeline_version": 1,
@@ -643,7 +643,7 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "Gemini model gemini-2.5-flash: Service HTTP 404; no paid fallback attempted"
+      "script_pipeline_version": 1
     },
     "1c01c7cbdf8cd474": {
       "title": "Israel warns US of alleged Iranian plot to attack President Trump - Fox News",
@@ -671,15 +671,14 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:12.794220+00:00",
       "id": "90013fc7b1b6bdc3",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T10:36:13.768077+00:00",
       "attempts": 1,
-      "source_pipeline_version": 1,
+      "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-16T10:36:13.886022+00:00",
       "youtube_signal": {
         "status": "not_checked"
-      },
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      }
     },
     "de632a0cc6ccbd09": {
       "title": "Carney says US tariffs could turn Canada's carmakers to China - Yahoo News Singapore",
@@ -812,7 +811,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:12.808245+00:00",
       "id": "710b1ac83d1df7c7",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T10:36:13.855991+00:00",
       "attempts": 1,
       "source_pipeline_version": 1,
@@ -820,7 +819,7 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "Gemini model gemini-2.5-flash: Service HTTP 404; no paid fallback attempted"
+      "script_pipeline_version": 1
     },
     "0aaf5f5a7d9c99de": {
       "title": "RANKED: The Top Crude Oil Producers in 2025 – Visual Capitalist – See How Countries Rank - EnergyNow.com",
@@ -833,15 +832,14 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:12.820893+00:00",
       "id": "0aaf5f5a7d9c99de",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T10:36:13.866888+00:00",
       "attempts": 1,
-      "source_pipeline_version": 1,
+      "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-16T10:37:10.721213+00:00",
       "youtube_signal": {
         "status": "not_checked"
-      },
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. Service HTTP 403; no paid fallback attempted"
+      }
     },
     "e6e9e1c5fb72136e": {
       "title": "China confirms Xi-Trump-Putin historic summit. What will be on the agenda? - CNBC",
@@ -884,7 +882,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:48.986382+00:00",
       "id": "ca7e3c0c496a8889",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T11:48:49.878881+00:00",
       "attempts": 1,
       "source_pipeline_version": 1,
@@ -892,7 +890,7 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "Invalid claims or scene count"
+      "script_pipeline_version": 1
     },
     "b60052a301fe6ad1": {
       "title": "Host Hotels & Resorts President James Risoleo Sells 25% Of Holding - Simply Wall St",
@@ -1010,15 +1008,14 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:48.853262+00:00",
       "id": "15860f5ee187cf77",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T11:48:49.955754+00:00",
       "attempts": 1,
-      "source_pipeline_version": 1,
+      "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-16T11:49:19.550163+00:00",
       "youtube_signal": {
         "status": "not_checked"
-      },
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      }
     },
     "5abd758d65b5fa5e": {
       "title": "Alberta Anticipates Immediate Oil Sands Investment After Royalty Changes - News and Statistics - IndexBox",
@@ -1031,7 +1028,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:48.865843+00:00",
       "id": "5abd758d65b5fa5e",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T11:48:49.968684+00:00",
       "attempts": 1,
       "source_pipeline_version": 1,
@@ -1039,7 +1036,7 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "Invalid claims or scene count"
+      "script_pipeline_version": 1
     },
     "bcb92c282da95057": {
       "title": "Trump heads to Asia to meet with Xi and Putin amid Nvidia fallout - KGOU",
@@ -1070,12 +1067,102 @@
       "status": "QUEUED",
       "created_at": "2026-11-16T11:48:49.993385+00:00",
       "attempts": 0
+    },
+    "968d462433f4ef19": {
+      "title": "The law must contribute to realizing the country's major development goals. - Vietnam.vn",
+      "category": "world_news",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxNQTZtSGxyOWhXMF9LSzRsdkkyZDdwNDE5MmpZOGU1Rm9SVUloak1sckZ6a1FCdlVtbF9FVDVnUUlHNjdQSHV5TTNqMWN0VVZDOHdIYm9heWxwVFFuVnVFUEl2bVRINGx2c3BzcWlWRlVaa2lpR2o0VFFhclB6OFVjVVp3dGpodGNZTjhwQ0VocjFtSTF2N1kwX2haclJ6dm5EamtJTkx3OA?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T11:50:39+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T11:59:10.076272+00:00",
+      "id": "968d462433f4ef19",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T11:59:10.789148+00:00",
+      "attempts": 0
+    },
+    "fe0d2e797c3d9181": {
+      "title": "China says Xi, Trump, Putin to discuss 'world peace' - France 24",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimwFBVV95cUxPTnB5VlJnTXJJbXhieWF3UklHRjVRS1RzZXZBOWwycE1PdW16ZWZkUjUyM2d5UzNrZUgtZ1M3MVduaFJDQTZnTXhtbFprTGh5VUJucTRnQ1I0MTJnSWRDWnZyeFhoQXNhM01oRjd4RkFYLTB4MFJMang5RzBINGtCeFZnMGNqSm5MUjM0S2lRUmJ2eU9sZFZXdFpYOA?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T09:33:21+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T11:59:10.664357+00:00",
+      "id": "fe0d2e797c3d9181",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T11:59:10.794411+00:00",
+      "attempts": 0
+    },
+    "b371b61c2cc0b758": {
+      "title": "Formula 1 News: Travis Auld resigns as Australian GP CEO - AutoRacing1.com",
+      "category": "world_news",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimgFBVV95cUxPb1lqQ19aQ2lLRWtaY3JrTnFHNGN4SmJQQk1FMFluWjVudFQ4TFVDLTRzdzVSTl8yVnMxN2c4VkFVTE5OTEZqc2RnZVE4WUlPaEFQYzNpTkVQa0tVTDdVT3cyQ25acVA3QVIxWnZJTTJubDdIc2xjNXhpeEdtNlMyRWQ2TVhzbGw1Y0lRRlRuX2pNWk1LU3NEUWtR?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T10:46:34+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T11:59:10.013407+00:00",
+      "id": "b371b61c2cc0b758",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T11:59:10.800646+00:00",
+      "attempts": 0
+    },
+    "dc65dbf3c33e2286": {
+      "title": "New World Development Plans Massive 11-for-1 Rights Issue at 81.5% Discount; Shares Plunge as Controlling Shareholder Commits to Full Subscription - BigGo Finance",
+      "category": "world_news",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMidkFVX3lxTFBKRjk5Yl96WG5Rd3M3NVdtTVVDZXdhMVVDTHVQeGk5d2VSUnRqOVltc3hQRUJjdkpSZGlwcFpYR1gtbGlrY05GMklrTEtIbHhQMk5pN3hQMFV5ZFliZko3eTluUnB0bGRSUHItMkxUTURudU5HaHc?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T03:25:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T11:59:10.037119+00:00",
+      "id": "dc65dbf3c33e2286",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T11:59:10.813016+00:00",
+      "attempts": 0
+    },
+    "3cc57786ba1c78a0": {
+      "title": "Flight disruptions expected to last into Monday - NPR",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilwFBVV95cUxNb3NUTk91cjEzeDNZVkFyYURUZ2VvUEVvWEc4aTRnQjZ4a1BuenhsSGtZWFRHcXVXZW5LYy1RLTFsZ1cza19ZT2hYamtxcHhTWjJVa09LNzFtYUJpMXdWQzN0RTRYaVZ3Y09qZDZ6a25TX1BLc3YwdWtTQzJDamhUQ04tSFoyNUZTSTBlcU9lSlJZWmZnUWE0?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T01:19:28+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T11:59:10.623573+00:00",
+      "id": "3cc57786ba1c78a0",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T11:59:10.817951+00:00",
+      "attempts": 0
+    },
+    "97c9606443a09325": {
+      "title": "Spy scandal and midterm defeat heat up Trump's Asia visit - Yahoo",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxNbkplU3lySmFTam5KVXJtOWhNTFVqU25JTDgzU2lOeHRlZ1ZzYUtIZzRvUVpmNkFQQ0dEMFMzc25IN08xR0FuZWVEbW5valloWVV5X0YzeE9CYnZiODBPQ2lfVUstUWtMU0RkM29xWEtUckg1X2xUNmxoUU1SR1c3UzlyaG02SnB3ZnhMQlE5X1QyT05pMkE?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T08:08:42+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-16T11:59:10.640311+00:00",
+      "id": "97c9606443a09325",
+      "status": "QUEUED",
+      "created_at": "2026-11-16T11:59:10.823798+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-16",
     "youtube": 3,
-    "ai": 6
+    "ai": 9
   },
   "content_cycle_index": 0,
   "content_batch": {
@@ -1085,5 +1172,5 @@
     "media_hashes": [],
     "source_urls": []
   },
-  "production_runs": 4
+  "production_runs": 5
 }
