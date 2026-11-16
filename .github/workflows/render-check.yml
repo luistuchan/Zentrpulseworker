@@ -1,0 +1,34 @@
+name: Pulse Renderer Check
+on:
+  push:
+    paths:
+      - '.github/workflows/render-check.yml'
+      - 'tests/render_smoke.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  renderer:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg fonts-dejavu-core
+      - name: Test worker
+        run: python -m unittest discover -s tests -v
+      - name: Render and verify synthetic MP4
+        env:
+          RENDER_TEST_OUTPUT: renderer-diagnostic
+        run: python tests/render_smoke.py
+      - name: Save playable renderer diagnostic
+        uses: actions/upload-artifact@v4
+        with:
+          name: synthetic-renderer-diagnostic
+          path: renderer-diagnostic/
+          if-no-files-found: error
