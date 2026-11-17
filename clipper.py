@@ -41,7 +41,7 @@ def discover(budget, *, api):
             continue
         for item in results.get('items', []):
             video_id = item.get('id', {}).get('videoId', '')
-            if re.fullmatch(r'[\\w-]{11}', video_id):
+            if re.fullmatch(r'[\w-]{11}', video_id):
                 candidates_by_id.setdefault(video_id, bucket)
     if not candidates_by_id or not budget.take('youtube'):
         return []
@@ -61,7 +61,7 @@ def discover(budget, *, api):
         video_id = video.get('id', '')
         bucket = candidates_by_id.get(video_id, 'creators')
         title = snippet.get('title', video_id)
-        if re.search(r'\\b(?:GTA\\s*(?:6|VI)|Grand Theft Auto\\s*(?:6|VI))\\b', title, re.I):
+        if re.search(r'\b(?:GTA\s*(?:6|VI)|Grand Theft Auto\s*(?:6|VI))\b', title, re.I):
             continue
         if bucket_counts.get(bucket, 0) >= 3:
             continue
