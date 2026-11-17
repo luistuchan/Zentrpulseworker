@@ -1388,8 +1388,10 @@ def main():
                 errors.append('clipper: ' + str(exc))
             warnings += ['Discovery unavailable: ' + x for x in errors]
             atomic_json(OUTPUT / 'research' / 'leads.json', leads)
-            # Discovery candidates are held until readable corroborating URLs exist.
-            queue += leads
+            # Viral discovery is unrestricted, but unlicensed leads are research only.
+            # They remain in output/research/leads.json for rights review and must not
+            # consume production attempts or Gemini quota.
+            queue += [lead for lead in leads if not lead.get('discovery_only')]
         for item in queue:
             if not isinstance(item, dict) or not isinstance(item.get('title'), str):
                 warnings.append('Skipped malformed queue entry')
@@ -1433,9 +1435,9 @@ def main():
             raise Hold('TARGET_SECONDS must be between 20 and 70')
         try:
             batch = produce_batch(state, budget, target)
-            if state.get('last_run', {}).get('category_deferred'):
-                warnings.append('Stalled category deferred: ' + state['last_run']['category_deferred']
-                                + '; the next scheduled run can try another content type.')
+            if state.get('last_run', {}).get('categories_deferred'):
+                warnings.append('Stalled categories tried: ' +
+                                ', '.join(state['last_run']['categories_deferred']))
             elif batch and batch['completed'] < BATCH_SIZE:
                 warnings.append(f'Current rotation: {batch["category"]} needs {BATCH_SIZE} distinct review-ready videos.')
         finally:
