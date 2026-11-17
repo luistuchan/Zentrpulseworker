@@ -90,6 +90,10 @@ def source_media(entry, folder, api):
             and cached.get('sha256') == api.digest(path)):
         return path, cached
     if p.hostname in ('www.youtube.com', 'youtube.com', 'youtu.be'):
+        # Do not trust stale partial files from a previous failed download.
+        for stale in folder.glob('source.*'):
+            if stale.suffix in ('.mp4', '.webm', '.mkv', '.part', '.ytdl', '.json') and stale.is_file():
+                stale.unlink()
         # Prefer a combined MP4, then allow separately served video/audio
         # streams when FFmpeg can merge them. Do not bypass restricted access.
         formats = (
