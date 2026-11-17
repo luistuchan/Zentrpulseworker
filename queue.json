@@ -2895,6 +2895,99 @@
       "status": "QUEUED",
       "created_at": "2026-11-17T07:03:39.628462+00:00",
       "attempts": 0
+    },
+    "ba9b90c1c4da6123": {
+      "title": "Will Netanyahu lose this time?",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/opinions/2026/11/17/will-netanyahu-finally-lose?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T06:53:23+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T07:11:51.330442+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "ba9b90c1c4da6123",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:12:07.586133+00:00",
+      "attempts": 0
+    },
+    "d3dca8ca3a61add1": {
+      "title": "$NVIDIA (NVDA.US)$ US President Donald Trump said on Monday (Nov 16) he would not mind seeing Jensen Huang reinstated as the chief executive officer of Nvidia. According to the Financial Times, Huang is considering a comeback as Nvidia’s CEO and - Moomoo",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMirgFBVV95cUxNZE5QRzdMSzAzeERKU0JyTGJVVkVlejgyY1czN3JJRkRvalpTelVlMFg5eGNEaHA4b2wteGdIc09KRzBHODdBcFlyemxyX25CS3ByamZwZy1KNlZYT0ppdDRqVTg1T1laei13LTBsWGxrSFNFUjNDakd1c0Z2SzFOWnQwSUlUaEpPb1VsY2tPS3ZFd1hNd1J0SG1MX3RkSTZ2X2dxQ1pOR2ZGVzFsLUE?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T07:05:50+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T07:12:07.091024+00:00",
+      "id": "d3dca8ca3a61add1",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:12:07.633586+00:00",
+      "attempts": 0
+    },
+    "96b5a95a3916c4f7": {
+      "title": "New York teen reunites with cat missing after building collapse",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/videos/cm3wgeqnppljo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T04:36:45+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T07:11:51.049391+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "96b5a95a3916c4f7",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:12:07.647657+00:00",
+      "attempts": 0
+    },
+    "ee9607d44bc08a5b": {
+      "title": "Pope Leo rides in helicopter cockpit during Peru trip",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/videos/c6pw4rl00lrjo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-15T18:38:11+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T07:11:51.062299+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "ee9607d44bc08a5b",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:12:07.659825+00:00",
+      "attempts": 0
+    },
+    "11a2f7aaaf02626d": {
+      "title": "White House releases report of Trump's physical exam - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxONTNNMndHUGk0YzJvcjJwTzNEeGpEY1N2bWg3WjE0UXhVM1pCaXNfeVpOZE9qN0lnMVQ0UGhPZmhpZFFUS2V5ZXk2SkxVZE9pX0tKYTlBYVpJaUVPdFpXSVlaZnI1VHpNQW5ra0NEZUx6cUpEc0pOM0hzODdmdm9aNUplSFE4TzJDRlNybHpYa3p0MU4tNzc4QUlqTnLSAaIBQVVfeXFMTXc4dE1CdVJlVFRRaTRNZ1FRY0dHYXlDWGl4c3J6RTZ2WHNXelk4UHlaSEJoUUlvbVNLRFQ0VzBtNDZnbmx6STI4OVZzUWxJTHVIMVh3LTJJUVdTNTlOc0N3VWJsOEJHM3VQQVhxbml1UTRaMklTRk9raVZxeHY3QzVLTUdiZDZuNFRRWHJHMlhldGg1MjR6Ul9MbnNZYkU1RFRn?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T14:52:04+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T07:12:07.285804+00:00",
+      "id": "11a2f7aaaf02626d",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:12:07.679917+00:00",
+      "attempts": 0
+    },
+    "0371eab9eeca710e": {
+      "title": "Trump signs executive orders that target birthright citizenship - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOMmpldXJRMWJDaXZGMG9abENCakEzV21xSElwN01UaHhFQS05NnhuMmwwdGx0MWh5UTFEZ0lJNWU0WmtzdzV6RmtBVWVfaTN4SWRNQURWWm5iUXRWbWdRZEY5WE5ZR0xaM3pSZzQyTXY0OFJKX3pyNFp6VDJyVVlGalhuLVUtUEtkSWtmTlBEOG43XzhIaGRVSS1neUtpcjFGNnJrbmtCR2F2d9IBrwFBVV95cUxOR1FqRmZROHAzLU9FS2VLTlJVeEdjTVVTNFh0S00xMXpLeTBTMWJ4dWVrWkQ3N1dGSXlWeFJfampjcDl0WDZ6RzIwbll1VHp3STRsdjBXZWJDbFVMcmJoek5OZGU0bl9QWGtsa1VtSEpLRDZacUdvbHduTnJNTXdaVkRZRTZXa0dMbTlzRjR6UFZQaWxKcEVkd0FyWFNPUUtxWllKazRUdEYyZ250dHA4?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T15:02:05+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T07:12:07.310778+00:00",
+      "id": "0371eab9eeca710e",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:12:07.702293+00:00",
+      "attempts": 0
     }
   },
   "budget": {
@@ -2903,7 +2996,7 @@
     "ai": 96,
     "pixabay": 18
   },
-  "content_cycle_index": 6,
+  "content_cycle_index": 0,
   "content_batch": {
     "category": "world_news",
     "completed": 0,
@@ -2913,15 +3006,18 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-17T07:03:39.629106+00:00",
-    "attempted_ids": [
-      "5deb7b577d432c84"
-    ],
+    "started_at": "2026-11-17T07:12:07.702819+00:00",
+    "attempted_ids": [],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "pause_reason": "AI request cap reached; job saved for next run",
-    "finished_at": "2026-11-17T07:03:40.157044+00:00",
-    "attempted": 1,
+    "categories_deferred": [
+      "world_news",
+      "president",
+      "true_events",
+      "music"
+    ],
+    "finished_at": "2026-11-17T07:12:07.708256+00:00",
+    "attempted": 0,
     "completed": 0
   },
   "telegram_deliveries": {
