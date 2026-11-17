@@ -1107,6 +1107,34 @@ def process(entry, budget, target):
     validate_plan(plan, sources, target)
     unavailable = [scene['id'] for scene in plan['scenes']
                    if scene['requires_exact_footage'] and scene['id'] not in entry.get('assets', {})]
+    if unavailable and not (folder / 'illustrative-replan-attempted.json').exists():
+        # One bounded second chance, not an infinite loop or a fabricated event.
+        # Rewrite the explanation using genuinely illustrative objects/processes;
+        # never label stock as actual footage of a person, game, film, or event.
+        atomic_json(folder / 'illustrative-replan-attempted.json',
+                    {'unavailable_scenes': unavailable, 'attempted_at': now()})
+        prompt = (SCRIPT_PROMPT + '\\nREPLAN: Actual footage for the listed scenes is unavailable. '
+                  'Preserve the evidenced factual claims, quotes, and independent sources. '
+                  'Change the story angle only if it can be HONESTLY illustrated using generic '
+                  'stock visuals of objects, places, environments or processes. '
+                  'Never depict a stock actor as the real subject; never pretend stock footage '
+                  'shows the described event. If actual footage is necessary, reject. '
+                  'Keep the scene count and spoken duration valid.\\n'
+                  + json.dumps({'entry': {'title': entry['title'],
+                                          'content_type': content_type},
+                                'target_seconds': target, 'unavailable_scenes': unavailable,
+                                'original_plan': plan, 'sources': sources}))
+        revised = ai(prompt, budget, response_schema=SCRIPT_SCHEMA)
+        validate_plan(revised, sources, target)
+        newly_unavailable = [scene['id'] for scene in revised['scenes']
+                             if scene['requires_exact_footage']
+                             and scene['id'] not in entry.get('assets', {})]
+        if not newly_unavailable:
+            plan = revised
+            atomic_json(plan_path, plan)
+            unavailable = []
+        else:
+            unavailable = newly_unavailable
     if unavailable:
         raise Hold('Automatic footage unavailable: exact local footage needed for ' + ', '.join(unavailable))
     critique_path = folder / 'critique.json'
