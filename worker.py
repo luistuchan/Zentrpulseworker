@@ -411,13 +411,29 @@ def corroborating_urls(title):
 
 
 class Budget:
-    """Persistent per-UTC-day request caps, including failed calls/retries."""
+    """Persistent local-day request caps, including failed calls/retries.
+
+    Legacy queue snapshots used UTC date labels. On migration, a snapshot
+    whose last production run attempted zero jobs may contain old UTC counts
+    erroneously attributed to the new Pacific day. Reset that snapshot once.
+    Keep nonempty current-day attempts conservatively counted.
+    """
     def __init__(self, state):
         self.state = state
-        # Match Gemini's midnight Pacific daily-quota reset, including daylight saving time.
-        day = datetime.now(ZoneInfo('America/Los_Angeles')).strftime('%Y-%m-%d')
-        if state.get('budget', {}).get('day') != day:
-            state['budget'] = {'day': day}
+        pacific = ZoneInfo('America/Los_Angeles')
+        day = datetime.now(pacific).strftime('%Y-%m-%d')
+        old = state.get('budget', {})
+        self.day_reset = old.get('day') != day
+        legacy = old.get('reset_timezone') != 'America/Los_Angeles'
+        last_run = state.get('last_run') or {}
+        legacy_empty_run = legacy and last_run.get('attempted') == 0
+        if self.day_reset or legacy_empty_run:
+            state['budget'] = {'day': day, 'reset_timezone': 'America/Los_Angeles'}
+            self.day_reset = True
+        else:
+            # Add the migration marker without changing counters when usage
+            # might belong to this same Pacific day.
+            state.setdefault('budget', {})['reset_timezone'] = 'America/Los_Angeles'
         self.counts = state['budget']
         self.run_counts = Counter()
 
@@ -1454,6 +1470,16 @@ def main():
         reopen_source_holds(state)
         reopen_script_holds(state)
         reopen_stock_holds(state)
+        if budget.day_reset:
+            # Do not carry yesterday's daily-quota WAITING state forever.
+            # A fresh run can determine whether the upstream provider is ready.
+            for job in state['jobs'].values():
+                blocker = str(job.get('blocker', '')).lower()
+                if job.get('status') == 'WAITING' and any(
+                    term in blocker for term in ('ai request cap', 'daily ', 'quota', 'http 429')
+                ):
+                    job['status'] = 'QUEUED'
+                    job.pop('blocker', None)
         for job in state['jobs'].values():
             if (job.get('content_type') == 'news_update'
                     and job['status'] in ('QUEUED', 'WAITING', 'PRODUCING')

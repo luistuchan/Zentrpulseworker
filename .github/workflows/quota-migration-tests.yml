@@ -1,0 +1,25 @@
+name: Pulse Quota Migration Tests
+on:
+  push:
+    branches: [fix/legacy-quota-migration-52]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  migration-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install tests and FFmpeg
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg fonts-dejavu-core
+          python -m pip install -r requirements.txt
+      - name: Check source syntax
+        run: python -m compileall -q worker.py clipper.py tests
+      - name: Run full test suite
+        run: python -m unittest discover -s tests -v

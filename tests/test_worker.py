@@ -95,7 +95,9 @@ class WorkerTests(unittest.TestCase):
                 # 08:30 UTC is 12:30 a.m. Pacific: new daily allowance.
                 clock.now.side_effect = lambda tz: datetime(2026, 11, 17, 8, 30, tzinfo=timezone.utc).astimezone(tz)
                 after = w.Budget(state)
-                self.assertEqual(after.counts, {'day': '2026-11-17'})
+                self.assertEqual(after.counts['day'], '2026-11-17')
+                self.assertEqual(after.counts['reset_timezone'], 'America/Los_Angeles')
+                self.assertEqual(after.counts.get('ai', 0), 0)
 
     def test_stalled_rotation_moves_to_next_available_category(self):
         state = {'jobs': {
@@ -112,6 +114,36 @@ class WorkerTests(unittest.TestCase):
         self.assertIn('true_events', w.CONTENT_CYCLE)
         self.assertIn('president', w.CONTENT_CYCLE)
         self.assertEqual(w.BATCH_SIZE, 3)
+
+    def test_migrate_legacy_utc_exhaustion_after_zero_attempts(self):
+        with tempfile.TemporaryDirectory() as temp, patch.object(w, 'STATE', Path(temp)):
+            state = {'schema_version': 3, 'jobs': {}, 'budget': {
+                'day': '2026-11-17', 'ai': 96, 'youtube': 18, 'pixabay': 18},
+                'last_run': {'attempted': 0}}
+            with patch.object(w, 'datetime') as clock:
+                clock.now.side_effect = lambda tz: datetime(
+                    2026, 11, 17, 9, 2, tzinfo=timezone.utc).astimezone(tz)
+                fresh = w.Budget(state)
+                self.assertTrue(fresh.day_reset)
+                self.assertEqual(fresh.counts.get('ai', 0), 0)
+                self.assertEqual(fresh.counts['day'], '2026-11-17')
+                self.assertEqual(fresh.counts['reset_timezone'], 'America/Los_Angeles')
+                fresh.take('ai')
+                subsequent = w.Budget(state)
+                self.assertFalse(subsequent.day_reset)
+                self.assertEqual(subsequent.counts['ai'], 1)
+
+    def test_legacy_nonempty_run_preserves_counts_until_reset(self):
+        with tempfile.TemporaryDirectory() as temp, patch.object(w, 'STATE', Path(temp)):
+            state = {'schema_version': 3, 'jobs': {}, 'budget': {
+                'day': '2026-11-17', 'ai': 6},
+                'last_run': {'attempted': 2}}
+            with patch.object(w, 'datetime') as clock:
+                clock.now.side_effect = lambda tz: datetime(
+                    2026, 11, 17, 9, 2, tzinfo=timezone.utc).astimezone(tz)
+                budget = w.Budget(state)
+            self.assertFalse(budget.day_reset)
+            self.assertEqual(budget.counts['ai'], 6)
 
     def test_ai_disabled_without_free_confirmation(self):
         with patch.dict(os.environ, {'FREE_TIER_CONFIRMED': '0'}):
