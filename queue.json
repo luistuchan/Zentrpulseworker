@@ -2988,6 +2988,54 @@
       "status": "QUEUED",
       "created_at": "2026-11-17T07:12:07.702293+00:00",
       "attempts": 0
+    },
+    "f25d99279f453ac3": {
+      "title": "The new French malaise",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/opinions/2026/11/17/the-new-french-malaise?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T07:03:12+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T07:15:19.740942+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "f25d99279f453ac3",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:15:37.037532+00:00",
+      "attempts": 0
+    },
+    "752a417766663caf": {
+      "title": "China is hosting the world's leaders in its AI wonderland. Here's what they won't see",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cm3eg3v9jkk8o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T23:07:20+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T07:15:19.615027+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "752a417766663caf",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:15:37.062188+00:00",
+      "attempts": 0
+    },
+    "bf0efb054e89a6f0": {
+      "title": "Taking Korea's toughest exam from behind bars",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cmewvxg855yno?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T23:09:49+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T07:15:19.629265+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "bf0efb054e89a6f0",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:15:37.076016+00:00",
+      "attempts": 0
     }
   },
   "budget": {
@@ -2996,7 +3044,7 @@
     "ai": 96,
     "pixabay": 18
   },
-  "content_cycle_index": 0,
+  "content_cycle_index": 6,
   "content_batch": {
     "category": "world_news",
     "completed": 0,
@@ -3006,17 +3054,15 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-17T07:12:07.702819+00:00",
+    "started_at": "2026-11-17T07:15:37.076713+00:00",
     "attempted_ids": [],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "categories_deferred": [
       "world_news",
-      "president",
-      "true_events",
-      "music"
+      "science"
     ],
-    "finished_at": "2026-11-17T07:12:07.708256+00:00",
+    "finished_at": "2026-11-17T07:15:37.082066+00:00",
     "attempted": 0,
     "completed": 0
   },
