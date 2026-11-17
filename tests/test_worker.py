@@ -95,7 +95,9 @@ class WorkerTests(unittest.TestCase):
                 # 08:30 UTC is 12:30 a.m. Pacific: new daily allowance.
                 clock.now.side_effect = lambda tz: datetime(2026, 11, 17, 8, 30, tzinfo=timezone.utc).astimezone(tz)
                 after = w.Budget(state)
-                self.assertEqual(after.counts, {'day': '2026-11-17'})
+                self.assertEqual(after.counts['day'], '2026-11-17')
+                self.assertEqual(after.counts['reset_timezone'], 'America/Los_Angeles')
+                self.assertEqual(after.counts.get('ai', 0), 0)
 
     def test_stalled_rotation_moves_to_next_available_category(self):
         state = {'jobs': {
