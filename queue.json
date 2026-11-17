@@ -846,12 +846,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:11.208547+00:00",
       "id": "98b508551dbc799e",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T10:36:13.816540+00:00",
       "attempts": 1,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-17T23:10:59.500827+00:00",
-      "blocker": "No matching Pixabay footage for s02: 9 hits for 'cell culture'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 2
     },
     "5c2fc0b7929fbd7e": {
       "title": "Call of Duty enlists JAMBINAI to give its score a Korean touch - The Korea Times",
@@ -3964,6 +3964,99 @@
       "status": "QUEUED",
       "created_at": "2026-11-17T23:09:14.146180+00:00",
       "attempts": 0
+    },
+    "71b7e05913976f85": {
+      "title": "Nvidia reports bumper results as firm says it not reinstating Huang",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T23:03:39+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T23:15:35.956123+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "71b7e05913976f85",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T23:15:43.583078+00:00",
+      "attempts": 0
+    },
+    "f14ffcc0327f22cb": {
+      "title": "Trump says report of Iran bomb plot against D.C. is being taken ‘very seriously’ - Los Angeles Times",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiwwFBVV95cUxPeDhQLXlSMWVRdGEwZExDcmVFcTRLM0M2U3NFRXVfSzdUaVM1aEh6T0hkanhycW1WeUs5aXdkcGZnMTdIWVlMV3JXYzZOUlE4LWNnSm1MTDBzcVprMXZTTUhRWXV1R2dzZS14cWhDREpVX1hSUllTX2d6Mkpsd1ZMbHRxYXNJUjJUYkFhWENqcGYzZlMzTEN5c3VLZThnRHJweEpXdmJwME9ocGRid1ZFNnBlSUtsSTcwaS02U2trSmNMMkk?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T20:14:01+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T23:15:42.121532+00:00",
+      "id": "f14ffcc0327f22cb",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T23:15:43.630030+00:00",
+      "attempts": 0
+    },
+    "0d5c314a91b8a293": {
+      "title": "Thomas Markle charged over child sex abuse material in Philippines",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/ckg5ry8m49ggo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T22:44:15+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T23:15:35.990605+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "0d5c314a91b8a293",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T23:15:43.662817+00:00",
+      "attempts": 0
+    },
+    "a588be45b3788aca": {
+      "title": "Palestinian woman, 72, shot dead by Israeli settlers in West Bank, health ministry says",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cqrlg377638yo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T20:30:20+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T23:15:36.097169+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "a588be45b3788aca",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T23:15:43.702913+00:00",
+      "attempts": 0
+    },
+    "28a6e7383288c7f5": {
+      "title": "Army lays groundwork for death row executions if Trump gives approval - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMinwFBVV95cUxPSzRjb0xPbC1DMk1ERUthMlZSQjhrRG00bzFKOGs2YlFFU0xsa1ZhZElNa1pLWC00VWVtNDNDVGtOSHR6cUNERnpCVU1oUGZDYV9vUlc2SjJuRmo1elctMG14bEhESlQyV3E5cnpaa1BCRFN1NnhZYjFBdXlVdFdmRXNnbWdCRmRnOGRqdVgxZHpyY0V3b3Ric3hzcTl5bWfSAaQBQVVfeXFMUERMemxQT09LZ3BCVVRwbmZoT0ZTSVpWMzRmNk1KeUlRVVNweEtMRUtDRElxTERLeXF6Mm9yOTFVNk5aTDUxSC04YXQwWWhkRW53VzRZT3dybDZRV0FDSFBVU0xUV0VOQUFUZTBLb3VJM3RDNU1sRHhmV294ZG41VmtFcHMyVWtKOUJoUmcxTjVnR1N1WnMzNHg0bUVIbk45eXltVV8?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T04:11:50+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T23:15:42.605156+00:00",
+      "id": "28a6e7383288c7f5",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T23:15:43.752673+00:00",
+      "attempts": 0
+    },
+    "b60baa17f2727c6a": {
+      "title": "Trump poised to drop IRS suit, launch $1.7B 'weaponization' fund for allies: Sources - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimAFBVV95cUxPRUhwZmE4TUNkTTQ5SnlpZTJ1LW1zTE5XVTBSenlyM1oyQTRnUm9WRWpUU2tJUG9hUW1LbE44bVB5a095ejE0cWppcXJuV3dUaTRVYm9WUFdVMVl6YkpfcEdJYXBBOXhxN29jaFpGUlBJMk1YNmRYLUhKNjZNWnc0bC0xUFV2WHBiWmZKbmtvOEgtRXd0S1JSSNIBngFBVV95cUxOV29tam9yNkpwNlhjU2pGLVZrU29YQ25fZEpJdWg3V2RrS2xyNm4zdHUwYmhvRlpfVlJRdG9LNmVseXFYOHZXNnNFUTYzN3d1MkEwaHlMWE41d01wRHpHRUxscG5sMGpqUGdjbFA2d2RSYVg4bGtUVGs1SDBCRVVhN1U3ZEhLczg0cG1jd3A4LTRaYjlKcUNNczdFMWhCdw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T01:32:58+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T23:15:42.674340+00:00",
+      "id": "b60baa17f2727c6a",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T23:15:43.810026+00:00",
+      "attempts": 0
     }
   },
   "budget": {
@@ -3973,33 +4066,24 @@
     "ai": 96,
     "pixabay": 6
   },
-  "content_cycle_index": 3,
-  "content_batch": {
-    "category": "science",
-    "completed": 0,
-    "story_keys": [],
-    "media_hashes": [],
-    "source_urls": []
-  },
+  "content_cycle_index": 0,
+  "content_batch": null,
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-17T23:09:14.147359+00:00",
-    "attempted_ids": [
-      "a3752a6421556c74",
-      "3a44bdb665e0ff78",
-      "4203fb43629a358c",
-      "98b508551dbc799e",
-      "653ca9008bb7ba75",
-      "985b900a06bf20fe",
-      "6bbfe619c6dcfb0e",
-      "0b2a6a0ba6591c31",
-      "25e5a2423422557d"
-    ],
+    "started_at": "2026-11-17T23:15:43.811279+00:00",
+    "attempted_ids": [],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "pause_reason": "AI request cap reached; job saved for next run",
-    "finished_at": "2026-11-17T23:14:31.205145+00:00",
-    "attempted": 9,
+    "categories_deferred": [
+      "science",
+      "movies",
+      "world_news",
+      "president",
+      "true_events",
+      "music"
+    ],
+    "finished_at": "2026-11-17T23:15:43.823245+00:00",
+    "attempted": 0,
     "completed": 0
   },
   "telegram_deliveries": {
