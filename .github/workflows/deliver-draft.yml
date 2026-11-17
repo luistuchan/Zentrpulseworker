@@ -63,8 +63,8 @@ jobs:
           path: output/
       - name: Send playable MP4 through Telegram review bot
         env:
-          TELEGRAM_BOT_TOKEN: ${{ secrets.PULSE_TELEGRAM_BOT_TOKEN || secrets.TELEGRAM_BOT_TOKEN }}
-          TELEGRAM_CHAT_ID: ${{ secrets.PULSE_TELEGRAM_CHAT_ID || secrets.TELEGRAM_CHAT_ID || vars.TELEGRAM_CHAT_ID }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.PULSE_TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.PULSE_TELEGRAM_CHAT_ID }}
         run: python telegram_delivery.py
       - name: Save authoritative queue state
         if: always()
