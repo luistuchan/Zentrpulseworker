@@ -29,7 +29,7 @@ def discover(budget, *, api):
         params = urllib.parse.urlencode({'key': key, 'part': 'snippet', 'type': 'video',
             'q': query[:120], 'videoLicense': 'creativeCommon', 'relevanceLanguage': 'en',
             'safeSearch': 'strict', 'order': 'viewCount', 'maxResults': 6,
-            'publishedAfter': (datetime.now(timezone.utc) - timedelta(days=7)).isoformat()})
+            'publishedAfter': (datetime.now(timezone.utc) - timedelta(days=30)).isoformat()})
         results = api.json_http('https://www.googleapis.com/youtube/v3/search?' + params, retries=0)
         for item in results.get('items', []):
             video_id = item.get('id', {}).get('videoId', '')
