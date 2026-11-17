@@ -1,4 +1,5 @@
 import copy
+from datetime import datetime, timezone
 import importlib.util
 import json
 import os
@@ -81,6 +82,20 @@ class WorkerTests(unittest.TestCase):
             self.assertTrue(budget.take('ai'))
             self.assertFalse(budget.take('ai'))
             self.assertEqual(w.load(Path(temp) / 'queue.json', {})['budget']['ai'], 2)
+
+    def test_budget_resets_at_pacific_midnight_not_utc(self):
+        with tempfile.TemporaryDirectory() as temp, patch.object(w, 'STATE', Path(temp)):
+            state = {'schema_version': 3, 'jobs': {}, 'budget': {'day': '2026-11-16', 'ai': 96}}
+            # UTC Nov 17 07:30 is still Nov 16 at 11:30 p.m. in Los Angeles.
+            with patch.object(w, 'datetime') as clock:
+                clock.now.return_value = datetime(2026, 11, 17, 7, 30, tzinfo=timezone.utc)
+                before = w.Budget(state)
+                self.assertEqual(before.counts['day'], '2026-11-16')
+                self.assertEqual(before.counts['ai'], 96)
+                # 08:30 UTC is 12:30 a.m. Pacific: new daily allowance.
+                clock.now.return_value = datetime(2026, 11, 17, 8, 30, tzinfo=timezone.utc)
+                after = w.Budget(state)
+                self.assertEqual(after.counts, {'day': '2026-11-17'})
 
     def test_ai_disabled_without_free_confirmation(self):
         with patch.dict(os.environ, {'FREE_TIER_CONFIRMED': '0'}):
