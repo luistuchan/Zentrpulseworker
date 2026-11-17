@@ -15,57 +15,75 @@ import urllib.parse
 
 
 def discover(budget, *, api):
+    """Discover viral leads broadly; only cleared material enters the render queue.
+
+    A YouTube search result is neither a reuse license nor proof of download access.
+    Non-CC clips remain visible in research for rights review rather than vanishing.
+    """
     key = os.getenv('YOUTUBE_API_KEY', '').strip()
     if not key:
         return []
     custom = os.getenv('CLIPPER_SEARCH_QUERY', '').strip()
-    searches = [('creators', custom or 'streamer interview funny moments highlights'),
+    searches = [('creators', custom or 'Kai Cenat IShowSpeed MrBeast streamer funny moments'),
                 ('animals', 'funny animals pets unexpected moments'),
-                ('entertainment_releases', 'new movie trailer music release announcement')]
+                ('entertainment_releases', 'viral creator reaction unexpected moment')]
     candidates_by_id = {}
     for bucket, query in searches:
         if not budget.take('youtube'):
             break
         params = urllib.parse.urlencode({'key': key, 'part': 'snippet', 'type': 'video',
-            'q': query[:120], 'videoLicense': 'creativeCommon', 'relevanceLanguage': 'en',
-            'safeSearch': 'strict', 'order': 'viewCount', 'maxResults': 6,
+            'q': query[:120], 'relevanceLanguage': 'en',
+            'safeSearch': 'strict', 'order': 'viewCount', 'maxResults': 8,
             'publishedAfter': (datetime.now(timezone.utc) - timedelta(days=30)).isoformat()})
-        results = api.json_http('https://www.googleapis.com/youtube/v3/search?' + params, retries=0)
+        try:
+            results = api.json_http('https://www.googleapis.com/youtube/v3/search?' + params, retries=0)
+        except api.Hold:
+            continue
         for item in results.get('items', []):
             video_id = item.get('id', {}).get('videoId', '')
             if re.fullmatch(r'[\w-]{11}', video_id):
                 candidates_by_id.setdefault(video_id, bucket)
-    candidates = [{'id': {'videoId': video_id}} for video_id in candidates_by_id]
-    if not candidates or not budget.take('youtube'):
+    if not candidates_by_id or not budget.take('youtube'):
         return []
-    params = urllib.parse.urlencode({'key': key, 'part': 'status,snippet',
-                                    'id': ','.join(x['id']['videoId'] for x in candidates)})
+    params = urllib.parse.urlencode({'key': key, 'part': 'status,snippet,statistics,contentDetails',
+                                    'id': ','.join(candidates_by_id)})
     videos = api.json_http('https://www.googleapis.com/youtube/v3/videos?' + params, retries=0).get('items', [])
-    leads = []
-    bucket_counts = {}
-    gta_selected = False
-    videos.sort(key=lambda video: video.get('snippet', {}).get('publishedAt', ''), reverse=True)
+    def score(video):
+        stats = video.get('statistics') or {}
+        views = int(stats.get('viewCount') or 0)
+        likes = int(stats.get('likeCount') or 0)
+        # Favor highly viewed clips with real engagement, not arbitrary search order.
+        return math.log1p(views) + .35 * math.log1p(likes)
+    videos.sort(key=score, reverse=True)
+    leads, bucket_counts = [], {}
     for video in videos:
-        if video.get('status', {}).get('license') != 'creativeCommon':
-            continue
-        snippet = video.get('snippet', {})
-        bucket = candidates_by_id.get(video['id'], 'creators')
-        title = snippet.get('title', video['id'])
+        snippet = video.get('snippet') or {}
+        video_id = video.get('id', '')
+        bucket = candidates_by_id.get(video_id, 'creators')
+        title = snippet.get('title', video_id)
         if re.search(r'\b(?:GTA\s*(?:6|VI)|Grand Theft Auto\s*(?:6|VI))\b', title, re.I):
-            continue  # GTA 6 coverage is paused by the user.
-        is_gta = bool(re.search(r'\bGTA\b|Grand Theft Auto', title, re.I))
-        if bucket_counts.get(bucket, 0) >= 2 or (is_gta and gta_selected):
+            continue
+        if bucket_counts.get(bucket, 0) >= 3:
             continue
         bucket_counts[bucket] = bucket_counts.get(bucket, 0) + 1
-        gta_selected = gta_selected or is_gta
-        url = 'https://www.youtube.com/watch?v=' + video['id']
-        leads.append({'title': 'Clip highlight: ' + snippet.get('title', video['id']),
-            'category': 'clipper', 'content_type': 'clipper', 'source_video_id': video['id'],
+        is_cc = (video.get('status') or {}).get('license') == 'creativeCommon'
+        url = 'https://www.youtube.com/watch?v=' + video_id
+        stats = video.get('statistics') or {}
+        media = {'source_url': url,
+                 'license': 'creativeCommon' if is_cc else 'standardYouTube',
+                 'license_checked_at': api.now(),
+                 'creator': snippet.get('channelTitle', ''),
+                 'rights_confirmed': False,
+                 'rights_note': ('YouTube API indicates Creative Commons; verify attribution and source rights'
+                                 if is_cc else 'Rights review required before downloading, editing or publishing')}
+        leads.append({'title': 'Clip highlight: ' + title,
+            'category': 'clipper', 'content_type': 'clipper', 'source_video_id': video_id,
             'discovery_bucket': bucket, 'release_candidate': bucket.endswith('_releases'),
-            'media': {'source_url': url, 'license': 'creativeCommon',
-                      'license_checked_at': api.now(), 'creator': snippet.get('channelTitle', ''),
-                      'rights_note': 'YouTube API reports Creative Commons; attribution and final rights require review'},
-            'discovered_at': api.now()})
+            'discovery_only': not is_cc,
+            'viral_score': round(score(video), 2),
+            'views': int(stats.get('viewCount') or 0),
+            'likes': int(stats.get('likeCount') or 0),
+            'media': media, 'discovered_at': api.now()})
     return leads
 
 
@@ -423,8 +441,13 @@ def process(entry, target, *, api):
         'shots': shots, 'quality': quality, 'selection': 'sentence-bounded highlight heuristic; no virality claim',
         'publishing': 'disabled; no upload endpoint is called'}
     api.atomic_json(output.parent / 'review.json', review)
-    (output.parent / 'caption.txt').write_text(entry['title']+'\n\nSource: '+attribution_url+'\nCreator: '
-        +attribution['creator']+'\nLicense: '+attribution['license']+'\nEdited excerpt; review context and captions.\n')
+    # Credit the actual originating channel without fabricating a social handle.
+    creator_credit = attribution['creator'].strip() or 'Original creator (verify before posting)'
+    credit_caption = (entry['title'] + '\n\nCredit: ' + creator_credit +
+                      '\nOriginal video: ' + attribution_url +
+                      '\nEdited highlight with reframing and captions.\n'
+                      'Verify creator permission and any third-party music before publishing.\n')
+    (output.parent / 'caption.txt').write_text(credit_caption)
     api.run(['ffmpeg','-v','error','-y','-i',str(output),'-vf','thumbnail,scale=270:480',
              '-frames:v','1',str(output.parent / 'preview.jpg')])
     entry.update(status='REVIEW_REQUIRED', video_sha256=review['video_sha256'],

@@ -18,6 +18,7 @@ import ipaddress
 import json
 import os
 from pathlib import Path
+from zoneinfo import ZoneInfo
 import re
 import shutil
 import socket
@@ -413,7 +414,8 @@ class Budget:
     """Persistent per-UTC-day request caps, including failed calls/retries."""
     def __init__(self, state):
         self.state = state
-        day = datetime.now(timezone.utc).strftime('%Y-%m-%d')
+        # Match Gemini's midnight Pacific daily-quota reset, including daylight saving time.
+        day = datetime.now(ZoneInfo('America/Los_Angeles')).strftime('%Y-%m-%d')
         if state.get('budget', {}).get('day') != day:
             state['budget'] = {'day': day}
         self.counts = state['budget']
@@ -1105,6 +1107,34 @@ def process(entry, budget, target):
     validate_plan(plan, sources, target)
     unavailable = [scene['id'] for scene in plan['scenes']
                    if scene['requires_exact_footage'] and scene['id'] not in entry.get('assets', {})]
+    if unavailable and not (folder / 'illustrative-replan-attempted.json').exists():
+        # One bounded second chance, not an infinite loop or a fabricated event.
+        # Rewrite the explanation using genuinely illustrative objects/processes;
+        # never label stock as actual footage of a person, game, film, or event.
+        atomic_json(folder / 'illustrative-replan-attempted.json',
+                    {'unavailable_scenes': unavailable, 'attempted_at': now()})
+        prompt = (SCRIPT_PROMPT + '\\nREPLAN: Actual footage for the listed scenes is unavailable. '
+                  'Preserve the evidenced factual claims, quotes, and independent sources. '
+                  'Change the story angle only if it can be HONESTLY illustrated using generic '
+                  'stock visuals of objects, places, environments or processes. '
+                  'Never depict a stock actor as the real subject; never pretend stock footage '
+                  'shows the described event. If actual footage is necessary, reject. '
+                  'Keep the scene count and spoken duration valid.\\n'
+                  + json.dumps({'entry': {'title': entry['title'],
+                                          'content_type': content_type},
+                                'target_seconds': target, 'unavailable_scenes': unavailable,
+                                'original_plan': plan, 'sources': sources}))
+        revised = ai(prompt, budget, response_schema=SCRIPT_SCHEMA)
+        validate_plan(revised, sources, target)
+        newly_unavailable = [scene['id'] for scene in revised['scenes']
+                             if scene['requires_exact_footage']
+                             and scene['id'] not in entry.get('assets', {})]
+        if not newly_unavailable:
+            plan = revised
+            atomic_json(plan_path, plan)
+            unavailable = []
+        else:
+            unavailable = newly_unavailable
     if unavailable:
         raise Hold('Automatic footage unavailable: exact local footage needed for ' + ', '.join(unavailable))
     critique_path = folder / 'critique.json'
@@ -1195,21 +1225,21 @@ def story_key(job):
     return normalized(job.get('story_id') or job['title'].rsplit(' - ', 1)[0])
 
 
-def current_batch(state):
+def current_batch(state, excluded=()):
     batch = state.get('content_batch')
-    if batch and batch.get('completed', 0) < BATCH_SIZE:
+    if batch and batch.get('completed', 0) < BATCH_SIZE and batch.get('category') not in excluded:
         return batch
     cursor = state.get('content_cycle_index', 0) % len(CONTENT_CYCLE)
     eligible = {job_category(j) for j in state['jobs'].values()
                 if j['status'] in ('QUEUED', 'PRODUCING', 'WAITING')}
     for offset in range(len(CONTENT_CYCLE)):
         index = (cursor + offset) % len(CONTENT_CYCLE)
-        if CONTENT_CYCLE[index] in eligible:
+        if CONTENT_CYCLE[index] in eligible and CONTENT_CYCLE[index] not in excluded:
             category = CONTENT_CYCLE[index]
             state['content_cycle_index'] = index
             break
     else:
-        if 'custom' not in eligible:
+        if 'custom' not in eligible or 'custom' in excluded:
             return None
         category = 'custom'
     batch = {'category': category, 'completed': 0, 'story_keys': [], 'media_hashes': [], 'source_urls': []}
@@ -1258,8 +1288,8 @@ def produce_batch(state, budget, target):
     # no usable candidate. Never break an in-progress three-video rotation.
     deferred = set()
     for category_hop in range(len(CONTENT_CYCLE) + 1):
-        batch = current_batch(state)
-        if not batch or batch['category'] in deferred:
+        batch = current_batch(state, excluded=deferred)
+        if not batch:
             break
         if (len(completed) >= max_ready or len(attempted) >= max_attempts
                 or time.monotonic() >= deadline or state['last_run'].get('pause_reason')):
@@ -1288,7 +1318,8 @@ def produce_batch(state, budget, target):
                 atomic_json(STATE / 'queue.json', state)
                 stop = False
                 try:
-                    if job.get('content_type') != 'clipper' and not job.get('youtube_signal'):
+                    if (os.getenv('ENABLE_YOUTUBE_SIGNALS') == '1' and
+                            job.get('content_type') != 'clipper' and not job.get('youtube_signal')):
                         try:
                             job['youtube_signal'] = youtube_signal(job['title'], budget)
                         except Hold as exc:
@@ -1386,8 +1417,23 @@ def main():
                 errors.append('clipper: ' + str(exc))
             warnings += ['Discovery unavailable: ' + x for x in errors]
             atomic_json(OUTPUT / 'research' / 'leads.json', leads)
-            # Discovery candidates are held until readable corroborating URLs exist.
-            queue += leads
+            viral = [x for x in leads if x.get('content_type') == 'clipper']
+            if viral:
+                lines = ['# Viral clip discovery', '',
+                         'Discovery does not grant reuse rights. Drafts require permission and your review.', '']
+                for item in sorted(viral, key=lambda x: x.get('viral_score', 0), reverse=True):
+                    media = item.get('media', {})
+                    lines += ['- **' + str(item['title']).replace('\\n', ' ')[:150] + '**',
+                              '  - ' + str(media.get('source_url', '')),
+                              '  - Creator: ' + str(media.get('creator', '')),
+                              '  - Views: ' + str(item.get('views', 0)),
+                              '  - Status: ' + ('Rights check needed' if item.get('discovery_only')
+                                              else 'Creative Commons indicated; confirm before posting')]
+                (OUTPUT / 'research' / 'viral-leads.md').write_text('\\n'.join(lines) + '\\n')
+            # Viral discovery is unrestricted, but unlicensed leads are research only.
+            # They remain in output/research/leads.json for rights review and must not
+            # consume production attempts or Gemini quota.
+            queue += [lead for lead in leads if not lead.get('discovery_only')]
         for item in queue:
             if not isinstance(item, dict) or not isinstance(item.get('title'), str):
                 warnings.append('Skipped malformed queue entry')
@@ -1431,9 +1477,9 @@ def main():
             raise Hold('TARGET_SECONDS must be between 20 and 70')
         try:
             batch = produce_batch(state, budget, target)
-            if state.get('last_run', {}).get('category_deferred'):
-                warnings.append('Stalled category deferred: ' + state['last_run']['category_deferred']
-                                + '; the next scheduled run can try another content type.')
+            if state.get('last_run', {}).get('categories_deferred'):
+                warnings.append('Stalled categories tried: ' +
+                                ', '.join(state['last_run']['categories_deferred']))
             elif batch and batch['completed'] < BATCH_SIZE:
                 warnings.append(f'Current rotation: {batch["category"]} needs {BATCH_SIZE} distinct review-ready videos.')
         finally:

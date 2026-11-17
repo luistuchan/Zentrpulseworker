@@ -1,4 +1,5 @@
 import copy
+from datetime import datetime, timezone
 import importlib.util
 import json
 import os
@@ -81,6 +82,36 @@ class WorkerTests(unittest.TestCase):
             self.assertTrue(budget.take('ai'))
             self.assertFalse(budget.take('ai'))
             self.assertEqual(w.load(Path(temp) / 'queue.json', {})['budget']['ai'], 2)
+
+    def test_budget_resets_at_pacific_midnight_not_utc(self):
+        with tempfile.TemporaryDirectory() as temp, patch.object(w, 'STATE', Path(temp)):
+            state = {'schema_version': 3, 'jobs': {}, 'budget': {'day': '2026-11-16', 'ai': 96}}
+            # UTC Nov 17 07:30 is still Nov 16 at 11:30 p.m. in Los Angeles.
+            with patch.object(w, 'datetime') as clock:
+                clock.now.side_effect = lambda tz: datetime(2026, 11, 17, 7, 30, tzinfo=timezone.utc).astimezone(tz)
+                before = w.Budget(state)
+                self.assertEqual(before.counts['day'], '2026-11-16')
+                self.assertEqual(before.counts['ai'], 96)
+                # 08:30 UTC is 12:30 a.m. Pacific: new daily allowance.
+                clock.now.side_effect = lambda tz: datetime(2026, 11, 17, 8, 30, tzinfo=timezone.utc).astimezone(tz)
+                after = w.Budget(state)
+                self.assertEqual(after.counts, {'day': '2026-11-17'})
+
+    def test_stalled_rotation_moves_to_next_available_category(self):
+        state = {'jobs': {
+            'news': {'id': 'news', 'title': 'Fresh report', 'category': 'world_news', 'status': 'QUEUED'},
+            'clip': {'id': 'clip', 'title': 'Creator moment', 'category': 'clipper', 'status': 'QUEUED'}},
+            'content_cycle_index': 0, 'content_batch': {'category': 'world_news', 'completed': 0,
+            'story_keys': [], 'media_hashes': [], 'source_urls': []}}
+        batch = w.current_batch(state, excluded={'world_news'})
+        self.assertEqual(batch['category'], 'clipper')
+
+    def test_other_topics_remain_in_rotation(self):
+        self.assertIn('clipper', w.CONTENT_CYCLE)
+        self.assertIn('science', w.CONTENT_CYCLE)
+        self.assertIn('true_events', w.CONTENT_CYCLE)
+        self.assertIn('president', w.CONTENT_CYCLE)
+        self.assertEqual(w.BATCH_SIZE, 3)
 
     def test_ai_disabled_without_free_confirmation(self):
         with patch.dict(os.environ, {'FREE_TIER_CONFIRMED': '0'}):
