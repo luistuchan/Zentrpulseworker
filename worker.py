@@ -1233,76 +1233,86 @@ def produce_batch(state, budget, target):
         trusted_lead = job.get('discovery_quality') == 'publisher_feed_v1'
         return (-progress, -int(has_plan), -int(trusted_lead), job.get('last_attempt_at', job.get('created_at', '')))
     pending = sorted(state['jobs'].values(), key=priority)
+    # Try other categories in this same run when the current category has
+    # no usable candidate. Never break an in-progress three-video rotation.
+    deferred = set()
+    for category_hop in range(len(CONTENT_CYCLE) + 1):
+        batch = current_batch(state)
+        if not batch or batch['category'] in deferred:
+            break
+        if (len(completed) >= max_ready or len(attempted) >= max_attempts
+                or time.monotonic() >= deadline or state['last_run'].get('pause_reason')):
+            break
+        completed_before = len(completed)
     for job in pending:
-        if (not batch or batch['completed'] >= BATCH_SIZE or len(completed) >= max_ready
-                or len(attempted) >= max_attempts or time.monotonic() >= deadline):
-            break
-        if job_category(job) != batch['category'] or job['status'] not in ('QUEUED', 'PRODUCING', 'WAITING'):
-            continue
-        key = story_key(job)
-        if key in batch['story_keys']:
-            job.update(status='HOLD', blocker='A different story/source video is required for this three-video batch')
-            continue
-        attempted.append(job['id'])
-        job.update(status='PRODUCING', attempts=job.get('attempts', 0) + 1,
-                   source_pipeline_version=SOURCE_PIPELINE_VERSION, last_attempt_at=now())
-        atomic_json(STATE / 'queue.json', state)
-        stop = False
-        try:
-            if job.get('content_type') != 'clipper' and not job.get('youtube_signal'):
-                try:
-                    job['youtube_signal'] = youtube_signal(job['title'], budget)
-                except Hold as exc:
-                    job['youtube_signal'] = {'status': 'unavailable', 'reason': str(exc)}
-            job['_excluded_media_hashes'] = batch.get('media_hashes', [])
-            job['_excluded_story_sources'] = batch.get('source_urls', [])
-            process(job, budget, target)
-            if job['status'] == 'REVIEW_REQUIRED':
-                folder = OUTPUT / job['id']
-                review = load(folder / 'review.json', {})
-                if not (folder / 'video.mp4').is_file() or review.get('video_sha256') != digest(folder / 'video.mp4'):
-                    raise Hold('Completion record has no matching review-ready MP4')
-                completed.append(job['id'])
-                batch['completed'] += 1
-                batch['story_keys'].append(key)
-                batch.setdefault('source_urls', []).extend(job.get('source_story_urls', []))
-                if job.get('source_media_sha256'):
-                    batch['media_hashes'].append(job['source_media_sha256'])
-                if batch['completed'] == BATCH_SIZE:
-                    state['content_cycle_index'] = (state.get('content_cycle_index', 0) + 1) % len(CONTENT_CYCLE)
-        except Wait as exc:
-            job.update(status='WAITING', blocker=str(exc))
-            # Temporary 503/TTS outages affect this candidate, not every other
-            # eligible story. Respect persistent API quota/rate-limit failures.
-            reason = str(exc).lower()
-            stop = ('ai request cap' in reason or 'http 429' in reason
-                    or 'quota' in reason or 'daily ' in reason)
-        except Hold as exc:
-            job.update(status='HOLD', blocker=str(exc))
-            stop = (str(exc).startswith(('Gemini model ', 'GEMINI_API_KEY missing',
-                                         'Confirm the API project is free-tier')))
-        except Exception:
-            job.update(status='FAILED', blocker='Unexpected worker error; inspect inputs and run tests. Secrets omitted.')
-        finally:
-            job.pop('_excluded_media_hashes', None)
-            job.pop('_excluded_story_sources', None)
-            job.pop('_used_stock', None)
+            if (not batch or batch['completed'] >= BATCH_SIZE or len(completed) >= max_ready
+                    or len(attempted) >= max_attempts or time.monotonic() >= deadline):
+                break
+            if job_category(job) != batch['category'] or job['status'] not in ('QUEUED', 'PRODUCING', 'WAITING'):
+                continue
+            key = story_key(job)
+            if key in batch['story_keys']:
+                job.update(status='HOLD', blocker='A different story/source video is required for this three-video batch')
+                continue
+            attempted.append(job['id'])
+            job.update(status='PRODUCING', attempts=job.get('attempts', 0) + 1,
+                       source_pipeline_version=SOURCE_PIPELINE_VERSION, last_attempt_at=now())
             atomic_json(STATE / 'queue.json', state)
-        if stop:
-            state['last_run']['pause_reason'] = job['blocker']
+            stop = False
+            try:
+                if job.get('content_type') != 'clipper' and not job.get('youtube_signal'):
+                    try:
+                        job['youtube_signal'] = youtube_signal(job['title'], budget)
+                    except Hold as exc:
+                        job['youtube_signal'] = {'status': 'unavailable', 'reason': str(exc)}
+                job['_excluded_media_hashes'] = batch.get('media_hashes', [])
+                job['_excluded_story_sources'] = batch.get('source_urls', [])
+                process(job, budget, target)
+                if job['status'] == 'REVIEW_REQUIRED':
+                    folder = OUTPUT / job['id']
+                    review = load(folder / 'review.json', {})
+                    if not (folder / 'video.mp4').is_file() or review.get('video_sha256') != digest(folder / 'video.mp4'):
+                        raise Hold('Completion record has no matching review-ready MP4')
+                    completed.append(job['id'])
+                    batch['completed'] += 1
+                    batch['story_keys'].append(key)
+                    batch.setdefault('source_urls', []).extend(job.get('source_story_urls', []))
+                    if job.get('source_media_sha256'):
+                        batch['media_hashes'].append(job['source_media_sha256'])
+                    if batch['completed'] == BATCH_SIZE:
+                        state['content_cycle_index'] = (state.get('content_cycle_index', 0) + 1) % len(CONTENT_CYCLE)
+            except Wait as exc:
+                job.update(status='WAITING', blocker=str(exc))
+                # Temporary 503/TTS outages affect this candidate, not every other
+                # eligible story. Respect persistent API quota/rate-limit failures.
+                reason = str(exc).lower()
+                stop = ('ai request cap' in reason or 'http 429' in reason
+                        or 'quota' in reason or 'daily ' in reason)
+            except Hold as exc:
+                job.update(status='HOLD', blocker=str(exc))
+                stop = (str(exc).startswith(('Gemini model ', 'GEMINI_API_KEY missing',
+                                             'Confirm the API project is free-tier')))
+            except Exception:
+                job.update(status='FAILED', blocker='Unexpected worker error; inspect inputs and run tests. Secrets omitted.')
+            finally:
+                job.pop('_excluded_media_hashes', None)
+                job.pop('_excluded_story_sources', None)
+                job.pop('_used_stock', None)
+                atomic_json(STATE / 'queue.json', state)
+            if stop:
+                state['last_run']['pause_reason'] = job['blocker']
+                break
+
+        # A working category keeps its three-story batch across runs.
+        if (batch['completed'] > 0 or len(completed) > completed_before
+                or state['last_run'].get('pause_reason')):
             break
-    # A zero-output category must not monopolize future scheduled runs.
-    # Keep the three-video rotation intact once a category has made progress.
-    if batch and not completed and batch.get('completed', 0) == 0 and attempted:
-        active = [j for j in state['jobs'].values()
-                  if job_category(j) == batch['category'] and
-                  j['status'] in ('QUEUED', 'PRODUCING', 'WAITING')]
-        if not active or len(attempted) >= max_attempts or state['last_run'].get('pause_reason'):
-            previous = batch['category']
-            state['content_cycle_index'] = (state.get('content_cycle_index', 0) + 1) % len(CONTENT_CYCLE)
-            state['content_batch'] = None
-            state['last_run']['category_deferred'] = previous
-            state['last_run']['category_defer_reason'] = 'No review-ready MP4; retry this category on a later rotation'
+        # No video from this category: try the next eligible category now,
+        # but do not exhaust time/attempt budgets or retry a category twice.
+        deferred.add(batch['category'])
+        state['last_run'].setdefault('categories_deferred', []).append(batch['category'])
+        state['content_cycle_index'] = (state.get('content_cycle_index', 0) + 1) % len(CONTENT_CYCLE)
+        state['content_batch'] = None
     state['last_run']['finished_at'] = now()
     state['last_run']['attempted'] = len(attempted)
     state['last_run']['completed'] = len(completed)
