@@ -662,7 +662,7 @@ def duration(path):
 async def speech(text, path, voice):
     try:
         import edge_tts
-        await edge_tts.Communicate(text, voice).save(str(path))
+        await edge_tts.Communicate(text, voice, rate='+8%', pitch='+0Hz').save(str(path))
     except Exception:
         raise Wait('Free narration service unavailable; supply local audio or retry later') from None
 
@@ -672,7 +672,7 @@ def narration(scene, folder, entry):
     meta_path = folder / (scene['id'] + '.audio.json')
     supplied = entry.get('audio', {}).get(scene['id'])
     key = hashlib.sha256(json.dumps({'text': scene['narration'],
-        'voice': os.getenv('TTS_VOICE', 'en-US-AriaNeural'), 'supplied': supplied,
+        'voice': os.getenv('TTS_VOICE', 'en-US-AndrewNeural'), 'supplied': supplied,
         'source_hash': digest(local_file(supplied)) if supplied else None}, sort_keys=True).encode()).hexdigest()
     cached = load(meta_path, {})
     if path.exists() and cached.get('key') != key:
@@ -682,7 +682,7 @@ def narration(scene, folder, entry):
         run(['ffmpeg', '-v', 'error', '-y', '-i', str(original), '-vn', '-ar', '48000', '-ac', '1', str(path)])
     elif not path.exists():
         temp = path.with_name(scene['id'] + '.partial.mp3')
-        asyncio.run(speech(scene['narration'], temp, os.getenv('TTS_VOICE', 'en-US-AriaNeural')))
+        asyncio.run(speech(scene['narration'], temp, os.getenv('TTS_VOICE', 'en-US-AndrewNeural')))
         duration(temp)
         temp.replace(path)
     seconds = duration(path)
@@ -940,7 +940,7 @@ def render(plan, entry, folder, budget, target):
                                               'audio': entry.get('audio', {}),
                                               'audio_sha256': digest(local_file(entry['audio'][scene['id']]))
                                               if entry.get('audio', {}).get(scene['id']) else None,
-                                              'voice': os.getenv('TTS_VOICE', 'en-US-AriaNeural')}, sort_keys=True).encode()).hexdigest()
+                                              'voice': os.getenv('TTS_VOICE', 'en-US-AndrewNeural')}, sort_keys=True).encode()).hexdigest()
         prior = load(meta_path, {})
         if out.exists() and prior.get('scene_key') == scene_key and prior.get('render_sha256') == digest(out):
             parts.append(out)
@@ -979,6 +979,22 @@ def render(plan, entry, folder, budget, target):
         parts.append(out)
         total += seconds
         asset_log.append(metadata)
+    # Reject static/repeated-source edits before making a review-ready MP4.
+    if os.getenv('ZENTR_VISUAL_QUALITY_GATE', '1') == '1':
+        scene_count = len(plan['scenes'])
+        identities = []
+        for asset in asset_log:
+            identities.append(str(asset.get('sha256') or
+                                  (str(asset.get('provider', '')) + ':' +
+                                   str(asset.get('id', asset.get('path', ''))))))
+        distinct = len(set(identities))
+        required = min(4, scene_count)
+        if scene_count < 4 or distinct < required:
+            raise Hold(f'Visual quality gate: {distinct} unique footage sources for '
+                       f'{scene_count} scenes; require at least {max(4, required)}. '
+                       'Reject repeated-source video rather than delivering it.')
+        if any(duration(part) > 7.0 for part in parts):
+            raise Hold('Visual quality gate: a shot exceeds seven seconds; shorten the scene.')
     concat = folder / 'concat.txt'
     concat.write_text(''.join("file '" + str(p) + "'\n" for p in parts))
     result = OUTPUT / entry['id'] / 'video.mp4'
