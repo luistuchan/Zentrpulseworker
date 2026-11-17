@@ -1974,11 +1974,11 @@
       "discovered_at": "2026-11-17T01:38:08.332665+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "5deb7b577d432c84",
-      "status": "HOLD",
+      "status": "WAITING",
       "created_at": "2026-11-17T01:38:15.716715+00:00",
-      "attempts": 2,
+      "attempts": 3,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T06:52:19.791537+00:00",
+      "last_attempt_at": "2026-11-17T07:03:39.634168+00:00",
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -1997,7 +1997,8 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'drone defense radar', 9 hits for 'drone defense'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 2,
+      "blocker": "AI request cap reached; job saved for next run"
     },
     "55e1683ddaecffb6": {
       "title": "When will we see Robert Pattinson as Bond in cinemas?",
@@ -2786,6 +2787,114 @@
       "status": "QUEUED",
       "created_at": "2026-11-17T06:51:40.487529+00:00",
       "attempts": 0
+    },
+    "b0b682953d000349": {
+      "title": "Leonid meteor shower 2026: When and where to see it from where you live",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/17/leonid-meteor-shower-2026-when-and-where-to-see-it-from-where-you-live?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T05:42:03+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T07:03:31.181894+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "b0b682953d000349",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:03:39.472594+00:00",
+      "attempts": 0
+    },
+    "197a4f4a0fdf63cc": {
+      "title": "Russian oligarch paid for parts of Donald Trump Jr.'s wedding celebration, report says - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxQaGhCVjRNYjM2MFZrOGdTaHRYNGM4QVo0NTlFU1FWVzhCaTlPeWg4SUxNaVdFS28wVlExUnRaSUx4bzZYT3NMUGJ0X1FUczdVczJXR3N4QnZka0oxQTVGdXhoQ2pQTmluc2kwZTlZc19kbFVMeXp0S0EtUHVtV290WDdPT0lmcEJhVkJLZjNNTWw5MVZrcmozMXJzTlF6eUpfdXfSAacBQVVfeXFMUFo3OVc4dXJYQ3g0Qy1zV2RHbFdwU0FKMGl0bWJja0NoQU5sY1QwQ3FqOGcxRTZoT0swVE9yeTMxc2FPdkJzRDV0Z0JFbUNBZTZlSzAzdEJaQmc5VjhPcEg4bC1lekJtUmVoNGtPVlhDTGtLRmtiWGFrM2pCdVlsT2h4d256emx3dm5UcVRXRFVXdXZPeE5TcjYwLXNxY3ZlVjhPaGk3cDA?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T16:47:29+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T07:03:39.433335+00:00",
+      "id": "197a4f4a0fdf63cc",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:03:39.503231+00:00",
+      "attempts": 0
+    },
+    "ef26c613bd2e216a": {
+      "title": "OpenAI sued by California over Hugging Face attack",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c6wy4xv2mxglo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T23:12:24+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T07:03:30.760118+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "ef26c613bd2e216a",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:03:39.517160+00:00",
+      "attempts": 0
+    },
+    "f43177846893c02a": {
+      "title": "Vance says he will decide 'sometime next year' about 2028 US presidential run",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cwkgr9m41engo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T03:07:23+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T07:03:30.820486+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "f43177846893c02a",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:03:39.536610+00:00",
+      "attempts": 0
+    },
+    "29672f52ba101f07": {
+      "title": "The Dark Heaven Ending Explained: The Shocking Truth Behind the Seven-Year Curse and the Real Killer (Spoilers) - Vocal",
+      "category": "true_events",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMizwFBVV95cUxPZ0FCUWxvbUhmN2NBMWQyR0dtWUhYSkNsNElYMEhxNFhhd0s5RXZBUUVucDRxTmZWRlhVQUdmaGNfalBkMXRBazdjYTBoUjN0WDQ5MTBBMlhDV0gzUWpWb3lPeTFGUHNYWDBBTXVUUzBUOXUxT1JzNkp4N3NYd0ZJT2hzaFp2UWRwVjdiSllhZVlsUjVUT1JyNHBjQTdwNldkaUoyMmp4V3pHQmxVUkVFSlQ4SnpiSVZ2bmdiQ0F5ZUhuTXlpQ3B4RUNsQlF4RjQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 1,
+      "discovered_at": "2026-11-17T07:03:36.487477+00:00",
+      "id": "29672f52ba101f07",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:03:39.566112+00:00",
+      "attempts": 0
+    },
+    "8b9587d3b1af2ce3": {
+      "title": "Trump signs executive order renaming Lake Ontario to 'Lake America' - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMipAFBVV95cUxPQlBlQmpWSlZmeUdKc1o1OE1oZVZPZ29BamlFN09JQ2ZRakNVaHhBOXdvLXhNUVdnNlRpeGZFSDZGZVk1dUFTa24tVEk5WjJwcExib2EwU0pVQWtPYW9YVTA0azhlanFrcUNUWmY5R241SS1oclpjUk40MGNNY1p0RDJoWUdtR0kzNEtXV0lpLXhBM05Fb3k2VzZVXzE5VEZybEZlYdIBqgFBVV95cUxOTjFSRmJucGJvQVZtXzRRZkEyeFZpNEcxcnd6a1FYU0JWYnNFS0NkdW5DX20xdFdXbzRicS1seGJ4c3Rlc25iM3hWYlBsMHdNMmFLaW5IelBsc1M2dlYxd1M1TWJSZUNGcGNBY0VsYVgzaGs4djVSUXZndUZlZzJhbFFfYjdkNFF1SEdlSmZBSjlxLUFpeGhzZllmd2Nic0lETjFsY1l1aXk0QQ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T15:25:15+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T07:03:38.988074+00:00",
+      "id": "8b9587d3b1af2ce3",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:03:39.595471+00:00",
+      "attempts": 0
+    },
+    "47cd332219d305a1": {
+      "title": "Pope Leo responds to Trump's criticism, saying he has 'no fear' of US administration - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNRmpmY3Q3U1BDOEpKbzFlVnJyZzVKYW1IUVd2V19PcjJQSzJvTlFQalFtR1hqa0JpamJ1Q2ZRUDJYUFR2WE9UX3hsdnpncFhQVktzcVZNRnpfTVBfeVJ0SERWOGdjenZVUVBzWmhkTjFTVXlFcmlrQjZUMmEyTlNhX2NPelh1TnZhU0pEZmEzYzkzOHBMaVdXYnpDc2lseGhiOElnU2xCenQ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T15:27:38+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T07:03:39.025215+00:00",
+      "id": "47cd332219d305a1",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:03:39.628462+00:00",
+      "attempts": 0
     }
   },
   "budget": {
@@ -2804,19 +2913,15 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-17T06:51:40.488273+00:00",
+    "started_at": "2026-11-17T07:03:39.629106+00:00",
     "attempted_ids": [
-      "ad2e5099df43ef4b",
-      "b371b61c2cc0b758",
-      "5deb7b577d432c84",
-      "e0566f04476019e4",
-      "e097c1a76db13338"
+      "5deb7b577d432c84"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "pause_reason": "AI request cap reached; job saved for next run",
-    "finished_at": "2026-11-17T06:53:43.287510+00:00",
-    "attempted": 5,
+    "finished_at": "2026-11-17T07:03:40.157044+00:00",
+    "attempted": 1,
     "completed": 0
   },
   "telegram_deliveries": {
