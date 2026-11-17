@@ -1886,5 +1886,14 @@
     "finished_at": "2026-11-16T23:46:10.448996+00:00",
     "attempted": 0,
     "completed": 0
+  },
+  "telegram_deliveries": {
+    "2d869bc60f3da658c9197b934c45dfddb3c797a7bc940732029e92f431cf90f2": {
+      "status": "DELIVERED",
+      "video_sha256": "854171270e638c8a9dda9c74e3057807669212cfca40caef991a7aafa2022d2d",
+      "started_at": "2026-11-17T01:11:32.398661+00:00",
+      "message_id": 27,
+      "completed_at": "2026-11-17T01:11:35.243858+00:00"
+    }
   }
 }
