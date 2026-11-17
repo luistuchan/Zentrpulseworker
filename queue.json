@@ -3129,6 +3129,99 @@
       "status": "QUEUED",
       "created_at": "2026-11-17T07:18:21.841848+00:00",
       "attempts": 0
+    },
+    "94af6a81030bed03": {
+      "title": "Gunfire erupts in occupied West Bank settler attack",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/video/newsfeed/2026/11/17/gunfire-erupts-in-occupied-west-bank-settler-attack?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T04:00:08+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T07:20:04.233790+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "94af6a81030bed03",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:20:17.873964+00:00",
+      "attempts": 0
+    },
+    "245c9efac1b97e6f": {
+      "title": "Trump admin replaces slavery memorial at President's House in Philadelphia after court win - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMirgFBVV95cUxOWTZVSlpXWTFrX1J3NlRjYjJLSFlKbVFwbU1FS0RzSEZYbld6THJYRzZQN24wZXNobW9WdFlBTHh3Z1BqWjlscnBuUlU3QTJfbW5FZnlnd2k4cmpLNl9xX1p0bEE4ZDh4dlI1d2ZGdFZPRlNhSDc3ODdpd2NjZ3BHZVN6bU5SeG9DYTF6OUFtdzM2MVRWYk1XWmx1c29KaHFycjgyd1VjeU1EeEZwX0HSAbMBQVVfeXFMTmhuekZJSlZ4Sk1EUXNYXzlFRmtBZGJ2ZGNwWGxvMWMxZTBmZklUZS1EOXNVeFRlRGlGRFNIaGZtdE9iZVBjLXVXVjNWdW1lYUZCLVhoVkZXbFpCU0tRU3llWnlIY0ZpVDI0NmVfQi1iQzBjM1pWX0hycjdlS2VsMnpVLWZpRzdwN0t5TmJlSkd3Vmt4Y2JHQVp5YWx6QVpBME1YR2dTV3V6OGFBWUZxOVdNWGs?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T20:45:51+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T07:20:17.466438+00:00",
+      "id": "245c9efac1b97e6f",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:20:17.916449+00:00",
+      "attempts": 0
+    },
+    "945959f365b0f73a": {
+      "title": "Robert Pattinson: How the Twilight star became 007",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c574290jvk8wo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T15:02:41+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T07:20:03.979712+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "945959f365b0f73a",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:20:17.934152+00:00",
+      "attempts": 0
+    },
+    "6a6cf8852305851e": {
+      "title": "Tankers hit in Strait of Hormuz as drone raises alarm at Iraq gas field",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/17/tankers-hit-in-strait-of-hormuz-as-drone-raises-alarm-at-iraq-gas-field?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T03:12:54+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T07:20:04.259176+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "6a6cf8852305851e",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:20:17.959955+00:00",
+      "attempts": 0
+    },
+    "a2b86e50e38339cd": {
+      "title": "Trump's image to appear on limited-edition passports for America's 250th - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxNNWg3c1pNR0p3XzBqUUVvRmxER1d5b1dIV0QxTHVtRVJPTndfX2ZVXzdDeThDU3lBOVUzWFBwaDI4TUFJeDFPbVlwMFdpUS14OEttRkVOTGxRNHFKdE9qaktpN3h5S0QyYmNIZC03bDdYdnU1YXNFNUJDY01aYjM1UmYyODBBMFdwZVIxWXVvNWtoU3hjc3BHMzNnZWd3VzE5bndF0gGoAUFVX3lxTE5OZm40dDdtMDFUOFJtcm1qcXEyVVF6ZWhUTDl1R1lEWXh5cU51UndZVVJTUDJJX3h4U2FFN3BxbzlyVnotdFMxaUNQUG5TSkdLR0FxWkZWeC1fNjB6RktQNHR6dUJxOHNFeGduS245MVdnLWJaNVN1b1dPcnRqRkd5RmtQT1lMNk9FYTdnZUpmWG5UUHkxejlMX1FSeEo4OGtDUHM4dFZoVA?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T15:27:23+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T07:20:17.731173+00:00",
+      "id": "a2b86e50e38339cd",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:20:17.998281+00:00",
+      "attempts": 0
+    },
+    "2d1d702c495b8606": {
+      "title": "DOJ announces $1.7B 'Anti-Weaponization Fund' as part of Trump IRS lawsuit settlement - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMikgFBVV95cUxPR2xIOWQzVk9YNXYzWFVuWlMtR2N4LVMzaEN2TzlzdVpEeGRlc29QZnk5M0FzRnhwMGlRNmpUY3hqdmN3NU82bElvZjBWTXhkUUZTaGpyT2p1NHZfQml6Tkw4YWZCZU5QRXU4eFNDbXFIMXQ4cjhMWWQ5NmZ3NzBaVVc3R1pseF9uc3lhakx5N1dEd9IBlwFBVV95cUxNdXJEaXgxSWtFN3hWbURJQjFaUDlkVURpc2NWQjQzOGtuaU1ZVVQxcTdHYmZYOFdlbkVoZk9XZ2x0SlJDSmxkcm5SY3VkQVZWUmpXdHBYZVpfUlNHUXlsLXB3UGRvcWRGNGRLSWZDeGg3WUZ0U1ZvQ2hVdUdmM1Bqd3BDTTVoMW1remVpNThZci1sVUZPTE04?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T15:19:13+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T07:20:17.773773+00:00",
+      "id": "2d1d702c495b8606",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:20:18.039493+00:00",
+      "attempts": 0
     }
   },
   "budget": {
@@ -3137,7 +3230,7 @@
     "ai": 96,
     "pixabay": 18
   },
-  "content_cycle_index": 0,
+  "content_cycle_index": 6,
   "content_batch": {
     "category": "world_news",
     "completed": 0,
@@ -3147,17 +3240,15 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-17T07:18:21.842830+00:00",
+    "started_at": "2026-11-17T07:20:18.040426+00:00",
     "attempted_ids": [],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "categories_deferred": [
       "world_news",
-      "president",
-      "true_events",
-      "music"
+      "science"
     ],
-    "finished_at": "2026-11-17T07:18:21.853740+00:00",
+    "finished_at": "2026-11-17T07:20:18.048302+00:00",
     "attempted": 0,
     "completed": 0
   },
