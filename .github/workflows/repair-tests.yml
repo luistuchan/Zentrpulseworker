@@ -1,0 +1,29 @@
+name: ZENTR Pulse Repair Tests
+
+on:
+  push:
+    branches:
+      - fix/pacific-budget-reset-51
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install test dependencies
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y ffmpeg fonts-dejavu-core
+          python -m pip install -r requirements.txt
+      - name: Validate Python syntax
+        run: python -m compileall -q worker.py clipper.py recover_clips.py tests
+      - name: Run complete unit and render smoke test suite
+        run: python -m unittest discover -s tests -v
