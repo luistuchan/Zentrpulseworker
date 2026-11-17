@@ -97,6 +97,22 @@ class WorkerTests(unittest.TestCase):
                 after = w.Budget(state)
                 self.assertEqual(after.counts, {'day': '2026-11-17'})
 
+    def test_stalled_rotation_moves_to_next_available_category(self):
+        state = {'jobs': {
+            'news': {'id': 'news', 'title': 'Fresh report', 'category': 'world_news', 'status': 'QUEUED'},
+            'clip': {'id': 'clip', 'title': 'Creator moment', 'category': 'clipper', 'status': 'QUEUED'}},
+            'content_cycle_index': 0, 'content_batch': {'category': 'world_news', 'completed': 0,
+            'story_keys': [], 'media_hashes': [], 'source_urls': []}}
+        batch = w.current_batch(state, excluded={'world_news'})
+        self.assertEqual(batch['category'], 'clipper')
+
+    def test_other_topics_remain_in_rotation(self):
+        self.assertIn('clipper', w.CONTENT_CYCLE)
+        self.assertIn('science', w.CONTENT_CYCLE)
+        self.assertIn('true_events', w.CONTENT_CYCLE)
+        self.assertIn('president', w.CONTENT_CYCLE)
+        self.assertEqual(w.BATCH_SIZE, 3)
+
     def test_ai_disabled_without_free_confirmation(self):
         with patch.dict(os.environ, {'FREE_TIER_CONFIRMED': '0'}):
             with self.assertRaises(w.Hold):
