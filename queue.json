@@ -44,9 +44,9 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T06:30:42.829350+00:00",
       "id": "eaad4f96e7f14af7",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-14T06:30:43.879985+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -65,7 +65,9 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "source_pipeline_version": 1
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T05:29:59.130915+00:00",
+      "blocker": "Editor rejected candidate: The provided candidate data contains only one relevant source about the podcast (bioengineer.org, with the second source being about a regional skills blueprint from manchester.ac."
     },
     "d1681e7170342a68": {
       "title": "Zebrafish Could Advance Autism Drug Discovery - Technology Networks",
@@ -77,9 +79,9 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T06:30:42.832130+00:00",
       "id": "d1681e7170342a68",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-14T06:30:43.880314+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -90,7 +92,9 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "source_pipeline_version": 1
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T05:30:47.194697+00:00",
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 0. Google News article decoding unavailable; retry later"
     },
     "9f0e6db268e93a0c": {
       "title": "Why Live ‘Unplugged’ Versions of Old Hits Keep Finding New Audiences - That Eric Alper",
@@ -138,9 +142,9 @@
       "headline_score": 0,
       "discovered_at": "2026-11-14T06:30:42.245237+00:00",
       "id": "b890da7c8bb20e5f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-14T06:30:43.882354+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -151,7 +155,9 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "source_pipeline_version": 1
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T05:29:36.293133+00:00",
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
     },
     "43fb6481ef119e61": {
       "title": "Ground stop lifted hours after stranding thousands of flights across the U.S. - NBC News",
@@ -216,9 +222,9 @@
       "headline_score": 0,
       "discovered_at": "2026-11-14T06:53:25.099362+00:00",
       "id": "15ed27b00a04aaa4",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-14T06:53:26.242133+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -237,7 +243,9 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "source_pipeline_version": 1
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T05:31:35.279513+00:00",
+      "blocker": "Editor rejected candidate: Although source s1 contains valid scientific information on hair follicle patterning, source s2 is a commercial beauty product review and advertisement piece. Combining them lacks "
     },
     "0d3903eaaa721d2d": {
       "title": "What Song Does Ellie Play in The Last of Us Part II? “Take On Me” Explained - RouteNote",
@@ -305,9 +313,15 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T02:01:45.488557+00:00",
       "id": "c7342faafbcb636a",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T02:01:46.865286+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T05:32:04.370926+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "Editor rejected candidate: The supplied candidate data contains two completely unrelated sources: one about an Anthropic science blog launch and another about NASA's Curiosity rover drilling on Mars. It is i"
     },
     "03ebea88c0ac963c": {
       "title": "DP World Tour 2026 schedule: Latest results, events and winners for golf majors, Rolex Series events and more - Sky Sports",
@@ -428,9 +442,15 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T02:18:41.849835+00:00",
       "id": "b5642575d9486d7d",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T02:18:44.188283+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T05:32:24.246425+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "Script length outside target range"
     },
     "9dd45c78ff119243": {
       "title": "Neil Thomas Asks: Is Natural Selection a Mechanism? - Science and Culture Today",
@@ -443,9 +463,15 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T02:18:41.850283+00:00",
       "id": "9dd45c78ff119243",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T02:18:44.191591+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T05:33:13.463165+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
     },
     "870be4fd937a8c6d": {
       "title": "Transportation head vows to find 'root cause' of ground stop. Trump breaks his silence on breakdown - PBS",
@@ -510,9 +536,15 @@
       "headline_score": 1,
       "discovered_at": "2026-11-16T08:45:46.865697+00:00",
       "id": "0354903e9a288236",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T08:45:49.259515+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T05:33:39.145837+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
     },
     "4a03d7045c09c5c1": {
       "title": "Sen. Bill Cassidy slams RFK Jr. for \"series of failures\" as Health Secretary - CBS News",
@@ -540,9 +572,15 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:46.876274+00:00",
       "id": "864af83118fb549d",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T08:45:49.267204+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T05:34:11.721555+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 0. Service HTTP 403; no paid fallback attempted"
     },
     "a3752a6421556c74": {
       "title": "Rice Protein Senses Stinkbug Saliva Signal to Trigger Plant Defense - Nature World News",
@@ -2365,28 +2403,197 @@
       "status": "QUEUED",
       "created_at": "2026-11-17T02:05:25.003212+00:00",
       "attempts": 0
+    },
+    "0c6d0ea02d8bda83": {
+      "title": "US bank outage: What caused Chase problems and Zelle payment delays?",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/17/us-bank-outage-what-caused-chase-problems-and-zelle-payment-delays?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T05:19:34+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T05:29:25.775041+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "0c6d0ea02d8bda83",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T05:29:36.037275+00:00",
+      "attempts": 0
+    },
+    "8b84a2e019ff742e": {
+      "title": "Daily State of Play: Trump’s Indefinite Refugee Ban and Funding Halt - CWS Global",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimgFBVV95cUxPNUlya0FrT3ZlUlFVM1ZOZDMxMjdoeG1TRXBwb0k0QUZJUGVKR1pvUndiVHo2RjBqcU10MFVBOE05cFR4NlpkRHJseVVPMGVvN3prelFkeUxvT1dQUFR2VDFFbmdBV1EtajM0SWNwQ0hKVWVrTEVZSWpuTDRkVTE2aHVGMy1keFY4QUYtWUN4MXFwanUtNWdobXRn?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T03:42:47+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T05:29:34.923103+00:00",
+      "id": "8b84a2e019ff742e",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T05:29:36.062287+00:00",
+      "attempts": 0
+    },
+    "3329ad31e8410e68": {
+      "title": "Estonia to close Russia border crossings after attempted drone factory arson attack",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cqp83nk673reo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T14:22:36+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T05:29:25.369927+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "3329ad31e8410e68",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T05:29:36.091184+00:00",
+      "attempts": 0
+    },
+    "febb881fa9dd3cb6": {
+      "title": "Street cricket with a legend then metro ride as William and Kate begin India visit",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/videos/crkgvnl51w1vo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T15:08:59+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T05:29:25.402849+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "febb881fa9dd3cb6",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T05:29:36.118524+00:00",
+      "attempts": 0
+    },
+    "a99d4fa93b179dc2": {
+      "title": "Cancer uses antioxidants to disarm the immune system, scientists discover - Science Daily",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMib0FVX3lxTFByMkxCRVVwcUFCckZ1cW54UDNlWS1pd0ZGeEsxSXQ1Ri1jdUlLdm1kY3hodnpQZ2pTc3hNOFVUSXVsZ0pNYXRfTWFPaWpNWC14RmtfX3JfOE5ycVlHVVRteWs1dzU3OHRrX2xUc1BYWQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T05:29:33.109414+00:00",
+      "id": "a99d4fa93b179dc2",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T05:29:36.146851+00:00",
+      "attempts": 0
+    },
+    "7542c97980ee954f": {
+      "title": "Cancer - Oncogenes, Mutations, Treatment - Britannica",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMia0FVX3lxTE9yQkxZa2g3T0JFdGZFVmNfR2tEWXlETGIyX1NTWXN4cFZBWnNOMjdXUXNHOHFRUm1YZF9xU3ZiZy1LSkhIeDF6N0hWNmxGSXp3MXoxb2lvR1dic25UZUVwREFZMld2aEEweXJv?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T05:29:33.127934+00:00",
+      "id": "7542c97980ee954f",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T05:29:36.163419+00:00",
+      "attempts": 0
+    },
+    "2f9dfe13e5fdc186": {
+      "title": "Challenging Consensus, Scientist Says Photos Show Epstein Was Killed - The New York Times",
+      "category": "true_events",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiigFBVV95cUxNbnhJWExFZWtYcnJWYkstZXFIN0VrZEk0bHZ2ZEFiQWl1RDQyQUwzb0N5b0NXSzFrUzFhNjVqWUNlV2tYYVJRdmhXSnVVc082X3JwRW9uOWlKaUk5UlNfMlNCbGtIMTNwd1VGU01oeWJZSmhWODVMTlZyTjVFXzd1alZmeF9BdkN6Z2c?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T05:29:33.773429+00:00",
+      "id": "2f9dfe13e5fdc186",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T05:29:36.191482+00:00",
+      "attempts": 0
+    },
+    "4861c924d73d37f4": {
+      "title": "Folk music - Performance, Characteristics, Traditions - Britannica",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOQmpGbF9HUnhnMTN0cUNER2x0V1gtMVNiWFo3V3pfc002b3VyMkFNd3N5Ylo1WWw4ZVRGbVhRWndmTUV3U0F1LXFjQ0wxb3l0YXlSYkM0ZlVPZzZnWVNUeUNvWm9ub0RWMGk4S2hNYW53ZHVxQXJPWGZuR1NPYWVzVDlBT09ZT0dRWmlj?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T05:29:34.518656+00:00",
+      "id": "4861c924d73d37f4",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T05:29:36.212025+00:00",
+      "attempts": 0
+    },
+    "aaa482ba73c58bde": {
+      "title": "President Donald Trump announces creation of 'Super Intelligence Force' AI task force - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxPM3dJODJ0VnUzb3h1TEFnMjNya292VzlNODgyUzZHYkR1eVJ1VE9QdHRmM1A5VGhNcjR4ZUw5bnBCQzdOaXRfd0FEbEYwNVJmU2NlbjRFVnVLZGJQYkpVRUYxSENsT0lKQVhtMUZ1TkVhaWI5MXRSSmFSQTM5dFo4NDdYaFVtb0V2X3QtcmxwaXhTaUtRT2pXUVRaZUI0a0xObnhmdlB5Q0hNTVViMDEzWWJBSEfSAboBQVVfeXFMTWNUMjlJXzBRWF9MbENnMkFVWVV2dS1ld2Y4ZV9hXzRCTFNaM0Zhdk5uZWt3ekMxMDZpTTdMazl6WEF6LW1IYzhDLTU5MkJWX29GRHVqS0xYVlhjTmFrVE9JYmx1OFBrUlBnVW1TS3UtMk1GLU9mY1c1NnlnZHRNLUhNUVdobzNBckRLVTF0ZHlBdk9LVmJXWUY4Y1BaUWpTb3B1OGNQdlRJb2ZhMGlyaXc0YkVGSlduaDN3?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T16:14:07+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T05:29:34.971823+00:00",
+      "id": "aaa482ba73c58bde",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T05:29:36.252975+00:00",
+      "attempts": 0
+    },
+    "3312b12d58910963": {
+      "title": "Iran War is One ‘TACO’ Too Far: McGeever - Energy News, Top Headlines, Commentaries, Features & Events - EnergyNow.com",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMid0FVX3lxTE1pYmdDNHlwVE5HeWF0T2FkRDQ0SmhVeUxwVDZ6YXd2bGxXZldGYTR2aEN2bVY3d3Rad1NaYXFQYzJGNzJTVl9HNDhtd21ENmMxelBpSHY2M3cxbjRHUGZ6dzVyZVRaalV6WDZKSXVyNWd1TEFncWlN?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T23:26:46+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T05:29:35.031047+00:00",
+      "id": "3312b12d58910963",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T05:29:36.288744+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-17",
     "youtube": 18,
-    "ai": 35,
+    "ai": 42,
     "pixabay": 6
   },
-  "content_cycle_index": 2,
-  "content_batch": null,
+  "content_cycle_index": 4,
+  "content_batch": {
+    "category": "movies",
+    "completed": 0,
+    "story_keys": [],
+    "media_hashes": [],
+    "source_urls": []
+  },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-17T02:05:25.003867+00:00",
+    "started_at": "2026-11-17T05:29:36.289448+00:00",
     "attempted_ids": [
-      "6f8fb17e45313bdd"
+      "b890da7c8bb20e5f",
+      "eaad4f96e7f14af7",
+      "d1681e7170342a68",
+      "15ed27b00a04aaa4",
+      "c7342faafbcb636a",
+      "b5642575d9486d7d",
+      "9dd45c78ff119243",
+      "0354903e9a288236",
+      "864af83118fb549d"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "category_deferred": "clipper",
-    "category_defer_reason": "No review-ready MP4; retry this category on a later rotation",
-    "finished_at": "2026-11-17T02:05:27.917808+00:00",
-    "attempted": 1,
+    "categories_deferred": [
+      "creators",
+      "science"
+    ],
+    "finished_at": "2026-11-17T05:34:37.283885+00:00",
+    "attempted": 9,
     "completed": 0
   },
   "telegram_deliveries": {
