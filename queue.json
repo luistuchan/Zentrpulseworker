@@ -627,9 +627,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:46.881066+00:00",
       "id": "a3752a6421556c74",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T08:45:49.272608+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T23:09:14.156834+00:00",
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
     },
     "43c4c9a84bc6fb60": {
       "title": "How Old-School Music Producers Became In-Demand Again and Brought the Studio Back to Life - That Eric Alper",
@@ -731,12 +734,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:48.937832+00:00",
       "id": "1c01c7cbdf8cd474",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-16T08:45:49.305423+00:00",
       "attempts": 1,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-17T10:00:16.850975+00:00",
-      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
+      "blocker": "News candidate expired; discover a recent story"
     },
     "90013fc7b1b6bdc3": {
       "title": "TNA Destination X Takes Place With Major Changes Due To FAA Ground Stop - Howl.Link",
@@ -807,9 +810,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:11.187561+00:00",
       "id": "3a44bdb665e0ff78",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.793151+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T23:09:44.388363+00:00",
+      "blocker": "Evidence quote not found in fetched source"
     },
     "4203fb43629a358c": {
       "title": "Earth's fiery birth may have created hundreds of oceans' worth of water - Science Daily",
@@ -822,9 +828,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:11.195241+00:00",
       "id": "4203fb43629a358c",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.801657+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T23:10:20.808405+00:00",
+      "blocker": "Editor rejected candidate: Although source s1 discusses Earth's water origin and source s2 discusses tectonic ocean birth, they do not provide mutually independent corroboration of the core chemical claim ab"
     },
     "98b508551dbc799e": {
       "title": "Some immune cells meant to fight cancer end up helping tumors grow. In mice, blocking one signal they send slowed the tumors down - Futura, le média qui explore le monde",
@@ -837,9 +846,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:11.208547+00:00",
       "id": "98b508551dbc799e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.816540+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T23:10:59.500827+00:00",
+      "blocker": "No matching Pixabay footage for s02: 9 hits for 'cell culture'; inspect diagnostics in review artifact"
     },
     "5c2fc0b7929fbd7e": {
       "title": "Call of Duty enlists JAMBINAI to give its score a Korean touch - The Korea Times",
@@ -1014,9 +1026,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:47.107514+00:00",
       "id": "653ca9008bb7ba75",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:48:49.895099+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T23:12:10.015033+00:00",
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 0. Service HTTP 403; no paid fallback attempted"
     },
     "985b900a06bf20fe": {
       "title": "Tsinghua Team Tops Global Rankings, Secures 4 Consecutive Rounds of Financing - 36Kr",
@@ -1029,9 +1044,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:47.116024+00:00",
       "id": "985b900a06bf20fe",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:48:49.903881+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T23:12:36.592214+00:00",
+      "blocker": "Editor rejected candidate: Although source s1 contains sufficient data for an explainer, source s2 covers an entirely different topic (the Global Trajectory Optimisation Competition in Aerospace Engineering)"
     },
     "6bbfe619c6dcfb0e": {
       "title": "Without this protein, damaged muscle fills with fat and scar tissue - Science Daily",
@@ -1044,9 +1062,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:47.125020+00:00",
       "id": "6bbfe619c6dcfb0e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:48:49.913381+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T23:13:08.662559+00:00",
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. Service HTTP 403; no paid fallback attempted"
     },
     "4295ea495a5fef7d": {
       "title": "Kate Nash turns to OnlyFans to partly fund her tour - KarloBag.eu",
@@ -1390,9 +1411,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T12:29:12.422267+00:00",
       "id": "912b4fb64a5bbff9",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T12:29:12.984281+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "92c3e81b06d61ad7": {
       "title": "Five EU countries expected to announce migrant deportation centre in Rwanda",
@@ -1547,9 +1569,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T12:47:36.616668+00:00",
       "id": "1ca49f720c85f289",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T12:47:37.019472+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "97f08a638402365d": {
       "title": "Silicon Valley insiders urge Nvidia to restore Jensen Huang’s CEO role",
@@ -1846,9 +1869,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T23:19:50.670215+00:00",
       "id": "0b2a6a0ba6591c31",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T23:19:55.698105+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T23:13:34.331213+00:00",
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
     },
     "25e5a2423422557d": {
       "title": "seafloor spreading - Britannica",
@@ -1861,9 +1887,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T23:19:50.689678+00:00",
       "id": "25e5a2423422557d",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-16T23:19:55.704442+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T23:13:58.044136+00:00",
+      "blocker": "AI request cap reached; job saved for next run"
     },
     "d450f3e0abdc8e4f": {
       "title": "What Max Martin Can Teach You About Consistency - That Eric Alper",
@@ -2544,12 +2573,12 @@
       "discovered_at": "2026-11-17T05:29:25.369927+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "3329ad31e8410e68",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T05:29:36.091184+00:00",
       "attempts": 1,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-17T20:21:28.275591+00:00",
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'border checkpoint'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 2
     },
     "febb881fa9dd3cb6": {
       "title": "Street cricket with a legend then metro ride as William and Kate begin India visit",
@@ -3812,14 +3841,137 @@
       "status": "QUEUED",
       "created_at": "2026-11-17T20:18:59.581462+00:00",
       "attempts": 0
+    },
+    "798f6c61218572df": {
+      "title": "American soldier arrested by UK police on suspicion of spying taken into US military custody",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c6x284ez38vdo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T22:46:30+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T23:09:07.048687+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "798f6c61218572df",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T23:09:13.883674+00:00",
+      "attempts": 0
+    },
+    "808be5cc9374feea": {
+      "title": "How Democrats Could Nullify the Electoral College - Time Magazine",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNN0xfOHpuMGk1Q1M4dWdlY1lpQkZIYlJRcm84Z2JQMl9kWVFqWG5lWXZqVjRSZElqUTZLWTV1QnR1U2Q4MWhCczdqM2lVem5LVDE0Vm1oOXppYTNfY25BXzBmNVh5VEhxMVZtZ3YycC1HelpHS1J1MGpoRkNUNmV0U1NTU2VYOFN3TktCWXVNblZrSzQ3ZkhWX0xyRTZyaGFDRTJXY2oydHA?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T22:09:53+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T23:09:12.082765+00:00",
+      "id": "808be5cc9374feea",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T23:09:13.910544+00:00",
+      "attempts": 0
+    },
+    "c4184f63a195aa53": {
+      "title": "'It was really scary': Mother describes sheltering during Russia strikes on Kyiv bridge",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cq7825234lgmo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T17:19:57+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T23:09:06.918771+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "c4184f63a195aa53",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T23:09:13.945059+00:00",
+      "attempts": 0
+    },
+    "369fe5d9441f354f": {
+      "title": "US loses measles elimination status after 26 years amid record case numbers",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c977p71jx0xxo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T21:04:00+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T23:09:06.975355+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "369fe5d9441f354f",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T23:09:13.978986+00:00",
+      "attempts": 0
+    },
+    "919b6ed7a75ad74f": {
+      "title": "Andrew’s real story behind THAT ‘non-sweating’ condition exposed by photographer - News24",
+      "category": "true_events",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi6gJBVV95cUxOYmliMDl6Zy1JMWMtd1gyS0tqR2s1RFgzSWVsUnZ5Vmw5emZqU0pYN0p5dmFPaTQwLVBrU25rVUk5ZWhGNmRmenZBN2hEZFcwdmRUdWJWcnQzQ3FJbEYyNERTT2VMM0p4RzRjN0U5TEV6R0xhUjk2ZkNoQ0UtQldGYlpSWi1hMG1OOW9McGZpY0ZKeEtaNHJmMl8zWS1KMFE4UnhwNjRMVFpNMEZrbW9EYW1yYlhmcVcwOUNzN1lYU0tMTUxIaW50VzFsZGk3RXJ1d3JqSWRNNFJwY3BWRlMzaWRjdXpaUG15UG93TGh1QjFoSG85VXVKaWg4ZDJHbkJ3Ry1OSmtIbnJDaFRrQnJrNFIwcVFTTk1KVGtCdG9IbGJGenNJRkpMMjJzMS0zQlV2N1NIeVJsZlBYRDdnc2tMc2Z5SFdLSTJVSk02MGdweFNiSWZqRGtzcjJQUHQzUF9FdWVIQjRjNFl6d9IB7wJBVV95cUxQaUlCc0E3N3NYMHFQakxJU21XQzk5SHdsU3k4VTRWRlRPTUJGdVRMZG1lRldwSEdGZDJvRkZCVUtzVFc0X3lNTGdTeWFkakNVNkg3cEZleU04eUlPZE1WWGw5YVNicEpFcXdpVndWQ3V0WGtTWmVJOGpwQXZLckVoVGtobXJZa0xWSzdvZnVYektGOUludDQwanFoQUEwcmFDdkhrTmMzSk9zRVZwMTVUakx6NUhjWV91VzdHWFhJRnF4cmp2T3pHSkNyNTB1YmxQT2xuTEVsOURFYkUwVV83YklmSWMxbTBOUVYtc0lDeFRIc2U0WVBQNUtRYWJRMklHR3RnTFYxbnl4YkV3RzdlclpJdm1ReWRubjBYbEIxakpwNlVHMmt5UEdMVHNodnFuQ0E1MjR3S0FrSTVTOG1DVXRsZTYyMnJoWnNZakNySXYyMzRfYy12dl9XYURha0FzMEJhYTg0NnB3Um1kWWRr?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T23:09:10.616575+00:00",
+      "id": "919b6ed7a75ad74f",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T23:09:14.017098+00:00",
+      "attempts": 0
+    },
+    "19e66308dc50e524": {
+      "title": "15 Songs Like Slayyyter’s “DANCE…” for Electroclash Fans - RouteNote",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNV1dTX0RSWkRCMkh6WkpESV9ESHdiRDkwTEdPaWxGeEJKT2Njd3pUYVhwZWZZWmV4OUlubktzaWg3M25IQ0FhNG5CcERLbklTRUNVdEtMcEtWbTJsSlJ3WXNqX28yVThrN3hfZFBLcGN0MjJfdlJVOThDaVBhU1pNSkVyaGhfdmFt?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T23:09:11.388508+00:00",
+      "id": "19e66308dc50e524",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T23:09:14.045022+00:00",
+      "attempts": 0
+    },
+    "b5c3ab02c3b877b3": {
+      "title": "‘Stop Quoting Laws’: Trump Administration Defiant in Face of Democratic Oversight - U.S. News & World Report",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMizgFBVV95cUxQWmdQRTUtUVdlSjdUV3B1OVRDa3hvTzFZc3dTdjREd2xrYTcwc2hkNWpjV1RiSXNuR0o1ZXNKNG53ei1UQ0JnVGktc3hTeXRCMXhCMEJfaGZ6a0R5LThnaV9uQV9BbUlwem9xQ2w4NjB0VC03RVY3b19KYzY3MHJIcnc2b01Jd3BRYzB5b0pGakhOUnU3bUVJbWI3UXRvcmk5ZGhSZzZHTnF5NUZKTUR4YkxXT2FVcVV1SEhONUdYX21ONkJ5cHJwdEJIeDBOdw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T21:01:21+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T23:09:11.803935+00:00",
+      "id": "b5c3ab02c3b877b3",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T23:09:14.087969+00:00",
+      "attempts": 0
+    },
+    "2551dd0833ee2885": {
+      "title": "Trump lobs insults at political opponents, press during rescheduled White House correspondents' dinner - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiswFBVV95cUxQb2lybEIzTjRZaURsdlg4M1lZZjBJVkpSbHFhNkRYM2o3dFRpa1VZMEFGWHpSYjZwdFAwQk01Zms0MEVBYVplUXR5cVRWb2xwUzhSb013VHQwTjA4LXp0dUlvdDNVZFpmSGhWTGFuTG10Wnd3ZWdZT1FjOGpJMDl5Xzl5TWVrREJNQTkzbWVLa3I2cy1ld0FmTnh2UjM4d1NDS0xET05mS19SVWNlR3E0akY1SdIBuAFBVV95cUxNVGNuY051UlQxY2JMSjZISHB5aEF3ZmM1c2FITFgwZy1CU3ZScnpXZUdyNXp5dnJNUTdkNWRadVl3Ul8zWnN6TG14SlR1TF82dVJOajBCWnN1ZHc0MzVLU0M4SmkzNk1VQVdfc0lGRUluQnk1M1RYcElLakRUanZsYnZzQkxOdzh2alAxZUV6Um5DdzFlTEtkcWpNcHkwbmZ1TG5LMmlqQXdZdkRYc09hUkN6QWpTaDYz?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T11:38:34+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T23:09:11.987035+00:00",
+      "id": "2551dd0833ee2885",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T23:09:14.146180+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-17",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 16,
-    "ai": 78,
-    "pixabay": 3
+    "youtube": 18,
+    "ai": 96,
+    "pixabay": 6
   },
   "content_cycle_index": 3,
   "content_batch": {
@@ -3831,24 +3983,22 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-17T20:18:59.582547+00:00",
+    "started_at": "2026-11-17T23:09:14.147359+00:00",
     "attempted_ids": [
-      "dff4c421b3d31e7c",
-      "e097c1a76db13338",
-      "467f9d866d51a987",
-      "0c6d0ea02d8bda83",
-      "3329ad31e8410e68",
-      "febb881fa9dd3cb6",
-      "16321fba22ea115b",
-      "abb1502e64cff11e",
-      "b8543993863e27aa"
+      "a3752a6421556c74",
+      "3a44bdb665e0ff78",
+      "4203fb43629a358c",
+      "98b508551dbc799e",
+      "653ca9008bb7ba75",
+      "985b900a06bf20fe",
+      "6bbfe619c6dcfb0e",
+      "0b2a6a0ba6591c31",
+      "25e5a2423422557d"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "categories_deferred": [
-      "world_news"
-    ],
-    "finished_at": "2026-11-17T20:25:15.328497+00:00",
+    "pause_reason": "AI request cap reached; job saved for next run",
+    "finished_at": "2026-11-17T23:14:31.205145+00:00",
     "attempted": 9,
     "completed": 0
   },
