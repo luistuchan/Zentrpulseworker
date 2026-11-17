@@ -1417,6 +1417,19 @@ def main():
                 errors.append('clipper: ' + str(exc))
             warnings += ['Discovery unavailable: ' + x for x in errors]
             atomic_json(OUTPUT / 'research' / 'leads.json', leads)
+            viral = [x for x in leads if x.get('content_type') == 'clipper']
+            if viral:
+                lines = ['# Viral clip discovery', '',
+                         'Discovery does not grant reuse rights. Drafts require permission and your review.', '']
+                for item in sorted(viral, key=lambda x: x.get('viral_score', 0), reverse=True):
+                    media = item.get('media', {})
+                    lines += ['- **' + str(item['title']).replace('\\n', ' ')[:150] + '**',
+                              '  - ' + str(media.get('source_url', '')),
+                              '  - Creator: ' + str(media.get('creator', '')),
+                              '  - Views: ' + str(item.get('views', 0)),
+                              '  - Status: ' + ('Rights check needed' if item.get('discovery_only')
+                                              else 'Creative Commons indicated; confirm before posting')]
+                (OUTPUT / 'research' / 'viral-leads.md').write_text('\\n'.join(lines) + '\\n')
             # Viral discovery is unrestricted, but unlicensed leads are research only.
             # They remain in output/research/leads.json for rights review and must not
             # consume production attempts or Gemini quota.
