@@ -1038,7 +1038,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:48.865843+00:00",
       "id": "5abd758d65b5fa5e",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T11:48:49.968684+00:00",
       "attempts": 4,
       "source_pipeline_version": 2,
@@ -1047,8 +1047,7 @@
         "status": "not_checked"
       },
       "script_pipeline_version": 1,
-      "stock_pipeline_version": 1,
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'Alberta oil sands landscape aerial view', 9 hits for 'alberta oil sands', 9 hits for 'alberta oil'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 2
     },
     "bcb92c282da95057": {
       "title": "Trump heads to Asia to meet with Xi and Putin amid Nvidia fallout - KGOU",
@@ -1965,7 +1964,7 @@
       "discovered_at": "2026-11-17T01:38:08.344171+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "55e1683ddaecffb6",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T01:38:15.728462+00:00",
       "attempts": 1,
       "source_pipeline_version": 2,
@@ -1988,7 +1987,7 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'movie studio'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 2
     },
     "641e6955c5712c0f": {
       "title": "Beyond the demo: How life sciences leaders are scaling AI - McKinsey & Company",
@@ -2081,9 +2080,12 @@
       },
       "discovered_at": "2026-11-17T01:38:15.667140+00:00",
       "id": "6f8fb17e45313bdd",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:38:15.850371+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T02:05:25.007393+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
     },
     "ad2e5099df43ef4b": {
       "title": "UK seeks closer ties with EU after Brexit fail",
@@ -2270,36 +2272,121 @@
       "status": "QUEUED",
       "created_at": "2026-11-17T01:47:50.763215+00:00",
       "attempts": 0
+    },
+    "187692d2ec590a9f": {
+      "title": "Irish court jails man for life over Dublin knife attack that sparked riots",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/17/irish-court-jails-man-for-life-over-dublin-knife-attack-that-sparked-riots?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T01:19:56+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T02:05:13.715514+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "187692d2ec590a9f",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T02:05:24.856107+00:00",
+      "attempts": 0
+    },
+    "573a6468fd6108b7": {
+      "title": "Trump says he doesn't take 'any responsibility' for ground stop; blames tech that had 'heart attack' - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxPX0lVaXNYdUpPcDRrdTY2dy1obE15XzdOeWc1MzUtaUlJaUY5RWVqendRNXFjdm1WQUwyWm1PWk1SRk16Q1ZTMzJ0SUw5eXRVMUdpdGhZalNPa3JjQlo1MTBvZ3dDZnc5d0xIRnZhbGgxRkhYbHVTX1V5Y1hGR0tJb2RXcGZvXzF4Tk0ycdIBkgFBVV95cUxQakFqOFIxSkxLaGx4cHhGMklpMmoxQ2RZeHFHZjFWM0FMczNHaUE3Y04zTFJad0o2MWdxdXRhZlp4VVNiNy1lTmg2aUY3UlhxQ0hKTnFoQURYa3lROGRVVEdnLWRNWVRTbGNOOXBVV3lVeTk3ZE1lTktnTU1jNVh0LThNczB0b0JrZS1pRW04OTdmdw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T21:53:02+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T02:05:23.393665+00:00",
+      "id": "573a6468fd6108b7",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T02:05:24.896622+00:00",
+      "attempts": 0
+    },
+    "0ec06b35361d5ffe": {
+      "title": "Raye, Rosalía and Dolly Parton recognised in Grammy nominations",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cq9vwkggpx73o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T14:48:55+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T02:05:13.230764+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "0ec06b35361d5ffe",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T02:05:24.915597+00:00",
+      "attempts": 0
+    },
+    "467f9d866d51a987": {
+      "title": "Ashes of exiled Nobel Laureate Miguel Ángel Asturias returned to Guatemala",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cvde1klewg88o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T12:42:14+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T02:05:13.254584+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "467f9d866d51a987",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T02:05:24.938027+00:00",
+      "attempts": 0
+    },
+    "bbf7e71240cf27b7": {
+      "title": "Trump gives Ukraine OK to produce Patriot missiles as war with Russia drags on - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxPNzUxYW1DQXFGR3RsYThFQ3UxMmhQZTIwNG44ZHI1VENmWWNLYjN4Rm5QWTVpY1Rpa2JHX0ZrTHgzaEFldnFXeXVqbk9YajVmdk1tZTQ2bkNSZksxNmtGYk0tQ20zeFg1UVVqUGlReVhUMFRnV3RXTVc2TmR1VTZXNmRMTFlqQUZOMlVITTlQaXowUVl2UkHSAZsBQVVfeXFMTTJ5Y050Vm52ZWFjTkhvQzd2eHpxMm9FbXVSVU9KOXp5eXJYQzBDbnFXdVh1MS1iWXVRQ2RUemJqdVNIa2FHakozaW1rTHh5dldHeF9hU1p3SmNYRFVUSW4zTHBpUmoxTWFFS0VTSDdOZVhTWUJ6aTN3UnFWN2d3SndMb3lKRmhUWExBZGQxQzIxdmdERElvd0xJbm8?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T15:10:27+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T02:05:23.289155+00:00",
+      "id": "bbf7e71240cf27b7",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T02:05:24.974258+00:00",
+      "attempts": 0
+    },
+    "a528c991931c5471": {
+      "title": "Trump welcomes Xi to White House for state dinner - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimAFBVV95cUxQLTNrUzJTVEpkRndLRnFSRGxkNEFpdkFDWGdiU1hRUWk2endubGNXVUdsYVVKYzRYbzkzUjk0cHVYRDRTM1pSbEwtajl6TEdnd19JaGdFUmdmdGVGZ21LejhXOGMxT3BYX3FIb1NpeE13VUpLM0JMQWFPVDlfNUl5ZmNZMklRRXlNMnE5TS1FRnBoUGZvZzJDNNIBngFBVV95cUxNeDZHdFhHemNiZnp2Q3RkdFN0RzQ1aHk5ZmdERFlLZm53aUxYWUdwVHNnZm9ZdmZHOW5wS01BUWNNb2JrSEN3cEhVcnZXR1M0RWROMThMaXM1bGZvNjY5QUhfdU80RDFWZ1Nnc3pXNlZvajJWMG9DMmR2aWQ4RllRYThneWlSQUNJZTlTVVowUTNiejVOT2JUcjM4UUs5dw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T15:25:47+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T02:05:23.343642+00:00",
+      "id": "a528c991931c5471",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T02:05:25.003212+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-17",
-    "youtube": 15,
+    "youtube": 18,
     "ai": 35,
     "pixabay": 6
   },
-  "content_cycle_index": 1,
+  "content_cycle_index": 2,
   "content_batch": null,
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-17T01:47:50.763849+00:00",
+    "started_at": "2026-11-17T02:05:25.003867+00:00",
     "attempted_ids": [
-      "97f08a638402365d",
-      "90013fc7b1b6bdc3",
-      "b371b61c2cc0b758",
-      "98b05cefbe0e3d1c",
-      "5abd758d65b5fa5e",
-      "c0ed1394e8625198",
-      "5ab1391583fd9750",
-      "5deb7b577d432c84",
-      "55e1683ddaecffb6"
+      "6f8fb17e45313bdd"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "category_deferred": "world_news",
+    "category_deferred": "clipper",
     "category_defer_reason": "No review-ready MP4; retry this category on a later rotation",
-    "finished_at": "2026-11-17T01:52:49.640671+00:00",
-    "attempted": 9,
+    "finished_at": "2026-11-17T02:05:27.917808+00:00",
+    "attempted": 1,
     "completed": 0
   },
   "telegram_deliveries": {
