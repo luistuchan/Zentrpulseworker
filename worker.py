@@ -1272,8 +1272,11 @@ def produce_batch(state, budget, target):
                     state['content_cycle_index'] = (state.get('content_cycle_index', 0) + 1) % len(CONTENT_CYCLE)
         except Wait as exc:
             job.update(status='WAITING', blocker=str(exc))
-            stop = (str(exc).startswith('Gemini model ') or 'AI request cap' in str(exc)
-                    or 'narration service unavailable' in str(exc))
+            # Temporary 503/TTS outages affect this candidate, not every other
+            # eligible story. Respect persistent API quota/rate-limit failures.
+            reason = str(exc).lower()
+            stop = ('ai request cap' in reason or 'http 429' in reason
+                    or 'quota' in reason or 'daily ' in reason)
         except Hold as exc:
             job.update(status='HOLD', blocker=str(exc))
             stop = (str(exc).startswith(('Gemini model ', 'GEMINI_API_KEY missing',
@@ -1390,8 +1393,11 @@ def main():
             raise Hold('TARGET_SECONDS must be between 20 and 70')
         try:
             batch = produce_batch(state, budget, target)
-            if batch and batch['completed'] < BATCH_SIZE:
-                warnings.append(f'Rotation stays on {batch["category"]} until {BATCH_SIZE} distinct review-ready videos exist; holds do not count.')
+            if state.get('last_run', {}).get('category_deferred'):
+                warnings.append('Stalled category deferred: ' + state['last_run']['category_deferred']
+                                + '; the next scheduled run can try another content type.')
+            elif batch and batch['completed'] < BATCH_SIZE:
+                warnings.append(f'Current rotation: {batch["category"]} needs {BATCH_SIZE} distinct review-ready videos.')
         finally:
             atomic_json(STATE / 'queue.json', state)
             report(state, warnings)
