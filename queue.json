@@ -615,7 +615,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:48.322873+00:00",
       "id": "98b05cefbe0e3d1c",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T08:45:49.293524+00:00",
       "attempts": 3,
       "source_pipeline_version": 2,
@@ -623,8 +623,7 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "stock_pipeline_version": 1,
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'Norfolk countryside landscape aerial view'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 2
     },
     "086cd7ab38725e97": {
       "title": "Economics of the World Cup | Ticket Prices, Revenue, Costs, & Social Impact - Britannica",
@@ -674,7 +673,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:12.794220+00:00",
       "id": "90013fc7b1b6bdc3",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T10:36:13.768077+00:00",
       "attempts": 3,
       "source_pipeline_version": 2,
@@ -682,8 +681,7 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "stock_pipeline_version": 1,
-      "blocker": "No matching Pixabay footage for s02: 9 hits for 'modern flight control radar screen'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 2
     },
     "de632a0cc6ccbd09": {
       "title": "Carney says US tariffs could turn Canada's carmakers to China - Yahoo News Singapore",
@@ -1472,11 +1470,11 @@
       "discovered_at": "2026-11-16T17:55:44.261712+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "97f08a638402365d",
-      "status": "HOLD",
+      "status": "WAITING",
       "created_at": "2026-11-16T17:55:47.930822+00:00",
-      "attempts": 2,
+      "attempts": 3,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-16T23:19:55.774191+00:00",
+      "last_attempt_at": "2026-11-17T01:38:15.853151+00:00",
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -1495,8 +1493,8 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "stock_pipeline_version": 1,
-      "blocker": "No matching Pixabay footage for s02: 9 hits for 'digital petition'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 2,
+      "blocker": "Free narration service unavailable; supply local audio or retry later"
     },
     "1f246426854f69a7": {
       "title": "European soccer body UEFA proposes Philippe Diallo as FIFA presidential election candidate - ABC News - Breaking News, Latest News and Videos",
@@ -1562,7 +1560,7 @@
       "discovered_at": "2026-11-16T17:55:43.926172+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "258ab8d59ad6c8b6",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T17:55:47.968199+00:00",
       "attempts": 1,
       "source_pipeline_version": 2,
@@ -1585,7 +1583,7 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "blocker": "No matching Pixabay footage for s02: 9 hits for 'street'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 2
     },
     "4262db185452f20e": {
       "title": "Best Sennheiser Headphones 2026 - Every Category - Audiophile ON",
@@ -1861,13 +1859,169 @@
       "attempts": 1,
       "last_attempt_at": "2026-11-16T23:43:56.263219+00:00",
       "blocker": "Clipper source could not be downloaded; supply local footage or another source"
+    },
+    "5ab1391583fd9750": {
+      "title": "Ukraine holds peace talks with US, Europe as conflict escalates",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/17/ukraine-holds-peace-talks-with-us-europe-as-conflict-escalates?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T00:45:11+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T01:38:08.768367+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "5ab1391583fd9750",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:38:15.680272+00:00",
+      "attempts": 0
+    },
+    "077e401a6aac3eb0": {
+      "title": "Trump heads to Asia ahead of summit with Putin and Xi, possible meeting with Kim Jong Un - CBS News",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMifEFVX3lxTFBBeDlRZ1JOdE80bUhoMnAyU0NNdFZNQTJSSW5XYUNtVC1hOWV5cmhZN01GcDBMRmttYXVkdHJmNm5qX2NDbzNRakc2bU5LYllnVW01YklFZkRVWk9BN1VRMjdlQkdBeUttdnNHRm56c1c5YWc0N2RlQ21yUUw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T00:45:33+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T01:38:14.164226+00:00",
+      "id": "077e401a6aac3eb0",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:38:15.699710+00:00",
+      "attempts": 0
+    },
+    "5deb7b577d432c84": {
+      "title": "Landmark Crimea bridge hit as Russia reports biggest Ukrainian drone attack of war",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/ckx27v6dpjz0o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T14:58:12+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T01:38:08.332665+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "5deb7b577d432c84",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:38:15.716715+00:00",
+      "attempts": 0
+    },
+    "55e1683ddaecffb6": {
+      "title": "When will we see Robert Pattinson as Bond in cinemas?",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/videos/cmd91xjd9zk2o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T17:18:54+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T01:38:08.344171+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "55e1683ddaecffb6",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:38:15.728462+00:00",
+      "attempts": 0
+    },
+    "641e6955c5712c0f": {
+      "title": "Beyond the demo: How life sciences leaders are scaling AI - McKinsey & Company",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMizgFBVV95cUxNRm9qS3dOU0NmbDVXUGVHUlBrUzRoMjhjaUduSS16MFRtZVF5Y1pCQWxYVkFrTzVzYVNWM0N4Yl9IS2pzcmlhYlo4dmdRbkIzNDRwZmozOElQdlpDckwtUDJWamZBWWdYN0lzWXNscWhpUVB0OThGcXZlYi1sSU1iVmp4ZWEzNnNQR2RHUHlWR2U1aXdKalU4XzFDTHMyUl9Ba2FYQnJoZEdlbEdKMGdOYXZnVE5hcnZaRE1FMmcwVjlpRjU3ZTR3UlNJR2owQQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T01:38:10.592129+00:00",
+      "id": "641e6955c5712c0f",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:38:15.743344+00:00",
+      "attempts": 0
+    },
+    "a04bd3f7693f211b": {
+      "title": "ONE VISION, ONE OCEAN Theater artists Shiela Valderrama, Gian Magdangal, and Lara Maigue led the performance of the ASEAN theme song during the Philippine Night at the International Media Center. | via Jervis Manahan, ABS-CBN News - Facebook",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi2AFBVV95cUxOeTlsMFBVaDlpU3MtNWh5cUxrVVRmVl9kU0VMZ0o1SFhOTXdhd3hRSDhuY1VzOHdpbUtUbDF3Y0RqYlpoVmYtY1U0em02bmF3Skg0ZDlZNTA3X2h1aURYWDIwU04tcTVZNVJTd2xWcWpSREpRQ3VWcU5VVjJDWmRnUmtlWWh0UG5PdGtfdlNkZWo1TVNocGRrWXRGUUNfMGhoZTZyT1FfZ25qMGRWbUg2emJLbkMwLUVSOW9QN0ZZdHoxVnM5b29ZU3A4ZGNybFA1NWtUUXd0VWs?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T01:38:13.597516+00:00",
+      "id": "a04bd3f7693f211b",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:38:15.787238+00:00",
+      "attempts": 0
+    },
+    "32a05807acfa6153": {
+      "title": "Thriller | Michael Jackson, Album, Video, Dance, Quincy Jones, Songs, & Sales - Britannica",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMib0FVX3lxTE5UXzZtN3lMOXI2SGZOT1NmcGpzTW5kaW81NHlsbGotaks2TEVXZ1E3aEtWMW84LUU3X092S2QzbTNGLVJFMGNSSi0zVGFsUkVTSy1pelV2Q25HNDFtVFJiU2ZRM0hEUTVVblp5ZnQzWQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T01:38:13.634678+00:00",
+      "id": "32a05807acfa6153",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:38:15.803038+00:00",
+      "attempts": 0
+    },
+    "0a05cfe7a6cb3e78": {
+      "title": "Trump says AI leaders signed a 'constitution' to police themselves - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilAFBVV95cUxOanlhb3luTWNPUUpYbzhHV2tQdUF1dEVhN3d5VDJZdGwzRU1fT1Nsb2ZrNjRNeHNiem1HNTZaSzdQcU80MTVwSE44a0pvR1J3eTZIRG0yRjhnSWdVVjJuek1qTDVIOVAwTDZRRXlPR25xUU83NWkyd2swVWFsbE5ELVYyNzFCU1RETWY2S21pVlNBYVEw0gGaAUFVX3lxTE5qYlFleHFIUHFxbnkxTDVvZmx5RmI5SHRCY1Bnc0wxejY5emRkd2RsWDA4WUNndklFbG1qVzBBRkdreUtGZ0VLc3hlNWVHc3d1NHdiUzRKZkhNczhTZTBBSXdzZlZGM2ZTbndUaFlob0R4Q2pQT0t0aXlUTnhfYnJPQkRNWlVGOG80U240NHR1U3hnSVpCN0Y4QVE?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T15:01:33+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T01:38:14.046266+00:00",
+      "id": "0a05cfe7a6cb3e78",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:38:15.825549+00:00",
+      "attempts": 0
+    },
+    "f5637b504efcfa7f": {
+      "title": "We meet the people who make some famous jeans - NPR",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilAFBVV95cUxNSmxzYU5hX2l3UXBlVXJYOWFNYjYzeFJfWXRKVkN5TElyMmFvZklHQ010SkZ4SEZZTkI1aGUtWk5KMTlZb2hfbUVSc2hrTmZINUpJdDRzTmlkVHJXbHlkZHVTcmpxajB6VWd0QmdPaENpME1oMlIxTGhpOHJhT3M0Si05ckg2SElnWGRnOGl0cGhUSEgy?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T21:27:08+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T01:38:14.060297+00:00",
+      "id": "f5637b504efcfa7f",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:38:15.836403+00:00",
+      "attempts": 0
+    },
+    "6f8fb17e45313bdd": {
+      "title": "Clip highlight: REACTING to Hilarious Dogs & Cats That Can't Behave 😂",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "cdind1rVXvQ",
+      "discovery_bucket": "animals",
+      "release_candidate": false,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=cdind1rVXvQ",
+        "license": "creativeCommon",
+        "license_checked_at": "2026-11-17T01:38:15.667125+00:00",
+        "creator": "Laughing Tails",
+        "rights_note": "YouTube API reports Creative Commons; attribution and final rights require review"
+      },
+      "discovered_at": "2026-11-17T01:38:15.667140+00:00",
+      "id": "6f8fb17e45313bdd",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:38:15.850371+00:00",
+      "attempts": 0
     }
   },
   "budget": {
-    "day": "2026-11-16",
-    "youtube": 18,
-    "ai": 96,
-    "pixabay": 12
+    "day": "2026-11-17",
+    "youtube": 4
   },
   "content_cycle_index": 0,
   "content_batch": {
@@ -1879,12 +2033,15 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-16T23:46:10.448965+00:00",
-    "mode": "direct_clip_recovery",
-    "attempted_ids": [],
+    "started_at": "2026-11-17T01:38:15.850859+00:00",
+    "attempted_ids": [
+      "97f08a638402365d"
+    ],
     "completed_ids": [],
-    "finished_at": "2026-11-16T23:46:10.448996+00:00",
-    "attempted": 0,
+    "model": "gemini-3.5-flash-lite",
+    "pause_reason": "Free narration service unavailable; supply local audio or retry later",
+    "finished_at": "2026-11-17T01:38:18.775409+00:00",
+    "attempted": 1,
     "completed": 0
   },
   "telegram_deliveries": {
