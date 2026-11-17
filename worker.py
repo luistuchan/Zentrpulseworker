@@ -1288,6 +1288,18 @@ def produce_batch(state, budget, target):
         if stop:
             state['last_run']['pause_reason'] = job['blocker']
             break
+    # A zero-output category must not monopolize future scheduled runs.
+    # Keep the three-video rotation intact once a category has made progress.
+    if batch and not completed and batch.get('completed', 0) == 0 and attempted:
+        active = [j for j in state['jobs'].values()
+                  if job_category(j) == batch['category'] and
+                  j['status'] in ('QUEUED', 'PRODUCING', 'WAITING')]
+        if not active or len(attempted) >= max_attempts or state['last_run'].get('pause_reason'):
+            previous = batch['category']
+            state['content_cycle_index'] = (state.get('content_cycle_index', 0) + 1) % len(CONTENT_CYCLE)
+            state['content_batch'] = None
+            state['last_run']['category_deferred'] = previous
+            state['last_run']['category_defer_reason'] = 'No review-ready MP4; retry this category on a later rotation'
     state['last_run']['finished_at'] = now()
     state['last_run']['attempted'] = len(attempted)
     state['last_run']['completed'] = len(completed)
