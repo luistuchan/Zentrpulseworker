@@ -1197,21 +1197,21 @@ def story_key(job):
     return normalized(job.get('story_id') or job['title'].rsplit(' - ', 1)[0])
 
 
-def current_batch(state):
+def current_batch(state, excluded=()):
     batch = state.get('content_batch')
-    if batch and batch.get('completed', 0) < BATCH_SIZE:
+    if batch and batch.get('completed', 0) < BATCH_SIZE and batch.get('category') not in excluded:
         return batch
     cursor = state.get('content_cycle_index', 0) % len(CONTENT_CYCLE)
     eligible = {job_category(j) for j in state['jobs'].values()
                 if j['status'] in ('QUEUED', 'PRODUCING', 'WAITING')}
     for offset in range(len(CONTENT_CYCLE)):
         index = (cursor + offset) % len(CONTENT_CYCLE)
-        if CONTENT_CYCLE[index] in eligible:
+        if CONTENT_CYCLE[index] in eligible and CONTENT_CYCLE[index] not in excluded:
             category = CONTENT_CYCLE[index]
             state['content_cycle_index'] = index
             break
     else:
-        if 'custom' not in eligible:
+        if 'custom' not in eligible or 'custom' in excluded:
             return None
         category = 'custom'
     batch = {'category': category, 'completed': 0, 'story_keys': [], 'media_hashes': [], 'source_urls': []}
@@ -1260,8 +1260,8 @@ def produce_batch(state, budget, target):
     # no usable candidate. Never break an in-progress three-video rotation.
     deferred = set()
     for category_hop in range(len(CONTENT_CYCLE) + 1):
-        batch = current_batch(state)
-        if not batch or batch['category'] in deferred:
+        batch = current_batch(state, excluded=deferred)
+        if not batch:
             break
         if (len(completed) >= max_ready or len(attempted) >= max_attempts
                 or time.monotonic() >= deadline or state['last_run'].get('pause_reason')):
@@ -1290,7 +1290,8 @@ def produce_batch(state, budget, target):
                 atomic_json(STATE / 'queue.json', state)
                 stop = False
                 try:
-                    if job.get('content_type') != 'clipper' and not job.get('youtube_signal'):
+                    if (os.getenv('ENABLE_YOUTUBE_SIGNALS') == '1' and
+                            job.get('content_type') != 'clipper' and not job.get('youtube_signal')):
                         try:
                             job['youtube_signal'] = youtube_signal(job['title'], budget)
                         except Hold as exc:
