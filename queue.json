@@ -378,9 +378,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T02:18:43.892241+00:00",
       "id": "8b9d249448d5bc8e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T02:18:44.173844+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T09:55:34.227931+00:00",
+      "blocker": "Editor rejected candidate: The second source provided (s2) is binary garbage text and unreadable, failing the requirement to use at least two valid independent source domains with readable quotes."
     },
     "00effa213518cc61": {
       "title": "Brazil Feeds the World but Imports Its Fertilizers: Why Global Agriculture Is at Risk - AgroLatam",
@@ -435,9 +438,12 @@
       "headline_score": 1,
       "discovered_at": "2026-11-16T02:18:43.900993+00:00",
       "id": "786c160a985a95b0",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-16T02:18:44.183613+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T09:56:10.918755+00:00",
+      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
     },
     "b5642575d9486d7d": {
       "title": "What would the Earth's evolution have looked like without life? - Universe Space Tech",
@@ -492,9 +498,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T02:18:43.886629+00:00",
       "id": "870be4fd937a8c6d",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-16T02:18:44.194997+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T09:57:09.742810+00:00",
+      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
     },
     "e0566f04476019e4": {
       "title": "Energy to 2060: Africa’s dilemma, Nigeria’s strategic imperative - Businessamlive",
@@ -529,9 +538,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:49.237040+00:00",
       "id": "a598287b8ec3135f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T08:45:49.251191+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T09:58:07.725081+00:00",
+      "blocker": "Editor rejected candidate: The candidate data and sources do not involve any major actions or announcements by the U.S. president as required for a news_update content type focusing on the U.S. presidency."
     },
     "0354903e9a288236": {
       "title": "Boundless Evolution Secures Over ¥100M Pre-A Financing: Reshaping Life Science Dry-Wet Closed Loop via \"Recursive Scientific Discovery\" | Xinglian Portfolio Update - 36Kr",
@@ -565,9 +577,12 @@
       "headline_score": 1,
       "discovered_at": "2026-11-16T08:45:49.098710+00:00",
       "id": "4a03d7045c09c5c1",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-16T08:45:49.264129+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T09:59:08.771805+00:00",
+      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
     },
     "864af83118fb549d": {
       "title": "Biology - Evolution, Genetics, Microbiology - Britannica",
@@ -705,9 +720,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:48.937832+00:00",
       "id": "1c01c7cbdf8cd474",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-16T08:45:49.305423+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T10:00:16.850975+00:00",
+      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
     },
     "90013fc7b1b6bdc3": {
       "title": "TNA Destination X Takes Place With Major Changes Due To FAA Ground Stop - Howl.Link",
@@ -742,9 +760,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:13.678632+00:00",
       "id": "de632a0cc6ccbd09",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-16T10:36:13.775739+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T10:01:50.400984+00:00",
+      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
     },
     "0935eff17b9774de": {
       "title": "Bhairadevi Ending Explained: A Shocking Story of Betrayal, Murder and Supernatural Revenge (Spoilers) - Vocal",
@@ -906,9 +927,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:13.435593+00:00",
       "id": "e6e9e1c5fb72136e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.875678+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T10:02:50.735665+00:00",
+      "blocker": "Need evidence from two distinct source domains; independence still needs review"
     },
     "71d12c042675219e": {
       "title": "China Says Xi-Putin-Trump Meeting Has 'Groundbreaking Significance' - U.S. News & World Report",
@@ -921,9 +945,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:13.451821+00:00",
       "id": "71d12c042675219e",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-16T10:36:13.885889+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T10:03:59.335903+00:00",
+      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
     },
     "ca7e3c0c496a8889": {
       "title": "BCCI congratulates Jay Shah on reappointment as ICC Chair - Telangana Today",
@@ -2186,7 +2213,7 @@
       "discovered_at": "2026-11-17T01:39:13.834099+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "dff4c421b3d31e7c",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T01:39:29.308204+00:00",
       "attempts": 2,
       "source_pipeline_version": 2,
@@ -2194,7 +2221,7 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'autopsy files'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 2
     },
     "e097c1a76db13338": {
       "title": "Lindsay Clancy to face retrial next year for deaths of her three children",
@@ -2208,7 +2235,7 @@
       "discovered_at": "2026-11-17T01:39:13.850897+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "e097c1a76db13338",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T01:39:29.325486+00:00",
       "attempts": 2,
       "source_pipeline_version": 2,
@@ -2216,7 +2243,7 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'courthouse exterior'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 2
     },
     "b402094ba1e87f78": {
       "title": "Trump nominates top White House aide to head watchdog agency — as Democrats feared - Politico",
@@ -3426,17 +3453,110 @@
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-17T09:09:28.522082+00:00",
       "blocker": "Need two readable source URLs from distinct domains; retrieved 0. Google News article decoding unavailable; retry later"
+    },
+    "740f282e36803e37": {
+      "title": "As Knesset readies for new speaker, Israeli opposition holds powerful role",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/17/as-knesset-readies-for-new-speaker-israeli-opposition-holds-powerful-role?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T09:29:28+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T09:55:29.032557+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "740f282e36803e37",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T09:55:34.109476+00:00",
+      "attempts": 0
+    },
+    "56c236014027552f": {
+      "title": "NJ Gov. Mikie Sherrill supports abolishing the current election system in the U.S. - New Jersey 101.5",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMib0FVX3lxTE5xZE4wSG9zd1ctNU5CU0ZzWDh6VU5KWWlFOWpWTVNYRW1tRXRnbU9yTXdfa3NhWmZJOFlQeW0yTHM2X0IxVFROMjhkR3hHZXVjemM3QVdJZ2hDNnZjMjh2bDJNWVViOVFiYzF0M2U0TQ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T09:37:29+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T09:55:32.859785+00:00",
+      "id": "56c236014027552f",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T09:55:34.133160+00:00",
+      "attempts": 0
+    },
+    "dc1956f3e6aeff70": {
+      "title": "Body of Melbourne Cup horse found dumped in Sydney skip bin",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/ck1ewl2zjqgzo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T07:01:00+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T09:55:28.654551+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "dc1956f3e6aeff70",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T09:55:34.148836+00:00",
+      "attempts": 0
+    },
+    "19668163f43d64fd": {
+      "title": "New Zealand tricks and annual leave - the lengths fans are going to for GTA 6",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cm4gn9xnn1ppo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T01:04:45+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T09:55:28.812548+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "19668163f43d64fd",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T09:55:34.167613+00:00",
+      "attempts": 0
+    },
+    "12c46a988a0c46cb": {
+      "title": "Irish leaders react after Trump says he'd 'love' to see a unified Ireland - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMinAFBVV95cUxNLS15d21uRUlHTmJ3elZrelJETHhLVTdpcUpfUUFLT1k1b1BvZ1luek1MbXhVUnQzcFhLYXcxcVREVTNrZGtqUGQ1WGlWQWcwT2FMZDZLdzZlNVh2R0FUTjdZRVJQeUNEVzUzMlZyMmNkT1dYUFdPMlN6MUNZU3g3di1HT1NpZlFpTkFvQmZfWFByLUROX1dNS0V1WlPSAaIBQVVfeXFMTWJCdVUwb19DcVVFMThDdW90WHZCYVJScXRTc2tLcnQtQ0RxVEZiWmM4Rkt5SFJ2SGNyeEhXVE9FNlZxcFdmQUJyeHpVMjlob2pyNmZwSVpObGtvWGg1ekE5Z1NVTmo0ckdqMGxlSG5Ua3VyWHZ4YlZ3TWFDMHpjYnluOERUMlBuVDlubklZaklwRUYyNzJCbkJGZGtZbXlQdmZB?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T22:50:56+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T09:55:32.335775+00:00",
+      "id": "12c46a988a0c46cb",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T09:55:34.196399+00:00",
+      "attempts": 0
+    },
+    "1d043c31119879dd": {
+      "title": "Trump's signature will be added to US currency, Treasury says - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxPSVBSb21sWjJSbFlBS2lIQ1NWLWFadVRkV3ZqN2xpaTZIb3NiSXFVWUhmVS1ETGZjcTVaMEtHMmFUdWVnNjgyZWZhT3lFaVNlQkNlTUlLZ2JSV3pfejczYmlEQlR4WVJudVFWcVEzNE44UmgtVzB2WFhuUlE3UUlrdDVRc3VsYmhFdElOUUUwMWItNXByc0HSAZsBQVVfeXFMT1VBc0xjSnFuMU1meGhLcl9PcUZpRXJFZGZrdkE5Q0tRMm9Ob1RSZ184SzNJY2RZdTVlRUVYWlp5VEVYOE9GZUkxU0dBNVJUWm9SZThCRl9sanE2cDl4aWh4RVhWVzVKMFZhejVJU2Nyb2oyaHVObmNWOUJFMl9GUlJnbjJMN19aTUswRW11eUlJMHNJcTBoaGNkUW8?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T22:36:34+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T09:55:32.391806+00:00",
+      "id": "1d043c31119879dd",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T09:55:34.221462+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-17",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 4,
-    "ai": 8
+    "youtube": 8,
+    "ai": 33
   },
-  "content_cycle_index": 9,
+  "content_cycle_index": 10,
   "content_batch": {
-    "category": "president",
+    "category": "true_events",
     "completed": 0,
     "story_keys": [],
     "media_hashes": [],
@@ -3444,25 +3564,24 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-17T09:09:28.516593+00:00",
+    "started_at": "2026-11-17T09:55:34.222088+00:00",
     "attempted_ids": [
-      "d2dd0571535bd3f7",
-      "dff4c421b3d31e7c",
-      "e097c1a76db13338",
-      "5deb7b577d432c84",
-      "f37540a88a51a606",
-      "47826ac14de6c9af",
-      "c1805b7e46dfe240",
-      "187692d2ec590a9f",
-      "0ec06b35361d5ffe"
+      "8b9d249448d5bc8e",
+      "786c160a985a95b0",
+      "870be4fd937a8c6d",
+      "a598287b8ec3135f",
+      "4a03d7045c09c5c1",
+      "1c01c7cbdf8cd474",
+      "de632a0cc6ccbd09",
+      "e6e9e1c5fb72136e",
+      "71d12c042675219e"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "categories_deferred": [
-      "movies",
-      "world_news"
+      "president"
     ],
-    "finished_at": "2026-11-17T09:13:04.029837+00:00",
+    "finished_at": "2026-11-17T10:05:46.664300+00:00",
     "attempted": 9,
     "completed": 0
   },
