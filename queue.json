@@ -11,9 +11,9 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T06:30:42.533697+00:00",
       "id": "c32fb0cbf637ee8b",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-14T06:30:43.879714+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -32,7 +32,9 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "source_pipeline_version": 1
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T06:27:23.842807+00:00",
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
     },
     "eaad4f96e7f14af7": {
       "title": "University of Manchester Researchers Launch Podcast Exploring the Process of Scientific Discovery - Bioengineer.org",
@@ -285,9 +287,15 @@
       "headline_score": 1,
       "discovered_at": "2026-11-15T09:41:13.455897+00:00",
       "id": "431248277a0f3c0b",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-15T09:41:15.627980+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T06:26:58.267885+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
     },
     "09d9f47c5e021faf": {
       "title": "30+ Can't-Miss Shows on Philly Stages for Fall & the Holidays - Visit Philadelphia",
@@ -653,16 +661,16 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:48.322873+00:00",
       "id": "98b05cefbe0e3d1c",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-16T08:45:49.293524+00:00",
-      "attempts": 4,
+      "attempts": 5,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T01:49:27.895246+00:00",
+      "last_attempt_at": "2026-11-17T06:28:33.203747+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
       "stock_pipeline_version": 2,
-      "blocker": "Free narration service unavailable; supply local audio or retry later"
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'Norfolk countryside landscape aerial view', 9 hits for 'norfolk countryside landscape', 9 hits for 'norfolk countryside'; inspect diagnostics in review artifact"
     },
     "086cd7ab38725e97": {
       "title": "Economics of the World Cup | Ticket Prices, Revenue, Costs, & Social Impact - Britannica",
@@ -1076,16 +1084,17 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:48.865843+00:00",
       "id": "5abd758d65b5fa5e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:48:49.968684+00:00",
-      "attempts": 4,
+      "attempts": 5,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T01:49:30.747356+00:00",
+      "last_attempt_at": "2026-11-17T06:29:05.431825+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
       "script_pipeline_version": 1,
-      "stock_pipeline_version": 2
+      "stock_pipeline_version": 2,
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'Alberta oil sands landscape aerial view', 9 hits for 'alberta oil sands', 9 hits for 'alberta oil'; inspect diagnostics in review artifact"
     },
     "bcb92c282da95057": {
       "title": "Trump heads to Asia to meet with Xi and Putin amid Nvidia fallout - KGOU",
@@ -1179,18 +1188,18 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:59:10.013407+00:00",
       "id": "b371b61c2cc0b758",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:59:10.800646+00:00",
-      "attempts": 2,
+      "attempts": 3,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T01:49:25.048878+00:00",
+      "last_attempt_at": "2026-11-17T06:28:11.736972+00:00",
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
       "stock_pipeline_version": 1,
-      "blocker": "Free narration service unavailable; supply local audio or retry later"
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'Melbourne grand prix circuit corporate building exterior', 9 hits for 'melbourne grand prix', 9 hits for 'melbourne grand'; inspect diagnostics in review artifact"
     },
     "dc65dbf3c33e2286": {
       "title": "New World Development Plans Massive 11-for-1 Rights Issue at 81.5% Discount; Shares Plunge as Controlling Shareholder Commits to Full Subscription - BigGo Finance",
@@ -2002,11 +2011,11 @@
       "discovered_at": "2026-11-17T01:38:08.344171+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "55e1683ddaecffb6",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:38:15.728462+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T01:51:56.165132+00:00",
+      "last_attempt_at": "2026-11-17T06:28:08.223146+00:00",
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -2025,7 +2034,8 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "stock_pipeline_version": 2
+      "stock_pipeline_version": 2,
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'movie studio'; inspect diagnostics in review artifact"
     },
     "641e6955c5712c0f": {
       "title": "Beyond the demo: How life sciences leaders are scaling AI - McKinsey & Company",
@@ -2137,9 +2147,15 @@
       "discovered_at": "2026-11-17T01:39:14.405393+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "ad2e5099df43ef4b",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:39:29.269547+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T06:29:18.294650+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "No matching Pixabay footage for s03: 9 hits for 'city skyline'; inspect diagnostics in review artifact"
     },
     "74e76960907bec65": {
       "title": "Biden defends his support of Israel in presidential memoir, while urging it to ‘wake up’ - The Times of Israel",
@@ -2168,9 +2184,15 @@
       "discovered_at": "2026-11-17T01:39:13.834099+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "dff4c421b3d31e7c",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-17T01:39:29.308204+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T06:30:59.841011+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "AI request cap reached; job saved for next run"
     },
     "e097c1a76db13338": {
       "title": "Lindsay Clancy to face retrial next year for deaths of her three children",
@@ -2556,17 +2578,125 @@
       "status": "QUEUED",
       "created_at": "2026-11-17T05:29:36.288744+00:00",
       "attempts": 0
+    },
+    "16321fba22ea115b": {
+      "title": "Palestine Weekly: Israel’s political reshuffle as the occupation grinds on",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/17/palestine-weekly-israels-political-reshuffle-as-the-occupation-grinds-on?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T06:06:58+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T06:26:42.448267+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "16321fba22ea115b",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T06:26:58.166062+00:00",
+      "attempts": 0
+    },
+    "d83a1b893001c1f6": {
+      "title": "Tensions between US and Iran escalated again - News On AIR",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiekFVX3lxTFA4VjdFYlJuN01SNXRQUDJtdG9scVJmLXZEM2lxeTVucEVjQ2tyUWgzYkxCb2RmLXJMVVZfV2RmblhUb3lUUGRYaGNNLU5mUW5PY3BTLUFOQXdsbUlOaFdXeUM0R3VOb1BqWHNhZnFEX1R5SDVMcXgtdDFB?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T01:03:59+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T06:26:58.146749+00:00",
+      "id": "d83a1b893001c1f6",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T06:26:58.178332+00:00",
+      "attempts": 0
+    },
+    "abb1502e64cff11e": {
+      "title": "Two major Kyiv bridges hit in Russian attack, mayor says",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T05:57:38+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T06:26:41.994983+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "abb1502e64cff11e",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T06:26:58.189611+00:00",
+      "attempts": 0
+    },
+    "b8543993863e27aa": {
+      "title": "Ukraine accuses Russia of targeting rescue operation after 'double-tap' strike kills 72",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c30rk8x5g80qo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T05:59:01+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T06:26:42.012040+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "b8543993863e27aa",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T06:26:58.206456+00:00",
+      "attempts": 0
+    },
+    "d5ef0b295cffd64b": {
+      "title": "Nobel Prize - Chemistry, Discoveries, Innovations - Britannica",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB6b1BZdXp3ZFFTbFNNTl9sejAzZ1JRaHdVYkZfSHdiRW4zLUV1SGxSYWxFVTI4UXNSRThoYTcxRUl1QWxKbUxNZHNRUTJXR1B5M1RjalpXdE5rUHZtS25sazJ5V2U?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T06:26:48.015695+00:00",
+      "id": "d5ef0b295cffd64b",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T06:26:58.217959+00:00",
+      "attempts": 0
+    },
+    "b75d4a85d44b93ba": {
+      "title": "Lindsay Clancy's attorney Kevin Reddington asks Trump for pardon after mistrial - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxNcHhUaXJidlJnYm5FMXFwdDd6Z0tEZEhTVG13OGlEODIwS0xSTUMxQ2pUazVUb1Q3dElsbllZUlo0SlVkV0FJazhMV0NHdHdibkhhNlVfVDItemRkdXdidmE4TjZEelpuczNSLVAyMm1Xb3NZamNYUmFVM0Fld1F1QWtGYmxfbjZ6TWtScnJKOEFITS13N1dBRVlhMENWREpfZlFyWm5DVFNJWU3SAbABQVVfeXFMTXo5eHdBSkhCLXdLeXlySDZISnFUQUl5N1oyNnc2d1hIdnJJRi04QnVFcDJIT0dZdUx4TU5RcUFYM0IwQXpNVzVwWjREcElhQzdZOEdXVlRZZDBVUTdKQlRTR3Jud25NaF9wdWdEUWVXSlZONlVyTXMwSGs4bmE3VXhRckZFODNLUUZ0WktNdU5lWEg1ODhpdXloYm9XYm0wUVFkNzRZWjZHQUVJZmR6YV8?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T18:52:17+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T06:26:57.688583+00:00",
+      "id": "b75d4a85d44b93ba",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T06:26:58.239858+00:00",
+      "attempts": 0
+    },
+    "a152fc023f162e24": {
+      "title": "Trump's decoy flight sparked by fears of Iranian cell with shoulder-fired missile: Official - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxPOVJrZjN1UTRKcF9ENHlZclJYUlRUN3NaaG1ucnd1ektfWGpUUW05blJZdWh2NFpqSm1vYi1qY041UEtwcGZCU0ZGQUFtNjJuOW5HeTZpck81Z1FZQVZHOUhlQkVONFhQSXU5N2RlanFxSTV2S29wN0RuQmtRdWhyaWhWX0VSY2JGam1sZ0o0Vms3Q20yZnlWNlpnVmlmOUFPUE5YbFoxOGpmV19VUGxXN2RB0gG3AUFVX3lxTFBfTW5PbGhJcDg0NUJTMkdXYTV1ZTBORkhPYTNSaTNfc080ek5xcloySXdzdlVSaW0xbEpPWGs0bHc3Vk13QVRCNm1LUHFhbk9zRFptTGJtZDctMEdZWFNWRkRBRzB5SGZ0X0FQMmo0cTNqcGlSYW8zcVBLTVljUFZZdU5HT2pNekE4SzVUQktQbWtoejRPOXM1TTNyNlM2VEI5eFVMNl9oMmZrX0RrY2I5TXRTOTZnVQ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T18:52:58+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T06:26:57.717971+00:00",
+      "id": "a152fc023f162e24",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T06:26:58.264777+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-17",
     "youtube": 18,
-    "ai": 42,
-    "pixabay": 6
+    "ai": 74,
+    "pixabay": 15
   },
-  "content_cycle_index": 4,
+  "content_cycle_index": 6,
   "content_batch": {
-    "category": "movies",
+    "category": "world_news",
     "completed": 0,
     "story_keys": [],
     "media_hashes": [],
@@ -2574,26 +2704,26 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-17T05:29:36.289448+00:00",
+    "started_at": "2026-11-17T06:26:58.265270+00:00",
     "attempted_ids": [
-      "b890da7c8bb20e5f",
-      "eaad4f96e7f14af7",
-      "d1681e7170342a68",
-      "15ed27b00a04aaa4",
-      "c7342faafbcb636a",
-      "b5642575d9486d7d",
-      "9dd45c78ff119243",
-      "0354903e9a288236",
-      "864af83118fb549d"
+      "431248277a0f3c0b",
+      "c32fb0cbf637ee8b",
+      "55e1683ddaecffb6",
+      "b371b61c2cc0b758",
+      "98b05cefbe0e3d1c",
+      "5abd758d65b5fa5e",
+      "ad2e5099df43ef4b",
+      "dff4c421b3d31e7c"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "categories_deferred": [
-      "creators",
-      "science"
+      "movies",
+      "culture"
     ],
-    "finished_at": "2026-11-17T05:34:37.283885+00:00",
-    "attempted": 9,
+    "pause_reason": "AI request cap reached; job saved for next run",
+    "finished_at": "2026-11-17T06:31:49.495529+00:00",
+    "attempted": 8,
     "completed": 0
   },
   "telegram_deliveries": {
