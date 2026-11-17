@@ -1250,6 +1250,10 @@ def produce_batch(state, budget, target):
                 -int(trusted_lead), -min(supplied, 2),
                 job.get('last_attempt_at', job.get('created_at', '')))
     pending = sorted(state['jobs'].values(), key=priority)
+    # Do not enter an AI-dependent story when its persisted daily budget is
+    # already exhausted. Clipper jobs use local editing and remain eligible.
+    ai_cap = int(os.getenv('MAX_AI_CALLS', '96'))
+    ai_exhausted = budget.counts.get('ai', 0) >= ai_cap
     # Try other categories in this same run when the current category has
     # no usable candidate. Never break an in-progress three-video rotation.
     deferred = set()
@@ -1266,6 +1270,8 @@ def produce_batch(state, budget, target):
                         or len(attempted) >= max_attempts or time.monotonic() >= deadline):
                     break
                 if job_category(job) != batch['category'] or job['status'] not in ('QUEUED', 'PRODUCING', 'WAITING'):
+                    continue
+                if ai_exhausted and job.get('content_type') != 'clipper':
                     continue
                 blocker = str(job.get('blocker', '')).lower()
                 if job['status'] == 'WAITING' and any(
