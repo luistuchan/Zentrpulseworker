@@ -1974,11 +1974,11 @@
       "discovered_at": "2026-11-17T01:38:08.332665+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "5deb7b577d432c84",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:38:15.716715+00:00",
-      "attempts": 3,
+      "attempts": 4,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T07:03:39.634168+00:00",
+      "last_attempt_at": "2026-11-17T09:10:13.643355+00:00",
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -1998,7 +1998,7 @@
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
       "stock_pipeline_version": 2,
-      "blocker": "AI request cap reached; job saved for next run"
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'drone defense radar', 9 hits for 'drone defense'; inspect diagnostics in review artifact"
     },
     "55e1683ddaecffb6": {
       "title": "When will we see Robert Pattinson as Bond in cinemas?",
@@ -2186,15 +2186,15 @@
       "discovered_at": "2026-11-17T01:39:13.834099+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "dff4c421b3d31e7c",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:39:29.308204+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T06:30:59.841011+00:00",
+      "last_attempt_at": "2026-11-17T09:09:59.884757+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "AI request cap reached; job saved for next run"
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'autopsy files'; inspect diagnostics in review artifact"
     },
     "e097c1a76db13338": {
       "title": "Lindsay Clancy to face retrial next year for deaths of her three children",
@@ -2208,15 +2208,15 @@
       "discovered_at": "2026-11-17T01:39:13.850897+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "e097c1a76db13338",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:39:29.325486+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T06:52:46.746824+00:00",
+      "last_attempt_at": "2026-11-17T09:10:04.164962+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "AI request cap reached; job saved for next run"
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'courthouse exterior'; inspect diagnostics in review artifact"
     },
     "b402094ba1e87f78": {
       "title": "Trump nominates top White House aide to head watchdog agency — as Democrats feared - Politico",
@@ -2260,9 +2260,12 @@
       "discovered_at": "2026-11-17T01:47:40.528353+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "f37540a88a51a606",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:47:50.630888+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T09:10:39.405952+00:00",
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
     },
     "ee167105544e7f2f": {
       "title": "Paws and profits: NVA names new VP of clinical excellence and patient safety, Arista president earns Dallas Business Journal recognition, and more updates - DVM360",
@@ -2291,9 +2294,12 @@
       "discovered_at": "2026-11-17T01:47:40.074958+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "47826ac14de6c9af",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:47:50.686576+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T09:11:06.761764+00:00",
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
     },
     "c1805b7e46dfe240": {
       "title": "Gérard Depardieu drops appeal against sexual assault conviction",
@@ -2307,9 +2313,12 @@
       "discovered_at": "2026-11-17T01:47:40.093787+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "c1805b7e46dfe240",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:47:50.705522+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T09:11:42.322145+00:00",
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
     },
     "601df9abdcb66157": {
       "title": "Zelenskiy Says Ukraine Held New Talks With US, European Officials on Peace Prospects - U.S. News & World Report",
@@ -2353,9 +2362,12 @@
       "discovered_at": "2026-11-17T02:05:13.715514+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "187692d2ec590a9f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T02:05:24.856107+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T09:12:13.083279+00:00",
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. Service HTTP 403; no paid fallback attempted"
     },
     "573a6468fd6108b7": {
       "title": "Trump says he doesn't take 'any responsibility' for ground stop; blames tech that had 'heart attack' - ABC News - Breaking News, Latest News and Videos",
@@ -2384,9 +2396,12 @@
       "discovered_at": "2026-11-17T02:05:13.230764+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "0ec06b35361d5ffe",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T02:05:24.915597+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T09:12:38.557450+00:00",
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
     },
     "467f9d866d51a987": {
       "title": "Ashes of exiled Nobel Laureate Miguel Ángel Asturias returned to Guatemala",
@@ -3330,31 +3345,125 @@
       "status": "QUEUED",
       "created_at": "2026-11-17T09:02:24.419278+00:00",
       "attempts": 0
+    },
+    "51b735899be7f037": {
+      "title": "Mozambique opposition leader faces trial over deadly 2024 election unrest",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/crq5vl1l6z2po?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T08:53:09+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T09:09:22.678320+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "51b735899be7f037",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T09:09:28.403541+00:00",
+      "attempts": 0
+    },
+    "d9ef12b9db81e724": {
+      "title": "Key takeaways from the 14-point memorandum of understanding between US, Iran - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMipgFBVV95cUxPV0JvcU4zV3c4MHE0N1B4R0pfM2luakY0Z3hXVnRrYTJJVnJnWjJpTEQtYjZqVHVpWUFjd3BNVVRuelVzYkdEOERLR0pkUzQwRDJjTXE1STdHNXM2RVdJVUhrTnVTNWVrSTBkdUk4UnRpNFVvejF3c1V1UWlHakw4M0xlRmc5Q2t1TVVMdTFDSllvV2dOTTJSZFFybHB4SlZyLWhWM3NB0gGrAUFVX3lxTE1KZVRsT3NjbnhWMEo5Z21uN0lFOVdSb0hhTHl5UXlzdFJMX25NdTY5Y3NOQnNmN2lFVlpHQWZFbElTSkhHb0xNNHNuS1hicGhIZXg2cG9ZX3M5bFZYaHBjMWYwYjVYc1Q3SWpTZ2J3eWFTd1dnc1Y2NDVKTDlQNG9qVlprYVJvaWljcFRZQnpfUk5CMy1yVmk0WjhadUZDUlBPVWtUTDU1UVBsbw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T20:51:58+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T09:09:26.678751+00:00",
+      "id": "d9ef12b9db81e724",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T09:09:28.442923+00:00",
+      "attempts": 0
+    },
+    "dbc0297f66c7c434": {
+      "title": "Pope Leo hit by flying rosary while waving to crowds in Peru",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/videos/ckpdwn23j5j8o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T21:12:13+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T09:09:22.811093+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "dbc0297f66c7c434",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T09:09:28.464461+00:00",
+      "attempts": 0
+    },
+    "07b59a9379cf4153": {
+      "title": "BBC launches programme for children forced from school by bandits and poverty in West Africa",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c3pw450ndyjqo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T00:08:19+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T09:09:22.907626+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "07b59a9379cf4153",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T09:09:28.494489+00:00",
+      "attempts": 0
+    },
+    "d2dd0571535bd3f7": {
+      "title": "'Spider-Man: Brand New Day's end-credit scene, explained - Mashable",
+      "category": "movies",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxPY3BRMThldHBLZ1EwcTIxVGhORkQ1dXBHZ0lJRW5EVEFxbkZUOHlSR0Q1emh2d3ZMUnllTXM5dXpwQVhCX3JPVGpHRFNzQ2hwZ2V0OUlCLUdOcW4xM2FDQkdtbHcxdFMyem1aeFhPSUFUVTh6V3JJVV9tU0s0TGUxNmQ0el9VNDlCbnhWamJ0cV8?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 1,
+      "discovered_at": "2026-11-17T09:09:23.790622+00:00",
+      "id": "d2dd0571535bd3f7",
+      "status": "WAITING",
+      "created_at": "2026-11-17T09:09:28.515683+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T09:09:28.522082+00:00",
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 0. Google News article decoding unavailable; retry later"
     }
   },
   "budget": {
     "day": "2026-11-17",
-    "youtube": 18,
-    "ai": 96,
-    "pixabay": 18
+    "reset_timezone": "America/Los_Angeles",
+    "youtube": 4,
+    "ai": 8
   },
-  "content_cycle_index": 4,
-  "content_batch": null,
+  "content_cycle_index": 9,
+  "content_batch": {
+    "category": "president",
+    "completed": 0,
+    "story_keys": [],
+    "media_hashes": [],
+    "source_urls": []
+  },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-17T09:02:24.420117+00:00",
-    "attempted_ids": [],
+    "started_at": "2026-11-17T09:09:28.516593+00:00",
+    "attempted_ids": [
+      "d2dd0571535bd3f7",
+      "dff4c421b3d31e7c",
+      "e097c1a76db13338",
+      "5deb7b577d432c84",
+      "f37540a88a51a606",
+      "47826ac14de6c9af",
+      "c1805b7e46dfe240",
+      "187692d2ec590a9f",
+      "0ec06b35361d5ffe"
+    ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "categories_deferred": [
-      "world_news",
-      "president",
-      "true_events",
-      "music",
-      "science"
+      "movies",
+      "world_news"
     ],
-    "finished_at": "2026-11-17T09:02:24.425548+00:00",
-    "attempted": 0,
+    "finished_at": "2026-11-17T09:13:04.029837+00:00",
+    "attempted": 9,
     "completed": 0
   },
   "telegram_deliveries": {
