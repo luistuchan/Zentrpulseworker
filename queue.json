@@ -1472,9 +1472,9 @@
       "id": "97f08a638402365d",
       "status": "WAITING",
       "created_at": "2026-11-16T17:55:47.930822+00:00",
-      "attempts": 3,
+      "attempts": 4,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T01:38:15.853151+00:00",
+      "last_attempt_at": "2026-11-17T01:40:02.399258+00:00",
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -1560,11 +1560,11 @@
       "discovered_at": "2026-11-16T17:55:43.926172+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "258ab8d59ad6c8b6",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T17:55:47.968199+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-16T23:20:10.898298+00:00",
+      "last_attempt_at": "2026-11-17T01:39:29.363076+00:00",
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -1583,7 +1583,8 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "stock_pipeline_version": 2
+      "stock_pipeline_version": 2,
+      "blocker": "No matching Pixabay footage for s02: 9 hits for 'street'; inspect diagnostics in review artifact"
     },
     "4262db185452f20e": {
       "title": "Best Sennheiser Headphones 2026 - Every Category - Audiophile ON",
@@ -2017,11 +2018,105 @@
       "status": "QUEUED",
       "created_at": "2026-11-17T01:38:15.850371+00:00",
       "attempts": 0
+    },
+    "ad2e5099df43ef4b": {
+      "title": "UK seeks closer ties with EU after Brexit fail",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/17/uk-seeks-closer-ties-with-eu-after-brexit-fail?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T00:30:21+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T01:39:14.405393+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "ad2e5099df43ef4b",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:39:29.269547+00:00",
+      "attempts": 0
+    },
+    "74e76960907bec65": {
+      "title": "Biden defends his support of Israel in presidential memoir, while urging it to ‘wake up’ - The Times of Israel",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQWTVmSzFYVDZibDVPaTRDS2tvbEowT2R0UFhwOWM0VUJUVjBwU1FaaW1HZDRHc1FCZWxqdDdQZEU0YlBBdGpDS3pDWTlSZVUtZGg5WkJDRF91cEluLXpQbTZJdmg3NGs5ekhZaGh1Qlk2SkctT0FOaHRtbUN1bDdQX0I4TUw2Wno1SmltcUhmVzRUbUxzZjFRUmhaMnZ3d3VkTndvTDhNYlYyXzdob3VqZXlYblowWVHSAbwBQVVfeXFMUFFqWVNGY2I4YlVRYk9QOFdxOWJYZGQ5Q0xXaVItUTRfLU44ZHNhVkh6bTJmaHN1djB1dmlpcGk5OTdNLWpoeUxaZ3I0YkxyVTRMZVRzWndTUzdfOVRxRXpmZEY3b3hSTFJ1VXM3RGZsSWtpVHFVd1lERS04b3FUNzgyd1NnUGF2dUt2cmtWSUtHWk1JOEF3NWZjN1YtaWZXajYxZDhEMkFKd0xpRHJfRGR3clREbFJXa0tONno?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T00:42:19+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T01:39:27.712393+00:00",
+      "id": "74e76960907bec65",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:39:29.291492+00:00",
+      "attempts": 0
+    },
+    "dff4c421b3d31e7c": {
+      "title": "Forensic expert says his analysis of autopsy photos suggests Epstein was killed",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c5n4exg1kkmyo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T20:33:57+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T01:39:13.834099+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "dff4c421b3d31e7c",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:39:29.308204+00:00",
+      "attempts": 0
+    },
+    "e097c1a76db13338": {
+      "title": "Lindsay Clancy to face retrial next year for deaths of her three children",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cw5y1v8de35go?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T19:30:30+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T01:39:13.850897+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "e097c1a76db13338",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:39:29.325486+00:00",
+      "attempts": 0
+    },
+    "b402094ba1e87f78": {
+      "title": "Trump nominates top White House aide to head watchdog agency — as Democrats feared - Politico",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiiwFBVV95cUxQUnd0eEloSUEwVm9rTGVLMkliV3ZSNWZNWTBnMVIwQkVrbWJRbDNJVDBFcGR1M0dtcFczRkFyZTFPZ2diVFMzNE5oamFfTENSd1NUVzhNcktLVEVyWFRSajJzcFA0TmoxMHVnQlY0eE5KS3lwSU9mOVVLTThnY3dReHpLRGd0VXhGMnpN?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T21:37:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T01:39:27.215308+00:00",
+      "id": "b402094ba1e87f78",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:39:29.345751+00:00",
+      "attempts": 0
+    },
+    "f887c5bd4952cb6a": {
+      "title": "US envoy Kushner says progress made in Ukraine talks - Reuters",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMioAFBVV95cUxNVmhPQUFLblhESV9CWnFmX2ZONzdHOTFMQkhHMW9hUzNoYlp6ZU5BUnE5b1pJZ05TbjFOODNDa2VKTW9UMzRETE5hdVBhSzVmLTJjalRFUjA2RERZdW5GS0lXOUdMM0RLRmIyWndqWUFrUjA3VFZISUMtTHdVMjQzYUJreWdKaGFnSV8xbkR5NWs4b2VBTE1BMVJlZlNvdGl3?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T19:21:53+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T01:39:27.233342+00:00",
+      "id": "f887c5bd4952cb6a",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:39:29.360717+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-17",
-    "youtube": 4
+    "youtube": 8,
+    "ai": 5
   },
   "content_cycle_index": 0,
   "content_batch": {
@@ -2033,15 +2128,16 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-17T01:38:15.850859+00:00",
+    "started_at": "2026-11-17T01:39:29.361244+00:00",
     "attempted_ids": [
+      "258ab8d59ad6c8b6",
       "97f08a638402365d"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "pause_reason": "Free narration service unavailable; supply local audio or retry later",
-    "finished_at": "2026-11-17T01:38:18.775409+00:00",
-    "attempted": 1,
+    "finished_at": "2026-11-17T01:40:22.226136+00:00",
+    "attempted": 2,
     "completed": 0
   },
   "telegram_deliveries": {
