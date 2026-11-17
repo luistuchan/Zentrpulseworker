@@ -441,8 +441,13 @@ def process(entry, target, *, api):
         'shots': shots, 'quality': quality, 'selection': 'sentence-bounded highlight heuristic; no virality claim',
         'publishing': 'disabled; no upload endpoint is called'}
     api.atomic_json(output.parent / 'review.json', review)
-    (output.parent / 'caption.txt').write_text(entry['title']+'\n\nSource: '+attribution_url+'\nCreator: '
-        +attribution['creator']+'\nLicense: '+attribution['license']+'\nEdited excerpt; review context and captions.\n')
+    # Credit the actual originating channel without fabricating a social handle.
+    creator_credit = attribution['creator'].strip() or 'Original creator (verify before posting)'
+    credit_caption = (entry['title'] + '\n\nCredit: ' + creator_credit +
+                      '\nOriginal video: ' + attribution_url +
+                      '\nEdited highlight with reframing and captions.\n'
+                      'Verify creator permission and any third-party music before publishing.\n')
+    (output.parent / 'caption.txt').write_text(credit_caption)
     api.run(['ffmpeg','-v','error','-y','-i',str(output),'-vf','thumbnail,scale=270:480',
              '-frames:v','1',str(output.parent / 'preview.jpg')])
     entry.update(status='REVIEW_REQUIRED', video_sha256=review['video_sha256'],
