@@ -90,14 +90,26 @@ def source_media(entry, folder, api):
             and cached.get('sha256') == api.digest(path)):
         return path, cached
     if p.hostname in ('www.youtube.com', 'youtube.com', 'youtu.be'):
-        try:
-            api.run([sys.executable, '-m', 'yt_dlp', '--ignore-config', '--no-playlist',
-                 '--max-filesize', '250M', '--match-filter', 'duration <= 1200 & !is_live',
-                 '--format', 'b[height<=720][ext=mp4]/b[height<=720]',
-                 '--output', str(folder / 'source.%(ext)s'), '--write-info-json',
+        # Prefer a combined MP4, then allow separately served video/audio
+        # streams when FFmpeg can merge them. Do not bypass restricted access.
+        formats = (
+            'b[height<=720][ext=mp4]/b[height<=720]',
+            'bv*[height<=720]+ba/b[height<=720]/b',
+        )
+        download_ok = False
+        for fmt in formats:
+            try:
+                api.run([sys.executable, '-m', 'yt_dlp', '--ignore-config', '--no-playlist',
+                     '--max-filesize', '250M', '--match-filter', 'duration <= 1200 & !is_live',
+                     '--format', fmt, '--merge-output-format', 'mp4',
+                     '--output', str(folder / 'source.%(ext)s'), '--write-info-json',
                      '--no-warnings', '--quiet', '--no-progress', '--', url], timeout=360)
-        except api.Hold:
-            raise api.Hold('Clipper source could not be downloaded; supply local footage or another source') from None
+                download_ok = True
+                break
+            except api.Hold:
+                continue
+        if not download_ok:
+            raise api.Hold('Clipper source unavailable in both combined and split formats; try another authorized source') from None
         info = api.load(folder / 'source.info.json', {})
         if not info:
             raise api.Hold('Clipper source unavailable or exceeds 20-minute download limit')
