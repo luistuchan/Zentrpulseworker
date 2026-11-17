@@ -507,16 +507,16 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:48.554144+00:00",
       "id": "e0566f04476019e4",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-16T08:45:49.246334+00:00",
-      "attempts": 2,
+      "attempts": 3,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-16T12:00:42.322801+00:00",
+      "last_attempt_at": "2026-11-17T06:52:41.116382+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
       "script_pipeline_version": 1,
-      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
+      "blocker": "Need evidence from two distinct source domains; independence still needs review"
     },
     "a598287b8ec3135f": {
       "title": "Martine Moise, wife of assassinated ex-Haitian leader, registers for presidential election - BBC",
@@ -1190,15 +1190,15 @@
       "id": "b371b61c2cc0b758",
       "status": "HOLD",
       "created_at": "2026-11-16T11:59:10.800646+00:00",
-      "attempts": 3,
+      "attempts": 4,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T06:28:11.736972+00:00",
+      "last_attempt_at": "2026-11-17T06:52:10.505589+00:00",
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "stock_pipeline_version": 1,
+      "stock_pipeline_version": 2,
       "blocker": "No matching Pixabay footage for s01: 9 hits for 'Melbourne grand prix circuit corporate building exterior', 9 hits for 'melbourne grand prix', 9 hits for 'melbourne grand'; inspect diagnostics in review artifact"
     },
     "dc65dbf3c33e2286": {
@@ -1974,11 +1974,11 @@
       "discovered_at": "2026-11-17T01:38:08.332665+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "5deb7b577d432c84",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:38:15.716715+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T01:51:09.201305+00:00",
+      "last_attempt_at": "2026-11-17T06:52:19.791537+00:00",
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -1997,7 +1997,7 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'drone defense radar', 9 hits for 'drone defense'; inspect diagnostics in review artifact"
     },
     "55e1683ddaecffb6": {
       "title": "When will we see Robert Pattinson as Bond in cinemas?",
@@ -2149,12 +2149,13 @@
       "id": "ad2e5099df43ef4b",
       "status": "HOLD",
       "created_at": "2026-11-17T01:39:29.269547+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T06:29:18.294650+00:00",
+      "last_attempt_at": "2026-11-17T06:51:40.495254+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
+      "stock_pipeline_version": 2,
       "blocker": "No matching Pixabay footage for s03: 9 hits for 'city skyline'; inspect diagnostics in review artifact"
     },
     "74e76960907bec65": {
@@ -2206,9 +2207,15 @@
       "discovered_at": "2026-11-17T01:39:13.850897+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "e097c1a76db13338",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-17T01:39:29.325486+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T06:52:46.746824+00:00",
+      "youtube_signal": {
+        "status": "not_checked"
+      },
+      "blocker": "AI request cap reached; job saved for next run"
     },
     "b402094ba1e87f78": {
       "title": "Trump nominates top White House aide to head watchdog agency — as Democrats feared - Politico",
@@ -2686,13 +2693,106 @@
       "status": "QUEUED",
       "created_at": "2026-11-17T06:26:58.264777+00:00",
       "attempts": 0
+    },
+    "69c40d9ffa81ebb0": {
+      "title": "Stories of survival and pain: Children amid Israel’s war on south Lebanon",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/features/2026/11/17/stories-of-survival-and-pain-children-amid-israels-war-on-south-lebanon?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T05:50:29+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T06:51:22.591360+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "69c40d9ffa81ebb0",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T06:51:40.347035+00:00",
+      "attempts": 0
+    },
+    "7c790b4af2da7eb9": {
+      "title": "Trump's arch construction to run 20 hours a day for 2 to 3 years, documents show - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxNalpNelRIVEF4anhfcU44Ry04M251S01ydmhqNHcxNlBtZlRZQXlyT3huOVNKQ1dIZGtEUzlfZ0JoaDlJdk8wQl8wdzNnaTY0X1pyRktwQVBDc1NieTNkTjJxYXpkdzVEcU02c0h5Q19uSEhHT2JLWWIybVBqNFotMndwOGU5dlcwUXlReXFXN09rOHVFUHfSAZsBQVVfeXFMTUJoUnQzREktWVczbEUwVjdxTVZvRElGS21JZ2RvZ2s2WTMtV3lSNzI1QWpWODlZak92T2JMeWkxbDhLbC1FT0M0U3otd2xVeVlqTmVYdXZfcTRxNW04X19NejdYaFBKSUVrWUVuNk12Q2tDbU1DRy00cnc5Mm0xQTA0LXczWEs4NlhEbWFSMXc0V2p5QXNXUllqRXc?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T19:39:19+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T06:51:40.132495+00:00",
+      "id": "7c790b4af2da7eb9",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T06:51:40.379583+00:00",
+      "attempts": 0
+    },
+    "fb96153d7f4711c2": {
+      "title": "Imran Khan seeks urgent medical care fearing he 'may not return alive'",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cr894xq5yeyko?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T01:26:01+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T06:51:21.987657+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "fb96153d7f4711c2",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T06:51:40.399809+00:00",
+      "attempts": 0
+    },
+    "180ca557e37c5f58": {
+      "title": "California sues OpenAI over Hugging Face attack",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c6wy4xv2mxglo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T23:12:24+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T06:51:22.016838+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "180ca557e37c5f58",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T06:51:40.414175+00:00",
+      "attempts": 0
+    },
+    "4cc0bd6a3efcc0ce": {
+      "title": "Trump claims fallen soldiers said 'we cannot let Iran have a nuclear weapon' - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMipAFBVV95cUxNQjg5NHl4dWUyQ0JyWnVDQ2dkbHFxaGgycjRNcy1OYktOQXlaLUxqWk1aT2ZEdlVoWm9TakEwSXA3aTAwTmFjdXZOZEhHdzE2WVZOMzBXaHZvMU9FYzBqZ25Fb1hXbHBEdVcxWTZ6OG5xcmIzUEhhdkp3VEUxai11c09GZDctSVVaQUhsblhYUThGYWRwem91bE4yWU96QWJlcC1OMtIBqgFBVV95cUxQeDZUX3JYWnNEUjl0OXJpMmhodjg4TVFmbkg5UmxOMjdMRTFsOXVGUUFfbExtUWx6T1JOLTBBTDhwaTNMRzZ5REtCWHcyXzNjMlAyUU5yWlJpTkZwZnBJWXl1OXpBUGhMb1ZZd3dVNnhpbWQtVjc0U096VlVpM0d0dldmckpZVTZGVXd2VW02VnM1VWNyX3RwZGhpWU1jZ3hZWUxncGI1RW8xZw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T16:06:17+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T06:51:39.735789+00:00",
+      "id": "4cc0bd6a3efcc0ce",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T06:51:40.447067+00:00",
+      "attempts": 0
+    },
+    "9b3f8500bd5235ae": {
+      "title": "DOJ appears to have withheld some Epstein documents containing allegations against Trump, Oversight Democrats say - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMirAFBVV95cUxNcllvSGl3d1cyakctU3hPYkdpaElOT29FSU5pYWVGV2dBSkdZMzlJdXhnRldTaHNrN09YMUR3dmxnRUdaZkc5NC1kU2MyT0txNEw0YUZobmdoZFJQc0dBWm80RlZva3dvRkdqSlkzMzRWM0tfWlE0anhVZXdsOVRRMTh3MlBWLVRycnh3UGZCVEkwNjB6UDMtVGVfdFRaYTY1M05lb3NtVHVybTUz0gGyAUFVX3lxTE1fQVJiVzZWZUV4XzlhS0dKaEprWEhnQkJyTEdKZXRuMG56alVoZUhSeU9FZGFZNVlqNHJ6VTRJU3pJOWdnRkpsMTk0N25nbGtrMDl5RFVGdDh3LXE3MzhhcHdIQm9qaFlpSmRoU3hxdWNaQTZBdXlXRVdkcVpUSXJhZllTSmNvbnZmVlExcldhcXRLRTh2N0hJdWt3QUZnaUdkMTdmZUxkMUpVaXJEWDh5NHc?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T19:16:42+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T06:51:39.781908+00:00",
+      "id": "9b3f8500bd5235ae",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T06:51:40.487529+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-17",
     "youtube": 18,
-    "ai": 74,
-    "pixabay": 15
+    "ai": 96,
+    "pixabay": 18
   },
   "content_cycle_index": 6,
   "content_batch": {
@@ -2704,26 +2804,19 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-17T06:26:58.265270+00:00",
+    "started_at": "2026-11-17T06:51:40.488273+00:00",
     "attempted_ids": [
-      "431248277a0f3c0b",
-      "c32fb0cbf637ee8b",
-      "55e1683ddaecffb6",
-      "b371b61c2cc0b758",
-      "98b05cefbe0e3d1c",
-      "5abd758d65b5fa5e",
       "ad2e5099df43ef4b",
-      "dff4c421b3d31e7c"
+      "b371b61c2cc0b758",
+      "5deb7b577d432c84",
+      "e0566f04476019e4",
+      "e097c1a76db13338"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "categories_deferred": [
-      "movies",
-      "culture"
-    ],
     "pause_reason": "AI request cap reached; job saved for next run",
-    "finished_at": "2026-11-17T06:31:49.495529+00:00",
-    "attempted": 8,
+    "finished_at": "2026-11-17T06:53:43.287510+00:00",
+    "attempted": 5,
     "completed": 0
   },
   "telegram_deliveries": {
