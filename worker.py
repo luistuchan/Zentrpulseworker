@@ -18,6 +18,7 @@ import ipaddress
 import json
 import os
 from pathlib import Path
+from zoneinfo import ZoneInfo
 import re
 import shutil
 import socket
@@ -413,7 +414,8 @@ class Budget:
     """Persistent per-UTC-day request caps, including failed calls/retries."""
     def __init__(self, state):
         self.state = state
-        day = datetime.now(timezone.utc).strftime('%Y-%m-%d')
+        # Match Gemini's midnight Pacific daily-quota reset, including daylight saving time.
+        day = datetime.now(ZoneInfo('America/Los_Angeles')).strftime('%Y-%m-%d')
         if state.get('budget', {}).get('day') != day:
             state['budget'] = {'day': day}
         self.counts = state['budget']
