@@ -3036,6 +3036,99 @@
       "status": "QUEUED",
       "created_at": "2026-11-17T07:15:37.076016+00:00",
       "attempts": 0
+    },
+    "fdccd901023b34f2": {
+      "title": "The Red Crabs of Christmas Island",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/video/newsfeed/2026/11/17/the-red-crabs-of-christmas-island?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T05:08:08+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T07:18:11.923319+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "fdccd901023b34f2",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:18:21.636806+00:00",
+      "attempts": 0
+    },
+    "28a158836ad49906": {
+      "title": "U.S. to Clamp Down On AI Chip Loophole Ahead Of Trump Meeting With Xi - Time Magazine",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMihgFBVV95cUxNYU5GWVh2bE4xM0M3OE1Ca2ZEZFlKUzFWWDBSSHBnbElDRHowLVk4N0pMNEt4ZlJ0anR3Qlk3Z3JEUlNFc2tFT2YwN2dsMzJfa1ZVRzhnWXY2SFFmalVONW4zeXVGcG9MVGU3TDYtM3VUTWExU1ZreWdNNHZPTE01dmV5MXB4Zw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T17:58:39+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T07:18:20.723022+00:00",
+      "id": "28a158836ad49906",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:18:21.671056+00:00",
+      "attempts": 0
+    },
+    "76fa51823a3c10ef": {
+      "title": "Kidnap, child marriage and poverty: Why millions of Nigerian children can't go to school",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c3pw450ndyjqo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T00:08:19+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T07:18:11.642752+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "76fa51823a3c10ef",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:18:21.706159+00:00",
+      "attempts": 0
+    },
+    "2641fb0fe4c5f6bf": {
+      "title": "The AI start-ups fixing India's broken roads and messy land records",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c820vnln2lzpo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T23:25:53+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T07:18:11.675071+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "2641fb0fe4c5f6bf",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:18:21.737794+00:00",
+      "attempts": 0
+    },
+    "84b17fb77da90552": {
+      "title": "Trump's proposed arch gets preliminary approval from key agency - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPZ1Y2czdrLWl3UlpsNWVsS3d5VjlEZDc2U1BEUUhKY3NYTWlTTjJ2WjBBOEt6cjIzZ2kyc0ozTkZwRmo5bXpxTUdsMzNDOVNnSHVjTldhWlJ5THlSY1dDZXhVNk51empzWW5lWWFjUzBFRFdXYktLS0JqM0tVNGFJZ0hxbkZicUE4X2dKMEFIaE5sRG5CbkNrZkpBaERrSUpKQk5RVGkyZkTSAa4BQVVfeXFMTVJlcmM3a1B5d2xWTmM3RDVOWmtWYnVCdlg1cFB2c2lLNTUtT3pqeVF4b0hJN1E4RmF4Z05SWEpyNTdCRmUwWFZDZXpka3I5RWtoNEFqdGlIbkkyMHZkZm90V3lUWG9UekhlMW5YclFmR0g5a2k3cW5OaWpBRjBHQVh5Vm1oS2x5QXdWbEd6V002Mk9kOHB4bW5iNERYdU02UEFucnBrdEQ3ZGRRTWln?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T15:21:57+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T07:18:21.292493+00:00",
+      "id": "84b17fb77da90552",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:18:21.782365+00:00",
+      "attempts": 0
+    },
+    "9e04d272f810457b": {
+      "title": "Supreme Court allows cancellation of TPS for Haitians, Syrians, as attorneys warn of impact on thousands - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQNEJzVDRVTmxwWVQxbDlhREFTSVdTdk40cDQtS2ZSYmtxLUlFWS1YWDY0SVBoeGJaVnZDTVNJbUxwOVFxOWxJQXpVb0YxQXJod19UWXIwNjRjc1F0WGR4dzF6WWtiLVRlRDRCZXoyV2tBMnoyOXZuS05fTEZURVV1U2tzSW0tUk8yXzhLRHR0Q01Pcms4OGt0T05KWi02eS1Uc0FTNXh0YldpbkNqTVJYZGlBU2k4UHfSAbwBQVVfeXFMTWVUalZudG02Mko3SHA4azNJT0lBaF9JQ3ZhMTN5X25EUUF2RXoya2lOd3JFdWh3d25xQVlDQXFvV2ViZ0xUMVVxQUxoVTZSSDkwQmp1eHhORW1iMkJ1UjdxUGlrNGkwaUxEUzhoaWFMWlp5V1JtMXdmamxaUlhvcUNwaG53YmJlV01meUFMMG1nWUoyclZrSi1SNVpieWI4OW1naUhGSGIwNldBd0NKMjgxeGV2UW5wUlVsYV8?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T15:10:37+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T07:18:21.356235+00:00",
+      "id": "9e04d272f810457b",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T07:18:21.841848+00:00",
+      "attempts": 0
     }
   },
   "budget": {
@@ -3044,7 +3137,7 @@
     "ai": 96,
     "pixabay": 18
   },
-  "content_cycle_index": 6,
+  "content_cycle_index": 0,
   "content_batch": {
     "category": "world_news",
     "completed": 0,
@@ -3054,15 +3147,17 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-17T07:15:37.076713+00:00",
+    "started_at": "2026-11-17T07:18:21.842830+00:00",
     "attempted_ids": [],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "categories_deferred": [
       "world_news",
-      "science"
+      "president",
+      "true_events",
+      "music"
     ],
-    "finished_at": "2026-11-17T07:15:37.082066+00:00",
+    "finished_at": "2026-11-17T07:18:21.853740+00:00",
     "attempted": 0,
     "completed": 0
   },
