@@ -108,13 +108,15 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T06:30:43.870391+00:00",
       "id": "9f0e6db268e93a0c",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-14T06:30:43.880904+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "youtube_signal": {
         "status": "not_checked"
       },
-      "source_pipeline_version": 1
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T18:01:44.565787+00:00",
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
     },
     "4264468155308d0d": {
       "title": "What Is “Ezio’s Family” in Assassin’s Creed? Composer and Theme Explained - RouteNote",
@@ -126,13 +128,15 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T06:30:43.872170+00:00",
       "id": "4264468155308d0d",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-14T06:30:43.881621+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "youtube_signal": {
         "status": "not_checked"
       },
-      "source_pipeline_version": 1
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T18:02:17.500140+00:00",
+      "blocker": "Gemini model gemini-3.5-flash-lite: Network request failed after bounded retries"
     },
     "b890da7c8bb20e5f": {
       "title": "xQc explains what his viral “six console” rant was really about - Dexerto",
@@ -171,9 +175,9 @@
       "headline_score": 0,
       "discovered_at": "2026-11-14T06:30:43.384449+00:00",
       "id": "43fb6481ef119e61",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-14T06:30:43.883409+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -192,7 +196,9 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "source_pipeline_version": 1
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T17:57:05.402934+00:00",
+      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
     },
     "6832207212ec0e88": {
       "title": "New Genome Studies Revisit How Andes Hantavirus Spread on a Cruise Ship - Nature World News",
@@ -204,15 +210,17 @@
       "headline_score": 0,
       "discovered_at": "2026-11-14T06:30:43.386524+00:00",
       "id": "6832207212ec0e88",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-14T06:30:43.884890+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "source_pipeline_version": 1
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T17:57:55.458762+00:00",
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
     },
     "15ed27b00a04aaa4": {
       "title": "The mystery of how hair knows where to grow may finally be solved - Science Daily",
@@ -259,9 +267,12 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T17:29:08.566644+00:00",
       "id": "0d3903eaaa721d2d",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-14T17:29:08.576584+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T18:05:24.059443+00:00",
+      "blocker": "Free narration service unavailable; supply local audio or retry later"
     },
     "e95fac783fd7233f": {
       "title": "Behind The Curtain - People's Defender",
@@ -438,12 +449,12 @@
       "headline_score": 1,
       "discovered_at": "2026-11-16T02:18:43.900993+00:00",
       "id": "786c160a985a95b0",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-16T02:18:44.183613+00:00",
       "attempts": 1,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-17T09:56:10.918755+00:00",
-      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
+      "blocker": "News candidate expired; discover a recent story"
     },
     "b5642575d9486d7d": {
       "title": "What would the Earth's evolution have looked like without life? - Universe Space Tech",
@@ -498,12 +509,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T02:18:43.886629+00:00",
       "id": "870be4fd937a8c6d",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-16T02:18:44.194997+00:00",
       "attempts": 1,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-17T09:57:09.742810+00:00",
-      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
+      "blocker": "News candidate expired; discover a recent story"
     },
     "e0566f04476019e4": {
       "title": "Energy to 2060: Africa’s dilemma, Nigeria’s strategic imperative - Businessamlive",
@@ -778,9 +789,12 @@
       "headline_score": 1,
       "discovered_at": "2026-11-16T10:36:11.777709+00:00",
       "id": "0935eff17b9774de",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.784978+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T17:58:19.325434+00:00",
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
     },
     "3a44bdb665e0ff78": {
       "title": "Hair Relaxer Lawsuit Settlement | November 2026 Litigation Update - Lawsuit Information Center",
@@ -1149,9 +1163,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:49.618829+00:00",
       "id": "a8d17b40121263e1",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:48:49.993385+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "968d462433f4ef19": {
       "title": "The law must contribute to realizing the country's major development goals. - Vietnam.vn",
@@ -1515,9 +1530,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T12:47:36.599218+00:00",
       "id": "6acb0083e97f714d",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T12:47:37.009237+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "1ca49f720c85f289": {
       "title": "Seattle to rename Jackson Park, citing former president’s forced removal of Native peoples - KOMO",
@@ -2580,9 +2596,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T05:29:33.773429+00:00",
       "id": "2f9dfe13e5fdc186",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-17T05:29:36.191482+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T17:58:48.223424+00:00",
+      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
     },
     "4861c924d73d37f4": {
       "title": "Folk music - Performance, Characteristics, Traditions - Britannica",
@@ -2904,9 +2923,12 @@
       "headline_score": 1,
       "discovered_at": "2026-11-17T07:03:36.487477+00:00",
       "id": "29672f52ba101f07",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:03:39.566112+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T17:59:49.437378+00:00",
+      "blocker": "Editor rejected candidate: The candidate data contains only one valid source domain with enough usable textual evidence; the second source is an entirely unrelated animated movie review (Justice League Dark:"
     },
     "8b9587d3b1af2ce3": {
       "title": "Trump signs executive order renaming Lake Ontario to 'Lake America' - ABC News - Breaking News, Latest News and Videos",
@@ -3339,9 +3361,12 @@
       "headline_score": 1,
       "discovered_at": "2026-11-17T09:02:22.391722+00:00",
       "id": "6d7895ef328280ad",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:02:24.364859+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T18:00:49.148102+00:00",
+      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
     },
     "0945926769a2e28b": {
       "title": "Discover all the heavy metal bands nominated for the 2027 Grammy Awards - Chaoszine",
@@ -3546,17 +3571,126 @@
       "status": "QUEUED",
       "created_at": "2026-11-17T09:55:34.221462+00:00",
       "attempts": 0
+    },
+    "c26a76aa1c7a9505": {
+      "title": "Has empire shaped today’s world?",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/video/doha-debates/2026/11/17/has-empire-shaped-todays-world?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T17:45:00+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T17:56:59.500030+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "c26a76aa1c7a9505",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T17:57:05.242523+00:00",
+      "attempts": 0
+    },
+    "4e0af31176414a55": {
+      "title": "Trump’s Whirlwind Asia Trip Begins in the Philippines - The New York Times",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMickFVX3lxTE5tNUQ3Um9LcHZ1UHlmVV9aN0xadkRYbjZuallvUnd6dk55TnlCajMydm0wWVVpVk5NZjlTUU90UnhhNUxwTE5JTVlXTVVBeVpSNTB1RW1BWk9SYi1ZaFVWWXpUWFFCZ1Zfem1xWkRkZDl5QQ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T17:51:27+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T17:57:02.996080+00:00",
+      "id": "4e0af31176414a55",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T17:57:05.268746+00:00",
+      "attempts": 0
+    },
+    "cd6104ec413243a6": {
+      "title": "Putin's Crimean Bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cw772jk4rvmxo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T16:56:38+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T17:56:58.805007+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "cd6104ec413243a6",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T17:57:05.298753+00:00",
+      "attempts": 0
+    },
+    "b9a0fd865f8c7476": {
+      "title": "How the attack on Crimean Bridge unfolded",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/crz9dgz28zwdo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T15:38:10+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T17:56:58.820758+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "b9a0fd865f8c7476",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T17:57:05.314378+00:00",
+      "attempts": 0
+    },
+    "6ca56b2ac47c0538": {
+      "title": "Plate tectonics - Earth's Layers, Crust, Mantle - Britannica",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMickFVX3lxTE9OU2NiZFp6ZENiNjBJWUJ0TmszSGhfRG1fekhnYWpnY3VFSWw1b2gyT1lfa3QzZ1h1Wk10bW15eFVaTWZQRHBMYU9vOGRudjRoZEFGRzdKNDJXZ05iVnl2NWthdEdaQ2lub0VmbEppYnRiQQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T17:57:01.358176+00:00",
+      "id": "6ca56b2ac47c0538",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T17:57:05.333613+00:00",
+      "attempts": 0
+    },
+    "750cbccf061aef51": {
+      "title": "Trump arrives in Philippines to kick off Asia trip with economic deals and talks with allies - ABC7 New York",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOZG9xZDhXTVFLLVVBSjZ0cDJYVWRzUFVQMWxaOGlMYW81RHJsdERBdU9yMGEtbk1INEJyb0Y5WjQ0ZEdnVHdidmtxbXV3a09icnR4dFU3bmdvU29oQXltcHJaeGlSMlJ0OVQ4N3J1Tkx6M0FKWnhTZXR5ZlgwZXl1WWNnaF95UnpkVlZ4aDc3dkVxcjdvdzBaUkFsWXNMRU9MaEFXc0k2OTFlR0E?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T12:24:46+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T17:57:02.934518+00:00",
+      "id": "750cbccf061aef51",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T17:57:05.369876+00:00",
+      "attempts": 0
+    },
+    "5d4f836a72d454d1": {
+      "title": "Trump arrives in Manila ahead of talks with Putin and Xi in China - BBC",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiW0FVX3lxTE43eTNySUF6Qk5WeER2eTkzNGpTb3JpZFBpZGppak80Q25WYm9LMlVLRVZ3UGJIVDN4aXZsX2N4c2l2ZFBQV2xBdDlySTgwZENrNzhybW82djVGYlE?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T12:54:32+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T17:57:02.964605+00:00",
+      "id": "5d4f836a72d454d1",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T17:57:05.395515+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-17",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 8,
-    "ai": 33
+    "youtube": 12,
+    "ai": 52,
+    "pixabay": 2
   },
-  "content_cycle_index": 10,
+  "content_cycle_index": 0,
   "content_batch": {
-    "category": "true_events",
+    "category": "world_news",
     "completed": 0,
     "story_keys": [],
     "media_hashes": [],
@@ -3564,24 +3698,25 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-17T09:55:34.222088+00:00",
+    "started_at": "2026-11-17T17:57:05.396410+00:00",
     "attempted_ids": [
-      "8b9d249448d5bc8e",
-      "786c160a985a95b0",
-      "870be4fd937a8c6d",
-      "a598287b8ec3135f",
-      "4a03d7045c09c5c1",
-      "1c01c7cbdf8cd474",
-      "de632a0cc6ccbd09",
-      "e6e9e1c5fb72136e",
-      "71d12c042675219e"
+      "43fb6481ef119e61",
+      "6832207212ec0e88",
+      "0935eff17b9774de",
+      "2f9dfe13e5fdc186",
+      "29672f52ba101f07",
+      "6d7895ef328280ad",
+      "9f0e6db268e93a0c",
+      "4264468155308d0d",
+      "0d3903eaaa721d2d"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "categories_deferred": [
-      "president"
+      "true_events",
+      "music"
     ],
-    "finished_at": "2026-11-17T10:05:46.664300+00:00",
+    "finished_at": "2026-11-17T18:06:29.150103+00:00",
     "attempted": 9,
     "completed": 0
   },
