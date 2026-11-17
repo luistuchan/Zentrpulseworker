@@ -113,8 +113,11 @@ def source_media(entry, folder, api):
         info = api.load(folder / 'source.info.json', {})
         if not info:
             raise api.Hold('Clipper source unavailable or exceeds 20-minute download limit')
-        if cc and 'creative commons' not in str(info.get('license', '')).lower():
-            raise api.Hold('Downloader could not confirm the source Creative Commons license')
+        if cc:
+            license_text = str(info.get('license') or '').lower()
+            license_url = str(info.get('license_url') or '').lower()
+            if not ('creative commons' in license_text or 'creativecommons.org/licenses/' in license_url):
+                raise api.Hold('Downloader could not confirm the source Creative Commons license')
         files = [x for x in folder.glob('source.*') if x.suffix in ('.mp4', '.webm', '.mkv')]
         if not files:
             raise api.Hold('Clipper download unavailable; supply a local source video')
