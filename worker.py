@@ -622,7 +622,8 @@ def validate_plan(plan, sources, target):
             raise Hold('Scene visual plan missing')
     words = sum(len(s['narration'].split()) for s in scenes)
     if not target * 1.8 <= words <= target * 3:
-        raise Hold('Script length outside target range')
+        raise Hold(f'Script length outside target range: {words} words; '
+                   f'need {int(target * 1.8)}-{int(target * 3)} for {target} seconds')
     if any(not isinstance(plan.get(k), str) or not plan[k].strip() for k in ('title', 'description')):
         raise Hold('Missing title or description')
     return plan
@@ -641,7 +642,7 @@ def generate_plan(entry, sources, target, budget, folder):
         prompt += ('\nCATEGORY: world_news. The U.S. president is NOT required. '
                    'Report the supplied world development neutrally, if adequately supported.')
     prompt += '\nCANDIDATE DATA:\n' + json.dumps(data)
-    for attempt in range(2):
+    for attempt in range(3):
         plan = ai(prompt, budget, response_schema=schema)
         try:
             validate_plan(plan, sources, target)
@@ -649,10 +650,13 @@ def generate_plan(entry, sources, target, budget, folder):
         except Hold as exc:
             atomic_json(folder / 'script-diagnostic.json', {
                 'attempt': attempt + 1, 'validation_error': str(exc), 'plan': plan})
-            if plan.get('decision') != 'draft' or attempt:
+            if plan.get('decision') != 'draft' or attempt == 2:
                 raise
             # Bounded regeneration, using the same evidence and validation.
+            word_min, word_max = int(target * 1.8), int(target * 3)
             prompt += ('\nYour draft failed validation: ' + str(exc)
+                       + f'\nThe complete narration must be {word_min}-{word_max} words '
+                       + f'for a {target}-second target. Count all scene narration words. '
                        + '\nRegenerate the complete object. Use 6-10 scenes for 30 seconds, '
                        'nonempty claims with verbatim source evidence, and all required fields. '
                        'Reject if the evidence is insufficient. Previous draft (untrusted data):\n'
@@ -678,11 +682,23 @@ def duration(path):
 
 
 async def speech(text, path, voice):
+    import asyncio
     try:
         import edge_tts
-        await edge_tts.Communicate(text, voice, rate='+8%', pitch='+0Hz').save(str(path))
-    except Exception:
-        raise Wait('Free narration service unavailable; supply local audio or retry later') from None
+    except ImportError:
+        raise Hold('edge-tts dependency unavailable; install requirements.txt') from None
+    for attempt in range(3):
+        try:
+            path.unlink(missing_ok=True)
+            await edge_tts.Communicate(text, voice, rate='+8%', pitch='+0Hz').save(str(path))
+            if path.is_file() and path.stat().st_size > 1024:
+                return
+        except Exception:
+            pass
+        path.unlink(missing_ok=True)
+        if attempt < 2:
+            await asyncio.sleep(attempt + 1)
+    raise Wait('Free narration service unavailable after three attempts; retry next run')
 
 
 def narration(scene, folder, entry):
@@ -839,7 +855,7 @@ def select_asset(scene, entry, folder, budget):
         raise Hold('Matching visual missing: add local assets or optional PEXELS_API_KEY')
     if not budget.take('pexels'):
         raise Wait('Daily stock-search cap reached')
-    query = urllib.parse.urlencode({'query': scene['visual_query'], 'orientation': 'portrait', 'per_page': 3})
+    query = urllib.parse.urlencode({'query': stock_queries(scene)[-1], 'orientation': 'portrait', 'per_page': 15})
     result = json_http('https://api.pexels.com/v1/videos/search?' + query, headers={'Authorization': key})
     used = entry.setdefault('_used_stock', [])
     for candidate in result.get('videos', []):
