@@ -615,15 +615,16 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:48.322873+00:00",
       "id": "98b05cefbe0e3d1c",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-16T08:45:49.293524+00:00",
-      "attempts": 3,
+      "attempts": 4,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-16T12:49:50.219479+00:00",
+      "last_attempt_at": "2026-11-17T01:49:27.895246+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
-      "stock_pipeline_version": 2
+      "stock_pipeline_version": 2,
+      "blocker": "Free narration service unavailable; supply local audio or retry later"
     },
     "086cd7ab38725e97": {
       "title": "Economics of the World Cup | Ticket Prices, Revenue, Costs, & Social Impact - Britannica",
@@ -673,15 +674,16 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:12.794220+00:00",
       "id": "90013fc7b1b6bdc3",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.768077+00:00",
-      "attempts": 3,
+      "attempts": 4,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-16T12:47:37.021244+00:00",
+      "last_attempt_at": "2026-11-17T01:48:05.760523+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
-      "stock_pipeline_version": 2
+      "stock_pipeline_version": 2,
+      "blocker": "No matching Pixabay footage for s02: 9 hits for 'modern flight control radar screen', 9 hits for 'modern flight control', 9 hits for 'modern flight'; inspect diagnostics in review artifact"
     },
     "de632a0cc6ccbd09": {
       "title": "Carney says US tariffs could turn Canada's carmakers to China - Yahoo News Singapore",
@@ -1036,17 +1038,17 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:48.865843+00:00",
       "id": "5abd758d65b5fa5e",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:48:49.968684+00:00",
-      "attempts": 3,
+      "attempts": 4,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-16T12:50:04.344013+00:00",
+      "last_attempt_at": "2026-11-17T01:49:30.747356+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
       "script_pipeline_version": 1,
       "stock_pipeline_version": 1,
-      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 429; no paid fallback attempted"
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'Alberta oil sands landscape aerial view', 9 hits for 'alberta oil sands', 9 hits for 'alberta oil'; inspect diagnostics in review artifact"
     },
     "bcb92c282da95057": {
       "title": "Trump heads to Asia to meet with Xi and Putin amid Nvidia fallout - KGOU",
@@ -1140,17 +1142,18 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:59:10.013407+00:00",
       "id": "b371b61c2cc0b758",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-16T11:59:10.800646+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-16T12:32:42.898440+00:00",
+      "last_attempt_at": "2026-11-17T01:49:25.048878+00:00",
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "stock_pipeline_version": 1
+      "stock_pipeline_version": 1,
+      "blocker": "Free narration service unavailable; supply local audio or retry later"
     },
     "dc65dbf3c33e2286": {
       "title": "New World Development Plans Massive 11-for-1 Rights Issue at 81.5% Discount; Shares Plunge as Controlling Shareholder Commits to Full Subscription - BigGo Finance",
@@ -1470,11 +1473,11 @@
       "discovered_at": "2026-11-16T17:55:44.261712+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "97f08a638402365d",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-16T17:55:47.930822+00:00",
-      "attempts": 4,
+      "attempts": 5,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T01:40:02.399258+00:00",
+      "last_attempt_at": "2026-11-17T01:47:50.767239+00:00",
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -1494,7 +1497,7 @@
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
       "stock_pipeline_version": 2,
-      "blocker": "Free narration service unavailable; supply local audio or retry later"
+      "blocker": "No matching Pixabay footage for s02: 9 hits for 'digital petition'; inspect diagnostics in review artifact"
     },
     "1f246426854f69a7": {
       "title": "European soccer body UEFA proposes Philippe Diallo as FIFA presidential election candidate - ABC News - Breaking News, Latest News and Videos",
@@ -1702,15 +1705,15 @@
       "discovered_at": "2026-11-16T23:19:47.152736+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "c0ed1394e8625198",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-16T23:19:55.649532+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-16T23:23:07.181153+00:00",
+      "last_attempt_at": "2026-11-17T01:50:15.202833+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "AI request cap reached; job saved for next run"
+      "blocker": "Need evidence from two distinct source domains; independence still needs review"
     },
     "c07609c6a448c9fc": {
       "title": "Record, Song and Album of the Year: Grammy awards explained - qz.com",
@@ -1873,9 +1876,30 @@
       "discovered_at": "2026-11-17T01:38:08.768367+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "5ab1391583fd9750",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:38:15.680272+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T01:50:28.672888+00:00",
+      "youtube_signal": {
+        "status": "discovery_only",
+        "examples": [
+          {
+            "title": "Russia and Ukraine hold nearly 4 hours of U.S.-mediated talks in Abu Dhabi",
+            "url": "https://www.youtube.com/watch?v=mpP6rLYfnKo"
+          },
+          {
+            "title": "US, Ukraine say Europe to join peace talks as Putin sticks to hardline stance • FRANCE 24 English",
+            "url": "https://www.youtube.com/watch?v=ovLF_kfR7T8"
+          },
+          {
+            "title": "&#39;Big development&#39; in peace talks as Ukraine says Europe to join Russia negotiations • FRANCE 24",
+            "url": "https://www.youtube.com/watch?v=QtSQZmx2VwM"
+          }
+        ],
+        "note": "Search matches do not establish popularity or permission to reuse footage."
+      },
+      "blocker": "Need evidence from two distinct source domains; independence still needs review"
     },
     "077e401a6aac3eb0": {
       "title": "Trump heads to Asia ahead of summit with Putin and Xi, possible meeting with Kim Jong Un - CBS News",
@@ -1904,9 +1928,30 @@
       "discovered_at": "2026-11-17T01:38:08.332665+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "5deb7b577d432c84",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-17T01:38:15.716715+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T01:51:09.201305+00:00",
+      "youtube_signal": {
+        "status": "discovery_only",
+        "examples": [
+          {
+            "title": "Russia Downed 1,336 Drones. Putin&#39;s Crimean Bridge Still Got Hit",
+            "url": "https://www.youtube.com/watch?v=-8vwgyZhO1c"
+          },
+          {
+            "title": "Russia Says Ukraine Launched Biggest Drone Attack of War",
+            "url": "https://www.youtube.com/watch?v=XeYGqS53j84"
+          },
+          {
+            "title": "1,336 Drones in One Night — Ukraine Hits Putin&#39;s Bridge and Burns His Refineries",
+            "url": "https://www.youtube.com/watch?v=yQxbGhyHIpU"
+          }
+        ],
+        "note": "Search matches do not establish popularity or permission to reuse footage."
+      },
+      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
     },
     "55e1683ddaecffb6": {
       "title": "When will we see Robert Pattinson as Bond in cinemas?",
@@ -1920,9 +1965,30 @@
       "discovered_at": "2026-11-17T01:38:08.344171+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "55e1683ddaecffb6",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:38:15.728462+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-17T01:51:56.165132+00:00",
+      "youtube_signal": {
+        "status": "discovery_only",
+        "examples": [
+          {
+            "title": "Robert Pattinson is the new James Bond",
+            "url": "https://www.youtube.com/watch?v=iPbNRoZCdpw"
+          },
+          {
+            "title": "Robert Pattinson Revealed as James Bond: See His First Teaser | E! News",
+            "url": "https://www.youtube.com/watch?v=h1EB3_NHSO0"
+          },
+          {
+            "title": "Robert Pattinson Cast as the New James Bond",
+            "url": "https://www.youtube.com/watch?v=sk6uGqiLmCw"
+          }
+        ],
+        "note": "Search matches do not establish popularity or permission to reuse footage."
+      },
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'movie studio'; inspect diagnostics in review artifact"
     },
     "641e6955c5712c0f": {
       "title": "Beyond the demo: How life sciences leaders are scaling AI - McKinsey & Company",
@@ -2111,33 +2177,129 @@
       "status": "QUEUED",
       "created_at": "2026-11-17T01:39:29.360717+00:00",
       "attempts": 0
+    },
+    "f37540a88a51a606": {
+      "title": "Yemen army reports 661 attacks on Houthis amid Houthi push towards Aden",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/17/yemen-army-reports-661-attacks-on-houthis-amid-houthi-push-towards-aden?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T01:38:13+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T01:47:40.528353+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "f37540a88a51a606",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:47:50.630888+00:00",
+      "attempts": 0
+    },
+    "ee167105544e7f2f": {
+      "title": "Paws and profits: NVA names new VP of clinical excellence and patient safety, Arista president earns Dallas Business Journal recognition, and more updates - DVM360",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiiwJBVV95cUxNNVR6d0JiZUNGX0RfVHl1WFFHTUpkQk1vTjhRSkNVSVhfTWMxZ1FiX3hONU0yQXdJd1AyYTA3Z3ZrRmtBXzdjOU0tZGNaRXlpTFphdWY5b0lBemRuY2tCY3QxTjNCeGpzbTVwMTZSMC1vOE82TnRsS0RKRVFnVUZvSjJ6MzVMUTVFMHpBS1dKcFVvekhPcklxOFo4LWxObmJ0VE1XVFI2S0RnTHBvcFhSTlZNU09ucUl3aUpieGxKOHRkT1BnT1JLWGlDQ18zX2szMFVTdWdwT2x0MTAtS0lLekhhUHJQcFJuM1ZUUUM1QlpyX1hsc3RWaENfMWRIV0p6R0EyZkJlb1RRenc?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T21:56:50+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T01:47:49.149446+00:00",
+      "id": "ee167105544e7f2f",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:47:50.670817+00:00",
+      "attempts": 0
+    },
+    "47826ac14de6c9af": {
+      "title": "Two mass shootings in South Africa leave 17 dead",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c8y5x3n4kywpo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T10:57:48+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T01:47:40.074958+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "47826ac14de6c9af",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:47:50.686576+00:00",
+      "attempts": 0
+    },
+    "c1805b7e46dfe240": {
+      "title": "Gérard Depardieu drops appeal against sexual assault conviction",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cm20vexye1d0o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T13:40:56+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-17T01:47:40.093787+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "c1805b7e46dfe240",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:47:50.705522+00:00",
+      "attempts": 0
+    },
+    "601df9abdcb66157": {
+      "title": "Zelenskiy Says Ukraine Held New Talks With US, European Officials on Peace Prospects - U.S. News & World Report",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNUk5BdC03eXZ4X0c4Z0FBbmJNcHU2ZWRuNHVmaTI3Sk5wQnZOeVRXaHBMSHB5VktjeDNWWi1XckNoUTBoZ2Y1RU5KSllCTTR6RC0yYWlrM2ZxYmFsNWRoMkwtUi02REdnV0toRmJaLU5nTF9CTS1zVHNmX3FjTXN5OWNSV1E1SG5kbkNrem9PV3M4RHFGa1F6ODJNMW9lc0tIRk94eEozNzNKQ2tKOTc5eDdEM3dFSURYcE5VaHdLTUVzNm5WUEw1bHNWNF9aZUJ5M2FtSw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T18:46:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T01:47:49.073175+00:00",
+      "id": "601df9abdcb66157",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:47:50.735345+00:00",
+      "attempts": 0
+    },
+    "d9857182d1314b27": {
+      "title": "Trump heads to Asia to meet with Xi and Putin amid Nvidia fallout - New Hampshire Public Radio",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxONE5mSGIxRWdSejJZbEg4c3F3cU9vakdEb1Rrc1FRbURZbUIwNXVFSExNbUVKdGZwWnJlcU00aEIwLUEwd2hjY3pGeXB2OGxGTWppajREa042QS0wcXN2S2E0SHkwTTNZU0czaTFrT2lkaGJpeVhKMzRGRzRKamotbmNtNWZOWlpxRm5ZVGttTFNMLVlBWE1NUFVwNDdJdw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-16T10:00:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-17T01:47:49.183188+00:00",
+      "id": "d9857182d1314b27",
+      "status": "QUEUED",
+      "created_at": "2026-11-17T01:47:50.763215+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-17",
-    "youtube": 8,
-    "ai": 5
+    "youtube": 15,
+    "ai": 35,
+    "pixabay": 6
   },
-  "content_cycle_index": 0,
-  "content_batch": {
-    "category": "world_news",
-    "completed": 0,
-    "story_keys": [],
-    "media_hashes": [],
-    "source_urls": []
-  },
+  "content_cycle_index": 1,
+  "content_batch": null,
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-17T01:39:29.361244+00:00",
+    "started_at": "2026-11-17T01:47:50.763849+00:00",
     "attempted_ids": [
-      "258ab8d59ad6c8b6",
-      "97f08a638402365d"
+      "97f08a638402365d",
+      "90013fc7b1b6bdc3",
+      "b371b61c2cc0b758",
+      "98b05cefbe0e3d1c",
+      "5abd758d65b5fa5e",
+      "c0ed1394e8625198",
+      "5ab1391583fd9750",
+      "5deb7b577d432c84",
+      "55e1683ddaecffb6"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "pause_reason": "Free narration service unavailable; supply local audio or retry later",
-    "finished_at": "2026-11-17T01:40:22.226136+00:00",
-    "attempted": 2,
+    "category_deferred": "world_news",
+    "category_defer_reason": "No review-ready MP4; retry this category on a later rotation",
+    "finished_at": "2026-11-17T01:52:49.640671+00:00",
+    "attempted": 9,
     "completed": 0
   },
   "telegram_deliveries": {
