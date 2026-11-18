@@ -1590,7 +1590,7 @@
       "discovered_at": "2026-11-16T17:55:44.261712+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "97f08a638402365d",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T17:55:47.930822+00:00",
       "attempts": 5,
       "source_pipeline_version": 2,
@@ -1613,7 +1613,8 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "stock_pipeline_version": 3
+      "stock_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "1f246426854f69a7": {
       "title": "European soccer body UEFA proposes Philippe Diallo as FIFA presidential election candidate - ABC News - Breaking News, Latest News and Videos",
@@ -1626,9 +1627,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T17:55:47.608927+00:00",
       "id": "1f246426854f69a7",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T17:55:47.948128+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "16d4714fd98ea0e0": {
       "title": "Trump backs return of ex-Nvidia boss after 'Bring Jensen Back' campaign launched",
@@ -2089,7 +2091,7 @@
       "discovered_at": "2026-11-17T01:38:08.344171+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "55e1683ddaecffb6",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:38:15.728462+00:00",
       "attempts": 2,
       "source_pipeline_version": 2,
@@ -2112,7 +2114,8 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "stock_pipeline_version": 3
+      "stock_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "641e6955c5712c0f": {
       "title": "Beyond the demo: How life sciences leaders are scaling AI - McKinsey & Company",
@@ -2527,9 +2530,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T02:05:23.343642+00:00",
       "id": "a528c991931c5471",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T02:05:25.003212+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "0c6d0ea02d8bda83": {
       "title": "US bank outage: What caused Chase problems and Zelle payment delays?",
@@ -2684,9 +2688,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T05:29:34.971823+00:00",
       "id": "aaa482ba73c58bde",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T05:29:36.252975+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "3312b12d58910963": {
       "title": "Iran War is One ‘TACO’ Too Far: McGeever - Energy News, Top Headlines, Commentaries, Features & Events - EnergyNow.com",
@@ -2902,9 +2907,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T06:51:39.735789+00:00",
       "id": "4cc0bd6a3efcc0ce",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T06:51:40.447067+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "9b3f8500bd5235ae": {
       "title": "DOJ appears to have withheld some Epstein documents containing allegations against Trump, Oversight Democrats say - ABC News - Breaking News, Latest News and Videos",
@@ -2951,9 +2957,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T07:03:39.433335+00:00",
       "id": "197a4f4a0fdf63cc",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:03:39.503231+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "ef26c613bd2e216a": {
       "title": "OpenAI sued by California over Hugging Face attack",
@@ -3022,9 +3029,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T07:03:38.988074+00:00",
       "id": "8b9587d3b1af2ce3",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:03:39.595471+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "47cd332219d305a1": {
       "title": "Pope Leo responds to Trump's criticism, saying he has 'no fear' of US administration - ABC News - Breaking News, Latest News and Videos",
@@ -3037,9 +3045,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T07:03:39.025215+00:00",
       "id": "47cd332219d305a1",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:03:39.628462+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "ba9b90c1c4da6123": {
       "title": "Will Netanyahu lose this time?",
@@ -3269,9 +3278,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T07:18:21.292493+00:00",
       "id": "84b17fb77da90552",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:18:21.782365+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "9e04d272f810457b": {
       "title": "Supreme Court allows cancellation of TPS for Haitians, Syrians, as attorneys warn of impact on thousands - ABC News - Breaking News, Latest News and Videos",
@@ -3364,9 +3374,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T07:20:17.731173+00:00",
       "id": "a2b86e50e38339cd",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:20:17.998281+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "2d1d702c495b8606": {
       "title": "DOJ announces $1.7B 'Anti-Weaponization Fund' as part of Trump IRS lawsuit settlement - ABC News - Breaking News, Latest News and Videos",
@@ -3490,9 +3501,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T09:02:24.193882+00:00",
       "id": "ccb7196031ed9c15",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:02:24.419278+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "51b735899be7f037": {
       "title": "Mozambique opposition leader faces trial over deadly 2024 election unrest",
@@ -4732,6 +4744,114 @@
       "status": "QUEUED",
       "created_at": "2026-11-18T15:19:44.398359+00:00",
       "attempts": 0
+    },
+    "29ea76a72854aa5b": {
+      "title": "William and Kate reflect on 'enduring' UK-India ties with Modi",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cq62ped2ypy4o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T17:51:47+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T17:52:12.880004+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "29ea76a72854aa5b",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T17:52:20.713138+00:00",
+      "attempts": 0
+    },
+    "ff47c3f6f8b596cd": {
+      "title": "Trump, Xi and Putin Shake Hands as Leaders Gather in China - The New York Times",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMidkFVX3lxTFBYd3JNbjZTZWxKVk1aTDJWZnE0UEpPX21TZHp3LVBSTkRHMjVadHdfaV9qQUhHQkpGZDZkLTI3RExSSXNsMF9nSTJ0TzVIOFpGWE51SHdiZ1NBa0VoUm52cnYwNDAxLTNwWWNTUUs1ZzFKalhTNGc?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T17:23:46+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T17:52:20.518982+00:00",
+      "id": "ff47c3f6f8b596cd",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T17:52:20.765260+00:00",
+      "attempts": 0
+    },
+    "d18f1cb512bcd151": {
+      "title": "Inside the old gas pipeline where Ukraine is fighting an underground war with Russia",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/videos/c8p3vw4q6nzzo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T17:00:40+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T17:52:12.739778+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "d18f1cb512bcd151",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T17:52:20.821868+00:00",
+      "attempts": 0
+    },
+    "d0e534835d37ac75": {
+      "title": "'The drones don't fly here' - BBC reports from Ukraine's new front line",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c32l507ev4v4o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T17:00:04+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T17:52:12.788776+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "d0e534835d37ac75",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T17:52:20.869985+00:00",
+      "attempts": 0
+    },
+    "4c42cd4faa309fbe": {
+      "title": "40 Great Indie Songs From The 2010s That Defined A Generation And Its Soundtrack - That Eric Alper",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOWGsyTVY1Y3RDb1lkZlk1RUhUVWQ3SjctTTlkUjhvWERKV1NmeDJlQTlzT0RMbTJFbGFpaGtSREswNGVRZkg2MklFZGFzOGlncW82VWQ3MVdOUnRWc2xXUk9oM2l3Q3UtMTc3UDV1SmpYVjl5cFZXVUlqb3ZFb2t5S3MtdGNMUHFaNHFtdlhmRDNOZkR6THQ0TUVnOF9sN1ZTVmZHYzhMNVR4aXZyQ2huSW9xSTlHQVIxN3Y3SUZFNzNoZw?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T17:52:18.522989+00:00",
+      "id": "4c42cd4faa309fbe",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T17:52:20.934895+00:00",
+      "attempts": 0
+    },
+    "f2adfe5d9c11bf55": {
+      "title": "Chinese President Xi greets Trump at airport ahead of planned summit with Putin - CBS News",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMifEFVX3lxTFBBeDlRZ1JOdE80bUhoMnAyU0NNdFZNQTJSSW5XYUNtVC1hOWV5cmhZN01GcDBMRmttYXVkdHJmNm5qX2NDbzNRakc2bU5LYllnVW01YklFZkRVWk9BN1VRMjdlQkdBeUttdnNHRm56c1c5YWc0N2RlQ21yUUw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T13:29:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T17:52:19.429733+00:00",
+      "id": "f2adfe5d9c11bf55",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T17:52:20.994201+00:00",
+      "attempts": 0
+    },
+    "2485fcbd2ab72e8a": {
+      "title": "Trump plans to meet separately with Putin on his China trip in addition to their 3-way talks with Xi - WBRC 6 News",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMivgFBVV95cUxPVXB6eXZNX1JBWGJjTXJ2eGotanR0V0dyMVpFMEZKSnJ0RS1xS2lxSUdCLV9BTHl3Qk1MZGZDd1dGNHNlTHg1R1NqOGNnNld3RnNXTlp5cGN1QUM1MXp4XzZGUUdkc3lveDJDVmVPTHphekV2Rm1IbnQ5YUVSWlVrcGEwbnQySkQxMHB1dDFEZXF0TkxpOVhZdGZHcHprR3FnRlNHZUZHb0I3aE9yZ2E5emx6Q3BtT1VZQU9NVmRn0gHSAUFVX3lxTE01ME5jMlMtWlIya1pTTXdvallSYUZRbzNBdkZkVWlMMlVzTmZwLXdVTWlDbHNZcFp2OEs3WHVRbjFzUHc1RjhXWmN0ajVqX3AydktQVlN5R3Bib2lHWFQxcUZWTkQxMUxKMndxcWhuelJYQVMyMEJOaW00VmludXBnbTJZejl2TWQwcGNxZWUyNUt6ajlscVNNbFlYYnh4YWtfSzYxU05EeEc3YjRRRF9KLXdTM0hKYjZzQUxhSEFEM2JveFZheTFNSmQ4NkttZzJBdw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T16:36:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T17:52:19.518180+00:00",
+      "id": "2485fcbd2ab72e8a",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T17:52:21.072490+00:00",
+      "attempts": 0
     }
   },
   "budget": {
@@ -4745,7 +4865,7 @@
   "content_batch": null,
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-18T15:19:44.399274+00:00",
+    "started_at": "2026-11-18T17:52:21.073986+00:00",
     "attempted_ids": [],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
@@ -4759,7 +4879,7 @@
       "science",
       "movies"
     ],
-    "finished_at": "2026-11-18T15:19:44.410606+00:00",
+    "finished_at": "2026-11-18T17:52:21.096725+00:00",
     "attempted": 0,
     "completed": 0
   },
