@@ -295,7 +295,7 @@
       "headline_score": 1,
       "discovered_at": "2026-11-15T09:41:13.455897+00:00",
       "id": "431248277a0f3c0b",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-15T09:41:15.627980+00:00",
       "attempts": 2,
       "source_pipeline_version": 3,
@@ -303,7 +303,7 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'film reel'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 5
     },
     "09d9f47c5e021faf": {
       "title": "30+ Can't-Miss Shows on Philly Stages for Fall & the Holidays - Visit Philadelphia",
@@ -770,12 +770,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:13.678632+00:00",
       "id": "de632a0cc6ccbd09",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.775739+00:00",
       "attempts": 1,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-17T10:01:50.400984+00:00",
-      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
+      "blocker": "News candidate expired; discover a recent story"
     },
     "0935eff17b9774de": {
       "title": "Bhairadevi Ending Explained: A Shocking Story of Betrayal, Murder and Supernatural Revenge (Spoilers) - Vocal",
@@ -1006,9 +1006,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:49.864816+00:00",
       "id": "b60052a301fe6ad1",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:48:49.887346+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "653ca9008bb7ba75": {
       "title": "Plate tectonics - Continental Drift, Subduction, Earthquakes - Britannica",
@@ -1139,7 +1140,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:48.865843+00:00",
       "id": "5abd758d65b5fa5e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:48:49.968684+00:00",
       "attempts": 5,
       "source_pipeline_version": 2,
@@ -1148,7 +1149,8 @@
         "status": "not_checked"
       },
       "script_pipeline_version": 1,
-      "stock_pipeline_version": 3
+      "stock_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "bcb92c282da95057": {
       "title": "Trump heads to Asia to meet with Xi and Putin amid Nvidia fallout - KGOU",
@@ -1193,7 +1195,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:59:10.076272+00:00",
       "id": "968d462433f4ef19",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:59:10.789148+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
@@ -1215,7 +1217,8 @@
           }
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
-      }
+      },
+      "blocker": "News candidate expired; discover a recent story"
     },
     "fe0d2e797c3d9181": {
       "title": "China says Xi, Trump, Putin to discuss 'world peace' - France 24",
@@ -1244,7 +1247,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:59:10.013407+00:00",
       "id": "b371b61c2cc0b758",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:59:10.800646+00:00",
       "attempts": 4,
       "source_pipeline_version": 2,
@@ -1254,7 +1257,8 @@
         "examples": [],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "stock_pipeline_version": 3
+      "stock_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "dc65dbf3c33e2286": {
       "title": "New World Development Plans Massive 11-for-1 Rights Issue at 81.5% Discount; Shares Plunge as Controlling Shareholder Commits to Full Subscription - BigGo Finance",
@@ -1315,9 +1319,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T12:29:11.789306+00:00",
       "id": "100d26bd62ec1d68",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T12:29:12.884248+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "1c914ef47aed95cd": {
       "title": "Widow of Haiti's Slain Leader Moise to Contest Presidential Election - U.S. News & World Report",
@@ -1462,9 +1467,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T12:47:36.552943+00:00",
       "id": "08021989eaf1ac80",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T12:47:36.984387+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "4f1fad88bc739bb3": {
       "title": "Yemeni forces retreat to defend port city from Houthis",
@@ -1673,7 +1679,7 @@
       "discovered_at": "2026-11-16T17:55:43.926172+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "258ab8d59ad6c8b6",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T17:55:47.968199+00:00",
       "attempts": 2,
       "source_pipeline_version": 2,
@@ -1696,7 +1702,8 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "stock_pipeline_version": 3
+      "stock_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "4262db185452f20e": {
       "title": "Best Sennheiser Headphones 2026 - Every Category - Audiophile ON",
@@ -1724,9 +1731,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T17:55:47.400923+00:00",
       "id": "fc8eca1407639ebc",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T17:55:47.991655+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "c963ba5193a35a79": {
       "title": "Trump says he's OK with Jensen Huang returning as Nvidia CEO, sees no national security risk - CNBC",
@@ -1739,9 +1747,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T17:55:47.421440+00:00",
       "id": "c963ba5193a35a79",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T17:55:48.006700+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "53fee51de791a86f": {
       "title": "EU agrees to resurrect cooperation deal with Syria",
@@ -2042,7 +2051,7 @@
       "discovered_at": "2026-11-17T01:38:08.332665+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "5deb7b577d432c84",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:38:15.716715+00:00",
       "attempts": 4,
       "source_pipeline_version": 2,
@@ -2065,7 +2074,8 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "stock_pipeline_version": 3
+      "stock_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "55e1683ddaecffb6": {
       "title": "When will we see Robert Pattinson as Bond in cinemas?",
@@ -2163,9 +2173,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T01:38:14.046266+00:00",
       "id": "0a05cfe7a6cb3e78",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:38:15.825549+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "f5637b504efcfa7f": {
       "title": "We meet the people who make some famous jeans - NPR",
@@ -2361,11 +2372,12 @@
       "discovered_at": "2026-11-17T01:47:40.074958+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "47826ac14de6c9af",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:47:50.686576+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-17T09:11:06.761764+00:00"
+      "last_attempt_at": "2026-11-17T09:11:06.761764+00:00",
+      "blocker": "News candidate expired; discover a recent story"
     },
     "c1805b7e46dfe240": {
       "title": "Gérard Depardieu drops appeal against sexual assault conviction",
@@ -2379,11 +2391,12 @@
       "discovered_at": "2026-11-17T01:47:40.093787+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "c1805b7e46dfe240",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:47:50.705522+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-17T09:11:42.322145+00:00"
+      "last_attempt_at": "2026-11-17T09:11:42.322145+00:00",
+      "blocker": "News candidate expired; discover a recent story"
     },
     "601df9abdcb66157": {
       "title": "Zelenskiy Says Ukraine Held New Talks With US, European Officials on Peace Prospects - U.S. News & World Report",
@@ -2461,11 +2474,12 @@
       "discovered_at": "2026-11-17T02:05:13.230764+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "0ec06b35361d5ffe",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T02:05:24.915597+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-17T09:12:38.557450+00:00"
+      "last_attempt_at": "2026-11-17T09:12:38.557450+00:00",
+      "blocker": "News candidate expired; discover a recent story"
     },
     "467f9d866d51a987": {
       "title": "Ashes of exiled Nobel Laureate Miguel Ángel Asturias returned to Guatemala",
@@ -2497,9 +2511,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T02:05:23.289155+00:00",
       "id": "bbf7e71240cf27b7",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T02:05:24.974258+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "a528c991931c5471": {
       "title": "Trump welcomes Xi to White House for state dinner - ABC News - Breaking News, Latest News and Videos",
@@ -2562,12 +2577,13 @@
       "discovered_at": "2026-11-17T05:29:25.369927+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "3329ad31e8410e68",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T05:29:36.091184+00:00",
       "attempts": 2,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-18T08:00:55.218905+00:00",
-      "stock_pipeline_version": 3
+      "stock_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "febb881fa9dd3cb6": {
       "title": "Street cricket with a legend then metro ride as William and Kate begin India visit",
@@ -3104,9 +3120,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T07:12:07.285804+00:00",
       "id": "11a2f7aaaf02626d",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:12:07.679917+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "0371eab9eeca710e": {
       "title": "Trump signs executive orders that target birthright citizenship - ABC News - Breaking News, Latest News and Videos",
@@ -3119,9 +3136,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T07:12:07.310778+00:00",
       "id": "0371eab9eeca710e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:12:07.702293+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "f25d99279f453ac3": {
       "title": "The new French malaise",
@@ -3266,9 +3284,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T07:18:21.356235+00:00",
       "id": "9e04d272f810457b",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:18:21.841848+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "94af6a81030bed03": {
       "title": "Gunfire erupts in occupied West Bank settler attack",
@@ -3313,9 +3332,10 @@
       "discovered_at": "2026-11-17T07:20:03.979712+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "945959f365b0f73a",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:20:17.934152+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "6a6cf8852305851e": {
       "title": "Tankers hit in Strait of Hormuz as drone raises alarm at Iraq gas field",
@@ -3359,9 +3379,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T07:20:17.773773+00:00",
       "id": "2d1d702c495b8606",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:20:18.039493+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "d33ae05bf08e992e": {
       "title": "Vance calls out ‘neoconservatives’ over Iran war",
@@ -3547,12 +3568,12 @@
       "headline_score": 1,
       "discovered_at": "2026-11-17T09:09:23.790622+00:00",
       "id": "d2dd0571535bd3f7",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T09:09:28.515683+00:00",
       "attempts": 2,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-18T10:04:04.816474+00:00",
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'movie theater screen', 9 hits for 'movie theater'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 5
     },
     "740f282e36803e37": {
       "title": "As Knesset readies for new speaker, Israeli opposition holds powerful role",
@@ -4603,39 +4624,143 @@
       "status": "QUEUED",
       "created_at": "2026-11-18T10:03:00.464317+00:00",
       "attempts": 0
+    },
+    "1398d274efe695a6": {
+      "title": "What is Iraq’s Jurf al-Sakhar and what is behind gov’t push to control it?",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/18/what-is-iraqs-jurf-al-sakhar-and-what-is-behind-govt-push-to-control-it?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T15:00:34+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T15:19:39.540352+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "1398d274efe695a6",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T15:19:44.235753+00:00",
+      "attempts": 0
+    },
+    "654954d3df6ae37d": {
+      "title": "Trump gets rare airport welcome by Xi ahead of landmark talks - BBC",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiWEFVX3lxTFA2VS1mVEtiWHlzTHZRQUpiY2VyZE5aSmJsTlZOVy1CRENGWFVka3F0UTF1eGNjSjluOXpIMktRRjhTOUlmN0Q1N2tHRnhUeGVJbnlid1dSWGQ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T14:38:47+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T15:19:42.920327+00:00",
+      "id": "654954d3df6ae37d",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T15:19:44.260148+00:00",
+      "attempts": 0
+    },
+    "7a0f10e754870d32": {
+      "title": "Trump shakes hands with Putin and Xi ahead of historic talks in China",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/ck9d75x5wwwwo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T12:39:24+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T15:19:38.627215+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "7a0f10e754870d32",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T15:19:44.286769+00:00",
+      "attempts": 0
+    },
+    "b0b25096a3323a8a": {
+      "title": "William and Kate meet Indian Prime Minister Modi in New Delhi",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cq62ped2ypy4o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T14:30:33+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T15:19:38.651516+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "b0b25096a3323a8a",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T15:19:44.309727+00:00",
+      "attempts": 0
+    },
+    "d4542d7ce3869356": {
+      "title": "New cell type that could transform biotechnology - NEWS.am TECH",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiSEFVX3lxTFB1U2xkSF9FYnZEZXNRUy15aWxBMlc1VmNfbm9xNExqZWJXWnVScjhtQ1hxSHFCQmVHalZqLUVUcGZlVldLY1pQQg?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T15:19:41.344173+00:00",
+      "id": "d4542d7ce3869356",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T15:19:44.332373+00:00",
+      "attempts": 0
+    },
+    "00b24066b3b13c3d": {
+      "title": "The Latest: Trump arrives in China, seeking to reinforce US's status as world’s leading tech power - WSLS",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPR1JndG1HXzhlZlY3SUprWlViY01xTEZBNHdOYWhiY1gweWh3XzNOa2RZclU3MXNjbXV4YmJaUi12RjVPdG90NUZQcnRFNDVKYXgzY1NqdUllMTZRU1h4bzhrSlJORDM3clFMampaLUZfT2s2SlR4VGdVaUVBWlBzeXJjbmRlQkQtM0U5alJYdF9xQkR0SFgxZkE3OFdmczFGYlVtUHQzR09iQlpNdWhKaW5JYVZRbnltMFNDVzBFWXd6cm5DMlVUN1lqalUta2h5MUtuMHdjTGE?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T14:27:14+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T15:19:42.858781+00:00",
+      "id": "00b24066b3b13c3d",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T15:19:44.368394+00:00",
+      "attempts": 0
+    },
+    "413b1c5898e361c5": {
+      "title": "U.S. Strikes Qeshm Island as Vance Says Iran Won’t Become ‘Forever War’ - Time Magazine",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxOQ2ZfMmFJTUpGeWlETnhsTjZDY1NEeXlJdW5Hbkl2c3ZrRmtFcGtnaWVGTTVqejMwRGgtd3RyUWVmdkxmcHdoclB3anU2MjZVR3ZJYnNrSHR6ejZaQ0w1a043VVpiUllXV3AyYUdFQ3pXOW92S1A2THJfT3dmVFNqNU9vLXUwY3JYRENOaE42X1U?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T10:15:44+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T15:19:42.892575+00:00",
+      "id": "413b1c5898e361c5",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T15:19:44.398359+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-18",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 16,
+    "youtube": 18,
     "pixabay": 16,
     "ai": 96
   },
   "content_cycle_index": 5,
-  "content_batch": {
-    "category": "culture",
-    "completed": 0,
-    "story_keys": [],
-    "media_hashes": [],
-    "source_urls": []
-  },
+  "content_batch": null,
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-18T10:03:00.465675+00:00",
-    "attempted_ids": [
-      "431248277a0f3c0b",
-      "d2dd0571535bd3f7",
-      "c32fb0cbf637ee8b"
-    ],
+    "started_at": "2026-11-18T15:19:44.399274+00:00",
+    "attempted_ids": [],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "categories_deferred": [
+      "culture",
+      "world_news",
+      "president",
+      "true_events",
+      "music",
+      "creators",
+      "science",
       "movies"
     ],
-    "pause_reason": "AI request cap reached; job saved for next run",
-    "finished_at": "2026-11-18T10:05:34.896184+00:00",
-    "attempted": 3,
+    "finished_at": "2026-11-18T15:19:44.410606+00:00",
+    "attempted": 0,
     "completed": 0
   },
   "telegram_deliveries": {
