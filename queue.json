@@ -971,12 +971,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:13.451821+00:00",
       "id": "71d12c042675219e",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.885889+00:00",
       "attempts": 1,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-17T10:03:59.335903+00:00",
-      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
+      "blocker": "News candidate expired; discover a recent story"
     },
     "ca7e3c0c496a8889": {
       "title": "BCCI congratulates Jay Shah on reappointment as ICC Chair - Telangana Today",
@@ -1275,9 +1275,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:59:10.037119+00:00",
       "id": "dc65dbf3c33e2286",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:59:10.813016+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "3cc57786ba1c78a0": {
       "title": "Flight disruptions expected to last into Monday - NPR",
@@ -1367,9 +1368,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T12:29:11.727255+00:00",
       "id": "b1c8cf283e2fa709",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T12:29:12.927618+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "ed6b842454d90be4": {
       "title": "HKU President Calls on Universities to Help Drive Northern Metropolis Development Amid Global Challenges - The University of Hong Kong (HKU)",
@@ -1382,9 +1384,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T12:29:11.759672+00:00",
       "id": "ed6b842454d90be4",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T12:29:12.949412+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "27b0e150c70c506f": {
       "title": "Zelensky urges US and Musk to lift Starlink restrictions and be on 'right side of history' - BBC",
@@ -1889,12 +1892,11 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T23:19:50.689678+00:00",
       "id": "25e5a2423422557d",
-      "status": "WAITING",
+      "status": "QUEUED",
       "created_at": "2026-11-16T23:19:55.704442+00:00",
       "attempts": 1,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T23:13:58.044136+00:00",
-      "blocker": "AI request cap reached; job saved for next run"
+      "last_attempt_at": "2026-11-17T23:13:58.044136+00:00"
     },
     "d450f3e0abdc8e4f": {
       "title": "What Max Martin Can Teach You About Consistency - That Eric Alper",
@@ -2541,12 +2543,12 @@
       "discovered_at": "2026-11-17T05:29:25.775041+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "0c6d0ea02d8bda83",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-17T05:29:36.037275+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T20:20:49.008634+00:00",
-      "blocker": "Free narration service unavailable; supply local audio or retry later"
+      "last_attempt_at": "2026-11-18T08:00:45.184517+00:00",
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'banking app'; inspect diagnostics in review artifact"
     },
     "8b84a2e019ff742e": {
       "title": "Daily State of Play: Trump’s Indefinite Refugee Ban and Funding Halt - CWS Global",
@@ -2575,12 +2577,13 @@
       "discovered_at": "2026-11-17T05:29:25.369927+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "3329ad31e8410e68",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T05:29:36.091184+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T20:21:28.275591+00:00",
-      "stock_pipeline_version": 2
+      "last_attempt_at": "2026-11-18T08:00:55.218905+00:00",
+      "stock_pipeline_version": 2,
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'border checkpoint'; inspect diagnostics in review artifact"
     },
     "febb881fa9dd3cb6": {
       "title": "Street cricket with a legend then metro ride as William and Kate begin India visit",
@@ -2740,12 +2743,12 @@
       "discovered_at": "2026-11-17T06:26:41.994983+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "abb1502e64cff11e",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-17T06:26:58.189611+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T20:23:42.222328+00:00",
-      "blocker": "Free narration service unavailable; supply local audio or retry later"
+      "last_attempt_at": "2026-11-18T08:00:58.739196+00:00",
+      "blocker": "No matching Pixabay footage for s02: 9 hits for 'city skyline'; inspect diagnostics in review artifact"
     },
     "b8543993863e27aa": {
       "title": "Ukraine accuses Russia of targeting rescue operation after 'double-tap' strike kills 72",
@@ -2823,9 +2826,12 @@
       "discovered_at": "2026-11-17T06:51:22.591360+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "69c40d9ffa81ebb0",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T06:51:40.347035+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-18T08:01:28.472598+00:00",
+      "blocker": "Script length outside target range: 42 words; need 54-90 for 30 seconds"
     },
     "7c790b4af2da7eb9": {
       "title": "Trump's arch construction to run 20 hours a day for 2 to 3 years, documents show - ABC News - Breaking News, Latest News and Videos",
@@ -2854,9 +2860,12 @@
       "discovered_at": "2026-11-17T06:51:21.987657+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "fb96153d7f4711c2",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T06:51:40.399809+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-18T08:02:08.774811+00:00",
+      "blocker": "No matching Pixabay footage for s03: 9 hits for 'prison bars'; inspect diagnostics in review artifact"
     },
     "180ca557e37c5f58": {
       "title": "California sues OpenAI over Hugging Face attack",
@@ -2870,9 +2879,12 @@
       "discovered_at": "2026-11-17T06:51:22.016838+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "180ca557e37c5f58",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T06:51:40.414175+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-18T08:03:36.190216+00:00",
+      "blocker": "No matching Pixabay footage for s02: 9 hits for 'computer servers'; inspect diagnostics in review artifact"
     },
     "4cc0bd6a3efcc0ce": {
       "title": "Trump claims fallen soldiers said 'we cannot let Iran have a nuclear weapon' - ABC News - Breaking News, Latest News and Videos",
@@ -2916,9 +2928,12 @@
       "discovered_at": "2026-11-17T07:03:31.181894+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "b0b682953d000349",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:03:39.472594+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-18T08:04:46.670916+00:00",
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'night sky'; inspect diagnostics in review artifact"
     },
     "197a4f4a0fdf63cc": {
       "title": "Russian oligarch paid for parts of Donald Trump Jr.'s wedding celebration, report says - ABC News - Breaking News, Latest News and Videos",
@@ -2947,9 +2962,12 @@
       "discovered_at": "2026-11-17T07:03:30.760118+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "ef26c613bd2e216a",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-17T07:03:39.517160+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-18T08:05:53.780288+00:00",
+      "blocker": "AI request cap reached; job saved for next run"
     },
     "f43177846893c02a": {
       "title": "Vance says he will decide 'sometime next year' about 2028 US presidential run",
@@ -3058,9 +3076,10 @@
       "discovered_at": "2026-11-17T07:11:51.049391+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "96b5a95a3916c4f7",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:12:07.647657+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "ee9607d44bc08a5b": {
       "title": "Pope Leo rides in helicopter cockpit during Peru trip",
@@ -4182,33 +4201,149 @@
       "status": "QUEUED",
       "created_at": "2026-11-18T02:24:02.150692+00:00",
       "attempts": 0
+    },
+    "aa2d1ab7123ddaed": {
+      "title": "Philippines police ask prosecutors to charge Thomas Markle over child sex abuse material",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/ckg5ry8m49ggo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T07:48:18+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T08:00:37.437112+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "aa2d1ab7123ddaed",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T08:00:44.889934+00:00",
+      "attempts": 0
+    },
+    "17fe1a0b03c341b6": {
+      "title": "A sacred mountain and whether a Kim-Trump meet is in the offing - France 24",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxNVjBUTDVlQ1FaSnU0dHJDU3E5NnhuanJzWHNWVkRVcWs1OHpZQWVKekNtbC1xSEpsVGhhRlAxa0stWWRNMUhyc1NBZlJHM09ZZlN3TkZWMUFhYUtXUWZERVhrR1huQmNhdUFBTEhhaU55ZzZLd1F2RmdiNDhlZkNEOWo5RUp5WE13S2luQzJEeURPeGRtT2NPOGl6dzdscUktRU5XV1ZqeVNtZUYzRHBF?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T07:25:20+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T08:00:42.786984+00:00",
+      "id": "17fe1a0b03c341b6",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T08:00:44.933305+00:00",
+      "attempts": 0
+    },
+    "5cb353c74b655f40": {
+      "title": "As Trump and Xi meet, China's AI dreams face an unexpected hurdle: the Nvidia spy scandal",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c5vg23g92rj4o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T23:02:12+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T08:00:37.202221+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "5cb353c74b655f40",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T08:00:44.983858+00:00",
+      "attempts": 0
+    },
+    "0e2f76856084bad7": {
+      "title": "Nvidia says it won't reinstate Huang as it reports soaring sales",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T01:18:18+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T08:00:37.245306+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "0e2f76856084bad7",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T08:00:45.025449+00:00",
+      "attempts": 0
+    },
+    "e951c01a540e173f": {
+      "title": "What Song Does Eminem’s “My Name Is” Sample? Labi Siffre Explained - RouteNote",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxPTjIyTU9MWUtFLURweUhKcFY0Zks0N2dkWUJhaVBoTG1kNmhMWmVZUlJmVkpPaVo1Njk4OFBCUzg2aUJWblJ2QlV6UUdjVm9FbE9ndTNSY01XMC1CdFFEdlpvRVg4UGF4a08wV0lIMmpIVUFDb0FvRWFFY2hLYU1uWlVINVZJakFlV2k4TkZIOTV2VTNLSWc?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 1,
+      "discovered_at": "2026-11-18T08:00:41.762114+00:00",
+      "id": "e951c01a540e173f",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T08:00:45.070267+00:00",
+      "attempts": 0
+    },
+    "89228ba0b91e55f3": {
+      "title": "Trump Meets Philippine Leader Before Flying to China - The New York Times",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMickFVX3lxTE5tNUQ3Um9LcHZ1UHlmVV9aN0xadkRYbjZuallvUnd6dk55TnlCajMydm0wWVVpVk5NZjlTUU90UnhhNUxwTE5JTVlXTVVBeVpSNTB1RW1BWk9SYi1ZaFVWWXpUWFFCZ1Zfem1xWkRkZDl5QQ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T06:00:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T08:00:42.233119+00:00",
+      "id": "89228ba0b91e55f3",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T08:00:45.114796+00:00",
+      "attempts": 0
+    },
+    "61a6d3fe73557928": {
+      "title": "Philippines eyes new tech partnerships with US ahead of Trump’s China visit - Anadolu Ajansı",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNSjNDanJ3T1lxV1VBU3BNSzl1TTJTa1NMQWQwWXB5b2NRekpiSUFUSG5pWmFyb3VzdWxpdWRvaE5tVjNWYWVqU0tITU44QUVob3UyVTRSemZyRlBjVlFMZUhYSXo3R3N4VG5ZMjBGLUFYQTBEZ0dKaHRVZDJOWUt3RFNTQW1SbkNsM0piTXc5WTktSWhZZWY1MG5KcnVhQVl4VVNsRHNJQ2p2R2p4ektSTjJkbGlmcmxf?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T05:42:38+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T08:00:42.691439+00:00",
+      "id": "61a6d3fe73557928",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T08:00:45.164857+00:00",
+      "attempts": 0
     }
   },
   "budget": {
-    "day": "2026-11-17",
+    "day": "2026-11-18",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 18,
-    "ai": 96,
-    "pixabay": 6
+    "youtube": 4,
+    "pixabay": 9,
+    "ai": 32
   },
   "content_cycle_index": 0,
-  "content_batch": null,
+  "content_batch": {
+    "category": "world_news",
+    "completed": 0,
+    "story_keys": [],
+    "media_hashes": [],
+    "source_urls": []
+  },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-18T02:24:02.151666+00:00",
-    "attempted_ids": [],
+    "started_at": "2026-11-18T08:00:45.166243+00:00",
+    "attempted_ids": [
+      "0c6d0ea02d8bda83",
+      "3329ad31e8410e68",
+      "abb1502e64cff11e",
+      "69c40d9ffa81ebb0",
+      "fb96153d7f4711c2",
+      "180ca557e37c5f58",
+      "b0b682953d000349",
+      "ef26c613bd2e216a"
+    ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "categories_deferred": [
-      "world_news",
-      "science",
-      "movies",
-      "president",
-      "true_events",
-      "music"
-    ],
-    "finished_at": "2026-11-18T02:24:02.160792+00:00",
-    "attempted": 0,
+    "pause_reason": "AI request cap reached; job saved for next run",
+    "finished_at": "2026-11-18T08:06:23.453669+00:00",
+    "attempted": 8,
     "completed": 0
   },
   "telegram_deliveries": {
