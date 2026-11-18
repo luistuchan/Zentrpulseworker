@@ -11,7 +11,7 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T06:30:42.533697+00:00",
       "id": "c32fb0cbf637ee8b",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-14T06:30:43.879714+00:00",
       "attempts": 2,
       "youtube_signal": {
@@ -32,9 +32,8 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T06:27:23.842807+00:00",
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-17T06:27:23.842807+00:00"
     },
     "eaad4f96e7f14af7": {
       "title": "University of Manchester Researchers Launch Podcast Exploring the Process of Scientific Discovery - Bioengineer.org",
@@ -81,9 +80,9 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T06:30:42.832130+00:00",
       "id": "d1681e7170342a68",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-14T06:30:43.880314+00:00",
-      "attempts": 2,
+      "attempts": 3,
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -94,9 +93,9 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T05:30:47.194697+00:00",
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 0. Google News article decoding unavailable; retry later"
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-18T08:29:01.018677+00:00",
+      "blocker": "Need 1 readable source URL(s); retrieved 0. Service HTTP 403; no paid fallback attempted"
     },
     "9f0e6db268e93a0c": {
       "title": "Why Live ‘Unplugged’ Versions of Old Hits Keep Finding New Audiences - That Eric Alper",
@@ -108,15 +107,14 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T06:30:43.870391+00:00",
       "id": "9f0e6db268e93a0c",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-14T06:30:43.880904+00:00",
       "attempts": 2,
       "youtube_signal": {
         "status": "not_checked"
       },
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T18:01:44.565787+00:00",
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-17T18:01:44.565787+00:00"
     },
     "4264468155308d0d": {
       "title": "What Is “Ezio’s Family” in Assassin’s Creed? Composer and Theme Explained - RouteNote",
@@ -148,7 +146,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-14T06:30:42.245237+00:00",
       "id": "b890da7c8bb20e5f",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-14T06:30:43.882354+00:00",
       "attempts": 2,
       "youtube_signal": {
@@ -161,9 +159,8 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T05:29:36.293133+00:00",
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-17T05:29:36.293133+00:00"
     },
     "43fb6481ef119e61": {
       "title": "Ground stop lifted hours after stranding thousands of flights across the U.S. - NBC News",
@@ -210,7 +207,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-14T06:30:43.386524+00:00",
       "id": "6832207212ec0e88",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-14T06:30:43.884890+00:00",
       "attempts": 2,
       "youtube_signal": {
@@ -218,9 +215,8 @@
         "examples": [],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T17:57:55.458762+00:00",
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-17T17:57:55.458762+00:00"
     },
     "15ed27b00a04aaa4": {
       "title": "The mystery of how hair knows where to grow may finally be solved - Science Daily",
@@ -298,15 +294,14 @@
       "headline_score": 1,
       "discovered_at": "2026-11-15T09:41:13.455897+00:00",
       "id": "431248277a0f3c0b",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-15T09:41:15.627980+00:00",
       "attempts": 1,
-      "source_pipeline_version": 2,
+      "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-17T06:26:58.267885+00:00",
       "youtube_signal": {
         "status": "not_checked"
-      },
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      }
     },
     "09d9f47c5e021faf": {
       "title": "30+ Can't-Miss Shows on Philly Stages for Fall & the Holidays - Visit Philadelphia",
@@ -410,12 +405,12 @@
       "status": "HOLD",
       "created_at": "2026-11-16T02:18:44.175906+00:00",
       "attempts": 2,
-      "source_pipeline_version": 2,
+      "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-16T11:59:42.278977+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 0. Source text missing, too short, or blocked"
+      "blocker": "News candidate expired; discover a recent story"
     },
     "a41572bc81f78f08": {
       "title": "TODAY’S HEADLINES (Monday, November 16, 2026) Subscribe to the paper: https://philstarsubscribe.com/ No final code of conduct on South China Sea – DFA https://tinyurl.com/jnbuyaau 12 Cabinet secretaries await CA confirmation https://tinyurl.com/muyp - Facebook",
@@ -490,13 +485,13 @@
       "id": "9dd45c78ff119243",
       "status": "HOLD",
       "created_at": "2026-11-16T02:18:44.191591+00:00",
-      "attempts": 1,
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T05:33:13.463165+00:00",
+      "attempts": 2,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-18T08:29:28.217967+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      "blocker": "Editor rejected candidate: The source material presents pseudoscientific intelligent design advocacy arguments from the Discovery Institute, misrepresenting mainstream evolutionary biology and historical sci"
     },
     "870be4fd937a8c6d": {
       "title": "Transportation head vows to find 'root cause' of ground stop. Trump breaks his silence on breakdown - PBS",
@@ -569,13 +564,13 @@
       "id": "0354903e9a288236",
       "status": "HOLD",
       "created_at": "2026-11-16T08:45:49.259515+00:00",
-      "attempts": 1,
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T05:33:39.145837+00:00",
+      "attempts": 2,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-18T08:29:49.721622+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      "blocker": "No matching Pixabay footage for s03: 9 hits for 'computer servers'; inspect diagnostics in review artifact"
     },
     "4a03d7045c09c5c1": {
       "title": "Sen. Bill Cassidy slams RFK Jr. for \"series of failures\" as Health Secretary - CBS News",
@@ -608,13 +603,13 @@
       "id": "864af83118fb549d",
       "status": "HOLD",
       "created_at": "2026-11-16T08:45:49.267204+00:00",
-      "attempts": 1,
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T05:34:11.721555+00:00",
+      "attempts": 2,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-18T08:31:19.949501+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 0. Service HTTP 403; no paid fallback attempted"
+      "blocker": "Need 1 readable source URL(s); retrieved 0. Service HTTP 403; no paid fallback attempted"
     },
     "a3752a6421556c74": {
       "title": "Rice Protein Senses Stinkbug Saliva Signal to Trigger Plant Defense - Nature World News",
@@ -627,12 +622,11 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:46.881066+00:00",
       "id": "a3752a6421556c74",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T08:45:49.272608+00:00",
       "attempts": 1,
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T23:09:14.156834+00:00",
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-17T23:09:14.156834+00:00"
     },
     "43c4c9a84bc6fb60": {
       "title": "How Old-School Music Producers Became In-Demand Again and Brought the Studio Back to Life - That Eric Alper",
@@ -792,12 +786,11 @@
       "headline_score": 1,
       "discovered_at": "2026-11-16T10:36:11.777709+00:00",
       "id": "0935eff17b9774de",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T10:36:13.784978+00:00",
       "attempts": 1,
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T17:58:19.325434+00:00",
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-17T17:58:19.325434+00:00"
     },
     "3a44bdb665e0ff78": {
       "title": "Hair Relaxer Lawsuit Settlement | November 2026 Litigation Update - Lawsuit Information Center",
@@ -846,12 +839,13 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:11.208547+00:00",
       "id": "98b508551dbc799e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.816540+00:00",
-      "attempts": 1,
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T23:10:59.500827+00:00",
-      "stock_pipeline_version": 2
+      "attempts": 2,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-18T08:24:53.320483+00:00",
+      "stock_pipeline_version": 2,
+      "blocker": "No matching Pixabay footage for s02: 9 hits for 'cell culture'; inspect diagnostics in review artifact"
     },
     "5c2fc0b7929fbd7e": {
       "title": "Call of Duty enlists JAMBINAI to give its score a Korean touch - The Korea Times",
@@ -935,12 +929,12 @@
       "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.866888+00:00",
       "attempts": 2,
-      "source_pipeline_version": 2,
+      "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-16T12:30:55.123849+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. Service HTTP 403; no paid fallback attempted"
+      "blocker": "News candidate expired; discover a recent story"
     },
     "e6e9e1c5fb72136e": {
       "title": "China confirms Xi-Trump-Putin historic summit. What will be on the agenda? - CNBC",
@@ -1026,12 +1020,11 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:47.107514+00:00",
       "id": "653ca9008bb7ba75",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T11:48:49.895099+00:00",
       "attempts": 1,
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T23:12:10.015033+00:00",
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 0. Service HTTP 403; no paid fallback attempted"
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-17T23:12:10.015033+00:00"
     },
     "985b900a06bf20fe": {
       "title": "Tsinghua Team Tops Global Rankings, Secures 4 Consecutive Rounds of Financing - 36Kr",
@@ -1062,12 +1055,11 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:47.125020+00:00",
       "id": "6bbfe619c6dcfb0e",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T11:48:49.913381+00:00",
       "attempts": 1,
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T23:13:08.662559+00:00",
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. Service HTTP 403; no paid fallback attempted"
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-17T23:13:08.662559+00:00"
     },
     "4295ea495a5fef7d": {
       "title": "Kate Nash turns to OnlyFans to partly fund her tour - KarloBag.eu",
@@ -1128,12 +1120,12 @@
       "status": "HOLD",
       "created_at": "2026-11-16T11:48:49.955754+00:00",
       "attempts": 2,
-      "source_pipeline_version": 2,
+      "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-16T12:31:32.061118+00:00",
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      "blocker": "News candidate expired; discover a recent story"
     },
     "5abd758d65b5fa5e": {
       "title": "Alberta Anticipates Immediate Oil Sands Investment After Royalty Changes - News and Statistics - IndexBox",
@@ -1200,10 +1192,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:59:10.076272+00:00",
       "id": "968d462433f4ef19",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T11:59:10.789148+00:00",
       "attempts": 1,
-      "source_pipeline_version": 2,
+      "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-16T12:32:15.103495+00:00",
       "youtube_signal": {
         "status": "discovery_only",
@@ -1222,8 +1214,7 @@
           }
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
-      },
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      }
     },
     "fe0d2e797c3d9181": {
       "title": "China says Xi, Trump, Putin to discuss 'world peace' - France 24",
@@ -1875,12 +1866,11 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T23:19:50.670215+00:00",
       "id": "0b2a6a0ba6591c31",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T23:19:55.698105+00:00",
       "attempts": 1,
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T23:13:34.331213+00:00",
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-17T23:13:34.331213+00:00"
     },
     "25e5a2423422557d": {
       "title": "seafloor spreading - Britannica",
@@ -1893,11 +1883,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T23:19:50.689678+00:00",
       "id": "25e5a2423422557d",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T23:19:55.704442+00:00",
-      "attempts": 1,
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T23:13:58.044136+00:00"
+      "attempts": 2,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-18T08:24:57.632796+00:00",
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'ocean floor'; inspect diagnostics in review artifact"
     },
     "d450f3e0abdc8e4f": {
       "title": "What Max Martin Can Teach You About Consistency - That Eric Alper",
@@ -2127,9 +2118,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T01:38:10.592129+00:00",
       "id": "641e6955c5712c0f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:38:15.743344+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-18T08:25:02.050222+00:00",
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'digital network'; inspect diagnostics in review artifact"
     },
     "a04bd3f7693f211b": {
       "title": "ONE VISION, ONE OCEAN Theater artists Shiela Valderrama, Gian Magdangal, and Lara Maigue led the performance of the ASEAN theme song during the Philippine Night at the International Media Center. | via Jervis Manahan, ABS-CBN News - Facebook",
@@ -2340,12 +2334,11 @@
       "discovered_at": "2026-11-17T01:47:40.528353+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "f37540a88a51a606",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T01:47:50.630888+00:00",
       "attempts": 1,
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T09:10:39.405952+00:00",
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-17T09:10:39.405952+00:00"
     },
     "ee167105544e7f2f": {
       "title": "Paws and profits: NVA names new VP of clinical excellence and patient safety, Arista president earns Dallas Business Journal recognition, and more updates - DVM360",
@@ -2374,12 +2367,11 @@
       "discovered_at": "2026-11-17T01:47:40.074958+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "47826ac14de6c9af",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T01:47:50.686576+00:00",
       "attempts": 1,
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T09:11:06.761764+00:00",
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-17T09:11:06.761764+00:00"
     },
     "c1805b7e46dfe240": {
       "title": "Gérard Depardieu drops appeal against sexual assault conviction",
@@ -2393,12 +2385,11 @@
       "discovered_at": "2026-11-17T01:47:40.093787+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "c1805b7e46dfe240",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T01:47:50.705522+00:00",
       "attempts": 1,
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T09:11:42.322145+00:00",
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-17T09:11:42.322145+00:00"
     },
     "601df9abdcb66157": {
       "title": "Zelenskiy Says Ukraine Held New Talks With US, European Officials on Peace Prospects - U.S. News & World Report",
@@ -2442,12 +2433,11 @@
       "discovered_at": "2026-11-17T02:05:13.715514+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "187692d2ec590a9f",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T02:05:24.856107+00:00",
       "attempts": 1,
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T09:12:13.083279+00:00",
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. Service HTTP 403; no paid fallback attempted"
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-17T09:12:13.083279+00:00"
     },
     "573a6468fd6108b7": {
       "title": "Trump says he doesn't take 'any responsibility' for ground stop; blames tech that had 'heart attack' - ABC News - Breaking News, Latest News and Videos",
@@ -2476,12 +2466,11 @@
       "discovered_at": "2026-11-17T02:05:13.230764+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "0ec06b35361d5ffe",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T02:05:24.915597+00:00",
       "attempts": 1,
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T09:12:38.557450+00:00",
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-17T09:12:38.557450+00:00"
     },
     "467f9d866d51a987": {
       "title": "Ashes of exiled Nobel Laureate Miguel Ángel Asturias returned to Guatemala",
@@ -2617,9 +2606,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T05:29:33.109414+00:00",
       "id": "a99d4fa93b179dc2",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T05:29:36.146851+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-18T08:27:45.728797+00:00",
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'scientific laboratory'; inspect diagnostics in review artifact"
     },
     "7542c97980ee954f": {
       "title": "Cancer - Oncogenes, Mutations, Treatment - Britannica",
@@ -2632,9 +2624,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T05:29:33.127934+00:00",
       "id": "7542c97980ee954f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T05:29:36.163419+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-18T08:28:25.574693+00:00",
+      "blocker": "Script length outside target range: 39 words; need 54-90 for 30 seconds"
     },
     "2f9dfe13e5fdc186": {
       "title": "Challenging Consensus, Scientist Says Photos Show Epstein Was Killed - The New York Times",
@@ -2711,12 +2706,11 @@
       "discovered_at": "2026-11-17T06:26:42.448267+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "16321fba22ea115b",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T06:26:58.166062+00:00",
       "attempts": 1,
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T20:23:13.999873+00:00",
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-17T20:23:13.999873+00:00"
     },
     "d83a1b893001c1f6": {
       "title": "Tensions between US and Iran escalated again - News On AIR",
@@ -3454,12 +3448,11 @@
       "headline_score": 1,
       "discovered_at": "2026-11-17T09:02:22.391722+00:00",
       "id": "6d7895ef328280ad",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T09:02:24.364859+00:00",
       "attempts": 1,
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T18:00:49.148102+00:00",
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 1. No relevant publisher articles found"
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-17T18:00:49.148102+00:00"
     },
     "0945926769a2e28b": {
       "title": "Discover all the heavy metal bands nominated for the 2027 Grammy Awards - Chaoszine",
@@ -4420,18 +4413,111 @@
       "status": "QUEUED",
       "created_at": "2026-11-18T08:21:19.073197+00:00",
       "attempts": 0
+    },
+    "f982c9b54527e5cf": {
+      "title": "Russia, China should ‘lead’ push to multipolar world, Xi tells APEC summit",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/18/president-xi-says-russia-and-china-should-lead-push-to-multipolar-world?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T07:50:47+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T08:24:46.454274+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "f982c9b54527e5cf",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T08:24:53.049908+00:00",
+      "attempts": 0
+    },
+    "4ec67aa65a5f54e1": {
+      "title": "The President Outlined Ukraine’s Priorities at Ramstein: Air Defense Missiles, New Fighter Jets, Financial Support for the Defense Sector, and Development of the Drone Deal Format - Офіційне інтернет-представництво Президента України",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMipwFBVV95cUxPZjVIYW9zOURnLTEyUWtsR3BWOF8tNENBWkdOZTVBcm9DQzZ0VGpGNkwwV2R3TTZlODNhMnk4aXVPdExEYl9MYkZfOFRFSzl5UTNlSXVTMUhwV180RkZaekJYalhpSzNqSm9fRkdjR1o5cjlpREZuQ1E5MlpuT0hQMDEtc2g1aEx1U3M3X1lLeTNPcDltLTVMMHBRTjloSXhBUzFrQ00xUQ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T22:32:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T08:24:50.776035+00:00",
+      "id": "4ec67aa65a5f54e1",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T08:24:53.131179+00:00",
+      "attempts": 0
+    },
+    "b4cc66f4ea7d7f18": {
+      "title": "Indian woman gang-raped while pregnant in 2002 'heartbroken' after two perpetrators bailed",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cr868wd2qg18o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T09:27:44+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T08:24:45.910955+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "b4cc66f4ea7d7f18",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T08:24:53.173417+00:00",
+      "attempts": 0
+    },
+    "fff92b58ba55c629": {
+      "title": "Nvidia partner Megaspeed being investigated by US government over chip exports",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cmn504nq5033o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T11:17:32+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T08:24:45.948525+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "fff92b58ba55c629",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T08:24:53.212025+00:00",
+      "attempts": 0
+    },
+    "9d24779ef4056224": {
+      "title": "Trump begins Asia trip ahead of high-stakes talks with Xi and Putin - Scripps News",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxNVnBBN3dEZTNsbEtHOGV2LXpKWGx3d1k3WDhaQm1uSklMQmkxNFV0QVBpRXJMSmcyYlNkXzlVSTZOZHZMVWdwTG9CZzk2MWdIaFducWRUTElSLURpTWI0V1FXYUxwNWc1dENYMzJDZlZNb1c2RHlKWVd5Ukh1ZjRjcGFzMm92cHlVaUJOZjkwUEo0UTNmUXZ2SG1BbUhtSjBtR2cyRkY5VVI5N19NLWFwbVhLZ1BIcExrLWc?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T13:51:26+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T08:24:51.186095+00:00",
+      "id": "9d24779ef4056224",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T08:24:53.258343+00:00",
+      "attempts": 0
+    },
+    "e957e3253ca47009": {
+      "title": "Trump says Russia-Ukraine war 'very close' to being resolved - Anadolu Ajansı",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiogFBVV95cUxOb0RQUWNsd213Qno3Wnc3ZzhTUk02THZBWVBBeHlWTEowT2FaaWVlY3hRSzdDaV8zWHpmZXRDLU94RkhrbHRVZWRvV3VHdjltQlpfT1hqc1IzbmtDM0xDSUg3YzJBSm9nWnc0c1pTQmEzVjlPNHJ4V29LTldvNk9lQnZKalFvWVVEcjlGQzdfUHhKWGpIWHY3WmlXTzVSMEJJS3c?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T11:29:18+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T08:24:51.282956+00:00",
+      "id": "e957e3253ca47009",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T08:24:53.304465+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-18",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 8,
-    "pixabay": 9,
-    "ai": 53
+    "youtube": 12,
+    "pixabay": 13,
+    "ai": 81
   },
-  "content_cycle_index": 3,
+  "content_cycle_index": 4,
   "content_batch": {
-    "category": "science",
+    "category": "movies",
     "completed": 0,
     "story_keys": [],
     "media_hashes": [],
@@ -4439,24 +4525,24 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-18T08:21:19.074700+00:00",
+    "started_at": "2026-11-18T08:24:53.305836+00:00",
     "attempted_ids": [
-      "fb96153d7f4711c2",
-      "abb1502e64cff11e",
-      "180ca557e37c5f58",
-      "0c6d0ea02d8bda83",
-      "b0b682953d000349",
-      "f43177846893c02a",
-      "ba9b90c1c4da6123",
-      "f25d99279f453ac3",
-      "752a417766663caf"
+      "98b508551dbc799e",
+      "25e5a2423422557d",
+      "641e6955c5712c0f",
+      "a99d4fa93b179dc2",
+      "7542c97980ee954f",
+      "d1681e7170342a68",
+      "9dd45c78ff119243",
+      "0354903e9a288236",
+      "864af83118fb549d"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "categories_deferred": [
-      "world_news"
+      "science"
     ],
-    "finished_at": "2026-11-18T08:23:42.513048+00:00",
+    "finished_at": "2026-11-18T08:31:51.907041+00:00",
     "attempted": 9,
     "completed": 0
   },
