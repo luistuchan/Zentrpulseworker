@@ -36,7 +36,7 @@ WORK = ROOT / '.work'
 USER_AGENT = 'ZENTR-Pulse/3.0 (source-linked video drafts)'
 SCHEMA_VERSION = 3
 SOURCE_PIPELINE_VERSION = 3
-STOCK_PIPELINE_VERSION = 3
+STOCK_PIPELINE_VERSION = 4
 SCRIPT_PIPELINE_VERSION = 2
 CATEGORIES = {
     'movies': 'movie scene hidden clue explained',
@@ -760,6 +760,20 @@ def stock_queries(scene):
     return list(dict.fromkeys(x for x in (original, ' '.join(words[:3]), ' '.join(words[:2])) if x))[:3]
 
 
+def stock_match_prompt(scene):
+    return (
+        'Review this frame as illustrative stock footage. Decide whether it depicts a recognizable '
+        'subject, object, setting, or action that directly supports the narration. The requested shot '
+        'is a preference. Accept a related depiction of the same core subject when it supports the same '
+        'point. Ignore differences in lighting, camera angle, placement, or props unless they change the '
+        'meaning of the narration. For example, a film reel on a projector can illustrate film editing '
+        'or filmmaking even if the suggested shot puts the reel on a table. Reject unrelated or '
+        'misleading visuals, prominent text or logos, and graphic material. '
+        'Return JSON {"matches": boolean, "reason": string}. Narration: ' + scene['narration']
+        + '\nRequested shot: ' + scene['visual_description']
+    )
+
+
 def select_pixabay_asset(scene, entry, folder, budget):
     used = entry.setdefault('_used_stock', [])
     checked, evaluated = set(), 0
@@ -819,12 +833,7 @@ def select_pixabay_asset(scene, entry, folder, budget):
             evaluated += 1
             query_evaluated += 1
             try:
-                match = ai('Evaluate this frame as clearly ILLUSTRATIVE stock, never as footage of the real event. '
-                           'The core subject and activity must match. Camera angle, lighting and weather may vary '
-                           'when they do not change the explanation. Reject unrelated subjects, misleading '
-                           'depictions, prominent text/logos or graphic material. Return JSON {"matches": boolean, '
-                           '"reason": string}. Required subject/activity: ' + scene['visual_description'], budget, thumb,
-                           response_schema=MATCH_SCHEMA)
+                match = ai(stock_match_prompt(scene), budget, thumb, response_schema=MATCH_SCHEMA)
             except Hold:
                 record['result'] = 'visual evaluation unavailable'; save(); raise
             record.update(result='accepted' if match.get('matches') is True else 'visual mismatch',
@@ -892,10 +901,7 @@ def select_asset(scene, entry, folder, budget):
             continue
         thumb = folder / 'match.jpg'
         run(['ffmpeg', '-v', 'error', '-y', '-ss', '0.5', '-i', str(path), '-frames:v', '1', '-vf', 'scale=480:-2', str(thumb)])
-        match = ai('Evaluate this frame as ILLUSTRATIVE stock for this scene. Reject unrelated objects, text, '
-                   'logos, graphic material, or misleading depictions. It must clearly match the concrete '
-                   'visual request. Return JSON {"matches": boolean, "reason": string}. Scene: '
-                   + scene['visual_description'], budget, thumb, response_schema=MATCH_SCHEMA)
+        match = ai(stock_match_prompt(scene), budget, thumb, response_schema=MATCH_SCHEMA)
         if match.get('matches') is not True:
             path.unlink(missing_ok=True)
             continue
