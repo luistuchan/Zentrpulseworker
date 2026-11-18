@@ -1374,11 +1374,18 @@ def produce_batch(state, budget, target):
                             state['content_cycle_index'] = (state.get('content_cycle_index', 0) + 1) % len(CONTENT_CYCLE)
                 except Wait as exc:
                     job.update(status='WAITING', blocker=str(exc))
-                    # Temporary 503/TTS outages affect this candidate, not every other
-                    # eligible story. Respect persistent API quota/rate-limit failures.
+                    # A Gemini provider outage is shared across candidates. Do not
+                    # spend the free-tier request budget retrying the same outage
+                    # for each story. Save the queue and try again next run.
+                    # Unrelated temporary media/TTS failures can advance normally.
                     reason = str(exc).lower()
-                    stop = ('ai request cap' in reason or 'http 429' in reason
-                            or 'quota' in reason or 'daily ' in reason)
+                    gemini_outage = reason.startswith('gemini model ') and any(
+                        term in reason for term in (
+                            'http 500', 'http 502', 'http 503', 'http 504',
+                            'network request failed', 'timeout'))
+                    stop = (gemini_outage or 'ai request cap' in reason
+                            or 'http 429' in reason or 'quota' in reason
+                            or 'daily ' in reason)
                 except Hold as exc:
                     job.update(status='HOLD', blocker=str(exc))
                     stop = (str(exc).startswith(('Gemini model ', 'GEMINI_API_KEY missing',
