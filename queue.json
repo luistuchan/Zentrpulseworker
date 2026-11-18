@@ -1307,9 +1307,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:59:10.640311+00:00",
       "id": "97c9606443a09325",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:59:10.823798+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "100d26bd62ec1d68": {
       "title": "Jay Shah re-elected unopposed as ICC chair as calendar changes open door to IPL expansion - Mezha.net",
@@ -2545,9 +2546,10 @@
       "id": "0c6d0ea02d8bda83",
       "status": "HOLD",
       "created_at": "2026-11-17T05:29:36.037275+00:00",
-      "attempts": 2,
+      "attempts": 3,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-18T08:00:45.184517+00:00",
+      "last_attempt_at": "2026-11-18T08:21:29.468508+00:00",
+      "stock_pipeline_version": 2,
       "blocker": "No matching Pixabay footage for s01: 9 hits for 'banking app'; inspect diagnostics in review artifact"
     },
     "8b84a2e019ff742e": {
@@ -2745,9 +2747,10 @@
       "id": "abb1502e64cff11e",
       "status": "HOLD",
       "created_at": "2026-11-17T06:26:58.189611+00:00",
-      "attempts": 2,
+      "attempts": 3,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-18T08:00:58.739196+00:00",
+      "last_attempt_at": "2026-11-18T08:21:22.553816+00:00",
+      "stock_pipeline_version": 2,
       "blocker": "No matching Pixabay footage for s02: 9 hits for 'city skyline'; inspect diagnostics in review artifact"
     },
     "b8543993863e27aa": {
@@ -2862,9 +2865,10 @@
       "id": "fb96153d7f4711c2",
       "status": "HOLD",
       "created_at": "2026-11-17T06:51:40.399809+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-18T08:02:08.774811+00:00",
+      "last_attempt_at": "2026-11-18T08:21:19.091482+00:00",
+      "stock_pipeline_version": 2,
       "blocker": "No matching Pixabay footage for s03: 9 hits for 'prison bars'; inspect diagnostics in review artifact"
     },
     "180ca557e37c5f58": {
@@ -2881,9 +2885,10 @@
       "id": "180ca557e37c5f58",
       "status": "HOLD",
       "created_at": "2026-11-17T06:51:40.414175+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-18T08:03:36.190216+00:00",
+      "last_attempt_at": "2026-11-18T08:21:26.549454+00:00",
+      "stock_pipeline_version": 2,
       "blocker": "No matching Pixabay footage for s02: 9 hits for 'computer servers'; inspect diagnostics in review artifact"
     },
     "4cc0bd6a3efcc0ce": {
@@ -2930,9 +2935,10 @@
       "id": "b0b682953d000349",
       "status": "HOLD",
       "created_at": "2026-11-17T07:03:39.472594+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-18T08:04:46.670916+00:00",
+      "last_attempt_at": "2026-11-18T08:21:36.679994+00:00",
+      "stock_pipeline_version": 2,
       "blocker": "No matching Pixabay footage for s01: 9 hits for 'night sky'; inspect diagnostics in review artifact"
     },
     "197a4f4a0fdf63cc": {
@@ -2981,9 +2987,12 @@
       "discovered_at": "2026-11-17T07:03:30.820486+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "f43177846893c02a",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:03:39.536610+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-18T08:21:41.306076+00:00",
+      "blocker": "Script length outside target range: 46 words; need 54-90 for 30 seconds"
     },
     "29672f52ba101f07": {
       "title": "The Dark Heaven Ending Explained: The Shocking Truth Behind the Seven-Year Curse and the Real Killer (Spoilers) - Vocal",
@@ -3045,9 +3054,12 @@
       "discovered_at": "2026-11-17T07:11:51.330442+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "ba9b90c1c4da6123",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:12:07.586133+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-18T08:22:16.068727+00:00",
+      "blocker": "Need 2 readable source URL(s); retrieved 1. No relevant publisher articles found"
     },
     "d3dca8ca3a61add1": {
       "title": "$NVIDIA (NVDA.US)$ US President Donald Trump said on Monday (Nov 16) he would not mind seeing Jensen Huang reinstated as the chief executive officer of Nvidia. According to the Financial Times, Huang is considering a comeback as Nvidia’s CEO and - Moomoo",
@@ -3140,9 +3152,12 @@
       "discovered_at": "2026-11-17T07:15:19.740942+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "f25d99279f453ac3",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:15:37.037532+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-18T08:22:28.291000+00:00",
+      "blocker": "Evidence quote not found in fetched source"
     },
     "752a417766663caf": {
       "title": "China is hosting the world's leaders in its AI wonderland. Here's what they won't see",
@@ -3156,9 +3171,12 @@
       "discovered_at": "2026-11-17T07:15:19.615027+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "752a417766663caf",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:15:37.062188+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 2,
+      "last_attempt_at": "2026-11-18T08:23:08.478246+00:00",
+      "blocker": "Insufficient evidence sources for this content type"
     },
     "bf0efb054e89a6f0": {
       "title": "Taking Korea's toughest exam from behind bars",
@@ -4309,18 +4327,111 @@
       "status": "QUEUED",
       "created_at": "2026-11-18T08:00:45.164857+00:00",
       "attempts": 0
+    },
+    "cd2bdbdb1d2c9258": {
+      "title": "Photos: India defeat Pakistan to win SAFF Championship in Bangladesh",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/gallery/2026/11/18/photos-india-defeat-pakistan-to-win-saff-championship-in-bangladesh?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T07:54:15+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T08:21:11.817599+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "cd2bdbdb1d2c9258",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T08:21:18.818634+00:00",
+      "attempts": 0
+    },
+    "a6b0d105766c1d12": {
+      "title": "China and Canada expand tariff relief while relations with the U.S. are strained - PBS",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitAFBVV95cUxNcURKQld4QXE0ZHNndHhVcVAwZzJuUThzalRHNG43X2s3WVB5ZjRydmY2dHNkTm5POHJrdkhJWWp1dGxFTWNsUWRHU29jU29VZjRKUUhBV252OUQwQVlGQUtIVk5seUltZDZNWl9seFVKQ29OWHZvZnljbDJiX1Q5cmFpU3FSWjUwUUktcTNVdXNNVnFVTVJmUlpsYS1mMlpicmJoZ29RdkRpMHRiN0l1czRhaDnSAboBQVVfeXFMT0dFQ0VEVzNqcVR2cEQ5elp5TkF6Z0c0ODJuSlhMbzNfZFF6VDMyOGtCWHJfeERQNXBiVXBjZ2ZiRlJYb2JqNGl4QnVRUmU3T0hDenBBRWE1ZktORDVOenJ3ZWEwcjNMX1Y4LXFYOHJrTmh5bElLQzJ4bHJ6WVBUYmNnM0c1elRyRVctZ1RGbXdsRTJSY1ZVTnE2ckxRbWl0MHpfU2JVX3g3cFhndHpJVnQyQXpudTM0ckl3?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T23:20:17+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T08:21:16.647603+00:00",
+      "id": "a6b0d105766c1d12",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T08:21:18.866911+00:00",
+      "attempts": 0
+    },
+    "bbfb93f4d2638ae1": {
+      "title": "Rubio says US not 'under systemic attack' after series of tech outages",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/crkgvxxwpwz2o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T04:57:06+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T08:21:10.676812+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "bbfb93f4d2638ae1",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T08:21:18.910721+00:00",
+      "attempts": 0
+    },
+    "a6e06a058de5c51a": {
+      "title": "Democrats win Alaska Senate race two weeks after midterms counting began",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cqev3v2ygzlvo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T07:00:25+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T08:21:10.723151+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "a6e06a058de5c51a",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T08:21:18.955756+00:00",
+      "attempts": 0
+    },
+    "a4fe9ef00312e037": {
+      "title": "Trump issues warning to Iran on nuclear weapons in State of the Union address - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxQNS04cG84NmRfVVBOSWw5NW52cXVrTEpGOVFzSUs0V1ZDNHZISVlGTHd3ZGZXalhkMnp5MXpaNVpxVXpnRTNLZHpfSklfVk1BWEx5dUlJT2w1VkxEWEdMSnpNQ1dlVGtjMXJ3dTExNURuRFZVRTFYVjhIaGNnUEQ4UDZyRTVBU2YzaWpsbm9ieE9hYmxkWk1BSF9jWGdxUThpOTJJ0gGoAUFVX3lxTFBBWU5wNktLblZJSWF4dE1pUEtCYnFYbTRaV0pLcWI0cWVSeFFaT3NJY1NPY1o5V0FlUVV5cVVtdGNydkVfT1B0UlR2ajlicWtxUTRwM3MtY1FINHFzYmhqZWhGTnRkWWxER3hnQjQtTE82eDg3dGJaNVBnRWpLWldmUlNBODlrenFGRFd3NjFsbFBhbnRKbTRDaHBYYWtkenRENFpoZkxneA?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T09:30:46+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T08:21:16.891750+00:00",
+      "id": "a4fe9ef00312e037",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T08:21:19.028272+00:00",
+      "attempts": 0
+    },
+    "633edf41464e295a": {
+      "title": "Trump in Asia ahead of talks with Russian and Chinese presidents - BBC",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiW0FVX3lxTE43eTNySUF6Qk5WeER2eTkzNGpTb3JpZFBpZGppak80Q25WYm9LMlVLRVZ3UGJIVDN4aXZsX2N4c2l2ZFBQV2xBdDlySTgwZENrNzhybW82djVGYlE?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T20:25:46+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T08:21:16.940217+00:00",
+      "id": "633edf41464e295a",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T08:21:19.073197+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-18",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 4,
+    "youtube": 8,
     "pixabay": 9,
-    "ai": 32
+    "ai": 53
   },
-  "content_cycle_index": 0,
+  "content_cycle_index": 3,
   "content_batch": {
-    "category": "world_news",
+    "category": "science",
     "completed": 0,
     "story_keys": [],
     "media_hashes": [],
@@ -4328,22 +4439,25 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-18T08:00:45.166243+00:00",
+    "started_at": "2026-11-18T08:21:19.074700+00:00",
     "attempted_ids": [
-      "0c6d0ea02d8bda83",
-      "3329ad31e8410e68",
-      "abb1502e64cff11e",
-      "69c40d9ffa81ebb0",
       "fb96153d7f4711c2",
+      "abb1502e64cff11e",
       "180ca557e37c5f58",
+      "0c6d0ea02d8bda83",
       "b0b682953d000349",
-      "ef26c613bd2e216a"
+      "f43177846893c02a",
+      "ba9b90c1c4da6123",
+      "f25d99279f453ac3",
+      "752a417766663caf"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "pause_reason": "AI request cap reached; job saved for next run",
-    "finished_at": "2026-11-18T08:06:23.453669+00:00",
-    "attempted": 8,
+    "categories_deferred": [
+      "world_news"
+    ],
+    "finished_at": "2026-11-18T08:23:42.513048+00:00",
+    "attempted": 9,
     "completed": 0
   },
   "telegram_deliveries": {
