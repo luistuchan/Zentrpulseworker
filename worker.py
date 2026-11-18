@@ -36,7 +36,7 @@ WORK = ROOT / '.work'
 USER_AGENT = 'ZENTR-Pulse/3.0 (source-linked video drafts)'
 SCHEMA_VERSION = 3
 SOURCE_PIPELINE_VERSION = 3
-STOCK_PIPELINE_VERSION = 2
+STOCK_PIPELINE_VERSION = 3
 SCRIPT_PIPELINE_VERSION = 2
 CATEGORIES = {
     'movies': 'movie scene hidden clue explained',
@@ -768,13 +768,23 @@ def select_pixabay_asset(scene, entry, folder, budget):
     def save():
         atomic_json(diagnostics, {'scene_id': scene['id'], 'visual_description': scene['visual_description'],
                                  'searches': logs, 'evaluated_frames': evaluated})
-    for query in stock_queries(scene):
+    queries = stock_queries(scene)
+    evaluation_limit = 4 if len(queries) == 1 else 2
+    for query in queries:
         query_evaluated = 0
         candidates = pixabay_candidates(query, budget)
         log = {'query': query, 'returned': len(candidates), 'candidates': []}
         logs.append(log)
         save()
-        for candidate in candidates:
+        query_terms = set(re.findall(r'[a-z0-9]+', query.lower()))
+        ranked = sorted(candidates, key=lambda candidate: -len(
+            query_terms.intersection(re.findall(r'[a-z0-9]+', (candidate.get('tags') or '').lower()))
+        ))
+        for candidate in ranked:
+            if query_evaluated >= evaluation_limit:
+                log['evaluation_limit_reached'] = True
+                save()
+                break
             asset_id = 'pixabay:' + str(candidate['id'])
             if asset_id in checked:
                 continue
@@ -806,9 +816,6 @@ def select_pixabay_asset(scene, entry, folder, budget):
                 record['result'] = 'download temporarily unavailable'; save(); continue
             except Hold as exc:
                 record['result'] = str(exc); save(); continue
-            if query_evaluated >= 2:
-                record['result'] = 'per-query evaluation cap reached'; save()
-                break
             evaluated += 1
             query_evaluated += 1
             try:
