@@ -11,9 +11,9 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T06:30:42.533697+00:00",
       "id": "c32fb0cbf637ee8b",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-14T06:30:43.879714+00:00",
-      "attempts": 2,
+      "attempts": 3,
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -33,7 +33,8 @@
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-17T06:27:23.842807+00:00"
+      "last_attempt_at": "2026-11-18T10:05:06.874473+00:00",
+      "blocker": "AI request cap reached; job saved for next run"
     },
     "eaad4f96e7f14af7": {
       "title": "University of Manchester Researchers Launch Podcast Exploring the Process of Scientific Discovery - Bioengineer.org",
@@ -294,14 +295,15 @@
       "headline_score": 1,
       "discovered_at": "2026-11-15T09:41:13.455897+00:00",
       "id": "431248277a0f3c0b",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-15T09:41:15.627980+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-17T06:26:58.267885+00:00",
+      "last_attempt_at": "2026-11-18T10:03:00.480042+00:00",
       "youtube_signal": {
         "status": "not_checked"
-      }
+      },
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'film reel'; inspect diagnostics in review artifact"
     },
     "09d9f47c5e021faf": {
       "title": "30+ Can't-Miss Shows on Philly Stages for Fall & the Holidays - Visit Philadelphia",
@@ -562,7 +564,7 @@
       "headline_score": 1,
       "discovered_at": "2026-11-16T08:45:46.865697+00:00",
       "id": "0354903e9a288236",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T08:45:49.259515+00:00",
       "attempts": 2,
       "source_pipeline_version": 3,
@@ -570,7 +572,7 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "blocker": "No matching Pixabay footage for s03: 9 hits for 'computer servers'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3
     },
     "4a03d7045c09c5c1": {
       "title": "Sen. Bill Cassidy slams RFK Jr. for \"series of failures\" as Health Secretary - CBS News",
@@ -692,8 +694,8 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "stock_pipeline_version": 2,
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'Norfolk countryside landscape aerial view', 9 hits for 'norfolk countryside landscape', 9 hits for 'norfolk countryside'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "086cd7ab38725e97": {
       "title": "Economics of the World Cup | Ticket Prices, Revenue, Costs, & Social Impact - Britannica",
@@ -754,8 +756,8 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "stock_pipeline_version": 2,
-      "blocker": "No matching Pixabay footage for s02: 9 hits for 'modern flight control radar screen', 9 hits for 'modern flight control', 9 hits for 'modern flight'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "de632a0cc6ccbd09": {
       "title": "Carney says US tariffs could turn Canada's carmakers to China - Yahoo News Singapore",
@@ -839,13 +841,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:11.208547+00:00",
       "id": "98b508551dbc799e",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T10:36:13.816540+00:00",
       "attempts": 2,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-18T08:24:53.320483+00:00",
-      "stock_pipeline_version": 2,
-      "blocker": "No matching Pixabay footage for s02: 9 hits for 'cell culture'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3
     },
     "5c2fc0b7929fbd7e": {
       "title": "Call of Duty enlists JAMBINAI to give its score a Korean touch - The Korea Times",
@@ -1138,7 +1139,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:48.865843+00:00",
       "id": "5abd758d65b5fa5e",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T11:48:49.968684+00:00",
       "attempts": 5,
       "source_pipeline_version": 2,
@@ -1147,8 +1148,7 @@
         "status": "not_checked"
       },
       "script_pipeline_version": 1,
-      "stock_pipeline_version": 2,
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'Alberta oil sands landscape aerial view', 9 hits for 'alberta oil sands', 9 hits for 'alberta oil'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3
     },
     "bcb92c282da95057": {
       "title": "Trump heads to Asia to meet with Xi and Putin amid Nvidia fallout - KGOU",
@@ -1161,9 +1161,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:49.599106+00:00",
       "id": "bcb92c282da95057",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:48:49.978644+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "a8d17b40121263e1": {
       "title": "US offers millions for information on Iran’s nuclear program despite Trump’s claims of obliteration - Scripps News",
@@ -1227,9 +1228,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:59:10.664357+00:00",
       "id": "fe0d2e797c3d9181",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:59:10.794411+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "b371b61c2cc0b758": {
       "title": "Formula 1 News: Travis Auld resigns as Australian GP CEO - AutoRacing1.com",
@@ -1242,7 +1244,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:59:10.013407+00:00",
       "id": "b371b61c2cc0b758",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T11:59:10.800646+00:00",
       "attempts": 4,
       "source_pipeline_version": 2,
@@ -1252,8 +1254,7 @@
         "examples": [],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "stock_pipeline_version": 2,
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'Melbourne grand prix circuit corporate building exterior', 9 hits for 'melbourne grand prix', 9 hits for 'melbourne grand'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3
     },
     "dc65dbf3c33e2286": {
       "title": "New World Development Plans Massive 11-for-1 Rights Issue at 81.5% Discount; Shares Plunge as Controlling Shareholder Commits to Full Subscription - BigGo Finance",
@@ -1583,7 +1584,7 @@
       "discovered_at": "2026-11-16T17:55:44.261712+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "97f08a638402365d",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T17:55:47.930822+00:00",
       "attempts": 5,
       "source_pipeline_version": 2,
@@ -1606,8 +1607,7 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "stock_pipeline_version": 2,
-      "blocker": "No matching Pixabay footage for s02: 9 hits for 'digital petition'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3
     },
     "1f246426854f69a7": {
       "title": "European soccer body UEFA proposes Philippe Diallo as FIFA presidential election candidate - ABC News - Breaking News, Latest News and Videos",
@@ -1673,7 +1673,7 @@
       "discovered_at": "2026-11-16T17:55:43.926172+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "258ab8d59ad6c8b6",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T17:55:47.968199+00:00",
       "attempts": 2,
       "source_pipeline_version": 2,
@@ -1696,8 +1696,7 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "stock_pipeline_version": 2,
-      "blocker": "No matching Pixabay footage for s02: 9 hits for 'street'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3
     },
     "4262db185452f20e": {
       "title": "Best Sennheiser Headphones 2026 - Every Category - Audiophile ON",
@@ -1883,12 +1882,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T23:19:50.689678+00:00",
       "id": "25e5a2423422557d",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T23:19:55.704442+00:00",
       "attempts": 2,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-18T08:24:57.632796+00:00",
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'ocean floor'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3
     },
     "d450f3e0abdc8e4f": {
       "title": "What Max Martin Can Teach You About Consistency - That Eric Alper",
@@ -2043,7 +2042,7 @@
       "discovered_at": "2026-11-17T01:38:08.332665+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "5deb7b577d432c84",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T01:38:15.716715+00:00",
       "attempts": 4,
       "source_pipeline_version": 2,
@@ -2066,8 +2065,7 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "stock_pipeline_version": 2,
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'drone defense radar', 9 hits for 'drone defense'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3
     },
     "55e1683ddaecffb6": {
       "title": "When will we see Robert Pattinson as Bond in cinemas?",
@@ -2081,7 +2079,7 @@
       "discovered_at": "2026-11-17T01:38:08.344171+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "55e1683ddaecffb6",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T01:38:15.728462+00:00",
       "attempts": 2,
       "source_pipeline_version": 2,
@@ -2104,8 +2102,7 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "stock_pipeline_version": 2,
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'movie studio'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3
     },
     "641e6955c5712c0f": {
       "title": "Beyond the demo: How life sciences leaders are scaling AI - McKinsey & Company",
@@ -2118,12 +2115,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T01:38:10.592129+00:00",
       "id": "641e6955c5712c0f",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T01:38:15.743344+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-18T08:25:02.050222+00:00",
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'digital network'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3
     },
     "a04bd3f7693f211b": {
       "title": "ONE VISION, ONE OCEAN Theater artists Shiela Valderrama, Gian Magdangal, and Lara Maigue led the performance of the ASEAN theme song during the Philippine Night at the International Media Center. | via Jervis Manahan, ABS-CBN News - Facebook",
@@ -2220,7 +2217,7 @@
       "discovered_at": "2026-11-17T01:39:14.405393+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "ad2e5099df43ef4b",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T01:39:29.269547+00:00",
       "attempts": 2,
       "source_pipeline_version": 2,
@@ -2228,8 +2225,7 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "stock_pipeline_version": 2,
-      "blocker": "No matching Pixabay footage for s03: 9 hits for 'city skyline'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3
     },
     "74e76960907bec65": {
       "title": "Biden defends his support of Israel in presidential memoir, while urging it to ‘wake up’ - The Times of Israel",
@@ -2258,7 +2254,7 @@
       "discovered_at": "2026-11-17T01:39:13.834099+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "dff4c421b3d31e7c",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T01:39:29.308204+00:00",
       "attempts": 3,
       "source_pipeline_version": 2,
@@ -2266,8 +2262,7 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "stock_pipeline_version": 2,
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'autopsy files'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3
     },
     "e097c1a76db13338": {
       "title": "Lindsay Clancy to face retrial next year for deaths of her three children",
@@ -2281,7 +2276,7 @@
       "discovered_at": "2026-11-17T01:39:13.850897+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "e097c1a76db13338",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T01:39:29.325486+00:00",
       "attempts": 3,
       "source_pipeline_version": 2,
@@ -2289,8 +2284,7 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "stock_pipeline_version": 2,
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'courthouse exterior'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3
     },
     "b402094ba1e87f78": {
       "title": "Trump nominates top White House aide to head watchdog agency — as Democrats feared - Politico",
@@ -2417,9 +2411,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T01:47:49.183188+00:00",
       "id": "d9857182d1314b27",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:47:50.763215+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "187692d2ec590a9f": {
       "title": "Irish court jails man for life over Dublin knife attack that sparked riots",
@@ -2533,13 +2528,12 @@
       "discovered_at": "2026-11-17T05:29:25.775041+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "0c6d0ea02d8bda83",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T05:29:36.037275+00:00",
       "attempts": 3,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-18T08:21:29.468508+00:00",
-      "stock_pipeline_version": 2,
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'banking app'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3
     },
     "8b84a2e019ff742e": {
       "title": "Daily State of Play: Trump’s Indefinite Refugee Ban and Funding Halt - CWS Global",
@@ -2568,13 +2562,12 @@
       "discovered_at": "2026-11-17T05:29:25.369927+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "3329ad31e8410e68",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T05:29:36.091184+00:00",
       "attempts": 2,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-18T08:00:55.218905+00:00",
-      "stock_pipeline_version": 2,
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'border checkpoint'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3
     },
     "febb881fa9dd3cb6": {
       "title": "Street cricket with a legend then metro ride as William and Kate begin India visit",
@@ -2606,12 +2599,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T05:29:33.109414+00:00",
       "id": "a99d4fa93b179dc2",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T05:29:36.146851+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-18T08:27:45.728797+00:00",
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'scientific laboratory'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3
     },
     "7542c97980ee954f": {
       "title": "Cancer - Oncogenes, Mutations, Treatment - Britannica",
@@ -2739,13 +2732,12 @@
       "discovered_at": "2026-11-17T06:26:41.994983+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "abb1502e64cff11e",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T06:26:58.189611+00:00",
       "attempts": 3,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-18T08:21:22.553816+00:00",
-      "stock_pipeline_version": 2,
-      "blocker": "No matching Pixabay footage for s02: 9 hits for 'city skyline'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3
     },
     "b8543993863e27aa": {
       "title": "Ukraine accuses Russia of targeting rescue operation after 'double-tap' strike kills 72",
@@ -2857,13 +2849,12 @@
       "discovered_at": "2026-11-17T06:51:21.987657+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "fb96153d7f4711c2",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T06:51:40.399809+00:00",
       "attempts": 2,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-18T08:21:19.091482+00:00",
-      "stock_pipeline_version": 2,
-      "blocker": "No matching Pixabay footage for s03: 9 hits for 'prison bars'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3
     },
     "180ca557e37c5f58": {
       "title": "California sues OpenAI over Hugging Face attack",
@@ -2877,13 +2868,12 @@
       "discovered_at": "2026-11-17T06:51:22.016838+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "180ca557e37c5f58",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T06:51:40.414175+00:00",
       "attempts": 2,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-18T08:21:26.549454+00:00",
-      "stock_pipeline_version": 2,
-      "blocker": "No matching Pixabay footage for s02: 9 hits for 'computer servers'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3
     },
     "4cc0bd6a3efcc0ce": {
       "title": "Trump claims fallen soldiers said 'we cannot let Iran have a nuclear weapon' - ABC News - Breaking News, Latest News and Videos",
@@ -2927,13 +2917,12 @@
       "discovered_at": "2026-11-17T07:03:31.181894+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "b0b682953d000349",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T07:03:39.472594+00:00",
       "attempts": 2,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-18T08:21:36.679994+00:00",
-      "stock_pipeline_version": 2,
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'night sky'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 3
     },
     "197a4f4a0fdf63cc": {
       "title": "Russian oligarch paid for parts of Donald Trump Jr.'s wedding celebration, report says - ABC News - Breaking News, Latest News and Videos",
@@ -3558,12 +3547,12 @@
       "headline_score": 1,
       "discovered_at": "2026-11-17T09:09:23.790622+00:00",
       "id": "d2dd0571535bd3f7",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:09:28.515683+00:00",
-      "attempts": 1,
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T09:09:28.522082+00:00",
-      "blocker": "Need two readable source URLs from distinct domains; retrieved 0. Google News article decoding unavailable; retry later"
+      "attempts": 2,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-18T10:04:04.816474+00:00",
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'movie theater screen', 9 hits for 'movie theater'; inspect diagnostics in review artifact"
     },
     "740f282e36803e37": {
       "title": "As Knesset readies for new speaker, Israeli opposition holds powerful role",
@@ -4506,18 +4495,126 @@
       "status": "QUEUED",
       "created_at": "2026-11-18T08:24:53.304465+00:00",
       "attempts": 0
+    },
+    "fba09d28094889d8": {
+      "title": "What do Deutsche Bank leaks reveal about Trump, Epstein and Russia?",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/18/what-do-deutsche-bank-leaks-reveal-about-trump-epstein-and-russia?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T09:42:26+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T10:02:54.168975+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "fba09d28094889d8",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T10:03:00.226332+00:00",
+      "attempts": 0
+    },
+    "68a3a6496c734dfd": {
+      "title": "Democrats flipped 9 U.S. Senate seats, most in almost 70 years - NBC New York",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMivAFBVV95cUxNZVc1amNWQ2UxNHBwcGdpcW1EUzVlQ183aUk4Yi1CdWExb3N0QU1xdFBwS0swb3BMUTUyYWRnUmt0aDZoZlBZV2FucXlIQTZoamxSR0NSRXpjeWxTX3V3ZUtRYlpaSXNoRFd1VS1tSlp5MEd5X2YtVzF0d013NmVSR3EwS3g4MW5DWFlmRDJKellmQS14bGZzUnhSQ0szTjlCcWN2eHVSRFFLUjdFSnA5dW9QcFFHTFZ3d25zb9IBxAFBVV95cUxNMm5MNlRVek1Mam9HZUYxU2I4LUNRNmNFVWFLNy02XzlOSnAwSWt0MmhWcFc5bVp3WVlmUTBKWnpYbURlclZoVXJ3dW02VTlwZFBjYWd6TlhwZmRFZ0o5SVBaQXlFYmpYT3RxMlpxdWttVUFsMjBOVUxlX0lSVTk5WnI1R3V0MjFtVXhrZkJvNWxtWk5WTTdYZnpFYWVNQmpQMGpCcW9adnZmNHl2NV9tZFFER3RlcmdzZ2UtaE9HM2M2aXBK?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T07:10:54+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T10:02:58.181068+00:00",
+      "id": "68a3a6496c734dfd",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T10:03:00.263809+00:00",
+      "attempts": 0
+    },
+    "b4c5eac16267b665": {
+      "title": "Ghana's new $60m presidential jet sparks public outrage",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/ck792dez8dp3o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T09:27:51+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T10:02:53.528360+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "b4c5eac16267b665",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T10:03:00.290559+00:00",
+      "attempts": 0
+    },
+    "9eb0effb1b8b8f5d": {
+      "title": "Trump says US taking 'very seriously' any Iranian plot against Washington",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cq808vzd3nnpo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T17:37:04+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T10:02:53.768477+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "9eb0effb1b8b8f5d",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T10:03:00.327753+00:00",
+      "attempts": 0
+    },
+    "cd55fa9344c3d998": {
+      "title": "Thondimuthalum Driksakshiyum Ending Explained: A Gold Chain Theft, a Clever Thief and a Shocking Police Investigation (Spoilers) - Vocal",
+      "category": "true_events",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQRTFsMnBqczBhX3NOY0xzdngya3lNa2k2SWtqMmE4c1BUVjhacHlhdFI0WGJ5QVBMY0lOSUJIUnZFem4wUndWckJ4em05Qy1vX29EOXFuRUtRQTJCZm9fWnQ1TUJnMFZUczE3OWxCMUlCY1RJREFJckthdHBlTkJhSGdjWXNwR0hHV1VaZzRvYkZRdnlqQ2xKcXlEazJCVWNnUFVidURSOUdWTW5PZ1JmYzdMX3Q1S3dmdUxMZmF3S2pLSE9RaXFLSTZTazdxZnRnNlpmalBhb3huRlprT2x0TUxNa1Q?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 1,
+      "discovered_at": "2026-11-18T10:02:56.727077+00:00",
+      "id": "cd55fa9344c3d998",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T10:03:00.385678+00:00",
+      "attempts": 0
+    },
+    "6d4e80683a048896": {
+      "title": "Preparing the next generation of community college presidents - EdNC",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxNeW03clRvN2dRUFN0T2ttbmNCMVJIM3M5cWVscU1Hc1NOV2xNN0pULWZBM1VZRjFOeWdzeDg1djdjcWtZRkUxVmdZNk9KdUozUnJlTXlrTXk1c24xUFhEUTVJT2hyQkdMU3VqbnlqYnhOZTFVczFCd25qY2gzUThJOHZsSnk0VmRuQVBhTldZbGc4dklJQkE?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T14:00:47+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T10:02:58.216619+00:00",
+      "id": "6d4e80683a048896",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T10:03:00.419178+00:00",
+      "attempts": 0
+    },
+    "0319dacd5899abb2": {
+      "title": "Trump took Qatari jet to Asia, but it’s unclear whether it’s been ‘maxed out’ - NBC News",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiwAFBVV95cUxObkxjXzJfaGh6elVQMk9JMS03RlkyX0JqLXl0alg4bk96Zkc3ZE9saE1ySUpydmo1SDBNczU3Z01iY3dHR21hZ2t6V3JIcDVBN0YyM2tPcnlYNkVZcHZMZ2NWa1ZFN1dlNHlnT09pUGd3eFJIbGpSenNIT0xNRndSSzlfYzdybWRicGhJbGVMSlVQUVpYODZLWWpxelhKYTVnU0lsTExVdHVXSTZsTEpjUnJGYURfa3BKWlkySUlLRWQ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T10:38:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T10:02:58.657861+00:00",
+      "id": "0319dacd5899abb2",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T10:03:00.464317+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-18",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 12,
-    "pixabay": 13,
-    "ai": 81
+    "youtube": 16,
+    "pixabay": 16,
+    "ai": 96
   },
-  "content_cycle_index": 4,
+  "content_cycle_index": 5,
   "content_batch": {
-    "category": "movies",
+    "category": "culture",
     "completed": 0,
     "story_keys": [],
     "media_hashes": [],
@@ -4525,25 +4622,20 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-18T08:24:53.305836+00:00",
+    "started_at": "2026-11-18T10:03:00.465675+00:00",
     "attempted_ids": [
-      "98b508551dbc799e",
-      "25e5a2423422557d",
-      "641e6955c5712c0f",
-      "a99d4fa93b179dc2",
-      "7542c97980ee954f",
-      "d1681e7170342a68",
-      "9dd45c78ff119243",
-      "0354903e9a288236",
-      "864af83118fb549d"
+      "431248277a0f3c0b",
+      "d2dd0571535bd3f7",
+      "c32fb0cbf637ee8b"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "categories_deferred": [
-      "science"
+      "movies"
     ],
-    "finished_at": "2026-11-18T08:31:51.907041+00:00",
-    "attempted": 9,
+    "pause_reason": "AI request cap reached; job saved for next run",
+    "finished_at": "2026-11-18T10:05:34.896184+00:00",
+    "attempted": 3,
     "completed": 0
   },
   "telegram_deliveries": {
