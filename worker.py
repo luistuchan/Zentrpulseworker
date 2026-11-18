@@ -767,7 +767,7 @@ def stock_match_prompt(scene):
         'it illustrates a different part of the story from the current line. The scene search is '
         'only a suggestion. Reject generic, unrelated, or misleading footage, prominent logos, '
         'and graphic material. Return JSON {"matches": boolean, "reason": string}. Video context: '
-        + scene.get('_video_context', scene['narration'])
+        + scene.get('_video_context') or scene.get('narration', '')
     )
 
 
