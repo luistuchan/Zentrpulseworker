@@ -23,7 +23,8 @@ permissions:
 
 concurrency:
   group: zentr-pulse-production
-  cancel-in-progress: false
+  # Supersede the stalled pre-fix run for this recovery deployment only.
+  cancel-in-progress: ${{ github.event_name == 'push' && github.event.head_commit.message == 'Replace stalled Pulse setup run' }}
 
 jobs:
   process-videos:
