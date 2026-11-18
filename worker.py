@@ -451,7 +451,7 @@ class Budget:
         return True
 
 
-def ai(prompt, budget, image_path=None, response_schema=None):
+def ai(prompt, budget, image_path=None, response_schema=None, request_allowed=None):
     # No code can detect whether the user's Google Cloud account has billing enabled.
     if os.getenv('FREE_TIER_CONFIRMED') != '1':
         raise Hold('Confirm the API project is free-tier before enabling AI: FREE_TIER_CONFIRMED=1')
@@ -472,6 +472,8 @@ def ai(prompt, budget, image_path=None, response_schema=None):
     # Retry temporary failures once. Each physical request consumes the same
     # persistent free-tier budget; do not retry permanent errors or change models.
     for attempt in range(3):
+        if request_allowed is not None and not request_allowed():
+            raise Wait('Stock footage review allowance reached for this draft; saved progress')
         if not budget.take('ai'):
             raise Wait('AI request cap reached; job saved for next run')
         try:
@@ -771,6 +773,24 @@ def stock_match_prompt(scene):
     )
 
 
+def review_stock_frame(scene, entry, folder, budget, thumb):
+    prompt = stock_match_prompt(scene)
+    model = os.getenv('GEMINI_MODEL', 'gemini-3.5-flash-lite')
+    key = hashlib.sha256(json.dumps([model, prompt, MATCH_SCHEMA, digest(thumb)],
+                                   sort_keys=True).encode()).hexdigest()
+    reviews_path = folder / 'stock-reviews.json'
+    reviews = load(reviews_path, {})
+    if key in reviews:
+        return reviews[key]
+    cap = int(os.getenv('MAX_STOCK_AI_CALLS_PER_DRAFT', '16'))
+    match = ai(prompt, budget, thumb, response_schema=MATCH_SCHEMA,
+               request_allowed=lambda: budget.run_counts['ai'] - entry['_stock_ai_start'] < cap)
+    if isinstance(match.get('matches'), bool):
+        reviews[key] = match
+        atomic_json(reviews_path, reviews)
+    return match
+
+
 def select_pixabay_asset(scene, entry, folder, budget):
     used = entry.setdefault('_used_stock', [])
     checked, evaluated = set(), 0
@@ -830,7 +850,7 @@ def select_pixabay_asset(scene, entry, folder, budget):
             evaluated += 1
             query_evaluated += 1
             try:
-                match = ai(stock_match_prompt(scene), budget, thumb, response_schema=MATCH_SCHEMA)
+                match = review_stock_frame(scene, entry, folder, budget, thumb)
             except Hold:
                 record['result'] = 'visual evaluation unavailable'; save(); raise
             record.update(result='accepted' if match.get('matches') is True else 'visual mismatch',
@@ -898,7 +918,7 @@ def select_asset(scene, entry, folder, budget):
             continue
         thumb = folder / 'match.jpg'
         run(['ffmpeg', '-v', 'error', '-y', '-ss', '0.5', '-i', str(path), '-frames:v', '1', '-vf', 'scale=480:-2', str(thumb)])
-        match = ai(stock_match_prompt(scene), budget, thumb, response_schema=MATCH_SCHEMA)
+        match = review_stock_frame(scene, entry, folder, budget, thumb)
         if match.get('matches') is not True:
             path.unlink(missing_ok=True)
             continue
@@ -983,6 +1003,7 @@ def render(plan, entry, folder, budget, target):
         raise Hold('FFmpeg/ffprobe missing')
     parts, asset_log, total = [], [], 0.
     entry['_used_stock'] = []
+    entry['_stock_ai_start'] = budget.run_counts['ai']
     video_context = '\n'.join([entry.get('title', ''), *(scene['narration'] for scene in plan['scenes'])])
     for scene in plan['scenes']:
         out = folder / (scene['id'] + '.mp4')
@@ -1420,6 +1441,7 @@ def produce_batch(state, budget, target):
                     job.pop('_excluded_media_hashes', None)
                     job.pop('_excluded_story_sources', None)
                     job.pop('_used_stock', None)
+                    job.pop('_stock_ai_start', None)
                     atomic_json(STATE / 'queue.json', state)
                 if stop:
                     state['last_run']['pause_reason'] = job['blocker']
