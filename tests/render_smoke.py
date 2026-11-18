@@ -6,6 +6,7 @@ import tempfile
 import os
 import shutil
 from unittest.mock import patch
+from types import SimpleNamespace
 from test_worker import w
 
 
@@ -30,14 +31,16 @@ def main():
             entry['audio'][sid] = audio.name
             scenes.append({'id': sid, 'narration': 'Synthetic test captions stay visible until this scene ends.',
                            'requires_exact_footage': True})
+        # The production renderer requires a budget counter; offline smoke uses no AI.
+        offline_budget = SimpleNamespace(run_counts={'ai': 0})
         with patch.object(w, 'ROOT', root), patch.object(w, 'OUTPUT', output):
-            result, quality, assets = w.render({'scenes': scenes}, entry, folder, None, 20)
+            result, quality, assets = w.render({'scenes': scenes}, entry, folder, offline_budget, 20)
             assert result.exists() and len(assets) == 6
             assert quality['decode'] == 'passed'
             first_digest = w.digest(result)
             # A resumed render must use completed scenes without calling narration again.
             with patch.object(w, 'narration', side_effect=AssertionError('Scene rerendered unexpectedly')):
-                result2, _, _ = w.render({'scenes': scenes}, entry, folder, None, 20)
+                result2, _, _ = w.render({'scenes': scenes}, entry, folder, offline_budget, 20)
                 assert w.digest(result2) == first_digest
             print('OFFLINE RENDER PASSED: six scenes, 1080x1920, audio, captions, full decode, resume.')
             print(quality)
