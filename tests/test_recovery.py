@@ -44,6 +44,7 @@ class RecoveryTests(unittest.TestCase):
                  patch.object(w, 'http', return_value=(b'fixture', '', 'video/mp4')), \
                  patch.object(w, 'duration', return_value=10), \
                  patch.object(w, 'run'), \
+                 patch.object(w, 'digest', return_value='fixture-digest'), \
                  patch.object(w, 'ai', side_effect=[{'matches': False}, {'matches': False}, {'matches': True}]) as match:
                 _, metadata = w.select_pixabay_asset(scene, {'id': 'test'}, root, Mock())
                 self.assertEqual(metadata['id'], 10)
