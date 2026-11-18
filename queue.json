@@ -1290,9 +1290,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:59:10.623573+00:00",
       "id": "3cc57786ba1c78a0",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:59:10.817951+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "97c9606443a09325": {
       "title": "Spy scandal and midterm defeat heat up Trump's Asia visit - Yahoo",
@@ -1335,9 +1336,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T12:29:12.567277+00:00",
       "id": "1c914ef47aed95cd",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T12:29:12.899752+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "389eee739b9b671e": {
       "title": "Best PA speakers 2026: Active and passive sound systems for any use - MusicRadar",
@@ -4057,6 +4059,129 @@
       "status": "QUEUED",
       "created_at": "2026-11-17T23:15:43.810026+00:00",
       "attempts": 0
+    },
+    "5eca2e638c3e1e33": {
+      "title": "What is Trump hoping to achieve at APEC meeting in China?",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/18/what-is-trump-hoping-to-achieve-at-apec-meeting-in-china?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T01:33:05+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T02:23:57.313832+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "5eca2e638c3e1e33",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T02:24:01.923599+00:00",
+      "attempts": 0
+    },
+    "d5d939f35dd2d9aa": {
+      "title": "Ukraine updates: Strike appears to partially destroy part of key Kerch bridge in occupied Crimea - DW.com",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZzI2MnFXVXB1VmNqYTdHWGFWbUE2Y1haeGNTOWlPQjE3ZzRRX1c2OHhPN1prV1AzTE1iTEV2dlRFWXpTTGxJYklHYU9SeFphZXpUc2V0R2lWMXBlQld3enZ2VnRmMTJWMTBaOHJUT2QwTkdqQmZuVF9Tak5LZUtzbmF2NkNKb1RhdEkxYjhhdkRudjlydG5xbG1ldkdQRjBQNERfbU13?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T23:37:30+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T02:24:01.699589+00:00",
+      "id": "d5d939f35dd2d9aa",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T02:24:01.962033+00:00",
+      "attempts": 0
+    },
+    "d7989de8e215e2a5": {
+      "title": "Nvidia says it won't reinstate Huang as firm reports bumper results",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cm2kl50vkwkdo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T01:18:18+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T02:23:56.501375+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "d7989de8e215e2a5",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T02:24:01.989734+00:00",
+      "attempts": 0
+    },
+    "312e4f11713dbf42": {
+      "title": "William and Kate celebrate Earthshot Prize winners in Mumbai",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cqlykve012d1o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T18:20:36+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-18T02:23:56.707202+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "312e4f11713dbf42",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T02:24:02.013409+00:00",
+      "attempts": 0
+    },
+    "492ba8a9af630510": {
+      "title": "Dark energy may have flipped from negative to positive 9.5 billion years ago - Science Daily",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMib0FVX3lxTE9icEF1V1JzSkdxU1ZaODVkaHR6Z2xRbmoxSmFkSTNRVjg4RTRFUEFjcmh4QVp0MnA2WEN0clVtRmJjU2ZncVViNG85N3o5TnVsVWZCOXNab3hfTldYbUVPVlpJNzJKRjA1eFJYc1I3Yw?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T02:23:59.385125+00:00",
+      "id": "492ba8a9af630510",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T02:24:02.049386+00:00",
+      "attempts": 0
+    },
+    "e120bd9f2bab65f6": {
+      "title": "DIVISION's Harry Welsh Caps Off Breakout Year With Shots Accolade — LBB - LBB - Little Black Book",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiakFVX3lxTE1tLXUySi1DSGRvNlNjSkxVckJ4RjUyX1RzTDZrWEpsWGxTWjBOMG90ZVdCS0p1MlhoZU1WeXU0R21ZYTNxZjg1VGZmNi1LUGF2a3B6LWtxazNiSG1uT0IyYUNIaXQ3cHJMSEE?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T02:24:00.566049+00:00",
+      "id": "e120bd9f2bab65f6",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T02:24:02.084060+00:00",
+      "attempts": 0
+    },
+    "eb0f508294b0b444": {
+      "title": "Iran fires at U.S. facility in Bahrain as Tehran resumes strikes on Arab neighbors - PBS",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxPTlVZWjRCSVZZOTdxbEJHVlVJTjVyV2xWVXdaQ2tqUmVRNFJkaElDa2xhYWFqbEcwRDlaWnpNWF9OMy05OE5mM2N4VkhRQVZHdTFUTTlyd2JUSkwxR0Q3ZEh1UDZZNDB5cmVHa1lfMkM0ZldWT1pJRmVTTWVPMWEzQnloMWY2Zjh1TDdaeHRONmIwbERZLWtfMy12Z19JcDV2eUJxZElIWDdBWW5CU1NEYU5TVjJRRjjSAbwBQVVfeXFMTm93R19jS3VPR050YTJCYXBSQ25mYlo1RXNhZ1JSSXVZdEdiYUJJeloyZHlkUnJYTTc5dGVzbmlqZHY3Tlhscjc5cWxqT1JRTHMtVHlORE5TUVpKQVZ1d3FGUjhwcDlHbk5JSFVoeXZya1lTU1ZIUW9SRkUwZ2t0akZGa2t4VEpfdEZJRS0xcFFEZGVaVGtNcWFvOWdLTFFRUmFhTXBsQ1FydjA5X3dZUHdDVmE4WnduNXVUMTc?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T18:53:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T02:24:00.981526+00:00",
+      "id": "eb0f508294b0b444",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T02:24:02.119580+00:00",
+      "attempts": 0
+    },
+    "628fc11f2096d869": {
+      "title": "What Trump, Putin, and Xi want from their meeting in Shenzhen - Atlantic Council",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMipgFBVV95cUxOOHZmaVRKMnBvRV9KYTdoNjYzQXY0cXhUMm16aTBCSGpkMVg3NEh4N0cyOFZvNzJsM3FnUUNObXNNTGc4Rl9oOFVuWDNRZ081VHEwTHFHNkxDamdSZkNFbDBSdmM2MzQ1T3ZETXd5X2FscHVDV181YjRKb0hyZ094MjNBYjc5cDRSY0NONktZOTNrNjhyOGJfTDI3UGJQOWxaVlM2NVVB?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-17T17:37:45+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-18T02:24:01.017072+00:00",
+      "id": "628fc11f2096d869",
+      "status": "QUEUED",
+      "created_at": "2026-11-18T02:24:02.150692+00:00",
+      "attempts": 0
     }
   },
   "budget": {
@@ -4070,19 +4195,19 @@
   "content_batch": null,
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-17T23:15:43.811279+00:00",
+    "started_at": "2026-11-18T02:24:02.151666+00:00",
     "attempted_ids": [],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "categories_deferred": [
+      "world_news",
       "science",
       "movies",
-      "world_news",
       "president",
       "true_events",
       "music"
     ],
-    "finished_at": "2026-11-17T23:15:43.823245+00:00",
+    "finished_at": "2026-11-18T02:24:02.160792+00:00",
     "attempted": 0,
     "completed": 0
   },
