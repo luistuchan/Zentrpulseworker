@@ -36,7 +36,7 @@ WORK = ROOT / '.work'
 USER_AGENT = 'ZENTR-Pulse/3.0 (source-linked video drafts)'
 SCHEMA_VERSION = 3
 SOURCE_PIPELINE_VERSION = 3
-STOCK_PIPELINE_VERSION = 4
+STOCK_PIPELINE_VERSION = 5
 SCRIPT_PIPELINE_VERSION = 2
 CATEGORIES = {
     'movies': 'movie scene hidden clue explained',
@@ -551,8 +551,8 @@ an actual person's speech, a specific action, film, game or play that was not su
 reject it. Do not mark exact footage as unnecessary merely to pass production.
 Stock visual_query must use 1-3 concrete searchable keywords, such as "solar panels"
 or "oil refinery", without names, dates, camera instructions or a full sentence.
-visual_description should describe only the subject and activity required to explain
-the narration. Avoid unnecessary requirements for lighting, weather, camera movement,
+Choose stock B-roll that fits the overall video topic. It can illustrate a different
+part of the story than the current line. Describe one concrete visual for each search. Avoid unnecessary requirements for lighting, weather, camera movement,
 on-screen text, a named facility or an exact place that generic stock cannot establish.
 '''
 
@@ -762,15 +762,12 @@ def stock_queries(scene):
 
 def stock_match_prompt(scene):
     return (
-        'Review this frame as illustrative stock footage. Decide whether it depicts a recognizable '
-        'subject, object, setting, or action that directly supports the narration. The requested shot '
-        'is a preference. Accept a related depiction of the same core subject when it supports the same '
-        'point. Ignore differences in lighting, camera angle, placement, or props unless they change the '
-        'meaning of the narration. For example, a film reel on a projector can illustrate film editing '
-        'or filmmaking even if the suggested shot puts the reel on a table. Reject unrelated or '
-        'misleading visuals, prominent text or logos, and graphic material. '
-        'Return JSON {"matches": boolean, "reason": string}. Narration: ' + scene['narration']
-        + '\nRequested shot: ' + scene['visual_description']
+        'Review this frame as illustrative B-roll for the overall video topic. Accept footage of an '
+        'object, setting, action, or process meaningfully related to the video as a whole, even if '
+        'it illustrates a different part of the story from the current line. The scene search is '
+        'only a suggestion. Reject generic, unrelated, or misleading footage, prominent logos, '
+        'and graphic material. Return JSON {"matches": boolean, "reason": string}. Video context: '
+        + scene.get('_video_context', scene['narration'])
     )
 
 
@@ -986,6 +983,7 @@ def render(plan, entry, folder, budget, target):
         raise Hold('FFmpeg/ffprobe missing')
     parts, asset_log, total = [], [], 0.
     entry['_used_stock'] = []
+    video_context = '\n'.join([entry.get('title', ''), *(scene['narration'] for scene in plan['scenes'])])
     for scene in plan['scenes']:
         out = folder / (scene['id'] + '.mp4')
         meta_path = folder / (scene['id'] + '.json')
@@ -1005,7 +1003,8 @@ def render(plan, entry, folder, budget, target):
                 entry.setdefault('_used_stock', []).append('pixabay:' + str(prior['asset']['id']))
             continue
         audio, seconds = narration(scene, folder, entry)
-        asset, metadata = select_asset({**scene, '_required_seconds': seconds}, entry, folder, budget)
+        asset, metadata = select_asset({**scene, '_required_seconds': seconds, '_video_context': video_context},
+                                       entry, folder, budget)
         sub = folder / (scene['id'] + '.ass')
         captions(scene['narration'], seconds, sub)
         # Portrait foreground retains the full subject; landscape foreground is 65%
