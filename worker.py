@@ -631,6 +631,30 @@ def validate_plan(plan, sources, target, min_sources=2):
     return plan
 
 
+def review_guidance(entry, state):
+    """Turn explicit human review tags into guidance for similar future drafts."""
+    rules = {
+        'generic_footage': 'Choose specific, source-supported visuals tied to the topic. Avoid generic filler.',
+        'weak_hook': 'Open with the strongest verified action, consequence, or surprising detail.',
+        'slow_pacing': 'Cut repeated beats and move quickly from the hook to what happened and why.',
+        'strong_visuals': 'Keep visual searches specific to the objects, actions, and places described.',
+        'strong_hook': 'Keep the opening brief, concrete, and tied to a verified payoff.',
+    }
+    tags = set()
+    for reviewed in state['jobs'].values():
+        if (reviewed.get('category') != entry.get('category')
+                or reviewed.get('content_type', 'explainer') != entry.get('content_type', 'explainer')
+                or not reviewed.get('video_sha256')):
+            continue
+        feedback = reviewed.get('review_feedback')
+        if not isinstance(feedback, dict) or feedback.get('video_sha256') != reviewed['video_sha256']:
+            continue
+        selected = feedback.get('tags', [])
+        if isinstance(selected, list):
+            tags.update(tag for tag in selected if isinstance(tag, str) and tag in rules)
+    return [guidance for tag, guidance in rules.items() if tag in tags]
+
+
 def generate_plan(entry, sources, target, budget, folder):
     min_sources = 2 if entry.get('content_type') == 'news_update' else 1
     schema = json.loads(json.dumps(SCRIPT_SCHEMA))
@@ -647,6 +671,9 @@ def generate_plan(entry, sources, target, budget, folder):
     if data['content_type'] == 'news_update' and entry.get('category') == 'world_news':
         prompt += ('\nCATEGORY: world_news. The U.S. president is NOT required. '
                    'Report the supplied world development neutrally, if adequately supported.')
+    guidance = review_guidance(entry, budget.state)
+    if guidance:
+        prompt += '\nHuman review guidance from similar drafts:\n' + '\n'.join(guidance)
     prompt += '\nCANDIDATE DATA:\n' + json.dumps(data)
     for attempt in range(3):
         plan = ai(prompt, budget, response_schema=schema)
