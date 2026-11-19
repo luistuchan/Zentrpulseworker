@@ -2,6 +2,7 @@
 import hashlib
 import json
 import os
+import time
 import urllib.error
 import urllib.request
 import uuid
@@ -18,14 +19,25 @@ def upload(token, chat, video, caption):
     chunks += [video.read_bytes(), ('\r\n--'+boundary+'--\r\n').encode()]
     request = urllib.request.Request('https://api.telegram.org/bot'+token+'/sendVideo',
         data=b''.join(chunks), headers={'Content-Type': 'multipart/form-data; boundary='+boundary})
-    try:
-        with urllib.request.urlopen(request, timeout=180) as response:
-            return json.loads(response.read(2_000_000))
-    except urllib.error.HTTPError as exc:
-        # Never print exception URLs: Telegram embeds the bot token in the path.
-        return {'ok': False, 'error_code': exc.code}
-    except (OSError, ValueError):
-        raise w.Hold('Telegram delivery unconfirmed; inspect chat before retrying') from None
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(request, timeout=180) as response:
+                return json.loads(response.read(2_000_000))
+        except urllib.error.HTTPError as exc:
+            with exc:
+                if exc.code >= 500:
+                    raise w.Hold('Telegram delivery unconfirmed; inspect chat before retrying') from None
+                if exc.code != 429 or attempt == 2:
+                    return {'ok': False, 'error_code': exc.code}
+                try:
+                    delay = json.loads(exc.read(65_536))['parameters']['retry_after']
+                except (KeyError, TypeError, ValueError):
+                    return {'ok': False, 'error_code': 429}
+            if type(delay) is not int or not 1 <= delay <= 20:
+                return {'ok': False, 'error_code': 429}
+            time.sleep(delay)
+        except (OSError, ValueError):
+            raise w.Hold('Telegram delivery unconfirmed; inspect chat before retrying') from None
 
 def deliver(state):
     token, chat = os.getenv('TELEGRAM_BOT_TOKEN', '').strip(), os.getenv('TELEGRAM_CHAT_ID', '').strip()
