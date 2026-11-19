@@ -3784,9 +3784,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T17:57:02.996080+00:00",
       "id": "4e0af31176414a55",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T17:57:05.268746+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "cd6104ec413243a6": {
       "title": "Putin's Crimean Bridge partly collapses as Zelensky hails 'unprecedented' attack by Ukraine",
@@ -3945,9 +3946,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T20:18:27.804672+00:00",
       "id": "ad6e0b9cb86b05c3",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T20:18:59.412302+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "18d5c7514ec64dea": {
       "title": "Jensen Huang says he would be 'honoured' to return as Nvidia CEO if board asked him",
@@ -3980,12 +3982,12 @@
       "discovered_at": "2026-11-17T20:18:21.888847+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "66663b776673efc0",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-17T20:18:59.469657+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-19T10:04:03.432440+00:00",
-      "blocker": "AI request cap reached; job saved for next run"
+      "blocker": "News candidate expired; discover a recent story"
     },
     "11575b3bb679f018": {
       "title": "The Strokes’ ‘Lonely in the Future’ Film Is a Puppet-Fuelled Nod to ‘Spitting Image’ — LBB - LBB - Little Black Book",
@@ -4046,12 +4048,12 @@
       "discovered_at": "2026-11-17T23:09:07.048687+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "798f6c61218572df",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-17T23:09:13.883674+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-19T17:51:25.220505+00:00",
-      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
+      "last_attempt_at": "2026-11-19T20:41:11.524405+00:00",
+      "blocker": "Script length outside target range: 50 words; need 54-90 for 30 seconds"
     },
     "808be5cc9374feea": {
       "title": "How Democrats Could Nullify the Electoral College - Time Magazine",
@@ -4097,9 +4099,12 @@
       "discovered_at": "2026-11-17T23:09:06.975355+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "369fe5d9441f354f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T23:09:13.978986+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T20:41:27.117599+00:00",
+      "blocker": "Editor rejected candidate: The provided sources point to syndication copies from the same underlying BBC article URL or content stream across the provided entries, making it fail the two independent source d"
     },
     "919b6ed7a75ad74f": {
       "title": "Andrew’s real story behind THAT ‘non-sweating’ condition exposed by photographer - News24",
@@ -4174,9 +4179,12 @@
       "discovered_at": "2026-11-17T23:15:35.956123+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "71b7e05913976f85",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T23:15:43.583078+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T20:41:58.945854+00:00",
+      "blocker": "Evidence quote not found in fetched source"
     },
     "f14ffcc0327f22cb": {
       "title": "Trump says report of Iran bomb plot against D.C. is being taken ‘very seriously’ - Los Angeles Times",
@@ -4189,9 +4197,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T23:15:42.121532+00:00",
       "id": "f14ffcc0327f22cb",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T23:15:43.630030+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "0d5c314a91b8a293": {
       "title": "Thomas Markle charged over child sex abuse material in Philippines",
@@ -4205,9 +4214,12 @@
       "discovered_at": "2026-11-17T23:15:35.990605+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "0d5c314a91b8a293",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T23:15:43.662817+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T20:42:33.306150+00:00",
+      "blocker": "Script length outside target range: 35 words; need 54-90 for 30 seconds"
     },
     "a588be45b3788aca": {
       "title": "Palestinian woman, 72, shot dead by Israeli settlers in West Bank, health ministry says",
@@ -4221,9 +4233,10 @@
       "discovered_at": "2026-11-17T23:15:36.097169+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "a588be45b3788aca",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T23:15:43.702913+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "28a6e7383288c7f5": {
       "title": "Army lays groundwork for death row executions if Trump gives approval - ABC News - Breaking News, Latest News and Videos",
@@ -4269,9 +4282,17 @@
       "discovered_at": "2026-11-18T02:23:57.313832+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "5eca2e638c3e1e33",
-      "status": "QUEUED",
+      "status": "REVIEW_REQUIRED",
       "created_at": "2026-11-18T02:24:01.923599+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T20:43:04.914366+00:00",
+      "video_sha256": "895d4499aa27dc2297fb804be1f785bb3e76c841648f3f5690c36b72876576d3",
+      "completed_at": "2026-11-19T20:45:10.588590+00:00",
+      "source_story_urls": [
+        "https://www.aljazeera.com/news/2026/11/18/what-is-trump-hoping-to-achieve-at-apec-meeting-in-china?traffic_source=rss",
+        "https://www.yahoo.com/news/world/articles/trump-takes-twice-long-enter-173711942.html"
+      ]
     },
     "d5d939f35dd2d9aa": {
       "title": "Ukraine updates: Strike appears to partially destroy part of key Kerch bridge in occupied Crimea - DW.com",
@@ -4300,9 +4321,12 @@
       "discovered_at": "2026-11-18T02:23:56.501375+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "d7989de8e215e2a5",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T02:24:01.989734+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T20:45:10.594647+00:00",
+      "blocker": "Script length outside target range: 49 words; need 54-90 for 30 seconds"
     },
     "312e4f11713dbf42": {
       "title": "William and Kate celebrate Earthshot Prize winners in Mumbai",
@@ -4316,9 +4340,10 @@
       "discovered_at": "2026-11-18T02:23:56.707202+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "312e4f11713dbf42",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T02:24:02.013409+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "492ba8a9af630510": {
       "title": "Dark energy may have flipped from negative to positive 9.5 billion years ago - Science Daily",
@@ -4361,9 +4386,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T02:24:00.981526+00:00",
       "id": "eb0f508294b0b444",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T02:24:02.119580+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "628fc11f2096d869": {
       "title": "What Trump, Putin, and Xi want from their meeting in Shenzhen - Atlantic Council",
@@ -4393,9 +4419,12 @@
       "discovered_at": "2026-11-18T08:00:37.437112+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "aa2d1ab7123ddaed",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T08:00:44.889934+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T20:45:46.182239+00:00",
+      "blocker": "Editor rejected candidate: The candidate topic involves child sexual abuse material (CSAM/CSAEM) allegations, which falls under graphic, gory, or sensitive material that cannot be responsibly or safely suppo"
     },
     "17fe1a0b03c341b6": {
       "title": "A sacred mountain and whether a Kim-Trump meet is in the offing - France 24",
@@ -4424,9 +4453,12 @@
       "discovered_at": "2026-11-18T08:00:37.202221+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "5cb353c74b655f40",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T08:00:44.983858+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T20:46:23.952326+00:00",
+      "blocker": "Insufficient evidence sources for this content type"
     },
     "0e2f76856084bad7": {
       "title": "Nvidia says it won't reinstate Huang as it reports soaring sales",
@@ -4440,9 +4472,12 @@
       "discovered_at": "2026-11-18T08:00:37.245306+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "0e2f76856084bad7",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T08:00:45.025449+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T20:46:55.722081+00:00",
+      "blocker": "Editor rejected candidate: The candidate article from The Annapurna Express explicitly cites the BBC as its source for the Nvidia report, indicating syndicated copies rather than independent reporting from t"
     },
     "e951c01a540e173f": {
       "title": "What Song Does Eminem’s “My Name Is” Sample? Labi Siffre Explained - RouteNote",
@@ -4579,9 +4614,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T08:21:16.940217+00:00",
       "id": "633edf41464e295a",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T08:21:19.073197+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "f982c9b54527e5cf": {
       "title": "Russia, China should ‘lead’ push to multipolar world, Xi tells APEC summit",
@@ -5390,36 +5426,173 @@
       "status": "QUEUED",
       "created_at": "2026-11-19T17:51:25.196774+00:00",
       "attempts": 0
+    },
+    "4cb1809ca11fc7e9": {
+      "title": "Myanmar committed genocide against Rohingya minority, top UN court rules",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c804wzp20ddvo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T20:07:02+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T20:41:00.556187+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "4cb1809ca11fc7e9",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T20:41:11.174573+00:00",
+      "attempts": 0
+    },
+    "fa96e04b7eb69fb1": {
+      "title": "Kushner says Russia is 'comfortable' with NATO-like security guarantees for Ukraine to end war after Trump talks with Putin - PBS",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNZGtncEo5UWFCS09PLVJ5Rlk0RDJiQkpHSUJTQmVoeTVyX3F4N3gyTk4xeXA4NWE4ck15X0htT0FxRkc5dGp6b0pvRDVqWURRSldmSXEzaGJSZDV2dHd0ZnZaYzJSZUxxZUhqbHJNNUhLTnV1MHZjV0NFUVBMVURvdU15TDhOMm05NFhnU29pd3cwSmtGNThSYVlBQ2JqM001bUdsdE04N2VTOUYyekw1d3EySHR4U2RTNnFmeXBGYnlRMDdvc1hqSmJBb0NGVkluNzhGUFVXWnlOV01uRWc4Y3I2MWNhTmRyNlhKbNIB8gFBVV95cUxOR3dkTWZRMzdtWk1FMFpZdXNlckQzMk90RUhGaGF6SzFmRjJXNXozRmQ3bWMwUWlHSzk5alRMZFQ3RXNTeTJzT21HWXZNX2VMSGlUdDVJMF81Mk1PZEJab2h1YXpwRFAyR3RVOGpXVHVRVk1rNkhKdEVVZHZRT2pXZl85UlhkSzN2Zmx1WFNyclAzaGw3dXZmck80THZpdHNuRnJpWkM2LXFUak5qU3JoS29UNUozUnFLcGR4ckx1eWUxbzNXbWl4MkQ1UFB1Ui1Oa09WcUlkVXhmcHhVMGlQeVBvdXlKbGxrMDBvX0lPeURzZw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T18:32:34+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T20:41:07.997417+00:00",
+      "id": "fa96e04b7eb69fb1",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T20:41:11.233405+00:00",
+      "attempts": 0
+    },
+    "8e2e0efaf81880d6": {
+      "title": "‘On the same page’: Hegseth hails US ties with Colombia’s de la Espriella",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/19/on-the-same-page-hegseth-hails-us-ties-with-colombias-de-la-espriella?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T19:53:24+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T20:41:01.760543+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "8e2e0efaf81880d6",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T20:41:11.271661+00:00",
+      "attempts": 0
+    },
+    "0b34a3f283f5af88": {
+      "title": "European leaders unite in Berlin to reaffirm support for Ukraine",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/19/european-leaders-unite-in-berlin-to-reaffirm-support-for-ukraine?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T19:40:23+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T20:41:01.801101+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "0b34a3f283f5af88",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T20:41:11.307143+00:00",
+      "attempts": 0
+    },
+    "3d22d20cf9340c91": {
+      "title": "Trump administration makes it easier for companies to classify workers as contractors - Yahoo",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilAFBVV95cUxPd29kQTZjMnJYQ3gzcXNtZnd0RE52RGwtdVpsWWMtN2NjNUk5TVVhTDVnN0EycDlPSWtQSXpQYnR3UDVvT3N1cE1LbVA1UDEtZ3BFZ29OQjhQbUVQS2VucU0wVlB6SjJ0MHBGT013Y3FQVVg3ZU1ySm1pdTdabTAwQ1Q1R1VFWFFxbksxT1E4Unk2VENi?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T18:28:52+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T20:41:09.151531+00:00",
+      "id": "3d22d20cf9340c91",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T20:41:11.357405+00:00",
+      "attempts": 0
+    },
+    "385d89187e61639c": {
+      "title": "Bloomberg News journalist barred from China meeting after Nvidia question - The Washington Post",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMivAFBVV95cUxQbk8waFFIY21HMDBWY1VQRDhUSFVHVWcxcVhheGJ2TG8xRmRqclJYU3piWDg4RU5kVHZLUW43a3duaHlqVENtdFJvNzNKbVB3VnRsNkozNzJzOGtBdFNMMXFYYXdGWUtvX2ExWFpzcGtZN1FweDZKaVFaei14bjhEYUxHd3hXRGp5UjJWOF8xYnhFd2hBWWxfZ0VvZDNmS0lyd2ZFT3E2X1JrR3JrQlR0VW9kR1dRMHVKOTFWMQ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T17:57:20+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T20:41:08.384423+00:00",
+      "id": "385d89187e61639c",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T20:41:11.403940+00:00",
+      "attempts": 0
+    },
+    "a486579272be0528": {
+      "title": "From Drug Discovery to Patient Impact: Bridging the Gap Between Science and Healthcare - News-Medical",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMizgFBVV95cUxPYTlEdHBoeWE2dUV1WDdXMERCY2E4NXZYeHpEamFNSGVMYWpjanBDR3h2VkdmN09XUG1CUzdmU0xzTXBFSU12TEN2OTlJdVlJQUxyS1YzenlwcmNNSUt1VVRHYW5pWTV1VF83SmxhdDlMV3hUQzRVZzB2dlU1YWtGWHJ0Mldqb0RBeXR2Vlp2N1Uyb2ppaHBQZzU3R1VvU0hmcWxrejRVN00zc0hVdUlOQy02NkxRdm85WGFxQVoyZ19ZX2tpa0VSRy1jZDlwQQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 1,
+      "discovered_at": "2026-11-19T20:41:05.646083+00:00",
+      "id": "a486579272be0528",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T20:41:11.458079+00:00",
+      "attempts": 0
+    },
+    "769c0fc15529ae0d": {
+      "title": "Taylor Swift's CMA Performance Was Filled With Easter Eggs From the Early Days of Her Career - Rolling Stone",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMisAFBVV95cUxPMW5VanhRM3hMaTFvTEVaY2dJTEZ2WnQ1c2FWdlpSdG9WRWpCNUNfY0I3SzU5S3FmeVJDQnVnZjRaU2tzcUY1Qmpxa3J1dy1GeGtTRk9VOWExLW05Z1d4Y0d4TGVTWFRhT01aS1c2QnVLc2xvcEt1R0hrUnRRZE9wSkhWU0hGc3hFei1aTGlLUndaMExkTEFaZHZyNFY3cEFWN09OX1o2TXNqWHdEVnFHRg?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T20:41:07.324828+00:00",
+      "id": "769c0fc15529ae0d",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T20:41:11.512776+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-19",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 8,
-    "ai": 35,
-    "pixabay": 17
+    "youtube": 12,
+    "ai": 59,
+    "pixabay": 23
   },
   "content_cycle_index": 6,
   "content_batch": {
     "category": "world_news",
-    "completed": 0,
-    "story_keys": [],
+    "completed": 1,
+    "story_keys": [
+      "what is trump hoping to achieve at apec meeting in china"
+    ],
     "media_hashes": [],
-    "source_urls": []
+    "source_urls": [
+      "https://www.aljazeera.com/news/2026/11/18/what-is-trump-hoping-to-achieve-at-apec-meeting-in-china?traffic_source=rss",
+      "https://www.yahoo.com/news/world/articles/trump-takes-twice-long-enter-173711942.html"
+    ]
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-19T17:51:25.197665+00:00",
+    "started_at": "2026-11-19T20:41:11.513404+00:00",
     "attempted_ids": [
-      "798f6c61218572df"
+      "798f6c61218572df",
+      "369fe5d9441f354f",
+      "71b7e05913976f85",
+      "0d5c314a91b8a293",
+      "5eca2e638c3e1e33",
+      "d7989de8e215e2a5",
+      "aa2d1ab7123ddaed",
+      "5cb353c74b655f40",
+      "0e2f76856084bad7"
     ],
-    "completed_ids": [],
+    "completed_ids": [
+      "5eca2e638c3e1e33"
+    ],
     "model": "gemini-3.5-flash-lite",
-    "pause_reason": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted",
-    "finished_at": "2026-11-19T17:52:10.474086+00:00",
-    "attempted": 1,
-    "completed": 0,
-    "gemini_request_attempts": 3
+    "finished_at": "2026-11-19T20:47:24.476024+00:00",
+    "attempted": 9,
+    "completed": 1,
+    "gemini_request_attempts": 24
   },
   "telegram_deliveries": {
     "2d869bc60f3da658c9197b934c45dfddb3c797a7bc940732029e92f431cf90f2": {
