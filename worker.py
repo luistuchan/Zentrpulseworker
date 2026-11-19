@@ -705,6 +705,39 @@ def production_failure_guidance(entry, state):
             if any(reason in blocker for blocker in blockers)]
 
 
+def record_approved_video(state, job_id, expected_sha, artifact_dir):
+    job = state['jobs'].get(job_id, {})
+    if job.get('status') != 'REVIEW_REQUIRED' or job.get('video_sha256') != expected_sha:
+        raise Hold('Approval must match the exact video awaiting review')
+    video = artifact_dir / 'video.mp4'
+    if not video.is_file() or digest(video) != expected_sha:
+        raise Hold('The approved MP4 does not match the review record')
+    measured = duration(video)
+    output = run(['ffmpeg', '-v', 'info', '-i', str(video), '-an',
+                  '-vf', "select='gt(scene,0.35)',metadata=print:file=-", '-f', 'null', '-'])
+    cuts = sorted({float(t) for t in re.findall(r'pts_time:\s*(\d+(?:\.\d+)?)', output.decode())
+                   if .2 < float(t) < measured - .2})
+    job['approved_edit'] = {'video_sha256': expected_sha, 'duration_seconds': round(measured, 2),
+                            'cut_times': cuts, 'approved_at': now()}
+
+
+def approved_edit_guidance(entry, state):
+    examples = [
+        job['approved_edit'] for job in state['jobs'].values()
+        if job.get('category') == entry.get('category')
+        and job.get('content_type', 'explainer') == entry.get('content_type', 'explainer')
+        and job.get('approved_edit', {}).get('video_sha256') == job.get('video_sha256')
+        and job.get('approved_edit', {}).get('cut_times')
+    ]
+    if not examples:
+        return ''
+    approved = max(examples, key=lambda edit: edit['approved_at'])
+    seconds = approved['duration_seconds'] / (len(approved['cut_times']) + 1)
+    return (f'A reviewer approved a similar finished video with its first visual cut around '
+            f'{approved["cut_times"][0]:.1f} seconds and visual cuts roughly every {seconds:.1f} '
+            'seconds. Use that pacing as a reference when it fits the new story.')
+
+
 def generate_plan(entry, sources, target, budget, folder):
     min_sources = 2 if entry.get('content_type') == 'news_update' else 1
     schema = json.loads(json.dumps(SCRIPT_SCHEMA))
@@ -727,6 +760,9 @@ def generate_plan(entry, sources, target, budget, folder):
     failure_guidance = footage_failure_guidance(entry, budget.state)
     if failure_guidance:
         prompt += '\nLessons from rejected footage on similar drafts:\n' + '\n'.join(failure_guidance)
+    approved_guidance = approved_edit_guidance(entry, budget.state)
+    if approved_guidance:
+        prompt += '\nPacing from an approved edit:\n' + approved_guidance
     production_guidance = production_failure_guidance(entry, budget.state)
     if production_guidance:
         prompt += '\nLessons from earlier production failures:\n' + '\n'.join(production_guidance)
@@ -1777,6 +1813,7 @@ def main():
     parser.add_argument('--discover', action='store_true')
     parser.add_argument('--doctor', action='store_true')
     parser.add_argument('--retry', default='', help='Exact held job ID; retries require a deliberate request')
+    parser.add_argument('--record-approval', nargs=3, metavar=('JOB_ID', 'SHA256', 'ARTIFACT_DIR'))
     args = parser.parse_args()
     if args.doctor:
         print(json.dumps({'ffmpeg': bool(shutil.which('ffmpeg')), 'ffprobe': bool(shutil.which('ffprobe')),
@@ -1798,6 +1835,11 @@ def main():
         state = load(STATE / 'queue.json', {'schema_version': SCHEMA_VERSION, 'jobs': {}})
         if state.get('schema_version') != SCHEMA_VERSION:
             raise Hold('Unknown queue schema; migration required')
+        if args.record_approval:
+            job_id, sha, artifact_dir = args.record_approval
+            record_approved_video(state, job_id, sha, Path(artifact_dir))
+            atomic_json(STATE / 'queue.json', state)
+            return 0
         budget, warnings = Budget(state), []
         queue = load(ROOT / 'queue.json', [])
         if not isinstance(queue, list):
