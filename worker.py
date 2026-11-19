@@ -457,7 +457,8 @@ class Budget:
         return True
 
 
-def ai(prompt, budget, image_path=None, response_schema=None, request_allowed=None):
+def ai(prompt, budget, image_path=None, response_schema=None, request_allowed=None,
+       allowance_error='Stock footage review allowance reached for this draft; saved progress'):
     # No code can detect whether the user's Google Cloud account has billing enabled.
     if os.getenv('FREE_TIER_CONFIRMED') != '1':
         raise Hold('Confirm the API project is free-tier before enabling AI: FREE_TIER_CONFIRMED=1')
@@ -479,7 +480,7 @@ def ai(prompt, budget, image_path=None, response_schema=None, request_allowed=No
     # persistent free-tier budget; do not retry permanent errors or change models.
     for attempt in range(3):
         if request_allowed is not None and not request_allowed():
-            raise Wait('Stock footage review allowance reached for this draft; saved progress')
+            raise Wait(allowance_error)
         if not budget.take('ai'):
             raise Wait('AI request cap reached; job saved for next run')
         try:
@@ -707,15 +708,19 @@ def generate_plan(entry, sources, target, budget, folder):
     if failure_guidance:
         prompt += '\nLessons from rejected footage on similar drafts:\n' + '\n'.join(failure_guidance)
     prompt += '\nCANDIDATE DATA:\n' + json.dumps(data)
+    request_start = budget.run_counts['ai']
     for attempt in range(3):
-        plan = ai(prompt, budget, response_schema=schema)
+        plan = ai(prompt, budget, response_schema=schema,
+                  request_allowed=lambda: budget.run_counts['ai'] - request_start < 3,
+                  allowance_error='Script planning reached its three-request limit')
         try:
             validate_plan(plan, sources, target, min_sources=min_sources)
             return plan
         except Hold as exc:
             atomic_json(folder / 'script-diagnostic.json', {
                 'attempt': attempt + 1, 'validation_error': str(exc), 'plan': plan})
-            if plan.get('decision') != 'draft' or attempt == 2:
+            if (plan.get('decision') != 'draft' or attempt == 2
+                    or budget.run_counts['ai'] - request_start >= 3):
                 raise
             # Bounded regeneration, using the same evidence and validation.
             word_min, word_max = int(target * 1.8), int(target * 3)
