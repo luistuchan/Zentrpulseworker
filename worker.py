@@ -778,16 +778,23 @@ def review_stock_frame(scene, entry, folder, budget, thumb):
     model = os.getenv('GEMINI_MODEL', 'gemini-3.5-flash-lite')
     key = hashlib.sha256(json.dumps([model, prompt, MATCH_SCHEMA, digest(thumb)],
                                    sort_keys=True).encode()).hexdigest()
-    reviews_path = folder / 'stock-reviews.json'
-    reviews = load(reviews_path, {})
+    reviews = entry.setdefault('stock_reviews', {})
     if key in reviews:
         return reviews[key]
-    cap = int(os.getenv('MAX_STOCK_AI_CALLS_PER_DRAFT', '16'))
-    match = ai(prompt, budget, thumb, response_schema=MATCH_SCHEMA,
-               request_allowed=lambda: budget.run_counts['ai'] - entry['_stock_ai_start'] < cap)
+
+    # Import matching verdicts from the older media cache as drafts resume.
+    cached_match = load(folder / 'stock-reviews.json', {}).get(key)
+    if isinstance(cached_match, dict) and isinstance(cached_match.get('matches'), bool):
+        match = cached_match
+    else:
+        cap = int(os.getenv('MAX_STOCK_AI_CALLS_PER_DRAFT', '16'))
+        match = ai(prompt, budget, thumb, response_schema=MATCH_SCHEMA,
+                   request_allowed=lambda: budget.run_counts['ai'] - entry['_stock_ai_start'] < cap)
+
+    # The workflow persists queue.json even when a draft has to wait.
     if isinstance(match.get('matches'), bool):
         reviews[key] = match
-        atomic_json(reviews_path, reviews)
+        atomic_json(STATE / 'queue.json', budget.state)
     return match
 
 
