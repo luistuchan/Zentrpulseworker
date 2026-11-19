@@ -3823,7 +3823,8 @@
           "reason": "The image shows a close-up of a flower against a dark background, which has no relevance to the topic of the Crimean Bridge collapse or military conflict."
         }
       },
-      "blocker": "No matching Pixabay footage for s02: 9 hits for 'smoke rising'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 5,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "b9a0fd865f8c7476": {
       "title": "How the attack on Crimean Bridge unfolded",
@@ -3864,7 +3865,8 @@
           "reason": "The frame shows a busy urban intersection in Tokyo, Japan, which is completely unrelated to the topic of the Crimean Bridge attack."
         }
       },
-      "blocker": "No matching Pixabay footage for s06: 9 hits for 'strait crossing'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 5,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "6ca56b2ac47c0538": {
       "title": "Plate tectonics - Earth's Layers, Crust, Mantle - Britannica",
@@ -3892,9 +3894,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T17:57:02.934518+00:00",
       "id": "750cbccf061aef51",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T17:57:05.369876+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "5d4f836a72d454d1": {
       "title": "Trump arrives in Manila ahead of talks with Putin and Xi in China - BBC",
@@ -3907,9 +3910,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T17:57:02.964605+00:00",
       "id": "5d4f836a72d454d1",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T17:57:05.395515+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "655c6d3a8b26edb4": {
       "title": "Can a robot pianist upstage a human musician?",
@@ -4009,9 +4013,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T20:18:26.853806+00:00",
       "id": "52dd79e6e7109178",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T20:18:59.548006+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "bf54daef9a40a313": {
       "title": "University of Maryland President Darryll J. Pines has a new book out - CBS News",
@@ -4024,9 +4029,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T20:18:26.926799+00:00",
       "id": "bf54daef9a40a313",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T20:18:59.581462+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "798f6c61218572df": {
       "title": "American soldier arrested by UK police on suspicion of spying taken into US military custody",
@@ -4040,9 +4046,12 @@
       "discovered_at": "2026-11-17T23:09:07.048687+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "798f6c61218572df",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-17T23:09:13.883674+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T17:51:25.220505+00:00",
+      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
     },
     "808be5cc9374feea": {
       "title": "How Democrats Could Nullify the Electoral College - Time Magazine",
@@ -4071,9 +4080,10 @@
       "discovered_at": "2026-11-17T23:09:06.918771+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "c4184f63a195aa53",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T23:09:13.945059+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "369fe5d9441f354f": {
       "title": "US loses measles elimination status after 26 years amid record case numbers",
@@ -4147,9 +4157,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T23:09:11.987035+00:00",
       "id": "2551dd0833ee2885",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T23:09:14.146180+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "71b7e05913976f85": {
       "title": "Nvidia reports bumper results as firm says it not reinstating Huang",
@@ -4365,9 +4376,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T02:24:01.017072+00:00",
       "id": "628fc11f2096d869",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T02:24:02.150692+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "aa2d1ab7123ddaed": {
       "title": "Philippines police ask prosecutors to charge Thomas Markle over child sex abuse material",
@@ -4631,9 +4643,10 @@
       "discovered_at": "2026-11-18T08:24:45.948525+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "fff92b58ba55c629",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T08:24:53.212025+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "9d24779ef4056224": {
       "title": "Trump begins Asia trip ahead of high-stakes talks with Xi and Putin - Scripps News",
@@ -4646,9 +4659,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T08:24:51.186095+00:00",
       "id": "9d24779ef4056224",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T08:24:53.258343+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "e957e3253ca47009": {
       "title": "Trump says Russia-Ukraine war 'very close' to being resolved - Anadolu Ajansı",
@@ -4661,9 +4675,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T08:24:51.282956+00:00",
       "id": "e957e3253ca47009",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T08:24:53.304465+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "fba09d28094889d8": {
       "title": "What do Deutsche Bank leaks reveal about Trump, Epstein and Russia?",
@@ -4724,9 +4739,10 @@
       "discovered_at": "2026-11-18T10:02:53.768477+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "9eb0effb1b8b8f5d",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T10:03:00.327753+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "cd55fa9344c3d998": {
       "title": "Thondimuthalum Driksakshiyum Ending Explained: A Gold Chain Theft, a Clever Thief and a Shocking Police Investigation (Spoilers) - Vocal",
@@ -4754,9 +4770,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T10:02:58.216619+00:00",
       "id": "6d4e80683a048896",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T10:03:00.419178+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "0319dacd5899abb2": {
       "title": "Trump took Qatari jet to Asia, but it’s unclear whether it’s been ‘maxed out’ - NBC News",
@@ -4769,9 +4786,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T10:02:58.657861+00:00",
       "id": "0319dacd5899abb2",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T10:03:00.464317+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "1398d274efe695a6": {
       "title": "What is Iraq’s Jurf al-Sakhar and what is behind gov’t push to control it?",
@@ -5249,13 +5267,136 @@
       "status": "QUEUED",
       "created_at": "2026-11-19T09:57:04.866741+00:00",
       "attempts": 0
+    },
+    "1e622ef0d8eec3fd": {
+      "title": "Trump, Putin and Xi release 'peace declaration' after historic meeting",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c623j4ln97x7o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T17:38:22+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T17:51:15.753545+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "1e622ef0d8eec3fd",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T17:51:24.802786+00:00",
+      "attempts": 0
+    },
+    "62d769ca185f5f24": {
+      "title": "Trump says US, Russia, China ‘uniquely positioned’ on nuclear arms - Yeni Safak English",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxQWFVqaWx6SERwRTgtZmhxY2VCOWdxTzFaNzJVVndjRG85SDl1dGRkakg0N1pHYTNxSnBYemxGNWhBOUl5MVc1SXpCMHc3Q2xldjRNY1R3Ukx3eERUNEhNN1JJa0ZjUDhjd0lVaVZaUU5FTjZ4UjM4N0FZZXcyZGtZVkpXSkhrR3htQTh4eDVPbDk0bFJNM1NtVWFJaEZWOUZmT29V?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T16:41:27+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T17:51:22.330159+00:00",
+      "id": "62d769ca185f5f24",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T17:51:24.863465+00:00",
+      "attempts": 0
+    },
+    "f2e40ffdf1ae9890": {
+      "title": "Rohingya genocide: What was said in court and what happens now?",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/videos/c60qj10j0ld5o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T17:35:05+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T17:51:16.937924+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "f2e40ffdf1ae9890",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T17:51:24.909043+00:00",
+      "attempts": 0
+    },
+    "51da61581c0903d2": {
+      "title": "Susan Smith denied parole again 32 years after drowning her two sons",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/ckdd1y09eqjmo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T17:23:34+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T17:51:16.028313+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "51da61581c0903d2",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T17:51:24.960996+00:00",
+      "attempts": 0
+    },
+    "aa3c46298db1f27c": {
+      "title": "Netanyahu for 2 years as PM, then president? New unity plan - Ynetnews",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1fd0huSWlnQXM4eDNJY0lkQjJNLW1QVmUzRmJ2Wlhib0U4MjVRc2J3OVlUcU5qVEdFeDBJbG05MllSMkYzN01MVkYwT0Y2ajBWWG9WcDZIOA?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T16:36:13+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T17:51:22.536158+00:00",
+      "id": "aa3c46298db1f27c",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T17:51:25.011560+00:00",
+      "attempts": 0
+    },
+    "078b4bf69e353bfe": {
+      "title": "Trump bought up to $265,000 of Nvidia stock in September, disclosure shows - Yahoo Finance",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilwFBVV95cUxNcERUVFNXR0pBOXZHaGxsYjlTelMwRURMajJuMjlzREZMSnBnVmpUQ1QzTXNhNS1nOXJZR21wOWZ5d0lHS01zQ0lQVDVpSW01REpMQk9oZFgtTFppcjJxRU13Y2x5TU54TE5VNmlUb0dKQUh0YkcxYW16Vnl2aEVOa3c1V2pEd3lJQWNYWWZYMnVuWTlfR2dn?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T15:45:58+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T17:51:22.187695+00:00",
+      "id": "078b4bf69e353bfe",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T17:51:25.072199+00:00",
+      "attempts": 0
+    },
+    "1f04ad23e99b86f3": {
+      "title": "Glyphosate | Description, Discovery, Uses, Mechanism, Resistance, Environmental Risks, & Health Concerns - Britannica",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5wT2NLTWo4LURHNDVhb2RkemliNUI5NTM3SU1JRjF2MllTU2RaZFdhbk9BRjFlNWRNdWxmWnc1NE1xeHZtaTAxYmZ2bXF3ZUhmZWFzclRwUXJ4UkVV?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 1,
+      "discovered_at": "2026-11-19T17:51:19.840195+00:00",
+      "id": "1f04ad23e99b86f3",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T17:51:25.145315+00:00",
+      "attempts": 0
+    },
+    "2cdf2c5d964c5575": {
+      "title": "15 Songs Like Tate McRae’s “Housewife” for Confident Pop Fans - RouteNote",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxNcWx1MGZ4cTBlWEhuVHVKVUlrZnh1UVlfS3pRVldxNjlrZ0w1UVVhUXlxUml5MTB0NnN0M0tfSzI5R2gwcXdDSW9kSG85YmFFTi1Ca014WjBTdUt1dlQ0VkxUZFdJRTNBQXZ1bEpQWkVlb0g1T1JJYVZTcGs4MHFJZFByZFE4b1V5ZURFQnR1R0Q?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T17:51:21.570944+00:00",
+      "id": "2cdf2c5d964c5575",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T17:51:25.196774+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-19",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 4,
-    "ai": 32,
+    "youtube": 8,
+    "ai": 35,
     "pixabay": 17
   },
   "content_cycle_index": 6,
@@ -5268,26 +5409,17 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-19T09:57:04.867834+00:00",
+    "started_at": "2026-11-19T17:51:25.197665+00:00",
     "attempted_ids": [
-      "c32fb0cbf637ee8b",
-      "c26a76aa1c7a9505",
-      "cd6104ec413243a6",
-      "b9a0fd865f8c7476",
-      "655c6d3a8b26edb4",
-      "18d5c7514ec64dea",
-      "66663b776673efc0"
+      "798f6c61218572df"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "categories_deferred": [
-      "culture"
-    ],
-    "pause_reason": "AI request cap reached; job saved for next run",
-    "finished_at": "2026-11-19T10:04:51.543841+00:00",
-    "attempted": 7,
+    "pause_reason": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted",
+    "finished_at": "2026-11-19T17:52:10.474086+00:00",
+    "attempted": 1,
     "completed": 0,
-    "gemini_request_attempts": 32
+    "gemini_request_attempts": 3
   },
   "telegram_deliveries": {
     "2d869bc60f3da658c9197b934c45dfddb3c797a7bc940732029e92f431cf90f2": {
