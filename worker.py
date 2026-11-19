@@ -993,6 +993,55 @@ def select_news_photo(scene, entry, folder, budget):
     return None
 
 
+def select_youtube_visual(scene, entry, folder, budget):
+    key = os.getenv('YOUTUBE_API_KEY', '').strip()
+    if not key:
+        return None
+    # Share one topic search across scenes and resumed runs.
+    candidates = entry.get('youtube_visual_candidates')
+    if candidates is None:
+        if not budget.take('youtube'):
+            return None
+        params = urllib.parse.urlencode({
+            'key': key, 'part': 'snippet', 'type': 'video', 'videoLicense': 'creativeCommon',
+            'videoDuration': 'short', 'q': entry['title'][:100], 'maxResults': 3,
+        })
+        try:
+            items = json_http('https://www.googleapis.com/youtube/v3/search?' + params, retries=0).get('items', [])
+        except (Hold, Wait):
+            return None
+        candidates = [item['id']['videoId'] for item in items
+                      if re.fullmatch(r'[A-Za-z0-9_-]{11}', item.get('id', {}).get('videoId', ''))]
+        entry['youtube_visual_candidates'] = candidates
+    used = entry['_used_stock']
+    video_id = next((item for item in candidates if 'youtube:' + item not in used), None)
+    if not video_id:
+        return None
+    import clipper
+    source_dir = folder / ('youtube-' + video_id)
+    source_dir.mkdir(exist_ok=True)
+    url = 'https://www.youtube.com/watch?v=' + video_id
+    try:
+        asset, metadata = clipper.source_media({'media': {
+            'source_url': url, 'license': 'creativeCommon',
+            'rights_note': 'Creative Commons license verified at download',
+        }}, source_dir, __import__(__name__))
+        if duration(asset) < max(1, scene['_required_seconds']):
+            return None
+        thumb = source_dir / 'scene-preview.jpg'
+        run(['ffmpeg', '-v', 'error', '-y', '-ss', '0.5', '-i', str(asset),
+             '-frames:v', '1', '-vf', 'scale=480:-2', str(thumb)])
+    except (Hold, Wait):
+        return None
+    match = review_stock_frame({**scene, '_review_news_photo': True}, entry, folder, budget, thumb)
+    if match.get('matches') is not True:
+        return None
+    asset_id = 'youtube:' + video_id
+    used.append(asset_id)
+    return asset, {**metadata, 'provider': 'YouTube', 'id': asset_id,
+                   'match_check': match, 'illustrative': True}
+
+
 def select_asset(scene, entry, folder, budget):
     manifest = entry.get('assets', {}).get(scene['id'])
     if manifest:
@@ -1004,6 +1053,9 @@ def select_asset(scene, entry, folder, budget):
         return path, {'provider': 'local', **manifest}
     if scene['requires_exact_footage']:
         raise Hold('Exact footage required for ' + scene['id'] + '; provide scene-matched local footage')
+    youtube = select_youtube_visual(scene, entry, folder, budget)
+    if youtube:
+        return youtube
     try:
         return select_stock_video(scene, entry, folder, budget)
     except Hold:
@@ -1149,7 +1201,7 @@ def render(plan, entry, folder, budget, target):
                                               'audio_sha256': digest(local_file(entry['audio'][scene['id']]))
                                               if entry.get('audio', {}).get(scene['id']) else None,
                                               'voice': os.getenv('TTS_VOICE', 'en-US-AndrewNeural'),
-                                              'layout_version': 2}, sort_keys=True).encode()).hexdigest()
+                                              'layout_version': 3}, sort_keys=True).encode()).hexdigest()
         prior = load(meta_path, {})
         prior_asset = prior.get('asset', {})
         reviewed_photo = prior_asset.get('provider') != 'Pixabay photo' or prior_asset.get('scene_reviewed')
@@ -1159,7 +1211,7 @@ def render(plan, entry, folder, budget, target):
             total += prior['duration']
             asset_log.append(prior['asset'])
             entry['_used_stock'].extend(x['id'] for x in prior['asset'].get('additional_photos', []))
-            if prior['asset'].get('provider') == 'Pexels':
+            if prior['asset'].get('provider') in ('Pexels', 'YouTube'):
                 entry.setdefault('_used_stock', []).append(prior['asset']['id'])
             elif prior['asset'].get('provider') == 'Pixabay photo':
                 entry['_used_stock'].append(prior['asset']['id'])
@@ -1195,7 +1247,7 @@ def render(plan, entry, folder, budget, target):
                      '-i', str(photo_list), '-c', 'copy', str(asset)])
         sub = folder / (scene['id'] + '.ass')
         captions(scene['narration'], seconds, sub)
-        if metadata.get('illustrative'):
+        if metadata.get('provider') == 'Pixabay photo':
             with sub.open('a') as labels:
                 labels.write(f'Dialogue: 1,0:00:00.00,{ass_time(seconds)},Default,,0,0,160,,'
                              r'{\an8\fs38}Illustrative photo' + '\n')
