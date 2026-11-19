@@ -822,6 +822,14 @@ def stock_queries(scene):
 
 
 def stock_match_prompt(scene):
+    if scene.get('_review_news_photo'):
+        return (
+            'Review this stock image against the exact news scene. Accept only when its visible '
+            'subject clearly illustrates the requested visual and the narration. Reject generic '
+            'rooms, unrelated subjects, misleading imagery, prominent logos, and graphic material. '
+            'If uncertain, reject. Return JSON {"matches": boolean, "reason": string}. '
+            'Narration: ' + scene['narration'] + '\nRequested visual: ' + scene['visual_description']
+        )
     return (
         'Review this frame as illustrative B-roll for the overall video topic. Accept footage of an '
         'object, setting, action, or process meaningfully related to the video as a whole, even if '
@@ -947,22 +955,28 @@ def select_news_photo(scene, entry, folder, budget):
                                     'safesearch': 'true', 'per_page': 6})
     try:
         hits = json_http('https://pixabay.com/api/?' + params, retries=0).get('hits', [])
-        for hit in hits:
-            asset_id = 'pixabay-photo:' + str(hit.get('id', ''))
-            tags = set(re.findall(r'[a-z0-9]+', hit.get('tags', '').lower()))
-            if asset_id in entry['_used_stock'] or not terms <= tags or not hit.get('pageURL'):
-                continue
-            raw, _, media_type = http(hit.get('webformatURL', ''), retries=0)
-            if media_type.split(';')[0].strip() != 'image/jpeg':
-                continue
-            path = folder / (scene['id'] + '-illustrative.jpg')
-            path.write_bytes(raw)
-            entry['_used_stock'].append(asset_id)
-            return path, {'provider': 'Pixabay photo', 'id': asset_id, 'sha256': digest(path),
-                          'source_url': hit['pageURL'], 'creator': hit.get('user', ''),
-                          'license': 'Pixabay Content License', 'illustrative': True}
     except (Hold, Wait):
-        pass
+        return None
+    for hit in hits:
+        asset_id = 'pixabay-photo:' + str(hit.get('id', ''))
+        tags = set(re.findall(r'[a-z0-9]+', hit.get('tags', '').lower()))
+        if asset_id in entry['_used_stock'] or not terms <= tags or not hit.get('pageURL'):
+            continue
+        try:
+            raw, _, media_type = http(hit.get('webformatURL', ''), retries=0)
+        except (Hold, Wait):
+            continue
+        if media_type.split(';')[0].strip() != 'image/jpeg':
+            continue
+        path = folder / (scene['id'] + '-illustrative.jpg')
+        path.write_bytes(raw)
+        match = review_stock_frame({**scene, '_review_news_photo': True}, entry, folder, budget, path)
+        if match.get('matches') is not True:
+            continue
+        entry['_used_stock'].append(asset_id)
+        return path, {'provider': 'Pixabay photo', 'id': asset_id, 'sha256': digest(path),
+                      'source_url': hit['pageURL'], 'creator': hit.get('user', ''),
+                      'license': 'Pixabay Content License', 'illustrative': True, 'scene_reviewed': True}
     return None
 
 
@@ -1116,7 +1130,10 @@ def render(plan, entry, folder, budget, target):
                                               if entry.get('audio', {}).get(scene['id']) else None,
                                               'voice': os.getenv('TTS_VOICE', 'en-US-AndrewNeural')}, sort_keys=True).encode()).hexdigest()
         prior = load(meta_path, {})
-        if out.exists() and prior.get('scene_key') == scene_key and prior.get('render_sha256') == digest(out):
+        prior_asset = prior.get('asset', {})
+        reviewed_photo = prior_asset.get('provider') != 'Pixabay photo' or prior_asset.get('scene_reviewed')
+        if (reviewed_photo and out.exists() and prior.get('scene_key') == scene_key
+                and prior.get('render_sha256') == digest(out)):
             parts.append(out)
             total += prior['duration']
             asset_log.append(prior['asset'])
