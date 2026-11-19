@@ -27,13 +27,6 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Install media dependencies
-        run: |
-          sudo apt-get update -qq
-          sudo apt-get install -y ffmpeg fonts-dejavu-core
-          python -m pip install -r requirements.txt
-      - name: Test worker before using credentials
-        run: python -m unittest discover -s tests -v
       - name: Restore authoritative queue state
         run: |
           mkdir -p state
@@ -41,31 +34,37 @@ jobs:
             git fetch origin pulse-state --depth=1
             git show FETCH_HEAD:queue.json > state/queue.json
           fi
-      - name: Restore resumable media stages
-        uses: actions/cache/restore@v4
-        with:
-          path: .work
-          key: pulse-media-v3-${{ github.run_id }}-${{ github.run_attempt }}
-          restore-keys: pulse-media-v3-
-      - name: Check configuration
+      - name: Retrieve and verify the APEC draft
         env:
-          YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
-          PEXELS_API_KEY: ${{ secrets.PEXELS_API_KEY }}
-          PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
-          FREE_TIER_CONFIRMED: ${{ vars.FREE_TIER_CONFIRMED || '0' }}
-        run: python worker.py --doctor
-      - name: Restore completed Moon video artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: direct-clips-review-7
-          run-id: 43983267539
-          github-token: ${{ github.token }}
-          path: output/
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          mkdir -p output/5eca2e638c3e1e33
+          gh api "repos/${GITHUB_REPOSITORY}/actions/artifacts/14572024711/zip" > "$RUNNER_TEMP/pulse-review.zip"
+          for file in video.mp4 review.json; do
+            unzip -p "$RUNNER_TEMP/pulse-review.zip" "5eca2e638c3e1e33/$file" > "output/5eca2e638c3e1e33/$file"
+          done
+          echo '895d4499aa27dc2297fb804be1f785bb3e76c841648f3f5690c36b72876576d3  output/5eca2e638c3e1e33/video.mp4' | sha256sum -c -
       - name: Send playable MP4 through Telegram review bot
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || vars.TELEGRAM_CHAT_ID }}
-        run: python telegram_delivery.py
+        run: |
+          python - <<'PY'
+          import json
+          import os
+          import re
+          import urllib.request
+          try:
+              token = os.environ['TELEGRAM_BOT_TOKEN']
+              with urllib.request.urlopen(f'https://api.telegram.org/bot{token}/getMe', timeout=15) as response:
+                  bot = json.load(response)['result']
+          except Exception:
+              raise SystemExit('Could not verify the configured Telegram bot.')
+          names = [re.sub(r'[^a-z0-9]', '', bot.get(key, '').lower()) for key in ('first_name', 'username')]
+          if not any('zentrdisplay' in name for name in names):
+              raise SystemExit('Configured Telegram bot does not identify itself as ZENTR Display.')
+          PY
+          python telegram_delivery.py
       - name: Save authoritative queue state
         if: always()
         run: |
@@ -85,20 +84,6 @@ jobs:
           if ! git -C .state-persist diff --cached --quiet; then
             git -C .state-persist commit -m 'Checkpoint Pulse production queue'
             git -C .state-persist push origin HEAD:refs/heads/pulse-state
-          fi
-      - name: Save resumable media stages
-        if: always()
-        uses: actions/cache/save@v4
-        with:
-          path: .work
-          key: pulse-media-v3-${{ github.run_id }}-${{ github.run_attempt }}
-      - name: Show production status
-        if: always()
-        run: |
-          if [ -f output/status.md ]; then
-            cat output/status.md >> "$GITHUB_STEP_SUMMARY"
-          else
-            echo 'Worker did not produce a status report. Inspect the failing step.' >> "$GITHUB_STEP_SUMMARY"
           fi
       - name: Save review-ready outputs and reports
         if: always()
