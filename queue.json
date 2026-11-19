@@ -13,7 +13,7 @@
       "id": "c32fb0cbf637ee8b",
       "status": "WAITING",
       "created_at": "2026-11-14T06:30:43.879714+00:00",
-      "attempts": 3,
+      "attempts": 4,
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -33,8 +33,30 @@
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-18T10:05:06.874473+00:00",
-      "blocker": "AI request cap reached; job saved for next run"
+      "last_attempt_at": "2026-11-19T09:57:04.881704+00:00",
+      "stock_reviews": {
+        "3f39eb156f339e7018a02c6d38a57f4c1bd680f793607cb91b2321e51c3fa33b": {
+          "matches": true,
+          "reason": "The frame depicts a typical street scene in Paris with sidewalk cafes, establishing the setting where the French Midas protests took place."
+        },
+        "a1de1c2e52c8b85fc8b84510db93713fea57d4050ccaf641ac793c1c164e2a29": {
+          "matches": true,
+          "reason": "The frame shows a cosplayer or creator working on a mask or costume, which fits well as behind-the-scenes B-roll for a video about the French Midas cosplayer."
+        },
+        "2d7d8f3f547c027df24884a21b9a1ae1b1afe332a89ad49b6e0a4030a81c014e": {
+          "matches": true,
+          "reason": "The frame shows a public demonstration with people gathered in front of a monument, which illustrates the public protests and unrest described in the video context."
+        },
+        "64258109a5a2cf540450fbb1e17cac8a3933bbd4e25efd998e337367f08297ef": {
+          "matches": true,
+          "reason": "The image shows flames, which directly relate to the chaotic public demonstrations and protests mentioned in the video context involving the French Midas."
+        },
+        "38ddb50ea42e7dca001416a89e4f8d9879d14a3047bd3c476b40e1e6e6eefd1c": {
+          "matches": true,
+          "reason": "The frame shows a person using a smartphone, which is relevant to the topic of internet viral phenomena and online memes."
+        }
+      },
+      "blocker": "Stock footage review allowance reached for this draft; saved progress"
     },
     "eaad4f96e7f14af7": {
       "title": "University of Manchester Researchers Launch Podcast Exploring the Process of Scientific Discovery - Bioengineer.org",
@@ -2563,12 +2585,13 @@
       "discovered_at": "2026-11-17T05:29:25.775041+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "0c6d0ea02d8bda83",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T05:29:36.037275+00:00",
       "attempts": 3,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-18T08:21:29.468508+00:00",
-      "stock_pipeline_version": 3
+      "stock_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "8b84a2e019ff742e": {
       "title": "Daily State of Play: Trump’s Indefinite Refugee Ban and Funding Halt - CWS Global",
@@ -2581,9 +2604,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T05:29:34.923103+00:00",
       "id": "8b84a2e019ff742e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T05:29:36.062287+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "3329ad31e8410e68": {
       "title": "Estonia to close Russia border crossings after attempted drone factory arson attack",
@@ -2737,11 +2761,12 @@
       "discovered_at": "2026-11-17T06:26:42.448267+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "16321fba22ea115b",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T06:26:58.166062+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-17T20:23:13.999873+00:00"
+      "last_attempt_at": "2026-11-17T20:23:13.999873+00:00",
+      "blocker": "News candidate expired; discover a recent story"
     },
     "d83a1b893001c1f6": {
       "title": "Tensions between US and Iran escalated again - News On AIR",
@@ -2771,12 +2796,13 @@
       "discovered_at": "2026-11-17T06:26:41.994983+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "abb1502e64cff11e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T06:26:58.189611+00:00",
       "attempts": 3,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-18T08:21:22.553816+00:00",
-      "stock_pipeline_version": 3
+      "stock_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "b8543993863e27aa": {
       "title": "Ukraine accuses Russia of targeting rescue operation after 'double-tap' strike kills 72",
@@ -2963,12 +2989,13 @@
       "discovered_at": "2026-11-17T07:03:31.181894+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "b0b682953d000349",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:03:39.472594+00:00",
       "attempts": 2,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-18T08:21:36.679994+00:00",
-      "stock_pipeline_version": 3
+      "stock_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "197a4f4a0fdf63cc": {
       "title": "Russian oligarch paid for parts of Donald Trump Jr.'s wedding celebration, report says - ABC News - Breaking News, Latest News and Videos",
@@ -3104,9 +3131,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T07:12:07.091024+00:00",
       "id": "d3dca8ca3a61add1",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:12:07.633586+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "96b5a95a3916c4f7": {
       "title": "New York teen reunites with cat missing after building collapse",
@@ -3241,9 +3269,10 @@
       "discovered_at": "2026-11-17T07:18:11.923319+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "fdccd901023b34f2",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:18:21.636806+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "28a158836ad49906": {
       "title": "U.S. to Clamp Down On AI Chip Loophole Ahead Of Trump Meeting With Xi - Time Magazine",
@@ -3339,9 +3368,10 @@
       "discovered_at": "2026-11-17T07:20:04.233790+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "94af6a81030bed03",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:20:17.873964+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "245c9efac1b97e6f": {
       "title": "Trump admin replaces slavery memorial at President's House in Philadelphia after court win - ABC News - Breaking News, Latest News and Videos",
@@ -3388,9 +3418,10 @@
       "discovered_at": "2026-11-17T07:20:04.259176+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "6a6cf8852305851e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:20:17.959955+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "a2b86e50e38339cd": {
       "title": "Trump's image to appear on limited-edition passports for America's 250th - ABC News - Breaking News, Latest News and Videos",
@@ -3436,9 +3467,10 @@
       "discovered_at": "2026-11-17T09:02:20.027075+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "d33ae05bf08e992e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:02:24.252384+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "1faccdf256baca1c": {
       "title": "Vance says 'we have a lot of work to do' after Trump's comments about Americans' finances - ABC News - Breaking News, Latest News and Videos",
@@ -3468,9 +3500,10 @@
       "discovered_at": "2026-11-17T09:02:19.605457+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "54edee17cc1221b6",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:02:24.314099+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "688b7c453b3d458f": {
       "title": "Japan sends up jets after alleged Russian incursion of its airspace",
@@ -3484,9 +3517,10 @@
       "discovered_at": "2026-11-17T09:02:19.695617+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "688b7c453b3d458f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:02:24.336101+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "6d7895ef328280ad": {
       "title": "Naa Wife Missing Ending Explained: The Shocking Truth Behind Swapna’s Disappearance (Spoilers) - Vocal",
@@ -3548,9 +3582,10 @@
       "discovered_at": "2026-11-17T09:09:22.678320+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "51b735899be7f037",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:09:28.403541+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "d9ef12b9db81e724": {
       "title": "Key takeaways from the 14-point memorandum of understanding between US, Iran - ABC News - Breaking News, Latest News and Videos",
@@ -3632,9 +3667,10 @@
       "discovered_at": "2026-11-17T09:55:29.032557+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "740f282e36803e37",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:55:34.109476+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "56c236014027552f": {
       "title": "NJ Gov. Mikie Sherrill supports abolishing the current election system in the U.S. - New Jersey 101.5",
@@ -3647,9 +3683,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T09:55:32.859785+00:00",
       "id": "56c236014027552f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:55:34.133160+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "dc1956f3e6aeff70": {
       "title": "Body of Melbourne Cup horse found dumped in Sydney skip bin",
@@ -3663,9 +3700,10 @@
       "discovered_at": "2026-11-17T09:55:28.654551+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "dc1956f3e6aeff70",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:55:34.148836+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "19668163f43d64fd": {
       "title": "New Zealand tricks and annual leave - the lengths fans are going to for GTA 6",
@@ -3728,9 +3766,12 @@
       "discovered_at": "2026-11-17T17:56:59.500030+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "c26a76aa1c7a9505",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T17:57:05.242523+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T09:58:51.369429+00:00",
+      "blocker": "Editor rejected candidate: The supplied sources do not provide a coherent, reported news article about an event, but rather consist of webpage boilerplate, lists of unrelated video links, and side content. T"
     },
     "4e0af31176414a55": {
       "title": "Trump’s Whirlwind Asia Trip Begins in the Philippines - The New York Times",
@@ -3759,9 +3800,30 @@
       "discovered_at": "2026-11-17T17:56:58.805007+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "cd6104ec413243a6",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T17:57:05.298753+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T09:59:14.660658+00:00",
+      "stock_reviews": {
+        "e65caee9178cd30277736e036f345386a5167007d897eec81465077c863ce7c2": {
+          "matches": false,
+          "reason": "The image is completely black and provides no visual content related to the video topic."
+        },
+        "21dc788a47dd6c7f735c22617cbd4a3b85622e92c7ddccedf4a00fc0c117f48f": {
+          "matches": false,
+          "reason": "The image shows an industrial smokestack emitting smoke at sunset, which is generic industrial footage and does not relate specifically to the Crimean Bridge attack or military infrastructure mentioned in the video topic."
+        },
+        "cd8ee944c40dfd02a6b738c0abfc534bc310bbcd694756d2a342fd9e82f36579": {
+          "matches": false,
+          "reason": "The image shows a coastal city with mountains, resembling Cape Town, which is completely unrelated to the Crimean Bridge attack in the video context."
+        },
+        "f53757da629fde772422b5f666b97c1333f7c871e30f807335d9624bbc9fea6c": {
+          "matches": false,
+          "reason": "The image shows a close-up of a flower against a dark background, which has no relevance to the topic of the Crimean Bridge collapse or military conflict."
+        }
+      },
+      "blocker": "No matching Pixabay footage for s02: 9 hits for 'smoke rising'; inspect diagnostics in review artifact"
     },
     "b9a0fd865f8c7476": {
       "title": "How the attack on Crimean Bridge unfolded",
@@ -3775,9 +3837,34 @@
       "discovered_at": "2026-11-17T17:56:58.820758+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "b9a0fd865f8c7476",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T17:57:05.314378+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T10:00:21.540949+00:00",
+      "stock_reviews": {
+        "37067589caf32d4fa579fdc960b852d0badfdca204d21d4edc9c778d4cab6afc": {
+          "matches": true,
+          "reason": "The image shows a multi-level concrete highway bridge and transport infrastructure, which aligns well with the video topic about bridge vulnerabilities and transport routes."
+        },
+        "a9493921634b219cbc67be5f7db39cc4d0ba04bb73ca5079b4c22e1b1ef76cb7": {
+          "matches": false,
+          "reason": "The image shows a suspension bridge, which does not match the architectural style of the Crimean Bridge (a truss and arch bridge)."
+        },
+        "254754470b4369c88364ef480d17ea729a8725a30130612222e0d0a122a20b27": {
+          "matches": false,
+          "reason": "The image shows a suspension bridge, likely the Akashi Kaikyo Bridge in Japan, which is completely incorrect as B-roll for the Crimean Bridge mentioned in the video context."
+        },
+        "bc8136163ca29fed9e01491dc709f4ee3d687a45bfdc6d64aca0c627927b352b": {
+          "matches": false,
+          "reason": "The image shows a generic busy city street scene with pedestrians, which has no direct connection to the Crimean Bridge, infrastructure attacks, or military operations."
+        },
+        "0b15e34e58c01edeec63609b80298330614bf6d70ab12ee12eaf9ed2729bdc9e": {
+          "matches": false,
+          "reason": "The frame shows a busy urban intersection in Tokyo, Japan, which is completely unrelated to the topic of the Crimean Bridge attack."
+        }
+      },
+      "blocker": "No matching Pixabay footage for s06: 9 hits for 'strait crossing'; inspect diagnostics in review artifact"
     },
     "6ca56b2ac47c0538": {
       "title": "Plate tectonics - Earth's Layers, Crust, Mantle - Britannica",
@@ -3836,9 +3923,12 @@
       "discovered_at": "2026-11-17T20:18:22.698804+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "655c6d3a8b26edb4",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T20:18:59.379045+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T10:02:47.630564+00:00",
+      "blocker": "Editor rejected candidate: The provided sources contain only headlines and syndicated wrappers regarding a robot pianist in Italy without providing substantive details, a second independent confirming source"
     },
     "ad6e0b9cb86b05c3": {
       "title": "Predictions platform Kalshi complies with order to halt Trump mention contracts - CoinDesk",
@@ -3867,9 +3957,12 @@
       "discovered_at": "2026-11-17T20:18:21.865735+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "18d5c7514ec64dea",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T20:18:59.446417+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T10:03:17.212010+00:00",
+      "blocker": "Evidence quote not found in fetched source"
     },
     "66663b776673efc0": {
       "title": "Russian military plane crashes killing all 19 on board",
@@ -3883,9 +3976,12 @@
       "discovered_at": "2026-11-17T20:18:21.888847+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "66663b776673efc0",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-17T20:18:59.469657+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T10:04:03.432440+00:00",
+      "blocker": "AI request cap reached; job saved for next run"
     },
     "11575b3bb679f018": {
       "title": "The Strokes’ ‘Lonely in the Future’ Film Is a Puppet-Fuelled Nod to ‘Spitting Image’ — LBB - LBB - Little Black Book",
@@ -4129,9 +4225,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T23:15:42.605156+00:00",
       "id": "28a6e7383288c7f5",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T23:15:43.752673+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "b60baa17f2727c6a": {
       "title": "Trump poised to drop IRS suit, launch $1.7B 'weaponization' fund for allies: Sources - ABC News - Breaking News, Latest News and Videos",
@@ -4454,9 +4551,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T08:21:16.891750+00:00",
       "id": "a4fe9ef00312e037",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T08:21:19.028272+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "633edf41464e295a": {
       "title": "Trump in Asia ahead of talks with Russian and Chinese presidents - BBC",
@@ -4516,9 +4614,10 @@
       "discovered_at": "2026-11-18T08:24:45.910955+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "b4cc66f4ea7d7f18",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T08:24:53.173417+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "fff92b58ba55c629": {
       "title": "Nvidia partner Megaspeed being investigated by US government over chip exports",
@@ -5012,37 +5111,183 @@
       "status": "QUEUED",
       "created_at": "2026-11-19T02:11:10.249572+00:00",
       "attempts": 0
+    },
+    "a93c8cfb87563942": {
+      "title": "Survivors of Uganda's deadly landslide seek justice at the UN",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c920xgxp5785o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T09:21:54+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T09:56:56.157747+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "a93c8cfb87563942",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T09:57:04.470317+00:00",
+      "attempts": 0
+    },
+    "c21c2b54e9ac8926": {
+      "title": "Nuclear arms and ending wars in Iran and Ukraine top the agenda at Trump-Xi-Putin meeting - WWNY",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOQVB2Y244QTZWYUpfWHRiaDFEYnJoRUQtNHdCRGFxRVRzekVHeHpVaWhhaGlfcklPMC1jZFlzajFKdmpkNDBNNmF4c2VtcUg2VDlHQ2xEX0ZkcTA1Z3J0d0ozTTM5bHF2SVZIWk5UanZWNEU1RzEtLW5ScUZhc2FDTHU0RGN3bENGUXJMTWtvQ0N4N0p0bEJqRDNHQXkxbzhreGRkQmE3WmIwQdIBvgFBVV95cUxNY25ORnFFY29ZQ0xFZjNyMWpaR2hneXB2Z3g5aUo3cDFqcURrQ0p0UUpLOE14cnhDVHJBWmMydU4yMUlnczQwRnc2V011V0pmeEV6b0dnSXpzdWxseFJkYksxYVU3dDNmWHpEVGlhUmVzdXZmZzEyaEVFSHoyUjVxVWpnRDU4NG1tNEs3SmUyWmpzaktvYmswbUFlQWxlOWFFY09BMEdtV3dXY3ZaWWxJdTVSejNCZ0RZNURidVlB?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T08:48:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T09:57:02.122196+00:00",
+      "id": "c21c2b54e9ac8926",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T09:57:04.527209+00:00",
+      "attempts": 0
+    },
+    "8b123bab25e19cec": {
+      "title": "North Korea expanding uranium enrichment facility, UN nuclear watchdog says",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/19/north-korea-expanding-uranium-enrichment-facility-un-nuclear-watchdog-says?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T09:16:47+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T09:56:57.426254+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "8b123bab25e19cec",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T09:57:04.575172+00:00",
+      "attempts": 0
+    },
+    "7f0e43991034fb45": {
+      "title": "Dozens missing after boat carrying 100 migrants sinks off Senegal's coast",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c58j484089ewo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T09:02:52+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T09:56:55.987774+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "7f0e43991034fb45",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T09:57:04.623505+00:00",
+      "attempts": 0
+    },
+    "888ee040ff33e32d": {
+      "title": "Trump calls Putin ‘my friend’ as Don & Xi prepare to call on tyrant to end war - The Sun",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMigAFBVV95cUxQeWRoRVFxQUpDSUlCemdEdGU0SWZjZnlPdUdMQkZ3amNSVWNSU3JZSm5kSWRqSW5aWjA1VVV5UWN1ZXJOS2dCWDQ1SzBKUUFJRFhFOU9xMjEtcFZsM0RxZ1F4STVQckEzcEhmQldta2dSTUM3MXpYaFB6dnFvSENqRA?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T07:33:38+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T09:57:03.088621+00:00",
+      "id": "888ee040ff33e32d",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T09:57:04.679462+00:00",
+      "attempts": 0
+    },
+    "d032994c09710a21": {
+      "title": "Trump, Xi, Putin begin rare joint meeting in China - CBS News",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMib0FVX3lxTE05RFI1UXR5alZLUGZrOEVjR1RnR3FxOTVqU3hYRTFiRkU2UXF2bjFMRmFUN2dDeXlfUWt3REJvY242b2l4bFh5ZHoxT04tUjhFRzR2MF9mbC1WVTBNeG0zSU9LN3pNdHRnT0dYTW9WWQ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T02:04:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T09:57:02.269281+00:00",
+      "id": "d032994c09710a21",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T09:57:04.720557+00:00",
+      "attempts": 0
+    },
+    "04e2d4b7353557ab": {
+      "title": "Scientists discover a hidden hereditary form of aggressive prostate cancer - ScienceDaily",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMib0FVX3lxTE1fVnM0NHZyaWlvVXRBd0paYmJ4TzZjZ0xpZVllSUNwakN5VUNGMmRFRkpsOUxlSmFSVGZIaUExaXR5cnpmVkV3R01NU2JJRjg1SHM1QXg3VndXY19Ea1o1RXdFYjBkd2wwWW5KZWRNWQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 1,
+      "discovered_at": "2026-11-19T09:56:59.754863+00:00",
+      "id": "04e2d4b7353557ab",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T09:57:04.777290+00:00",
+      "attempts": 0
+    },
+    "9a19041fc49fe284": {
+      "title": "Mulholland Reveals Salmond's Request to Pardon William Wallace - cwibc.co.id",
+      "category": "true_events",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiY0FVX3lxTE9Ga2J6X2xFdkx1NUNtVVlZYzhTNHFNZXktZFU4TUstd0F6SXA2LW5lbVRvTmZYSFFqOUMyYmtPS2tWa1Y3RG0wejZtN3B3dndmZUVZWEhUVzhHX0lobkdEVWRoaw?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T09:57:00.583271+00:00",
+      "id": "9a19041fc49fe284",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T09:57:04.823925+00:00",
+      "attempts": 0
+    },
+    "15beb66b0697d5a4": {
+      "title": "Jaja Bojz unveil \"Mare\" and a new video from their punk - KarloBag.eu",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQRGxxaFlaTXVkNnpudzVzZmp3dGgwSy1TUEJiTXR1cnduYkFrVmpGQUJCRVlDd3RJSC1FLVRqbFl6djFjZ21rcmJkMmcwbkJrbmNVaFRRVjNSVGQ1dEVoU0hDcXhwVWhkcWN6Y1dnVEZqZGZPR21PNHA3QkF4eFZBemMtZUYtWHhtUE1ENk5GRVVjWm9FWWxSWlB2MXpiYWFMQzBEdnVaYUkyVGNIOWU5cTRBcW5qSjQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T09:57:01.472914+00:00",
+      "id": "15beb66b0697d5a4",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T09:57:04.866741+00:00",
+      "attempts": 0
     }
   },
   "budget": {
-    "day": "2026-11-18",
+    "day": "2026-11-19",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 18,
-    "pixabay": 16,
-    "ai": 96
+    "youtube": 4,
+    "ai": 32,
+    "pixabay": 17
   },
-  "content_cycle_index": 5,
-  "content_batch": null,
+  "content_cycle_index": 6,
+  "content_batch": {
+    "category": "world_news",
+    "completed": 0,
+    "story_keys": [],
+    "media_hashes": [],
+    "source_urls": []
+  },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-19T02:11:10.250771+00:00",
-    "attempted_ids": [],
+    "started_at": "2026-11-19T09:57:04.867834+00:00",
+    "attempted_ids": [
+      "c32fb0cbf637ee8b",
+      "c26a76aa1c7a9505",
+      "cd6104ec413243a6",
+      "b9a0fd865f8c7476",
+      "655c6d3a8b26edb4",
+      "18d5c7514ec64dea",
+      "66663b776673efc0"
+    ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "categories_deferred": [
-      "culture",
-      "world_news",
-      "president",
-      "true_events",
-      "music",
-      "creators",
-      "science",
-      "movies"
+      "culture"
     ],
-    "finished_at": "2026-11-19T02:11:10.266101+00:00",
-    "attempted": 0,
+    "pause_reason": "AI request cap reached; job saved for next run",
+    "finished_at": "2026-11-19T10:04:51.543841+00:00",
+    "attempted": 7,
     "completed": 0,
-    "gemini_request_attempts": 0
+    "gemini_request_attempts": 32
   },
   "telegram_deliveries": {
     "2d869bc60f3da658c9197b934c45dfddb3c797a7bc940732029e92f431cf90f2": {
