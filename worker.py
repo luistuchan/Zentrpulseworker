@@ -840,7 +840,7 @@ def review_stock_frame(scene, entry, folder, budget, thumb):
     if isinstance(cached_match, dict) and isinstance(cached_match.get('matches'), bool):
         match = cached_match
     else:
-        cap = int(os.getenv('MAX_STOCK_AI_CALLS_PER_DRAFT', '16'))
+        cap = int(os.getenv('MAX_STOCK_AI_CALLS_PER_DRAFT', '5'))
         match = ai(prompt, budget, thumb, response_schema=MATCH_SCHEMA,
                    request_allowed=lambda: budget.run_counts['ai'] - entry['_stock_ai_start'] < cap)
 
