@@ -631,6 +631,29 @@ def validate_plan(plan, sources, target, min_sources=2):
     return plan
 
 
+def footage_failure_guidance(entry, state):
+    """Use recurring, recognizable footage rejection reasons in future plans."""
+    rules = (
+        (r'\b(?:generic|unrelated|irrelevant)\b',
+         'Use concrete search terms tied to the story. Prefer a specific object, place, or action over generic footage.'),
+        (r'\b(?:wrong|different) (?:person|event|location)\b',
+         'Avoid lookalike people, events, and locations. Use clearly illustrative visuals when actual footage is unavailable.'),
+        (r'\b(?:logo|logos|watermark|watermarks)\b',
+         'Plan visuals around clean footage without prominent logos or watermarks.'),
+    )
+    reasons = set()
+    for previous in state['jobs'].values():
+        if (previous.get('id') == entry.get('id')
+                or previous.get('category') != entry.get('category')
+                or previous.get('content_type', 'explainer') != entry.get('content_type', 'explainer')):
+            continue
+        for verdict in previous.get('stock_reviews', {}).values():
+            if verdict.get('matches') is False and isinstance(verdict.get('reason'), str):
+                reasons.add(verdict['reason'].lower())
+    return [guidance for pattern, guidance in rules
+            if any(re.search(pattern, reason) for reason in reasons)]
+
+
 def review_guidance(entry, state):
     """Turn explicit human review tags into guidance for similar future drafts."""
     rules = {
@@ -674,6 +697,9 @@ def generate_plan(entry, sources, target, budget, folder):
     guidance = review_guidance(entry, budget.state)
     if guidance:
         prompt += '\nHuman review guidance from similar drafts:\n' + '\n'.join(guidance)
+    failure_guidance = footage_failure_guidance(entry, budget.state)
+    if failure_guidance:
+        prompt += '\nLessons from rejected footage on similar drafts:\n' + '\n'.join(failure_guidance)
     prompt += '\nCANDIDATE DATA:\n' + json.dumps(data)
     for attempt in range(3):
         plan = ai(prompt, budget, response_schema=schema)
