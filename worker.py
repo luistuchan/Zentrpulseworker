@@ -1254,7 +1254,7 @@ def render(plan, entry, folder, budget, target):
                                               'audio_sha256': digest(local_file(entry['audio'][scene['id']]))
                                               if entry.get('audio', {}).get(scene['id']) else None,
                                               'voice': os.getenv('TTS_VOICE', 'en-US-AndrewNeural'),
-                                              'layout_version': 5}, sort_keys=True).encode()).hexdigest()
+                                              'layout_version': 6}, sort_keys=True).encode()).hexdigest()
         prior = load(meta_path, {})
         prior_asset = prior.get('asset', {})
         reviewed_photo = prior_asset.get('provider') != 'Pixabay photo' or prior_asset.get('scene_reviewed')
@@ -1300,10 +1300,6 @@ def render(plan, entry, folder, budget, target):
                      '-i', str(photo_list), '-c', 'copy', str(asset)])
         sub = folder / (scene['id'] + '.ass')
         captions(scene['narration'], seconds, sub)
-        if metadata.get('provider') == 'Pixabay photo':
-            with sub.open('a') as labels:
-                labels.write(f'Dialogue: 1,0:00:00.00,{ass_time(seconds)},Default,,0,0,160,,'
-                             r'{\an8\fs38}Illustrative photo' + '\n')
         # Portrait foreground retains the full subject; landscape foreground is 65%
         # of frame height over a blurred background, without blind speaker tracking.
         video_info = next((x for x in probe(asset)['streams'] if x['codec_type'] == 'video'), None)
