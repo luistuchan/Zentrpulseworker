@@ -4147,9 +4147,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T23:09:11.803935+00:00",
       "id": "b5c3ab02c3b877b3",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T23:09:14.087969+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "2551dd0833ee2885": {
       "title": "Trump lobs insults at political opponents, press during rescheduled White House correspondents' dinner - ABC News - Breaking News, Latest News and Videos",
@@ -4549,9 +4550,12 @@
       "discovered_at": "2026-11-18T08:21:11.817599+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "cd2bdbdb1d2c9258",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T08:21:18.818634+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T21:07:13.750317+00:00",
+      "blocker": "Script length outside target range: 50 words; need 54-90 for 30 seconds"
     },
     "a6b0d105766c1d12": {
       "title": "China and Canada expand tariff relief while relations with the U.S. are strained - PBS",
@@ -4580,9 +4584,34 @@
       "discovered_at": "2026-11-18T08:21:10.676812+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "bbfb93f4d2638ae1",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-18T08:21:18.910721+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T21:07:55.435115+00:00",
+      "stock_reviews": {
+        "5e0cc4c1ee87922684bb68ccc7b671d385c7e46cdfebdddc346803d34d7b3930": {
+          "matches": true,
+          "reason": "The image shows server racks with flashing indicator lights and connected cables, which is directly relevant to the video topic of technological outages, digital infrastructure, and legacy networks."
+        },
+        "8811dcd800dfe8e716d4e0642d9d46141fb2b43c98496e683e34782dcec95cea": {
+          "matches": true,
+          "reason": "The image clearly shows passengers waiting inside a busy terminal, looking at a flight departure board, which aligns well with the narration about flight grounds and disruptions."
+        },
+        "88776f73548761ebb66e1189d410de66147da699fc0b2d5495734856a8d3f757": {
+          "matches": false,
+          "reason": "The video frame shows a man working out on a beach with kettlebells, which is completely unrelated to the topic of tech outages, infrastructure issues, and Marco Rubio's statements."
+        },
+        "58181a25ff732fa6d26bb7da73b6f4b294956652d28aecaf2a4bd2b117a8bfe2": {
+          "matches": false,
+          "reason": "The image shows generic indoor furniture and does not relate to technology outages, infrastructure, or news coverage."
+        },
+        "3dcfdcde224fe63fbd5c869e425fea88a7859948c22d203db0c6d5e22c1e70c0": {
+          "matches": false,
+          "reason": "The frame shows people having an informal discussion outdoors, which is generic and does not meaningfully illustrate technical outages, infrastructure, or political statements."
+        }
+      },
+      "blocker": "Stock footage review allowance reached for this draft; saved progress"
     },
     "a6e06a058de5c51a": {
       "title": "Democrats win Alaska Senate race two weeks after midterms counting began",
@@ -4596,9 +4625,12 @@
       "discovered_at": "2026-11-18T08:21:10.723151+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "a6e06a058de5c51a",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T08:21:18.955756+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T21:09:16.782583+00:00",
+      "blocker": "Script length outside target range: 42 words; need 54-90 for 30 seconds"
     },
     "a4fe9ef00312e037": {
       "title": "Trump issues warning to Iran on nuclear weapons in State of the Union address - ABC News - Breaking News, Latest News and Videos",
@@ -4644,9 +4676,12 @@
       "discovered_at": "2026-11-18T08:24:46.454274+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "f982c9b54527e5cf",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T08:24:53.049908+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T21:09:56.580321+00:00",
+      "blocker": "Evidence quote not found in fetched source"
     },
     "4ec67aa65a5f54e1": {
       "title": "The President Outlined Ukraine’s Priorities at Ramstein: Air Defense Missiles, New Fighter Jets, Financial Support for the Defense Sector, and Development of the Drone Deal Format - Офіційне інтернет-представництво Президента України",
@@ -4741,9 +4776,34 @@
       "discovered_at": "2026-11-18T10:02:54.168975+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "fba09d28094889d8",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T10:03:00.226332+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T21:10:41.431035+00:00",
+      "stock_reviews": {
+        "a61bf3960196233aca8a724a89675d584787a1e8afd0332605a7d96335c49fe1": {
+          "matches": false,
+          "reason": "The image shows a generic city street scene with an Underground station sign in London, not a corporate bank headquarters building representing Deutsche Bank."
+        },
+        "07d7b6ae9834476683fb416a55ec5b09bcd53299bdbc58c64d33b7f863679b9e": {
+          "matches": false,
+          "reason": "The image shows the Swiss National Bank, not Deutsche Bank as requested by the narration."
+        },
+        "7ec98efc241c348b6130c5cd846a0effb7ec8c5c85d2e365e9ce25cebd88bfdf": {
+          "matches": false,
+          "reason": "The image shows a close-up architectural detail of a generic bank building rather than a view of a large corporate bank headquarters building like Deutsche Bank."
+        },
+        "8c9bebd29155aa84cbf7442523543a909cd8a03a0d2bc5061cc0943ec8dc4a63": {
+          "matches": false,
+          "reason": "The image shows a building with a 'Central Bank' sign, but the narration specifically concerns Deutsche Bank records being made public, making this an unrelated or misleading bank headquarters."
+        },
+        "1c52312ea5807cedd6fc135a4640a7d699f1a12e153afcf1f02dc161ac9170b5": {
+          "matches": true,
+          "reason": "The frame shows a large bank building facade, which serves as suitable B-roll for a video discussing bank records, financial institutions, and investigations."
+        }
+      },
+      "blocker": "No matching Pixabay footage for s02: 0 hits for 'newsroom'; inspect diagnostics in review artifact"
     },
     "68a3a6496c734dfd": {
       "title": "Democrats flipped 9 U.S. Senate seats, most in almost 70 years - NBC New York",
@@ -4772,9 +4832,12 @@
       "discovered_at": "2026-11-18T10:02:53.528360+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "b4c5eac16267b665",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T10:03:00.290559+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T21:11:53.496979+00:00",
+      "blocker": "Script length outside target range: 38 words; need 54-90 for 30 seconds"
     },
     "9eb0effb1b8b8f5d": {
       "title": "Trump says US taking 'very seriously' any Iranian plot against Washington",
@@ -4852,9 +4915,12 @@
       "discovered_at": "2026-11-18T15:19:39.540352+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "1398d274efe695a6",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-18T15:19:44.235753+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T21:12:33.781732+00:00",
+      "blocker": "AI request cap reached; job saved for next run"
     },
     "654954d3df6ae37d": {
       "title": "Trump gets rare airport welcome by Xi ahead of landmark talks - BBC",
@@ -5562,14 +5628,107 @@
       "status": "QUEUED",
       "created_at": "2026-11-19T20:41:11.512776+00:00",
       "attempts": 0
+    },
+    "b0dffcfce02e4e6d": {
+      "title": "How vaccine fears fuelled a major measles comeback in the US",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/video/newsfeed/2026/11/19/how-vaccine-fears-fuelled-a-major-measles-comeback-in-the-us?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T20:35:14+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T21:07:05.761585+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "b0dffcfce02e4e6d",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:07:13.475371+00:00",
+      "attempts": 0
+    },
+    "389d54cdce04d8c9": {
+      "title": "The Latest: Trump, Putin and Xi wrap up historic talks in China - WHNT News 19",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQVWdlc3RCLVdmWnNpYXBsUHdIcnNRc2VkVktzWE92R3lmLURSWjZ2eHBodDdNQk5pcUlkX3NkZFZadzdaaXhuLWgzTlF2dWJ4dnBfbTJEdjlxa2ZuVzVjclNNRi1VQmhEaWdERnEwRDg1dUR3VTRKVERJR0dYUlU0b0JPb2ZhMTJxM29xdXBVN1VHMnBiXzhiWFozNGVaRzQ2aUlDY2UweWl2QdIBrwFBVV95cUxNb2R5bkVjX2dsTUZwYU0wR0RZMlp1MEhob1ROZmFvcDdhTWVjYlRCLWtPR2tVNkdDQ1hUdHEzcjJnVW1yZUZtdjZQTTdqc2V6RDF0UjV2MkdwRVl6cGtJMUNhamlBcEhILUdzN1hZUlc3ZURjR040RnFYSkdMbEM5b2pwTWlSMk0zc2xTME5MMlBxaFFCZWtHaWtUMnJ6WnlqZnpyQWdiNHp3SkczanVZ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T14:02:15+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T21:07:11.382850+00:00",
+      "id": "389d54cdce04d8c9",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:07:13.517088+00:00",
+      "attempts": 0
+    },
+    "3c7b4c72ebca1009": {
+      "title": "Trump’s case against NYT and Penguin Random House may proceed: Judge",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/economy/2026/11/19/trumps-case-against-nyt-and-penguin-random-house-may-proceed-judge?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T20:32:46+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T21:07:05.803953+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "3c7b4c72ebca1009",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:07:13.557200+00:00",
+      "attempts": 0
+    },
+    "f8617c81bd61adf3": {
+      "title": "Senate Republicans in US reject measure to limit Trump’s war powers in Iran",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/19/senate-republicans-in-us-reject-measure-to-limit-trumps-war-powers-in-iran?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T20:30:54+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T21:07:05.848771+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "f8617c81bd61adf3",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:07:13.599451+00:00",
+      "attempts": 0
+    },
+    "aa3678180b71cb4c": {
+      "title": "Trump's acting director of national intelligence begins firings at agency, sources say - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxOcDdZYkQ1SlQzUzZvbkgtckNhS0Q3SDJidmNYYnN5RFVGS0xfVlRleTdTUzZsd3A5UVpvRmRsUVpDVzhJWThGWGJhbW0xZDdvNHh0RmZNaDBCS0c1bE5oVFJkVDNYT0pKbllHRnVxV1U3Uy0tRWdrTnU1NGZLMGl6SHJqcDdVSU5hUkRmNzdvSFBFek9ZbHJoVzB4QkUtNVlpSmkzSEJuR2lHQ2hxTHhn0gG0AUFVX3lxTE5vcXRZVElJdGxKWE9HeU1nZ0VaTVVTdzd2YWhDczJPYmJKOHRNTjFILTY4SnUyRjhYdXFfcm1vLUJFZlN6OHFuekxqM29FZTJKT0ZXZ0tZcmJjR25uODMtbkU5UEo1WW1XOENud2hBMTdhb19rUXdhNTJQcjFOd3lacEkxbVFEMEZrRlBVWnQ3aEFMVmJtMzlLYVcyWlo4Uy1uMXBHVnZvSUd0bkY4ZlV1R2xMNQ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T09:58:02+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T21:07:11.073005+00:00",
+      "id": "aa3678180b71cb4c",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:07:13.668975+00:00",
+      "attempts": 0
+    },
+    "53acff64bb934b7e": {
+      "title": "Presidents Trump, Xi and Putin hold first-ever three-way talks, discussing nuclear arms and the war in Ukraine - WNEP",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi1AFBVV95cUxQSmZCZ1JFWDJ3X3B2TkFpV2JvVERnaGpZcC0wS3pzQzZSaW5OZmk4Z1FzdDFOZ0tOaGhyZlFSWkRIUnR3QlYyTUtSTW5Yek5EdHZHSjR5dndhOTZ6YmJIXzhyVkp5UVJ1cW5xb1BoWXBJODl2NUFUZ1Z1T205cUFhUXl6SG9YMkRrNHRxZXJJQ2tXSTNYd2FLMnJpVVdpT0tMSWUzcUducDM4MWw3c1ZESFd1bDJKREFqTjFVWDhyRGNHYW05WjIteUNBNkdBTThYVndETw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T09:25:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T21:07:11.703185+00:00",
+      "id": "53acff64bb934b7e",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:07:13.732864+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-19",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 12,
-    "ai": 59,
-    "pixabay": 23
+    "youtube": 16,
+    "ai": 91,
+    "pixabay": 32
   },
   "content_cycle_index": 6,
   "content_batch": {
@@ -5586,26 +5745,23 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-19T20:41:11.513404+00:00",
+    "started_at": "2026-11-19T21:07:13.733549+00:00",
     "attempted_ids": [
-      "798f6c61218572df",
-      "369fe5d9441f354f",
-      "71b7e05913976f85",
-      "0d5c314a91b8a293",
-      "5eca2e638c3e1e33",
-      "d7989de8e215e2a5",
-      "aa2d1ab7123ddaed",
-      "5cb353c74b655f40",
-      "0e2f76856084bad7"
+      "cd2bdbdb1d2c9258",
+      "bbfb93f4d2638ae1",
+      "a6e06a058de5c51a",
+      "f982c9b54527e5cf",
+      "fba09d28094889d8",
+      "b4c5eac16267b665",
+      "1398d274efe695a6"
     ],
-    "completed_ids": [
-      "5eca2e638c3e1e33"
-    ],
+    "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "finished_at": "2026-11-19T20:47:24.476024+00:00",
-    "attempted": 9,
-    "completed": 1,
-    "gemini_request_attempts": 24
+    "pause_reason": "AI request cap reached; job saved for next run",
+    "finished_at": "2026-11-19T21:13:01.316883+00:00",
+    "attempted": 7,
+    "completed": 0,
+    "gemini_request_attempts": 32
   },
   "telegram_deliveries": {
     "2d869bc60f3da658c9197b934c45dfddb3c797a7bc940732029e92f431cf90f2": {
