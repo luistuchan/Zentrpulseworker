@@ -1014,32 +1014,33 @@ def select_youtube_visual(scene, entry, folder, budget):
                       if re.fullmatch(r'[A-Za-z0-9_-]{11}', item.get('id', {}).get('videoId', ''))]
         entry['youtube_visual_candidates'] = candidates
     used = entry['_used_stock']
-    video_id = next((item for item in candidates if 'youtube:' + item not in used), None)
-    if not video_id:
-        return None
-    import clipper
-    source_dir = folder / ('youtube-' + video_id)
-    source_dir.mkdir(exist_ok=True)
-    url = 'https://www.youtube.com/watch?v=' + video_id
-    try:
-        asset, metadata = clipper.source_media({'media': {
-            'source_url': url, 'license': 'creativeCommon',
-            'rights_note': 'Creative Commons license verified at download',
-        }}, source_dir, __import__(__name__))
-        if duration(asset) < max(1, scene['_required_seconds']):
-            return None
-        thumb = source_dir / 'scene-preview.jpg'
-        run(['ffmpeg', '-v', 'error', '-y', '-ss', '0.5', '-i', str(asset),
-             '-frames:v', '1', '-vf', 'scale=480:-2', str(thumb)])
-    except (Hold, Wait):
-        return None
-    match = review_stock_frame({**scene, '_review_news_photo': True}, entry, folder, budget, thumb)
-    if match.get('matches') is not True:
-        return None
-    asset_id = 'youtube:' + video_id
-    used.append(asset_id)
-    return asset, {**metadata, 'provider': 'YouTube', 'id': asset_id,
-                   'match_check': match, 'illustrative': True}
+    for video_id in candidates:
+        if 'youtube:' + video_id in used:
+            continue
+        import clipper
+        source_dir = folder / ('youtube-' + video_id)
+        source_dir.mkdir(exist_ok=True)
+        url = 'https://www.youtube.com/watch?v=' + video_id
+        try:
+            asset, metadata = clipper.source_media({'media': {
+                'source_url': url, 'license': 'creativeCommon',
+                'rights_note': 'Creative Commons license verified at download',
+            }}, source_dir, __import__(__name__))
+            if duration(asset) < max(1, scene['_required_seconds']):
+                continue
+            thumb = source_dir / 'scene-preview.jpg'
+            run(['ffmpeg', '-v', 'error', '-y', '-ss', '0.5', '-i', str(asset),
+                 '-frames:v', '1', '-vf', 'scale=480:-2', str(thumb)])
+        except (Hold, Wait):
+            continue
+        match = review_stock_frame({**scene, '_review_news_photo': True}, entry, folder, budget, thumb)
+        if match.get('matches') is not True:
+            continue
+        asset_id = 'youtube:' + video_id
+        used.append(asset_id)
+        return asset, {**metadata, 'provider': 'YouTube', 'id': asset_id,
+                       'match_check': match, 'illustrative': True}
+    return None
 
 
 def select_asset(scene, entry, folder, budget):
