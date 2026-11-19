@@ -712,13 +712,20 @@ def record_approved_video(state, job_id, expected_sha, artifact_dir):
     video = artifact_dir / 'video.mp4'
     if not video.is_file() or digest(video) != expected_sha:
         raise Hold('The approved MP4 does not match the review record')
+    analysis = job.get('edit_analysis', {})
+    if analysis.get('video_sha256') != expected_sha:
+        analysis = measure_edit(video, expected_sha)
+    job['approved_edit'] = {**analysis, 'approved_at': now()}
+
+
+def measure_edit(video, video_sha):
     measured = duration(video)
     output = run(['ffmpeg', '-v', 'info', '-i', str(video), '-an',
                   '-vf', "select='gt(scene,0.35)',metadata=print:file=-", '-f', 'null', '-'])
     cuts = sorted({float(t) for t in re.findall(r'pts_time:\s*(\d+(?:\.\d+)?)', output.decode())
                    if .2 < float(t) < measured - .2})
-    job['approved_edit'] = {'video_sha256': expected_sha, 'duration_seconds': round(measured, 2),
-                            'cut_times': cuts, 'approved_at': now()}
+    return {'video_sha256': video_sha, 'duration_seconds': round(measured, 2),
+            'cut_times': cuts}
 
 
 def approved_edit_guidance(entry, state):
@@ -1570,6 +1577,9 @@ def process(entry, budget, target):
               'sources': [{k: v for k, v in x.items() if k != 'text'} for x in sources],
               'automated_editorial_check': critique, 'assets': assets, 'quality': quality,
               'publishing': 'disabled; no upload endpoint is called'}
+    analysis = measure_edit(result, review['video_sha256'])
+    review['edit_analysis'] = analysis
+    entry['edit_analysis'] = analysis
     atomic_json(result.parent / 'review.json', review)
     (result.parent / 'caption.txt').write_text(plan['title'] + '\n\n' + plan['description'] + '\n\nSources:\n'
                                              + '\n'.join(x['url'] for x in sources))
