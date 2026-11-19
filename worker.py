@@ -968,7 +968,7 @@ def select_news_photo(scene, entry, folder, budget):
             continue
         if media_type.split(';')[0].strip() != 'image/jpeg':
             continue
-        path = folder / (scene['id'] + '-illustrative.jpg')
+        path = folder / (scene['id'] + '-' + asset_id.split(':', 1)[1] + '-illustrative.jpg')
         path.write_bytes(raw)
         match = review_stock_frame({**scene, '_review_news_photo': True}, entry, folder, budget, path)
         if match.get('matches') is not True:
@@ -991,10 +991,17 @@ def select_asset(scene, entry, folder, budget):
         return path, {'provider': 'local', **manifest}
     if scene['requires_exact_footage']:
         raise Hold('Exact footage required for ' + scene['id'] + '; provide scene-matched local footage')
-    if entry.get('content_type') == 'news_update':
-        photo = select_news_photo(scene, entry, folder, budget)
-        if photo:
-            return photo
+    try:
+        return select_stock_video(scene, entry, folder, budget)
+    except Hold:
+        if entry.get('content_type') == 'news_update':
+            photo = select_news_photo(scene, entry, folder, budget)
+            if photo:
+                return photo
+        raise
+
+
+def select_stock_video(scene, entry, folder, budget):
     if os.getenv('PIXABAY_API_KEY', '').strip():
         try:
             return select_pixabay_asset(scene, entry, folder, budget)
@@ -1074,7 +1081,7 @@ PlayResY: 1920
 WrapStyle: 2
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: Default,DejaVu Sans,64,&H00FFFFFF,&H0000FFFF,&H00202020,&H00000000,-1,0,0,0,100,100,0,0,1,4,0,2,110,180,380,1
+Style: Default,DejaVu Sans,64,&H00FFFFFF,&H0000FFFF,&H00202020,&H00000000,-1,0,0,0,100,100,0,0,1,4,0,2,145,145,380,1
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 '''
@@ -1128,7 +1135,8 @@ def render(plan, entry, folder, budget, target):
                                               'audio': entry.get('audio', {}),
                                               'audio_sha256': digest(local_file(entry['audio'][scene['id']]))
                                               if entry.get('audio', {}).get(scene['id']) else None,
-                                              'voice': os.getenv('TTS_VOICE', 'en-US-AndrewNeural')}, sort_keys=True).encode()).hexdigest()
+                                              'voice': os.getenv('TTS_VOICE', 'en-US-AndrewNeural'),
+                                              'layout_version': 2}, sort_keys=True).encode()).hexdigest()
         prior = load(meta_path, {})
         prior_asset = prior.get('asset', {})
         reviewed_photo = prior_asset.get('provider') != 'Pixabay photo' or prior_asset.get('scene_reviewed')
@@ -1137,6 +1145,7 @@ def render(plan, entry, folder, budget, target):
             parts.append(out)
             total += prior['duration']
             asset_log.append(prior['asset'])
+            entry['_used_stock'].extend(x['id'] for x in prior['asset'].get('additional_photos', []))
             if prior['asset'].get('provider') == 'Pexels':
                 entry.setdefault('_used_stock', []).append(prior['asset']['id'])
             elif prior['asset'].get('provider') == 'Pixabay photo':
@@ -1147,6 +1156,30 @@ def render(plan, entry, folder, budget, target):
         audio, seconds = narration(scene, folder, entry)
         asset, metadata = select_asset({**scene, '_required_seconds': seconds, '_video_context': video_context},
                                        entry, folder, budget)
+        photos = [(asset, metadata)]
+        if metadata.get('provider') == 'Pixabay photo':
+            while seconds / len(photos) > 3:
+                alternate = select_news_photo({**scene, '_video_context': video_context},
+                                              entry, folder, budget)
+                if not alternate:
+                    raise Hold('Need another matching news photo to avoid a long still in ' + scene['id'])
+                photos.append(alternate)
+            metadata['additional_photos'] = [item for _, item in photos[1:]]
+            if len(photos) > 1:
+                pieces = []
+                for index, (photo, _) in enumerate(photos):
+                    piece = folder / f"{scene['id']}-photo-{index}.mp4"
+                    run(['ffmpeg', '-v', 'error', '-y', '-loop', '1', '-framerate', '30',
+                         '-i', str(photo), '-t', f'{seconds / len(photos) + .067:.3f}',
+                         '-vf', 'scale=1080:1920:force_original_aspect_ratio=decrease,'
+                         'pad=1080:1920:(ow-iw)/2:(oh-ih)/2,setsar=1,format=yuv420p',
+                         '-c:v', 'libx264', '-preset', 'veryfast', str(piece)])
+                    pieces.append(piece)
+                photo_list = folder / (scene['id'] + '-photos.txt')
+                photo_list.write_text(''.join("file '" + str(piece.resolve()) + "'\\n" for piece in pieces))
+                asset = folder / (scene['id'] + '-photos.mp4')
+                run(['ffmpeg', '-v', 'error', '-y', '-f', 'concat', '-safe', '0',
+                     '-i', str(photo_list), '-c', 'copy', str(asset)])
         sub = folder / (scene['id'] + '.ass')
         captions(scene['narration'], seconds, sub)
         if metadata.get('illustrative'):
