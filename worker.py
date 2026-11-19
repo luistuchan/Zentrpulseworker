@@ -1320,7 +1320,11 @@ def report(state, warnings):
     for job in state['jobs'].values():
         clean = lambda x: str(x).replace('|', '/').replace('\n', ' ').replace('<', '').replace('>', '')[:220]
         lines.append('| ' + ' | '.join(clean(x) for x in (job['id'], job['status'], job.get('blocker', job['title']))) + ' |')
-    lines += ['', 'Request counters: ' + json.dumps(state.get('budget', {}))]
+    run = state.get('last_run', {})
+    lines += ['', 'Gemini request attempts this run: ' + str(run.get('gemini_request_attempts', 0)),
+              'Daily request counters: ' + json.dumps(state.get('budget', {}))]
+    if run.get('pause_reason'):
+        lines.append('Production paused: ' + run['pause_reason'])
     lines += ['', 'This run: **' + outcome + '**',
               'Attempts this run: ' + str(len(state.get('last_run', {}).get('attempted_ids', [])))]
     if not any(job_category(j) == 'clipper' and j['status'] in ('QUEUED', 'WAITING', 'PRODUCING')
@@ -1638,6 +1642,7 @@ def main():
             elif batch and batch['completed'] < BATCH_SIZE:
                 warnings.append(f'Current rotation: {batch["category"]} needs {BATCH_SIZE} distinct review-ready videos.')
         finally:
+            state.setdefault('last_run', {})['gemini_request_attempts'] = budget.run_counts['ai']
             atomic_json(STATE / 'queue.json', state)
             report(state, warnings)
         print('Status saved to output/status.md. Videos remain drafts.')
