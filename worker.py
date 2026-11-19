@@ -997,22 +997,31 @@ def select_youtube_visual(scene, entry, folder, budget):
     key = os.getenv('YOUTUBE_API_KEY', '').strip()
     if not key:
         return None
-    # Share one topic search across scenes and resumed runs.
-    candidates = entry.get('youtube_visual_candidates')
-    if candidates is None:
+    # Discover broadly, then screen reuse metadata before downloading media.
+    discovery = entry.get('youtube_visual_discovery')
+    if discovery is None:
         if not budget.take('youtube'):
             return None
         params = urllib.parse.urlencode({
-            'key': key, 'part': 'snippet', 'type': 'video', 'videoLicense': 'creativeCommon',
-            'videoDuration': 'short', 'q': entry['title'][:100], 'maxResults': 3,
+            'key': key, 'part': 'snippet', 'type': 'video',
+            'q': entry['title'][:100], 'maxResults': 12,
         })
         try:
             items = json_http('https://www.googleapis.com/youtube/v3/search?' + params, retries=0).get('items', [])
+            ids = list(dict.fromkeys(item['id']['videoId'] for item in items
+                                    if re.fullmatch(r'[A-Za-z0-9_-]{11}', item.get('id', {}).get('videoId', ''))))
+            details = {}
+            if ids:
+                if not budget.take('youtube'):
+                    return None
+                params = urllib.parse.urlencode({'key': key, 'part': 'status', 'id': ','.join(ids)})
+                videos = json_http('https://www.googleapis.com/youtube/v3/videos?' + params, retries=0)
+                details = {item['id']: item.get('status', {}).get('license') for item in videos.get('items', [])}
         except (Hold, Wait):
             return None
-        candidates = [item['id']['videoId'] for item in items
-                      if re.fullmatch(r'[A-Za-z0-9_-]{11}', item.get('id', {}).get('videoId', ''))]
-        entry['youtube_visual_candidates'] = candidates
+        discovery = [{'id': video_id, 'license': details.get(video_id)} for video_id in ids]
+        entry['youtube_visual_discovery'] = discovery
+    candidates = [item['id'] for item in discovery if item['license'] == 'creativeCommon'][:3]
     used = entry['_used_stock']
     for video_id in candidates:
         if 'youtube:' + video_id in used:
