@@ -692,6 +692,9 @@ def production_failure_guidance(entry, state):
         'evidence quote not found': 'Copy evidence verbatim from the supplied source text, including punctuation.',
         'no matching pixabay footage': 'Use concrete visual searches for objects or actions that can actually illustrate the narration.',
         'need another matching news photo': 'Prefer scenes with usable moving footage or several distinct, relevant images.',
+        'unique footage sources': 'Plan distinct visual subjects across scenes so each scene can use a different asset.',
+        'a shot exceeds seven seconds': 'Break long narration beats into short scenes with separate, relevant visuals.',
+        'matching footage is shorter than narration': 'Keep each spoken beat brief enough for its corresponding shot.',
     }
     blockers = [
         str(job.get('blocker', '')).lower() for job in state['jobs'].values()
