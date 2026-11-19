@@ -6224,6 +6224,54 @@
       "status": "QUEUED",
       "created_at": "2026-11-19T21:42:22.509361+00:00",
       "attempts": 0
+    },
+    "6f0844b276e61183": {
+      "title": "Palestinians in Gaza face new displacement after Israeli army operation",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/19/palestinians-in-gaza-face-new-displacement-after-israeli-army-operation?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T18:46:10+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T21:45:10.349933+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "6f0844b276e61183",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:45:15.844386+00:00",
+      "attempts": 0
+    },
+    "631c89885b6be6dd": {
+      "title": "Iraq reaches compromise with Kataib Hezbollah over armed group’s stronghold",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/19/iraq-reaches-compromise-with-kataib-hezbollah-over-armed-group-stronghold?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T18:16:09+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T21:45:10.415367+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "631c89885b6be6dd",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:45:15.907081+00:00",
+      "attempts": 0
+    },
+    "e1d868c73a854cff": {
+      "title": "Trump-Xi-Putin summit: Five things you need to know",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/video/newsfeed/2026/11/19/trump-xi-putin-summit-five-things-you-need-to-know?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T18:13:52+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T21:45:10.463800+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "e1d868c73a854cff",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:45:15.953548+00:00",
+      "attempts": 0
     }
   },
   "budget": {
@@ -6248,11 +6296,11 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-19T21:42:22.510306+00:00",
+    "started_at": "2026-11-19T21:45:15.954469+00:00",
     "attempted_ids": [],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "finished_at": "2026-11-19T21:42:22.536246+00:00",
+    "finished_at": "2026-11-19T21:45:15.980558+00:00",
     "attempted": 0,
     "completed": 0,
     "gemini_request_attempts": 0
