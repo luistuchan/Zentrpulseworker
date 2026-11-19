@@ -46,6 +46,6 @@ class RecoveryTests(unittest.TestCase):
                  patch.object(w, 'run'), \
                  patch.object(w, 'digest', return_value='fixture-digest'), \
                  patch.object(w, 'review_stock_frame', side_effect=[{'matches': False}, {'matches': False}, {'matches': True}]) as match:
-                _, metadata = w.select_pixabay_asset(scene, {'id': 'test'}, root, Mock())
+                _, metadata = w.select_pixabay_asset(scene, {'id': 'test'}, root, Mock(state={'jobs': {}}))
                 self.assertEqual(metadata['id'], 10)
                 self.assertEqual(match.call_count, 3)
