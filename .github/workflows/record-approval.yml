@@ -1,0 +1,62 @@
+name: Record Pulse draft approval
+
+on:
+  workflow_dispatch:
+    inputs:
+      artifact_id:
+        description: GitHub review artifact ID
+        required: true
+        type: string
+      job_id:
+        description: Exact Pulse draft ID to approve
+        required: true
+        type: string
+
+permissions:
+  contents: write
+  actions: read
+
+concurrency:
+  group: zentr-pulse-production
+  cancel-in-progress: false
+
+jobs:
+  record-approval:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - name: Measure approved edit and save its pacing
+        env:
+          GH_TOKEN: ${{ github.token }}
+          ARTIFACT_ID: ${{ inputs.artifact_id }}
+          JOB_ID: ${{ inputs.job_id }}
+        run: |
+          [[ "$ARTIFACT_ID" =~ ^[0-9]+$ && "$JOB_ID" =~ ^[0-9a-f]{16}$ ]]
+          mkdir -p state
+          git fetch origin pulse-state --depth=1
+          git show FETCH_HEAD:queue.json > state/queue.json
+          sha="$(jq -er --arg job "$JOB_ID" '.jobs[$job].video_sha256' state/queue.json)"
+          gh api "repos/${GITHUB_REPOSITORY}/actions/artifacts/$ARTIFACT_ID/zip" > "$RUNNER_TEMP/approved.zip"
+          unzip -p "$RUNNER_TEMP/approved.zip" "$JOB_ID/video.mp4" > "$RUNNER_TEMP/video.mp4"
+          python worker.py --record-approval "$JOB_ID" "$sha" "$RUNNER_TEMP"
+      - name: Save authoritative queue state
+        run: |
+          if [ ! -s state/queue.json ]; then exit 0; fi
+          if git ls-remote --exit-code --heads origin pulse-state >/dev/null 2>&1; then
+            git fetch origin pulse-state --depth=1
+            git worktree add --detach .state-persist FETCH_HEAD
+          else
+            git worktree add --detach .state-persist HEAD
+            git -C .state-persist checkout --orphan pulse-state
+            git -C .state-persist rm -rf .
+          fi
+          cp state/queue.json .state-persist/queue.json
+          git -C .state-persist config user.name 'ZENTR Pulse Worker'
+          git -C .state-persist config user.email 'pulse-worker@users.noreply.github.com'
+          git -C .state-persist add queue.json
+          if ! git -C .state-persist diff --cached --quiet; then
+            git -C .state-persist commit -m 'Checkpoint Pulse production queue'
+            git -C .state-persist push origin HEAD:refs/heads/pulse-state
+          fi
