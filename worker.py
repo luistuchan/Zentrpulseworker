@@ -685,6 +685,23 @@ def review_guidance(entry, state):
     return [guidance for tag, guidance in rules.items() if tag in tags]
 
 
+def production_failure_guidance(entry, state):
+    """Use known validation failures from similar jobs, without copying source content."""
+    rules = {
+        'script length outside target range': 'Count the combined narration before returning the draft. Aim for the middle of the requested word range.',
+        'evidence quote not found': 'Copy evidence verbatim from the supplied source text, including punctuation.',
+        'no matching pixabay footage': 'Use concrete visual searches for objects or actions that can actually illustrate the narration.',
+        'need another matching news photo': 'Prefer scenes with usable moving footage or several distinct, relevant images.',
+    }
+    blockers = [
+        str(job.get('blocker', '')).lower() for job in state['jobs'].values()
+        if job.get('id') != entry.get('id') and job.get('category') == entry.get('category')
+        and job.get('content_type', 'explainer') == entry.get('content_type', 'explainer')
+    ]
+    return [guidance for reason, guidance in rules.items()
+            if any(reason in blocker for blocker in blockers)]
+
+
 def generate_plan(entry, sources, target, budget, folder):
     min_sources = 2 if entry.get('content_type') == 'news_update' else 1
     schema = json.loads(json.dumps(SCRIPT_SCHEMA))
@@ -707,6 +724,9 @@ def generate_plan(entry, sources, target, budget, folder):
     failure_guidance = footage_failure_guidance(entry, budget.state)
     if failure_guidance:
         prompt += '\nLessons from rejected footage on similar drafts:\n' + '\n'.join(failure_guidance)
+    production_guidance = production_failure_guidance(entry, budget.state)
+    if production_guidance:
+        prompt += '\nLessons from earlier production failures:\n' + '\n'.join(production_guidance)
     prompt += '\nCANDIDATE DATA:\n' + json.dumps(data)
     request_start = budget.run_counts['ai']
     for attempt in range(3):
