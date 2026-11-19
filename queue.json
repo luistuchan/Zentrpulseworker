@@ -1787,9 +1787,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T23:19:53.964103+00:00",
       "id": "17fc3434661f16ac",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T23:19:55.621678+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "f04ef15f7f1f2b09": {
       "title": "Houthi rebel advance in Yemen may further destabilise global economy",
@@ -1861,9 +1862,10 @@
       "headline_score": 1,
       "discovered_at": "2026-11-16T23:19:54.015092+00:00",
       "id": "b18da6d46d657ecb",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T23:19:55.674743+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "0b2a6a0ba6591c31": {
       "title": "CU Anschutz Led Study Finds That Genetic Risk Does Not Explain the Maternal Effect in Type 1 Diabetes - University of Colorado Anschutz",
@@ -1941,9 +1943,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T23:19:53.888754+00:00",
       "id": "612ecb1f498f0cab",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T23:19:55.744342+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "149757e91e761915": {
       "title": "Clip highlight: FUNNIEST ANIMAL MOMENTS EVER! 😂🐒 You Won't Stop Laughing!",
@@ -2037,9 +2040,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T01:38:14.164226+00:00",
       "id": "077e401a6aac3eb0",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:38:15.699710+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "5deb7b577d432c84": {
       "title": "Landmark Crimea bridge hit as Russia reports biggest Ukrainian drone attack of war",
@@ -2192,9 +2196,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T01:38:14.060297+00:00",
       "id": "f5637b504efcfa7f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:38:15.836403+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "6f8fb17e45313bdd": {
       "title": "Clip highlight: REACTING to Hilarious Dogs & Cats That Can't Behave 😂",
@@ -2231,7 +2236,7 @@
       "discovered_at": "2026-11-17T01:39:14.405393+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "ad2e5099df43ef4b",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:39:29.269547+00:00",
       "attempts": 2,
       "source_pipeline_version": 2,
@@ -2239,7 +2244,8 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "stock_pipeline_version": 3
+      "stock_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "74e76960907bec65": {
       "title": "Biden defends his support of Israel in presidential memoir, while urging it to ‘wake up’ - The Times of Israel",
@@ -2252,9 +2258,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T01:39:27.712393+00:00",
       "id": "74e76960907bec65",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:39:29.291492+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "dff4c421b3d31e7c": {
       "title": "Forensic expert says his analysis of autopsy photos suggests Epstein was killed",
@@ -2268,7 +2275,7 @@
       "discovered_at": "2026-11-17T01:39:13.834099+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "dff4c421b3d31e7c",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:39:29.308204+00:00",
       "attempts": 3,
       "source_pipeline_version": 2,
@@ -2276,7 +2283,8 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "stock_pipeline_version": 3
+      "stock_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "e097c1a76db13338": {
       "title": "Lindsay Clancy to face retrial next year for deaths of her three children",
@@ -2290,7 +2298,7 @@
       "discovered_at": "2026-11-17T01:39:13.850897+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "e097c1a76db13338",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:39:29.325486+00:00",
       "attempts": 3,
       "source_pipeline_version": 2,
@@ -2298,7 +2306,8 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "stock_pipeline_version": 3
+      "stock_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "b402094ba1e87f78": {
       "title": "Trump nominates top White House aide to head watchdog agency — as Democrats feared - Politico",
@@ -2311,9 +2320,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T01:39:27.215308+00:00",
       "id": "b402094ba1e87f78",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:39:29.345751+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "f887c5bd4952cb6a": {
       "title": "US envoy Kushner says progress made in Ukraine talks - Reuters",
@@ -2326,9 +2336,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T01:39:27.233342+00:00",
       "id": "f887c5bd4952cb6a",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:39:29.360717+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "f37540a88a51a606": {
       "title": "Yemen army reports 661 attacks on Houthis amid Houthi push towards Aden",
@@ -2342,11 +2353,12 @@
       "discovered_at": "2026-11-17T01:47:40.528353+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "f37540a88a51a606",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:47:50.630888+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-17T09:10:39.405952+00:00"
+      "last_attempt_at": "2026-11-17T09:10:39.405952+00:00",
+      "blocker": "News candidate expired; discover a recent story"
     },
     "ee167105544e7f2f": {
       "title": "Paws and profits: NVA names new VP of clinical excellence and patient safety, Arista president earns Dallas Business Journal recognition, and more updates - DVM360",
@@ -2359,9 +2371,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T01:47:49.149446+00:00",
       "id": "ee167105544e7f2f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:47:50.670817+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "47826ac14de6c9af": {
       "title": "Two mass shootings in South Africa leave 17 dead",
@@ -2412,9 +2425,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T01:47:49.073175+00:00",
       "id": "601df9abdcb66157",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:47:50.735345+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "d9857182d1314b27": {
       "title": "Trump heads to Asia to meet with Xi and Putin amid Nvidia fallout - New Hampshire Public Radio",
@@ -2444,11 +2458,12 @@
       "discovered_at": "2026-11-17T02:05:13.715514+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "187692d2ec590a9f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T02:05:24.856107+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-17T09:12:13.083279+00:00"
+      "last_attempt_at": "2026-11-17T09:12:13.083279+00:00",
+      "blocker": "News candidate expired; discover a recent story"
     },
     "573a6468fd6108b7": {
       "title": "Trump says he doesn't take 'any responsibility' for ground stop; blames tech that had 'heart attack' - ABC News - Breaking News, Latest News and Videos",
@@ -2461,9 +2476,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T02:05:23.393665+00:00",
       "id": "573a6468fd6108b7",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T02:05:24.896622+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "0ec06b35361d5ffe": {
       "title": "Raye, Rosalía and Dolly Parton recognised in Grammy nominations",
@@ -2704,9 +2720,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T05:29:35.031047+00:00",
       "id": "3312b12d58910963",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T05:29:36.288744+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "16321fba22ea115b": {
       "title": "Palestine Weekly: Israel’s political reshuffle as the occupation grinds on",
@@ -2737,9 +2754,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T06:26:58.146749+00:00",
       "id": "d83a1b893001c1f6",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T06:26:58.178332+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "abb1502e64cff11e": {
       "title": "Two major Kyiv bridges hit in Russian attack, mayor says",
@@ -2805,9 +2823,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T06:26:57.688583+00:00",
       "id": "b75d4a85d44b93ba",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T06:26:58.239858+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "a152fc023f162e24": {
       "title": "Trump's decoy flight sparked by fears of Iranian cell with shoulder-fired missile: Official - ABC News - Breaking News, Latest News and Videos",
@@ -2820,9 +2839,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T06:26:57.717971+00:00",
       "id": "a152fc023f162e24",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T06:26:58.264777+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "69c40d9ffa81ebb0": {
       "title": "Stories of survival and pain: Children amid Israel’s war on south Lebanon",
@@ -2854,9 +2874,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T06:51:40.132495+00:00",
       "id": "7c790b4af2da7eb9",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T06:51:40.379583+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "fb96153d7f4711c2": {
       "title": "Imran Khan seeks urgent medical care fearing he 'may not return alive'",
@@ -2870,12 +2891,13 @@
       "discovered_at": "2026-11-17T06:51:21.987657+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "fb96153d7f4711c2",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T06:51:40.399809+00:00",
       "attempts": 2,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-18T08:21:19.091482+00:00",
-      "stock_pipeline_version": 3
+      "stock_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "180ca557e37c5f58": {
       "title": "California sues OpenAI over Hugging Face attack",
@@ -2889,12 +2911,13 @@
       "discovered_at": "2026-11-17T06:51:22.016838+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "180ca557e37c5f58",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T06:51:40.414175+00:00",
       "attempts": 2,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-18T08:21:26.549454+00:00",
-      "stock_pipeline_version": 3
+      "stock_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "4cc0bd6a3efcc0ce": {
       "title": "Trump claims fallen soldiers said 'we cannot let Iran have a nuclear weapon' - ABC News - Breaking News, Latest News and Videos",
@@ -2923,9 +2946,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T06:51:39.781908+00:00",
       "id": "9b3f8500bd5235ae",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T06:51:40.487529+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "b0b682953d000349": {
       "title": "Leonid meteor shower 2026: When and where to see it from where you live",
@@ -2974,12 +2998,12 @@
       "discovered_at": "2026-11-17T07:03:30.760118+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "ef26c613bd2e216a",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:03:39.517160+00:00",
       "attempts": 1,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-18T08:05:53.780288+00:00",
-      "blocker": "AI request cap reached; job saved for next run"
+      "blocker": "News candidate expired; discover a recent story"
     },
     "f43177846893c02a": {
       "title": "Vance says he will decide 'sometime next year' about 2028 US presidential run",
@@ -3200,9 +3224,10 @@
       "discovered_at": "2026-11-17T07:15:19.629265+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "bf0efb054e89a6f0",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:15:37.076016+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "fdccd901023b34f2": {
       "title": "The Red Crabs of Christmas Island",
@@ -3231,9 +3256,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T07:18:20.723022+00:00",
       "id": "28a158836ad49906",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:18:21.671056+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "76fa51823a3c10ef": {
       "title": "Kidnap, child marriage and poverty: Why millions of Nigerian children can't go to school",
@@ -3247,9 +3273,10 @@
       "discovered_at": "2026-11-17T07:18:11.642752+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "76fa51823a3c10ef",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:18:21.706159+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "2641fb0fe4c5f6bf": {
       "title": "The AI start-ups fixing India's broken roads and messy land records",
@@ -3263,9 +3290,10 @@
       "discovered_at": "2026-11-17T07:18:11.675071+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "2641fb0fe4c5f6bf",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:18:21.737794+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "84b17fb77da90552": {
       "title": "Trump's proposed arch gets preliminary approval from key agency - ABC News - Breaking News, Latest News and Videos",
@@ -3326,9 +3354,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T07:20:17.466438+00:00",
       "id": "245c9efac1b97e6f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T07:20:17.916449+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "945959f365b0f73a": {
       "title": "Robert Pattinson: How the Twilight star became 007",
@@ -3422,9 +3451,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T09:02:23.698442+00:00",
       "id": "1faccdf256baca1c",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:02:24.289471+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "54edee17cc1221b6": {
       "title": "Crimea bridge shut after reported Ukrainian strike, as Russia hits Kyiv crossings",
@@ -3533,9 +3563,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T09:09:26.678751+00:00",
       "id": "d9ef12b9db81e724",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:09:28.442923+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "dbc0297f66c7c434": {
       "title": "Pope Leo hit by flying rosary while waving to crowds in Peru",
@@ -3549,9 +3580,10 @@
       "discovered_at": "2026-11-17T09:09:22.811093+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "dbc0297f66c7c434",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:09:28.464461+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "07b59a9379cf4153": {
       "title": "BBC launches programme for children forced from school by bandits and poverty in West Africa",
@@ -3565,9 +3597,10 @@
       "discovered_at": "2026-11-17T09:09:22.907626+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "07b59a9379cf4153",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:09:28.494489+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "d2dd0571535bd3f7": {
       "title": "'Spider-Man: Brand New Day's end-credit scene, explained - Mashable",
@@ -3646,9 +3679,10 @@
       "discovered_at": "2026-11-17T09:55:28.812548+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "19668163f43d64fd",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:55:34.167613+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "12c46a988a0c46cb": {
       "title": "Irish leaders react after Trump says he'd 'love' to see a unified Ireland - ABC News - Breaking News, Latest News and Videos",
@@ -3661,9 +3695,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T09:55:32.335775+00:00",
       "id": "12c46a988a0c46cb",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:55:34.196399+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "1d043c31119879dd": {
       "title": "Trump's signature will be added to US currency, Treasury says - ABC News - Breaking News, Latest News and Videos",
@@ -3676,9 +3711,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T09:55:32.391806+00:00",
       "id": "1d043c31119879dd",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:55:34.221462+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "c26a76aa1c7a9505": {
       "title": "Has empire shaped today’s world?",
@@ -4108,9 +4144,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T23:15:42.674340+00:00",
       "id": "b60baa17f2727c6a",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T23:15:43.810026+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "5eca2e638c3e1e33": {
       "title": "What is Trump hoping to achieve at APEC meeting in China?",
@@ -4852,6 +4889,129 @@
       "status": "QUEUED",
       "created_at": "2026-11-18T17:52:21.072490+00:00",
       "attempts": 0
+    },
+    "89971f48c87b5716": {
+      "title": "Elon Musk says record spending on US midterms was 'pretty foolish'",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cm9q8j2z3gg8o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T01:56:28+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T02:11:00.914829+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "89971f48c87b5716",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T02:11:09.903240+00:00",
+      "attempts": 0
+    },
+    "debeb2aeaba4f42a": {
+      "title": "Presidents get blamed for the economy. A new report argues Trump actually deserves it. - Scripps News",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMisgFBVV95cUxQc2w5SWg0NTJPSUpOSUIzWlkzWkVzQjFQQ0hTYlBFOVQwYXQxTTFXOHBGN3YtaG1jRTlhNjJGMjc3eFllTmZXdnVuTGJUTjBzN0ZqUEphNXFfY3BMX2llVzl4QWI4b3U2dHh4SEYzTTJsUDBLTEkwV1BiejY3YUtEUFhBWEl3b1RvUTBjTHBWMUtlQmNSU0Jtd216Y1JwNG5ra29ubjYyM2JuUXE3X1drU3J3?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T22:58:14+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T02:11:08.875366+00:00",
+      "id": "debeb2aeaba4f42a",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T02:11:09.951711+00:00",
+      "attempts": 0
+    },
+    "5f9b3d0f81a56b8d": {
+      "title": "Hegseth unveils new US-Venezuela military deal",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/video/newsfeed/2026/11/19/hegseth-unveils-new-us-venezuela-military-deal?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T01:48:46+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T02:11:02.015160+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "5f9b3d0f81a56b8d",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T02:11:09.977498+00:00",
+      "attempts": 0
+    },
+    "d5f9272e54c044cc": {
+      "title": "Why a trio of experts alleges Jeffrey Epstein did not die by suicide",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/19/why-a-trio-of-experts-alleges-jeffrey-epstein-did-not-die-by-suicide?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T01:17:08+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T02:11:02.056062+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "d5f9272e54c044cc",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T02:11:10.015987+00:00",
+      "attempts": 0
+    },
+    "64204c485393b581": {
+      "title": "Palm Beach County pastor convicted of US charges related to assassination of Haitian President Jovenel Moïse - WPBF",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQbkppTmxlQzEwcko4WDUxOUVhZkx4Q21BSnRyRC1zdXZPYlRLSlRpa3I0Z2lrcm1RVzNKM2d1ekNkdjVKQmdHTXJwRThETjdfR2ZGakp0T3BPcHJueEZWLURnMlZMd0s3dEVTZzlZV09xVi1ob1RVbWRMbW5KYUlJRkpkOHdRMk5pajRGZmhKR3lqaU1iTkx5NFlncEpSVUN4MjJyS1RmZ3JMb2NJZmJmdGNsa2dJNkRGQ2wzVkNpZU5BTDVvYUlseE40U290V21yeEE?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T22:17:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T02:11:09.338998+00:00",
+      "id": "64204c485393b581",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T02:11:10.073230+00:00",
+      "attempts": 0
+    },
+    "d1b5a00fb247beb6": {
+      "title": "US-Haitian Pastor Convicted Over Plot to Kill Haiti's Last President - U.S. News & World Report",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMixgFBVV95cUxNWTYyN3VHaVN6NTNDSE9BN2tIbHNHSjVCN2xKTHRaUmczY3JxaWJaVzlpZEN1bmdGcFk1STBMcTZ1OTB5M2pPbVdmUHZvUllURmc0WUR4blQyRHBsVDVlQnprVElZNDFwVklsYjdWQUkwb0tISTlueE5VbGNHQS0ydmJkRkdkZzRubTI5eHU5RmZhLTk0Z0xjc0Q1ZDFONkZvaEtpWmVuVmtVS1F3Tjk3WS03V1Z5MnZucUdYWGRJdDhxNlM4YXc?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-18T22:12:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T02:11:09.395097+00:00",
+      "id": "d1b5a00fb247beb6",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T02:11:10.121662+00:00",
+      "attempts": 0
+    },
+    "1cedc6665750457a": {
+      "title": "'MOM, DAD, YOUR SON IS OFFICIALLY A GRAMMYS NOMINATED SONGWRITER AND PRODUCER' 😭 Singer-songwriter Jeremy Glinoga, who wrote and produced BINI's \"Unang Kilig,\" turned emotional as the track was nominated for Best Asian Pop Music - Facebook",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi1wFBVV95cUxQbWNnUXp2UXRLOVRVbWdPQjY0MXJESnNJSEpEekozZTlScWVVSlZBSjNraXRIZlE0VkNjUVREbzFpOXc2cVNnQjZvQ1dHVHcyTTB1ZUt2QWNlTzZJRGVTQm1WNDdmWi1IQ2ZtaHhPWnFIUFdjZkk3amZ2SlhKbzRIRDFpTUdZV0l6bVdENW01YzZrMURZbnlwVDRWMzVVUnhQVjBQWWFtZ2lLemV1dWZqT3BRRTZxMlIyc3pNV2ZqVWFYZjdVUlhrWW9HTUY5NTUzT3A5REhXMA?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T02:11:08.374465+00:00",
+      "id": "1cedc6665750457a",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T02:11:10.227051+00:00",
+      "attempts": 0
+    },
+    "286e975ead38e93f": {
+      "title": "Rhythm & Reason - The New Indian Express",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMigAFBVV95cUxQd2xxaGVSa0tha2tfU3NfR0VKOVZUMGpkT0pGWkplVEVUM0FzcjdjaldwYk4yRnZJU0N0cXNMRVgzdXh2a2dBTlp3OUtnUmt1aWxpa2xtaDkyODJzRVRNazZINEVwMm1Iek85bHVnMXlnX1VNdEo3R0pSdnVhU0FLYdIBjgFBVV95cUxOS0p3TXlXR192bm80VXNMQmVJMFQyZ2xvd25OQW1EdnIwdFN5ZjBYb0lxUjI0RkotTDhjZElrX1hDeVpMYjFRVWZvV3lqc25Cc2ZKdUo5MFZydHdSbWo1X3BBT1lUeWVOSlhtWEdGd25KQ3NwSXdXU19FX09nZUJLeFZVOTc0U1h4c09yR0dn?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T02:11:08.421604+00:00",
+      "id": "286e975ead38e93f",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T02:11:10.249572+00:00",
+      "attempts": 0
     }
   },
   "budget": {
@@ -4865,7 +5025,7 @@
   "content_batch": null,
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-18T17:52:21.073986+00:00",
+    "started_at": "2026-11-19T02:11:10.250771+00:00",
     "attempted_ids": [],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
@@ -4879,9 +5039,10 @@
       "science",
       "movies"
     ],
-    "finished_at": "2026-11-18T17:52:21.096725+00:00",
+    "finished_at": "2026-11-19T02:11:10.266101+00:00",
     "attempted": 0,
-    "completed": 0
+    "completed": 0,
+    "gemini_request_attempts": 0
   },
   "telegram_deliveries": {
     "2d869bc60f3da658c9197b934c45dfddb3c797a7bc940732029e92f431cf90f2": {
