@@ -79,7 +79,7 @@ jobs:
           PIXABAY_API_KEY: ${{ secrets.PIXABAY_API_KEY }}
           FREE_TIER_CONFIRMED: ${{ vars.FREE_TIER_CONFIRMED || '0' }}
           GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'gemini-3.5-flash-lite' }}
-          TTS_VOICE: 'en-US-AndrewNeural'
+          TTS_VOICE: ${{ vars.TTS_VOICE || 'en-US-AriaNeural' }}
           ZENTR_VISUAL_QUALITY_GATE: '1'
           TARGET_SECONDS: ${{ vars.TARGET_SECONDS || '30' }}
           MAX_JOBS_PER_RUN: '3'
@@ -91,6 +91,32 @@ jobs:
           MAX_PIXABAY_SEARCHES: '72'
           RETRY_JOB: ${{ inputs.retry_job }}
         run: python worker.py --discover --retry "$RETRY_JOB"
+      - name: Send playable MP4 through Telegram review bot
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || vars.TELEGRAM_CHAT_ID }}
+        if: ${{ !cancelled() }}
+        run: |
+          if ! compgen -G 'output/*/review.json' > /dev/null; then
+            echo 'No finished drafts to deliver.'
+            exit 0
+          fi
+          python - <<'PY'
+          import json
+          import os
+          import re
+          import urllib.request
+          try:
+              token = os.environ['TELEGRAM_BOT_TOKEN']
+              with urllib.request.urlopen(f'https://api.telegram.org/bot{token}/getMe', timeout=15) as response:
+                  bot = json.load(response)['result']
+          except Exception:
+              raise SystemExit('Could not verify the configured Telegram bot.')
+          names = [re.sub(r'[^a-z0-9]', '', bot.get(key, '').lower()) for key in ('first_name', 'username')]
+          if not any('zentrdisplay' in name for name in names):
+              raise SystemExit('Configured Telegram bot does not identify itself as ZENTR Display.')
+          PY
+          python telegram_delivery.py
       - name: Save authoritative queue state
         if: always()
         run: |
