@@ -6035,6 +6035,84 @@
       "status": "QUEUED",
       "created_at": "2026-11-19T21:27:46.235583+00:00",
       "attempts": 0
+    },
+    "0f5a985a1dfe0671": {
+      "title": "Fiona the hippo dies after swallowing a hat at Cincinnati Zoo",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cwz0k3172xzko?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T21:26:10+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T21:36:46.368715+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "0f5a985a1dfe0671",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:36:53.465313+00:00",
+      "attempts": 0
+    },
+    "bda5daf8d8c804eb": {
+      "title": "Trump Eyes 2027 to 'See What Happens' With Iran - U.S. News & World Report",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMixgFBVV95cUxQalZoMXVPM2tyVHlxOUQxWjJENU5NVjlSb1RNZlF5eGRFMkZMZHpKZDVkbVhCekpyU0twRXVQbHdPUlZTUnFmSEg5R3JEcmRvc1BXMEVKV1d4MGJVZjR2TXRvNTdFNThsaFQzNHZHMW52R0cwRGNaZi1qMlBsZ1BpSTN5VkVfVGVTeXItazlkTm1IQ3dmNnNTV3NOODRqdEdOMmNzLWpMN0hqQ20zTDNENlN6UmlLLVNfNUFFUUpSMTB6and6ZkE?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T13:44:09+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T21:36:53.073596+00:00",
+      "id": "bda5daf8d8c804eb",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:36:53.512572+00:00",
+      "attempts": 0
+    },
+    "75d8ba63b96c2289": {
+      "title": "Photos: Genocide ruling spotlights human toll of 2017 Rohingya crisis",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/gallery/2026/11/19/photos-genocide-ruling-spotlights-2017-rohingya-crisis-human-toll?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T19:33:25+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T21:36:48.013262+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "75d8ba63b96c2289",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:36:53.555158+00:00",
+      "attempts": 0
+    },
+    "33ded3c9fe131251": {
+      "title": "Blockbuster GTA VI release shows cultural, economic heft of video games",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/19/blockbuster-gta-vi-release-shows-cultural-economic-heft-of-video-games?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T19:27:32+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T21:36:48.060537+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "33ded3c9fe131251",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:36:53.602955+00:00",
+      "attempts": 0
+    },
+    "69b6717b6f80849a": {
+      "title": "Trump says US doesn’t need help from China, Russia to end Iran war - Anadolu Ajansı",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPdjhtQmhyTHZuT0ZjcFlxU3FZXzdFQ01KNTNNZXd0d25Dc2gxMHlmcFl1VXZGN2FsbjZDZ1ZrMzVpaHMwWW8yZW0wU3NGaGs3VUJoRGRWdWxWT1hXMVdxTmtGM3hNMzAycG93Mi1lckhmR3ZIY2hMWUdDdFFGUVZCbUJrcDJPOHp4RGdVSWJUekNPTUNCYlFtNC1NVXluZFh6N0VTV2o5VENrZDg?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T01:28:23+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T21:36:52.318440+00:00",
+      "id": "69b6717b6f80849a",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:36:53.657212+00:00",
+      "attempts": 0
     }
   },
   "budget": {
@@ -6059,11 +6137,11 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-19T21:27:46.236445+00:00",
+    "started_at": "2026-11-19T21:36:53.658021+00:00",
     "attempted_ids": [],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "finished_at": "2026-11-19T21:27:46.262672+00:00",
+    "finished_at": "2026-11-19T21:36:53.676335+00:00",
     "attempted": 0,
     "completed": 0,
     "gemini_request_attempts": 0
