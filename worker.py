@@ -887,9 +887,17 @@ def select_pixabay_asset(scene, entry, folder, budget):
         logs.append(log)
         save()
         query_terms = set(re.findall(r'[a-z0-9]+', query.lower()))
-        ranked = sorted(candidates, key=lambda candidate: -len(
-            query_terms.intersection(re.findall(r'[a-z0-9]+', (candidate.get('tags') or '').lower()))
-        ))
+        def tag_overlap(candidate):
+            tags = set(re.findall(r'[a-z0-9]+', (candidate.get('tags') or '').lower()))
+            return len(query_terms & tags) if tags else None
+
+        # Skip explicit metadata mismatches before downloading or spending a visual check.
+        # Untagged clips can still be considered after positive matches.
+        overlaps = [(candidate, tag_overlap(candidate)) for candidate in candidates]
+        log['skipped_unrelated_tags'] = sum(score == 0 for _, score in overlaps)
+        ranked = [candidate for candidate, score in sorted(
+            overlaps, key=lambda item: -(item[1] or 0)) if score != 0]
+        save()
         for candidate in ranked:
             if query_evaluated >= evaluation_limit:
                 log['evaluation_limit_reached'] = True
