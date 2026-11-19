@@ -1196,11 +1196,45 @@ def media_quality(path, target):
                                       'caption timing/readability', 'voice pronunciation and pacing']}
 
 
-def large_foreground(height):
+def face_crop_focus(asset, sample_seconds=0):
+    """Return the normalized center of a single visible face, without identifying it."""
+    try:
+        import cv2
+    except ImportError:
+        return (.5, .5)
+    if asset.suffix.lower() in {'.jpg', '.jpeg', '.png', '.webp'}:
+        frame = cv2.imread(str(asset))
+    else:
+        capture = cv2.VideoCapture(str(asset))
+        try:
+            capture.set(cv2.CAP_PROP_POS_MSEC, sample_seconds * 1000)
+            _, frame = capture.read()
+        finally:
+            capture.release()
+    if frame is None:
+        return (.5, .5)
+    height, width = frame.shape[:2]
+    scale = min(1, 640 / max(height, width))
+    frame = cv2.resize(frame, (round(width * scale), round(height * scale)))
+    gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
+    detector = cv2.CascadeClassifier(cv2.data.haarcascades + 'haarcascade_frontalface_default.xml')
+    if detector.empty():
+        return (.5, .5)
+    faces = detector.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=6, minSize=(30, 30))
+    if len(faces) != 1:
+        return (.5, .5)
+    x, y, w, h = faces[0]
+    return ((x + w / 2) / gray.shape[1], (y + h * .75) / gray.shape[0])
+
+
+def large_foreground(height, focus=(.5, .5)):
+    x, y = focus
     return (
         '[0:v]split=2[bg][fg];'
         '[bg]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=25:5[blur];'
-        f'[fg]scale=1080:{height}:force_original_aspect_ratio=increase,crop=1080:{height}[front];'
+        f'[fg]scale=1080:{height}:force_original_aspect_ratio=increase,'
+        f"crop=1080:{height}:x='clip(iw*{x:.5f}-ow/2,0,iw-ow)':"
+        f"y='clip(ih*{y:.5f}-oh/2,0,ih-oh)'[front];"
         '[blur][front]overlay=(W-w)/2:(H-h)/2[framed]'
     )
 
@@ -1220,7 +1254,7 @@ def render(plan, entry, folder, budget, target):
                                               'audio_sha256': digest(local_file(entry['audio'][scene['id']]))
                                               if entry.get('audio', {}).get(scene['id']) else None,
                                               'voice': os.getenv('TTS_VOICE', 'en-US-AndrewNeural'),
-                                              'layout_version': 4}, sort_keys=True).encode()).hexdigest()
+                                              'layout_version': 5}, sort_keys=True).encode()).hexdigest()
         prior = load(meta_path, {})
         prior_asset = prior.get('asset', {})
         reviewed_photo = prior_asset.get('provider') != 'Pixabay photo' or prior_asset.get('scene_reviewed')
@@ -1255,7 +1289,7 @@ def render(plan, entry, folder, budget, target):
                     piece = folder / f"{scene['id']}-photo-{index}.mp4"
                     run(['ffmpeg', '-v', 'error', '-y', '-loop', '1', '-framerate', '30',
                          '-i', str(photo), '-t', f'{seconds / len(photos) + .067:.3f}',
-                         '-filter_complex', large_foreground(1344) +
+                         '-filter_complex', large_foreground(1344, face_crop_focus(photo)) +
                          ';[framed]setsar=1,format=yuv420p[v]', '-map', '[v]',
                          '-c:v', 'libx264', '-preset', 'veryfast', str(piece)])
                     pieces.append(piece)
@@ -1280,7 +1314,8 @@ def render(plan, entry, folder, budget, target):
         if not is_photo and (offset < 0 or duration(asset) - offset < seconds - .05):
             raise Hold('Matching footage is shorter than narration; supply a longer shot rather than looping it')
         height = 1920 if video_info['height'] >= video_info['width'] else 1344
-        graph = (large_foreground(height) +
+        focus = ((.5, .5) if len(photos) > 1 else face_crop_focus(asset, offset + seconds / 2))
+        graph = (large_foreground(height, focus) +
                  f';[framed]fps=30,setsar=1,subtitles={sub.as_posix()},format=yuv420p[v]')
         # Safe generated paths only appear in the FFmpeg filter expression.
         visual_input = (['-loop', '1', '-framerate', '30'] if is_photo else ['-ss', str(offset)])
