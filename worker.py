@@ -915,8 +915,15 @@ def select_pixabay_asset(scene, entry, folder, budget):
         # Untagged clips can still be considered after positive matches.
         overlaps = [(candidate, tag_overlap(candidate)) for candidate in candidates]
         log['skipped_unrelated_tags'] = sum(score == 0 for _, score in overlaps)
+        proven_creators = {
+            creator
+            for job in budget.state['jobs'].values()
+            if job.get('category') == entry.get('category')
+            for creator in job.get('rendered_pixabay_creators', [])
+        }
         ranked = [candidate for candidate, score in sorted(
-            overlaps, key=lambda item: -(item[1] or 0)) if score != 0]
+            overlaps, key=lambda item: (-(item[1] or 0), item[0].get('user') not in proven_creators))
+            if score != 0]
         save()
         for candidate in ranked:
             if query_evaluated >= evaluation_limit:
@@ -1531,6 +1538,9 @@ def process(entry, budget, target):
     entry['video_sha256'] = review['video_sha256']
     entry['completed_at'] = now()
     entry['source_story_urls'] = source_urls
+    entry['rendered_pixabay_creators'] = sorted({
+        asset['creator'] for asset in assets if asset.get('provider') == 'Pixabay' and asset.get('creator')
+    })
     entry.pop('blocker', None)
 
 
