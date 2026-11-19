@@ -934,6 +934,38 @@ def select_pixabay_asset(scene, entry, folder, budget):
                + '; inspect diagnostics in review artifact')
 
 
+def select_news_photo(scene, entry, folder, budget):
+    key = os.getenv('PIXABAY_API_KEY', '').strip()
+    queries = stock_queries(scene)
+    if not key or not queries or not budget.take('pixabay'):
+        return None
+    query = queries[-1]
+    terms = set(re.findall(r'[a-z0-9]+', query.lower()))
+    if len(terms) < 2:
+        return None
+    params = urllib.parse.urlencode({'key': key, 'q': query, 'image_type': 'photo',
+                                    'safesearch': 'true', 'per_page': 6})
+    try:
+        hits = json_http('https://pixabay.com/api/?' + params, retries=0).get('hits', [])
+        for hit in hits:
+            asset_id = 'pixabay-photo:' + str(hit.get('id', ''))
+            tags = set(re.findall(r'[a-z0-9]+', hit.get('tags', '').lower()))
+            if asset_id in entry['_used_stock'] or not terms <= tags or not hit.get('pageURL'):
+                continue
+            raw, _, media_type = http(hit.get('webformatURL', ''), retries=0)
+            if media_type.split(';')[0].strip() != 'image/jpeg':
+                continue
+            path = folder / (scene['id'] + '-illustrative.jpg')
+            path.write_bytes(raw)
+            entry['_used_stock'].append(asset_id)
+            return path, {'provider': 'Pixabay photo', 'id': asset_id, 'sha256': digest(path),
+                          'source_url': hit['pageURL'], 'creator': hit.get('user', ''),
+                          'license': 'Pixabay Content License', 'illustrative': True}
+    except (Hold, Wait):
+        pass
+    return None
+
+
 def select_asset(scene, entry, folder, budget):
     manifest = entry.get('assets', {}).get(scene['id'])
     if manifest:
@@ -945,6 +977,10 @@ def select_asset(scene, entry, folder, budget):
         return path, {'provider': 'local', **manifest}
     if scene['requires_exact_footage']:
         raise Hold('Exact footage required for ' + scene['id'] + '; provide scene-matched local footage')
+    if entry.get('content_type') == 'news_update':
+        photo = select_news_photo(scene, entry, folder, budget)
+        if photo:
+            return photo
     if os.getenv('PIXABAY_API_KEY', '').strip():
         try:
             return select_pixabay_asset(scene, entry, folder, budget)
@@ -1086,6 +1122,8 @@ def render(plan, entry, folder, budget, target):
             asset_log.append(prior['asset'])
             if prior['asset'].get('provider') == 'Pexels':
                 entry.setdefault('_used_stock', []).append(prior['asset']['id'])
+            elif prior['asset'].get('provider') == 'Pixabay photo':
+                entry['_used_stock'].append(prior['asset']['id'])
             elif prior['asset'].get('provider') == 'Pixabay':
                 entry.setdefault('_used_stock', []).append('pixabay:' + str(prior['asset']['id']))
             continue
@@ -1094,13 +1132,18 @@ def render(plan, entry, folder, budget, target):
                                        entry, folder, budget)
         sub = folder / (scene['id'] + '.ass')
         captions(scene['narration'], seconds, sub)
+        if metadata.get('illustrative'):
+            with sub.open('a') as labels:
+                labels.write(f'Dialogue: 1,0:00:00.00,{ass_time(seconds)},Default,,0,0,160,,'
+                             r'{\an8\fs38}Illustrative photo' + '\n')
         # Portrait foreground retains the full subject; landscape foreground is 65%
         # of frame height over a blurred background, without blind speaker tracking.
         video_info = next((x for x in probe(asset)['streams'] if x['codec_type'] == 'video'), None)
         if not video_info:
             raise Hold('Asset has no video stream')
         offset = float(metadata.get('start_seconds', 0))
-        if offset < 0 or duration(asset) - offset < seconds - .05:
+        is_photo = asset.suffix.lower() in {'.jpg', '.jpeg', '.png', '.webp'}
+        if not is_photo and (offset < 0 or duration(asset) - offset < seconds - .05):
             raise Hold('Matching footage is shorter than narration; supply a longer shot rather than looping it')
         portrait = video_info['height'] >= video_info['width']
         fg_height = 1920 if portrait else 1248
@@ -1109,7 +1152,8 @@ def render(plan, entry, folder, budget, target):
                  f'force_original_aspect_ratio=decrease[front];[blur][front]overlay=(W-w)/2:(H-h)/2,'
                  f'fps=30,setsar=1,subtitles={sub.as_posix()},format=yuv420p[v]')
         # Safe generated paths only appear in the FFmpeg filter expression.
-        run(['ffmpeg', '-v', 'error', '-y', '-ss', str(offset), '-i', str(asset), '-i', str(audio),
+        visual_input = (['-loop', '1', '-framerate', '30'] if is_photo else ['-ss', str(offset)])
+        run(['ffmpeg', '-v', 'error', '-y', *visual_input, '-i', str(asset), '-i', str(audio),
              '-filter_complex', graph, '-map', '[v]', '-map', '1:a:0', '-t', f'{seconds:.3f}',
              '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '21', '-c:a', 'aac', '-ar', '48000',
              '-ac', '2', '-af', 'loudnorm=I=-16:TP=-1.5:LRA=11', '-movflags', '+faststart', str(out)])
