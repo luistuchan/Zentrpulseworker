@@ -4586,9 +4586,9 @@
       "id": "bbfb93f4d2638ae1",
       "status": "WAITING",
       "created_at": "2026-11-18T08:21:18.910721+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-19T21:07:55.435115+00:00",
+      "last_attempt_at": "2026-11-19T21:14:20.102173+00:00",
       "stock_reviews": {
         "5e0cc4c1ee87922684bb68ccc7b671d385c7e46cdfebdddc346803d34d7b3930": {
           "matches": true,
@@ -4609,6 +4609,22 @@
         "3dcfdcde224fe63fbd5c869e425fea88a7859948c22d203db0c6d5e22c1e70c0": {
           "matches": false,
           "reason": "The frame shows people having an informal discussion outdoors, which is generic and does not meaningfully illustrate technical outages, infrastructure, or political statements."
+        },
+        "e0d9773ccdf7509d6df68d1151fa0064ffaefddbc92027bd0b80e5c0969408c9": {
+          "matches": true,
+          "reason": "The frame shows an airport terminal walkway, which directly illustrates the part of the story mentioning flight grounds and travel disruptions caused by the technological outages."
+        },
+        "78fd649893c5124edf6307c6fcfcaa2417bfe0294b02929e90c8b5fe0a9a1bdf": {
+          "matches": true,
+          "reason": "The frame depicts an office setting with people working at desks, which fits the context of tech infrastructure and office environments related to the video topic."
+        },
+        "0a12296c20c3a798a15c724dee7b37aad5bc49990074cd81c388252d466c7a81": {
+          "matches": false,
+          "reason": "The image shows a generic cityscape with a river, which does not specifically illustrate the video's topic of US tech outages, infrastructure issues, or government statements."
+        },
+        "20a84a64c67c2a0a492028c0ee76d6552dea7e8f6a0903ea08fb701a39404b2b": {
+          "matches": true,
+          "reason": "The shot depicts a formal classical stone building exterior, which effectively serves as B-roll footage to represent government offices, official statements, or institutional authority relating to Marco Rubio's response regarding the tech outages."
         }
       },
       "blocker": "Stock footage review allowance reached for this draft; saved progress"
@@ -4778,9 +4794,9 @@
       "id": "fba09d28094889d8",
       "status": "HOLD",
       "created_at": "2026-11-18T10:03:00.226332+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-19T21:10:41.431035+00:00",
+      "last_attempt_at": "2026-11-19T21:15:16.078972+00:00",
       "stock_reviews": {
         "a61bf3960196233aca8a724a89675d584787a1e8afd0332605a7d96335c49fe1": {
           "matches": false,
@@ -4803,6 +4819,7 @@
           "reason": "The frame shows a large bank building facade, which serves as suitable B-roll for a video discussing bank records, financial institutions, and investigations."
         }
       },
+      "stock_pipeline_version": 5,
       "blocker": "No matching Pixabay footage for s02: 0 hits for 'newsroom'; inspect diagnostics in review artifact"
     },
     "68a3a6496c734dfd": {
@@ -4949,9 +4966,12 @@
       "discovered_at": "2026-11-18T15:19:38.627215+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "7a0f10e754870d32",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-18T15:19:44.286769+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-19T21:15:23.929525+00:00",
+      "blocker": "AI request cap reached; job saved for next run"
     },
     "b0b25096a3323a8a": {
       "title": "William and Kate meet Indian Prime Minister Modi in New Delhi",
@@ -5721,14 +5741,107 @@
       "status": "QUEUED",
       "created_at": "2026-11-19T21:07:13.732864+00:00",
       "attempts": 0
+    },
+    "f1ebe9a0ed891f22": {
+      "title": "Three arrested during Anthropic IPO protest outside Nasdaq",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/video/newsfeed/2026/11/19/three-arrested-during-anthropic-ipo-protest-outside-nasdaq?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T20:59:20+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T21:14:11.665928+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "f1ebe9a0ed891f22",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:14:19.806208+00:00",
+      "attempts": 0
+    },
+    "af13a89bd2ab7822": {
+      "title": "Trump, Xi and Putin Seek to Project Power at Their First Summit - The New York Times",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMic0FVX3lxTE1MQWU3M21LcmgtNFU4MmVaaEw2cnIyUGJVclVsc2JIWGZhcFVFMXE0SmJqaG5MQnpWN3BRLWZuWmh6cTRudTl0Nzc1SlJ4WVdQamZlR0hFMlRtTy04SEhhVVVsREp2RktrY0ZwUDFkcmpnaXM?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T19:06:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T21:14:16.645693+00:00",
+      "id": "af13a89bd2ab7822",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:14:19.865936+00:00",
+      "attempts": 0
+    },
+    "1fae2f5d185dabbc": {
+      "title": "Jerusalem Daily: Israel launches ground offensive in Gaza",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/video/newsfeed/2026/11/19/jerusalem-daily-israel-launches-ground-offensive-in-gaza-2?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T20:58:41+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T21:14:11.708599+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "1fae2f5d185dabbc",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:14:19.908604+00:00",
+      "attempts": 0
+    },
+    "bcaa330c519adc04": {
+      "title": "Rohingya genocide survivor: ‘perpetrators will have to face consequences’",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/video/newsfeed/2026/11/19/rohingya-genocide-survivor-perpetrators-will-have-to-face?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T20:58:38+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T21:14:11.758541+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "bcaa330c519adc04",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:14:19.958414+00:00",
+      "attempts": 0
+    },
+    "efc78449a5dbb96f": {
+      "title": "Trump's defamation case against New York Times may proceed, judge rules - Yahoo",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiigFBVV95cUxOYV9DTnNTYi1HZ0hVbGFnZ3l3RTFUQ2JHWUJrS0R6UThwSHh2c3VmY2hqRmp6M29acWhHOHhvVFBTQjViYkFmOVlyQnNHNnFVa2VxcDR2bDF4YURuczN1UHU5MmV4d2M2T2dTQWRfdVV0dWF2b3VfNnlUOUd2UVNlaTViYzlOTGNXSGc?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T17:47:36+00:00",
+      "headline_score": 1,
+      "discovered_at": "2026-11-19T21:14:16.901303+00:00",
+      "id": "efc78449a5dbb96f",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:14:20.015601+00:00",
+      "attempts": 0
+    },
+    "e68b0148e7e1ccfc": {
+      "title": "WATCH LIVE: Senate meets for legislative business as Trump returns from Putin-Xi talks in China - PBS",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMizAFBVV95cUxQcUhzT1QtZUVQVTVHaGFKbVBKb0lxZVhYN2g2Q19qR2lzMVlEVnVZYVRYV1RWMUxVNGpqM1cwZGpfTGhrb1JXeW9xWFlCdzRoMmwtbVF6TUZERWVRcC1lUnI3V3ppQko3akt1VmVUai1VdEEzWG5FT3l2VDl0YUxlQ0FaWUNpUWZPbHpPNUE2bklUMjNGMUo0Y2FUZFhReWNLMkNNQlMzdzl3aUdWMzFQR0lKZ2VOTF9JU2dKSWtUMDJablkwdTFFRUJCT3HSAdIBQVVfeXFMTlhNN19IS01zdGtRU3BWaEZjVF94SDFtWU55Z0ZhdDVCQnBjWnE4dS14Uy0yVHVORUwtd2VqS0NjbDZmQ0lWUUFzeHd2Z1phZ3VSZmlseC1uVGN0Y28zNHFISEZRTHE0V2RGUzRCdmtyM1VKdmtvMHZjV3lJMk55Z254WUFPaVpCRVRPeTZ5T185MVJMRjdKNmQ4MmV4SVpCVFBpczJPMzlCVkl5NWFiYWEwU0tpSlEtYlJiUElwNDB3NTk4aXVrTDVyU29ZZmR1eWd3?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T15:00:50+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T21:14:17.155569+00:00",
+      "id": "e68b0148e7e1ccfc",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:14:20.084502+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-19",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 16,
-    "ai": 91,
-    "pixabay": 32
+    "youtube": 18,
+    "ai": 96,
+    "pixabay": 37
   },
   "content_cycle_index": 6,
   "content_batch": {
@@ -5745,23 +5858,19 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-19T21:07:13.733549+00:00",
+    "started_at": "2026-11-19T21:14:20.085272+00:00",
     "attempted_ids": [
-      "cd2bdbdb1d2c9258",
       "bbfb93f4d2638ae1",
-      "a6e06a058de5c51a",
-      "f982c9b54527e5cf",
       "fba09d28094889d8",
-      "b4c5eac16267b665",
-      "1398d274efe695a6"
+      "7a0f10e754870d32"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "pause_reason": "AI request cap reached; job saved for next run",
-    "finished_at": "2026-11-19T21:13:01.316883+00:00",
-    "attempted": 7,
+    "finished_at": "2026-11-19T21:15:54.776324+00:00",
+    "attempted": 3,
     "completed": 0,
-    "gemini_request_attempts": 32
+    "gemini_request_attempts": 5
   },
   "telegram_deliveries": {
     "2d869bc60f3da658c9197b934c45dfddb3c797a7bc940732029e92f431cf90f2": {
