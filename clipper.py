@@ -239,7 +239,16 @@ def choose_highlight(words, target, api):
             score = len(content) / max(1, len(selected)) + hook * .15 - abs(seconds - target) / target
             candidates.append((score, start, end, list(selected)))
     if not candidates:
-        raise api.Hold('No complete spoken passage fits the clip target; supply a clearer/longer source')
+        # Keep a short exchange when no complete passage fits the preferred duration.
+        # For a long continuous monologue, cut at a word boundary.
+        chosen = max((group for group in groups
+                      if group[-1]['end'] - group[0]['start'] <= target * 1.25),
+                     key=lambda group: group[-1]['end'] - group[0]['start'], default=[])
+        if not chosen:
+            chosen = [word for word in words if word['end'] <= words[0]['start'] + target]
+        if not chosen:
+            raise api.Hold('No usable timed speech found for the excerpt')
+        return chosen[0]['start'], chosen[-1]['end'], chosen
     _, start, end, chosen = max(candidates, key=lambda x: x[0])
     return start, end, chosen
 
