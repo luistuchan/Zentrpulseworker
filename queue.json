@@ -6113,6 +6113,54 @@
       "status": "QUEUED",
       "created_at": "2026-11-19T21:36:53.657212+00:00",
       "attempts": 0
+    },
+    "5b91b6d3b161246e": {
+      "title": "Save the Children: Gaza’s children face ‘unmatched dangers’",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/19/save-the-children-gazas-children-face-unmatched-dangers?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T19:23:45+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T21:40:03.335749+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "5b91b6d3b161246e",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:40:09.906987+00:00",
+      "attempts": 0
+    },
+    "286774372e2150c3": {
+      "title": "World reacts to ICJ finding Myanmar guilty of genocide against Rohingya",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/19/world-reacts-to-icj-finding-myanmar-guilty-of-genocide-against-rohingya?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T19:19:06+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T21:40:03.395831+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "286774372e2150c3",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:40:09.964131+00:00",
+      "attempts": 0
+    },
+    "ceb87f769d64faea": {
+      "title": "Rohingya survivors react to landmark genocide ruling against Myanmar",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/video/newsfeed/2026/11/19/rohingya-survivors-react-to-landmark-genocide-ruling-against-myanmar?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T19:16:34+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T21:40:03.454516+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "ceb87f769d64faea",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:40:10.020300+00:00",
+      "attempts": 0
     }
   },
   "budget": {
@@ -6137,11 +6185,11 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-19T21:36:53.658021+00:00",
+    "started_at": "2026-11-19T21:40:10.021199+00:00",
     "attempted_ids": [],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "finished_at": "2026-11-19T21:36:53.676335+00:00",
+    "finished_at": "2026-11-19T21:40:10.048503+00:00",
     "attempted": 0,
     "completed": 0,
     "gemini_request_attempts": 0
