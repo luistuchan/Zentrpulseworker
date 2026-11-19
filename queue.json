@@ -5927,6 +5927,114 @@
       "status": "QUEUED",
       "created_at": "2026-11-19T21:25:27.387409+00:00",
       "attempts": 0
+    },
+    "f2ee23f7627e56d4": {
+      "title": "Why are Bukele’s Salvadoran troops in Haiti and what have they achieved?",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/19/why-are-bukeles-salvadoran-troops-in-haiti-and-what-have-they-achieved?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T20:54:08+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T21:27:39.010794+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "f2ee23f7627e56d4",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:27:45.854196+00:00",
+      "attempts": 0
+    },
+    "7afe8d408713e4dc": {
+      "title": "APEC final day in photos: Trump, Xi and Putin shake hands; Takaichi kept at a distance - CNBC",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMijwFBVV95cUxPT1lGd0pXRjlfUlRaYlBjNU05S3JNS1lJSmNuMHp1ZWdxRDVVZVc4YTVVaTBGWkk3dGkwRmtld0VQbmZrZDhHNkV3c28wUGdRaDc1NHgxVDhVd1F6SmY4MktwNG9fcFdHTnk3M0UzWTVYeGNnWFVidHpsRW45cnJINWpLZGtFSlMtZWpnTlIzY9IBlAFBVV95cUxQaTFHWjh4Q1dJNWJqeFJONHhfX0hOSlFLbUZIR3RuMTlCNjdKdm1TQXBmRjBVR1RkLW1OMWw3ODR1emFqMVhiQmg4TGtmRV9CRHpva2hxTkZIM1pzVGdtMDdPYTBJMGlSWlhpQ24tTGh3NUxMT1lLZk5XWFV4TVVycUt2VjJ0YWNlNy1JQXU0ZFRIcG1Q?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T07:32:56+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T21:27:45.241367+00:00",
+      "id": "7afe8d408713e4dc",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:27:45.925165+00:00",
+      "attempts": 0
+    },
+    "77b67f6944db5e6b": {
+      "title": "Will the Shenzhen summit safeguard world peace?",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/video/inside-story/2026/11/19/will-the-shenzhen-summit-safeguard-world-peace?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T20:43:51+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T21:27:39.054294+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "77b67f6944db5e6b",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:27:45.966184+00:00",
+      "attempts": 0
+    },
+    "f1ca39e3bfbdf73e": {
+      "title": "What does the Myanmar genocide ruling mean for the Rohingya?",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/video/newsfeed/2026/11/19/what-does-the-myanmar-genocide-ruling-mean-for-the-rohingya?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T20:26:09+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-19T21:27:39.272860+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "f1ca39e3bfbdf73e",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:27:46.017671+00:00",
+      "attempts": 0
+    },
+    "c627653c11df9aea": {
+      "title": "Trump praises ‘great relationship’ with Putin after meeting, as Ukraine war takes center stage - CNBC",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMicEFVX3lxTE84Vi1aVi13N1FETHdkbnpZcWtOdmlTRzY1V3h1dDlxWjh1Qy1pVXpYZlY0WENXTzlVVFBHMTZFcnVWUDVReTdSQm5Wa1VKNmxpcFIyeHJaNkpTeW90TDh3TXYzSnZ4WFI3aElsRWlHVFrSAXZBVV95cUxNRXA1WncwREE4MW5Wa2U3SkpyVUlsVEJDUHFBbVIxd1FCNWpEOHRoX1pDWGhzdl9kZnN0M1ZMdVVRNlM0bW1DRXhmeVRPcGlNQnFtcjg2U1lmVEVmX1JaZkNMMFZjcUdwVHR3Ri1rNTZvVTRBbUl3?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T06:27:40+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T21:27:44.601008+00:00",
+      "id": "c627653c11df9aea",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:27:46.102127+00:00",
+      "attempts": 0
+    },
+    "94888e94e58de08c": {
+      "title": "Trump, Xi and Putin sit down for a rare 3-way meeting in China, but appear to achieve little - CBS News",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMib0FVX3lxTE05RFI1UXR5alZLUGZrOEVjR1RnR3FxOTVqU3hYRTFiRkU2UXF2bjFMRmFUN2dDeXlfUWt3REJvY242b2l4bFh5ZHoxT04tUjhFRzR2MF9mbC1WVTBNeG0zSU9LN3pNdHRnT0dYTW9WWQ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T02:04:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T21:27:44.690743+00:00",
+      "id": "94888e94e58de08c",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:27:46.185204+00:00",
+      "attempts": 0
+    },
+    "14fab6ad7464a590": {
+      "title": "Alaskans opt to stick with ranked choice voting - NBC News",
+      "category": "sports",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxOc0dqOXhRd1BYQXc5SUtmTE53UlQ4MERWcXhaYlFfTk9RTXU1cnpPRTA3UlRHR2ZfUFhTaFFTVmdfMU9DMmRWaVFQYm40OWVNUWZZT2ZCcDJ1cktCLVU1QnIweFZNa0FHX1o2VEdtdG9faF9JcmtKYXVOUHlXc3VMX1NQMlZsNlZROXgxalNETjRYekIzSlNtenlPWUVFZw?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-19T21:27:42.171742+00:00",
+      "id": "14fab6ad7464a590",
+      "status": "QUEUED",
+      "created_at": "2026-11-19T21:27:46.235583+00:00",
+      "attempts": 0
     }
   },
   "budget": {
@@ -5951,11 +6059,11 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-19T21:25:27.388212+00:00",
+    "started_at": "2026-11-19T21:27:46.236445+00:00",
     "attempted_ids": [],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "finished_at": "2026-11-19T21:25:27.414644+00:00",
+    "finished_at": "2026-11-19T21:27:46.262672+00:00",
     "attempted": 0,
     "completed": 0,
     "gemini_request_attempts": 0
