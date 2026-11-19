@@ -4296,12 +4296,14 @@
       "review_feedback": {
         "video_sha256": "895d4499aa27dc2297fb804be1f785bb3e76c841648f3f5690c36b72876576d3",
         "tags": [
-          "slow_pacing"
+          "slow_pacing",
+          "generic_footage"
         ],
         "notes": [
           "On-screen text sits slightly left of center.",
           "Narration sounds robotic. Use a more natural voice and delivery.",
-          "A still photo held for about five seconds feels too slow. Vary shots or add meaningful motion."
+          "A still photo held for about five seconds feels too slow. Vary shots or add meaningful motion.",
+          "Classroom-looking stock photo during summit coverage is unrelated. Use event-specific or clearly relevant visuals."
         ]
       }
     },
