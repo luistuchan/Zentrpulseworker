@@ -321,13 +321,19 @@ def discover(limit, existing_titles=()):
         except (Hold, ET.ParseError):
             errors.append(category)
     # Round-robin categories; do not let one category consume the queue.
-    leads.sort(key=lambda x: x['headline_score'], reverse=True)
+    def discovery_priority(lead):
+        published = lead.get('source_published_at')
+        if published:
+            return (1, datetime.fromisoformat(published).timestamp())
+        return (0, lead['headline_score'])
+
+    leads.sort(key=discovery_priority, reverse=True)
     selected, counts = [], Counter()
     # Reserve a small share for the user's news updates while retaining explainers.
     for category in ('world_news', 'president'):
         candidates = [x for x in leads if x['category'] == category]
         if candidates and len(selected) < limit:
-            lead = max(candidates, key=lambda x: x['source_published_at'])
+            lead = candidates[0]
             selected.append(lead)
             counts[category] += 1
     for lead in leads:
