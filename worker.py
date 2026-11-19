@@ -1196,6 +1196,15 @@ def media_quality(path, target):
                                       'caption timing/readability', 'voice pronunciation and pacing']}
 
 
+def large_foreground(height):
+    return (
+        '[0:v]split=2[bg][fg];'
+        '[bg]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=25:5[blur];'
+        f'[fg]scale=1080:{height}:force_original_aspect_ratio=increase,crop=1080:{height}[front];'
+        '[blur][front]overlay=(W-w)/2:(H-h)/2[framed]'
+    )
+
+
 def render(plan, entry, folder, budget, target):
     if not shutil.which('ffmpeg') or not shutil.which('ffprobe'):
         raise Hold('FFmpeg/ffprobe missing')
@@ -1211,7 +1220,7 @@ def render(plan, entry, folder, budget, target):
                                               'audio_sha256': digest(local_file(entry['audio'][scene['id']]))
                                               if entry.get('audio', {}).get(scene['id']) else None,
                                               'voice': os.getenv('TTS_VOICE', 'en-US-AndrewNeural'),
-                                              'layout_version': 3}, sort_keys=True).encode()).hexdigest()
+                                              'layout_version': 4}, sort_keys=True).encode()).hexdigest()
         prior = load(meta_path, {})
         prior_asset = prior.get('asset', {})
         reviewed_photo = prior_asset.get('provider') != 'Pixabay photo' or prior_asset.get('scene_reviewed')
@@ -1246,8 +1255,8 @@ def render(plan, entry, folder, budget, target):
                     piece = folder / f"{scene['id']}-photo-{index}.mp4"
                     run(['ffmpeg', '-v', 'error', '-y', '-loop', '1', '-framerate', '30',
                          '-i', str(photo), '-t', f'{seconds / len(photos) + .067:.3f}',
-                         '-vf', 'scale=1080:1920:force_original_aspect_ratio=decrease,'
-                         'pad=1080:1920:(ow-iw)/2:(oh-ih)/2,setsar=1,format=yuv420p',
+                         '-filter_complex', large_foreground(1344) +
+                         ';[framed]setsar=1,format=yuv420p[v]', '-map', '[v]',
                          '-c:v', 'libx264', '-preset', 'veryfast', str(piece)])
                     pieces.append(piece)
                 photo_list = folder / (scene['id'] + '-photos.txt')
@@ -1270,12 +1279,9 @@ def render(plan, entry, folder, budget, target):
         is_photo = asset.suffix.lower() in {'.jpg', '.jpeg', '.png', '.webp'}
         if not is_photo and (offset < 0 or duration(asset) - offset < seconds - .05):
             raise Hold('Matching footage is shorter than narration; supply a longer shot rather than looping it')
-        portrait = video_info['height'] >= video_info['width']
-        fg_height = 1920 if portrait else 1248
-        graph = (f'[0:v]split=2[bg][fg];[bg]scale=1080:1920:force_original_aspect_ratio=increase,'
-                 f'crop=1080:1920,boxblur=25:5[blur];[fg]scale=1080:{fg_height}:'
-                 f'force_original_aspect_ratio=decrease[front];[blur][front]overlay=(W-w)/2:(H-h)/2,'
-                 f'fps=30,setsar=1,subtitles={sub.as_posix()},format=yuv420p[v]')
+        height = 1920 if video_info['height'] >= video_info['width'] else 1344
+        graph = (large_foreground(height) +
+                 f';[framed]fps=30,setsar=1,subtitles={sub.as_posix()},format=yuv420p[v]')
         # Safe generated paths only appear in the FFmpeg filter expression.
         visual_input = (['-loop', '1', '-framerate', '30'] if is_photo else ['-ss', str(offset)])
         run(['ffmpeg', '-v', 'error', '-y', *visual_input, '-i', str(asset), '-i', str(audio),
