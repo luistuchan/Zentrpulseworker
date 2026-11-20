@@ -1616,6 +1616,8 @@ def report(state, warnings):
     run = state.get('last_run', {})
     lines += ['', 'Gemini request attempts this run: ' + str(run.get('gemini_request_attempts', 0)),
               'Daily request counters: ' + json.dumps(state.get('budget', {}))]
+    if run.get('ai_pause_reason'):
+        lines.append('Gemini-dependent jobs paused: ' + run['ai_pause_reason'])
     if run.get('pause_reason'):
         lines.append('Production paused: ' + run['pause_reason'])
     lines += ['', 'This run: **' + outcome + '**',
@@ -1716,10 +1718,9 @@ def produce_batch(state, budget, target):
                 -int(trusted_lead), -min(supplied, 2),
                 job.get('last_attempt_at', job.get('created_at', '')))
     pending = sorted(state['jobs'].values(), key=priority)
-    # Do not enter an AI-dependent story when its persisted daily budget is
-    # already exhausted. Clipper jobs use local editing and remain eligible.
+    # Clipper jobs use local editing and remain eligible when AI is unavailable.
     ai_cap = int(os.getenv('MAX_AI_CALLS', '96'))
-    ai_exhausted = budget.counts.get('ai', 0) >= ai_cap
+    ai_unavailable = budget.counts.get('ai', 0) >= ai_cap
     # Try other categories in this same run when the current category has
     # no usable candidate. Never break an in-progress three-video rotation.
     deferred = set()
@@ -1737,7 +1738,7 @@ def produce_batch(state, budget, target):
                     break
                 if job_category(job) != batch['category'] or job['status'] not in ('QUEUED', 'PRODUCING', 'WAITING'):
                     continue
-                if ai_exhausted and job.get('content_type') != 'clipper':
+                if ai_unavailable and job.get('content_type') != 'clipper':
                     continue
                 blocker = str(job.get('blocker', '')).lower()
                 if job['status'] == 'WAITING' and any(
@@ -1778,18 +1779,19 @@ def produce_batch(state, budget, target):
                             state['content_cycle_index'] = (state.get('content_cycle_index', 0) + 1) % len(CONTENT_CYCLE)
                 except Wait as exc:
                     job.update(status='WAITING', blocker=str(exc))
-                    # A Gemini provider outage is shared across candidates. Do not
-                    # spend the free-tier request budget retrying the same outage
-                    # for each story. Save the queue and try again next run.
-                    # Unrelated temporary media/TTS failures can advance normally.
+                    # Skip further Gemini-dependent jobs after a provider error.
+                    # Continue through the normal rotation for local clip editing.
                     reason = str(exc).lower()
                     gemini_outage = reason.startswith('gemini model ') and any(
                         term in reason for term in (
                             'http 500', 'http 502', 'http 503', 'http 504',
                             'network request failed', 'timeout'))
-                    stop = (gemini_outage or 'per-run ai allowance' in reason or 'ai request cap' in reason
-                            or 'http 429' in reason or 'quota' in reason
-                            or 'daily ' in reason)
+                    if gemini_outage:
+                        ai_unavailable = True
+                        state['last_run']['ai_pause_reason'] = job['blocker']
+                    else:
+                        stop = ('per-run ai allowance' in reason or 'ai request cap' in reason
+                                or 'http 429' in reason or 'quota' in reason or 'daily ' in reason)
                 except Hold as exc:
                     job.update(status='HOLD', blocker=str(exc))
                     stop = (str(exc).startswith(('Gemini model ', 'GEMINI_API_KEY missing',
