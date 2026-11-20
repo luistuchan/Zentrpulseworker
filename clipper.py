@@ -67,8 +67,6 @@ def discover(budget, *, api):
             continue
         is_cc = (video.get('status') or {}).get('license') == 'creativeCommon'
         bucket_key = (bucket, is_cc)
-        if re.search(r'\b(?:GTA\s*(?:6|VI)|Grand Theft Auto\s*(?:6|VI))\b', title, re.I):
-            continue
         if bucket_counts.get(bucket_key, 0) >= 3:
             continue
         bucket_counts[bucket_key] = bucket_counts.get(bucket_key, 0) + 1

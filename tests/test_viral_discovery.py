@@ -62,6 +62,21 @@ class ViralDiscoveryTests(unittest.TestCase):
         self.assertFalse(leads[1]['discovery_only'])
         self.assertEqual(leads[0]['media']['creator'], 'Creator One')
 
+    def test_gta_vi_stream_is_kept_as_a_lead(self):
+        api = API()
+        fetch = api.json_http
+
+        def gta_response(url, retries=0):
+            result = fetch(url, retries)
+            if '/videos' in url:
+                result['items'][0]['snippet']['title'] = 'GTA VI stream highlights'
+            return result
+
+        with patch.dict(os.environ, {'YOUTUBE_API_KEY': 'test-api-key'}):
+            with patch.object(api, 'json_http', side_effect=gta_response):
+                leads = clipper.discover(Budget(), api=api)
+        self.assertEqual(leads[0]['title'], 'Clip highlight: GTA VI stream highlights')
+
     def test_research_does_not_imply_reuse_permission(self):
         api = API()
         with patch.dict(os.environ, {'YOUTUBE_API_KEY': 'test-api-key'}):
