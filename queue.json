@@ -195,9 +195,9 @@
       "headline_score": 0,
       "discovered_at": "2026-11-14T06:30:43.384449+00:00",
       "id": "43fb6481ef119e61",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-14T06:30:43.883409+00:00",
-      "attempts": 3,
+      "attempts": 4,
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -217,8 +217,8 @@
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-20T17:52:59.035084+00:00",
-      "blocker": "Script planning reached its three-request limit"
+      "last_attempt_at": "2026-11-20T23:46:02.134872+00:00",
+      "blocker": "Evidence quote not found in fetched source"
     },
     "6832207212ec0e88": {
       "title": "New Genome Studies Revisit How Andes Hantavirus Spread on a Cruise Ship - Nature World News",
@@ -813,9 +813,9 @@
       "id": "0935eff17b9774de",
       "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.784978+00:00",
-      "attempts": 2,
+      "attempts": 3,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-20T17:55:09.864681+00:00",
+      "last_attempt_at": "2026-11-20T23:46:10.065869+00:00",
       "stock_reviews": {
         "43945eb85d2651442e9d3c7dd98d5a2f81050084d540ca569f0d9ce422e42b96": {
           "matches": false,
@@ -834,6 +834,7 @@
           "reason": "The image shows a European classical building with a German flag, which is completely unrelated to the Indian supernatural thriller movie Bhairadevi."
         }
       },
+      "stock_pipeline_version": 5,
       "blocker": "No matching Pixabay footage for s01: 9 hits for 'police badge'; inspect diagnostics in review artifact"
     },
     "3a44bdb665e0ff78": {
@@ -3553,11 +3554,11 @@
       "headline_score": 1,
       "discovered_at": "2026-11-17T09:02:22.391722+00:00",
       "id": "6d7895ef328280ad",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:02:24.364859+00:00",
-      "attempts": 2,
+      "attempts": 3,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-20T17:56:27.004707+00:00",
+      "last_attempt_at": "2026-11-20T23:45:57.697376+00:00",
       "stock_reviews": {
         "25092bc707e17555d5b95b9649a153c420fce1d3e2f7882ec06616c931804397": {
           "matches": false,
@@ -3570,9 +3571,13 @@
         "a260f0fa7c90edb0a84ec1e077d9ea459c130313d4e9aa08b1fb562fb904fc19": {
           "matches": false,
           "reason": "The frame shows a person reading a magazine near a subway train, which has no connection to the Telugu thriller film Naa Wife Missing, its characters, investigation, or plot."
+        },
+        "a2b7e944bc3070745d215c646746c785fd82ab7ea0c9d33bbe939713d377d234": {
+          "matches": false,
+          "reason": "The frame shows a busy public transit concourse or station with a prominent Boots logo, which is unrelated to the plot of the Telugu thriller Naa Wife Missing."
         }
       },
-      "blocker": "Stock footage review allowance reached for this draft; saved progress"
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'police station'; inspect diagnostics in review artifact"
     },
     "0945926769a2e28b": {
       "title": "Discover all the heavy metal bands nominated for the 2027 Grammy Awards - Chaoszine",
@@ -5569,9 +5574,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T02:11:09.395097+00:00",
       "id": "d1b5a00fb247beb6",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T02:11:10.121662+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "1cedc6665750457a": {
       "title": "'MOM, DAD, YOUR SON IS OFFICIALLY A GRAMMYS NOMINATED SONGWRITER AND PRODUCER' 😭 Singer-songwriter Jeremy Glinoga, who wrote and produced BINI's \"Unang Kilig,\" turned emotional as the track was nominated for Best Asian Pop Music - Facebook",
@@ -5722,9 +5728,13 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T09:57:00.583271+00:00",
       "id": "9a19041fc49fe284",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-19T09:57:04.823925+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T23:46:34.130621+00:00",
+      "stock_reviews": {},
+      "blocker": "AI request cap reached; job saved for the next Pacific day"
     },
     "15beb66b0697d5a4": {
       "title": "Jaja Bojz unveil \"Mare\" and a new video from their punk - KarloBag.eu",
@@ -7135,14 +7145,167 @@
       "status": "QUEUED",
       "created_at": "2026-11-20T17:52:59.019903+00:00",
       "attempts": 0
+    },
+    "f5ae13ffcdc06dfd": {
+      "title": "Overturned boat carrying mourners to funeral kills at least four in Nigeria",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/20/overturned-boat-carrying-mourners-to-funeral-kills-at-least-four-in-nigeria?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T23:36:36+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-20T23:45:51.108788+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "f5ae13ffcdc06dfd",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T23:45:57.290099+00:00",
+      "attempts": 0
+    },
+    "689651dbee17ac86": {
+      "title": "Freewheeling Trump Promotes Data Centers, Asia Trip and His Veto Power - The New York Times",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMickFVX3lxTFBmTEh2ZFRVUmZod25NaTdtQTlYYmpKYmd6T2pqMEhKTWJSdC1BT1hOMDMzV0k5bUw2RDYxS3EyZ1BjVmtOVWZ2UTRqSGVhVFMtSDc2bWkwQXZaSWo4SVoxNTRma25wVGJnSmVhNzhlYVF1dw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T22:07:12+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T23:45:55.987947+00:00",
+      "id": "689651dbee17ac86",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T23:45:57.336144+00:00",
+      "attempts": 0
+    },
+    "5e75d4189ed8faf1": {
+      "title": "A new Nepal, an old neighbour - Balendra Shah's India test",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c6jre8xd83qgo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T23:28:17+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-20T23:45:50.659757+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "5e75d4189ed8faf1",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T23:45:57.365259+00:00",
+      "attempts": 0
+    },
+    "e14c923db9788adc": {
+      "title": "Rahul Gandhi backs strong India-Israel ties despite Gaza war",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/video/newsfeed/2026/11/20/rahul-gandhi-backs-strong-india-israel-ties-despite-gaza-war?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T23:20:50+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-20T23:45:51.142261+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "e14c923db9788adc",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T23:45:57.397728+00:00",
+      "attempts": 0
+    },
+    "e086367841debbc6": {
+      "title": "New Caravan of About 300 Migrants Crosses Into Southern Mexico - U.S. News & World Report",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxPN3dNLUJlYkYyYjJObl91eHJQN2x2Wmo5VDNNaFBHNWhVSWh1S1pIby1jYkQ3OEZfQnlXMUxyM3BJZ0FsZ2xkUnhkd2VwWXBkRzBSbXlLbkVPX1RubkhqYmQ1TTA1UGZQSE9NZm15aVRkNm1jUDRqMXltMXRBNDlManVSajZHcGtDWXc5TmpTbzNuNk1LRGpqVDQzcmhWZ2w5dWJUWXBmREM2d2I3cDBZV2RqWUo0UDg?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T21:51:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T23:45:56.784977+00:00",
+      "id": "e086367841debbc6",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T23:45:57.441102+00:00",
+      "attempts": 0
+    },
+    "1433f8dd530f314b": {
+      "title": "Second federal judge blocks construction of Trump's memorial arch - PBS",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMipAFBVV95cUxPSDBKanVYMzh6TzJSX0F6clVGUmswbXN6cEJMeEpfdEV3ZXdKSEgwUUFrbFhFTV9taXhQUFJ2V096MW1kOWEyNkNJcjRmTGYyYWtwcEtFbVJhVGwzMGcyYXZac0hveDc2NGtCM3cwMmhhVVpQRWdEMDVGODYxRVpvMjBzMThxVnVPNTNPMWc0NmVGUDdUeHNpbG5NbnJvSm8zZklWMA?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T21:28:49+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T23:45:56.622456+00:00",
+      "id": "1433f8dd530f314b",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T23:45:57.474400+00:00",
+      "attempts": 0
+    },
+    "0f7da0dc3477c643": {
+      "title": "Joe Russo on how the story for ‘Avengers: Doomsday’ came together: “What would happen if you left the cameras rolling at the end of ‘Endgame’? What’s the very next scene that happens?” | Industry Days at @DohaFilm - Facebook",
+      "category": "movies",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNdnVhX05qa29ramFUNHBQUUd4d3J3ZFBfU0Vtb3JzeXExRFVta2JmRXNGSVEtalRibjlWcjBKTHlidnhfb0JqMXI3TmwxakJQb0x2WC0wcm1kQkNKdW96R0NFUXNSUkpLeXAwdGNtenE3c1pJNXJSOWxZNDF3X0M1RjZPV2lUSmF2Y182OTBlNExDUTN3d3Y3S3RDMlBkS3RQb2dNd05fVm40eW4xeHJ6eTRKN2hwVUpxb3VhbmUwbzRzM3JqNUhHM09RQl9MVnhaZi1wc1BR?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T23:45:52.419445+00:00",
+      "id": "0f7da0dc3477c643",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T23:45:57.570676+00:00",
+      "attempts": 0
+    },
+    "f3c07b7007996657": {
+      "title": "'GTA 6' streamers playing now: See the list. - Mashable",
+      "category": "creators",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMibEFVX3lxTFBWdjJtbzBsRW5VNWQxcTFYUU82ejNvUEY3Q211UjRXNWRfYzhGTFp3YVdkZWJnTU1qRGZTTkU2SDVWMUZXYjBoRWtZUG9VSXVoOE54YnhoX2h0NjlzUGRsbm9FTzFPUURoT0lXdA?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T23:45:52.912490+00:00",
+      "id": "f3c07b7007996657",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T23:45:57.598090+00:00",
+      "attempts": 0
+    },
+    "91358d6331e10c5a": {
+      "title": "Higgs boson | Physics, Particle Physics & Standard Model - Britannica",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiWkFVX3lxTE5paDAtRU9oNTRiSjNNSi1Fd1FZc2VwVVMyRk5PZ3hOYTU2WmRvaW1BSDlEbHhaR3NDYU9qZHgyVzUxV3dBM2xQNEJZUjNfWXVaTmNtWjJocE5hdw?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T23:45:53.694935+00:00",
+      "id": "91358d6331e10c5a",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T23:45:57.630637+00:00",
+      "attempts": 0
+    },
+    "e6a043f41a8e98f3": {
+      "title": "Mouse Study Uncovers Genetic Blueprint Explaining How Ageing Impairs Immune Defences - Bioengineer.org",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMirgFBVV95cUxPblptZ0dUS3pWbk5wbURVcUd1b0E2TllQbHhCSnRhaHpQYWtKYmNlWnZlMkdlSFdWSHd5NDlDVExmaDFLTG1vOHNrbFdkSmo4M3p0Mm13dEZwU0dILXRaWDAwZVZBNUNfMUJnQVRUdkhRZGxNbEJYRUZ5S3VwWlZBWDRheWs3VW9mbVBJWmQ2enZaRXhzLWtTZksxektSOERPM3duX0t0QWkyd1JDcmc?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T23:45:53.842486+00:00",
+      "id": "e6a043f41a8e98f3",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T23:45:57.681140+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-20",
     "reset_timezone": "America/Los_Angeles",
     "youtube": 18,
-    "ai": 88,
-    "pixabay": 15
+    "ai": 96,
+    "pixabay": 16
   },
   "content_cycle_index": 10,
   "content_batch": {
@@ -7154,23 +7317,20 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-20T17:52:59.020656+00:00",
+    "started_at": "2026-11-20T23:45:57.681726+00:00",
     "attempted_ids": [
-      "43fb6481ef119e61",
-      "2f9dfe13e5fdc186",
-      "6832207212ec0e88",
-      "0935eff17b9774de",
       "6d7895ef328280ad",
-      "919b6ed7a75ad74f",
-      "cd55fa9344c3d998"
+      "43fb6481ef119e61",
+      "0935eff17b9774de",
+      "9a19041fc49fe284"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "pause_reason": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted",
-    "finished_at": "2026-11-20T18:00:50.552125+00:00",
-    "attempted": 7,
+    "pause_reason": "AI request cap reached; job saved for the next Pacific day",
+    "finished_at": "2026-11-20T23:47:09.035316+00:00",
+    "attempted": 4,
     "completed": 0,
-    "gemini_request_attempts": 30
+    "gemini_request_attempts": 8
   },
   "telegram_deliveries": {
     "2d869bc60f3da658c9197b934c45dfddb3c797a7bc940732029e92f431cf90f2": {
