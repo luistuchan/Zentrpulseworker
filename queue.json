@@ -4066,9 +4066,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T23:09:12.082765+00:00",
       "id": "808be5cc9374feea",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T23:09:13.910544+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "c4184f63a195aa53": {
       "title": "'It was really scary': Mother describes sheltering during Russia strikes on Kyiv bridge",
@@ -4319,9 +4320,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T02:24:01.699589+00:00",
       "id": "d5d939f35dd2d9aa",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T02:24:01.962033+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "d7989de8e215e2a5": {
       "title": "Nvidia says it won't reinstate Huang as firm reports bumper results",
@@ -4568,9 +4570,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T08:21:16.647603+00:00",
       "id": "a6b0d105766c1d12",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T08:21:18.866911+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "bbfb93f4d2638ae1": {
       "title": "Rubio says US not 'under systemic attack' after series of tech outages",
@@ -4710,9 +4713,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T08:24:50.776035+00:00",
       "id": "4ec67aa65a5f54e1",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T08:24:53.131179+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "b4cc66f4ea7d7f18": {
       "title": "Indian woman gang-raped while pregnant in 2002 'heartbroken' after two perpetrators bailed",
@@ -6272,6 +6276,129 @@
       "status": "QUEUED",
       "created_at": "2026-11-19T21:45:15.953548+00:00",
       "attempts": 0
+    },
+    "62d4c137946c9dd0": {
+      "title": "Meta rethinks 2030 climate goals as AI data centres drive emissions up",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/20/meta-rethinks-2030-climate-goals-as-ai-data-centres-drive-emissions-up?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T01:29:28+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-20T02:02:52.415674+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "62d4c137946c9dd0",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T02:03:00.170787+00:00",
+      "attempts": 0
+    },
+    "acaa4f7b9b4824af": {
+      "title": "3 takeaways from Trump, Xi and Putin's historic summit - PBS",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMikAFBVV95cUxNOUxsOWdFb2pKYzNvbzR5cklRbnhFaXdMMENBek1VVVlkLVdSazdBWmxjUWI5TWxrNGIxTmFuLUZxMjRTc0k0Wk9idWxtcEZKR2xrTTRJV05oT0xkX3laSVBzcnd6aUtud085VUNyc0VwU202SkJPN1JMOEw4Rnlfa3c3dTdTc25GM2stUVBWa3DSAZYBQVVfeXFMTmR1OXdhNFBkZEdLQ1c0VXg3MFo3c0FPV0lHV2l3WWNISFZDNF9aN0VNWG02NWJxSG9ydHVZUWY5TzdmQUNwTHRtbkJ1VU5qUWZ5bFJzVG1vOURTczVLTkFkX2phaDhra0pkbER4S20wb1pIS1NBSlAxbmZ6SnpQN19nNlNpUl95RlVVdWs0Qng3M1hlX093?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T22:58:31+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T02:02:59.104788+00:00",
+      "id": "acaa4f7b9b4824af",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T02:03:00.215824+00:00",
+      "attempts": 0
+    },
+    "d167fb6ddf11fdfa": {
+      "title": "Democrats say law firm gave $11.8m in free services to Trump administration",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/20/democrats-say-law-firm-gave-11-8m-worth-of-service-to-trump-administration?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T01:10:06+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-20T02:02:52.475656+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "d167fb6ddf11fdfa",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T02:03:00.271147+00:00",
+      "attempts": 0
+    },
+    "adb008b7ab40e766": {
+      "title": "‘Completely messed up everything’: Malawi’s fuel crisis causes chaos",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/20/completely-messed-up-everything-malawis-fuel-crisis-causes-chaos?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T01:06:15+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-20T02:02:52.531363+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "adb008b7ab40e766",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T02:03:00.324265+00:00",
+      "attempts": 0
+    },
+    "35cad6c9aa8d9b27": {
+      "title": "Judge issues 14-day extension of order blocking Trump's triumphal arch construction - PBS",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMivAFBVV95cUxNa2swT0h6dmQxanUyZDFDVjN2aXRDTXoxX25TWW1DbGdNMDVva2g3U2JqMVJ5Rlo0TjBDcUtfUjMySk5yVDZUTFJIYkk1V2lUdTZyaE0zQWlISU5hd0tQUW05ZEIyMnZlMWl5ZW5ERzhJT3ZsNG5GVVNvY24tQ1dlUzZFTHA4c1UxQWR1TTI1UEZuTmhqLVkxcVNfNkxVUGx3SmtkSWVaSUhnemo5cjJ5bVVSaExyU0ZwUTdRSdIBwgFBVV95cUxQd0o0ejhTTGRZU0NjMkxpbFdOS1BVWEV3ZDY3NEg0WWEwZEs2M3FZZVVVZHlfdExoRDhDbnVaU0w1LVJDNnJuTEFrUVNDN09TYjZJeml3SzlhMTZJdXFQTC1YSkVLZklQcXZpVThTZF9EcjJTVWVmOG1uVC1FdnZtNHBCWjVjTlNVMFk1X1U1QXQxMDZ4RG03TXV3YTdRZ0l4Qm1NYks1Mlc3WjFZSXhHUzhibjltZnJIYnI3MUNib1lSZw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T22:39:21+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T02:02:58.535043+00:00",
+      "id": "35cad6c9aa8d9b27",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T02:03:00.388979+00:00",
+      "attempts": 0
+    },
+    "8d9d7b230d82a457": {
+      "title": "Kushner says he believes Russia is ‘com­fortable’ with NATO-like security guar­antees for Ukraine - Spectrum News",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMipAFBVV95cUxPcHl3b0tkdHVaZm1NUGw4VTh2d0FkWUxVZGc0Wmp0X0dZN0taWDJvc0gtUnJSb1JIU1R5TTI0U0ZOVGY5aTkxZWxUWmRGWVU3V0k2NWlza0RWQmpfdG0waFJwUWlFbWlraFBsajd1U0tqWlZXcVZuSWxMSDB5WVRLMkZScldUM2NPTnNFVzdiV1pPellWc1N3NlNlajF0QmN3SEFLRw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T22:01:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T02:02:58.626440+00:00",
+      "id": "8d9d7b230d82a457",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T02:03:00.472150+00:00",
+      "attempts": 0
+    },
+    "b8c19b18f273bd37": {
+      "title": "Joshua Henry is ready to have ‘The Conversation’ after his Tony-winning ‘Ragtime’ role - Gold Derby",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMipgFBVV95cUxPd19NXzRGem1XVlNJaUE3SWV3U3phM19kd1VTZ2xpbVVmVUFVX3pMQVRrNU1DbDBQS0xDbUYxdWsyb2NOc3FSOWlULWsxaWhvT2MwT2diUDBGbm5TNkwyUVZmTUYxVkV5czJ6ck5BUzVGLXBNV3VSMkdnNEF3Z3FpLTRKVXNneWxFWTBEXzd5UFJxVV9TTjYycks4ZU1Hc3praXNPYm9R?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T02:02:57.340873+00:00",
+      "id": "b8c19b18f273bd37",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T02:03:00.549572+00:00",
+      "attempts": 0
+    },
+    "25de28f001f6b545": {
+      "title": "Best studio headphones 2026: I tested 15 cans for mixing & mastering - MusicRadar",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimgFBVV95cUxQeUI0OUREcFVYXzc1dVJJSlg0WWdJalNmaWxwRXZOYkxFYnFqWEJpNUR0RUNKcjdLWVZPLTJRVmVON3c1Z1FIeElTQ3Q2bVQ2Y1lvekFYcjlOaTRLc0swaDVNTkhzVmYydGZGN1hzNE42N0F3a1hUWTNwbk9ZbHpMcmFoV2tzWW44R29CMzkxZmg4V3Q4ODQ0ajZR?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T02:02:57.433819+00:00",
+      "id": "25de28f001f6b545",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T02:03:00.611024+00:00",
+      "attempts": 0
     }
   },
   "budget": {
@@ -6296,11 +6423,11 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-19T21:45:15.954469+00:00",
+    "started_at": "2026-11-20T02:03:00.612046+00:00",
     "attempted_ids": [],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "finished_at": "2026-11-19T21:45:15.980558+00:00",
+    "finished_at": "2026-11-20T02:03:00.631262+00:00",
     "attempted": 0,
     "completed": 0,
     "gemini_request_attempts": 0
