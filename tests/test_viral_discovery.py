@@ -10,10 +10,12 @@ import clipper
 class Budget:
     def __init__(self):
         self.calls = 0
+        self.counts = {}
 
     def take(self, name):
         assert name == 'youtube'
         self.calls += 1
+        self.counts[name] = self.calls
         return True
 
 

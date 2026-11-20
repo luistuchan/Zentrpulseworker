@@ -482,7 +482,9 @@ def ai(prompt, budget, image_path=None, response_schema=None, request_allowed=No
         if request_allowed is not None and not request_allowed():
             raise Wait(allowance_error)
         if not budget.take('ai'):
-            raise Wait('AI request cap reached; job saved for next run')
+            if budget.counts.get('ai', 0) >= int(os.getenv('MAX_AI_CALLS', '96')):
+                raise Wait('AI request cap reached; job saved for the next Pacific day')
+            raise Wait('Per-run AI allowance reached; job saved for the next run')
         try:
             response = json_http('https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent',
                                  payload={'contents': [{'parts': parts}], 'generationConfig': config},
@@ -1783,7 +1785,7 @@ def produce_batch(state, budget, target):
                         term in reason for term in (
                             'http 500', 'http 502', 'http 503', 'http 504',
                             'network request failed', 'timeout'))
-                    stop = (gemini_outage or 'ai request cap' in reason
+                    stop = (gemini_outage or 'per-run ai allowance' in reason or 'ai request cap' in reason
                             or 'http 429' in reason or 'quota' in reason
                             or 'daily ' in reason)
                 except Hold as exc:
