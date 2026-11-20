@@ -197,7 +197,7 @@
       "id": "43fb6481ef119e61",
       "status": "WAITING",
       "created_at": "2026-11-14T06:30:43.883409+00:00",
-      "attempts": 2,
+      "attempts": 3,
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [
@@ -216,9 +216,9 @@
         ],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T17:57:05.402934+00:00",
-      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T17:52:59.035084+00:00",
+      "blocker": "Script planning reached its three-request limit"
     },
     "6832207212ec0e88": {
       "title": "New Genome Studies Revisit How Andes Hantavirus Spread on a Cruise Ship - Nature World News",
@@ -230,16 +230,17 @@
       "headline_score": 0,
       "discovered_at": "2026-11-14T06:30:43.386524+00:00",
       "id": "6832207212ec0e88",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-14T06:30:43.884890+00:00",
-      "attempts": 2,
+      "attempts": 3,
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-17T17:57:55.458762+00:00"
+      "last_attempt_at": "2026-11-20T17:54:09.313240+00:00",
+      "blocker": "Script planning reached its three-request limit"
     },
     "15ed27b00a04aaa4": {
       "title": "The mystery of how hair knows where to grow may finally be solved - Science Daily",
@@ -810,11 +811,30 @@
       "headline_score": 1,
       "discovered_at": "2026-11-16T10:36:11.777709+00:00",
       "id": "0935eff17b9774de",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.784978+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-17T17:58:19.325434+00:00"
+      "last_attempt_at": "2026-11-20T17:55:09.864681+00:00",
+      "stock_reviews": {
+        "43945eb85d2651442e9d3c7dd98d5a2f81050084d540ca569f0d9ce422e42b96": {
+          "matches": false,
+          "reason": "The frame shows a boat on the water, which has no connection to the supernatural themes, police investigation, murder, or revenge in the movie Bhairadevi."
+        },
+        "59af757d8015a264093197080437fbc667334104e80507114642a421fe567d32": {
+          "matches": false,
+          "reason": "The frame shows a sunny coastal road with a beach and clear blue sky, which is generic travel footage and does not relate to the dark, supernatural thriller theme of Bhairadevi."
+        },
+        "f93eed6745b7a1ccff139ac00e80435c8312a532bbf53cc148816d06e2b83ae1": {
+          "matches": false,
+          "reason": "The image shows a boat cruising on a lake, which is completely generic and unrelated to the specific narrative of the horror/thriller video about Bhairadevi, police, and supernatural revenge."
+        },
+        "51b8dde7757f68dd03b88d731a8b60491bdfe3d0638ba196669b78c74b411d78": {
+          "matches": false,
+          "reason": "The image shows a European classical building with a German flag, which is completely unrelated to the Indian supernatural thriller movie Bhairadevi."
+        }
+      },
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'police badge'; inspect diagnostics in review artifact"
     },
     "3a44bdb665e0ff78": {
       "title": "Hair Relaxer Lawsuit Settlement | November 2026 Litigation Update - Lawsuit Information Center",
@@ -2695,12 +2715,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T05:29:33.773429+00:00",
       "id": "2f9dfe13e5fdc186",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-17T05:29:36.191482+00:00",
-      "attempts": 1,
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T17:58:48.223424+00:00",
-      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
+      "attempts": 2,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T17:53:43.398398+00:00",
+      "blocker": "Evidence quote not found in fetched source"
     },
     "4861c924d73d37f4": {
       "title": "Folk music - Performance, Characteristics, Traditions - Britannica",
@@ -3533,11 +3553,26 @@
       "headline_score": 1,
       "discovered_at": "2026-11-17T09:02:22.391722+00:00",
       "id": "6d7895ef328280ad",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-17T09:02:24.364859+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-17T18:00:49.148102+00:00"
+      "last_attempt_at": "2026-11-20T17:56:27.004707+00:00",
+      "stock_reviews": {
+        "25092bc707e17555d5b95b9649a153c420fce1d3e2f7882ec06616c931804397": {
+          "matches": false,
+          "reason": "The image shows a subway or train tunnel, which is completely generic and unrelated to the investigation, thriller plot, or events of Naa Wife Missing."
+        },
+        "6a6d9b0cf2619c5cf41ce2c99be8168b9b048a65cd9bf799ad455fb311f489c9": {
+          "matches": false,
+          "reason": "The image shows a subway or train moving through a station, which is generic footage and does not relate to the Telugu thriller Naa Wife Missing, its characters, or plot points."
+        },
+        "a260f0fa7c90edb0a84ec1e077d9ea459c130313d4e9aa08b1fb562fb904fc19": {
+          "matches": false,
+          "reason": "The frame shows a person reading a magazine near a subway train, which has no connection to the Telugu thriller film Naa Wife Missing, its characters, investigation, or plot."
+        }
+      },
+      "blocker": "Stock footage review allowance reached for this draft; saved progress"
     },
     "0945926769a2e28b": {
       "title": "Discover all the heavy metal bands nominated for the 2027 Grammy Awards - Chaoszine",
@@ -4118,9 +4153,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T23:09:10.616575+00:00",
       "id": "919b6ed7a75ad74f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T23:09:14.017098+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T17:58:59.532575+00:00",
+      "blocker": "Script needs 6-28 scenes; received 3"
     },
     "19e66308dc50e524": {
       "title": "15 Songs Like Slayyyter’s “DANCE…” for Electroclash Fans - RouteNote",
@@ -4892,9 +4930,12 @@
       "headline_score": 1,
       "discovered_at": "2026-11-18T10:02:56.727077+00:00",
       "id": "cd55fa9344c3d998",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-18T10:03:00.385678+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T17:59:51.169832+00:00",
+      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
     },
     "6d4e80683a048896": {
       "title": "Preparing the next generation of community college presidents - EdNC",
@@ -4958,7 +4999,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T15:19:42.920327+00:00",
       "id": "654954d3df6ae37d",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-18T15:19:44.260148+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
@@ -5035,7 +5076,7 @@
           "reason": "The image shows national flags including the American and Chinese flags, which appropriately illustrates US-China diplomatic relations and high-level talks."
         }
       },
-      "blocker": "Stock footage review allowance reached for this draft; saved progress"
+      "blocker": "News candidate expired; discover a recent story"
     },
     "7a0f10e754870d32": {
       "title": "Trump shakes hands with Putin and Xi ahead of historic talks in China",
@@ -5119,12 +5160,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T15:19:42.892575+00:00",
       "id": "413b1c5898e361c5",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-18T15:19:44.398359+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-20T09:57:22.927336+00:00",
-      "blocker": "Script planning reached its three-request limit"
+      "blocker": "News candidate expired; discover a recent story"
     },
     "29ea76a72854aa5b": {
       "title": "William and Kate reflect on 'enduring' UK-India ties with Modi",
@@ -5138,7 +5179,7 @@
       "discovered_at": "2026-11-18T17:52:12.880004+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "29ea76a72854aa5b",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-18T17:52:20.713138+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
@@ -5191,7 +5232,7 @@
           "reason": "The image shows an architectural courtyard with columns and arches, which is generic footage and does not relate to Prince William and Kate's royal tour of India or their meeting with Prime Minister Narendra Modi."
         }
       },
-      "blocker": "Stock footage review allowance reached for this draft; saved progress"
+      "blocker": "News candidate expired; discover a recent story"
     },
     "ff47c3f6f8b596cd": {
       "title": "Trump, Xi and Putin Shake Hands as Leaders Gather in China - The New York Times",
@@ -5293,7 +5334,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T17:52:19.518180+00:00",
       "id": "2485fcbd2ab72e8a",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-18T17:52:21.072490+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
@@ -5370,7 +5411,7 @@
           "reason": "The image shows three men having a casual meeting by a whiteboard, which does not relate to high-level international diplomacy involving Trump, Putin, and Xi."
         }
       },
-      "blocker": "Stock footage review allowance reached for this draft; saved progress"
+      "blocker": "News candidate expired; discover a recent story"
     },
     "89971f48c87b5716": {
       "title": "Elon Musk says record spending on US midterms was 'pretty foolish'",
@@ -6956,14 +6997,152 @@
       "status": "QUEUED",
       "created_at": "2026-11-20T09:54:33.551037+00:00",
       "attempts": 0
+    },
+    "17ef4d54badc91e4": {
+      "title": "US tech sell-off continues as Anthropic tumbles after mega IPO",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/economy/2026/11/20/us-tech-sell-off-continues-as-anthropic-tumbles-after-mega-ipo?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T17:44:18+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-20T17:52:51.477612+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "17ef4d54badc91e4",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T17:52:58.602713+00:00",
+      "attempts": 0
+    },
+    "b9a044d5a3854f45": {
+      "title": "S&P 500 falls 10% from record, entering correction as AI trade unravels - Los Angeles Times",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWXJXcmFuZHNva2IyUmUwUE42bTMwUy1MSFpneFd2OGliUHdteU53bXJYQU0yUnQwQmZuV2wzaE8tTFBSQ182RURUUDFnbmw5LTR1NFpBOTVST2hRNDdxdmlqNWhydGZTbmlTMGxNbV9RbHpmcUFScmpCLU1xbTZJR2Q4bEFualU4cHVWZ3EwOHV2V2FyeEw4d2FnUmRXX0JtQ3FXRWxMSmttTWFUWktRal91LTZPOWpYdl9N?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T17:29:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T17:52:57.769456+00:00",
+      "id": "b9a044d5a3854f45",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T17:52:58.659253+00:00",
+      "attempts": 0
+    },
+    "7bd4d2635d8a8140": {
+      "title": "Anthropic shares fall after blockbuster opening as wider tech sell-off continues",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c6808ym10vzgo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T17:36:29+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-20T17:52:50.585185+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "7bd4d2635d8a8140",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T17:52:58.710254+00:00",
+      "attempts": 0
+    },
+    "3aeab8696acd576e": {
+      "title": "Protests held across Europe over wages, services, high living costs",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/20/protests-held-across-europe-over-wages-services-high-living-costs?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T17:32:32+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-20T17:52:51.521210+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "3aeab8696acd576e",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T17:52:58.751584+00:00",
+      "attempts": 0
+    },
+    "2ac3350d7ba25633": {
+      "title": "Trump to hold press conference after meeting with Xi and Putin - New Hampshire Public Radio",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMimgFBVV95cUxPSm9DSkltaDhEODRXY2FMQjNsYnFyMTJJUWdFVnk4Njdya2xPQ2pURi1ZTWlaSGtRb0JKa3ltU3o3blNKYkJia0IwT3FhY3AyUjVUd1Q4VVhjQl8yQ0ZiLVNRNFY3MXlJbUpvOTd0d0tCVUxjV3FTdmRrZ0ZLLUVWQmZqRUUwSFpScVJPLUNRa0pTdHlaeUZQckdB?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T15:00:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T17:52:57.009006+00:00",
+      "id": "2ac3350d7ba25633",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T17:52:58.808500+00:00",
+      "attempts": 0
+    },
+    "69ba3a95d49b37e9": {
+      "title": "Report: Israel, US weigh new Iran strikes 'in the short term' - Ynetnews",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiVkFVX3lxTE5WWnNaSllWZ1lJZlFFQTMzZ042TFFZRGliVTVkRVlHT20tNTZYQ0t5ODJOZkF1dlFUdDNHYmJ5VVhkX3FYTy1ZWHFOc0F2MlU3SG1OWGtn?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T13:30:45+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T17:52:56.876661+00:00",
+      "id": "69ba3a95d49b37e9",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T17:52:58.852738+00:00",
+      "attempts": 0
+    },
+    "1da5149d0585f4e8": {
+      "title": "GTA 6 has bizarre law making it illegal to be a furry as players stumble across shocking police encounter - LADbible",
+      "category": "sports",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxOaHNSbEJQc1dpemdRa3FpRVplUTdTRnJnaDU5U0dxaW9La0RrMXZKUjkxMlo5REJhR1VHRmNFa2lPMXpWUWtzQWFmZmFCWm5vVHlYTmRadHd1NGdVcFBUeFU4OTV0Z3VFVEdnUlpDS09WYURPZWRKbms2VTRSemkxZXdvX2RTVXVyYldwRDdGaVVqMmJIUGhNWUN5bHpEcThqTy1J?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T17:52:54.683697+00:00",
+      "id": "1da5149d0585f4e8",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T17:52:58.922295+00:00",
+      "attempts": 0
+    },
+    "dd58ceba15f0e1d3": {
+      "title": "Jaafar Jackson and Juliano Valdi on Bringing Michael Jackson’s Legacy to Life in ‘Michael’ - Black Girl Nerds",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitgFBVV95cUxQLXlkUUE2T3dqajdLLU1QR2l5VXlPU1BjbVV6eXJSZ1l3LXlFanRkOXBYQU5TeS16RnN2cHJ3R0RVdEhRWVdqVXFWbHAtdUFYS1h1OURqUlRIanlZYXF3aTMweTQ5cVJNN3Q3T0xIOE1HdTJfa3ItS3J6QkhRUjMxSUhrRFR5VnN6ZGJ1bVo2dXQ1a3lubGh4ZFdjSlJUNkhXWWtjWkZCWUZiLXdSMlpjVVNTUFJ1UQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T17:52:55.884457+00:00",
+      "id": "dd58ceba15f0e1d3",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T17:52:58.984949+00:00",
+      "attempts": 0
+    },
+    "73f6e4449e39e72b": {
+      "title": "Another Death Knell for the American Musical - Vulture",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMijAFBVV95cUxNS2NKeXpjbXFvMWd1Sm5aWXJQM3ZpUFA3amhGRTExVWJCV01WUnhTcnBfMVJ1V2ZMM3g5UDBaajhJTzB0dGVGeERfbXV4ZGt5OXBURWtFNHVKYnBvSXFkdlU4MEtLWmhoanoycmhMMGlxenBSU3FwNDRYSE5yT01oX21NVzhYcUktRGMxbA?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T17:52:55.967280+00:00",
+      "id": "73f6e4449e39e72b",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T17:52:59.019903+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-20",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 16,
-    "ai": 58,
-    "pixabay": 13
+    "youtube": 18,
+    "ai": 88,
+    "pixabay": 15
   },
   "content_cycle_index": 10,
   "content_batch": {
@@ -6975,28 +7154,23 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-20T09:54:33.552031+00:00",
+    "started_at": "2026-11-20T17:52:59.020656+00:00",
     "attempted_ids": [
-      "14fab6ad7464a590",
-      "654954d3df6ae37d",
-      "00b24066b3b13c3d",
-      "413b1c5898e361c5",
-      "ff47c3f6f8b596cd",
-      "f2adfe5d9c11bf55",
-      "2485fcbd2ab72e8a",
-      "debeb2aeaba4f42a",
-      "64204c485393b581"
+      "43fb6481ef119e61",
+      "2f9dfe13e5fdc186",
+      "6832207212ec0e88",
+      "0935eff17b9774de",
+      "6d7895ef328280ad",
+      "919b6ed7a75ad74f",
+      "cd55fa9344c3d998"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "categories_deferred": [
-      "sports",
-      "president"
-    ],
-    "finished_at": "2026-11-20T10:00:56.365587+00:00",
-    "attempted": 9,
+    "pause_reason": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted",
+    "finished_at": "2026-11-20T18:00:50.552125+00:00",
+    "attempted": 7,
     "completed": 0,
-    "gemini_request_attempts": 29
+    "gemini_request_attempts": 30
   },
   "telegram_deliveries": {
     "2d869bc60f3da658c9197b934c45dfddb3c797a7bc940732029e92f431cf90f2": {
