@@ -4958,9 +4958,84 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T15:19:42.920327+00:00",
       "id": "654954d3df6ae37d",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-18T15:19:44.260148+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T09:55:42.704423+00:00",
+      "youtube_visual_discovery": [
+        {
+          "id": "jT5zJOIIB8U",
+          "license": "youtube"
+        },
+        {
+          "id": "lrVz0dSPdj8",
+          "license": "youtube"
+        },
+        {
+          "id": "domOLTIKrGs",
+          "license": "youtube"
+        },
+        {
+          "id": "xAsuMpDd3zo",
+          "license": "youtube"
+        },
+        {
+          "id": "_Qx7ftaWUFE",
+          "license": "youtube"
+        },
+        {
+          "id": "5JmIzBXyICg",
+          "license": "youtube"
+        },
+        {
+          "id": "xors-BmNVNw",
+          "license": "youtube"
+        },
+        {
+          "id": "OAdrkxibjGE",
+          "license": "youtube"
+        },
+        {
+          "id": "czeguysImHA",
+          "license": "youtube"
+        },
+        {
+          "id": "3TyTpba1wr8",
+          "license": "youtube"
+        },
+        {
+          "id": "Kq2LKFMY4Lk",
+          "license": "youtube"
+        },
+        {
+          "id": "_0SYV8IzqB8",
+          "license": "youtube"
+        }
+      ],
+      "stock_reviews": {
+        "dc9926072894e99a5ccfc1c6f4f30cb311e7f9eba6fc4b593a45db67bd047e14": {
+          "matches": true,
+          "reason": "The video discusses US President Trump's arrival at an airport in Shenzhen to meet Xi Jinping, and this frame shows an airport tarmac with commercial airplanes, serving as relevant B-roll context."
+        },
+        "001fda90e21135c527f12ae59048642a6d6aee54590ddde65eaa2d04f174271c": {
+          "matches": false,
+          "reason": "The image shows a generic skyline with the Burj Khalifa in Dubai, which is unrelated to the video topic about Trump and Xi Jinping meeting in Shenzhen, China."
+        },
+        "535e8d7bba74caa4999fe5ed14158c5545d7844104df85d1c599c00eff9831c8": {
+          "matches": false,
+          "reason": "The image shows the Burj Khalifa in Dubai, which is unrelated to the video topic about Donald Trump and Xi Jinping in Shenzhen."
+        },
+        "c8422247cc58acb85cc1ac05970aa71c261d50e9a619ff97b06bf4d0c5dbf3c3": {
+          "matches": true,
+          "reason": "The frame shows a nighttime cityscape of Shenzhen where the landmark talks and diplomatic events between Trump and Xi are taking place, serving as relevant establishing B-roll for the video topic."
+        },
+        "36fd322b2b0669f9dcd9eb8330081a0f7b898f6b03dd71a01038283ed10269e6": {
+          "matches": true,
+          "reason": "The image shows national flags including the American and Chinese flags, which appropriately illustrates US-China diplomatic relations and high-level talks."
+        }
+      },
+      "blocker": "Stock footage review allowance reached for this draft; saved progress"
     },
     "7a0f10e754870d32": {
       "title": "Trump shakes hands with Putin and Xi ahead of historic talks in China",
@@ -5026,9 +5101,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T15:19:42.858781+00:00",
       "id": "00b24066b3b13c3d",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T15:19:44.368394+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T09:56:51.047436+00:00",
+      "blocker": "Editor rejected candidate: The provided sources do not independently corroborate the events across two distinct domains with sufficient verifiable multi-source independence for a standard news update under e"
     },
     "413b1c5898e361c5": {
       "title": "U.S. Strikes Qeshm Island as Vance Says Iran Won’t Become ‘Forever War’ - Time Magazine",
@@ -5041,9 +5119,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T15:19:42.892575+00:00",
       "id": "413b1c5898e361c5",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-18T15:19:44.398359+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T09:57:22.927336+00:00",
+      "blocker": "Script planning reached its three-request limit"
     },
     "29ea76a72854aa5b": {
       "title": "William and Kate reflect on 'enduring' UK-India ties with Modi",
@@ -5123,9 +5204,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T17:52:20.518982+00:00",
       "id": "ff47c3f6f8b596cd",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T17:52:20.765260+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T09:57:56.765698+00:00",
+      "blocker": "Insufficient evidence sources for this content type"
     },
     "d18f1cb512bcd151": {
       "title": "Inside the old gas pipeline where Ukraine is fighting an underground war with Russia",
@@ -5191,9 +5275,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T17:52:19.429733+00:00",
       "id": "f2adfe5d9c11bf55",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T17:52:20.994201+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T09:58:28.365870+00:00",
+      "blocker": "Need 2 readable source URL(s); retrieved 1. Service HTTP 403; no paid fallback attempted"
     },
     "2485fcbd2ab72e8a": {
       "title": "Trump plans to meet separately with Putin on his China trip in addition to their 3-way talks with Xi - WBRC 6 News",
@@ -5206,9 +5293,84 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T17:52:19.518180+00:00",
       "id": "2485fcbd2ab72e8a",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-18T17:52:21.072490+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T09:58:53.075619+00:00",
+      "youtube_visual_discovery": [
+        {
+          "id": "IS8Et_KOPxI",
+          "license": "youtube"
+        },
+        {
+          "id": "WTwiKU3yB4M",
+          "license": "youtube"
+        },
+        {
+          "id": "7feXbQR8egs",
+          "license": "youtube"
+        },
+        {
+          "id": "K21xa6mCAZA",
+          "license": "youtube"
+        },
+        {
+          "id": "hwAmfXyYgI4",
+          "license": "youtube"
+        },
+        {
+          "id": "uSC61qGlXnY",
+          "license": "youtube"
+        },
+        {
+          "id": "zrGMmGXGg0E",
+          "license": "youtube"
+        },
+        {
+          "id": "VKg4IzhT7f4",
+          "license": "youtube"
+        },
+        {
+          "id": "D6f43ubYaSk",
+          "license": "youtube"
+        },
+        {
+          "id": "WgXTffW65h4",
+          "license": "youtube"
+        },
+        {
+          "id": "dF4zzNaz0v4",
+          "license": "youtube"
+        },
+        {
+          "id": "MM0h98G7FFo",
+          "license": "youtube"
+        }
+      ],
+      "stock_reviews": {
+        "a6b18a9c15d7af3c22983dfeee55b658417affd61a9b46389e25d39d4a30e656": {
+          "matches": true,
+          "reason": "The frame shows a cityscape at night, which serves as suitable generic B-roll for a news story about international diplomatic meetings and trips to foreign countries like China."
+        },
+        "c857ce8e21af50d4740e931bd25ea6a45f45123dbbaf2f03d1f318d1e8ade6c0": {
+          "matches": false,
+          "reason": "The frame shows an empty modern armchair and does not illustrate the political meeting, diplomatic talks, or any of the key figures mentioned in the video context."
+        },
+        "069625bb1a7348feb34279cc6af0cf457729cd63ea7194898b6f70437e2ff5ed": {
+          "matches": false,
+          "reason": "The frame shows generic office workers or students with laptops and does not depict political figures, summits, or international diplomacy relevant to the video topic."
+        },
+        "30021ed668b79d0cdfdeebd02e7d011f02b5e73d755e19e4530d82ea4e5ade0f": {
+          "matches": false,
+          "reason": "The image shows a generic, heavily blurred group of people in an office setting, which does not specifically illustrate the diplomatic meetings between Trump, Putin, and Xi."
+        },
+        "079c8ed30877fbc750cb7a68b88dcfe8ceca16bbbbf0fd57e54afdbb3f35b280": {
+          "matches": false,
+          "reason": "The image shows three men having a casual meeting by a whiteboard, which does not relate to high-level international diplomacy involving Trump, Putin, and Xi."
+        }
+      },
+      "blocker": "Stock footage review allowance reached for this draft; saved progress"
     },
     "89971f48c87b5716": {
       "title": "Elon Musk says record spending on US midterms was 'pretty foolish'",
@@ -5240,9 +5402,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T02:11:08.875366+00:00",
       "id": "debeb2aeaba4f42a",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T02:11:09.951711+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T09:59:42.153274+00:00",
+      "blocker": "Need 2 readable source URL(s); retrieved 1. No relevant publisher articles found"
     },
     "5f9b3d0f81a56b8d": {
       "title": "Hegseth unveils new US-Venezuela military deal",
@@ -5275,7 +5440,7 @@
       "discovered_at": "2026-11-19T02:11:02.056062+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "d5f9272e54c044cc",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-19T02:11:10.015987+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
@@ -5332,7 +5497,7 @@
           "reason": "The frame depicts an interrogation or interview setting with an inmate in an orange jumpsuit, which is meaningfully related to the video topic about Jeffrey Epstein's death in custody and forensic investigations."
         }
       },
-      "blocker": "No matching Pixabay footage for s02: 9 hits for 'medical records'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 5
     },
     "64204c485393b581": {
       "title": "Palm Beach County pastor convicted of US charges related to assassination of Haitian President Jovenel Moïse - WPBF",
@@ -5345,9 +5510,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T02:11:09.338998+00:00",
       "id": "64204c485393b581",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T02:11:10.073230+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T10:00:03.990351+00:00",
+      "blocker": "Editor rejected candidate: The supplied sources discuss two completely unrelated topics (a Florida pastor convicted in the assassination of Haiti's president, and severe weather/flooding in Palm Beach County"
     },
     "d1b5a00fb247beb6": {
       "title": "US-Haitian Pastor Convicted Over Plot to Kill Haiti's Last President - U.S. News & World Report",
@@ -6161,9 +6329,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T21:27:42.171742+00:00",
       "id": "14fab6ad7464a590",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-19T21:27:46.235583+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T09:54:33.570423+00:00",
+      "blocker": "Script planning reached its three-request limit"
     },
     "0f5a985a1dfe0671": {
       "title": "Fiona the hippo dies after swallowing a hat at Cincinnati Zoo",
@@ -6692,18 +6863,111 @@
       "status": "QUEUED",
       "created_at": "2026-11-20T09:45:00.577224+00:00",
       "attempts": 0
+    },
+    "4984a29b941a3e35": {
+      "title": "El Salvador’s Bukele seeks third term after constitution change",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/20/el-salvadors-bukele-seeks-third-term-after-constitution-change?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T08:21:34+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-20T09:54:24.689576+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "4984a29b941a3e35",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T09:54:33.164550+00:00",
+      "attempts": 0
+    },
+    "9dfde014642d1529": {
+      "title": "US President Trump Announces $300 Billion Partnership with Reliance to Build First Major US Refinery in 50 Years - News On AIR",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi0wFBVV95cUxOZUMzY0I3MDZ0bFU4SkI3RzlIVHlUVFBWNElBN25NY19pWl90akJwSU5iWlpKS3k5UzZrdWFQMldQZTk0ZU9KdXk2VE1faXQ1UVItdmdJRFhjcV9mZlJsTF9uMlVJNzFDekdEM21EVXhORzFWNGs0TG94Q1V0WmZqSDBuZmdmSkdiY0RRUFpWdGF4MmxwRkVpbXZEOXdHWmNodHhPb3VHZWlvWjRYcE4yREdZbDIwaTJFM0VCWVotZ0NXR3NGdmd6MXJTbXdKY2lNbFhr?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T00:40:51+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T09:54:31.791184+00:00",
+      "id": "9dfde014642d1529",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T09:54:33.264875+00:00",
+      "attempts": 0
+    },
+    "b13337edf20d2cfb": {
+      "title": "US robbery suspects charged over alleged $22M train heist spree",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/video/newsfeed/2026/11/20/us-robbery-suspects-charged-over-alleged-22m-train-heist-spree?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T07:56:30+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-20T09:54:24.745876+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "b13337edf20d2cfb",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T09:54:33.318767+00:00",
+      "attempts": 0
+    },
+    "0da11aca523272e0": {
+      "title": "Islam set to be the largest religion by 2035: Where will most Muslims live?",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/20/islam-set-to-be-the-largest-religion-by-2035-where-will-most-muslims-live?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T07:56:03+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-20T09:54:24.810117+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "0da11aca523272e0",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T09:54:33.380913+00:00",
+      "attempts": 0
+    },
+    "b8b88c0cc7004537": {
+      "title": "Trump China trip: Iran and Ukraine not in 'peace declaration' and more takeaways - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPc0NBZjdGT2pGQjQ2anhpUUJBRXpid2xkUGt3c2hjb2JUUzlxNnUyN1BrNUtGZmVmXzJwb0tBTktTcjZfSEtoQnpfWks3c19KdVozX3p1VktwTTRpRHNTeUg4ZHA1VGVEWVRvc2NBaE5yNy1QUC1IRHpyMkxQQlpFRE55WTBQVXVUa0pDRTh0MzlTTmRfRGU4ZzRzMVhjMTRtcEN4Q3REM2LSAa4BQVVfeXFMUDlfZHh2ck1hVUwwdTVYckR3V2JTdVJsdXdMd3ZMODNvaEg1TWUwVm9TMHRvNTYxUnRrQUZnR2ktV3M3YjNjZXE1bm1uLTdXNDZKbWtpQUpMTWVCOVpxSFAzcHlBRGN5M2s1ajdLLUVJTG5sNVc4RHBJSHozM19pOWcxZW8tZER3cTM2dWQ1XzZoaXhxSlVVTGZvYmpxYUxoeWc4bUx0a3hoLV9mVTJn?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T00:19:05+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T09:54:30.732057+00:00",
+      "id": "b8b88c0cc7004537",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T09:54:33.478172+00:00",
+      "attempts": 0
+    },
+    "7e71afb6307dd21c": {
+      "title": "The US didn’t have a strong plan for the Shenzhen summit. It showed. - Atlantic Council",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMirgFBVV95cUxONVJFYnBRRC1TaDdFSU9mQkhaQndYM2twRFVNT04zSklHWW5WRG9Qc19nbDZjUF9Kb0k4MWktSXoxOFhLU0dXU0NSdnFBbElheFhHNHdDelZFSUZJQ0hjM0VkNEVDUjY1YzNBZHBoeDJkZ1JKWWxvQUpaeURnbHNNLVZGcjF5SXFVZkdZQWlZRHV4LXBCem11OVN5emstQlhRbnRRX0xlOE9rR2hnbVE?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-19T22:46:35+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T09:54:29.929040+00:00",
+      "id": "7e71afb6307dd21c",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T09:54:33.551037+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-20",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 8,
-    "ai": 29,
-    "pixabay": 5
+    "youtube": 16,
+    "ai": 58,
+    "pixabay": 13
   },
-  "content_cycle_index": 8,
+  "content_cycle_index": 10,
   "content_batch": {
-    "category": "sports",
+    "category": "true_events",
     "completed": 0,
     "story_keys": [],
     "media_hashes": [],
@@ -6711,24 +6975,25 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-20T09:45:00.578268+00:00",
+    "started_at": "2026-11-20T09:54:33.552031+00:00",
     "attempted_ids": [
-      "1398d274efe695a6",
-      "7a0f10e754870d32",
-      "b0b25096a3323a8a",
-      "29ea76a72854aa5b",
-      "d18f1cb512bcd151",
-      "d0e534835d37ac75",
-      "89971f48c87b5716",
-      "5f9b3d0f81a56b8d",
-      "d5f9272e54c044cc"
+      "14fab6ad7464a590",
+      "654954d3df6ae37d",
+      "00b24066b3b13c3d",
+      "413b1c5898e361c5",
+      "ff47c3f6f8b596cd",
+      "f2adfe5d9c11bf55",
+      "2485fcbd2ab72e8a",
+      "debeb2aeaba4f42a",
+      "64204c485393b581"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "categories_deferred": [
-      "world_news"
+      "sports",
+      "president"
     ],
-    "finished_at": "2026-11-20T09:49:59.637262+00:00",
+    "finished_at": "2026-11-20T10:00:56.365587+00:00",
     "attempted": 9,
     "completed": 0,
     "gemini_request_attempts": 29
