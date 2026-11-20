@@ -482,7 +482,9 @@ def ai(prompt, budget, image_path=None, response_schema=None, request_allowed=No
         if request_allowed is not None and not request_allowed():
             raise Wait(allowance_error)
         if not budget.take('ai'):
-            raise Wait('AI request cap reached; job saved for next run')
+            if budget.counts.get('ai', 0) >= int(os.getenv('MAX_AI_CALLS', '96')):
+                raise Wait('AI request cap reached; job saved for the next Pacific day')
+            raise Wait('Per-run AI allowance reached; job saved for the next run')
         try:
             response = json_http('https://generativelanguage.googleapis.com/v1beta/models/' + model + ':generateContent',
                                  payload={'contents': [{'parts': parts}], 'generationConfig': config},
@@ -1674,7 +1676,9 @@ def current_batch(state, excluded=()):
         if 'custom' not in eligible or 'custom' in excluded:
             return None
         category = 'custom'
-    batch = {'category': category, 'completed': 0, 'story_keys': [], 'media_hashes': [], 'source_urls': []}
+    batch = state.get('deferred_content_batches', {}).pop(category, None)
+    if batch is None:
+        batch = {'category': category, 'completed': 0, 'story_keys': [], 'media_hashes': [], 'source_urls': []}
     state['content_batch'] = batch
     return batch
 
@@ -1783,7 +1787,7 @@ def produce_batch(state, budget, target):
                         term in reason for term in (
                             'http 500', 'http 502', 'http 503', 'http 504',
                             'network request failed', 'timeout'))
-                    stop = (gemini_outage or 'ai request cap' in reason
+                    stop = (gemini_outage or 'per-run ai allowance' in reason or 'ai request cap' in reason
                             or 'http 429' in reason or 'quota' in reason
                             or 'daily ' in reason)
                 except Hold as exc:
@@ -1802,11 +1806,12 @@ def produce_batch(state, budget, target):
                     state['last_run']['pause_reason'] = job['blocker']
                     break
 
-        # A working category keeps its three-story batch across runs.
-        if (batch['completed'] > 0 or len(completed) > completed_before
-                or state['last_run'].get('pause_reason')):
+        if len(completed) > completed_before or state['last_run'].get('pause_reason'):
             break
-        # No video from this category: try the next eligible category now,
+        if batch['completed'] > 0:
+            state.setdefault('deferred_content_batches', {})[batch['category']] = batch
+            atomic_json(STATE / 'queue.json', state)
+        # No new video from this category: try the next eligible category now,
         # but do not exhaust time/attempt budgets or retry a category twice.
         deferred.add(batch['category'])
         state['last_run'].setdefault('categories_deferred', []).append(batch['category'])

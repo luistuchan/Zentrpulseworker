@@ -29,6 +29,8 @@ def discover(budget, *, api):
                 ('entertainment_releases', 'viral creator reaction unexpected moment')]
     candidates_by_id = {}
     for bucket, query in searches:
+        if budget.counts.get('youtube', 0) + 2 > int(os.getenv('MAX_YOUTUBE_SEARCHES', '18')):
+            break
         if not budget.take('youtube'):
             break
         params = urllib.parse.urlencode({'key': key, 'part': 'snippet', 'type': 'video',
@@ -61,12 +63,13 @@ def discover(budget, *, api):
         video_id = video.get('id', '')
         bucket = candidates_by_id.get(video_id, 'creators')
         title = snippet.get('title', video_id)
-        if re.search(r'\b(?:GTA\s*(?:6|VI)|Grand Theft Auto\s*(?:6|VI))\b', title, re.I):
+        if snippet.get('liveBroadcastContent') in ('live', 'upcoming'):
             continue
-        if bucket_counts.get(bucket, 0) >= 3:
-            continue
-        bucket_counts[bucket] = bucket_counts.get(bucket, 0) + 1
         is_cc = (video.get('status') or {}).get('license') == 'creativeCommon'
+        bucket_key = (bucket, is_cc)
+        if bucket_counts.get(bucket_key, 0) >= 3:
+            continue
+        bucket_counts[bucket_key] = bucket_counts.get(bucket_key, 0) + 1
         url = 'https://www.youtube.com/watch?v=' + video_id
         stats = video.get('statistics') or {}
         media = {'source_url': url,
