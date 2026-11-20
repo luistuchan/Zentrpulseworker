@@ -27,6 +27,30 @@ def fixture():
 
 
 class WorkerTests(unittest.TestCase):
+    def test_stalled_news_batch_allows_clipper_with_ai_cap_exhausted(self):
+        news_batch = {'category': 'world_news', 'completed': 1, 'story_keys': ['prior-news']}
+        state = {
+            'content_batch': news_batch,
+            'jobs': {
+                'news': {'id': 'news', 'title': 'Waiting news', 'category': 'world_news',
+                         'status': 'WAITING', 'blocker': 'AI request cap reached'},
+                'clip': {'id': 'clip', 'title': 'Stream highlight', 'category': 'clipper',
+                         'content_type': 'clipper', 'status': 'QUEUED'},
+            },
+        }
+        with tempfile.TemporaryDirectory() as tmp:
+            root = Path(tmp)
+            with patch.object(w, 'WORK', root), patch.object(w, 'STATE', root), \
+                    patch.object(w, 'process', side_effect=w.Hold('Test clip source unavailable')) as process, \
+                    patch.dict(os.environ, {'MAX_AI_CALLS': '96'}):
+                budget = w.Budget(state)
+                budget.counts['ai'] = 96
+                w.produce_batch(state, budget, 30)
+        self.assertEqual(state['last_run']['attempted_ids'], ['clip'])
+        self.assertEqual(state['deferred_content_batches']['world_news'], news_batch)
+        self.assertEqual(state['jobs']['news']['status'], 'WAITING')
+        process.assert_called_once()
+
     def test_valid_plan(self):
         plan, sources = fixture()
         self.assertIs(w.validate_plan(plan, sources, 20), plan)
