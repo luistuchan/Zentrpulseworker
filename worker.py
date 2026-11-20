@@ -1676,7 +1676,9 @@ def current_batch(state, excluded=()):
         if 'custom' not in eligible or 'custom' in excluded:
             return None
         category = 'custom'
-    batch = {'category': category, 'completed': 0, 'story_keys': [], 'media_hashes': [], 'source_urls': []}
+    batch = state.get('deferred_content_batches', {}).pop(category, None)
+    if batch is None:
+        batch = {'category': category, 'completed': 0, 'story_keys': [], 'media_hashes': [], 'source_urls': []}
     state['content_batch'] = batch
     return batch
 
@@ -1804,11 +1806,12 @@ def produce_batch(state, budget, target):
                     state['last_run']['pause_reason'] = job['blocker']
                     break
 
-        # A working category keeps its three-story batch across runs.
-        if (batch['completed'] > 0 or len(completed) > completed_before
-                or state['last_run'].get('pause_reason')):
+        if len(completed) > completed_before or state['last_run'].get('pause_reason'):
             break
-        # No video from this category: try the next eligible category now,
+        if batch['completed'] > 0:
+            state.setdefault('deferred_content_batches', {})[batch['category']] = batch
+            atomic_json(STATE / 'queue.json', state)
+        # No new video from this category: try the next eligible category now,
         # but do not exhaust time/attempt budgets or retry a category twice.
         deferred.add(batch['category'])
         state['last_run'].setdefault('categories_deferred', []).append(batch['category'])
