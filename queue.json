@@ -4453,9 +4453,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T08:00:42.786984+00:00",
       "id": "17fe1a0b03c341b6",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T08:00:44.933305+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "5cb353c74b655f40": {
       "title": "As Trump and Xi meet, China's AI dreams face an unexpected hurdle: the Nvidia spy scandal",
@@ -4521,9 +4522,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T08:00:42.233119+00:00",
       "id": "89228ba0b91e55f3",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T08:00:45.114796+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "61a6d3fe73557928": {
       "title": "Philippines eyes new tech partnerships with US ahead of Trump’s China visit - Anadolu Ajansı",
@@ -4536,9 +4538,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T08:00:42.691439+00:00",
       "id": "61a6d3fe73557928",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T08:00:45.164857+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "cd2bdbdb1d2c9258": {
       "title": "Photos: India defeat Pakistan to win SAFF Championship in Bangladesh",
@@ -4587,7 +4590,7 @@
       "discovered_at": "2026-11-18T08:21:10.676812+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "bbfb93f4d2638ae1",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-18T08:21:18.910721+00:00",
       "attempts": 2,
       "source_pipeline_version": 3,
@@ -4630,7 +4633,7 @@
           "reason": "The shot depicts a formal classical stone building exterior, which effectively serves as B-roll footage to represent government offices, official statements, or institutional authority relating to Marco Rubio's response regarding the tech outages."
         }
       },
-      "blocker": "Stock footage review allowance reached for this draft; saved progress"
+      "blocker": "News candidate expired; discover a recent story"
     },
     "a6e06a058de5c51a": {
       "title": "Democrats win Alaska Senate race two weeks after midterms counting began",
@@ -4837,9 +4840,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T10:02:58.181068+00:00",
       "id": "68a3a6496c734dfd",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T10:03:00.263809+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "b4c5eac16267b665": {
       "title": "Ghana's new $60m presidential jet sparks public outrage",
@@ -4936,12 +4940,12 @@
       "discovered_at": "2026-11-18T15:19:39.540352+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "1398d274efe695a6",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-18T15:19:44.235753+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-19T21:12:33.781732+00:00",
-      "blocker": "AI request cap reached; job saved for next run"
+      "last_attempt_at": "2026-11-20T09:45:00.595514+00:00",
+      "blocker": "Editor rejected candidate: The candidate data and sources provided do not contain two fully independent primary news source domains reporting distinct, verified original updates under editorial independence,"
     },
     "654954d3df6ae37d": {
       "title": "Trump gets rare airport welcome by Xi ahead of landmark talks - BBC",
@@ -4970,12 +4974,12 @@
       "discovered_at": "2026-11-18T15:19:38.627215+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "7a0f10e754870d32",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-18T15:19:44.286769+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-19T21:15:23.929525+00:00",
-      "blocker": "AI request cap reached; job saved for next run"
+      "last_attempt_at": "2026-11-20T09:45:07.074969+00:00",
+      "blocker": "Insufficient evidence sources for this content type"
     },
     "b0b25096a3323a8a": {
       "title": "William and Kate meet Indian Prime Minister Modi in New Delhi",
@@ -4989,9 +4993,12 @@
       "discovered_at": "2026-11-18T15:19:38.651516+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "b0b25096a3323a8a",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T15:19:44.309727+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T09:45:14.374190+00:00",
+      "blocker": "Script length outside target range: 47 words; need 54-90 for 30 seconds"
     },
     "d4542d7ce3869356": {
       "title": "New cell type that could transform biotechnology - NEWS.am TECH",
@@ -5050,9 +5057,60 @@
       "discovered_at": "2026-11-18T17:52:12.880004+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "29ea76a72854aa5b",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-18T17:52:20.713138+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T09:45:53.218111+00:00",
+      "youtube_visual_discovery": [
+        {
+          "id": "C1yUiBg9oJY",
+          "license": "youtube"
+        },
+        {
+          "id": "_c8zq8h2G0E",
+          "license": "youtube"
+        },
+        {
+          "id": "w8Nbt-icvFc",
+          "license": "youtube"
+        },
+        {
+          "id": "DyrODCUC-uc",
+          "license": "youtube"
+        },
+        {
+          "id": "XIUiychgDaQ",
+          "license": "youtube"
+        },
+        {
+          "id": "ra-hvSu2hDc",
+          "license": "youtube"
+        }
+      ],
+      "stock_reviews": {
+        "7c58995e20c43e2e40c6739d4ed64eff47bd74d9df774a1e7fe730560bd7acbf": {
+          "matches": false,
+          "reason": "This image shows a European city skyline with a river (resembling Berlin), which is unrelated to the UK-India royal tour context."
+        },
+        "f810e113a7521e480a61356f26cd5e614b7bac5696877c0b2b001d1914884260": {
+          "matches": true,
+          "reason": "The frame shows classical European architecture, which can serve as B-roll representing government or royal buildings related to the UK-India diplomatic visit."
+        },
+        "9e295de519dd54eaa7720b148768f9d49fd6602bb20e65e3933d7fe2bbcc2cef": {
+          "matches": false,
+          "reason": "The image shows an aerial view of a generic modern high-rise city skyline, which does not depict New Delhi or any specific location related to the royal tour of India."
+        },
+        "6cdbff77feaa96a46f56220a8c8e92966b7fb2a3d72b9b62975ed7017c12dccd": {
+          "matches": false,
+          "reason": "The image shows a generic modern house near a body of water and trees, which is unrelated to Prince William and Kate's royal tour of India or their meeting with Prime Minister Narendra Modi."
+        },
+        "0626660f0581158337f92cfa3062dfc0281338c04b5375f240dbdf6b27b05375": {
+          "matches": false,
+          "reason": "The image shows an architectural courtyard with columns and arches, which is generic footage and does not relate to Prince William and Kate's royal tour of India or their meeting with Prime Minister Narendra Modi."
+        }
+      },
+      "blocker": "Stock footage review allowance reached for this draft; saved progress"
     },
     "ff47c3f6f8b596cd": {
       "title": "Trump, Xi and Putin Shake Hands as Leaders Gather in China - The New York Times",
@@ -5081,9 +5139,12 @@
       "discovered_at": "2026-11-18T17:52:12.739778+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "d18f1cb512bcd151",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T17:52:20.821868+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T09:46:49.800105+00:00",
+      "blocker": "Script length outside target range: 48 words; need 54-90 for 30 seconds"
     },
     "d0e534835d37ac75": {
       "title": "'The drones don't fly here' - BBC reports from Ukraine's new front line",
@@ -5097,9 +5158,12 @@
       "discovered_at": "2026-11-18T17:52:12.788776+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "d0e534835d37ac75",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T17:52:20.869985+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T09:47:23.286749+00:00",
+      "blocker": "Need 2 readable source URL(s); retrieved 1. Service HTTP 403; no paid fallback attempted"
     },
     "4c42cd4faa309fbe": {
       "title": "40 Great Indie Songs From The 2010s That Defined A Generation And Its Soundtrack - That Eric Alper",
@@ -5158,9 +5222,12 @@
       "discovered_at": "2026-11-19T02:11:00.914829+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "89971f48c87b5716",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T02:11:09.903240+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T09:47:47.067060+00:00",
+      "blocker": "Editor rejected candidate: The candidate data contains two URLs from the exact same domain (bbc.co.uk and bbc.com are operated by the BBC), failing the requirement for two independent source domains for news"
     },
     "debeb2aeaba4f42a": {
       "title": "Presidents get blamed for the economy. A new report argues Trump actually deserves it. - Scripps News",
@@ -5189,9 +5256,12 @@
       "discovered_at": "2026-11-19T02:11:02.015160+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "5f9b3d0f81a56b8d",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T02:11:09.977498+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T09:48:43.652458+00:00",
+      "blocker": "Editor rejected candidate: Only one independent source (Al Jazeera) contains text describing the event; NBC News only has a title reference in its scraped HTML without body text, failing the two independent "
     },
     "d5f9272e54c044cc": {
       "title": "Why a trio of experts alleges Jeffrey Epstein did not die by suicide",
@@ -5205,9 +5275,64 @@
       "discovered_at": "2026-11-19T02:11:02.056062+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "d5f9272e54c044cc",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T02:11:10.015987+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-20T09:49:12.009830+00:00",
+      "youtube_visual_discovery": [
+        {
+          "id": "BPimPbd_tLg",
+          "license": "youtube"
+        },
+        {
+          "id": "hs-45bVwmT4",
+          "license": "youtube"
+        },
+        {
+          "id": "dDIIXkZ2JNk",
+          "license": "youtube"
+        },
+        {
+          "id": "SftX338Iueo",
+          "license": "youtube"
+        },
+        {
+          "id": "vltGL2Xbxhg",
+          "license": "youtube"
+        },
+        {
+          "id": "jkyDTmSzEfM",
+          "license": "youtube"
+        },
+        {
+          "id": "0eWgkwx0-44",
+          "license": "youtube"
+        },
+        {
+          "id": "asKQgeVsjVk",
+          "license": "youtube"
+        },
+        {
+          "id": "kITsoM-h4s8",
+          "license": "youtube"
+        },
+        {
+          "id": "mRdlBib-9eg",
+          "license": "youtube"
+        },
+        {
+          "id": "-5fM0YAuy6Q",
+          "license": "youtube"
+        }
+      ],
+      "stock_reviews": {
+        "744a44bfd931d28fe063fa0d217db62dbc1f7ee13cf5cd94d2c966953c75636b": {
+          "matches": true,
+          "reason": "The frame depicts an interrogation or interview setting with an inmate in an orange jumpsuit, which is meaningfully related to the video topic about Jeffrey Epstein's death in custody and forensic investigations."
+        }
+      },
+      "blocker": "No matching Pixabay footage for s02: 9 hits for 'medical records'; inspect diagnostics in review artifact"
     },
     "64204c485393b581": {
       "title": "Palm Beach County pastor convicted of US charges related to assassination of Haitian President Jovenel Moïse - WPBF",
@@ -6399,38 +6524,214 @@
       "status": "QUEUED",
       "created_at": "2026-11-20T02:03:00.611024+00:00",
       "attempts": 0
+    },
+    "f2d90bf3b9bf75bf": {
+      "title": "Three Kyiv bridges hit during major Russian missile attack",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c6x29gn4pdn9o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T09:31:24+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-20T09:44:50.252843+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "f2d90bf3b9bf75bf",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T09:44:59.948690+00:00",
+      "attempts": 0
+    },
+    "efd396fe1d08229e": {
+      "title": "Why North Korea's Kim Jong Un didn't meet US President Donald Trump, despite the hype - CNA",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxPWm5vbXU5Q05sNXpIMDYwdTZhZ2hWMjhPWS1fMV94ZVFlV2pEc2drNGVkcndNdW5MZ1djazJXXzNDTnJBQ19ROFk3THhKRndyLU9OemdjV1A2cjhsREtKNXNmb0FoRk9rRWxCeW91dFo2MFhPRmM4OTdLQnZqS3JXVlJ3Vl9HRjNPY0UwU0Z3NEJPQWFjUHBSdUVhNy1TQQ?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T08:50:00+00:00",
+      "headline_score": 1,
+      "discovered_at": "2026-11-20T09:44:58.516264+00:00",
+      "id": "efd396fe1d08229e",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T09:45:00.014374+00:00",
+      "attempts": 0
+    },
+    "7855dab6fddf9ded": {
+      "title": "Pakistan minister visits India for first time since 2025 war",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news-analysis/2026/11/20/pakistan-minister-visits-india-for-first-time-since-2025-war?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T09:11:57+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-20T09:44:51.925872+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "7855dab6fddf9ded",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T09:45:00.066495+00:00",
+      "attempts": 0
+    },
+    "a971151ad867e3a0": {
+      "title": "Russia’s day-long attack on Kyiv damages embassies",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/video/newsfeed/2026/11/20/russias-day-long-attack-on-kyiv-damages-embassies?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T08:56:08+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-20T09:44:51.972586+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "a971151ad867e3a0",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T09:45:00.111394+00:00",
+      "attempts": 0
+    },
+    "f5369a808c3ffc22": {
+      "title": "U.S. Senate rejects war powers curb for Trump on Iran - Ticker News",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMigAFBVV95cUxQLVpvYTdVcmZlczUzM1QzN1ROMDkycGhxaFpsTVVDMzAzN0RuWjBWeHdQSWs1M1lsekZkbHZRZDhmRlkwYUx4VGUxYlZ6c1JZTlVPOHVGVnBVX2lSTzduenFuTXpaRjFPWUhFb0hkNS1oNkVkVVAtN25PcU5SSkhNUg?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T05:21:11+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T09:44:56.811786+00:00",
+      "id": "f5369a808c3ffc22",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T09:45:00.164222+00:00",
+      "attempts": 0
+    },
+    "d5937bdb6e6e3672": {
+      "title": "Two Autocrats and an American President with Autocrat Envy - The New Yorker",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPbVZhUUlRckxqNzlUa3dxa1dhUE9hc0hFQ3V4TjlWOWdXYVY0eVF5OW1xQ2NvaEFZNl91bFNMa0l2d2dqQzc0RW5CclBDLUNiSkFsUS01aFpCbHpuMnV6MTJlTi1ZU19pZV9NSVhNcWx4bXloZk5QbDY4YndPb1NCdWxwOHhsbzduRFVoc1hUVEdkNzhrSFZWVjkwbmVIeS1IV3BsSmlHYnM5OGdVLXJ4blJRVENlRTViYzRz?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-20T00:51:29+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T09:44:57.096181+00:00",
+      "id": "d5937bdb6e6e3672",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T09:45:00.221413+00:00",
+      "attempts": 0
+    },
+    "b3e151c5b3ee1247": {
+      "title": "'Bouma' ending explained: Rejin S Babu on Rose Villa secrets; director recalls Madhu Muttam's comment on - The Times of India",
+      "category": "movies",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiugJBVV95cUxQUFdfTjVfelQ0SWU2ZkZycWhQSU5vTVNEandBT2hJTGNabV9HdXFvMDEzRDNXNlp2TXFHRng5SEh3TGI1UW1HUFNGZnFzTlcyT3E3ZmJHVzBLX2NNQkdyY3AtNGM3cWhJdW5YT180WjMyWlV3Q2U1dnhGMjJXRkVwT0N2M1lkbjN4aTJuNGUzSjFqd3c4TUVQNzJSMTU1d0FzOE1DeGJKLXd3VUNFUl9EWG9ncWZRRGpjdkNRc3Exbk5LTjdyQUdjUDZNZWhvSTU3Y1lSdXdKaTlmZnM1ZlQ0cDhVT1BYTk4yU0RUQ3lfdDhlXzQ1Y0hzamVTY2wtcGtITThaeXlaUHZrbDlYWmdmNExabHN5UGdnamQwUENvb19nWmtiVExGT2ZRay1nVk1zX0lsMVNmeHRxQdIBvwJBVV95cUxPNlJlNk5MMmUwcTF5ekl3ellGNjJNWm1NZFFGZGMwamFhUS1LQjJVQW5xckY1Q0RLZHN0Q19YV0JxN3NnUWUyWV9wRzZ0Tm84VEZLX29JV3k0ZjA4cTFDTkFZdjBZZ2paM3RJT2lZbWFpN1FOSnpZZUU1OFpjeF8zbzJUaE5hTjdyQ2Z0OHpFWWxOQkRmNERKTDA2d1BUVWtQQUw1aGdfSm81T3JMRmQyN0VPUmk5TjhNa1VCeDFrQzlfYmxiaDYtdFRES3hyRFJtWHpsajk4Zmg5TjMxU3BuRHAtalpiY0dNOUU4U09MeGEtdkVMZVZUYy1yUE45aGdhOVE2RXp2MGNjOXUwa3UyaVI0cHFoZmtna3k0WTczZjNHT2FDcTBmbTViYXZ0YmswSzJOVVRrdUcydmdkZzNr?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 2,
+      "discovered_at": "2026-11-20T09:44:53.441802+00:00",
+      "id": "b3e151c5b3ee1247",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T09:45:00.309402+00:00",
+      "attempts": 0
+    },
+    "d45fc35eed77f95d": {
+      "title": "Nitroplast | Discovery, Function, Evolution, Endosymbiosis, & Structure of Eukaryotic Nitrogen-Fixing Organelle - Britannica",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiWEFVX3lxTE9wdXhQYVZNekhtQmJLX2hkd0oxT0V2TnRtQ2FKSk9jb2FMYjE2alNxc0M3YWctVFlUR1VpRkZOS1NXQUV6MjVVakZUaWhoY2ltWU5GU2FBQ0g?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 1,
+      "discovered_at": "2026-11-20T09:44:54.468467+00:00",
+      "id": "d45fc35eed77f95d",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T09:45:00.393723+00:00",
+      "attempts": 0
+    },
+    "d3338678be9bf841": {
+      "title": "All the Country Stars in Taylor Swift’s CMA Awards Performance, Explained - Rolling Stone",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxNdTBrdDBnN0JmMmh3UDl2TjVjOXJiMDJ1T3UwOGJiamxBYTY5Q2xXYU5HV0M1Vlh4Y3BiVDV1T0g5X1dYMV9lOGVrMUxJZzVmM2stcU5TV3U0RkRVWmNTX1FGNm10TFdZNGZ6VEdwbExZMUs5Nk9jazlVYmpFR256Z0xDRmVfb195TERiVEhHSnVxRU93MFc1bENYY1NVLUxTX0QxY0JKYmVidC1FbmF5aXFRbjZtQTlkeUE?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 1,
+      "discovered_at": "2026-11-20T09:44:55.811843+00:00",
+      "id": "d3338678be9bf841",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T09:45:00.462702+00:00",
+      "attempts": 0
+    },
+    "1bfee11f17e3a6d3": {
+      "title": "Best in-ear monitors 2026: IEMs for stage and studio - MusicRadar",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBfWm9aZk5rMGYwdDl3MnFHSEdkY2pmRy0zWnhJTjEzSmR4U1k3eFhFbThXSXRYdmJWNzJjX1BpRk9HVTNLSWF5YnB1S1hrbWNwZGNIbWxwTDRwTW44dUhHYnJR?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T09:44:56.147469+00:00",
+      "id": "1bfee11f17e3a6d3",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T09:45:00.514193+00:00",
+      "attempts": 0
+    },
+    "c45987e2d628909f": {
+      "title": "Who Is RAVNIR? Is the Mysterious Viking Music Singer Real or AI? - RouteNote",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilgFBVV95cUxPeWJVVnh4OVNUWHNEQ1g4anpOR3FRYTBmTkxmc1FRMXhvUTMzZVlKN1VCSFFmNEdXMTc5dk0wdjVteGZGQjJIZVF6MjRYd2tXUVMzMmp6a2ZGZnpKZkdaalhSaW5ydjZEUVBENGpyM0ZVc1J0aFhnQV9IdkpXUnFNNkJvN3hWMWlWc2Q2WWZLNVI5VzZOY0E?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-20T09:44:56.217917+00:00",
+      "id": "c45987e2d628909f",
+      "status": "QUEUED",
+      "created_at": "2026-11-20T09:45:00.577224+00:00",
+      "attempts": 0
     }
   },
   "budget": {
-    "day": "2026-11-19",
+    "day": "2026-11-20",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 18,
-    "ai": 96,
-    "pixabay": 37
+    "youtube": 8,
+    "ai": 29,
+    "pixabay": 5
   },
-  "content_cycle_index": 6,
+  "content_cycle_index": 8,
   "content_batch": {
-    "category": "world_news",
-    "completed": 1,
-    "story_keys": [
-      "what is trump hoping to achieve at apec meeting in china"
-    ],
+    "category": "sports",
+    "completed": 0,
+    "story_keys": [],
     "media_hashes": [],
-    "source_urls": [
-      "https://www.aljazeera.com/news/2026/11/18/what-is-trump-hoping-to-achieve-at-apec-meeting-in-china?traffic_source=rss",
-      "https://www.yahoo.com/news/world/articles/trump-takes-twice-long-enter-173711942.html"
-    ]
+    "source_urls": []
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-20T02:03:00.612046+00:00",
-    "attempted_ids": [],
+    "started_at": "2026-11-20T09:45:00.578268+00:00",
+    "attempted_ids": [
+      "1398d274efe695a6",
+      "7a0f10e754870d32",
+      "b0b25096a3323a8a",
+      "29ea76a72854aa5b",
+      "d18f1cb512bcd151",
+      "d0e534835d37ac75",
+      "89971f48c87b5716",
+      "5f9b3d0f81a56b8d",
+      "d5f9272e54c044cc"
+    ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "finished_at": "2026-11-20T02:03:00.631262+00:00",
-    "attempted": 0,
+    "categories_deferred": [
+      "world_news"
+    ],
+    "finished_at": "2026-11-20T09:49:59.637262+00:00",
+    "attempted": 9,
     "completed": 0,
-    "gemini_request_attempts": 0
+    "gemini_request_attempts": 29
   },
   "telegram_deliveries": {
     "2d869bc60f3da658c9197b934c45dfddb3c797a7bc940732029e92f431cf90f2": {
@@ -6446,6 +6747,20 @@
       "started_at": "2026-11-19T21:02:44.871688+00:00",
       "message_id": 34,
       "completed_at": "2026-11-19T21:02:47.260722+00:00"
+    }
+  },
+  "deferred_content_batches": {
+    "world_news": {
+      "category": "world_news",
+      "completed": 1,
+      "story_keys": [
+        "what is trump hoping to achieve at apec meeting in china"
+      ],
+      "media_hashes": [],
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/18/what-is-trump-hoping-to-achieve-at-apec-meeting-in-china?traffic_source=rss",
+        "https://www.yahoo.com/news/world/articles/trump-takes-twice-long-enter-173711942.html"
+      ]
     }
   }
 }
