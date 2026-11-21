@@ -1,21 +1,12 @@
 name: ZENTR Pulse Production
 
 on:
-  push:
-    branches: [main]
-    paths:
-      - '.github/workflows/pulse.yml'
-      - 'worker.py'
-      - 'clipper.py'
-      - 'tests/test_clipper_render_smoke.py'
   workflow_dispatch:
     inputs:
       retry_job:
         description: 'Optional: exact held job ID to retry after correcting queue.json'
         required: false
         type: string
-  schedule:
-    - cron: '0 1,9,17 * * *'
 
 # Never run this secret-bearing workflow on pull_request or untrusted code.
 permissions:
@@ -23,8 +14,7 @@ permissions:
 
 concurrency:
   group: zentr-pulse-production
-  # Supersede the stalled pre-fix run for this recovery deployment only.
-  cancel-in-progress: ${{ github.event_name == 'push' && github.event.head_commit.message == 'Replace stalled Pulse setup run' }}
+  cancel-in-progress: false
 
 jobs:
   process-videos:
