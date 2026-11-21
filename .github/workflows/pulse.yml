@@ -7,6 +7,16 @@ on:
         description: 'Optional: exact held job ID to retry after correcting queue.json'
         required: false
         type: string
+      gameplay_url:
+        description: 'Optional public direct video file URL for a single gameplay draft'
+        type: string
+      gameplay_title:
+        description: 'Title for the supplied gameplay draft'
+        type: string
+      gameplay_rights:
+        description: 'I own the footage or have permission to reuse it'
+        type: boolean
+        default: false
 
 # Never run this secret-bearing workflow on pull_request or untrusted code.
 permissions:
@@ -79,6 +89,9 @@ jobs:
           MAX_YOUTUBE_SEARCHES: '18'
           MAX_PEXELS_SEARCHES: '96'
           MAX_PIXABAY_SEARCHES: '72'
+          PULSE_GAMEPLAY_URL: ${{ inputs.gameplay_url }}
+          PULSE_GAMEPLAY_TITLE: ${{ inputs.gameplay_title }}
+          PULSE_GAMEPLAY_RIGHTS: ${{ inputs.gameplay_rights }}
           RETRY_JOB: ${{ inputs.retry_job }}
         run: python worker.py --discover --retry "$RETRY_JOB"
       - name: Send playable MP4 through Telegram review bot
