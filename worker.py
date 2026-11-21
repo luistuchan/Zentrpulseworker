@@ -1843,6 +1843,42 @@ def produce_batch(state, budget, target):
     return batch
 
 
+def produce_supplied_gameplay(state, budget, title, url):
+    parsed = urllib.parse.urlsplit(url)
+    if parsed.query or parsed.fragment:
+        raise Hold('Use a public direct video URL without query parameters or fragments')
+    public_url(url)
+    if parsed.hostname in ('www.youtube.com', 'youtube.com', 'youtu.be'):
+        raise Hold('Supply a direct video file URL for gameplay intake')
+    job_id = hashlib.sha256(('supplied-gameplay:' + url).encode()).hexdigest()[:16]
+    jobs = state['jobs']
+    job = jobs.setdefault(job_id, {
+        'id': job_id, 'title': title, 'category': 'clipper', 'content_type': 'clipper',
+        'created_at': now(), 'attempts': 0,
+        'media': {'source_url': url, 'rights_confirmed': True,
+                  'rights_note': 'Reuse permission confirmed on manual dispatch'},
+    })
+    run_info = {'started_at': now(), 'attempted_ids': [], 'completed_ids': [],
+                'attempted': 0, 'completed': 0}
+    state['last_run'] = run_info
+    if job.get('status') in ('REVIEW_REQUIRED', 'APPROVED'):
+        run_info['finished_at'] = now()
+        return ['This gameplay URL already has a review record.']
+
+    job.update(title=title, status='PRODUCING', attempts=job['attempts'] + 1,
+               last_attempt_at=now())
+    run_info.update(attempted=1, attempted_ids=[job_id])
+    atomic_json(STATE / 'queue.json', state)
+    try:
+        process(job, budget, int(os.getenv('TARGET_SECONDS', '30')))
+    except (Hold, Wait) as exc:
+        job.update(status='WAITING' if isinstance(exc, Wait) else 'HOLD', blocker=str(exc))
+    if job['status'] == 'REVIEW_REQUIRED':
+        run_info.update(completed=1, completed_ids=[job_id])
+    run_info['finished_at'] = now()
+    return []
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--discover', action='store_true')
@@ -1876,6 +1912,16 @@ def main():
             atomic_json(STATE / 'queue.json', state)
             return 0
         budget, warnings = Budget(state), []
+        footage = os.getenv('PULSE_GAMEPLAY_URL', '').strip()
+        if footage:
+            title = os.getenv('PULSE_GAMEPLAY_TITLE', '').strip()
+            if args.retry or not title or os.getenv('PULSE_GAMEPLAY_RIGHTS') != 'true':
+                raise Hold('Gameplay intake requires a title and reuse confirmation, with retry_job empty')
+            warnings = produce_supplied_gameplay(state, budget, title, footage)
+            state['last_run']['gemini_request_attempts'] = budget.run_counts['ai']
+            atomic_json(STATE / 'queue.json', state)
+            report(state, warnings)
+            return 0 if state['last_run']['completed'] else 2
         queue = load(ROOT / 'queue.json', [])
         if not isinstance(queue, list):
             raise Hold('queue.json must be an array')
