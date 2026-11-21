@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "title": "NASA’s November 2026 skywatching tips",
+    "category": "clipper",
+    "content_type": "clipper",
+    "source_urls": [
+      "https://www.jpl.nasa.gov/videos/whats-up-november-2026-skywatching-tips-from-nasa/"
+    ],
+    "media": {
+      "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/What%27s_Up-_November_2026_Skywatching_Tips_from_NASA_%28JPL-20261029-WHATSUf-0001-Whats_Up_November_2026%29.webm",
+      "attribution_url": "https://www.jpl.nasa.gov/videos/whats-up-november-2026-skywatching-tips-from-nasa/",
+      "creator": "NASA Jet Propulsion Laboratory",
+      "license": "Public domain (U.S.)",
+      "rights_confirmed": true,
+      "rights_note": "Wikimedia Commons identifies this NASA video as U.S. public domain. Review the excerpt for protected NASA insignia and third-party material before publishing."
+    }
+  }
+]
