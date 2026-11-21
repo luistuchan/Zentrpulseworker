@@ -230,17 +230,17 @@
       "headline_score": 0,
       "discovered_at": "2026-11-14T06:30:43.386524+00:00",
       "id": "6832207212ec0e88",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-14T06:30:43.884890+00:00",
-      "attempts": 3,
+      "attempts": 4,
       "youtube_signal": {
         "status": "discovery_only",
         "examples": [],
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-20T17:54:09.313240+00:00",
-      "blocker": "Script planning reached its three-request limit"
+      "last_attempt_at": "2026-11-21T20:44:23.857937+00:00",
+      "blocker": "Script length outside target range: 50 words; need 54-90 for 30 seconds"
     },
     "15ed27b00a04aaa4": {
       "title": "The mystery of how hair knows where to grow may finally be solved - Science Daily",
@@ -289,10 +289,29 @@
       "id": "0d3903eaaa721d2d",
       "status": "WAITING",
       "created_at": "2026-11-14T17:29:08.576584+00:00",
-      "attempts": 1,
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T18:05:24.059443+00:00",
-      "blocker": "Free narration service unavailable; supply local audio or retry later"
+      "attempts": 2,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-21T20:48:03.064153+00:00",
+      "blocker": "Per-run AI allowance reached; job saved for the next run",
+      "youtube_visual_discovery": [],
+      "stock_reviews": {
+        "5608f1eb766cd764e0e76bade91e4dcf0d0adee97f3d26b68dd1807ed9c7241d": {
+          "matches": true,
+          "reason": "The image shows a person playing a keyboard with headphones, which relates well to the video's theme of discussing music, song arrangements, and instrumentation like synthesizers mentioned in the context."
+        },
+        "7895a4264454547063f9c1356612ea49a1d58c3a15f673c4348837d4774a2757": {
+          "matches": true,
+          "reason": "The frame shows an office or studio setting with an electric guitar and amplifier on the floor, which relates to the video's theme of music and guitar performance."
+        },
+        "a88c47faa8b6a39494c4e9de63eadb6cb221f540358e1a958a0846ca4e742dbd": {
+          "matches": false,
+          "reason": "The image shows a generic black and white shot of people in a shopping mall, which does not meaningfully relate to Ellie, acoustic guitars, or The Last of Us Part II."
+        },
+        "8418ff99ef9e04687316f43eff0f9c6fa9c33bc7c1c0dff70ef4796ab4d45ced": {
+          "matches": false,
+          "reason": "The frame shows a clothing rack inside a shop, which is unrelated to the topic of Ellie playing 'Take On Me' on her guitar in The Last of Us Part II."
+        }
+      }
     },
     "e95fac783fd7233f": {
       "title": "Behind The Curtain - People's Defender",
@@ -3554,11 +3573,11 @@
       "headline_score": 1,
       "discovered_at": "2026-11-17T09:02:22.391722+00:00",
       "id": "6d7895ef328280ad",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:02:24.364859+00:00",
-      "attempts": 3,
+      "attempts": 4,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-20T23:45:57.697376+00:00",
+      "last_attempt_at": "2026-11-21T20:43:52.632048+00:00",
       "stock_reviews": {
         "25092bc707e17555d5b95b9649a153c420fce1d3e2f7882ec06616c931804397": {
           "matches": false,
@@ -3577,7 +3596,9 @@
           "reason": "The frame shows a busy public transit concourse or station with a prominent Boots logo, which is unrelated to the plot of the Telugu thriller Naa Wife Missing."
         }
       },
-      "stock_pipeline_version": 5
+      "stock_pipeline_version": 5,
+      "youtube_visual_discovery": [],
+      "blocker": "No matching Pixabay footage for s01: 9 hits for 'police station'; inspect diagnostics in review artifact"
     },
     "0945926769a2e28b": {
       "title": "Discover all the heavy metal bands nominated for the 2027 Grammy Awards - Chaoszine",
@@ -4937,10 +4958,33 @@
       "id": "cd55fa9344c3d998",
       "status": "WAITING",
       "created_at": "2026-11-18T10:03:00.385678+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-20T17:59:51.169832+00:00",
-      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted"
+      "last_attempt_at": "2026-11-21T20:44:58.366591+00:00",
+      "blocker": "Stock footage review allowance reached for this draft; saved progress",
+      "youtube_visual_discovery": [],
+      "stock_reviews": {
+        "9c2ea461547baa7d23c5ac8036c2a0643e8992e7304cf4ccd4884c6008ac1438": {
+          "matches": true,
+          "reason": "The frame shows the interior of a crowded bus, which directly relates to the opening scene of the video where the crime unfolds on a bus journey."
+        },
+        "2c1ede8d63cd1eb388b19194752f3eb64e547c12b1c3ab46e113ea5bbfeb3e2c": {
+          "matches": false,
+          "reason": "The frame shows a subway or train tunnel, which is completely unrelated to the movie Thondimuthalum Driksakshiyum, a crime drama about a bus journey, police station interrogation, and gold chain recovery."
+        },
+        "d5b9e473d50326d2b46166de3198db566e6170c3fae4a80aec9b6ae68ae3ce6a": {
+          "matches": true,
+          "reason": "The footage shows a moving train/transit, which serves as suitable B-roll for a video discussing events unfolding on a crowded bus journey and transit-related themes."
+        },
+        "07509bdc42a898cf5d65d43b2c80d1caf1be0a1f6b8e052ca1c7565d39f82d03": {
+          "matches": true,
+          "reason": "The image shows office binders and paperwork, which visually supports the video's theme involving police investigation, legal pressure, and evidence handling."
+        },
+        "f3a98028b41e0f120c325b7bdc00d43f31685e98d2b07b3592ac45c270b20cb9": {
+          "matches": false,
+          "reason": "The image shows a modern hotel atrium with a glass elevator, which has no contextual relevance to a crime thriller movie about a gold chain theft and police investigation."
+        }
+      }
     },
     "6d4e80683a048896": {
       "title": "Preparing the next generation of community college presidents - EdNC",
@@ -5622,9 +5666,10 @@
       "discovered_at": "2026-11-19T09:56:56.157747+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "a93c8cfb87563942",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T09:57:04.470317+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "c21c2b54e9ac8926": {
       "title": "Nuclear arms and ending wars in Iran and Ukraine top the agenda at Trump-Xi-Putin meeting - WWNY",
@@ -5637,9 +5682,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T09:57:02.122196+00:00",
       "id": "c21c2b54e9ac8926",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T09:57:04.527209+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "8b123bab25e19cec": {
       "title": "North Korea expanding uranium enrichment facility, UN nuclear watchdog says",
@@ -5653,9 +5699,10 @@
       "discovered_at": "2026-11-19T09:56:57.426254+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "8b123bab25e19cec",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T09:57:04.575172+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "7f0e43991034fb45": {
       "title": "Dozens missing after boat carrying 100 migrants sinks off Senegal's coast",
@@ -5669,9 +5716,10 @@
       "discovered_at": "2026-11-19T09:56:55.987774+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "7f0e43991034fb45",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T09:57:04.623505+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "888ee040ff33e32d": {
       "title": "Trump calls Putin ‘my friend’ as Don & Xi prepare to call on tyrant to end war - The Sun",
@@ -5684,9 +5732,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T09:57:03.088621+00:00",
       "id": "888ee040ff33e32d",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T09:57:04.679462+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "d032994c09710a21": {
       "title": "Trump, Xi, Putin begin rare joint meeting in China - CBS News",
@@ -5732,11 +5781,33 @@
       "id": "9a19041fc49fe284",
       "status": "WAITING",
       "created_at": "2026-11-19T09:57:04.823925+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-20T23:46:34.130621+00:00",
-      "stock_reviews": {},
-      "blocker": "AI request cap reached; job saved for the next Pacific day"
+      "last_attempt_at": "2026-11-21T20:43:54.543634+00:00",
+      "stock_reviews": {
+        "6938a27cf3698ee39e7d3db24a76e12cfa6ce77d45d7cf090b06d72478f2714d": {
+          "matches": false,
+          "reason": "The image shows the Hungarian Parliament Building in Budapest, which is not Westminster or related to the video topic about UK politics and William Wallace."
+        },
+        "02006454032998d5a36f4f8f429bbb959d7088f27c37bde7011feb448e03a596": {
+          "matches": true,
+          "reason": "The video discusses a Westminster inquiry, and the frame shows Big Ben in London, directly illustrating the Westminster/UK parliament setting relevant to the story."
+        },
+        "345afb346ceaf29a7161fa9417da31226def42998c5591eb5570345f3df97962": {
+          "matches": true,
+          "reason": "The shot of a library corridor and bookshelves serves as suitable B-roll to illustrate historical research and inquiries discussed in the video regarding William Wallace and Westminster."
+        },
+        "1c3b13a7a7b2b00aae5d001344885b5da4e17491957224a804346b6317e2f76b": {
+          "matches": true,
+          "reason": "The image shows a legal setting with a gavel and scales of justice, which relates well to the video's topic about legal convictions, pardons, and jurisdictional hurdles."
+        },
+        "7ba59d1f58633100234181866f146abc27461f50dd079e87600f9493b22edeba": {
+          "matches": false,
+          "reason": "The image shows an archaeological site in an arid, desert-like landscape with palm trees, which does not relate to the video topic about Scottish history, Westminster inquiries, or William Wallace."
+        }
+      },
+      "youtube_visual_discovery": [],
+      "blocker": "Stock footage review allowance reached for this draft; saved progress"
     },
     "15beb66b0697d5a4": {
       "title": "Jaja Bojz unveil \"Mare\" and a new video from their punk - KarloBag.eu",
@@ -5765,9 +5836,10 @@
       "discovered_at": "2026-11-19T17:51:15.753545+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "1e622ef0d8eec3fd",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T17:51:24.802786+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "62d769ca185f5f24": {
       "title": "Trump says US, Russia, China ‘uniquely positioned’ on nuclear arms - Yeni Safak English",
@@ -5780,9 +5852,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T17:51:22.330159+00:00",
       "id": "62d769ca185f5f24",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T17:51:24.863465+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "f2e40ffdf1ae9890": {
       "title": "Rohingya genocide: What was said in court and what happens now?",
@@ -5796,9 +5869,10 @@
       "discovered_at": "2026-11-19T17:51:16.937924+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "f2e40ffdf1ae9890",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T17:51:24.909043+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "51da61581c0903d2": {
       "title": "Susan Smith denied parole again 32 years after drowning her two sons",
@@ -5812,9 +5886,10 @@
       "discovered_at": "2026-11-19T17:51:16.028313+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "51da61581c0903d2",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T17:51:24.960996+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "aa3c46298db1f27c": {
       "title": "Netanyahu for 2 years as PM, then president? New unity plan - Ynetnews",
@@ -5827,9 +5902,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T17:51:22.536158+00:00",
       "id": "aa3c46298db1f27c",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T17:51:25.011560+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "078b4bf69e353bfe": {
       "title": "Trump bought up to $265,000 of Nvidia stock in September, disclosure shows - Yahoo Finance",
@@ -5842,9 +5918,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T17:51:22.187695+00:00",
       "id": "078b4bf69e353bfe",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T17:51:25.072199+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "1f04ad23e99b86f3": {
       "title": "Glyphosate | Description, Discovery, Uses, Mechanism, Resistance, Environmental Risks, & Health Concerns - Britannica",
@@ -5888,9 +5965,10 @@
       "discovered_at": "2026-11-19T20:41:00.556187+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "4cb1809ca11fc7e9",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T20:41:11.174573+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "fa96e04b7eb69fb1": {
       "title": "Kushner says Russia is 'comfortable' with NATO-like security guarantees for Ukraine to end war after Trump talks with Putin - PBS",
@@ -5903,9 +5981,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T20:41:07.997417+00:00",
       "id": "fa96e04b7eb69fb1",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T20:41:11.233405+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "8e2e0efaf81880d6": {
       "title": "‘On the same page’: Hegseth hails US ties with Colombia’s de la Espriella",
@@ -5919,9 +5998,10 @@
       "discovered_at": "2026-11-19T20:41:01.760543+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "8e2e0efaf81880d6",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T20:41:11.271661+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "0b34a3f283f5af88": {
       "title": "European leaders unite in Berlin to reaffirm support for Ukraine",
@@ -5935,9 +6015,10 @@
       "discovered_at": "2026-11-19T20:41:01.801101+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "0b34a3f283f5af88",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T20:41:11.307143+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "3d22d20cf9340c91": {
       "title": "Trump administration makes it easier for companies to classify workers as contractors - Yahoo",
@@ -5950,9 +6031,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T20:41:09.151531+00:00",
       "id": "3d22d20cf9340c91",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T20:41:11.357405+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "385d89187e61639c": {
       "title": "Bloomberg News journalist barred from China meeting after Nvidia question - The Washington Post",
@@ -5965,9 +6047,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T20:41:08.384423+00:00",
       "id": "385d89187e61639c",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T20:41:11.403940+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "a486579272be0528": {
       "title": "From Drug Discovery to Patient Impact: Bridging the Gap Between Science and Healthcare - News-Medical",
@@ -6011,9 +6094,10 @@
       "discovered_at": "2026-11-19T21:07:05.761585+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "b0dffcfce02e4e6d",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:07:13.475371+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "389d54cdce04d8c9": {
       "title": "The Latest: Trump, Putin and Xi wrap up historic talks in China - WHNT News 19",
@@ -6026,9 +6110,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T21:07:11.382850+00:00",
       "id": "389d54cdce04d8c9",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:07:13.517088+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "3c7b4c72ebca1009": {
       "title": "Trump’s case against NYT and Penguin Random House may proceed: Judge",
@@ -6042,9 +6127,10 @@
       "discovered_at": "2026-11-19T21:07:05.803953+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "3c7b4c72ebca1009",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:07:13.557200+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "f8617c81bd61adf3": {
       "title": "Senate Republicans in US reject measure to limit Trump’s war powers in Iran",
@@ -6058,9 +6144,10 @@
       "discovered_at": "2026-11-19T21:07:05.848771+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "f8617c81bd61adf3",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:07:13.599451+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "aa3678180b71cb4c": {
       "title": "Trump's acting director of national intelligence begins firings at agency, sources say - ABC News - Breaking News, Latest News and Videos",
@@ -6073,9 +6160,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T21:07:11.073005+00:00",
       "id": "aa3678180b71cb4c",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:07:13.668975+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "53acff64bb934b7e": {
       "title": "Presidents Trump, Xi and Putin hold first-ever three-way talks, discussing nuclear arms and the war in Ukraine - WNEP",
@@ -6088,9 +6176,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T21:07:11.703185+00:00",
       "id": "53acff64bb934b7e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:07:13.732864+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "f1ebe9a0ed891f22": {
       "title": "Three arrested during Anthropic IPO protest outside Nasdaq",
@@ -6119,9 +6208,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T21:14:16.645693+00:00",
       "id": "af13a89bd2ab7822",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:14:19.865936+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "1fae2f5d185dabbc": {
       "title": "Jerusalem Daily: Israel launches ground offensive in Gaza",
@@ -6166,9 +6256,10 @@
       "headline_score": 1,
       "discovered_at": "2026-11-19T21:14:16.901303+00:00",
       "id": "efc78449a5dbb96f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:14:20.015601+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "e68b0148e7e1ccfc": {
       "title": "WATCH LIVE: Senate meets for legislative business as Trump returns from Putin-Xi talks in China - PBS",
@@ -6181,9 +6272,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T21:14:17.155569+00:00",
       "id": "e68b0148e7e1ccfc",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:14:20.084502+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "3c4b8ca24923120e": {
       "title": "Europe ready for talks with Russia on ending war in Ukraine, leaders say",
@@ -6212,9 +6304,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T21:25:25.079424+00:00",
       "id": "ed1db73cb8d8fbb7",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:25:27.169176+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "237ab7a5ecd5c4bd": {
       "title": "US appeals court lets Trump end TPS deportation protections for Venezuelans",
@@ -6259,9 +6352,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T21:25:26.575456+00:00",
       "id": "608c9fe8dc34537c",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:25:27.355658+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "af6ace08c34da0dc": {
       "title": "Meeting with US President Donald Trump - Президент России",
@@ -6274,9 +6368,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T21:25:25.301923+00:00",
       "id": "af6ace08c34da0dc",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:25:27.387409+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "f2ee23f7627e56d4": {
       "title": "Why are Bukele’s Salvadoran troops in Haiti and what have they achieved?",
@@ -6305,9 +6400,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T21:27:45.241367+00:00",
       "id": "7afe8d408713e4dc",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:27:45.925165+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "77b67f6944db5e6b": {
       "title": "Will the Shenzhen summit safeguard world peace?",
@@ -6321,9 +6417,10 @@
       "discovered_at": "2026-11-19T21:27:39.054294+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "77b67f6944db5e6b",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:27:45.966184+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "f1ca39e3bfbdf73e": {
       "title": "What does the Myanmar genocide ruling mean for the Rohingya?",
@@ -6337,9 +6434,10 @@
       "discovered_at": "2026-11-19T21:27:39.272860+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "f1ca39e3bfbdf73e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:27:46.017671+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "c627653c11df9aea": {
       "title": "Trump praises ‘great relationship’ with Putin after meeting, as Ukraine war takes center stage - CNBC",
@@ -6352,9 +6450,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T21:27:44.601008+00:00",
       "id": "c627653c11df9aea",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:27:46.102127+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "94888e94e58de08c": {
       "title": "Trump, Xi and Putin sit down for a rare 3-way meeting in China, but appear to achieve little - CBS News",
@@ -6417,9 +6516,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T21:36:53.073596+00:00",
       "id": "bda5daf8d8c804eb",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:36:53.512572+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "75d8ba63b96c2289": {
       "title": "Photos: Genocide ruling spotlights human toll of 2017 Rohingya crisis",
@@ -6433,9 +6533,10 @@
       "discovered_at": "2026-11-19T21:36:48.013262+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "75d8ba63b96c2289",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:36:53.555158+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "33ded3c9fe131251": {
       "title": "Blockbuster GTA VI release shows cultural, economic heft of video games",
@@ -6449,9 +6550,10 @@
       "discovered_at": "2026-11-19T21:36:48.060537+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "33ded3c9fe131251",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:36:53.602955+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "69b6717b6f80849a": {
       "title": "Trump says US doesn’t need help from China, Russia to end Iran war - Anadolu Ajansı",
@@ -6481,9 +6583,10 @@
       "discovered_at": "2026-11-19T21:40:03.335749+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "5b91b6d3b161246e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:40:09.906987+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "286774372e2150c3": {
       "title": "World reacts to ICJ finding Myanmar guilty of genocide against Rohingya",
@@ -6497,9 +6600,10 @@
       "discovered_at": "2026-11-19T21:40:03.395831+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "286774372e2150c3",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:40:09.964131+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "ceb87f769d64faea": {
       "title": "Rohingya survivors react to landmark genocide ruling against Myanmar",
@@ -6513,9 +6617,10 @@
       "discovered_at": "2026-11-19T21:40:03.454516+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "ceb87f769d64faea",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:40:10.020300+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "5ab963260eeeb5a1": {
       "title": "Man protests on roof of Spanish embassy over Fergie Chambers extradition",
@@ -6529,9 +6634,10 @@
       "discovered_at": "2026-11-19T21:42:16.666690+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "5ab963260eeeb5a1",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:42:22.331155+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "b9bcd4a25ded1778": {
       "title": "Trump, Xi and Putin meet as global alliances hang in the balance - NPR",
@@ -6544,9 +6650,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T21:42:20.836359+00:00",
       "id": "b9bcd4a25ded1778",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:42:22.389360+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "1cfa2e148c196af9": {
       "title": "Families flee Gaza’s Bureij camp as Israel launches new offensive",
@@ -6560,9 +6667,10 @@
       "discovered_at": "2026-11-19T21:42:16.729121+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "1cfa2e148c196af9",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:42:22.448836+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "c41c10710a37e09a": {
       "title": "France awaits verdict six years after police beat Black music producer",
@@ -6576,9 +6684,10 @@
       "discovered_at": "2026-11-19T21:42:16.792216+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "c41c10710a37e09a",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:42:22.509361+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "6f0844b276e61183": {
       "title": "Palestinians in Gaza face new displacement after Israeli army operation",
@@ -6592,9 +6701,10 @@
       "discovered_at": "2026-11-19T21:45:10.349933+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "6f0844b276e61183",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:45:15.844386+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "631c89885b6be6dd": {
       "title": "Iraq reaches compromise with Kataib Hezbollah over armed group’s stronghold",
@@ -6608,9 +6718,10 @@
       "discovered_at": "2026-11-19T21:45:10.415367+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "631c89885b6be6dd",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:45:15.907081+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "e1d868c73a854cff": {
       "title": "Trump-Xi-Putin summit: Five things you need to know",
@@ -6624,9 +6735,10 @@
       "discovered_at": "2026-11-19T21:45:10.463800+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "e1d868c73a854cff",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:45:15.953548+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "62d4c137946c9dd0": {
       "title": "Meta rethinks 2030 climate goals as AI data centres drive emissions up",
@@ -7455,38 +7567,516 @@
       "status": "QUEUED",
       "created_at": "2026-11-21T02:06:38.348655+00:00",
       "attempts": 0
+    },
+    "ce971e52eddae261": {
+      "title": "NASA’s November 2026 skywatching tips",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_urls": [
+        "https://www.jpl.nasa.gov/videos/whats-up-november-2026-skywatching-tips-from-nasa/"
+      ],
+      "media": {
+        "source_url": "https://upload.wikimedia.org/wikipedia/commons/4/41/What%27s_Up-_November_2026_Skywatching_Tips_from_NASA_%28JPL-20261029-WHATSUf-0001-Whats_Up_November_2026%29.webm",
+        "attribution_url": "https://www.jpl.nasa.gov/videos/whats-up-november-2026-skywatching-tips-from-nasa/",
+        "creator": "NASA Jet Propulsion Laboratory",
+        "license": "Public domain (U.S.)",
+        "rights_confirmed": true,
+        "rights_note": "Wikimedia Commons identifies this NASA video as U.S. public domain. Review the excerpt for protected NASA insignia and third-party material before publishing."
+      },
+      "id": "ce971e52eddae261",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:51.199921+00:00",
+      "attempts": 0
+    },
+    "2810c54490466ad7": {
+      "title": "Why is the US Army detonating lead-rich explosives in Iowa?",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/21/why-is-the-us-army-detonating-lead-rich-explosives-in-iowa?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-21T20:15:13+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-21T20:43:40.430081+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "2810c54490466ad7",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:51.247856+00:00",
+      "attempts": 0
+    },
+    "fa0cc2fbc22b74db": {
+      "title": "US senator says Pentagon restrictions on Canada focus on think tanks and social events - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiowFBVV95cUxNZmw3Y1htZGpZMHFxYmNleFp6ZWV4eGNfdU5GSGdWbFd3cmtiaS1XV0RsT3R0WExOeDVwOXExRmxMOWFUc0xyakhsSzBQb282RUVWVXRYTmU2YlVWLTBfWHBDZk96U1hseDZPSFJVcmd1VWZwVlYyTTAzNEQ1XzVZbGU1d1ItVmdvZ3hDaWhVNDVRNnpTUnNiUXJrWG9uaHpKOGw4?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-21T19:37:27+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-21T20:43:47.470431+00:00",
+      "id": "fa0cc2fbc22b74db",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:51.343978+00:00",
+      "attempts": 0
+    },
+    "de01b912b12918e0": {
+      "title": "Fight over fossil fuels leaves COP31 climate talks in deadlock",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/c6ly5w40eg07o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-21T19:33:49+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-21T20:43:39.018095+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "de01b912b12918e0",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:51.391955+00:00",
+      "attempts": 0
+    },
+    "1952b77f07a3678c": {
+      "title": "Russia-bound ship attacked in Gulf of Finland",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cj752ddve27ko?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-21T19:20:22+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-21T20:43:38.916052+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "1952b77f07a3678c",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:51.428730+00:00",
+      "attempts": 0
+    },
+    "3268000fbffbea05": {
+      "title": "President Trump signs new law that ends penny production after almost 250 years - HELLO!",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMivAFBVV95cUxORGRFX0NxaDRfMXAyZGg3Y3dJT2dkQ3pGdTNPcWVFQUF5azFOaFZObGJjVmtxcXR0QmRkc3RqblhiU1U3VmdVUS1rTXFIZ0hzMXJzNmlzVjAwdEFXQkwzYXNxUVRrMXVBTHVHb3h6RTIwWHJ2NF96cFVyNU1OeVJIS0NRZGRxMUJpMjE0aVVUVF91VnpWVlNmQWZ1a3NpSkNfaktxcWRPREw0MFpsdUJTakZtaS1BVC1vbEtyUg?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-21T19:18:01+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-21T20:43:46.266324+00:00",
+      "id": "3268000fbffbea05",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:51.492945+00:00",
+      "attempts": 0
+    },
+    "9dd495fd1ea4be81": {
+      "title": "Lock of George Washington's hair sold at auction for $4,000 - CBS News",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMid0FVX3lxTFB6TWlyQklTb3dyaWNnemlxUUZFMW5peE95eldCajBTQ0R0TGxPWUFzblZZUm1uTWVEdkVob2daWVpFSTJ0SVloNDBOTzE3MHNucEszbm9pbFpXOVlBUHJpVTUzRExpTU1xa05iVFBtMXRraW1lakJv?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-21T18:54:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-21T20:43:47.364138+00:00",
+      "id": "9dd495fd1ea4be81",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:51.546957+00:00",
+      "attempts": 0
+    },
+    "be5bf18fc4f36c7b": {
+      "title": "Glyphosate - Britannica",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5wT2NLTWo4LURHNDVhb2RkemliNUI5NTM3SU1JRjF2MllTU2RaZFdhbk9BRjFlNWRNdWxmWnc1NE1xeHZtaTAxYmZ2bXF3ZUhmZWFzclRwUXJ4UkVV?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-21T20:43:43.143421+00:00",
+      "id": "be5bf18fc4f36c7b",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:51.566207+00:00",
+      "attempts": 0
+    },
+    "dc0db9666b69ddf6": {
+      "title": "The True Story Behind 'The Altruists' and the FTX Scandal - Time Magazine",
+      "category": "true_events",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilAFBVV95cUxObEJ5aFZGRnJSN0dlWG14cHJjTW5seTB3U2lKb25CRUdWcjBxR0xfX1ptZ2dQSFhNUHlqQnNVZFl4ZjRuWDQ3YnhST1Z5UE9IVk8yRHlXZ3NIbF8xWjJ6ZF9qNWZGRml3LVJGVWFzSHkyZVhPQnhTRGxRczlFdzNUVTBjN0N3SDRubm9zT0R0VklFMjlh?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-21T20:43:43.899487+00:00",
+      "id": "dc0db9666b69ddf6",
+      "status": "WAITING",
+      "created_at": "2026-11-21T20:43:51.623088+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-21T20:46:08.716398+00:00",
+      "youtube_visual_discovery": [
+        {
+          "id": "uMGbaguKHVI",
+          "license": "youtube"
+        }
+      ],
+      "stock_reviews": {
+        "e2aa561812e898851792c4a882aad4b4ca733e33da869ede3e13c3b21fef650d": {
+          "matches": true,
+          "reason": "The frame displays graphic text related to cryptocurrency, which is relevant to the topic of the FTX scandal and cryptocurrency exchange."
+        },
+        "b626c4ca197473463b96e764de0deacab1cb795d2ff8445f452bcdd9a3d35a3a": {
+          "matches": true,
+          "reason": "The frame shows a modern corporate office building at dusk, which serves as suitable B-roll for a video discussing a major corporate scandal and the collapse of a crypto exchange."
+        },
+        "bacf39b77fa4a4322e6bbe1eeb3619a4c17d58014aaab96acb5d43a5ad332643": {
+          "matches": true,
+          "reason": "The image shows Alcatraz Island, a famous federal prison, which serves as a fitting and evocative B-roll metaphor for the prison sentence and justice aspects of the FTX scandal discussed in the video."
+        },
+        "3747682a03a35f7676c9fdffa3ef3b4112861a620b279a741f43a28392ed188f": {
+          "matches": true,
+          "reason": "The footage shows a person typing on a laptop, which relates to the tech and cryptocurrency context of the FTX scandal and corporate work."
+        },
+        "bd0462edd4745401dd38f66f558828581dcef5497d6161792e6fdf086b1b4439": {
+          "matches": true,
+          "reason": "The footage shows someone typing on a computer keyboard, which relates to the cryptocurrency exchange and digital finance theme of the FTX scandal video."
+        }
+      },
+      "blocker": "Stock footage review allowance reached for this draft; saved progress"
+    },
+    "e7715d838068450b": {
+      "title": "Mammalian Protein Recoding by ADAR Editing Is Rare but Conserved - Bioengineer.org",
+      "category": "true_events",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMikwFBVV95cUxPY0g3TkpqdVdwUURyalVET0ZjM3Z5bFROc3pEc2ItZkczc25GM1IybGU1QzYzSVFhNWJ5UUFJWkRSZWUxQ0JfaE5JTDhvQnFDN25McW9jUEtkaDZQYlhrd2ZrSDRoNHZpbFVUUFNBd2YzT1NHdzhtZWVOQ0lXLVpHaEtRQ2dGY1dqN0RYWnAtUGFYNFk?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-21T20:43:43.967485+00:00",
+      "id": "e7715d838068450b",
+      "status": "HOLD",
+      "created_at": "2026-11-21T20:43:51.686431+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-21T20:47:26.370759+00:00",
+      "blocker": "Script length outside target range: 41 words; need 54-90 for 30 seconds"
+    },
+    "ad39e831c82176aa": {
+      "title": "How The Ronettes Defined The Girl Group Sound And Changed Pop Music Forever - That Eric Alper",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQMEJ0Ty02cnRUOWZmWWdjTTFtaFZ0U2FDcVhpa3ZxblFOUUlfSXJGRXZXeTkzbmtKanpzSVE5dE1SaFhVcVRYUjZ3NWxGaVBaTDFsZXZ1cWs4eW5zLXdxbUdyZ2Z5Q291S1JxOUZrUFhNd3dXWktWQmNkSEUxb0F5RlRmTzJ0OUdYUl9NSEJzR1Azc3dDMF9XMGRMa05wcXRHdll0anVSLWhJeWx3RWdpU0wyUDd1dEZZ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-21T20:43:44.727528+00:00",
+      "id": "ad39e831c82176aa",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:51.756062+00:00",
+      "attempts": 0
+    },
+    "5f909cd6c113105d": {
+      "title": "The 6 Best Samsung Soundbars of 2026: Reviews - RTINGS.com",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1vVUJEUG0yYUk2YnpKaWpCYlh2cndvSVR3a3NBLW5IbVNEVVlLMTBlbXFGNS13VkFxS3lHTnFucEdwcVk1aVUxekw3dndPV0JjbkJaX0w2WW1nTVE?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-21T20:43:45.002992+00:00",
+      "id": "5f909cd6c113105d",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:51.799414+00:00",
+      "attempts": 0
+    },
+    "0c306c70e14c7ae1": {
+      "title": "Shakira - Britannica",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiV0FVX3lxTE1pY1cwR1E3NHhLWmNSU2FkTUZDT09zT3JVREJrWjktWS1ZbkVSanc5N2k1RFIybTVLVVNHMHZJaXhScW81TDhqeFNaaWJwTFRMd2JKMzI2bw?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-21T20:43:45.022370+00:00",
+      "id": "0c306c70e14c7ae1",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:51.817919+00:00",
+      "attempts": 0
+    },
+    "90fafab88514864a": {
+      "title": "Clip highlight: Glyphosate Declared a Probable Human Carcinogen",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "SC-sY917-gw",
+      "discovery_query": "Glyphosate",
+      "discovery_only": false,
+      "discovered_at": "2026-11-21T20:43:49.881132+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=SC-sY917-gw",
+        "creator": "NutritionFacts.org",
+        "license": "creativeCommon"
+      },
+      "id": "90fafab88514864a",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:51.866745+00:00",
+      "attempts": 0
+    },
+    "2d2bab3ae4fe33ec": {
+      "title": "Clip highlight: The Shocking Truth About Weed Killer (Glyphosate) in Your Food! | Dr. Steven Gundry",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "oxOanCd5WK0",
+      "discovery_query": "Glyphosate",
+      "discovery_only": false,
+      "discovered_at": "2026-11-21T20:43:49.881148+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=oxOanCd5WK0",
+        "creator": "The Dr. Gundry Podcast",
+        "license": "creativeCommon"
+      },
+      "id": "2d2bab3ae4fe33ec",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:51.935071+00:00",
+      "attempts": 0
+    },
+    "176997dde36fbd50": {
+      "title": "Clip highlight: Why Glyphosate Isn't the Scariest Weed Killer Anymore! Paraquat and Diquat",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "ktDPAkx1klE",
+      "discovery_query": "Glyphosate",
+      "discovery_only": false,
+      "discovered_at": "2026-11-21T20:43:49.881152+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=ktDPAkx1klE",
+        "creator": "The Dr. Gundry Podcast",
+        "license": "creativeCommon"
+      },
+      "id": "176997dde36fbd50",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:52.003971+00:00",
+      "attempts": 0
+    },
+    "1fd861d9d2e518e8": {
+      "title": "Clip highlight: The Effects of Glyphosate on Children and How to Reduce Exposure",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "hswkrQ1LlhI",
+      "discovery_query": "Glyphosate",
+      "discovery_only": false,
+      "discovered_at": "2026-11-21T20:43:49.881154+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=hswkrQ1LlhI",
+        "creator": "NutritionFacts.org",
+        "license": "creativeCommon"
+      },
+      "id": "1fd861d9d2e518e8",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:52.065913+00:00",
+      "attempts": 0
+    },
+    "8a6288f104a8ad43": {
+      "title": "Clip highlight: Is Glyphosate the Biggest Threat to YOUR Health?! Weed Killers and Diquat Exposed!",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "F6eJtQ9bnL0",
+      "discovery_query": "Glyphosate",
+      "discovery_only": false,
+      "discovered_at": "2026-11-21T20:43:49.881157+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=F6eJtQ9bnL0",
+        "creator": "The Dr. Gundry Podcast",
+        "license": "creativeCommon"
+      },
+      "id": "8a6288f104a8ad43",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:52.138972+00:00",
+      "attempts": 0
+    },
+    "d48d92d977f13a50": {
+      "title": "Clip highlight: Dr. Michael Antoniou on the Dangers of Glyphosate",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "J9hFpuT0TOo",
+      "discovery_query": "Glyphosate",
+      "discovery_only": false,
+      "discovered_at": "2026-11-21T20:43:49.881159+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=J9hFpuT0TOo",
+        "creator": "corbettreport",
+        "license": "creativeCommon"
+      },
+      "id": "d48d92d977f13a50",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:52.189142+00:00",
+      "attempts": 0
+    },
+    "e5ce75aa673f34a8": {
+      "title": "Clip highlight: What Explains the Different Glyphosate Safety Conclusions?",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "TV6fFWVjGUk",
+      "discovery_query": "Glyphosate",
+      "discovery_only": false,
+      "discovered_at": "2026-11-21T20:43:49.881162+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=TV6fFWVjGUk",
+        "creator": "NutritionFacts.org",
+        "license": "creativeCommon"
+      },
+      "id": "e5ce75aa673f34a8",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:52.245289+00:00",
+      "attempts": 0
+    },
+    "d367d971bc82fe4e": {
+      "title": "Clip highlight: Everything You Need To Know About Glyphosate",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "d95FL_b1B0U",
+      "discovery_query": "Glyphosate",
+      "discovery_only": false,
+      "discovered_at": "2026-11-21T20:43:49.881165+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=d95FL_b1B0U",
+        "creator": "Theresa Kadish",
+        "license": "creativeCommon"
+      },
+      "id": "d367d971bc82fe4e",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:52.292391+00:00",
+      "attempts": 0
+    },
+    "2d842fa500a780e9": {
+      "title": "Clip highlight: Is Monsanto’s Roundup Pesticide Glyphosate Safe?",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "EVZK4n82u6w",
+      "discovery_query": "Glyphosate",
+      "discovery_only": false,
+      "discovered_at": "2026-11-21T20:43:49.881167+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=EVZK4n82u6w",
+        "creator": "NutritionFacts.org",
+        "license": "creativeCommon"
+      },
+      "id": "2d842fa500a780e9",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:52.343876+00:00",
+      "attempts": 0
+    },
+    "d200b1d9f859c8eb": {
+      "title": "Clip highlight: Are Consumers of GMO Crops Exposed to Enough Glyphosate to Increase Cancer Risk?",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "tqBpTisBZV8",
+      "discovery_query": "Glyphosate",
+      "discovery_only": false,
+      "discovered_at": "2026-11-21T20:43:49.881170+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=tqBpTisBZV8",
+        "creator": "NutritionFacts.org",
+        "license": "creativeCommon"
+      },
+      "id": "d200b1d9f859c8eb",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:52.416679+00:00",
+      "attempts": 0
+    },
+    "123d702afc66deea": {
+      "title": "Clip highlight: Glyphosate kills. Let’s ban it.",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "UpgdB06_ggU",
+      "discovery_query": "Glyphosate",
+      "discovery_only": false,
+      "discovered_at": "2026-11-21T20:43:49.881172+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=UpgdB06_ggU",
+        "creator": "GreensEFA",
+        "license": "creativeCommon"
+      },
+      "id": "123d702afc66deea",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:52.453836+00:00",
+      "attempts": 0
+    },
+    "995a30ea58b04ec7": {
+      "title": "Clip highlight: Top 10 Best Motown Girl Groups of All Time",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "UWAAde8J688",
+      "discovery_query": "How The Ronettes Defined The Girl Group Sound And Changed",
+      "discovery_only": false,
+      "discovered_at": "2026-11-21T20:43:49.881174+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=UWAAde8J688",
+        "creator": "StarScope Entertainment",
+        "license": "creativeCommon"
+      },
+      "id": "995a30ea58b04ec7",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:52.500771+00:00",
+      "attempts": 0
+    },
+    "3bfd20eb7ddcccbd": {
+      "title": "Clip highlight: 10 Motown Songs That Changed Music Forever (You Won't Believe #3)",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "Zg7v15Id71o",
+      "discovery_query": "How The Ronettes Defined The Girl Group Sound And Changed",
+      "discovery_only": false,
+      "discovered_at": "2026-11-21T20:43:49.881177+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=Zg7v15Id71o",
+        "creator": "Groove Lens",
+        "license": "creativeCommon"
+      },
+      "id": "3bfd20eb7ddcccbd",
+      "status": "QUEUED",
+      "created_at": "2026-11-21T20:43:52.608505+00:00",
+      "attempts": 0
     }
   },
   "budget": {
-    "day": "2026-11-20",
+    "day": "2026-11-21",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 18,
-    "ai": 96,
-    "pixabay": 16
+    "youtube": 13,
+    "pixabay": 17,
+    "ai": 32
   },
-  "content_cycle_index": 10,
-  "content_batch": null,
+  "content_cycle_index": 11,
+  "content_batch": {
+    "category": "music",
+    "completed": 0,
+    "story_keys": [],
+    "media_hashes": [],
+    "source_urls": []
+  },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-21T02:06:38.349628+00:00",
-    "attempted_ids": [],
+    "started_at": "2026-11-21T20:43:52.609657+00:00",
+    "attempted_ids": [
+      "6d7895ef328280ad",
+      "9a19041fc49fe284",
+      "6832207212ec0e88",
+      "cd55fa9344c3d998",
+      "dc0db9666b69ddf6",
+      "e7715d838068450b",
+      "0d3903eaaa721d2d"
+    ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "categories_deferred": [
-      "true_events",
-      "music",
-      "world_news",
-      "creators",
-      "science",
-      "movies",
-      "culture",
-      "sports",
-      "president"
+      "true_events"
     ],
-    "finished_at": "2026-11-21T02:06:38.445509+00:00",
-    "attempted": 0,
+    "pause_reason": "Per-run AI allowance reached; job saved for the next run",
+    "finished_at": "2026-11-21T20:48:29.522495+00:00",
+    "attempted": 7,
     "completed": 0,
-    "gemini_request_attempts": 0
+    "gemini_request_attempts": 32
   },
   "telegram_deliveries": {
     "2d869bc60f3da658c9197b934c45dfddb3c797a7bc940732029e92f431cf90f2": {
