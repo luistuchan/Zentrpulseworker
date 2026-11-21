@@ -531,6 +531,7 @@ SCRIPT_SCHEMA = object_schema({
         'id': {'type': 'STRING'}, 'narration': {'type': 'STRING'},
         'claim_ids': {'type': 'ARRAY', 'items': {'type': 'STRING'}},
         'visual_query': {'type': 'STRING'}, 'visual_description': {'type': 'STRING'},
+        'alternate_visual_queries': {'type': 'ARRAY', 'items': {'type': 'STRING'}},
         'requires_exact_footage': {'type': 'BOOLEAN'}})},
 })
 
@@ -549,7 +550,7 @@ decision: "draft" or "reject", reason: string, title: string, description: strin
 claims: [{id: "c1", text: string, evidence: [{source_id: "s1", quote: exact substring}]}],
 scenes: [{id: "s01", narration: string, claim_ids: ["c1"],
 visual_query: precise short stock search, visual_description: concrete matching visual,
-requires_exact_footage: boolean}].
+alternate_visual_queries: [string, string], requires_exact_footage: boolean}].
 For news use two independent source domains; for non-news use at least one attributed source. Every scene needs claims,
 and quotes must actually appear in supplied sources. Do not call stock footage the real event.
 Set requires_exact_footage=true whenever the actual person, film/game scene, demonstration,
@@ -562,6 +563,9 @@ an actual person's speech, a specific action, film, game or play that was not su
 reject it. Do not mark exact footage as unnecessary merely to pass production.
 Stock visual_query must use 1-3 concrete searchable keywords, such as "solar panels"
 or "oil refinery", without names, dates, camera instructions or a full sentence.
+For illustrative scenes, give two alternate searches for different relevant visuals.
+For example, a police badge scene could also use evidence collection or a police station.
+Use an empty list for scenes requiring exact footage.
 Choose stock B-roll that fits the overall video topic. It can illustrate a different
 part of the story than the current line. Describe one concrete visual for each search. Avoid unnecessary requirements for lighting, weather, camera movement,
 on-screen text, a named facility or an exact place that generic stock cannot establish.
@@ -891,7 +895,21 @@ def stock_queries(scene):
                 'camera pan zoom tracking high quality resolution 4k 1080p'.split())
     words = [x for x in re.findall(r'[a-zA-Z0-9]+', original.lower())
              if x not in style and x not in SEARCH_STOPWORDS]
-    return list(dict.fromkeys(x for x in (original, ' '.join(words[:3]), ' '.join(words[:2])) if x))[:3]
+    alternatives = scene.get('alternate_visual_queries')
+    if not isinstance(alternatives, list):
+        alternatives = []
+    queries = [original]
+    seen = {original.casefold()}
+    for candidate in (*alternatives, ' '.join(words[:3]), ' '.join(words[:2])):
+        if not isinstance(candidate, str):
+            continue
+        query = ' '.join(candidate.split())[:100]
+        if query and query.casefold() not in seen:
+            queries.append(query)
+            seen.add(query.casefold())
+        if len(queries) == 3:
+            break
+    return queries
 
 
 def stock_match_prompt(scene):
