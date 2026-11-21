@@ -1642,7 +1642,7 @@ def report(state, warnings):
               'Attempts this run: ' + str(len(state.get('last_run', {}).get('attempted_ids', [])))]
     if not any(job_category(j) == 'clipper' and j['status'] in ('QUEUED', 'WAITING', 'PRODUCING')
                for j in state['jobs'].values()):
-        warnings.append('Clipper has no eligible source videos in the queue; YouTube discovery has not supplied a usable clip.')
+        warnings.append('Clipper has no eligible source videos in the queue; see the source discovery results.')
     lines += ['', *warnings]
     (OUTPUT / 'status.md').write_text('\n'.join(lines) + '\n')
     atomic_json(OUTPUT / 'status.json', {'generated_at': now(), 'warnings': warnings,
@@ -1929,7 +1929,7 @@ def main():
             leads, errors = discover(30, [j['title'] for j in state['jobs'].values()])
             try:
                 import clipper
-                leads += clipper.discover(budget, api=__import__(__name__))
+                leads += clipper.discover(budget, api=__import__(__name__), topics=leads, warnings=errors)
             except Hold as exc:
                 errors.append('clipper: ' + str(exc))
             warnings += ['Discovery unavailable: ' + x for x in errors]

@@ -4,7 +4,7 @@ Visual mouth-motion tracking is a heuristic, not speaker diarization. Ambiguous
 shots retain the full scene and are explicitly flagged for human review.
 """
 from __future__ import annotations
-from datetime import datetime, timezone, timedelta
+import html
 import json
 import math
 import os
@@ -14,79 +14,113 @@ import sys
 import urllib.parse
 
 
-def discover(budget, *, api):
-    """Discover viral leads broadly; only cleared material enters the render queue.
-
-    A YouTube search result is neither a reuse license nor proof of download access.
-    Non-CC clips remain visible in research for rights review rather than vanishing.
-    """
-    key = os.getenv('YOUTUBE_API_KEY', '').strip()
-    if not key:
-        return []
+def discover(budget, *, api, topics=(), warnings=None):
+    """Find footage for today's leads, with a separate reuse-filtered YouTube search."""
+    warnings = [] if warnings is None else warnings
     custom = os.getenv('CLIPPER_SEARCH_QUERY', '').strip()
-    searches = [('creators', custom or 'Kai Cenat IShowSpeed MrBeast streamer funny moments'),
-                ('animals', 'funny animals pets unexpected moments'),
-                ('entertainment_releases', 'viral creator reaction unexpected moment')]
-    candidates_by_id = {}
-    for bucket, query in searches:
-        if budget.counts.get('youtube', 0) + 2 > int(os.getenv('MAX_YOUTUBE_SEARCHES', '18')):
+    queries = [custom] if custom else []
+    categories = set()
+    for topic in topics:
+        category = topic['category']
+        if category in categories:
+            continue
+        query = ' '.join(topic['title'].rsplit(' - ', 1)[0].split()[:10])[:120]
+        if query and query not in queries:
+            queries.append(query)
+            categories.add(category)
+        if len(queries) >= 6:
             break
-        if not budget.take('youtube'):
+    if not queries:
+        queries = ['video game tips gameplay', 'science demonstrations', 'creator highlights']
+
+    leads = []
+    candidates = {}
+    key = os.getenv('YOUTUBE_API_KEY', '').strip()
+    cap = int(os.getenv('MAX_YOUTUBE_SEARCHES', '18'))
+    searches = [(query, True) for query in queries] + [(queries[0], False)]
+    for query, reusable_only in searches:
+        if not key or budget.counts.get('youtube', 0) + 2 > cap or not budget.take('youtube'):
             break
-        params = urllib.parse.urlencode({'key': key, 'part': 'snippet', 'type': 'video',
-            'q': query[:120], 'relevanceLanguage': 'en',
-            'safeSearch': 'strict', 'order': 'viewCount', 'maxResults': 8,
-            'publishedAfter': (datetime.now(timezone.utc) - timedelta(days=30)).isoformat()})
+        params = urllib.parse.urlencode({
+            'key': key, 'part': 'snippet', 'type': 'video', 'q': query,
+            'maxResults': 12,
+            **({'videoLicense': 'creativeCommon'} if reusable_only else {}),
+        })
         try:
             results = api.json_http('https://www.googleapis.com/youtube/v3/search?' + params, retries=0)
-        except api.Hold:
+        except (api.Hold, api.Wait):
+            warnings.append('YouTube search unavailable for: ' + query)
             continue
         for item in results.get('items', []):
             video_id = item.get('id', {}).get('videoId', '')
             if re.fullmatch(r'[\w-]{11}', video_id):
-                candidates_by_id.setdefault(video_id, bucket)
-    if not candidates_by_id or not budget.take('youtube'):
-        return []
-    params = urllib.parse.urlencode({'key': key, 'part': 'status,snippet,statistics,contentDetails',
-                                    'id': ','.join(candidates_by_id)})
-    videos = api.json_http('https://www.googleapis.com/youtube/v3/videos?' + params, retries=0).get('items', [])
-    def score(video):
-        stats = video.get('statistics') or {}
-        views = int(stats.get('viewCount') or 0)
-        likes = int(stats.get('likeCount') or 0)
-        # Favor highly viewed clips with real engagement, not arbitrary search order.
-        return math.log1p(views) + .35 * math.log1p(likes)
-    videos.sort(key=score, reverse=True)
-    leads, bucket_counts = [], {}
-    for video in videos:
-        snippet = video.get('snippet') or {}
-        video_id = video.get('id', '')
-        bucket = candidates_by_id.get(video_id, 'creators')
-        title = snippet.get('title', video_id)
-        if snippet.get('liveBroadcastContent') in ('live', 'upcoming'):
+                candidates.setdefault(video_id, query)
+    if candidates and budget.take('youtube'):
+        for offset in range(0, len(candidates), 50):
+            if offset and (budget.counts.get('youtube', 0) >= cap or not budget.take('youtube')):
+                break
+            ids = list(candidates)[offset:offset + 50]
+            params = urllib.parse.urlencode({'key': key, 'part': 'status,snippet', 'id': ','.join(ids)})
+            try:
+                videos = api.json_http('https://www.googleapis.com/youtube/v3/videos?' + params,
+                                       retries=0).get('items', [])
+            except (api.Hold, api.Wait):
+                warnings.append('YouTube license metadata unavailable')
+                continue
+            for video in videos:
+                snippet = video.get('snippet', {})
+                status = video.get('status', {})
+                video_id = video.get('id')
+                if (video_id not in candidates or snippet.get('liveBroadcastContent') in ('live', 'upcoming')):
+                    continue
+                reusable = status.get('license') == 'creativeCommon'
+                leads.append({'title': 'Clip highlight: ' + snippet.get('title', video_id),
+                              'category': 'clipper', 'content_type': 'clipper',
+                              'source_video_id': video_id, 'discovery_query': candidates[video_id],
+                              'discovery_only': not reusable,
+                              'discovered_at': api.now(),
+                              'media': {'source_url': 'https://www.youtube.com/watch?v=' + video_id,
+                                        'creator': snippet.get('channelTitle', ''),
+                                        'license': 'creativeCommon' if reusable else 'standardYouTube'}})
+    if not any(not lead['discovery_only'] for lead in leads):
+        warnings.append('YouTube returned no verified reusable video leads for the selected topics')
+
+    seen = set()
+    for query in queries[:4]:
+        params = urllib.parse.urlencode({
+            'action': 'query', 'generator': 'search', 'gsrsearch': 'filetype:video ' + query,
+            'gsrnamespace': 6, 'gsrlimit': 6, 'prop': 'imageinfo', 'iilimit': 1,
+            'iiprop': 'url|mime|size|extmetadata',
+            'iiextmetadatafilter': 'LicenseShortName|LicenseUrl|Artist',
+            'format': 'json', 'formatversion': 2,
+        })
+        try:
+            result = api.json_http('https://commons.wikimedia.org/w/api.php?' + params, retries=0)
+        except (api.Hold, api.Wait):
+            warnings.append('Wikimedia Commons search unavailable for: ' + query)
             continue
-        is_cc = (video.get('status') or {}).get('license') == 'creativeCommon'
-        bucket_key = (bucket, is_cc)
-        if bucket_counts.get(bucket_key, 0) >= 3:
-            continue
-        bucket_counts[bucket_key] = bucket_counts.get(bucket_key, 0) + 1
-        url = 'https://www.youtube.com/watch?v=' + video_id
-        stats = video.get('statistics') or {}
-        media = {'source_url': url,
-                 'license': 'creativeCommon' if is_cc else 'standardYouTube',
-                 'license_checked_at': api.now(),
-                 'creator': snippet.get('channelTitle', ''),
-                 'rights_confirmed': False,
-                 'rights_note': ('YouTube API indicates Creative Commons; verify attribution and source rights'
-                                 if is_cc else 'Rights review required before downloading, editing or publishing')}
-        leads.append({'title': 'Clip highlight: ' + title,
-            'category': 'clipper', 'content_type': 'clipper', 'source_video_id': video_id,
-            'discovery_bucket': bucket, 'release_candidate': bucket.endswith('_releases'),
-            'discovery_only': not is_cc,
-            'viral_score': round(score(video), 2),
-            'views': int(stats.get('viewCount') or 0),
-            'likes': int(stats.get('likeCount') or 0),
-            'media': media, 'discovered_at': api.now()})
+        for page in result.get('query', {}).get('pages', []):
+            info = next(iter(page.get('imageinfo', [])), {})
+            metadata = info.get('extmetadata', {})
+            license_name = metadata.get('LicenseShortName', {}).get('value', '')
+            url = info.get('url', '')
+            if (url in seen or urllib.parse.urlsplit(url).hostname != 'upload.wikimedia.org'
+                    or not info.get('mime', '').startswith('video/')
+                    or not 0 < info.get('size', 0) <= 250_000_000
+                    or not re.fullmatch(r'CC BY [1-4]\.0|CC0|Public domain', license_name, re.I)):
+                continue
+            seen.add(url)
+            artist = metadata.get('Artist', {}).get('value', '')
+            leads.append({'title': 'Commons clip: ' + page['title'].removeprefix('File:'),
+                          'category': 'clipper', 'content_type': 'clipper',
+                          'discovery_query': query, 'discovered_at': api.now(),
+                          'media': {'source_url': url, 'attribution_url': info.get('descriptionurl', ''),
+                                    'creator': html.unescape(re.sub(r'<[^>]*>', '', artist)),
+                                    'license': license_name,
+                                    'license_url': metadata.get('LicenseUrl', {}).get('value', ''),
+                                    'rights_confirmed': True, 'rights_note': 'Wikimedia Commons license metadata'}})
+    if not seen:
+        warnings.append('Wikimedia Commons returned no eligible video files for the selected topics')
     return leads
 
 
@@ -159,6 +193,7 @@ def source_media(entry, folder, api):
         creator = media.get('creator', '')
     metadata = {'source_url': url, 'filename': path.name, 'sha256': api.digest(path),
                 'creator': creator, 'license': media.get('license', 'user-authorized'),
+                'attribution_url': media.get('attribution_url', ''), 'license_url': media.get('license_url', ''),
                 'rights_note': media.get('rights_note', '')}
     api.atomic_json(folder / 'source.json', metadata)
     return path, metadata
@@ -437,14 +472,14 @@ def process(entry, target, *, api):
     quality['caption_timing'] = method
     quality['requires_human_review'] += ['original transcript accuracy', 'excerpt context',
         'face tracking and active speaker (visual heuristic)', 'source attribution and reuse rights']
-    attribution_url = metadata.get('source_url') or entry.get('media', {}).get('source_url', '')
+    attribution_url = metadata.get('attribution_url') or metadata.get('source_url') or entry.get('media', {}).get('source_url', '')
     # Omit URL queries that might contain signed media credentials.
     if attribution_url:
         parsed = urllib.parse.urlsplit(attribution_url)
         if parsed.hostname not in ('www.youtube.com','youtube.com','youtu.be'):
             attribution_url = urllib.parse.urlunsplit((parsed.scheme, parsed.netloc, parsed.path, '', ''))
     attribution = {'creator': metadata.get('creator', ''), 'url': attribution_url,
-                   'license': metadata.get('license', 'user-authorized'),
+                   'license': metadata.get('license', 'user-authorized'), 'license_url': metadata.get('license_url', ''),
                    'modifications': 'Excerpted, reframed, normalized audio, transcribed captions'}
     review = {'schema_version': 3, 'job_id': entry['id'], 'content_type': 'clipper',
         'status': 'REVIEW_REQUIRED', 'generated_at': api.now(), 'video_sha256': api.digest(output),
@@ -457,6 +492,7 @@ def process(entry, target, *, api):
     creator_credit = attribution['creator'].strip() or 'Original creator (verify before posting)'
     credit_caption = (entry['title'] + '\n\nCredit: ' + creator_credit +
                       '\nOriginal video: ' + attribution_url +
+                      ('\nLicense: ' + attribution['license_url'] if attribution['license_url'] else '') +
                       '\nEdited highlight with reframing and captions.\n'
                       'Verify creator permission and any third-party music before publishing.\n')
     (output.parent / 'caption.txt').write_text(credit_caption)
