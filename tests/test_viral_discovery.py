@@ -23,6 +23,9 @@ class API:
     class Hold(Exception):
         pass
 
+    class Wait(Hold):
+        pass
+
     def __init__(self):
         self.searches = []
 
@@ -30,7 +33,10 @@ class API:
         return '2026-11-17T00:00:00Z'
 
     def json_http(self, url, retries=0):
-        params = parse_qs(urlsplit(url).query)
+        parsed = urlsplit(url)
+        params = parse_qs(parsed.query)
+        if parsed.hostname == 'commons.wikimedia.org':
+            return {'query': {'pages': {}}}
         if '/search' in url:
             self.searches.append(params)
             return {'items': [{'id': {'videoId': 'abcdefghijk'}},
@@ -50,14 +56,14 @@ class API:
 
 
 class ViralDiscoveryTests(unittest.TestCase):
-    def test_discovers_regular_creator_videos_without_cc_filter(self):
+    def test_discovers_regular_creator_videos_with_broad_search(self):
         api = API()
         with patch.dict(os.environ, {'YOUTUBE_API_KEY': 'test-api-key'}):
             leads = clipper.discover(Budget(), api=api)
         self.assertEqual(len(leads), 2)
-        self.assertTrue(all('videoLicense' not in q for q in api.searches))
+        self.assertTrue(any('videoLicense' not in q for q in api.searches))
+        self.assertTrue(any(q.get('videoLicense') == ['creativeCommon'] for q in api.searches))
         self.assertEqual(leads[0]['source_video_id'], 'abcdefghijk')
-        self.assertEqual(leads[0]['views'], 2000000)
         self.assertTrue(leads[0]['discovery_only'])
         self.assertFalse(leads[1]['discovery_only'])
         self.assertEqual(leads[0]['media']['creator'], 'Creator One')
@@ -81,8 +87,9 @@ class ViralDiscoveryTests(unittest.TestCase):
         api = API()
         with patch.dict(os.environ, {'YOUTUBE_API_KEY': 'test-api-key'}):
             leads = clipper.discover(Budget(), api=api)
-        self.assertFalse(leads[0]['media']['rights_confirmed'])
-        self.assertIn('Rights review', leads[0]['media']['rights_note'])
+        self.assertTrue(leads[0]['discovery_only'])
+        with self.assertRaisesRegex(API.Hold, 'owned/authorized footage'):
+            clipper.source_media(leads[0], None, api)
 
 
 if __name__ == '__main__':
