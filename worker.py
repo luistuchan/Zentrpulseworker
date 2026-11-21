@@ -38,6 +38,7 @@ SCHEMA_VERSION = 3
 SOURCE_PIPELINE_VERSION = 3
 STOCK_PIPELINE_VERSION = 5
 SCRIPT_PIPELINE_VERSION = 2
+EXACT_FOOTAGE_REPLAN_VERSION = 2
 CATEGORIES = {
     'movies': 'movie scene hidden clue explained',
     'creators': 'streamer viral moment context explained',
@@ -865,6 +866,11 @@ def narration(scene, folder, entry):
     if seconds < 1 or seconds > 8:
         raise Hold('Scene narration must last 1-8 seconds; revise scene or supplied audio')
     atomic_json(meta_path, {'key': key})
+    if seconds > 6.9 and os.getenv('ZENTR_VISUAL_QUALITY_GATE', '1') == '1':
+        paced = path.with_name(scene['id'] + '.paced.mp3')
+        run(['ffmpeg', '-v', 'error', '-y', '-i', str(path), '-af',
+             f'atempo={seconds / 6.85:.6f}', str(paced)])
+        return paced, duration(paced)
     return path, seconds
 
 
@@ -1347,7 +1353,7 @@ def render(plan, entry, folder, budget, target):
                                               'audio_sha256': digest(local_file(entry['audio'][scene['id']]))
                                               if entry.get('audio', {}).get(scene['id']) else None,
                                               'voice': os.getenv('TTS_VOICE', 'en-US-AndrewNeural'),
-                                              'layout_version': 6}, sort_keys=True).encode()).hexdigest()
+                                              'layout_version': 7}, sort_keys=True).encode()).hexdigest()
         prior = load(meta_path, {})
         prior_asset = prior.get('asset', {})
         reviewed_photo = prior_asset.get('provider') != 'Pixabay photo' or prior_asset.get('scene_reviewed')
@@ -1520,6 +1526,15 @@ def reopen_stock_holds(state):
             job.pop('blocker', None)
 
 
+def reopen_exact_footage_holds(state):
+    for job in state['jobs'].values():
+        if (job['status'] == 'HOLD'
+                and str(job.get('blocker', '')).startswith('Automatic footage unavailable: exact local footage needed')
+                and job.get('exact_footage_replan_version', 0) < EXACT_FOOTAGE_REPLAN_VERSION):
+            job.update(status='QUEUED', exact_footage_replan_version=EXACT_FOOTAGE_REPLAN_VERSION)
+            job.pop('blocker', None)
+
+
 def process(entry, budget, target):
     content_type = entry.get('content_type', 'explainer')
     if content_type == 'clipper':
@@ -1545,14 +1560,15 @@ def process(entry, budget, target):
     validate_plan(plan, sources, target, min_sources=min_sources)
     unavailable = [scene['id'] for scene in plan['scenes']
                    if scene['requires_exact_footage'] and scene['id'] not in entry.get('assets', {})]
-    if unavailable and not (folder / 'illustrative-replan-attempted.json').exists():
-        # One bounded second chance, not an infinite loop or a fabricated event.
-        # Rewrite the explanation using genuinely illustrative objects/processes;
-        # never label stock as actual footage of a person, game, film, or event.
-        atomic_json(folder / 'illustrative-replan-attempted.json',
-                    {'unavailable_scenes': unavailable, 'attempted_at': now()})
+    replan_record = folder / 'illustrative-replan-v2.json'
+    if unavailable:
+        entry['exact_footage_replan_version'] = EXACT_FOOTAGE_REPLAN_VERSION
+    if unavailable and not replan_record.exists():
+        # Record the outcome only after the model responds so a temporary
+        # quota or network failure can be retried on the next manual run.
         prompt = (SCRIPT_PROMPT + '\\nREPLAN: Actual footage for the listed scenes is unavailable. '
                   'Preserve the evidenced factual claims, quotes, and independent sources. '
+                  'Keep scenes with available visuals and revise the listed scenes first. '
                   'Change the story angle only if it can be HONESTLY illustrated using generic '
                   'stock visuals of objects, places, environments or processes. '
                   'Never depict a stock actor as the real subject; never pretend stock footage '
@@ -1568,11 +1584,13 @@ def process(entry, budget, target):
                              if scene['requires_exact_footage']
                              and scene['id'] not in entry.get('assets', {})]
         if not newly_unavailable:
+            (folder / 'critique.json').unlink(missing_ok=True)
             plan = revised
             atomic_json(plan_path, plan)
             unavailable = []
         else:
             unavailable = newly_unavailable
+        atomic_json(replan_record, {'remaining_scenes': unavailable, 'completed_at': now()})
     if unavailable:
         raise Hold('Automatic footage unavailable: exact local footage needed for ' + ', '.join(unavailable))
     critique_path = folder / 'critique.json'
@@ -1971,6 +1989,7 @@ def main():
         reopen_source_holds(state)
         reopen_script_holds(state)
         reopen_stock_holds(state)
+        reopen_exact_footage_holds(state)
         if budget.day_reset:
             # Do not carry yesterday's daily-quota WAITING state forever.
             # A fresh run can determine whether the upstream provider is ready.
