@@ -2028,11 +2028,14 @@ def main():
         if not isinstance(queue, list):
             raise Hold('queue.json must be an array')
         if args.discover:
-            leads, errors = discover(30, [j['title'] for j in state['jobs'].values()])
+            try:
+                leads, errors = discover(30, [j['title'] for j in state['jobs'].values()])
+            except (Hold, Wait) as exc:
+                leads, errors = [], ['publisher feeds: ' + str(exc)]
             try:
                 import clipper
                 leads += clipper.discover(budget, api=__import__(__name__), topics=leads, warnings=errors)
-            except Hold as exc:
+            except (Hold, Wait) as exc:
                 errors.append('clipper: ' + str(exc))
             warnings += ['Discovery unavailable: ' + x for x in errors]
             atomic_json(OUTPUT / 'research' / 'leads.json', leads)
