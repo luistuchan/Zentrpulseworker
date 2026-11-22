@@ -151,13 +151,36 @@
       "id": "4264468155308d0d",
       "status": "WAITING",
       "created_at": "2026-11-14T06:30:43.881621+00:00",
-      "attempts": 2,
+      "attempts": 3,
       "youtube_signal": {
         "status": "not_checked"
       },
-      "source_pipeline_version": 2,
-      "last_attempt_at": "2026-11-17T18:02:17.500140+00:00",
-      "blocker": "Gemini model gemini-3.5-flash-lite: Network request failed after bounded retries"
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-22T22:48:39.162008+00:00",
+      "blocker": "Stock footage review allowance reached for this draft; saved progress",
+      "youtube_visual_discovery": [],
+      "stock_reviews": {
+        "6d3b8fd9530c366b7d5481744d900e9afd158d1641e742f4b749fc27e41d723c": {
+          "matches": true,
+          "reason": "The image shows an audio editing timeline with waveforms, which directly illustrates the creation and composition of music discussed in the video topic about Jesper Kyd and the Assassin's Creed theme."
+        },
+        "aea82715cbfeee1527016550fb0505da3340f8ed3e1342af36efe868efa51b9f": {
+          "matches": true,
+          "reason": "The image shows a person playing the violin with sheet music and a microphone, which directly illustrates the musical composition and theme discussed in the video about the Assassin's Creed soundtrack."
+        },
+        "e08e98444c1da3a0e9ea919a67ddb6149bb8ea46b11e1173bdf6494a0eef5ad9": {
+          "matches": true,
+          "reason": "The frame shows an aerial view of the Colosseum in Rome, Italy, which directly relates to the setting of Assassin's Creed Brotherhood and the Italian backdrop of Ezio Auditore's story."
+        },
+        "0b18a51b073270dfacefc467624ca551963c987cd0e7bbdc4b123fab2e1933cf": {
+          "matches": true,
+          "reason": "The frame shows an ancient stone wall overgrown with plants, evoking the historical and architectural setting of Assassin's Creed and fitting the video's theme."
+        },
+        "7767ca38206a7569dd5e58a35b0c09f7912ed3462d33f286d30fc731ea9d19cb": {
+          "matches": false,
+          "reason": "The frame shows generic stock footage of tree leaves and is unrelated to the Assassin's Creed franchise or the theme 'Ezio's Family'."
+        }
+      }
     },
     "b890da7c8bb20e5f": {
       "title": "xQc explains what his viral “six console” rant was really about - Dexerto",
@@ -289,10 +312,10 @@
       "id": "0d3903eaaa721d2d",
       "status": "WAITING",
       "created_at": "2026-11-14T17:29:08.576584+00:00",
-      "attempts": 2,
+      "attempts": 3,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-21T20:48:03.064153+00:00",
-      "blocker": "Per-run AI allowance reached; job saved for the next run",
+      "last_attempt_at": "2026-11-22T22:48:11.750373+00:00",
+      "blocker": "Stock footage review allowance reached for this draft; saved progress",
       "youtube_visual_discovery": [],
       "stock_reviews": {
         "5608f1eb766cd764e0e76bade91e4dcf0d0adee97f3d26b68dd1807ed9c7241d": {
@@ -310,6 +333,22 @@
         "8418ff99ef9e04687316f43eff0f9c6fa9c33bc7c1c0dff70ef4796ab4d45ced": {
           "matches": false,
           "reason": "The frame shows a clothing rack inside a shop, which is unrelated to the topic of Ellie playing 'Take On Me' on her guitar in The Last of Us Part II."
+        },
+        "58c6c9705f5de073cf931cdc7acc930bc232716a1ddcc875eb2f8ba5e2261d99": {
+          "matches": true,
+          "reason": "The frame shows a person browsing through vinyl records in a store, which directly illustrates the music store setting mentioned in the video context regarding Ellie playing 'Take On Me'."
+        },
+        "a94de7ea5551cdb869aa66572190372cdb68662bb76982a92af98c7ba6bdd5c2": {
+          "matches": false,
+          "reason": "The image shows an indistinct, dark, and blurry view of a wall and hallway, failing to illustrate any relevant element such as the music store, guitar, or characters from The Last of Us."
+        },
+        "348ad736067fd03ef714a6dfa2186aef72187e11504bbaa6578598a80dc1d278": {
+          "matches": false,
+          "reason": "The image shows an empty indoor hallway or arcade, which has no connection to The Last of Us, music stores, or the song 'Take On Me'."
+        },
+        "6293437980d9b2184bc2ab506b2340ba03ae3b9978061424f031329d24f174fd": {
+          "matches": false,
+          "reason": "The image shows a generic empty corridor or underpass, which is not meaningfully related to Ellie, the music store in Seattle, or the song 'Take On Me' from The Last of Us."
         }
       }
     },
@@ -323,9 +362,84 @@
       "headline_score": 0,
       "discovered_at": "2026-11-15T01:57:48.651386+00:00",
       "id": "e95fac783fd7233f",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-15T01:57:48.657721+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-22T22:49:24.091317+00:00",
+      "youtube_visual_discovery": [
+        {
+          "id": "_Ol2BzM241o",
+          "license": "youtube"
+        },
+        {
+          "id": "82Vj0IP9GmI",
+          "license": "youtube"
+        },
+        {
+          "id": "xbdHRsGouWc",
+          "license": "youtube"
+        },
+        {
+          "id": "PV1ch9t_Ruo",
+          "license": "youtube"
+        },
+        {
+          "id": "YrhLpvFiY0Y",
+          "license": "youtube"
+        },
+        {
+          "id": "7u2Jwh-G2o4",
+          "license": "youtube"
+        },
+        {
+          "id": "Bj_-iiC-Fo8",
+          "license": "youtube"
+        },
+        {
+          "id": "qOVkbmo4qAo",
+          "license": "youtube"
+        },
+        {
+          "id": "k1jPlSPfjYk",
+          "license": "youtube"
+        },
+        {
+          "id": "JD7OqLN1TsM",
+          "license": "youtube"
+        },
+        {
+          "id": "fsNunGSYLKM",
+          "license": "youtube"
+        },
+        {
+          "id": "v4nMXg4vWnk",
+          "license": "youtube"
+        }
+      ],
+      "stock_reviews": {
+        "59a3d65d13e71ef66e871fd33a087dd27f5f96f88f3855b06096f61a8ce258bd": {
+          "matches": true,
+          "reason": "This frame shows a live stage production performance in front of an audience, which directly relates to the video's theme of the final polished result of stage productions."
+        },
+        "76bae0d07d0ab5b5c487729a35758de59a92152314889476fc09077ee36fcb0c": {
+          "matches": true,
+          "reason": "The frame shows a person practicing a musical instrument, which relates to the preparation, rehearsal, and dedication themes of the video."
+        },
+        "c51be6800d4c449c7e01e68361af72dea601ae8689b221bb83e982ea2b88fce1": {
+          "matches": true,
+          "reason": "The frame shows students studying and collaborating at a desk, which effectively illustrates the rigorous preparation, rehearsal, and dedication discussed in the video topic."
+        },
+        "cf5e3215275d77b7e76d780ef04a38a3e789801e37d4278fa5657f4318e0b2a9": {
+          "matches": false,
+          "reason": "The frame shows a person walking down an office hallway, which is generic footage not meaningfully related to stage production rehearsals or the specific video topic."
+        },
+        "9514098e01d10658f975e755e8202bd7d6b75833ced6eaee7955e476d3491095": {
+          "matches": false,
+          "reason": "The frame shows a low-angle view of modern city skyscrapers and the sky, which is generic architectural footage and does not relate to the video topic of stage productions, rehearsals, and student dedication."
+        }
+      },
+      "blocker": "Stock footage review allowance reached for this draft; saved progress"
     },
     "431248277a0f3c0b": {
       "title": "Abhijat Joshi reveals the HIDDEN writing trick used in 3 Idiots: EVERY scene had an object helping tell the story - Bollywood Hungama",
@@ -357,9 +471,48 @@
       "headline_score": 0,
       "discovered_at": "2026-11-15T17:29:14.634009+00:00",
       "id": "09d9f47c5e021faf",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-15T17:29:14.647911+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-22T22:50:36.465560+00:00",
+      "youtube_visual_discovery": [
+        {
+          "id": "zFzCCHEVtzA",
+          "license": "youtube"
+        },
+        {
+          "id": "isTVo36UMPE",
+          "license": "youtube"
+        },
+        {
+          "id": "O211vMJnFz0",
+          "license": "youtube"
+        }
+      ],
+      "stock_reviews": {
+        "3421be4dfd454413beda3cc2f70415b2db32faaee1073de162d0117f97fe9875": {
+          "matches": true,
+          "reason": "The frame shows a bustling city street scene with historic architecture, which visually supports the context of Philadelphia's Avenue of the Arts and theater district."
+        },
+        "271aa8ff3268b854c0ab98652248e9c37b9c91e4a5fedbe4f534243fb9ee1266": {
+          "matches": false,
+          "reason": "The image shows an ancient outdoor stone amphitheater with modern rigging in a sunny, tropical-like setting, which does not represent Philadelphia theaters and historic playhouses."
+        },
+        "3d62712f3d2cf0a63aab83b48ba2d3271e545b1d3ca035a34889c3bf4750bb83": {
+          "matches": true,
+          "reason": "This frame shows a drummer performing on stage with lighting, which is fitting for a video about theater, stage productions, and musical performances in Philadelphia."
+        },
+        "dee9a34ca36cd36adc480bc07b69eec1d6bdc379628d67cde1b6b2ff6a7e4847": {
+          "matches": true,
+          "reason": "The image shows the classic comedy and tragedy theater masks, which directly illustrate the theme of theater productions and stage shows on Philly stages discussed in the video."
+        },
+        "03170f649eb3d3a179c39d9ff22efce2c00aae5663d3dc135591c0425a742cce": {
+          "matches": false,
+          "reason": "The image shows old European-style architecture, likely in a city like Barcelona, which does not depict Philadelphia's theater district, stages, or cultural venues relevant to the video topic."
+        }
+      },
+      "blocker": "Stock footage review allowance reached for this draft; saved progress"
     },
     "c7342faafbcb636a": {
       "title": "Our new blog for science - OpenAI",
@@ -683,9 +836,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:47.992170+00:00",
       "id": "43c4c9a84bc6fb60",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T08:45:49.278974+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-22T22:51:41.840442+00:00",
+      "blocker": "Script length outside target range: 42 words; need 54-90 for 30 seconds"
     },
     "3155481e232beffb": {
       "title": "Best audio interface 2026: Expert-reviewed Thunderbolt and USB interfaces for every budget - MusicRadar",
@@ -698,9 +854,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:47.998964+00:00",
       "id": "3155481e232beffb",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T08:45:49.285032+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-22T22:52:20.106370+00:00",
+      "blocker": "Script length outside target range: 35 words; need 54-90 for 30 seconds"
     },
     "b9bec980ee3acc4a": {
       "title": "Lady Gaga | Biography, Grammys, Songs, Oscar, & Facts - Britannica",
@@ -713,9 +872,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:48.003297+00:00",
       "id": "b9bec980ee3acc4a",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-16T08:45:49.288892+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-22T22:52:59.008867+00:00",
+      "blocker": "Per-run AI allowance reached; job saved for the next run"
     },
     "98b05cefbe0e3d1c": {
       "title": "Norfolk council considers 'unfair burden' of major energy schemes - BBC",
@@ -6193,9 +6355,10 @@
       "discovered_at": "2026-11-19T21:14:11.665928+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "f1ebe9a0ed891f22",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:14:19.806208+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "af13a89bd2ab7822": {
       "title": "Trump, Xi and Putin Seek to Project Power at Their First Summit - The New York Times",
@@ -6225,9 +6388,10 @@
       "discovered_at": "2026-11-19T21:14:11.708599+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "1fae2f5d185dabbc",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:14:19.908604+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "bcaa330c519adc04": {
       "title": "Rohingya genocide survivor: ‘perpetrators will have to face consequences’",
@@ -6241,9 +6405,10 @@
       "discovered_at": "2026-11-19T21:14:11.758541+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "bcaa330c519adc04",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:14:19.958414+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "efc78449a5dbb96f": {
       "title": "Trump's defamation case against New York Times may proceed, judge rules - Yahoo",
@@ -6289,9 +6454,10 @@
       "discovered_at": "2026-11-19T21:25:18.293740+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "3c4b8ca24923120e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:25:27.120640+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "ed1db73cb8d8fbb7": {
       "title": "President Xi Jinping Meets with U.S. President Donald J. Trump - 中华人民共和国外交部",
@@ -6321,9 +6487,10 @@
       "discovered_at": "2026-11-19T21:25:20.003683+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "237ab7a5ecd5c4bd",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:25:27.230494+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "83484b017e0bae48": {
       "title": "Ten killed in Pakistan as bus crashes into gas tanker",
@@ -6337,9 +6504,10 @@
       "discovered_at": "2026-11-19T21:25:20.054304+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "83484b017e0bae48",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:25:27.278940+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "608c9fe8dc34537c": {
       "title": "Trump, Xi, Putin said they plan to boost oil production, revamp UN after trilateral talks - CNBC",
@@ -6385,9 +6553,10 @@
       "discovered_at": "2026-11-19T21:27:39.010794+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "f2ee23f7627e56d4",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:27:45.854196+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "7afe8d408713e4dc": {
       "title": "APEC final day in photos: Trump, Xi and Putin shake hands; Takaichi kept at a distance - CNBC",
@@ -6501,9 +6670,10 @@
       "discovered_at": "2026-11-19T21:36:46.368715+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "0f5a985a1dfe0671",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:36:53.465313+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "bda5daf8d8c804eb": {
       "title": "Trump Eyes 2027 to 'See What Happens' With Iran - U.S. News & World Report",
@@ -6752,9 +6922,10 @@
       "discovered_at": "2026-11-20T02:02:52.415674+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "62d4c137946c9dd0",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T02:03:00.170787+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "acaa4f7b9b4824af": {
       "title": "3 takeaways from Trump, Xi and Putin's historic summit - PBS",
@@ -6767,9 +6938,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T02:02:59.104788+00:00",
       "id": "acaa4f7b9b4824af",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T02:03:00.215824+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "d167fb6ddf11fdfa": {
       "title": "Democrats say law firm gave $11.8m in free services to Trump administration",
@@ -6783,9 +6955,10 @@
       "discovered_at": "2026-11-20T02:02:52.475656+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "d167fb6ddf11fdfa",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T02:03:00.271147+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "adb008b7ab40e766": {
       "title": "‘Completely messed up everything’: Malawi’s fuel crisis causes chaos",
@@ -6799,9 +6972,10 @@
       "discovered_at": "2026-11-20T02:02:52.531363+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "adb008b7ab40e766",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T02:03:00.324265+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "35cad6c9aa8d9b27": {
       "title": "Judge issues 14-day extension of order blocking Trump's triumphal arch construction - PBS",
@@ -6814,9 +6988,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T02:02:58.535043+00:00",
       "id": "35cad6c9aa8d9b27",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T02:03:00.388979+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "8d9d7b230d82a457": {
       "title": "Kushner says he believes Russia is ‘com­fortable’ with NATO-like security guar­antees for Ukraine - Spectrum News",
@@ -6829,9 +7004,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T02:02:58.626440+00:00",
       "id": "8d9d7b230d82a457",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T02:03:00.472150+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "b8c19b18f273bd37": {
       "title": "Joshua Henry is ready to have ‘The Conversation’ after his Tony-winning ‘Ragtime’ role - Gold Derby",
@@ -6875,9 +7051,10 @@
       "discovered_at": "2026-11-20T09:44:50.252843+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "f2d90bf3b9bf75bf",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T09:44:59.948690+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "efd396fe1d08229e": {
       "title": "Why North Korea's Kim Jong Un didn't meet US President Donald Trump, despite the hype - CNA",
@@ -6890,9 +7067,10 @@
       "headline_score": 1,
       "discovered_at": "2026-11-20T09:44:58.516264+00:00",
       "id": "efd396fe1d08229e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T09:45:00.014374+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "7855dab6fddf9ded": {
       "title": "Pakistan minister visits India for first time since 2025 war",
@@ -6906,9 +7084,10 @@
       "discovered_at": "2026-11-20T09:44:51.925872+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "7855dab6fddf9ded",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T09:45:00.066495+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "a971151ad867e3a0": {
       "title": "Russia’s day-long attack on Kyiv damages embassies",
@@ -6922,9 +7101,10 @@
       "discovered_at": "2026-11-20T09:44:51.972586+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "a971151ad867e3a0",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T09:45:00.111394+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "f5369a808c3ffc22": {
       "title": "U.S. Senate rejects war powers curb for Trump on Iran - Ticker News",
@@ -6937,9 +7117,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T09:44:56.811786+00:00",
       "id": "f5369a808c3ffc22",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T09:45:00.164222+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "d5937bdb6e6e3672": {
       "title": "Two Autocrats and an American President with Autocrat Envy - The New Yorker",
@@ -6952,9 +7133,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T09:44:57.096181+00:00",
       "id": "d5937bdb6e6e3672",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T09:45:00.221413+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "b3e151c5b3ee1247": {
       "title": "'Bouma' ending explained: Rejin S Babu on Rose Villa secrets; director recalls Madhu Muttam's comment on - The Times of India",
@@ -7043,9 +7225,10 @@
       "discovered_at": "2026-11-20T09:54:24.689576+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "4984a29b941a3e35",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T09:54:33.164550+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "9dfde014642d1529": {
       "title": "US President Trump Announces $300 Billion Partnership with Reliance to Build First Major US Refinery in 50 Years - News On AIR",
@@ -7058,9 +7241,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T09:54:31.791184+00:00",
       "id": "9dfde014642d1529",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T09:54:33.264875+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "b13337edf20d2cfb": {
       "title": "US robbery suspects charged over alleged $22M train heist spree",
@@ -7074,9 +7258,10 @@
       "discovered_at": "2026-11-20T09:54:24.745876+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "b13337edf20d2cfb",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T09:54:33.318767+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "0da11aca523272e0": {
       "title": "Islam set to be the largest religion by 2035: Where will most Muslims live?",
@@ -7090,9 +7275,10 @@
       "discovered_at": "2026-11-20T09:54:24.810117+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "0da11aca523272e0",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T09:54:33.380913+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "b8b88c0cc7004537": {
       "title": "Trump China trip: Iran and Ukraine not in 'peace declaration' and more takeaways - ABC News - Breaking News, Latest News and Videos",
@@ -7105,9 +7291,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T09:54:30.732057+00:00",
       "id": "b8b88c0cc7004537",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T09:54:33.478172+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "7e71afb6307dd21c": {
       "title": "The US didn’t have a strong plan for the Shenzhen summit. It showed. - Atlantic Council",
@@ -7120,9 +7307,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T09:54:29.929040+00:00",
       "id": "7e71afb6307dd21c",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T09:54:33.551037+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "17ef4d54badc91e4": {
       "title": "US tech sell-off continues as Anthropic tumbles after mega IPO",
@@ -7136,9 +7324,10 @@
       "discovered_at": "2026-11-20T17:52:51.477612+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "17ef4d54badc91e4",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T17:52:58.602713+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "b9a044d5a3854f45": {
       "title": "S&P 500 falls 10% from record, entering correction as AI trade unravels - Los Angeles Times",
@@ -7151,9 +7340,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T17:52:57.769456+00:00",
       "id": "b9a044d5a3854f45",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T17:52:58.659253+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "7bd4d2635d8a8140": {
       "title": "Anthropic shares fall after blockbuster opening as wider tech sell-off continues",
@@ -7167,9 +7357,10 @@
       "discovered_at": "2026-11-20T17:52:50.585185+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "7bd4d2635d8a8140",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T17:52:58.710254+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "3aeab8696acd576e": {
       "title": "Protests held across Europe over wages, services, high living costs",
@@ -7183,9 +7374,10 @@
       "discovered_at": "2026-11-20T17:52:51.521210+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "3aeab8696acd576e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T17:52:58.751584+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "2ac3350d7ba25633": {
       "title": "Trump to hold press conference after meeting with Xi and Putin - New Hampshire Public Radio",
@@ -7198,9 +7390,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T17:52:57.009006+00:00",
       "id": "2ac3350d7ba25633",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T17:52:58.808500+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "69ba3a95d49b37e9": {
       "title": "Report: Israel, US weigh new Iran strikes 'in the short term' - Ynetnews",
@@ -7213,9 +7406,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T17:52:56.876661+00:00",
       "id": "69ba3a95d49b37e9",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T17:52:58.852738+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "1da5149d0585f4e8": {
       "title": "GTA 6 has bizarre law making it illegal to be a furry as players stumble across shocking police encounter - LADbible",
@@ -7289,9 +7483,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T23:45:55.987947+00:00",
       "id": "689651dbee17ac86",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T23:45:57.336144+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "5e75d4189ed8faf1": {
       "title": "A new Nepal, an old neighbour - Balendra Shah's India test",
@@ -7336,9 +7531,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T23:45:56.784977+00:00",
       "id": "e086367841debbc6",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T23:45:57.441102+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "1433f8dd530f314b": {
       "title": "Second federal judge blocks construction of Trump's memorial arch - PBS",
@@ -7351,9 +7547,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T23:45:56.622456+00:00",
       "id": "1433f8dd530f314b",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T23:45:57.474400+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "0f7da0dc3477c643": {
       "title": "Joe Russo on how the story for ‘Avengers: Doomsday’ came together: “What would happen if you left the cameras rolling at the end of ‘Endgame’? What’s the very next scene that happens?” | Industry Days at @DohaFilm - Facebook",
@@ -8038,13 +8235,442 @@
       "status": "QUEUED",
       "created_at": "2026-11-21T20:43:52.608505+00:00",
       "attempts": 0
+    },
+    "75fb1644d1f4d1b5": {
+      "title": "'Danger seems greater all the time': Ukrainians search for missing after Russian strikes",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/videos/cre3dvd1k9y1o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-22T22:37:43+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-22T22:47:56.630244+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "75fb1644d1f4d1b5",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:09.957291+00:00",
+      "attempts": 0
+    },
+    "ea52f64f9a2003c9": {
+      "title": "Putin is ‘not America’s friend in Ukraine,’ DNI Jay Clayton says - The Washington Post",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxNYWhIWUZqWUZLbnNlQ1NXMUFhYjNzYzdiRDMxc2lHSDk1dmljeFdoYjZLNGZoZjU1SWJYeWhaS1BSNWhtUEJUbzUwSW1jd0lJS0t0V2J3SUFhOFhLRF9TcFBVbk43djJRRDlxSnpRVnhRWG1Ga0R5VlhaTlBhZFlEQmpYVVNEcHV4Q2JRSXlQZFBXSFFwWE9EajZ4ZU1kOTJkMzhpZi0xZXExQWJhbk1DNDh3T3BlUkh3Znc?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-22T22:34:42+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-22T22:48:04.479829+00:00",
+      "id": "ea52f64f9a2003c9",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:10.020637+00:00",
+      "attempts": 0
+    },
+    "b63dc58139a41a7e": {
+      "title": "Trump to Welcome Investors at Gala for His Plunging Meme Coin - U.S. News & World Report",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxPZjRuSUdfRC1RbmZKWUdWMEZBUUlJcFFSZnFJamVDUjdwc2ZoQ3dBMHY0aTRtTkh1S2xLYlZKWndjMnV6eG5EQ1dOaV9pb0hZNE00eUFJeko0ckVJYUxwSGtTaUQ2WWNpUFJ1eFZVcHJJcmV1U3RVcTlNQUg0eV9lUHo5OUhKdmVyTkhaN1JkcWtSdkltN2hLNFpnSXdjcUxuTndXTFRQOGhOUVg1RWh4VEtzZTVJUjhubXc?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-22T22:31:00+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-22T22:48:04.643534+00:00",
+      "id": "b63dc58139a41a7e",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:10.088770+00:00",
+      "attempts": 0
+    },
+    "76ce8e4cd9571166": {
+      "title": "Second ship targeted in series of naval drone attacks off Libyan coast",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/video/newsfeed/2026/11/22/second-ship-targeted-in-series-of-naval-drone-attacks-off-libyan-coast?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-22T22:01:48+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-22T22:47:58.399743+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "76ce8e4cd9571166",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:10.145914+00:00",
+      "attempts": 0
+    },
+    "cf211d94e2c7fdf4": {
+      "title": "Netanyahu’s Likud, Eisenkot’s Yashar end coalition talks without deal",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/22/netanyahus-likud-eisenkots-yashar-end-coalition-talks-without-deal?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-22T21:33:11+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-22T22:47:58.482783+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "cf211d94e2c7fdf4",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:10.200849+00:00",
+      "attempts": 0
+    },
+    "c708ae24a340a4c3": {
+      "title": "A lock of hair belonging to the first U.S. president, George Washington, was sold at auction — what was the price? - Українські Національні Новини (УНН)",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiygFBVV95cUxOWWVaM083MU1RM3BZeFV4aW5sZUVpc2VwMWZocDdEdW11UGRxcmVhMU1NVE91RWVuSzhaNi13N0kxSHQ2MlpzV1UwWWU1MkM4dGZ1RjhtenNUTlhUdGRGVFUweGJtQ1EwQjEyM3BwWHYzS1pDdC1BUmZlMFZ6OXA3eTQzeUxFbHBSVXcxcmozdEI4alBiemVEbzhEWTBCRkJFM1ZIZWkxbGZ0NC1MdC1BY01VLXFpcndfQy1lS1hUbEZyaEctamVpS2FB0gHIAUFVX3lxTE0ySmJtckNNelVNQXVVU0c5QnU0ek1NbjhRNWljZzE4U2pSa0RVeDhSeHdSTW92a1d1S0JpenNOdmE5UGtpN19BaE44NGdDUWZDTEFlMUEzb3lMMlA1LTBYTXFlOU9mNmQ2SDktOTlva1NNd0tsTnFCcDl4OEQ1OEtsZVBPdG5QSndycTJJS2Z2djNuRFBrenhBa294RVRpUktPYU4yM1JFQmpUbER2Z25ZME45NGhoN2hubFpmMFhXd3lUQmRnT253?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-22T20:05:37+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-22T22:48:05.005736+00:00",
+      "id": "c708ae24a340a4c3",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:10.282568+00:00",
+      "attempts": 0
+    },
+    "1b7736d0788d048f": {
+      "title": "GTA 6 Mandy sink mystery explained: Did Jason find a human finger inside her drain? - The Times of India",
+      "category": "movies",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPWFpSQ2RMdWROaFNPWkhMeDVWdFg4LUZoaHFOYXdMMmNLUHE0clRmVUNINWlPbDBPS1JWLUlsWDBZaThtVy11YjFDbnY1VDVfN0NyU0xDTHhMeFNXSGVqS1Atcld3QUdybzZNTEtQMWxwMDVJcFRWRGpoSUtGckdHdmkyQ1d3aVhaOE83Zy1PZDFXR29LYUh6WkNsXzBVd2t5NGpWRmJaQnFpVXFvcGpYTzB6cTJZcjBDanRYQV9XSFpka1RQUVZVcUNEZmg4aXVnY1NfZXVtLV9jSE5majRnZ3lucXZoNF9kaEFPbWQzclE0VXdt0gH6AUFVX3lxTE9FOUY0UGFnUGlCRncyU3d6UVY5eTFEQkVBaUxWLXNTRVMyWnFFRF9vdVBIUFU2WUtDaWNqcFVXYUxwT0pjd3hsSExud2REaVZDaEprSlRjWUl6QktFUTJhUmVaVElMdHZZYS04d25ubnVYVFIwdWQ4NkdZOUY0ZnVGOURrbDJldDBGbTdoM2pTSWMzdDl0LWp5NXBQN2VuZTRzaFdTeU4yZnVhRFp2Qlh1VlBLRURuMEkwN09XVFROOVpIZV9FSkZZQk9Mdk51TFhWNDFQcTh2NFd3cnB4VEZRRjFCaFlXdEdrQ3VTZlF4aHV0aW1oRXRyd3c?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 1,
+      "discovered_at": "2026-11-22T22:48:00.019303+00:00",
+      "id": "1b7736d0788d048f",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:10.359013+00:00",
+      "attempts": 0
+    },
+    "da2858231222eb64": {
+      "title": "Sexyy Red is Totally Unbothered by Lucia After Her GTA 6 Cameo With Jason Goes Viral - IGN",
+      "category": "creators",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxNd2Rlalp1ODdlOVBRLXphSnpBeHZnYjNZWnNCMGtaVHMtTXZQTk00bVJSWmsyXzZCUEpnUVE2UEIyRWtkWVlKMkNJYkRUa1Q5NnRnS3pEOFJLQmthMG1wanhpVE1wT00zWHlUWW5NMzd0dnN0Q2N2SW84R04xdk01LTJZdEpFWk9PaXR1d2VkSW8zZXlDRDR4Vi1aQ1REQQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-22T22:48:00.442462+00:00",
+      "id": "da2858231222eb64",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:10.430298+00:00",
+      "attempts": 0
+    },
+    "49ca0a6ad188e35f": {
+      "title": "Columbia and UC Berkeley Nature Study Finds Microplastics Generate Reactive Oxygen Radicals in Water - CASRAI",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxOUkJBc3lTX3lMYlRFeVZnbEdwVlhZY2dDamVPanYtR1ZhV2tUNWQ5TWdLNE9maUhQY19ESl9URDBuR2xMMlJOOFZsRHAzU1dvdkZHX2RhTjNyeHdFWnVTOU5WUm9fbl9VLUZMQkRCc3VLeUtrVzBuM0t1ckVlS1YzZ0NiYmhWWkJ0cDZ5d2hNUExENmN6WWRkTmJFeDA3QQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-22T22:48:01.271873+00:00",
+      "id": "49ca0a6ad188e35f",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:10.509302+00:00",
+      "attempts": 0
+    },
+    "1dcfe2e2c8508431": {
+      "title": "Mount Sinai Launches Precision Immunology and Experimental Medicine (PrIME Trials) to Advance Treatments for Inflammatory Diseases - FinancialContent",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilAJBVV95cUxQMzladE9Xdmw1UDhvbGthLWFzWmxCSGlHMUxMdGxjQU1sNThBT3FUcEtoSEdPb3BxSE5KZXlUcFhuOGFSaVVsZXdsdHl0QklmSzZVTkdnaGNBMEhCckFTRDN1U2hPVVZUNWxQbF9hcFBITm4tWFpsRndkbmZ3NkJRZ3FSWXRqcHR6Tmd2aHJQZElBLVlPVERNVS16cTdQOElPUGU3MU1LNUhuUXJlSXZVNXUxSU5zVDhHOU83U1NqRGk1cU1VZUlUQkQycHlQSUJZdGJqRTlLUU5EaEdLb21hZ3I3V0ZHZkpxUUxjVkVWbjlRU2t6d3h3dmtnMFp6QUVxRzhIeGpDOHhDYnhoa1RSLXNrWVU?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-22T22:48:01.502600+00:00",
+      "id": "1dcfe2e2c8508431",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:10.617036+00:00",
+      "attempts": 0
+    },
+    "8332324b206bfc79": {
+      "title": "Wembanyama Debuts Shunk to Protect Injured Finger - Limapagi",
+      "category": "sports",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiakFVX3lxTFBMZ2tzRjJrTTFEYVJZa3RVNUFvRXBfTVJvMmNXd0YwSEVUbVNCQVNVY2VGZEtpNXItcGZleFhMQXVzNFd2cG9VUi1ha09UaXVENXdBZGd2MUk3TGo4Z0ZEOHBKSmtkNW51T2c?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-22T22:48:02.077175+00:00",
+      "id": "8332324b206bfc79",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:10.665121+00:00",
+      "attempts": 0
+    },
+    "16e3713459abd2fe": {
+      "title": "How Independent Bands Can Get Their Music Into Theatre And Dance Productions - That Eric Alper",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiugFBVV95cUxQVlRsNHI4U1lvZ0doUDNSanVVM2xvakNIYTNGbkh3RXEzZEhRcERWQWVQajJfLURualJFb0VncW1JOHFaS2o1dmtWTUhCbWNIVFQ5RlhQWGsxUzU1M05vVjJVblpnc29EQXdkdkJMenN4Q0NXdEd0bTFuWlJtQTFmcHc0NDJGWTh0NTFENkVmODRraXRjN3kxREV2ZEQ5Zno5bUVLSS00dHNQUXZuLWxDVC1nMzRhdm5NTmc?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-22T22:48:03.180997+00:00",
+      "id": "16e3713459abd2fe",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:10.738406+00:00",
+      "attempts": 0
+    },
+    "3587ad4a8ca12951": {
+      "title": "Theatrical production - Musical, Drama, Comedy - Britannica",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMifEFVX3lxTE9KVmx1X3I2OWpIdnJ2LW9GRjZybjNpUzRrVWk4NFVzN0NUYUp6UnY1cG5LZXo1T1FCQURrVXVYVWQ2UUNNNmg2YkpqREVCdnRoSE9hck1NZ0l5bUF4OEh2T2tVSS1sS0hNZWR3WDRFTGtBcWxRLVVVZ0ppeFI?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-22T22:48:03.505748+00:00",
+      "id": "3587ad4a8ca12951",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:10.783058+00:00",
+      "attempts": 0
+    },
+    "79d9810a5320b86f": {
+      "title": "The 90-Day Music Fan Retention Plan After a Release - RouteNote",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMihwFBVV95cUxNR0QxVmc5VkZPOGEwV0lRZm5VMWxLdlJzWUxfc1ZiVUVhLVpDQmhuRzZWU0hUaUdIYUF6Y2ZlQVU2R0VTRkc5c2w4WTI3RW9kcFBFY093N2FNbG9wOXRtNkVoNVh5TEd1elZzaEM0MFFoOTZRdk1NMU44UDg3eXhackNQZ0paZDQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-22T22:48:03.565650+00:00",
+      "id": "79d9810a5320b86f",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:10.836672+00:00",
+      "attempts": 0
+    },
+    "ab066103b5efd5c3": {
+      "title": "Clip highlight: TOP 10 Dog Breeds That Look Like Wolves #shorts #shortsfeed #dogshorts",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "9pVKKG0arc0",
+      "discovery_query": "'Danger seems greater all the time': Ukrainians search for missing",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T22:48:08.827893+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=9pVKKG0arc0",
+        "creator": "ZooZone",
+        "license": "creativeCommon"
+      },
+      "id": "ab066103b5efd5c3",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:10.901375+00:00",
+      "attempts": 0
+    },
+    "663d1d7e44397046": {
+      "title": "Clip highlight: The war between Ukraine and Russia is entering a dangerous phase – large-scale humanitarian crisis",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "mWpXUe5HToI",
+      "discovery_query": "'Danger seems greater all the time': Ukrainians search for missing",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T22:48:08.827912+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=mWpXUe5HToI",
+        "creator": "Kanal13",
+        "license": "creativeCommon"
+      },
+      "id": "663d1d7e44397046",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:10.988074+00:00",
+      "attempts": 0
+    },
+    "7ae72a3ecf1d4207": {
+      "title": "Clip highlight: GOOD NEWS: SENATE HEARING YESTERDAY ON CRYPTO.",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "VMS5oOQxTqE",
+      "discovery_query": "'Danger seems greater all the time': Ukrainians search for missing",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T22:48:08.827915+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=VMS5oOQxTqE",
+        "creator": "Digital Asset News",
+        "license": "creativeCommon"
+      },
+      "id": "7ae72a3ecf1d4207",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:11.036355+00:00",
+      "attempts": 0
+    },
+    "fb67a24d9dafd0da": {
+      "title": "Clip highlight: The ‘Right to Food’ Revisited: The Cost of Living Crisis & the Coming Crash",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "rF_-ydw48Do",
+      "discovery_query": "'Danger seems greater all the time': Ukrainians search for missing",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T22:48:08.827918+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=rF_-ydw48Do",
+        "creator": "ramblinactivist",
+        "license": "creativeCommon"
+      },
+      "id": "fb67a24d9dafd0da",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:11.104494+00:00",
+      "attempts": 0
+    },
+    "2270b4030d5eb46d": {
+      "title": "Clip highlight: Disaster for Russia: They lost 50,000 people for this Ukrainian city",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "cag33rLSJ8U",
+      "discovery_query": "'Danger seems greater all the time': Ukrainians search for missing",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T22:48:08.827920+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=cag33rLSJ8U",
+        "creator": "Kanal13",
+        "license": "creativeCommon"
+      },
+      "id": "2270b4030d5eb46d",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:11.170023+00:00",
+      "attempts": 0
+    },
+    "bef17b27bd0392d2": {
+      "title": "Clip highlight: Russia has lost almost all of its Kalibr-class submarines: Putin was defeated at sea",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "GG4E0SEuJNs",
+      "discovery_query": "'Danger seems greater all the time': Ukrainians search for missing",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T22:48:08.827922+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=GG4E0SEuJNs",
+        "creator": "Kanal13",
+        "license": "creativeCommon"
+      },
+      "id": "bef17b27bd0392d2",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:11.249152+00:00",
+      "attempts": 0
+    },
+    "f5e0dae05bb5015d": {
+      "title": "Clip highlight: US general called on US authorities to take risks for the sake of Ukraine",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "P1ommE2Dtic",
+      "discovery_query": "'Danger seems greater all the time': Ukrainians search for missing",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T22:48:08.827924+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=P1ommE2Dtic",
+        "creator": "Kanal13",
+        "license": "creativeCommon"
+      },
+      "id": "f5e0dae05bb5015d",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:11.321370+00:00",
+      "attempts": 0
+    },
+    "c61b4d396e559d41": {
+      "title": "Clip highlight: Ukraine launches more long-range drones than Russia for the first time",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "92mwWY776Jg",
+      "discovery_query": "'Danger seems greater all the time': Ukrainians search for missing",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T22:48:08.827926+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=92mwWY776Jg",
+        "creator": "Kanal13",
+        "license": "creativeCommon"
+      },
+      "id": "c61b4d396e559d41",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:11.389666+00:00",
+      "attempts": 0
+    },
+    "e4bd003644ba0534": {
+      "title": "Clip highlight: \"This is exactly what Putin feared\": A US general explained how Ukraine built a new army",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "FKlTqM6jCc8",
+      "discovery_query": "'Danger seems greater all the time': Ukrainians search for missing",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T22:48:08.827928+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=FKlTqM6jCc8",
+        "creator": "Kanal13",
+        "license": "creativeCommon"
+      },
+      "id": "e4bd003644ba0534",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:11.472943+00:00",
+      "attempts": 0
+    },
+    "5741f4cda81dae43": {
+      "title": "Clip highlight: Ukrainian drones disable Russian military airfields and choose vulnerable targets inside Russia",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "dfDeDp7Sw3U",
+      "discovery_query": "'Danger seems greater all the time': Ukrainians search for missing",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T22:48:08.827930+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=dfDeDp7Sw3U",
+        "creator": "Kanal13",
+        "license": "creativeCommon"
+      },
+      "id": "5741f4cda81dae43",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:11.561909+00:00",
+      "attempts": 0
+    },
+    "cdf7d0cf96906670": {
+      "title": "Clip highlight: A precise strike by Ukrainian artillery: it is destroyed a North Korean type-75 MLRS",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "FdqNAlT5110",
+      "discovery_query": "'Danger seems greater all the time': Ukrainians search for missing",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T22:48:08.827933+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=FdqNAlT5110",
+        "creator": "Kanal13",
+        "license": "creativeCommon"
+      },
+      "id": "cdf7d0cf96906670",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:11.643719+00:00",
+      "attempts": 0
+    },
+    "c02ccc129f916733": {
+      "title": "Clip highlight: Putin carries out a secret mobilization that is larger than in 2022; this leads to unrests",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "gQvYXSJg2og",
+      "discovery_query": "'Danger seems greater all the time': Ukrainians search for missing",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T22:48:08.827935+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=gQvYXSJg2og",
+        "creator": "Kanal13",
+        "license": "creativeCommon"
+      },
+      "id": "c02ccc129f916733",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T22:48:11.726911+00:00",
+      "attempts": 0
     }
   },
   "budget": {
-    "day": "2026-11-21",
+    "day": "2026-11-22",
     "reset_timezone": "America/Los_Angeles",
     "youtube": 13,
-    "pixabay": 17,
+    "pixabay": 19,
     "ai": 32
   },
   "content_cycle_index": 11,
@@ -8057,23 +8683,29 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-21T20:43:52.609657+00:00",
+    "started_at": "2026-11-22T22:48:11.727700+00:00",
     "attempted_ids": [
-      "6d7895ef328280ad",
-      "9a19041fc49fe284",
-      "6832207212ec0e88",
-      "cd55fa9344c3d998",
-      "dc0db9666b69ddf6",
-      "e7715d838068450b",
-      "0d3903eaaa721d2d"
+      "0d3903eaaa721d2d",
+      "4264468155308d0d",
+      "e95fac783fd7233f",
+      "09d9f47c5e021faf",
+      "43c4c9a84bc6fb60",
+      "3155481e232beffb",
+      "b9bec980ee3acc4a"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
-    "categories_deferred": [
-      "true_events"
-    ],
+    "ai_requests_by_candidate": {
+      "0d3903eaaa721d2d": 5,
+      "4264468155308d0d": 5,
+      "e95fac783fd7233f": 8,
+      "09d9f47c5e021faf": 8,
+      "43c4c9a84bc6fb60": 3,
+      "3155481e232beffb": 3,
+      "b9bec980ee3acc4a": 0
+    },
     "pause_reason": "Per-run AI allowance reached; job saved for the next run",
-    "finished_at": "2026-11-21T20:48:29.522495+00:00",
+    "finished_at": "2026-11-22T22:53:21.023597+00:00",
     "attempted": 7,
     "completed": 0,
     "gemini_request_attempts": 32
