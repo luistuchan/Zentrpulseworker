@@ -45,7 +45,28 @@ class RecoveryTests(unittest.TestCase):
                  patch.object(w, 'duration', return_value=10), \
                  patch.object(w, 'run'), \
                  patch.object(w, 'digest', return_value='fixture-digest'), \
-                 patch.object(w, 'review_stock_frame', side_effect=[{'matches': False}, {'matches': False}, {'matches': True}]) as match:
+                 patch.object(w, 'review_stock_frames', side_effect=[[{'matches': False}, {'matches': False}],
+                     [{'matches': True}, {'matches': False}]]) as match:
                 _, metadata = w.select_pixabay_asset(scene, {'id': 'test'}, root, Mock(state={'jobs': {}}))
                 self.assertEqual(metadata['id'], 10)
-                self.assertEqual(match.call_count, 3)
+                self.assertEqual([len(call.args[-1]) for call in match.call_args_list], [2, 2])
+
+    def test_batch_maps_out_of_order_verdicts_and_reuses_cache(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            images = [root / 'first.jpg', root / 'second.jpg']
+            for image in images:
+                image.write_bytes(image.name.encode())
+            response = {'reviews': [
+                {'candidate': 2, 'matches': True, 'reason': 'second'},
+                {'candidate': 1, 'matches': False, 'reason': 'first'},
+            ]}
+            budget = Mock(state={})
+            entry = {}
+            with patch.object(w, 'STATE', root), patch.object(w, 'ai', return_value=response) as ai:
+                verdicts = w.review_stock_frames({}, entry, root, budget, images)
+                cached = w.review_stock_frame({}, entry, root, budget, images[1])
+                self.assertEqual([result['matches'] for result in verdicts], [False, True])
+                self.assertEqual(cached, verdicts[1])
+                ai.assert_called_once()
+                self.assertEqual(ai.call_args.args[2], images)

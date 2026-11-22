@@ -471,9 +471,12 @@ def ai(prompt, budget, image_path=None, response_schema=None, request_allowed=No
     if not re.fullmatch(r'[a-zA-Z0-9._-]+', model):
         raise Hold('Invalid GEMINI_MODEL')
     parts = [{'text': prompt}]
-    if image_path:
+    images = image_path if isinstance(image_path, (list, tuple)) else [image_path] if image_path else []
+    for index, image in enumerate(images, start=1):
+        if len(images) > 1:
+            parts.append({'text': f'Candidate {index}'})
         parts.append({'inlineData': {'mimeType': 'image/jpeg',
-                                    'data': base64.b64encode(Path(image_path).read_bytes()).decode()}})
+                                    'data': base64.b64encode(Path(image).read_bytes()).decode()}})
     config = {'temperature': .15, 'maxOutputTokens': 8000,
               'responseMimeType': 'application/json'}
     if response_schema is not None:
@@ -944,29 +947,69 @@ def stock_match_prompt(scene):
     )
 
 
-def review_stock_frame(scene, entry, folder, budget, thumb):
+def review_stock_frames(scene, entry, folder, budget, thumbs):
     prompt = stock_match_prompt(scene)
     model = os.getenv('GEMINI_MODEL', 'gemini-3.5-flash-lite')
-    key = hashlib.sha256(json.dumps([model, prompt, MATCH_SCHEMA, digest(thumb)],
-                                   sort_keys=True).encode()).hexdigest()
     reviews = entry.setdefault('stock_reviews', {})
-    if key in reviews:
-        return reviews[key]
+    older_reviews = load(folder / 'stock-reviews.json', {})
+    keys = [hashlib.sha256(json.dumps([model, prompt, MATCH_SCHEMA, digest(thumb)],
+                                     sort_keys=True).encode()).hexdigest() for thumb in thumbs]
+    missing = {}
+    changed = False
+    for key, thumb in zip(keys, thumbs):
+        if key in reviews:
+            continue
+        cached = older_reviews.get(key)
+        if isinstance(cached, dict) and isinstance(cached.get('matches'), bool):
+            reviews[key] = cached
+            changed = True
+        else:
+            missing.setdefault(key, thumb)
 
-    # Import matching verdicts from the older media cache as drafts resume.
-    cached_match = load(folder / 'stock-reviews.json', {}).get(key)
-    if isinstance(cached_match, dict) and isinstance(cached_match.get('matches'), bool):
-        match = cached_match
-    else:
+    if missing:
         cap = int(os.getenv('MAX_STOCK_AI_CALLS_PER_DRAFT', '5'))
-        match = ai(prompt, budget, thumb, response_schema=MATCH_SCHEMA,
-                   request_allowed=lambda: budget.run_counts['ai'] - entry['_stock_ai_start'] < cap)
 
-    # The workflow persists queue.json even when a draft has to wait.
-    if isinstance(match.get('matches'), bool):
-        reviews[key] = match
+        def request_allowed():
+            return budget.run_counts['ai'] - entry['_stock_ai_start'] < cap
+
+        images = list(missing.values())
+        if len(images) == 1:
+            verdicts = [ai(prompt, budget, images[0], response_schema=MATCH_SCHEMA,
+                           request_allowed=request_allowed)]
+        else:
+            instructions = ('Review each numbered candidate independently using these criteria. '
+                            'Return one verdict per candidate in a reviews array, including the '
+                            'candidate number (starting at 1), matches, and reason.\n')
+            schema = object_schema({'reviews': {'type': 'ARRAY', 'items': object_schema({
+                'candidate': {'type': 'INTEGER'}, **MATCH_SCHEMA['properties']})}})
+            response = ai(instructions + prompt, budget, images, response_schema=schema,
+                          request_allowed=request_allowed)
+            results = response.get('reviews')
+            if not isinstance(results, list):
+                raise Hold('Stock footage review returned invalid candidate verdicts')
+            indexed = {}
+            for verdict in results:
+                number = verdict.get('candidate') if isinstance(verdict, dict) else None
+                if (type(number) is not int or number in indexed or not 1 <= number <= len(images)
+                        or not isinstance(verdict.get('matches'), bool)
+                        or not isinstance(verdict.get('reason'), str)):
+                    raise Hold('Stock footage review returned invalid candidate verdicts')
+                indexed[number] = {'matches': verdict['matches'], 'reason': verdict['reason']}
+            if len(indexed) != len(images):
+                raise Hold('Stock footage review omitted a candidate verdict')
+            verdicts = [indexed[number] for number in range(1, len(images) + 1)]
+        for key, verdict in zip(missing, verdicts):
+            if isinstance(verdict.get('matches'), bool):
+                reviews[key] = verdict
+                changed = True
+
+    if changed:
         atomic_json(STATE / 'queue.json', budget.state)
-    return match
+    return [reviews.get(key, {}) for key in keys]
+
+
+def review_stock_frame(scene, entry, folder, budget, thumb):
+    return review_stock_frames(scene, entry, folder, budget, [thumb])[0]
 
 
 def select_pixabay_asset(scene, entry, folder, budget):
@@ -981,6 +1024,7 @@ def select_pixabay_asset(scene, entry, folder, budget):
     evaluation_limit = 4 if len(queries) == 1 else 2
     for query in queries:
         query_evaluated = 0
+        shortlist = []
         candidates = pixabay_candidates(query, budget)
         log = {'query': query, 'returned': len(candidates), 'candidates': []}
         logs.append(log)
@@ -1034,7 +1078,7 @@ def select_pixabay_asset(scene, entry, folder, budget):
                 path.write_bytes(http(file['url'], limit=60_000_000, retries=0)[0])
                 if duration(path) + .05 < scene.get('_required_seconds', 0):
                     record['result'] = 'download shorter than narration'; save(); continue
-                thumb = folder / 'match.jpg'
+                thumb = path.with_suffix('.jpg')
                 run(['ffmpeg', '-v', 'error', '-y', '-ss', '0.5', '-i', str(path),
                      '-frames:v', '1', '-vf', 'scale=480:-2', str(thumb)])
             except Wait:
@@ -1052,11 +1096,25 @@ def select_pixabay_asset(scene, entry, folder, budget):
                     and not scene.get('requires_exact_footage')):
                 match = {'matches': True, 'reason': 'Exact Pixabay tag; visual check required in draft review',
                          'method': 'provider_metadata'}
-            else:
-                try:
-                    match = review_stock_frame(scene, entry, folder, budget, thumb)
-                except Hold:
-                    record['result'] = 'visual evaluation unavailable'; save(); raise
+                shortlist.insert(0, (candidate, asset_id, path, thumb, record, match))
+                break
+            shortlist.append((candidate, asset_id, path, thumb, record, None))
+
+        if not shortlist:
+            continue
+        if shortlist[0][-1] is not None:
+            shortlist = shortlist[:1]
+            verdicts = [shortlist[0][-1]]
+        else:
+            try:
+                verdicts = review_stock_frames(scene, entry, folder, budget,
+                                               [item[3] for item in shortlist])
+            except Hold:
+                for _, _, _, _, record, _ in shortlist:
+                    record['result'] = 'visual evaluation unavailable'
+                save()
+                raise
+        for (candidate, asset_id, path, _, record, _), match in zip(shortlist, verdicts):
             record.update(result='accepted' if match.get('matches') is True else 'visual mismatch',
                           reason=str(match.get('reason', ''))[:500])
             save()
