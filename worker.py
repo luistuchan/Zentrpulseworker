@@ -1813,9 +1813,10 @@ def produce_batch(state, budget, target):
         folder = WORK / job['id']
         progress = len(list(folder.glob('s[0-9][0-9].mp4'))) if folder.exists() else 0
         has_plan = (folder / 'plan.json').is_file()
+        critique = load(folder / 'critique.json', {}) if has_plan else {}
+        approved_plan = critique.get('pass') is True and not critique.get('issues')
         trusted_lead = job.get('discovery_quality') == 'publisher_feed_v1'
-        # Prefer candidates with already verified, independent readable sources.
-        # Do not spend the limited AI budget on speculative leads first.
+        # Resume saved edits and reviewed scripts before spending Gemini calls on new leads.
         sources = load(folder / 'sources.json', []) if folder.exists() else []
         verified_domains = {
             urllib.parse.urlsplit(item.get('url', '')).hostname
@@ -1829,7 +1830,7 @@ def produce_batch(state, budget, target):
         quota_wait = job.get('status') == 'WAITING' and any(
             token in blocker for token in ('ai request cap', 'http 429', 'quota', 'daily ')
         )
-        return (int(quota_wait), -int(verified), -progress, -int(has_plan),
+        return (int(quota_wait), -progress, -int(approved_plan), -int(has_plan), -int(verified),
                 -int(trusted_lead), -min(supplied, 2),
                 job.get('last_attempt_at', job.get('created_at', '')))
     pending = sorted(state['jobs'].values(), key=priority)
