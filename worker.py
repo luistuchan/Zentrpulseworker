@@ -443,6 +443,7 @@ class Budget:
             state.setdefault('budget', {})['reset_timezone'] = 'America/Los_Angeles'
         self.counts = state['budget']
         self.run_counts = Counter()
+        self.candidate_ai_start = None
 
     def take(self, name, amount=1):
         cap = int(os.getenv({'ai': 'MAX_AI_CALLS', 'youtube': 'MAX_YOUTUBE_SEARCHES',
@@ -482,6 +483,9 @@ def ai(prompt, budget, image_path=None, response_schema=None, request_allowed=No
     for attempt in range(3):
         if request_allowed is not None and not request_allowed():
             raise Wait(allowance_error)
+        candidate_start = getattr(budget, 'candidate_ai_start', None)
+        if isinstance(candidate_start, int) and budget.run_counts['ai'] - candidate_start >= 10:
+            raise Wait('Candidate reached 10 Gemini requests; saved progress')
         if not budget.take('ai'):
             if budget.counts.get('ai', 0) >= int(os.getenv('MAX_AI_CALLS', '96')):
                 raise Wait('AI request cap reached; job saved for the next Pacific day')
@@ -780,6 +784,9 @@ def generate_plan(entry, sources, target, budget, folder):
     production_guidance = production_failure_guidance(entry, budget.state)
     if production_guidance:
         prompt += '\nLessons from earlier production failures:\n' + '\n'.join(production_guidance)
+    prompt += (f'\nBefore returning, count the combined narration across all scenes. '
+               f'For {target} seconds aim for {round(target * 2.4)} spoken words, '
+               f'within {int(target * 1.8)}–{int(target * 3)} words.')
     prompt += '\nCANDIDATE DATA:\n' + json.dumps(data)
     request_start = budget.run_counts['ai']
     for attempt in range(3):
@@ -978,7 +985,8 @@ def select_pixabay_asset(scene, entry, folder, budget):
         log = {'query': query, 'returned': len(candidates), 'candidates': []}
         logs.append(log)
         save()
-        query_terms = set(re.findall(r'[a-z0-9]+', query.lower()))
+        query_words = re.findall(r'[a-z0-9]+', query.lower())
+        query_terms = set(query_words)
         def tag_overlap(candidate):
             tags = set(re.findall(r'[a-z0-9]+', (candidate.get('tags') or '').lower()))
             return len(query_terms & tags) if tags else None
@@ -1035,10 +1043,20 @@ def select_pixabay_asset(scene, entry, folder, budget):
                 record['result'] = str(exc); save(); continue
             evaluated += 1
             query_evaluated += 1
-            try:
-                match = review_stock_frame(scene, entry, folder, budget, thumb)
-            except Hold:
-                record['result'] = 'visual evaluation unavailable'; save(); raise
+            # Use an exact, multiword provider tag for primary-query illustrative
+            # stock. Alternate searches and news still need a model verdict.
+            exact_tag = any(re.findall(r'[a-z0-9]+', tag.lower()) == query_words
+                            for tag in (candidate.get('tags') or '').split(','))
+            if (query == queries[0] and len(query_terms) >= 2 and exact_tag
+                    and entry.get('content_type') != 'news_update'
+                    and not scene.get('requires_exact_footage')):
+                match = {'matches': True, 'reason': 'Exact Pixabay tag; visual check required in draft review',
+                         'method': 'provider_metadata'}
+            else:
+                try:
+                    match = review_stock_frame(scene, entry, folder, budget, thumb)
+                except Hold:
+                    record['result'] = 'visual evaluation unavailable'; save(); raise
             record.update(result='accepted' if match.get('matches') is True else 'visual mismatch',
                           reason=str(match.get('reason', ''))[:500])
             save()
@@ -1652,6 +1670,8 @@ def report(state, warnings):
     run = state.get('last_run', {})
     lines += ['', 'Gemini request attempts this run: ' + str(run.get('gemini_request_attempts', 0)),
               'Daily request counters: ' + json.dumps(state.get('budget', {}))]
+    if run.get('ai_requests_by_candidate'):
+        lines.append('Gemini requests by candidate: ' + json.dumps(run['ai_requests_by_candidate']))
     if run.get('ai_pause_reason'):
         lines.append('Gemini-dependent jobs paused: ' + run['ai_pause_reason'])
     if run.get('pause_reason'):
@@ -1726,7 +1746,8 @@ def produce_batch(state, budget, target):
     batch = current_batch(state)
     attempted, completed = [], []
     state['last_run'] = {'started_at': now(), 'attempted_ids': attempted, 'completed_ids': completed,
-                         'model': os.getenv('GEMINI_MODEL', 'gemini-3.5-flash-lite')}
+                         'model': os.getenv('GEMINI_MODEL', 'gemini-3.5-flash-lite'),
+                         'ai_requests_by_candidate': {}}
     max_ready = max(1, min(3, int(os.getenv('MAX_JOBS_PER_RUN', '3'))))
     max_attempts = max(1, min(12, int(os.getenv('MAX_CANDIDATES_PER_RUN', '9'))))
     deadline = time.monotonic() + max(60, min(1200, int(os.getenv('PRODUCTION_SECONDS', '900'))))
@@ -1790,6 +1811,7 @@ def produce_batch(state, budget, target):
                            source_pipeline_version=SOURCE_PIPELINE_VERSION, last_attempt_at=now())
                 atomic_json(STATE / 'queue.json', state)
                 stop = False
+                budget.candidate_ai_start = budget.run_counts['ai']
                 try:
                     if (os.getenv('ENABLE_YOUTUBE_SIGNALS') == '1' and
                             job.get('content_type') != 'clipper' and not job.get('youtube_signal')):
@@ -1835,6 +1857,9 @@ def produce_batch(state, budget, target):
                 except Exception:
                     job.update(status='FAILED', blocker='Unexpected worker error; inspect inputs and run tests. Secrets omitted.')
                 finally:
+                    state['last_run']['ai_requests_by_candidate'][job['id']] = (
+                        budget.run_counts['ai'] - budget.candidate_ai_start)
+                    budget.candidate_ai_start = None
                     job.pop('_excluded_media_hashes', None)
                     job.pop('_excluded_story_sources', None)
                     job.pop('_used_stock', None)
