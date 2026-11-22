@@ -149,15 +149,15 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T06:30:43.872170+00:00",
       "id": "4264468155308d0d",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-14T06:30:43.881621+00:00",
-      "attempts": 3,
+      "attempts": 4,
       "youtube_signal": {
         "status": "not_checked"
       },
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-22T22:48:39.162008+00:00",
-      "blocker": "Stock footage review allowance reached for this draft; saved progress",
+      "last_attempt_at": "2026-11-22T23:08:00.238687+00:00",
+      "blocker": "No matching Pixabay footage for s05: 9 hits for 'orchestral sheet music', 9 hits for 'orchestral sheet'; inspect diagnostics in review artifact",
       "youtube_visual_discovery": [],
       "stock_reviews": {
         "6d3b8fd9530c366b7d5481744d900e9afd158d1641e742f4b749fc27e41d723c": {
@@ -179,6 +179,18 @@
         "7767ca38206a7569dd5e58a35b0c09f7912ed3462d33f286d30fc731ea9d19cb": {
           "matches": false,
           "reason": "The frame shows generic stock footage of tree leaves and is unrelated to the Assassin's Creed franchise or the theme 'Ezio's Family'."
+        },
+        "334969ba28a39aebb0df568776e8263cf3cc8bdb149ec8315a478d39b7d9161c": {
+          "matches": false,
+          "reason": "The frame shows a generic dark stormy sky over hills, which lacks any direct relevance or connection to the video topic about the Assassin's Creed theme song and composer Jesper Kyd."
+        },
+        "1a31510dbe8f943e08ee485cbb75e9bc7c254b7fa57265b8629d2ef0bb835a49": {
+          "matches": false,
+          "reason": "Generic nature B-roll of leaves showing no meaningful connection to Assassin's Creed or Ezio's Family theme."
+        },
+        "26f75ea5b51528d9c6110b9a746f6d097ce01bc335f49f67fdc975b46f1f8ba1": {
+          "matches": false,
+          "reason": "Generic close-up of tree leaves that lacks any thematic or contextual relevance to the video topic."
         }
       }
     },
@@ -312,10 +324,10 @@
       "id": "0d3903eaaa721d2d",
       "status": "WAITING",
       "created_at": "2026-11-14T17:29:08.576584+00:00",
-      "attempts": 3,
+      "attempts": 4,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-22T22:48:11.750373+00:00",
-      "blocker": "Stock footage review allowance reached for this draft; saved progress",
+      "last_attempt_at": "2026-11-22T23:09:01.451411+00:00",
+      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted",
       "youtube_visual_discovery": [],
       "stock_reviews": {
         "5608f1eb766cd764e0e76bade91e4dcf0d0adee97f3d26b68dd1807ed9c7241d": {
@@ -362,11 +374,11 @@
       "headline_score": 0,
       "discovered_at": "2026-11-15T01:57:48.651386+00:00",
       "id": "e95fac783fd7233f",
-      "status": "WAITING",
+      "status": "REVIEW_REQUIRED",
       "created_at": "2026-11-15T01:57:48.657721+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-22T22:49:24.091317+00:00",
+      "last_attempt_at": "2026-11-22T23:08:20.763700+00:00",
       "youtube_visual_discovery": [
         {
           "id": "_Ol2BzM241o",
@@ -437,9 +449,46 @@
         "9514098e01d10658f975e755e8202bd7d6b75833ced6eaee7955e476d3491095": {
           "matches": false,
           "reason": "The frame shows a low-angle view of modern city skyscrapers and the sky, which is generic architectural footage and does not relate to the video topic of stage productions, rehearsals, and student dedication."
+        },
+        "a2c59c1fe74b8a4cf7eadac0704b6d77bb55d7a5c207bf95d64bd6ece8521125": {
+          "matches": false,
+          "reason": "The frame shows a person working on a laptop next to a fan, which does not relate to the theme of stage production, rehearsals, or rigorous preparation."
+        },
+        "9cd5e1329847e93cad3b3554abdd26ccc455c4b618212292242d3042e3f9a58c": {
+          "matches": true,
+          "reason": "The frame depicts students studying diligently together, which effectively illustrates the rigorous preparation, hard work, and commitment mentioned in the video context."
+        },
+        "44695b49d4857be080bb5c3452375d5bd185a1960eaa89eac7625d71d748f1d7": {
+          "matches": true,
+          "reason": "This frame shows people watching a live performance on stage, which aligns well with the video's theme about stage productions."
+        },
+        "c05f6b6c09600608d1c5372ae76bdd9145eec0b2edc288af635a635727088239": {
+          "matches": true,
+          "reason": "This frame shows a stage performance with musicians and lighting effects, fitting the overall video topic about stage productions."
         }
       },
-      "blocker": "Stock footage review allowance reached for this draft; saved progress"
+      "edit_analysis": {
+        "video_sha256": "d3341d9173bde19bb7f3386c7ffbb1fb26544f55fa4643babf2f5cc3604276bd",
+        "duration_seconds": 31.34,
+        "cut_times": [
+          5.325,
+          9.861003,
+          20.195703
+        ]
+      },
+      "video_sha256": "d3341d9173bde19bb7f3386c7ffbb1fb26544f55fa4643babf2f5cc3604276bd",
+      "completed_at": "2026-11-22T23:09:01.433976+00:00",
+      "source_story_urls": [
+        "https://www.peoplesdefender.com/2026/11/14/behind-the-curtain/",
+        "https://charlestoncitypaper.com/2026/11/20/before-the-doors-open-reflecting-on-20-years-behind-the-curtain-of-charleston-hospitality/"
+      ],
+      "rendered_pixabay_creators": [
+        "Coverr-Free-Footage",
+        "Republica",
+        "Vimeo-Free-Videos",
+        "eloguers",
+        "mostafa_meraji"
+      ]
     },
     "431248277a0f3c0b": {
       "title": "Abhijat Joshi reveals the HIDDEN writing trick used in 3 Idiots: EVERY scene had an object helping tell the story - Bollywood Hungama",
@@ -7701,9 +7750,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-21T02:06:36.165297+00:00",
       "id": "0015c76e229b1bb1",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T02:06:38.058958+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "89d083b8e1c9a9f4": {
       "title": "What Song Does Kanye West’s “Gold Digger” Sample? Ray Charles Explained - RouteNote",
@@ -8664,51 +8714,425 @@
       "status": "QUEUED",
       "created_at": "2026-11-22T22:48:11.726911+00:00",
       "attempts": 0
+    },
+    "843eb837dfb9acf4": {
+      "title": "Miley Cyrus marries Maxx Morando in California ceremony",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cq8e0p87l89lo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-22T21:22:40+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-22T23:07:44.519440+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "843eb837dfb9acf4",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:07:58.453316+00:00",
+      "attempts": 0
+    },
+    "e33f8fe40f22b434": {
+      "title": "Iranian president turns out office lights to urge citizens to save energy - The Washington Post",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQMnhjMGhWTE9jLTJuMUZkRHVRS0t5cjVhZHlsNklGWlM3bG1ydUFpM0QtMGQzdHFGUVZMYXR1VkxOWm5DMThqSWY1WlBsZWw1Y2RRX3RKYUM4RHhIU3R6Q2x3dTB3ald3SloydzVtME0wamRkSjBjNE15QkhhUmg3TjRNdi1LMGxzM1F2RG1pRjZVYWI5WTFQUFBiMlBEZHI1ekxvcVd3bDh0bjQzUDBCZWI3cnFndkk?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-22T21:01:53+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-22T23:07:53.406686+00:00",
+      "id": "e33f8fe40f22b434",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:07:58.554234+00:00",
+      "attempts": 0
+    },
+    "0832ecb8e627c00a": {
+      "title": "Fire breaks out at popular tourist hotspot in Zanzibar",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/video/newsfeed/2026/11/22/fire-breaks-out-at-popular-tourist-hotspot-in-zanzibar?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-22T20:29:01+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-22T23:07:46.473102+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "0832ecb8e627c00a",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:07:58.616722+00:00",
+      "attempts": 0
+    },
+    "4f1e771da239b52d": {
+      "title": "Explosion on Russian ship at Libya port caused by suspected drone attack, officials say",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cr894gjz0j0yo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-22T20:28:09+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-22T23:07:43.949976+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "4f1e771da239b52d",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:07:58.710036+00:00",
+      "attempts": 0
+    },
+    "9b7900370320075a": {
+      "title": "President Trump comments on new Iranian aerial attacks as Middle East tensions rise - Fox News",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiVkFVX3lxTE40Z2J3aXQxZkNGYkNzTEFVUW41VlBTTGh6TWxrdm5MZWxkbm5oZ2VDdzdoXzdxM285OWpuNW42X1lNcUMtdzBKcDNfRWd3QW1UWmxFVV9R?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-22T18:43:59+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-22T23:07:53.296484+00:00",
+      "id": "9b7900370320075a",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:07:58.816969+00:00",
+      "attempts": 0
+    },
+    "3f8c006c74d5c1e6": {
+      "title": "U.S. intelligence chief says Trump's description of Putin as a 'friend' is 'entirely appropriate' - PBS",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMixAFBVV95cUxNNUdjYmJXazI4V25FVTFNTUVCNU1kQXlCRUdVMW90d2JrT1JWX2dkaWlBOVJqTzJ6anFZeW9rWkFOaDZqczZobXh6ZkxxUzc2c3QyVnViLXZVa1VuN3FpMHNDYWRIT1BkWGxHZ01TOEI1THUtbXdyeGd4RnRzel9zU0EwdU94UUdjajZpMnYzTUloMndpb0U0UHF3ZklvNXdQbjFNWDlqM3hGOHdZdk9mU09GR1RoMHV5VElVVlhiRTRxbUpZ0gHKAUFVX3lxTE1NRmhrWTVpbDNtWURtTTRKbHVfdF8taVk2ZWJFR0pxY0Q5R0pyMWtFbFc0YzBBR29LdWtBSUg4VzRJUFMtcUVYT0xfSlR3YWgxREZNMEtJMk1ZTjFWY0RNaHk4SXpZdTBHR1FzWGV6aE9fWjZFcHNTYjM3YXFVVUQzQjMzYm9XdF9zdWlxSWhQOWdrWElkVjhYZU92VFpydThLNjk4R0lFeFZEYVVBLWZNMmtDQUVURDUxT2l5U0V4Zm0xUWNMUXpmeEE?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-22T18:37:06+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-22T23:07:52.896231+00:00",
+      "id": "3f8c006c74d5c1e6",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:07:58.922361+00:00",
+      "attempts": 0
+    },
+    "c7213d7331b1dacc": {
+      "title": "Susan Boyle | Biography, Songs, & Facts - Britannica",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiXEFVX3lxTE5zLVlETm5COVd0ZnZ6S1g5emVEVlhVdEdKeUo3V1FDbS15ZDVoenpJSFpGVko4MjR2c2Q2aXpFMTVmQnRnTzBNYTlUMUFKb2tzTlE2VWNyOXR5TlFt?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-22T23:07:52.303748+00:00",
+      "id": "c7213d7331b1dacc",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:07:58.976138+00:00",
+      "attempts": 0
+    },
+    "ba717d455472a182": {
+      "title": "Anthony Opara highlights challenges of staging concerts in Nigeria - The Nation Newspaper",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMingFBVV95cUxQTEx3Q2hlVldERGJGNFZlMWpJVjgyWmg3LXQzMldXRkhsNVJZRWlwejFEZnFLRS0yWmFUSE1rYnhKMlBkVWt4RlRyemh6d2VLY2xQajdRMXBXT041MnEwM1FtcmFURTNtVFRJcHVmMlIta0RiT2x3alBxNzZxUlJ5eUt5cEUwaktRX2dnUU10aldBMUw0bF9RV2VOWHVud9IBowFBVV95cUxOaXBPZ0hnVlpnZ09ZMFlDd25LSnU3Qzc3Q3lEQzI3Z25RaGZvV1dRbU5EYlFwbldFN2lScG1NWUxOT0hTeE5BMjFnbGJPX0NJVU1jRlh1Z0ZFNVNZNVdrNFNuNWhPa0tSTGRQTWFJMVd0cFJ0OHh2UXVLazhfdlh0R1lPcEV1Vm1pSXlwb29rc1hxQmd5cklJWDROYWlSVGplVDJZ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-22T23:07:52.405217+00:00",
+      "id": "ba717d455472a182",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:07:59.071332+00:00",
+      "attempts": 0
+    },
+    "4ec45e1477a38363": {
+      "title": "Clip highlight: Kabar Bahagia! Miley Cyrus dan Maxx Morando Disebut Segera Naik Pelaminan",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "2_z7O1omvpw",
+      "discovery_query": "Miley Cyrus marries Maxx Morando in California ceremony",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T23:07:56.901106+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=2_z7O1omvpw",
+        "creator": "medcom id",
+        "license": "creativeCommon"
+      },
+      "id": "4ec45e1477a38363",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:07:59.167876+00:00",
+      "attempts": 0
+    },
+    "448ac4b1120bd5a3": {
+      "title": "Clip highlight: Screw the Schedule! We're going over VtM V6 then MAYBE playing some Dune",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "E1RaKWFtKaw",
+      "discovery_query": "Iranian president turns out office lights to urge citizens to",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T23:07:56.901120+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=E1RaKWFtKaw",
+        "creator": "Dark Carnival VODs - Fan Page",
+        "license": "creativeCommon"
+      },
+      "id": "448ac4b1120bd5a3",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:07:59.262752+00:00",
+      "attempts": 0
+    },
+    "cbe613169c7f6f54": {
+      "title": "Clip highlight: The Christmas Candle",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "0Cd8xA80v5c",
+      "discovery_query": "Susan Boyle | Biography, Songs, & Facts",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T23:07:56.901124+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=0Cd8xA80v5c",
+        "creator": "videoparables",
+        "license": "creativeCommon"
+      },
+      "id": "cbe613169c7f6f54",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:07:59.305064+00:00",
+      "attempts": 0
+    },
+    "6c6326a0582fd01e": {
+      "title": "Clip highlight: Why Prince Was Pure Genius",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "Iav8GD1gKso",
+      "discovery_query": "Susan Boyle | Biography, Songs, & Facts",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T23:07:56.901127+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=Iav8GD1gKso",
+        "creator": "Rise Above The Ordinary",
+        "license": "creativeCommon"
+      },
+      "id": "6c6326a0582fd01e",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:07:59.355125+00:00",
+      "attempts": 0
+    },
+    "805235e97ce5a841": {
+      "title": "Clip highlight: Charlton Heston: 5 Inspiring Facts!",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "ZSbAv0qHsJc",
+      "discovery_query": "Susan Boyle | Biography, Songs, & Facts",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T23:07:56.901130+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=ZSbAv0qHsJc",
+        "creator": "Rise Above The Ordinary",
+        "license": "creativeCommon"
+      },
+      "id": "805235e97ce5a841",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:07:59.412034+00:00",
+      "attempts": 0
+    },
+    "6d5b6440ef23d53c": {
+      "title": "Clip highlight: A BEAUTIFUL DAY IN THE NEIGHBORHOOD (2019) | Reel vs Real People 😱 #truestory",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "9khuxAIToCk",
+      "discovery_query": "Susan Boyle | Biography, Songs, & Facts",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T23:07:56.901132+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=9khuxAIToCk",
+        "creator": "ReeLIIReaL",
+        "license": "creativeCommon"
+      },
+      "id": "6d5b6440ef23d53c",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:07:59.504002+00:00",
+      "attempts": 0
+    },
+    "e8b20bcca7d4b94a": {
+      "title": "Clip highlight: What Really Happened to Christopher Lambert?",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "TqGMYcg1XBo",
+      "discovery_query": "Susan Boyle | Biography, Songs, & Facts",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T23:07:56.901135+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=TqGMYcg1XBo",
+        "creator": "Nina Lifestyle",
+        "license": "creativeCommon"
+      },
+      "id": "e8b20bcca7d4b94a",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:07:59.570604+00:00",
+      "attempts": 0
+    },
+    "20922b2cc3add99f": {
+      "title": "Clip highlight: Paulina Kellogg Wright Davis | Wikipedia audio article",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "MucyVbmT2sc",
+      "discovery_query": "Susan Boyle | Biography, Songs, & Facts",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T23:07:56.901137+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=MucyVbmT2sc",
+        "creator": "wikipedia tts",
+        "license": "creativeCommon"
+      },
+      "id": "20922b2cc3add99f",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:07:59.646642+00:00",
+      "attempts": 0
+    },
+    "99129146f6b55485": {
+      "title": "Clip highlight: Everything You Need To Know About Charles Manson | Charles Manson Biography |",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "6WLkQIxqSew",
+      "discovery_query": "Susan Boyle | Biography, Songs, & Facts",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T23:07:56.901140+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=6WLkQIxqSew",
+        "creator": "World's Best Videos",
+        "license": "creativeCommon"
+      },
+      "id": "99129146f6b55485",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:07:59.744164+00:00",
+      "attempts": 0
+    },
+    "10a702fcfc0fe173": {
+      "title": "Clip highlight: Partridge Family Bus: David Cassidy reveals the secret Joyride & Behind-the-Scenes Story",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "HZWlNbXERLI",
+      "discovery_query": "Susan Boyle | Biography, Songs, & Facts",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T23:07:56.901162+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=HZWlNbXERLI",
+        "creator": "Pop Goes The Culture TV",
+        "license": "creativeCommon"
+      },
+      "id": "10a702fcfc0fe173",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:07:59.854228+00:00",
+      "attempts": 0
+    },
+    "bda9f5ed75ad117b": {
+      "title": "Clip highlight: Remembering Jeff Porcaro - The Drumming Legend of Toto",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "2ASSXKZHgpk",
+      "discovery_query": "Susan Boyle | Biography, Songs, & Facts",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T23:07:56.901168+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=2ASSXKZHgpk",
+        "creator": "Fact Fusion",
+        "license": "creativeCommon"
+      },
+      "id": "bda9f5ed75ad117b",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:07:59.928288+00:00",
+      "attempts": 0
+    },
+    "f6457a2ec6a5f32a": {
+      "title": "Clip highlight: Pacemakers - What they don't tell you!  with Mrs. Susan Kasperski",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "WEQrpT_-kM8",
+      "discovery_query": "Susan Boyle | Biography, Songs, & Facts",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T23:07:56.901173+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=WEQrpT_-kM8",
+        "creator": "Vickie Travis",
+        "license": "creativeCommon"
+      },
+      "id": "f6457a2ec6a5f32a",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:08:00.015399+00:00",
+      "attempts": 0
+    },
+    "027f927fc74e0128": {
+      "title": "Clip highlight: The Queer History of the Rocky Horror Picture Show",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "ciqV2Vzdevo",
+      "discovery_query": "Susan Boyle | Biography, Songs, & Facts",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T23:07:56.901175+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=ciqV2Vzdevo",
+        "creator": "Polyphonic",
+        "license": "creativeCommon"
+      },
+      "id": "027f927fc74e0128",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:08:00.090234+00:00",
+      "attempts": 0
+    },
+    "26ad0d8a23f7690e": {
+      "title": "Clip highlight: DOE Refuses Cleanup of Santa Susana Lab~Californian's Pay With Their Lives!!! RANT #3",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "q8i5VeMmf4A",
+      "discovery_query": "Susan Boyle | Biography, Songs, & Facts",
+      "discovery_only": false,
+      "discovered_at": "2026-11-22T23:07:56.901178+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=q8i5VeMmf4A",
+        "creator": "jrae50021",
+        "license": "creativeCommon"
+      },
+      "id": "26ad0d8a23f7690e",
+      "status": "QUEUED",
+      "created_at": "2026-11-22T23:08:00.201303+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-22",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 13,
-    "pixabay": 19,
-    "ai": 32
+    "youtube": 18,
+    "pixabay": 21,
+    "ai": 42
   },
   "content_cycle_index": 11,
   "content_batch": {
     "category": "music",
-    "completed": 0,
-    "story_keys": [],
+    "completed": 1,
+    "story_keys": [
+      "behind the curtain"
+    ],
     "media_hashes": [],
-    "source_urls": []
+    "source_urls": [
+      "https://www.peoplesdefender.com/2026/11/14/behind-the-curtain/",
+      "https://charlestoncitypaper.com/2026/11/20/before-the-doors-open-reflecting-on-20-years-behind-the-curtain-of-charleston-hospitality/"
+    ]
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-22T22:48:11.727700+00:00",
+    "started_at": "2026-11-22T23:08:00.201895+00:00",
     "attempted_ids": [
-      "0d3903eaaa721d2d",
       "4264468155308d0d",
       "e95fac783fd7233f",
-      "09d9f47c5e021faf",
-      "43c4c9a84bc6fb60",
-      "3155481e232beffb",
-      "b9bec980ee3acc4a"
+      "0d3903eaaa721d2d"
     ],
-    "completed_ids": [],
+    "completed_ids": [
+      "e95fac783fd7233f"
+    ],
     "model": "gemini-3.5-flash-lite",
     "ai_requests_by_candidate": {
-      "0d3903eaaa721d2d": 5,
-      "4264468155308d0d": 5,
-      "e95fac783fd7233f": 8,
-      "09d9f47c5e021faf": 8,
-      "43c4c9a84bc6fb60": 3,
-      "3155481e232beffb": 3,
-      "b9bec980ee3acc4a": 0
+      "4264468155308d0d": 3,
+      "e95fac783fd7233f": 4,
+      "0d3903eaaa721d2d": 3
     },
-    "pause_reason": "Per-run AI allowance reached; job saved for the next run",
-    "finished_at": "2026-11-22T22:53:21.023597+00:00",
-    "attempted": 7,
-    "completed": 0,
-    "gemini_request_attempts": 32
+    "ai_pause_reason": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted",
+    "finished_at": "2026-11-22T23:09:19.266702+00:00",
+    "attempted": 3,
+    "completed": 1,
+    "gemini_request_attempts": 10
   },
   "telegram_deliveries": {
     "2d869bc60f3da658c9197b934c45dfddb3c797a7bc940732029e92f431cf90f2": {
@@ -8724,6 +9148,13 @@
       "started_at": "2026-11-19T21:02:44.871688+00:00",
       "message_id": 34,
       "completed_at": "2026-11-19T21:02:47.260722+00:00"
+    },
+    "55adab38f823fc4ea2df50a4624bb305b741d4b0b35d3f0b4bc13808af3707e7": {
+      "status": "DELIVERED",
+      "video_sha256": "d3341d9173bde19bb7f3386c7ffbb1fb26544f55fa4643babf2f5cc3604276bd",
+      "started_at": "2026-11-22T23:09:21.048680+00:00",
+      "message_id": 38,
+      "completed_at": "2026-11-22T23:09:23.695502+00:00"
     }
   },
   "deferred_content_batches": {
