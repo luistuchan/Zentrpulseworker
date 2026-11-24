@@ -35,9 +35,9 @@ OUTPUT = ROOT / 'output'
 WORK = ROOT / '.work'
 USER_AGENT = 'ZENTR-Pulse/3.0 (source-linked video drafts)'
 SCHEMA_VERSION = 3
-SOURCE_PIPELINE_VERSION = 3
-STOCK_PIPELINE_VERSION = 5
-SCRIPT_PIPELINE_VERSION = 2
+SOURCE_PIPELINE_VERSION = 4
+STOCK_PIPELINE_VERSION = 6
+SCRIPT_PIPELINE_VERSION = 3
 EXACT_FOOTAGE_REPLAN_VERSION = 2
 CATEGORIES = {
     'movies': 'movie scene hidden clue explained',
@@ -794,6 +794,10 @@ def generate_plan(entry, sources, target, budget, folder):
                f'For {target} seconds aim for {round(target * 2.4)} spoken words, '
                f'within {int(target * 1.8)}–{int(target * 3)} words.')
     prompt += '\nCANDIDATE DATA:\n' + json.dumps(data)
+    prompt += ('\nChoose footage that is easy to locate BEFORE drafting: common physical objects or '
+               'distinct real-world actions with readily available stock. Avoid abstract concepts, '
+               'specific historical footage and vague scenery. Keep each scene short. '
+               'Write the complete narration first and count its words before splitting into scenes.')
     request_start = budget.run_counts['ai']
     for attempt in range(3):
         plan = ai(prompt, budget, response_schema=schema,
@@ -1024,7 +1028,8 @@ def select_pixabay_asset(scene, entry, folder, budget):
         atomic_json(diagnostics, {'scene_id': scene['id'], 'visual_description': scene['visual_description'],
                                  'searches': logs, 'evaluated_frames': evaluated})
     queries = stock_queries(scene)
-    evaluation_limit = 4 if len(queries) == 1 else 2
+    # Review up to four candidates in a single request per search.
+    evaluation_limit = 4
     for query in queries:
         query_evaluated = 0
         shortlist = []
@@ -1246,6 +1251,8 @@ def select_asset(scene, entry, folder, budget):
         return youtube
     try:
         return select_stock_video(scene, entry, folder, budget)
+    except Wait:
+        raise
     except Hold:
         if entry.get('content_type') == 'news_update':
             photo = select_news_photo(scene, entry, folder, budget)
@@ -1532,12 +1539,34 @@ def render(plan, entry, folder, budget, target):
     return result, quality, asset_log
 
 
+def source_topic_match(title, source):
+    # Cheap relevance screen before editorial AI; not factual verification.
+    terms = set(re.findall(r'[a-z0-9]+', title.rsplit(' - ', 1)[0].lower()))
+    terms = {x for x in terms if len(x) > 2 and x not in SEARCH_STOPWORDS}
+    words = set(re.findall(r'[a-z0-9]+', source.get('text', '').lower()))
+    return not terms or len(terms & words) >= min(3, len(terms))
+
+
+def source_domain(url):
+    host = (urllib.parse.urlsplit(url).hostname or '').removeprefix('www.')
+    if host in ('bbc.co.uk', 'bbc.com'):
+        return 'bbc'
+    return host
+
+
 def collect_sources(entry, folder):
     """Fetch the original article first, then seek independent corroboration."""
     evidence_path = folder / 'sources.json'
     sources = load(evidence_path, [])
     errors, attempted = [], set()
-    domains = {urllib.parse.urlsplit(s['url']).hostname.removeprefix('www.') for s in sources}
+    # Preserve evidence IDs for already planned drafts.
+    if not (folder / 'plan.json').exists():
+        sources = [s for s in sources if source_topic_match(entry['title'], s)]
+        sources = list({source_domain(s['url']): s for s in sources}.values())
+        for index, source in enumerate(sources, 1):
+            source['id'] = 's' + str(index)
+        atomic_json(evidence_path, sources)
+    domains = {source_domain(s['url']) for s in sources}
 
     def fetch(urls):
         for url in urls:
@@ -1546,8 +1575,8 @@ def collect_sources(entry, folder):
             attempted.add(url)
             try:
                 source = source_text(url)
-                host = urllib.parse.urlsplit(source['url']).hostname.removeprefix('www.')
-                if host in domains:
+                host = source_domain(source['url'])
+                if host in domains or not source_topic_match(entry['title'], source):
                     continue
                 source['id'] = 's' + str(len(sources) + 1)
                 sources.append(source)
@@ -1556,14 +1585,14 @@ def collect_sources(entry, folder):
                 atomic_json(evidence_path, sources)
             except Hold as exc:
                 errors.append(exc)
-            if len(domains) >= 2:
+            if len(domains) >= minimum:
                 break
 
-    if len(domains) < 2:
-        fetch(entry.get('source_urls', [])[:5])
-    if len(domains) < 2:
-        fetch(corroborating_urls(entry['title']))
     minimum = 2 if entry.get('content_type') == 'news_update' else 1
+    if len(domains) < minimum:
+        fetch(entry.get('source_urls', [])[:5])
+    if len(domains) < minimum:
+        fetch(corroborating_urls(entry['title']))
     if len(domains) < minimum:
         reason = (f'Need {minimum} readable source URL(s); '
                   f'retrieved {len(domains)}. ')
@@ -1588,7 +1617,8 @@ def reopen_script_holds(state):
     model = os.getenv('GEMINI_MODEL', 'gemini-3.5-flash-lite')
     for job in state['jobs'].values():
         reason = str(job.get('blocker', ''))
-        formatting = reason == 'Invalid claims or scene count'
+        formatting = (reason == 'Invalid claims or scene count' or
+                      reason.startswith('Script length outside target range:'))
         old_model = (reason.startswith('Gemini model ') and 'Service HTTP 404' in reason
                      and not reason.startswith(f'Gemini model {model}:'))
         if (job['status'] == 'HOLD' and (formatting or old_model)
@@ -1833,7 +1863,9 @@ def produce_batch(state, budget, target):
         quota_wait = job.get('status') == 'WAITING' and any(
             token in blocker for token in ('ai request cap', 'http 429', 'quota', 'daily ')
         )
-        return (int(quota_wait), -progress, -int(approved_plan), -int(has_plan), -int(verified),
+        # Rank remaining work, not just age: the closest draft gets first claim on requests.
+        remaining = max(0, len(load(folder / 'plan.json', {}).get('scenes', [])) - progress) if has_plan else 99
+        return (int(quota_wait), -int(approved_plan), -int(progress > 0), remaining, -progress, -int(has_plan), -int(verified),
                 -int(trusted_lead), -min(supplied, 2),
                 job.get('last_attempt_at', job.get('created_at', '')))
     pending = sorted(state['jobs'].values(), key=priority)
@@ -1929,6 +1961,13 @@ def produce_batch(state, budget, target):
                     atomic_json(STATE / 'queue.json', state)
                 if stop:
                     state['last_run']['pause_reason'] = job['blocker']
+                    break
+                # If a partially rendered draft can resume, do not start a second
+                # AI-heavy draft in this run simply because its local cap was reached.
+                if (job['status'] == 'WAITING' and job.get('content_type') != 'clipper'
+                        and 'saved progress' in str(job.get('blocker', '')).lower()
+                        and any((WORK / job['id']).glob('s[0-9][0-9].mp4'))):
+                    state['last_run']['pause_reason'] = 'Finish saved draft first: ' + job['blocker']
                     break
 
         if len(completed) > completed_before or state['last_run'].get('pause_reason'):
