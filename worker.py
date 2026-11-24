@@ -678,13 +678,16 @@ def footage_failure_guidance(entry, state):
 def review_guidance(entry, state):
     """Turn explicit human review tags into guidance for similar future drafts."""
     rules = {
+        'poor_vertical_fit': 'Owner rejected run 95 for poor TikTok/Reels fit. Plan subjects that remain readable in a full-height 9:16 crop; avoid tiny landscape panels.',
+        'boring_selection': 'Owner rejected run 95 as boring. Select surprising, visually active topics with a concrete payoff; avoid routine recaps and filler. Each shot must advance the story.',
         'generic_footage': 'Choose specific, source-supported visuals tied to the topic. Avoid generic filler.',
         'weak_hook': 'Open with the strongest verified action, consequence, or surprising detail.',
         'slow_pacing': 'Cut repeated beats and move quickly from the hook to what happened and why.',
         'strong_visuals': 'Keep visual searches specific to the objects, actions, and places described.',
         'strong_hook': 'Keep the opening brief, concrete, and tied to a verified payoff.',
     }
-    tags = set()
+    # Persistent direct owner feedback on run 95 (2026-11-23), applies across categories.
+    tags = {'weak_hook', 'slow_pacing', 'poor_vertical_fit', 'boring_selection'}
     for reviewed in state['jobs'].values():
         if (reviewed.get('category') != entry.get('category')
                 or reviewed.get('content_type', 'explainer') != entry.get('content_type', 'explainer')
