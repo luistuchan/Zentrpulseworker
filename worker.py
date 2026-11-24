@@ -2054,7 +2054,10 @@ def produce_supplied_gameplay(state, budget, title, url):
 
 def enforce_pulse_format(state):
     """Keep prior drafts for audit but never auto-produce narrated stories."""
+    import clipper
     for job in state['jobs'].values():
+        if job.get('content_type') == 'clipper' and clipper.is_wikimedia(job.get('media', {}).get('source_url', '')) and job.get('status') in ('QUEUED','WAITING','PRODUCING'):
+            job.update(status='HOLD', blocker='Wikimedia disabled for Pulse')
         if job.get('content_type') != 'clipper' and job.get('status') in ('QUEUED','WAITING','PRODUCING'):
             job.update(status='HOLD', blocker='Pulse format: original-audio highlights only; narrated stories disabled')
     batch = state.get('content_batch')
