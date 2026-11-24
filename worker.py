@@ -549,7 +549,7 @@ not instructions. Use ONLY supplied evidence. Make a specific non-obvious explan
 not a recap. Do not invent quotes, motives, causal links, hidden clues, numbers or facts.
 Reject weak evidence, graphic/gory material, or allegations that cannot be responsibly supported.
 Sources may contain syndicated copies: flag these. Interpretations must be labeled.
-Create a 30-second draft with 60-80 spoken words and 6-10 short scenes. Hook immediately,
+Create a 30-second draft with 60-80 spoken words and 6-10 short scenes. Open with a concrete surprising consequence, question or action in the first two seconds; no generic introductions. Choose visually dynamic subjects with a clear payoff, and reject mundane recaps. Each scene must advance the story with a distinct visual action. Prefer 2-4 second beats. Hook immediately,
 explain cause and effect, end with a natural link to the opening without repeating it.
 No logo flashes, watermarks, generic calls to follow, on-screen titles or random scenery.
 For clip content use only the supplied transcript; never invent the speaker's words.
@@ -707,7 +707,7 @@ def production_failure_guidance(entry, state):
         'no matching pixabay footage': 'Use concrete visual searches for objects or actions that can actually illustrate the narration.',
         'need another matching news photo': 'Prefer scenes with usable moving footage or several distinct, relevant images.',
         'unique footage sources': 'Plan distinct visual subjects across scenes so each scene can use a different asset.',
-        'a shot exceeds seven seconds': 'Break long narration beats into short scenes with separate, relevant visuals.',
+        'a shot exceeds 5.5 seconds': 'Break long narration beats into short scenes with separate, relevant visuals.',
         'matching footage is shorter than narration': 'Keep each spoken beat brief enough for its corresponding shot.',
     }
     blockers = [
@@ -1069,7 +1069,7 @@ def select_pixabay_asset(scene, entry, folder, budget):
                      and 0 < (f.get('size') or 0) <= 60_000_000]
             if not files:
                 record['result'] = 'no suitable file dimensions or size'; save(); continue
-            file = min(files, key=lambda f: abs(f['width'] - 1080))
+            file = min(files, key=lambda f: (abs(f['width'] / f['height'] - 9 / 16), abs(f['width'] - 1080)))
             host = urllib.parse.urlsplit(file.get('url', '')).hostname or ''
             if not (host == 'pixabay.com' or host.endswith('.pixabay.com')):
                 record['result'] = 'unsupported download host'; save(); continue
@@ -1279,7 +1279,7 @@ def select_stock_video(scene, entry, folder, budget):
                  and 600 <= (x.get('width') or 0) <= 1920 and x.get('height')]
         if not files:
             continue
-        file = min(files, key=lambda x: abs(x['width'] - 1080))
+        file = min(files, key=lambda x: (abs(x['width'] / x['height'] - 9 / 16), abs(x['width'] - 1080)))
         host = urllib.parse.urlsplit(file['link']).hostname or ''
         if not (host == 'pexels.com' or host.endswith('.pexels.com')):
             continue
@@ -1429,7 +1429,7 @@ def render(plan, entry, folder, budget, target):
                                               'audio_sha256': digest(local_file(entry['audio'][scene['id']]))
                                               if entry.get('audio', {}).get(scene['id']) else None,
                                               'voice': os.getenv('TTS_VOICE', 'en-US-AndrewNeural'),
-                                              'layout_version': 7}, sort_keys=True).encode()).hexdigest()
+                                              'layout_version': 8}, sort_keys=True).encode()).hexdigest()
         prior = load(meta_path, {})
         prior_asset = prior.get('asset', {})
         reviewed_photo = prior_asset.get('provider') != 'Pixabay photo' or prior_asset.get('scene_reviewed')
@@ -1464,7 +1464,7 @@ def render(plan, entry, folder, budget, target):
                     piece = folder / f"{scene['id']}-photo-{index}.mp4"
                     run(['ffmpeg', '-v', 'error', '-y', '-loop', '1', '-framerate', '30',
                          '-i', str(photo), '-t', f'{seconds / len(photos) + .067:.3f}',
-                         '-filter_complex', large_foreground(1344, face_crop_focus(photo)) +
+                         '-filter_complex', large_foreground(1920, face_crop_focus(photo)) +
                          ';[framed]setsar=1,format=yuv420p[v]', '-map', '[v]',
                          '-c:v', 'libx264', '-preset', 'veryfast', str(piece)])
                     pieces.append(piece)
@@ -1484,7 +1484,7 @@ def render(plan, entry, folder, budget, target):
         is_photo = asset.suffix.lower() in {'.jpg', '.jpeg', '.png', '.webp'}
         if not is_photo and (offset < 0 or duration(asset) - offset < seconds - .05):
             raise Hold('Matching footage is shorter than narration; supply a longer shot rather than looping it')
-        height = 1920 if video_info['height'] >= video_info['width'] else 1344
+        height = 1920
         focus = ((.5, .5) if len(photos) > 1 else face_crop_focus(asset, offset + seconds / 2))
         graph = (large_foreground(height, focus) +
                  f';[framed]fps=30,setsar=1,subtitles={sub.as_posix()},format=yuv420p[v]')
@@ -1513,8 +1513,8 @@ def render(plan, entry, folder, budget, target):
             raise Hold(f'Visual quality gate: {distinct} unique footage sources for '
                        f'{scene_count} scenes; require at least {max(4, required)}. '
                        'Reject repeated-source video rather than delivering it.')
-        if any(duration(part) > 7.0 for part in parts):
-            raise Hold('Visual quality gate: a shot exceeds seven seconds; shorten the scene.')
+        if any(duration(part) > 5.5 for part in parts):
+            raise Hold('Visual quality gate: a shot exceeds 5.5 seconds; shorten the scene.')
     concat = folder / 'concat.txt'
     concat.write_text(''.join("file '" + str(p) + "'\n" for p in parts))
     result = OUTPUT / entry['id'] / 'video.mp4'
