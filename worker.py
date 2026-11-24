@@ -1888,6 +1888,7 @@ def produce_batch(state, budget, target):
     # Try other categories in this same run when the current category has
     # no usable candidate. Never break an in-progress three-video rotation.
     deferred = set()
+    blocked_clip_hosts = set()
     for category_hop in range(len(CONTENT_CYCLE) + 1):
         batch = current_batch(state, excluded=deferred)
         if not batch:
@@ -1905,7 +1906,17 @@ def produce_batch(state, budget, target):
                 if ai_unavailable and job.get('content_type') != 'clipper':
                     continue
                 blocker = str(job.get('blocker', '')).lower()
-                if job['status'] == 'WAITING' and any(
+                is_clip = job.get('content_type') == 'clipper'
+                clip_host = urllib.parse.urlsplit(job.get('media', {}).get('source_url', '')).hostname if is_clip else None
+                if clip_host and clip_host in blocked_clip_hosts:
+                    continue
+                if is_clip and job['status'] == 'WAITING' and 'http 429' in blocker:
+                    try:
+                        if datetime.fromisoformat(job['last_attempt_at']) > datetime.now(timezone.utc) - timedelta(hours=6):
+                            continue
+                    except (KeyError, ValueError, TypeError):
+                        pass
+                elif job['status'] == 'WAITING' and any(
                     token in blocker for token in ('ai request cap', 'http 429', 'quota', 'daily ')
                 ):
                     continue
@@ -1951,7 +1962,12 @@ def produce_batch(state, budget, target):
                         term in reason for term in (
                             'http 500', 'http 502', 'http 503', 'http 504',
                             'network request failed', 'timeout'))
-                    if gemini_outage:
+                    if is_clip and 'http 429' in reason:
+                        if clip_host:
+                            blocked_clip_hosts.add(clip_host)
+                        state['last_run']['rate_limited_clip_hosts'] = sorted(blocked_clip_hosts)
+                        stop = False
+                    elif gemini_outage:
                         ai_unavailable = True
                         state['last_run']['ai_pause_reason'] = job['blocker']
                     else:
