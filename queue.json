@@ -149,14 +149,14 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T06:30:43.872170+00:00",
       "id": "4264468155308d0d",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-14T06:30:43.881621+00:00",
-      "attempts": 5,
+      "attempts": 6,
       "youtube_signal": {
         "status": "not_checked"
       },
-      "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-24T07:24:30.847563+00:00",
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T09:22:44.440438+00:00",
       "youtube_visual_discovery": [],
       "stock_reviews": {
         "6d3b8fd9530c366b7d5481744d900e9afd158d1641e742f4b749fc27e41d723c": {
@@ -210,10 +210,42 @@
         "3eac0282c2589878f9dfc1f7c561e021efd82840c7aaac545c6a870957995b49": {
           "matches": true,
           "reason": "The video is about the musical composition and theme 'Ezio's Family' from Assassin's Creed, and this frame shows someone playing an acoustic guitar, which directly relates to the musical theme of the video."
+        },
+        "d1ee047109804b9cf613a93a182b38213a7248c2cd2aaaf076371f4bad24051a": {
+          "matches": false,
+          "reason": "Writing on a chalkboard is not meaningfully related to the video topic about video-game music composition and themes."
+        },
+        "49b1973f331c6347e9fdf0ab423b046b57c1fae5b0137d05ea7b249989e2b2b8": {
+          "matches": true,
+          "reason": "A spinning vinyl record serves as relevant B-roll to illustrate the musical composition and theme discussed in the video."
+        },
+        "9d153fa79a69b7c9073de6116b2c65d501f238df237c4320c04b6d69c3a48547": {
+          "matches": true,
+          "reason": "A close-up shot of a record player spinning a vinyl record effectively illustrates the theme of music and compositions."
+        },
+        "56074d1b466099ec5cb34ac985ec71894e631b6e2159060e81612e074b3cfd46": {
+          "matches": true,
+          "reason": "A turntable playing a record is a great B-roll choice to represent the musical score and composer discussion in the video."
+        },
+        "f6cbc48ccd37ed976f1adde87fd94275a9e823ec055208fbe9151b4fa1b67395": {
+          "matches": true,
+          "reason": "The concert and musical performance footage relates well to the video's focus on a game's musical score and composer."
+        },
+        "52922551f2c995a41e6b1761b35ff4588d5a06df0b2bddc6c5ce1ca741dbad90": {
+          "matches": true,
+          "reason": "Live music performance footage aligns well with the video topic about video-game music composition."
+        },
+        "1f9808eda175b1a93e8d510bec301f1c844505abf410e7b517c4a3a8c1fc7161": {
+          "matches": true,
+          "reason": "Concert stage footage provides suitable illustrative B-roll for a video discussing music and themes."
+        },
+        "dcdd82f2c2a2b7d740daaf1c2d39d0558a696879d0596fdaed928c424bfd99a9": {
+          "matches": true,
+          "reason": "Live musical performance with instruments connects directly to the video's theme about game soundtracks and composition."
         }
       },
       "stock_pipeline_version": 5,
-      "blocker": "Stock footage review allowance reached for this draft; saved progress"
+      "blocker": "Visual quality gate: a shot exceeds 5.5 seconds; shorten the scene."
     },
     "b890da7c8bb20e5f": {
       "title": "xQc explains what his viral “six console” rant was really about - Dexerto",
@@ -286,7 +318,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-14T06:30:43.386524+00:00",
       "id": "6832207212ec0e88",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-14T06:30:43.884890+00:00",
       "attempts": 4,
       "youtube_signal": {
@@ -296,7 +328,7 @@
       },
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-21T20:44:23.857937+00:00",
-      "blocker": "Script length outside target range: 50 words; need 54-90 for 30 seconds"
+      "script_pipeline_version": 3
     },
     "15ed27b00a04aaa4": {
       "title": "The mystery of how hair knows where to grow may finally be solved - Science Daily",
@@ -345,10 +377,9 @@
       "id": "0d3903eaaa721d2d",
       "status": "HOLD",
       "created_at": "2026-11-14T17:29:08.576584+00:00",
-      "attempts": 5,
-      "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-24T07:25:30.509269+00:00",
-      "blocker": "No matching Pixabay footage for s04: 9 hits for 'abandoned mall'; inspect diagnostics in review artifact",
+      "attempts": 6,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T09:22:58.248280+00:00",
       "youtube_visual_discovery": [],
       "stock_reviews": {
         "5608f1eb766cd764e0e76bade91e4dcf0d0adee97f3d26b68dd1807ed9c7241d": {
@@ -403,7 +434,9 @@
           "matches": false,
           "reason": "The image shows a generic staircase and hallway, which has no specific connection to The Last of Us, music stores, or the song Take On Me."
         }
-      }
+      },
+      "stock_pipeline_version": 6,
+      "blocker": "All available video providers exhausted for s04: No matching Pixabay footage for s04: 9 hits for 'abandoned mall'; inspect diagnostics in review artifact"
     },
     "e95fac783fd7233f": {
       "title": "Behind The Curtain - People's Defender",
@@ -561,11 +594,11 @@
       "headline_score": 0,
       "discovered_at": "2026-11-15T17:29:14.634009+00:00",
       "id": "09d9f47c5e021faf",
-      "status": "WAITING",
+      "status": "REVIEW_REQUIRED",
       "created_at": "2026-11-15T17:29:14.647911+00:00",
-      "attempts": 2,
-      "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-24T07:26:04.701681+00:00",
+      "attempts": 3,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T09:23:06.461145+00:00",
       "youtube_visual_discovery": [
         {
           "id": "zFzCCHEVtzA",
@@ -624,9 +657,74 @@
         "9b8c4198131bb0bb7e7e27b6a77e29d6bda45c76a8f7bbfbfbf53e9cb0364749": {
           "matches": false,
           "reason": "The footage shows a generic open sea with a sailboat and distant coastline, which does not relate to Philadelphia or its cultural stage productions."
+        },
+        "33daf36e825c66e71cd02284156a91cf6d7344a5a812be9c7af528e3c694ca15": {
+          "matches": true,
+          "reason": "The ornate architectural details and historic interior space fit well as B-roll representing a prominent performing arts venue in Philadelphia."
+        },
+        "2ab712a8f97714ff22e812655a0f28d9fe6a807071ec545b35a20bbbcd3edd87": {
+          "matches": false,
+          "reason": "This shot clearly depicts a Venetian canal and bridge, which is geographically misleading for a video about Philadelphia."
+        },
+        "3cffed2693fd8071726b5d5bfd85df4f2d8204a89a33113153779dcd25e770e7": {
+          "matches": false,
+          "reason": "The frame shows guards in red coats marching in front of a classical European-style building, which resembles London rather than Philadelphia stages and performance venues."
+        },
+        "87fc0eaf1248bec6e6c3e7ae233415e2a01c4b640ac64926693e2d9ee9992c48": {
+          "matches": true,
+          "reason": "The shot depicts a musical performance with an orchestra/band and conductor, which aligns well with stage productions and orchestra shows."
+        },
+        "2ff4b9142d143e559d08f10bcfbc46a2a4d65a76770cbd4bc9d5114b8d104687": {
+          "matches": true,
+          "reason": "The frame shows a modern auditorium or theater venue seating area, fitting the theme of performing arts playhouses and venues."
+        },
+        "5757a5cc3cfccce73b210f04dd98641a4e0131e337d2040f1654288eecf2daef": {
+          "matches": true,
+          "reason": "This candidate shows the interior of a theater or concert hall auditorium, directly related to stage venues."
+        },
+        "ea437da6b1a2a45b35954895ce224df7eaa8f28ea5510d23db2d552778c832ce": {
+          "matches": true,
+          "reason": "The shot captures a live stage concert or show with dramatic lighting and an audience, matching the performing arts and shows theme."
+        },
+        "c92935d39db6bcd4db2450a1f498cb7db9d1e4bb563f20a4a2da6105e65468ec": {
+          "matches": true,
+          "reason": "The lit candles and festive warm background lights evoke the holiday season and cultural events mentioned in the video context."
+        },
+        "12d2f78787e53a561db77f38eba48d0ef0f20debf6d1f3db186a1b322c00b550": {
+          "matches": false,
+          "reason": "The generic scenic shot of a calm lake and distant mountains lacks any meaningful connection to Philadelphia stage shows or holiday events."
+        },
+        "fc41b18480b87faff7ae17fff426383e2d78813b5bc7ceca84bf81a208b94dc3": {
+          "matches": true,
+          "reason": "The dramatic stage performance with fire and sparks captures the excitement of live theatrical productions."
+        },
+        "d9aef9fd835fd1cad64f57a626572dc253b4864b5e6277468f19d13412b88315": {
+          "matches": false,
+          "reason": "The aerial view of a resort hotel and city streets at night is generic and not relevant to Philadelphia's cultural and theater scene."
         }
       },
-      "blocker": "Stock footage review allowance reached for this draft; saved progress"
+      "edit_analysis": {
+        "video_sha256": "9c59c1f5c242ddbd941c9581f7cf57b5ff45b6d8fb92a860fb4544176e4a6c92",
+        "duration_seconds": 29.07,
+        "cut_times": [
+          4.101042,
+          13.94707,
+          19.113737
+        ]
+      },
+      "video_sha256": "9c59c1f5c242ddbd941c9581f7cf57b5ff45b6d8fb92a860fb4544176e4a6c92",
+      "completed_at": "2026-11-24T09:23:40.671319+00:00",
+      "source_story_urls": [
+        "https://www.visitphilly.com/articles/philadelphia/guide-performing-arts-and-live-theater-venues-in-greater-philadelphia/"
+      ],
+      "rendered_pixabay_creators": [
+        "Coverr-Free-Footage",
+        "Helena1962",
+        "Michael_the_Stranger",
+        "caelan",
+        "jrydertr",
+        "mostafa_meraji"
+      ]
     },
     "c7342faafbcb636a": {
       "title": "Our new blog for science - OpenAI",
@@ -950,12 +1048,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:47.992170+00:00",
       "id": "43c4c9a84bc6fb60",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T08:45:49.278974+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-22T22:51:41.840442+00:00",
-      "blocker": "Script length outside target range: 42 words; need 54-90 for 30 seconds"
+      "script_pipeline_version": 3
     },
     "3155481e232beffb": {
       "title": "Best audio interface 2026: Expert-reviewed Thunderbolt and USB interfaces for every budget - MusicRadar",
@@ -968,12 +1066,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:47.998964+00:00",
       "id": "3155481e232beffb",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T08:45:49.285032+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-22T22:52:20.106370+00:00",
-      "blocker": "Script length outside target range: 35 words; need 54-90 for 30 seconds"
+      "script_pipeline_version": 3
     },
     "b9bec980ee3acc4a": {
       "title": "Lady Gaga | Biography, Grammys, Songs, Oscar, & Facts - Britannica",
@@ -986,12 +1084,11 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:48.003297+00:00",
       "id": "b9bec980ee3acc4a",
-      "status": "WAITING",
+      "status": "REVIEW_REQUIRED",
       "created_at": "2026-11-16T08:45:49.288892+00:00",
-      "attempts": 2,
-      "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-24T07:27:04.871652+00:00",
-      "blocker": "Stock footage review allowance reached for this draft; saved progress",
+      "attempts": 3,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T09:23:40.687090+00:00",
       "youtube_visual_discovery": [
         {
           "id": "__Om6mS28mU",
@@ -1054,8 +1151,92 @@
         "f2bee45c67ad83a0a5c340e4334ee0d4d7ebb6cfedf50d6f0683427777d43a47": {
           "matches": true,
           "reason": "The sunset over the water visually complements the beach and large gathering setting described in the video."
+        },
+        "d4c2334f20bd81e1da01dc5f339ee004469c748e5678da2b998a36bc416da84f": {
+          "matches": false,
+          "reason": "The frame is too dark and unclear to serve as meaningful B-roll."
+        },
+        "c1d46ea13d3afe860abcc28d05c41b173ee1863f5865701ff967a0fd8b9a393b": {
+          "matches": false,
+          "reason": "The frame is completely black and contains no usable visual information."
+        },
+        "466869d757f8408e6eabd04439d5ab80c0c0d3ea9bc2a9019cb2460bb86063ea": {
+          "matches": true,
+          "reason": "The night cityscape along a body of water provides a fitting setting and visual context for a major concert event or news story."
+        },
+        "1c18e8ad46a0e2525ff551ff6df8acf6e0c2d3b28832665e8bafd45b8886bdc4": {
+          "matches": false,
+          "reason": "A match lighting a candle is not meaningfully related to the biography or events involving Lady Gaga."
+        },
+        "dbc85088b073c8191045337825c0027cb89d2f629b08bb833e273a6c962b7b81": {
+          "matches": false,
+          "reason": "Generic close-up of hands typing on a computer keyboard, unrelated to Lady Gaga or her biography."
+        },
+        "42bbd9007de6845b08a7fd3a21c6403a46818e142b989768986a9a0d9149018d": {
+          "matches": false,
+          "reason": "Person reading a newspaper, which is too generic and not meaningfully related to Lady Gaga."
+        },
+        "2968919fe390d6e4d05d84ea80b43fd9c9aabdabd4da7c3fe403f26630c099e7": {
+          "matches": false,
+          "reason": "Generic street scene of people walking dogs, completely unrelated to Lady Gaga."
+        },
+        "c09febe8607c67b1cf37a0de581fdb08763bd063c1b8d3ddcd9be65580899a7c": {
+          "matches": false,
+          "reason": "Industrial printing press operating, unrelated to the video topic of Lady Gaga."
+        },
+        "1a656272b1506142bbaf130899d9a98008c857662d28ceb6d83fe71007c0623a": {
+          "matches": true,
+          "reason": "The video mentions the singer learning about the threat through news reports, and a person browsing a phone fits this context well."
+        },
+        "18762de191fbf14cc71ea7cdd48ee49f4abd516c0ef3e2309f2bc5bb27432a12": {
+          "matches": true,
+          "reason": "Close-up of a person interacting with a smartphone aligns with reading news or receiving alerts about the threat."
+        },
+        "f3c2b4742a09f6405f7a57f27c07d55fc2adec4808390b1ac1783f2624f9760c": {
+          "matches": false,
+          "reason": "The blurry abstract footage does not meaningfully relate to the narrative or context."
+        },
+        "aa1e53771fb6ee0857e159b3f34c1a554b9b83279a2b71698e91d45d2a2b7b53": {
+          "matches": true,
+          "reason": "Hands typing on a smartphone relates to people reading or communicating about news reports."
+        },
+        "c94de877094b1b655c6f1207defeb14fca0e76075818572c5ea2c45ff346a809": {
+          "matches": true,
+          "reason": "The confetti and debris on the ground directly match the narrative of celebrating a vibrant and historic musical event and its aftermath."
+        },
+        "994924bfa41f84f2a5fa35ad40913391d011a593c8c437b167e5b2f002a9c20b": {
+          "matches": true,
+          "reason": "Falling confetti matches the festive and celebratory atmosphere described in the video context about Lady Gaga."
+        },
+        "10231acca00cf6dda69bbcf1634a54c56a419337d4ddaac57afb2bd13717aa6e": {
+          "matches": false,
+          "reason": "Generic abstract purple bokeh lights do not meaningfully relate to the specific biography or events surrounding Lady Gaga."
+        },
+        "04858f92a4b02acd243b8ec23a731b5837ea184123a576eb8c28fb15b1846032": {
+          "matches": true,
+          "reason": "The decorated outdoor plaza fits well as illustrative B-roll depicting a vibrant public gathering setting."
         }
-      }
+      },
+      "edit_analysis": {
+        "video_sha256": "4e28eadf58abc80ca78a8c21e5efa25d6dfcd915a5ba54ea031bfd1f475a086f",
+        "duration_seconds": 25.62,
+        "cut_times": []
+      },
+      "video_sha256": "4e28eadf58abc80ca78a8c21e5efa25d6dfcd915a5ba54ea031bfd1f475a086f",
+      "completed_at": "2026-11-24T09:24:22.811870+00:00",
+      "source_story_urls": [
+        "https://www.biography.com/musicians/lady-gaga",
+        "https://www.grammy.com/news/lady-gaga-chromatica-ball-tour-bradley-cooper-tony-bennett-a-star-is-born-facts-songs-hits-stefani-germanotta-joker-folie-a-deux/"
+      ],
+      "rendered_pixabay_creators": [
+        "Coverr-Free-Footage",
+        "FuriousPhoenixAU",
+        "GIUSEPPE-DE-BERGOLIS",
+        "SerajKaram",
+        "Vimeo-Free-Videos",
+        "kieutruongphoto",
+        "motion5"
+      ]
     },
     "98b05cefbe0e3d1c": {
       "title": "Norfolk council considers 'unfair burden' of major energy schemes - BBC",
@@ -1170,7 +1351,7 @@
       "headline_score": 1,
       "discovered_at": "2026-11-16T10:36:11.777709+00:00",
       "id": "0935eff17b9774de",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-16T10:36:13.784978+00:00",
       "attempts": 3,
       "source_pipeline_version": 3,
@@ -1193,8 +1374,7 @@
           "reason": "The image shows a European classical building with a German flag, which is completely unrelated to the Indian supernatural thriller movie Bhairadevi."
         }
       },
-      "stock_pipeline_version": 5,
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'police badge'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 6
     },
     "3a44bdb665e0ff78": {
       "title": "Hair Relaxer Lawsuit Settlement | November 2026 Litigation Update - Lawsuit Information Center",
@@ -1261,11 +1441,11 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:12.396048+00:00",
       "id": "5c2fc0b7929fbd7e",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.824771+00:00",
-      "attempts": 1,
-      "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-24T07:27:58.828457+00:00",
+      "attempts": 2,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T09:22:35.183664+00:00",
       "youtube_visual_discovery": [],
       "stock_reviews": {
         "ba51fa8b3804262ad3fa9329c96be49a9e07ede9aaea5ea85ca40bfe7312d1b4": {
@@ -1307,9 +1487,25 @@
         "752f665bafcb300bd2863e99099ddbcb1b0d92fe4b753ca3763e139a3b6c0d5b": {
           "matches": true,
           "reason": "The speaker cone visually represents sound and audio production, aligning with the musical focus of the video."
+        },
+        "d833e38b5517fa4e905d9930990962bcddd1d4f5347aa4420399b88104f6ea11": {
+          "matches": true,
+          "reason": "The frame shows someone playing a video game with a controller, which is relevant to the Call of Duty video topic."
+        },
+        "81c1dc363842545a1c7b50b292a8f8e364599d5101f7f20331e00967d4e953ad": {
+          "matches": true,
+          "reason": "The close-up of a modern gaming controller fits the gaming context of the story."
+        },
+        "6ade1238b0b82079c6ed9b4ddab9b114b2e61a2c7887e0da89ed00b9588b115a": {
+          "matches": false,
+          "reason": "The pixelated Mario figure is unrelated to Call of Duty or traditional Korean music."
+        },
+        "dbb1b8abccad6c7d75dd542c555ef8206b084173b9a84a4e5040132fc1d78d07": {
+          "matches": true,
+          "reason": "The shot of hands using a modern video game controller is relevant to the video game topic."
         }
       },
-      "blocker": "Stock footage review allowance reached for this draft; saved progress"
+      "blocker": "Visual quality gate: a shot exceeds 5.5 seconds; shorten the scene."
     },
     "1dc34d956ddca456": {
       "title": "Virtual creators team with HYBE unit NEWEPICBASE to release single and YouTube series - Chosunbiz",
@@ -3109,12 +3305,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T05:29:33.127934+00:00",
       "id": "7542c97980ee954f",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T05:29:36.163419+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-18T08:28:25.574693+00:00",
-      "blocker": "Script length outside target range: 39 words; need 54-90 for 30 seconds"
+      "script_pipeline_version": 3
     },
     "2f9dfe13e5fdc186": {
       "title": "Challenging Consensus, Scientist Says Photos Show Epstein Was Killed - The New York Times",
@@ -3319,7 +3515,8 @@
       "attempts": 1,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-18T08:01:28.472598+00:00",
-      "blocker": "Script length outside target range: 42 words; need 54-90 for 30 seconds"
+      "script_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "7c790b4af2da7eb9": {
       "title": "Trump's arch construction to run 20 hours a day for 2 to 3 years, documents show - ABC News - Breaking News, Latest News and Videos",
@@ -3481,7 +3678,8 @@
       "attempts": 1,
       "source_pipeline_version": 2,
       "last_attempt_at": "2026-11-18T08:21:41.306076+00:00",
-      "blocker": "Script length outside target range: 46 words; need 54-90 for 30 seconds"
+      "script_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "29672f52ba101f07": {
       "title": "The Dark Heaven Ending Explained: The Shocking Truth Behind the Seven-Year Curse and the Real Killer (Spoilers) - Vocal",
@@ -3965,7 +4163,7 @@
       "headline_score": 1,
       "discovered_at": "2026-11-17T09:02:22.391722+00:00",
       "id": "6d7895ef328280ad",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-17T09:02:24.364859+00:00",
       "attempts": 4,
       "source_pipeline_version": 3,
@@ -3988,9 +4186,8 @@
           "reason": "The frame shows a busy public transit concourse or station with a prominent Boots logo, which is unrelated to the plot of the Telugu thriller Naa Wife Missing."
         }
       },
-      "stock_pipeline_version": 5,
-      "youtube_visual_discovery": [],
-      "blocker": "No matching Pixabay footage for s01: 9 hits for 'police station'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 6,
+      "youtube_visual_discovery": []
     },
     "0945926769a2e28b": {
       "title": "Discover all the heavy metal bands nominated for the 2027 Grammy Awards - Chaoszine",
@@ -4506,7 +4703,8 @@
       "attempts": 2,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-19T20:41:11.524405+00:00",
-      "blocker": "Script length outside target range: 50 words; need 54-90 for 30 seconds"
+      "script_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "808be5cc9374feea": {
       "title": "How Democrats Could Nullify the Electoral College - Time Magazine",
@@ -4677,7 +4875,8 @@
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-19T20:42:33.306150+00:00",
-      "blocker": "Script length outside target range: 35 words; need 54-90 for 30 seconds"
+      "script_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "a588be45b3788aca": {
       "title": "Palestinian woman, 72, shot dead by Israeli settlers in West Bank, health ministry says",
@@ -4798,7 +4997,8 @@
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-19T20:45:10.594647+00:00",
-      "blocker": "Script length outside target range: 49 words; need 54-90 for 30 seconds"
+      "script_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "312e4f11713dbf42": {
       "title": "William and Kate celebrate Earthshot Prize winners in Mumbai",
@@ -5016,7 +5216,8 @@
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-19T21:07:13.750317+00:00",
-      "blocker": "Script length outside target range: 50 words; need 54-90 for 30 seconds"
+      "script_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "a6b0d105766c1d12": {
       "title": "China and Canada expand tariff relief while relations with the U.S. are strained - PBS",
@@ -5108,7 +5309,8 @@
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-19T21:09:16.782583+00:00",
-      "blocker": "Script length outside target range: 42 words; need 54-90 for 30 seconds"
+      "script_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "a4fe9ef00312e037": {
       "title": "Trump issues warning to Iran on nuclear weapons in State of the Union address - ABC News - Breaking News, Latest News and Videos",
@@ -5282,8 +5484,8 @@
           "reason": "The frame shows a large bank building facade, which serves as suitable B-roll for a video discussing bank records, financial institutions, and investigations."
         }
       },
-      "stock_pipeline_version": 5,
-      "blocker": "No matching Pixabay footage for s02: 0 hits for 'newsroom'; inspect diagnostics in review artifact"
+      "stock_pipeline_version": 6,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "68a3a6496c734dfd": {
       "title": "Democrats flipped 9 U.S. Senate seats, most in almost 70 years - NBC New York",
@@ -5318,7 +5520,8 @@
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-19T21:11:53.496979+00:00",
-      "blocker": "Script length outside target range: 38 words; need 54-90 for 30 seconds"
+      "script_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "9eb0effb1b8b8f5d": {
       "title": "Trump says US taking 'very seriously' any Iranian plot against Washington",
@@ -5555,7 +5758,8 @@
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-20T09:45:14.374190+00:00",
-      "blocker": "Script length outside target range: 47 words; need 54-90 for 30 seconds"
+      "script_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "d4542d7ce3869356": {
       "title": "New cell type that could transform biotechnology - NEWS.am TECH",
@@ -5710,7 +5914,8 @@
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-20T09:46:49.800105+00:00",
-      "blocker": "Script length outside target range: 48 words; need 54-90 for 30 seconds"
+      "script_pipeline_version": 3,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "d0e534835d37ac75": {
       "title": "'The drones don't fly here' - BBC reports from Ukraine's new front line",
@@ -8195,12 +8400,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-21T20:43:43.967485+00:00",
       "id": "e7715d838068450b",
-      "status": "HOLD",
+      "status": "QUEUED",
       "created_at": "2026-11-21T20:43:51.686431+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-21T20:47:26.370759+00:00",
-      "blocker": "Script length outside target range: 41 words; need 54-90 for 30 seconds"
+      "script_pipeline_version": 3
     },
     "ad39e831c82176aa": {
       "title": "How The Ronettes Defined The Girl Group Sound And Changed Pop Music Forever - That Eric Alper",
@@ -9551,56 +9756,161 @@
       "status": "QUEUED",
       "created_at": "2026-11-24T07:24:30.809590+00:00",
       "attempts": 0
+    },
+    "84c94237ad4d7ff3": {
+      "title": "Watch: Moment troops raid home and capture Mexican drug lord",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/videos/cm62p9y3y04qo?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-24T09:09:41+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-24T09:18:06.789249+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "84c94237ad4d7ff3",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T09:22:34.846643+00:00",
+      "attempts": 0
+    },
+    "fbe859cfe16191f4": {
+      "title": "DR Congo says aircraft missing as rebels claim to shoot down plane",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.bbc.co.uk/news/articles/cwy7r5z8gg65o?at_medium=RSS&at_campaign=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-24T08:35:41+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-24T09:18:06.411988+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "fbe859cfe16191f4",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T09:22:34.906355+00:00",
+      "attempts": 0
+    },
+    "7cb8141a288a7173": {
+      "title": "US army says detonation of lead explosives in Iowa will proceed",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/24/us-army-says-detonation-of-lead-explosives-in-iowa-will-proceed?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-24T08:24:08+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-24T09:18:07.481187+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "7cb8141a288a7173",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T09:22:34.962248+00:00",
+      "attempts": 0
+    },
+    "b79f43c949cc89d8": {
+      "title": "Clip highlight: Streets blocked due to burning buses after firefight involving captured Ovidio Guzman",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "yDgLh1-EHt0",
+      "discovery_query": "Watch: Moment troops raid home and capture Mexican drug lord",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T09:21:52.762158+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=yDgLh1-EHt0",
+        "creator": "Kanal13",
+        "license": "creativeCommon"
+      },
+      "id": "b79f43c949cc89d8",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T09:22:35.043060+00:00",
+      "attempts": 0
+    },
+    "54475911f815f538": {
+      "title": "Clip highlight: U.S. Vietnam Soldier Describes War Crimes #history #vietnam #army",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "P5D-qzDA-Zs",
+      "discovery_query": "Watch: Moment troops raid home and capture Mexican drug lord",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T09:21:52.762177+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=P5D-qzDA-Zs",
+        "creator": "The Voices Of Glory",
+        "license": "creativeCommon"
+      },
+      "id": "54475911f815f538",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T09:22:35.108748+00:00",
+      "attempts": 0
+    },
+    "f13a151de134d63c": {
+      "title": "Clip highlight: Exonerated man fatally shot during traffic stop",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "a4ix_JMics4",
+      "discovery_query": "Watch: Moment troops raid home and capture Mexican drug lord",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T09:21:52.762180+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=a4ix_JMics4",
+        "creator": "NBC News",
+        "license": "creativeCommon"
+      },
+      "id": "f13a151de134d63c",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T09:22:35.162596+00:00",
+      "attempts": 0
     }
   },
   "budget": {
-    "day": "2026-11-23",
+    "day": "2026-11-24",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 11,
-    "pixabay": 30,
-    "ai": 32
+    "youtube": 3,
+    "ai": 12,
+    "pixabay": 8
   },
-  "content_cycle_index": 11,
+  "content_cycle_index": 0,
   "content_batch": {
     "category": "music",
-    "completed": 1,
+    "completed": 3,
     "story_keys": [
-      "behind the curtain"
+      "behind the curtain",
+      "30 can t miss shows on philly stages for fall the holidays",
+      "lady gaga biography grammys songs oscar facts"
     ],
     "media_hashes": [],
     "source_urls": [
       "https://www.peoplesdefender.com/2026/11/14/behind-the-curtain/",
-      "https://charlestoncitypaper.com/2026/11/20/before-the-doors-open-reflecting-on-20-years-behind-the-curtain-of-charleston-hospitality/"
+      "https://charlestoncitypaper.com/2026/11/20/before-the-doors-open-reflecting-on-20-years-behind-the-curtain-of-charleston-hospitality/",
+      "https://www.visitphilly.com/articles/philadelphia/guide-performing-arts-and-live-theater-venues-in-greater-philadelphia/",
+      "https://www.biography.com/musicians/lady-gaga",
+      "https://www.grammy.com/news/lady-gaga-chromatica-ball-tour-bradley-cooper-tony-bennett-a-star-is-born-facts-songs-hits-stefani-germanotta-joker-folie-a-deux/"
     ]
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-24T07:24:30.810376+00:00",
+    "started_at": "2026-11-24T09:22:35.163164+00:00",
     "attempted_ids": [
+      "5c2fc0b7929fbd7e",
       "4264468155308d0d",
       "0d3903eaaa721d2d",
       "09d9f47c5e021faf",
-      "b9bec980ee3acc4a",
-      "5c2fc0b7929fbd7e",
-      "1dc34d956ddca456",
-      "5f0ddd8b703bd3b9"
+      "b9bec980ee3acc4a"
     ],
-    "completed_ids": [],
+    "completed_ids": [
+      "09d9f47c5e021faf",
+      "b9bec980ee3acc4a"
+    ],
     "model": "gemini-3.5-flash-lite",
     "ai_requests_by_candidate": {
-      "4264468155308d0d": 5,
-      "0d3903eaaa721d2d": 3,
-      "09d9f47c5e021faf": 5,
-      "b9bec980ee3acc4a": 8,
-      "5c2fc0b7929fbd7e": 8,
-      "1dc34d956ddca456": 3,
-      "5f0ddd8b703bd3b9": 0
+      "5c2fc0b7929fbd7e": 1,
+      "4264468155308d0d": 2,
+      "0d3903eaaa721d2d": 0,
+      "09d9f47c5e021faf": 4,
+      "b9bec980ee3acc4a": 5
     },
-    "pause_reason": "Per-run AI allowance reached; job saved for the next run",
-    "finished_at": "2026-11-24T07:31:55.788729+00:00",
-    "attempted": 7,
-    "completed": 0,
-    "gemini_request_attempts": 32
+    "finished_at": "2026-11-24T09:24:22.828783+00:00",
+    "attempted": 5,
+    "completed": 2,
+    "gemini_request_attempts": 12
   },
   "telegram_deliveries": {
     "2d869bc60f3da658c9197b934c45dfddb3c797a7bc940732029e92f431cf90f2": {
@@ -9623,6 +9933,20 @@
       "started_at": "2026-11-22T23:09:21.048680+00:00",
       "message_id": 38,
       "completed_at": "2026-11-22T23:09:23.695502+00:00"
+    },
+    "c72fd0f718f6e35e3c96931bc392a8c5a8c8d2344e7d8e6d1bb1d736bb84f2b6": {
+      "status": "DELIVERED",
+      "video_sha256": "9c59c1f5c242ddbd941c9581f7cf57b5ff45b6d8fb92a860fb4544176e4a6c92",
+      "started_at": "2026-11-24T09:24:23.364636+00:00",
+      "message_id": 39,
+      "completed_at": "2026-11-24T09:24:26.285718+00:00"
+    },
+    "ba29bde7b776001dfcbad082a9053dbc9cc3dd72cc63fcc4ac78316b928328d1": {
+      "status": "DELIVERED",
+      "video_sha256": "4e28eadf58abc80ca78a8c21e5efa25d6dfcd915a5ba54ea031bfd1f475a086f",
+      "started_at": "2026-11-24T09:24:26.303910+00:00",
+      "message_id": 40,
+      "completed_at": "2026-11-24T09:24:42.262857+00:00"
     }
   },
   "deferred_content_batches": {
