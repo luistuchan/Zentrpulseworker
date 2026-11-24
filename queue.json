@@ -8291,12 +8291,12 @@
         "rights_note": "Wikimedia Commons identifies this NASA video as U.S. public domain. Review the excerpt for protected NASA insignia and third-party material before publishing."
       },
       "id": "ce971e52eddae261",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:51.199921+00:00",
       "attempts": 1,
       "source_pipeline_version": 4,
       "last_attempt_at": "2026-11-24T09:32:46.064857+00:00",
-      "blocker": "Service HTTP 429; no paid fallback attempted"
+      "blocker": "Wikimedia disabled for Pulse"
     },
     "2810c54490466ad7": {
       "title": "Why is the US Army detonating lead-rich explosives in Iowa?",
@@ -8540,9 +8540,12 @@
         "license": "creativeCommon"
       },
       "id": "90fafab88514864a",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:51.866745+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T09:40:51.491156+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
     },
     "2d2bab3ae4fe33ec": {
       "title": "Clip highlight: The Shocking Truth About Weed Killer (Glyphosate) in Your Food! | Dr. Steven Gundry",
@@ -8558,9 +8561,12 @@
         "license": "creativeCommon"
       },
       "id": "2d2bab3ae4fe33ec",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:51.935071+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T09:40:53.957454+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
     },
     "176997dde36fbd50": {
       "title": "Clip highlight: Why Glyphosate Isn't the Scariest Weed Killer Anymore! Paraquat and Diquat",
@@ -8576,9 +8582,12 @@
         "license": "creativeCommon"
       },
       "id": "176997dde36fbd50",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:52.003971+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T09:40:56.128328+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
     },
     "1fd861d9d2e518e8": {
       "title": "Clip highlight: The Effects of Glyphosate on Children and How to Reduce Exposure",
@@ -8594,9 +8603,12 @@
         "license": "creativeCommon"
       },
       "id": "1fd861d9d2e518e8",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:52.065913+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T09:40:58.315243+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
     },
     "8a6288f104a8ad43": {
       "title": "Clip highlight: Is Glyphosate the Biggest Threat to YOUR Health?! Weed Killers and Diquat Exposed!",
@@ -8612,9 +8624,12 @@
         "license": "creativeCommon"
       },
       "id": "8a6288f104a8ad43",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:52.138972+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T09:41:00.370865+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
     },
     "d48d92d977f13a50": {
       "title": "Clip highlight: Dr. Michael Antoniou on the Dangers of Glyphosate",
@@ -8630,9 +8645,12 @@
         "license": "creativeCommon"
       },
       "id": "d48d92d977f13a50",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:52.189142+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T09:41:02.374272+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
     },
     "e5ce75aa673f34a8": {
       "title": "Clip highlight: What Explains the Different Glyphosate Safety Conclusions?",
@@ -8648,9 +8666,12 @@
         "license": "creativeCommon"
       },
       "id": "e5ce75aa673f34a8",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:52.245289+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T09:41:04.498991+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
     },
     "d367d971bc82fe4e": {
       "title": "Clip highlight: Everything You Need To Know About Glyphosate",
@@ -8666,9 +8687,12 @@
         "license": "creativeCommon"
       },
       "id": "d367d971bc82fe4e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:52.292391+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T09:41:06.731761+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
     },
     "2d842fa500a780e9": {
       "title": "Clip highlight: Is Monsanto’s Roundup Pesticide Glyphosate Safe?",
@@ -8684,9 +8708,12 @@
         "license": "creativeCommon"
       },
       "id": "2d842fa500a780e9",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:52.343876+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T09:41:08.772823+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
     },
     "d200b1d9f859c8eb": {
       "title": "Clip highlight: Are Consumers of GMO Crops Exposed to Enough Glyphosate to Increase Cancer Risk?",
@@ -10097,37 +10124,139 @@
       "status": "QUEUED",
       "created_at": "2026-11-24T09:32:46.020450+00:00",
       "attempts": 0
+    },
+    "57e7c00084557150": {
+      "title": "Clip highlight: Qui sont Connor Storrie et Hudson Williams, les stars de la série \"Heated Rivalry\" ?",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "cEiwMfPdZrw",
+      "discovery_query": "Connor Storrie reveals surprising details about his life with Hudson",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T09:40:13.729200+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=cEiwMfPdZrw",
+        "creator": "TDN",
+        "license": "creativeCommon"
+      },
+      "id": "57e7c00084557150",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T09:40:51.090456+00:00",
+      "attempts": 0
+    },
+    "485975e38f4c5dcf": {
+      "title": "Clip highlight: Finally broken and opening up | Heartstopper s2ep5",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "eXpkkK2qQu8",
+      "discovery_query": "Connor Storrie reveals surprising details about his life with Hudson",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T09:40:13.729202+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=eXpkkK2qQu8",
+        "creator": "Nerdy Investigations",
+        "license": "creativeCommon"
+      },
+      "id": "485975e38f4c5dcf",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T09:40:51.166095+00:00",
+      "attempts": 0
+    },
+    "dd371426562af1c6": {
+      "title": "Clip highlight: Clothing Makes Ilya Rozanov | Heated Rivalry",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "epGtO_b4zBI",
+      "discovery_query": "Connor Storrie reveals surprising details about his life with Hudson",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T09:40:13.729204+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=epGtO_b4zBI",
+        "creator": "Nerdy Investigations",
+        "license": "creativeCommon"
+      },
+      "id": "dd371426562af1c6",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T09:40:51.236914+00:00",
+      "attempts": 0
+    },
+    "63a0c269b9a02aef": {
+      "title": "Clip highlight: The Foot Touch: A Heated Rivalry Deep Dive",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "yxeRnykFEHQ",
+      "discovery_query": "Connor Storrie reveals surprising details about his life with Hudson",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T09:40:13.729207+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=yxeRnykFEHQ",
+        "creator": "Nerdy Investigations",
+        "license": "creativeCommon"
+      },
+      "id": "63a0c269b9a02aef",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T09:40:51.310314+00:00",
+      "attempts": 0
+    },
+    "6a6282980e41899e": {
+      "title": "Clip highlight: Gay Man React to Netflix's *BOOTS* (Episodes 1, 2, & 3) *The Pink Marine* Book Adaptation | REACTION",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "gIqD6HaOsmI",
+      "discovery_query": "Connor Storrie reveals surprising details about his life with Hudson",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T09:40:13.729209+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=gIqD6HaOsmI",
+        "creator": "Billy the Reaction Slayer",
+        "license": "creativeCommon"
+      },
+      "id": "6a6282980e41899e",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T09:40:51.436698+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-24",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 9,
+    "youtube": 15,
     "ai": 12,
     "pixabay": 8
   },
-  "content_cycle_index": 1,
-  "content_batch": {
-    "category": "clipper",
-    "completed": 0,
-    "story_keys": [],
-    "media_hashes": [],
-    "source_urls": []
-  },
+  "content_cycle_index": 2,
+  "content_batch": null,
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-24T09:32:46.033499+00:00",
+    "started_at": "2026-11-24T09:40:51.449514+00:00",
     "attempted_ids": [
-      "ce971e52eddae261"
+      "90fafab88514864a",
+      "2d2bab3ae4fe33ec",
+      "176997dde36fbd50",
+      "1fd861d9d2e518e8",
+      "8a6288f104a8ad43",
+      "d48d92d977f13a50",
+      "e5ce75aa673f34a8",
+      "d367d971bc82fe4e",
+      "2d842fa500a780e9"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "ai_requests_by_candidate": {
-      "ce971e52eddae261": 0
+      "90fafab88514864a": 0,
+      "2d2bab3ae4fe33ec": 0,
+      "176997dde36fbd50": 0,
+      "1fd861d9d2e518e8": 0,
+      "8a6288f104a8ad43": 0,
+      "d48d92d977f13a50": 0,
+      "e5ce75aa673f34a8": 0,
+      "d367d971bc82fe4e": 0,
+      "2d842fa500a780e9": 0
     },
-    "pause_reason": "Service HTTP 429; no paid fallback attempted",
-    "finished_at": "2026-11-24T09:32:46.169040+00:00",
-    "attempted": 1,
+    "categories_deferred": [
+      "clipper"
+    ],
+    "finished_at": "2026-11-24T09:41:11.084904+00:00",
+    "attempted": 9,
     "completed": 0,
     "gemini_request_attempts": 0
   },
