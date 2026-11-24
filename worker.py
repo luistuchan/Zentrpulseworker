@@ -1987,8 +1987,10 @@ def produce_batch(state, budget, target):
                     job.update(status='HOLD', blocker=str(exc))
                     if is_clip and clip_host and 'source unavailable in both combined and split formats' in str(exc):
                         clip_download_failures[clip_host] += 1
-                        if clip_download_failures[clip_host] >= 2:
-                            blocked_clip_hosts.add(clip_host)
+                        # A missing or restricted individual video is not evidence
+                        # that every other video on the host is unavailable.
+                        # Explicit rate limits still block the host in the Wait handler.
+                        # Continue with distinct candidates within the existing run budget.
                         state['last_run']['clip_download_failures'] = dict(clip_download_failures)
                     stop = (str(exc).startswith(('Gemini model ', 'GEMINI_API_KEY missing',
                                                  'Confirm the API project is free-tier')))
