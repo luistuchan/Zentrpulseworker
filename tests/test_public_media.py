@@ -34,7 +34,7 @@ class PublicMediaTests(unittest.TestCase):
                     mock.__name__ = name
                 self.assertEqual(len(list(p.discover('moon landing', api))), 1)
                 nasa.assert_called_once()
-                commons.assert_called_once()
+                commons.assert_not_called()
 
     def test_publisher_video_and_social_links(self):
         links = p.media_links('https://example.org/article',
