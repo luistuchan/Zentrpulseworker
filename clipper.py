@@ -19,19 +19,9 @@ def discover(budget, *, api, topics=(), warnings=None):
     warnings = [] if warnings is None else warnings
     custom = os.getenv('CLIPPER_SEARCH_QUERY', '').strip()
     queries = [custom] if custom else []
-    categories = set()
-    for topic in topics:
-        category = topic['category']
-        if category in categories:
-            continue
-        query = ' '.join(topic['title'].rsplit(' - ', 1)[0].split()[:10])[:120]
-        if query and query not in queries:
-            queries.append(query)
-            categories.add(category)
-        if len(queries) >= 6:
-            break
-    if not queries:
-        queries = ['video game tips gameplay', 'science demonstrations', 'creator highlights']
+    queries += ['funny streamer reaction', 'gaming funny moments', 'funny podcast moment',
+                'comedy sketch', 'funny pets reaction']
+    queries = list(dict.fromkeys(queries))[:6]
 
     leads = []
     candidates = {}
@@ -43,7 +33,7 @@ def discover(budget, *, api, topics=(), warnings=None):
             break
         params = urllib.parse.urlencode({
             'key': key, 'part': 'snippet', 'type': 'video', 'q': query,
-            'maxResults': 12,
+            'maxResults': 12, 'order': 'viewCount', 'videoDuration': 'medium',
             **({'videoLicense': 'creativeCommon'} if reusable_only else {}),
         })
         try:
@@ -60,7 +50,7 @@ def discover(budget, *, api, topics=(), warnings=None):
             if offset and (budget.counts.get('youtube', 0) >= cap or not budget.take('youtube')):
                 break
             ids = list(candidates)[offset:offset + 50]
-            params = urllib.parse.urlencode({'key': key, 'part': 'status,snippet', 'id': ','.join(ids)})
+            params = urllib.parse.urlencode({'key': key, 'part': 'status,snippet,statistics', 'id': ','.join(ids)})
             try:
                 videos = api.json_http('https://www.googleapis.com/youtube/v3/videos?' + params,
                                        retries=0).get('items', [])
@@ -79,6 +69,7 @@ def discover(budget, *, api, topics=(), warnings=None):
                               'source_video_id': video_id, 'discovery_query': candidates[video_id],
                               'discovery_only': not reusable,
                               'discovered_at': api.now(),
+                              'views': int(video.get('statistics', {}).get('viewCount', 0)),
                               'media': {'source_url': 'https://www.youtube.com/watch?v=' + video_id,
                                         'creator': snippet.get('channelTitle', ''),
                                         'license': 'creativeCommon' if reusable else 'standardYouTube'}})
@@ -88,7 +79,7 @@ def discover(budget, *, api, topics=(), warnings=None):
     seen = set()
     # Additional public video libraries; no new paid key or AI calls.
     import public_media
-    for query in queries[:2]:
+    for query in queries[:4]:
         for media in list(public_media.discover(query, api))[:6]:
             if media['source_url'] in seen or is_wikimedia(media['source_url']):
                 continue
@@ -183,6 +174,9 @@ def source_media(entry, folder, api):
         path = folder / 'source.mp4'
         path.write_bytes(raw)
         creator = media.get('creator', '')
+    if not {'audio', 'video'} <= {x['codec_type'] for x in api.probe(path).get('streams', [])}:
+        raise api.Hold('Downloaded source has no original audio or video')
+    api.run(['ffmpeg', '-v', 'error', '-i', str(path), '-t', '2', '-map', '0:v:0', '-map', '0:a:0', '-f', 'null', '-'])
     metadata = {'source_url': url, 'filename': path.name, 'sha256': api.digest(path),
                 'creator': creator, 'license': media.get('license', 'user-authorized'),
                 'attribution_url': media.get('attribution_url', ''), 'license_url': media.get('license_url', ''),
