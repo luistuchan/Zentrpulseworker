@@ -86,7 +86,7 @@ def discover(budget, *, api, topics=(), warnings=None):
         warnings.append('YouTube returned no verified reusable video leads for the selected topics')
 
     seen = set()
-    for query in queries[:4]:
+    for query in queries[-1:]:
         params = urllib.parse.urlencode({
             'action': 'query', 'generator': 'search', 'gsrsearch': 'filetype:video ' + query,
             'gsrnamespace': 6, 'gsrlimit': 6, 'prop': 'imageinfo', 'iilimit': 1,
@@ -133,6 +133,7 @@ def discover(budget, *, api, topics=(), warnings=None):
                           'discovery_query': query, 'discovered_at': api.now(),
                           'media': {**media, 'rights_confirmed': True,
                                     'rights_note': 'Public provider item-level rights metadata; verify before posting'}})
+    leads.extend(public_media.publisher_leads(topics, api))
     return leads
 
 
