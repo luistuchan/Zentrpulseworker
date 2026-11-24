@@ -11,7 +11,7 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T06:30:42.533697+00:00",
       "id": "c32fb0cbf637ee8b",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-14T06:30:43.879714+00:00",
       "attempts": 4,
       "youtube_signal": {
@@ -56,7 +56,7 @@
           "reason": "The frame shows a person using a smartphone, which is relevant to the topic of internet viral phenomena and online memes."
         }
       },
-      "blocker": "Stock footage review allowance reached for this draft; saved progress"
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "eaad4f96e7f14af7": {
       "title": "University of Manchester Researchers Launch Podcast Exploring the Process of Scientific Discovery - Bioengineer.org",
@@ -130,14 +130,15 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T06:30:43.870391+00:00",
       "id": "9f0e6db268e93a0c",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-14T06:30:43.880904+00:00",
       "attempts": 2,
       "youtube_signal": {
         "status": "not_checked"
       },
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-17T18:01:44.565787+00:00"
+      "last_attempt_at": "2026-11-17T18:01:44.565787+00:00",
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "4264468155308d0d": {
       "title": "What Is “Ezio’s Family” in Assassin’s Creed? Composer and Theme Explained - RouteNote",
@@ -257,7 +258,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-14T06:30:42.245237+00:00",
       "id": "b890da7c8bb20e5f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-14T06:30:43.882354+00:00",
       "attempts": 2,
       "youtube_signal": {
@@ -271,7 +272,8 @@
         "note": "Search matches do not establish popularity or permission to reuse footage."
       },
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-17T05:29:36.293133+00:00"
+      "last_attempt_at": "2026-11-17T05:29:36.293133+00:00",
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "43fb6481ef119e61": {
       "title": "Ground stop lifted hours after stranding thousands of flights across the U.S. - NBC News",
@@ -318,7 +320,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-14T06:30:43.386524+00:00",
       "id": "6832207212ec0e88",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-14T06:30:43.884890+00:00",
       "attempts": 4,
       "youtube_signal": {
@@ -328,7 +330,8 @@
       },
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-21T20:44:23.857937+00:00",
-      "script_pipeline_version": 3
+      "script_pipeline_version": 3,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "15ed27b00a04aaa4": {
       "title": "The mystery of how hair knows where to grow may finally be solved - Science Daily",
@@ -574,7 +577,7 @@
       "headline_score": 1,
       "discovered_at": "2026-11-15T09:41:13.455897+00:00",
       "id": "431248277a0f3c0b",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-15T09:41:15.627980+00:00",
       "attempts": 2,
       "source_pipeline_version": 3,
@@ -582,7 +585,8 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "stock_pipeline_version": 5
+      "stock_pipeline_version": 5,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "09d9f47c5e021faf": {
       "title": "30+ Can't-Miss Shows on Philly Stages for Fall & the Holidays - Visit Philadelphia",
@@ -971,7 +975,7 @@
       "headline_score": 1,
       "discovered_at": "2026-11-16T08:45:46.865697+00:00",
       "id": "0354903e9a288236",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T08:45:49.259515+00:00",
       "attempts": 2,
       "source_pipeline_version": 3,
@@ -979,7 +983,8 @@
       "youtube_signal": {
         "status": "not_checked"
       },
-      "stock_pipeline_version": 3
+      "stock_pipeline_version": 3,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "4a03d7045c09c5c1": {
       "title": "Sen. Bill Cassidy slams RFK Jr. for \"series of failures\" as Health Secretary - CBS News",
@@ -1031,11 +1036,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:46.881066+00:00",
       "id": "a3752a6421556c74",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T08:45:49.272608+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-17T23:09:14.156834+00:00"
+      "last_attempt_at": "2026-11-17T23:09:14.156834+00:00",
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "43c4c9a84bc6fb60": {
       "title": "How Old-School Music Producers Became In-Demand Again and Brought the Studio Back to Life - That Eric Alper",
@@ -1048,12 +1054,13 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:47.992170+00:00",
       "id": "43c4c9a84bc6fb60",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T08:45:49.278974+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-22T22:51:41.840442+00:00",
-      "script_pipeline_version": 3
+      "script_pipeline_version": 3,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "3155481e232beffb": {
       "title": "Best audio interface 2026: Expert-reviewed Thunderbolt and USB interfaces for every budget - MusicRadar",
@@ -1066,12 +1073,13 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T08:45:47.998964+00:00",
       "id": "3155481e232beffb",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T08:45:49.285032+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-22T22:52:20.106370+00:00",
-      "script_pipeline_version": 3
+      "script_pipeline_version": 3,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "b9bec980ee3acc4a": {
       "title": "Lady Gaga | Biography, Grammys, Songs, Oscar, & Facts - Britannica",
@@ -1351,7 +1359,7 @@
       "headline_score": 1,
       "discovered_at": "2026-11-16T10:36:11.777709+00:00",
       "id": "0935eff17b9774de",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.784978+00:00",
       "attempts": 3,
       "source_pipeline_version": 3,
@@ -1374,7 +1382,8 @@
           "reason": "The image shows a European classical building with a German flag, which is completely unrelated to the Indian supernatural thriller movie Bhairadevi."
         }
       },
-      "stock_pipeline_version": 6
+      "stock_pipeline_version": 6,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "3a44bdb665e0ff78": {
       "title": "Hair Relaxer Lawsuit Settlement | November 2026 Litigation Update - Lawsuit Information Center",
@@ -1423,12 +1432,13 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:11.208547+00:00",
       "id": "98b508551dbc799e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.816540+00:00",
       "attempts": 2,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-18T08:24:53.320483+00:00",
-      "stock_pipeline_version": 3
+      "stock_pipeline_version": 3,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "5c2fc0b7929fbd7e": {
       "title": "Call of Duty enlists JAMBINAI to give its score a Korean touch - The Korea Times",
@@ -1518,12 +1528,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:12.405992+00:00",
       "id": "1dc34d956ddca456",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.834418+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-24T07:30:15.561653+00:00",
-      "blocker": "Script planning reached its three-request limit"
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "5f0ddd8b703bd3b9": {
       "title": "'Female musicians work ten times harder than men to gain recognition' — Wendy Shay - Modern Ghana",
@@ -1536,12 +1546,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:12.415707+00:00",
       "id": "5f0ddd8b703bd3b9",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-16T10:36:13.843792+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-24T07:31:19.401513+00:00",
-      "blocker": "Per-run AI allowance reached; job saved for the next run"
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "710b1ac83d1df7c7": {
       "title": "PGA Tour 2026 schedule: Winners from FedExCup, Signature Events and golf majors, including The Masters and US Open - Sky Sports",
@@ -1672,11 +1682,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:47.107514+00:00",
       "id": "653ca9008bb7ba75",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:48:49.895099+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-17T23:12:10.015033+00:00"
+      "last_attempt_at": "2026-11-17T23:12:10.015033+00:00",
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "985b900a06bf20fe": {
       "title": "Tsinghua Team Tops Global Rankings, Secures 4 Consecutive Rounds of Financing - 36Kr",
@@ -1707,11 +1718,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:47.125020+00:00",
       "id": "6bbfe619c6dcfb0e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:48:49.913381+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-17T23:13:08.662559+00:00"
+      "last_attempt_at": "2026-11-17T23:13:08.662559+00:00",
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "4295ea495a5fef7d": {
       "title": "Kate Nash turns to OnlyFans to partly fund her tour - KarloBag.eu",
@@ -1724,9 +1736,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:48.388423+00:00",
       "id": "4295ea495a5fef7d",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:48:49.921453+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "5e7d69f02e5fd522": {
       "title": "Milwaukee Holiday Shows 2026: Family-Friendly Performances for the Season - Milwaukee With Kids",
@@ -1739,9 +1752,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:48.425177+00:00",
       "id": "5e7d69f02e5fd522",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:48:49.932132+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "ea24423f5c499c67": {
       "title": "John Mayer Strips “Tom And Jerry” Down To Its Heart With New Acoustic Performance - That Eric Alper",
@@ -1754,9 +1768,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T11:48:48.436465+00:00",
       "id": "ea24423f5c499c67",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T11:48:49.944268+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "15860f5ee187cf77": {
       "title": "MISUMI Advances Smarter Manufacturing Through AI, Digital Procurement and Automation - The Worldfolio",
@@ -2001,9 +2016,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T12:29:11.328166+00:00",
       "id": "389eee739b9b671e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T12:29:12.913341+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "b1c8cf283e2fa709": {
       "title": "ICC BOARD CONFIRMS JAY SHAH'S UNOPPOSED REAPPOINTMENT AS CHAIR FOR SECOND TERM - ICC",
@@ -2368,9 +2384,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T17:55:46.957451+00:00",
       "id": "4262db185452f20e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T17:55:47.977288+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "fc8eca1407639ebc": {
       "title": "Trump's Asia reset: Deals in Manila and Shenzhen, then a rare nuclear summit with Xi and Putin - PBS",
@@ -2497,9 +2514,10 @@
       "headline_score": 1,
       "discovered_at": "2026-11-16T23:19:53.338174+00:00",
       "id": "c07609c6a448c9fc",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T23:19:55.661056+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "b18da6d46d657ecb": {
       "title": "US judge tosses new visa rules for foreign students, journalists - France 24",
@@ -2528,11 +2546,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T23:19:50.670215+00:00",
       "id": "0b2a6a0ba6591c31",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T23:19:55.698105+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-17T23:13:34.331213+00:00"
+      "last_attempt_at": "2026-11-17T23:13:34.331213+00:00",
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "25e5a2423422557d": {
       "title": "seafloor spreading - Britannica",
@@ -2545,12 +2564,13 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T23:19:50.689678+00:00",
       "id": "25e5a2423422557d",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T23:19:55.704442+00:00",
       "attempts": 2,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-18T08:24:57.632796+00:00",
-      "stock_pipeline_version": 3
+      "stock_pipeline_version": 3,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "d450f3e0abdc8e4f": {
       "title": "What Max Martin Can Teach You About Consistency - That Eric Alper",
@@ -2563,9 +2583,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T23:19:53.356179+00:00",
       "id": "d450f3e0abdc8e4f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T23:19:55.717161+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "395533dfbf3d1fa3": {
       "title": "The Prodigy in Vienna: tickets for the 2026 concert - KarloBag.eu",
@@ -2578,9 +2599,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T23:19:53.410320+00:00",
       "id": "395533dfbf3d1fa3",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-16T23:19:55.729633+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "612ecb1f498f0cab": {
       "title": "Will the Midterms Hurt J.D. Vance’s Presidential Chances in 2028? - Time Magazine",
@@ -2782,12 +2804,13 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T01:38:10.592129+00:00",
       "id": "641e6955c5712c0f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:38:15.743344+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-18T08:25:02.050222+00:00",
-      "stock_pipeline_version": 3
+      "stock_pipeline_version": 3,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "a04bd3f7693f211b": {
       "title": "ONE VISION, ONE OCEAN Theater artists Shiela Valderrama, Gian Magdangal, and Lara Maigue led the performance of the ASEAN theme song during the Philippine Night at the International Media Center. | via Jervis Manahan, ABS-CBN News - Facebook",
@@ -2800,9 +2823,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T01:38:13.597516+00:00",
       "id": "a04bd3f7693f211b",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:38:15.787238+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "32a05807acfa6153": {
       "title": "Thriller | Michael Jackson, Album, Video, Dance, Quincy Jones, Songs, & Sales - Britannica",
@@ -2815,9 +2839,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T01:38:13.634678+00:00",
       "id": "32a05807acfa6153",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T01:38:15.803038+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "0a05cfe7a6cb3e78": {
       "title": "Trump says AI leaders signed a 'constitution' to police themselves - ABC News - Breaking News, Latest News and Videos",
@@ -3287,12 +3312,13 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T05:29:33.109414+00:00",
       "id": "a99d4fa93b179dc2",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T05:29:36.146851+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-18T08:27:45.728797+00:00",
-      "stock_pipeline_version": 3
+      "stock_pipeline_version": 3,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "7542c97980ee954f": {
       "title": "Cancer - Oncogenes, Mutations, Treatment - Britannica",
@@ -3305,12 +3331,13 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T05:29:33.127934+00:00",
       "id": "7542c97980ee954f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T05:29:36.163419+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-18T08:28:25.574693+00:00",
-      "script_pipeline_version": 3
+      "script_pipeline_version": 3,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "2f9dfe13e5fdc186": {
       "title": "Challenging Consensus, Scientist Says Photos Show Epstein Was Killed - The New York Times",
@@ -3341,9 +3368,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T05:29:34.518656+00:00",
       "id": "4861c924d73d37f4",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T05:29:36.212025+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "aaa482ba73c58bde": {
       "title": "President Donald Trump announces creation of 'Super Intelligence Force' AI task force - ABC News - Breaking News, Latest News and Videos",
@@ -3462,9 +3490,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T06:26:48.015695+00:00",
       "id": "d5ef0b295cffd64b",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T06:26:58.217959+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "b75d4a85d44b93ba": {
       "title": "Lindsay Clancy's attorney Kevin Reddington asks Trump for pardon after mistrial - ABC News - Breaking News, Latest News and Videos",
@@ -4163,7 +4192,7 @@
       "headline_score": 1,
       "discovered_at": "2026-11-17T09:02:22.391722+00:00",
       "id": "6d7895ef328280ad",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:02:24.364859+00:00",
       "attempts": 4,
       "source_pipeline_version": 3,
@@ -4187,7 +4216,8 @@
         }
       },
       "stock_pipeline_version": 6,
-      "youtube_visual_discovery": []
+      "youtube_visual_discovery": [],
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "0945926769a2e28b": {
       "title": "Discover all the heavy metal bands nominated for the 2027 Grammy Awards - Chaoszine",
@@ -4200,9 +4230,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T09:02:23.024648+00:00",
       "id": "0945926769a2e28b",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:02:24.390484+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "ccb7196031ed9c15": {
       "title": "What we know about Melania Trump and Jeffrey Epstein - ABC News - Breaking News, Latest News and Videos",
@@ -4298,12 +4329,13 @@
       "headline_score": 1,
       "discovered_at": "2026-11-17T09:09:23.790622+00:00",
       "id": "d2dd0571535bd3f7",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T09:09:28.515683+00:00",
       "attempts": 2,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-18T10:04:04.816474+00:00",
-      "stock_pipeline_version": 5
+      "stock_pipeline_version": 5,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "740f282e36803e37": {
       "title": "As Knesset readies for new speaker, Israeli opposition holds powerful role",
@@ -4530,9 +4562,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T17:57:01.358176+00:00",
       "id": "6ca56b2ac47c0538",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T17:57:05.333613+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "750cbccf061aef51": {
       "title": "Trump arrives in Philippines to kick off Asia trip with economic deals and talks with allies - ABC7 New York",
@@ -4650,9 +4683,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T20:18:26.295411+00:00",
       "id": "11575b3bb679f018",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T20:18:59.511697+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "52dd79e6e7109178": {
       "title": "The Latest: Trump Arrives in Philippines to Kick off Three-Day Asia Trip - U.S. News & World Report",
@@ -4787,9 +4821,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-17T23:09:11.388508+00:00",
       "id": "19e66308dc50e524",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-17T23:09:14.045022+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "b5c3ab02c3b877b3": {
       "title": "‘Stop Quoting Laws’: Trump Administration Defiant in Face of Democratic Oversight - U.S. News & World Report",
@@ -5028,9 +5063,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T02:23:59.385125+00:00",
       "id": "492ba8a9af630510",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T02:24:02.049386+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "e120bd9f2bab65f6": {
       "title": "DIVISION's Harry Welsh Caps Off Breakout Year With Shots Accolade — LBB - LBB - Little Black Book",
@@ -5043,9 +5079,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T02:24:00.566049+00:00",
       "id": "e120bd9f2bab65f6",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T02:24:02.084060+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "eb0f508294b0b444": {
       "title": "Iran fires at U.S. facility in Bahrain as Tehran resumes strikes on Arab neighbors - PBS",
@@ -5163,9 +5200,10 @@
       "headline_score": 1,
       "discovered_at": "2026-11-18T08:00:41.762114+00:00",
       "id": "e951c01a540e173f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T08:00:45.070267+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "89228ba0b91e55f3": {
       "title": "Trump Meets Philippine Leader Before Flying to China - The New York Times",
@@ -5551,12 +5589,12 @@
       "headline_score": 1,
       "discovered_at": "2026-11-18T10:02:56.727077+00:00",
       "id": "cd55fa9344c3d998",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-18T10:03:00.385678+00:00",
       "attempts": 2,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-21T20:44:58.366591+00:00",
-      "blocker": "Stock footage review allowance reached for this draft; saved progress",
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled",
       "youtube_visual_discovery": [],
       "stock_reviews": {
         "9c2ea461547baa7d23c5ac8036c2a0643e8992e7304cf4ccd4884c6008ac1438": {
@@ -5772,9 +5810,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T15:19:41.344173+00:00",
       "id": "d4542d7ce3869356",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T15:19:44.332373+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "00b24066b3b13c3d": {
       "title": "The Latest: Trump arrives in China, seeking to reinforce US's status as world’s leading tech power - WSLS",
@@ -5947,9 +5986,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-18T17:52:18.522989+00:00",
       "id": "4c42cd4faa309fbe",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-18T17:52:20.934895+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "f2adfe5d9c11bf55": {
       "title": "Chinese President Xi greets Trump at airport ahead of planned summit with Putin - CBS News",
@@ -6232,9 +6272,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T02:11:08.374465+00:00",
       "id": "1cedc6665750457a",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T02:11:10.227051+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "286e975ead38e93f": {
       "title": "Rhythm & Reason - The New Indian Express",
@@ -6247,9 +6288,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T02:11:08.421604+00:00",
       "id": "286e975ead38e93f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T02:11:10.249572+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "a93c8cfb87563942": {
       "title": "Survivors of Uganda's deadly landslide seek justice at the UN",
@@ -6361,9 +6403,10 @@
       "headline_score": 1,
       "discovered_at": "2026-11-19T09:56:59.754863+00:00",
       "id": "04e2d4b7353557ab",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T09:57:04.777290+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "9a19041fc49fe284": {
       "title": "Mulholland Reveals Salmond's Request to Pardon William Wallace - cwibc.co.id",
@@ -6376,7 +6419,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T09:57:00.583271+00:00",
       "id": "9a19041fc49fe284",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-19T09:57:04.823925+00:00",
       "attempts": 2,
       "source_pipeline_version": 3,
@@ -6404,7 +6447,7 @@
         }
       },
       "youtube_visual_discovery": [],
-      "blocker": "Stock footage review allowance reached for this draft; saved progress"
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "15beb66b0697d5a4": {
       "title": "Jaja Bojz unveil \"Mare\" and a new video from their punk - KarloBag.eu",
@@ -6417,9 +6460,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T09:57:01.472914+00:00",
       "id": "15beb66b0697d5a4",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T09:57:04.866741+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "1e622ef0d8eec3fd": {
       "title": "Trump, Putin and Xi release 'peace declaration' after historic meeting",
@@ -6531,9 +6575,10 @@
       "headline_score": 1,
       "discovered_at": "2026-11-19T17:51:19.840195+00:00",
       "id": "1f04ad23e99b86f3",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T17:51:25.145315+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "2cdf2c5d964c5575": {
       "title": "15 Songs Like Tate McRae’s “Housewife” for Confident Pop Fans - RouteNote",
@@ -6546,9 +6591,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T17:51:21.570944+00:00",
       "id": "2cdf2c5d964c5575",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T17:51:25.196774+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "4cb1809ca11fc7e9": {
       "title": "Myanmar committed genocide against Rohingya minority, top UN court rules",
@@ -6660,9 +6706,10 @@
       "headline_score": 1,
       "discovered_at": "2026-11-19T20:41:05.646083+00:00",
       "id": "a486579272be0528",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T20:41:11.458079+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "769c0fc15529ae0d": {
       "title": "Taylor Swift's CMA Performance Was Filled With Easter Eggs From the Early Days of Her Career - Rolling Stone",
@@ -6675,9 +6722,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T20:41:07.324828+00:00",
       "id": "769c0fc15529ae0d",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-19T20:41:11.512776+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "b0dffcfce02e4e6d": {
       "title": "How vaccine fears fuelled a major measles comeback in the US",
@@ -7086,12 +7134,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-19T21:27:42.171742+00:00",
       "id": "14fab6ad7464a590",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-19T21:27:46.235583+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-20T09:54:33.570423+00:00",
-      "blocker": "Script planning reached its three-request limit"
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "0f5a985a1dfe0671": {
       "title": "Fiona the hippo dies after swallowing a hat at Cincinnati Zoo",
@@ -7455,9 +7503,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T02:02:57.340873+00:00",
       "id": "b8c19b18f273bd37",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T02:03:00.549572+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "25de28f001f6b545": {
       "title": "Best studio headphones 2026: I tested 15 cans for mixing & mastering - MusicRadar",
@@ -7470,9 +7519,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T02:02:57.433819+00:00",
       "id": "25de28f001f6b545",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T02:03:00.611024+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "f2d90bf3b9bf75bf": {
       "title": "Three Kyiv bridges hit during major Russian missile attack",
@@ -7584,9 +7634,10 @@
       "headline_score": 2,
       "discovered_at": "2026-11-20T09:44:53.441802+00:00",
       "id": "b3e151c5b3ee1247",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T09:45:00.309402+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "d45fc35eed77f95d": {
       "title": "Nitroplast | Discovery, Function, Evolution, Endosymbiosis, & Structure of Eukaryotic Nitrogen-Fixing Organelle - Britannica",
@@ -7599,9 +7650,10 @@
       "headline_score": 1,
       "discovered_at": "2026-11-20T09:44:54.468467+00:00",
       "id": "d45fc35eed77f95d",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T09:45:00.393723+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "d3338678be9bf841": {
       "title": "All the Country Stars in Taylor Swift’s CMA Awards Performance, Explained - Rolling Stone",
@@ -7614,9 +7666,10 @@
       "headline_score": 1,
       "discovered_at": "2026-11-20T09:44:55.811843+00:00",
       "id": "d3338678be9bf841",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T09:45:00.462702+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "1bfee11f17e3a6d3": {
       "title": "Best in-ear monitors 2026: IEMs for stage and studio - MusicRadar",
@@ -7629,9 +7682,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T09:44:56.147469+00:00",
       "id": "1bfee11f17e3a6d3",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T09:45:00.514193+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "c45987e2d628909f": {
       "title": "Who Is RAVNIR? Is the Mysterious Viking Music Singer Real or AI? - RouteNote",
@@ -7644,9 +7698,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T09:44:56.217917+00:00",
       "id": "c45987e2d628909f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T09:45:00.577224+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "4984a29b941a3e35": {
       "title": "El Salvador’s Bukele seeks third term after constitution change",
@@ -7857,9 +7912,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T17:52:54.683697+00:00",
       "id": "1da5149d0585f4e8",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T17:52:58.922295+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "dd58ceba15f0e1d3": {
       "title": "Jaafar Jackson and Juliano Valdi on Bringing Michael Jackson’s Legacy to Life in ‘Michael’ - Black Girl Nerds",
@@ -7872,9 +7928,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T17:52:55.884457+00:00",
       "id": "dd58ceba15f0e1d3",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T17:52:58.984949+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "73f6e4449e39e72b": {
       "title": "Another Death Knell for the American Musical - Vulture",
@@ -7887,9 +7944,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T17:52:55.967280+00:00",
       "id": "73f6e4449e39e72b",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T17:52:59.019903+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "f5ae13ffcdc06dfd": {
       "title": "Overturned boat carrying mourners to funeral kills at least four in Nigeria",
@@ -8001,9 +8059,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T23:45:52.419445+00:00",
       "id": "0f7da0dc3477c643",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T23:45:57.570676+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "f3c07b7007996657": {
       "title": "'GTA 6' streamers playing now: See the list. - Mashable",
@@ -8016,9 +8075,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T23:45:52.912490+00:00",
       "id": "f3c07b7007996657",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T23:45:57.598090+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "91358d6331e10c5a": {
       "title": "Higgs boson | Physics, Particle Physics & Standard Model - Britannica",
@@ -8031,9 +8091,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T23:45:53.694935+00:00",
       "id": "91358d6331e10c5a",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T23:45:57.630637+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "e6a043f41a8e98f3": {
       "title": "Mouse Study Uncovers Genetic Blueprint Explaining How Ageing Impairs Immune Defences - Bioengineer.org",
@@ -8046,9 +8107,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-20T23:45:53.842486+00:00",
       "id": "e6a043f41a8e98f3",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T23:45:57.681140+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "cd6dbe1f41178e9c": {
       "title": "Trump calls for Nvidia to reinstate ‘brilliant’ Jensen Huang",
@@ -8160,9 +8222,10 @@
       "headline_score": 1,
       "discovered_at": "2026-11-21T02:06:35.197225+00:00",
       "id": "89d083b8e1c9a9f4",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T02:06:38.118580+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "bf11fd98f7972573": {
       "title": "'GTA 6' is breaking streaming records. Here are the streamers to watch right now. - Mashable",
@@ -8175,9 +8238,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-21T02:06:32.286375+00:00",
       "id": "bf11fd98f7972573",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T02:06:38.183801+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "159c335ddb2d5b27": {
       "title": "La Calma Isn’t Going Anywhere: Leo Correa Details New Music, Lineup Changes, and 2027 Comeback Plans - Tejano Nation",
@@ -8190,9 +8254,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-21T02:06:35.007346+00:00",
       "id": "159c335ddb2d5b27",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T02:06:38.265716+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "e1696b7cbd154fa1": {
       "title": "Gala El Hadidi On Her Opera Journey And Upcoming Grand Egyptian Museum Concert | NileFM | EGYPT'S#1 FOR HIT MUSIC - NileFM",
@@ -8205,9 +8270,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-21T02:06:35.390938+00:00",
       "id": "e1696b7cbd154fa1",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T02:06:38.348655+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "ce971e52eddae261": {
       "title": "NASA’s November 2026 skywatching tips",
@@ -8225,9 +8291,12 @@
         "rights_note": "Wikimedia Commons identifies this NASA video as U.S. public domain. Review the excerpt for protected NASA insignia and third-party material before publishing."
       },
       "id": "ce971e52eddae261",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-21T20:43:51.199921+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T09:32:46.064857+00:00",
+      "blocker": "Service HTTP 429; no paid fallback attempted"
     },
     "2810c54490466ad7": {
       "title": "Why is the US Army detonating lead-rich explosives in Iowa?",
@@ -8339,9 +8408,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-21T20:43:43.143421+00:00",
       "id": "be5bf18fc4f36c7b",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:51.566207+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "dc0db9666b69ddf6": {
       "title": "The True Story Behind 'The Altruists' and the FTX Scandal - Time Magazine",
@@ -8354,7 +8424,7 @@
       "headline_score": 0,
       "discovered_at": "2026-11-21T20:43:43.899487+00:00",
       "id": "dc0db9666b69ddf6",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:51.623088+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
@@ -8387,7 +8457,7 @@
           "reason": "The footage shows someone typing on a computer keyboard, which relates to the cryptocurrency exchange and digital finance theme of the FTX scandal video."
         }
       },
-      "blocker": "Stock footage review allowance reached for this draft; saved progress"
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "e7715d838068450b": {
       "title": "Mammalian Protein Recoding by ADAR Editing Is Rare but Conserved - Bioengineer.org",
@@ -8400,12 +8470,13 @@
       "headline_score": 0,
       "discovered_at": "2026-11-21T20:43:43.967485+00:00",
       "id": "e7715d838068450b",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:51.686431+00:00",
       "attempts": 1,
       "source_pipeline_version": 3,
       "last_attempt_at": "2026-11-21T20:47:26.370759+00:00",
-      "script_pipeline_version": 3
+      "script_pipeline_version": 3,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "ad39e831c82176aa": {
       "title": "How The Ronettes Defined The Girl Group Sound And Changed Pop Music Forever - That Eric Alper",
@@ -8418,9 +8489,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-21T20:43:44.727528+00:00",
       "id": "ad39e831c82176aa",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:51.756062+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "5f909cd6c113105d": {
       "title": "The 6 Best Samsung Soundbars of 2026: Reviews - RTINGS.com",
@@ -8433,9 +8505,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-21T20:43:45.002992+00:00",
       "id": "5f909cd6c113105d",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:51.799414+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "0c306c70e14c7ae1": {
       "title": "Shakira - Britannica",
@@ -8448,9 +8521,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-21T20:43:45.022370+00:00",
       "id": "0c306c70e14c7ae1",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:51.817919+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "90fafab88514864a": {
       "title": "Clip highlight: Glyphosate Declared a Probable Human Carcinogen",
@@ -8698,9 +8772,10 @@
       "discovered_at": "2026-11-22T22:47:56.630244+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "75fb1644d1f4d1b5",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T22:48:09.957291+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "ea52f64f9a2003c9": {
       "title": "Putin is ‘not America’s friend in Ukraine,’ DNI Jay Clayton says - The Washington Post",
@@ -8713,9 +8788,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-22T22:48:04.479829+00:00",
       "id": "ea52f64f9a2003c9",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T22:48:10.020637+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "b63dc58139a41a7e": {
       "title": "Trump to Welcome Investors at Gala for His Plunging Meme Coin - U.S. News & World Report",
@@ -8728,9 +8804,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-22T22:48:04.643534+00:00",
       "id": "b63dc58139a41a7e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T22:48:10.088770+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "76ce8e4cd9571166": {
       "title": "Second ship targeted in series of naval drone attacks off Libyan coast",
@@ -8744,9 +8821,10 @@
       "discovered_at": "2026-11-22T22:47:58.399743+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "76ce8e4cd9571166",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T22:48:10.145914+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "cf211d94e2c7fdf4": {
       "title": "Netanyahu’s Likud, Eisenkot’s Yashar end coalition talks without deal",
@@ -8760,9 +8838,10 @@
       "discovered_at": "2026-11-22T22:47:58.482783+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "cf211d94e2c7fdf4",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T22:48:10.200849+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "c708ae24a340a4c3": {
       "title": "A lock of hair belonging to the first U.S. president, George Washington, was sold at auction — what was the price? - Українські Національні Новини (УНН)",
@@ -8775,9 +8854,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-22T22:48:05.005736+00:00",
       "id": "c708ae24a340a4c3",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T22:48:10.282568+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "1b7736d0788d048f": {
       "title": "GTA 6 Mandy sink mystery explained: Did Jason find a human finger inside her drain? - The Times of India",
@@ -8790,9 +8870,10 @@
       "headline_score": 1,
       "discovered_at": "2026-11-22T22:48:00.019303+00:00",
       "id": "1b7736d0788d048f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T22:48:10.359013+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "da2858231222eb64": {
       "title": "Sexyy Red is Totally Unbothered by Lucia After Her GTA 6 Cameo With Jason Goes Viral - IGN",
@@ -8805,9 +8886,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-22T22:48:00.442462+00:00",
       "id": "da2858231222eb64",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T22:48:10.430298+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "49ca0a6ad188e35f": {
       "title": "Columbia and UC Berkeley Nature Study Finds Microplastics Generate Reactive Oxygen Radicals in Water - CASRAI",
@@ -8820,9 +8902,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-22T22:48:01.271873+00:00",
       "id": "49ca0a6ad188e35f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T22:48:10.509302+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "1dcfe2e2c8508431": {
       "title": "Mount Sinai Launches Precision Immunology and Experimental Medicine (PrIME Trials) to Advance Treatments for Inflammatory Diseases - FinancialContent",
@@ -8835,9 +8918,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-22T22:48:01.502600+00:00",
       "id": "1dcfe2e2c8508431",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T22:48:10.617036+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "8332324b206bfc79": {
       "title": "Wembanyama Debuts Shunk to Protect Injured Finger - Limapagi",
@@ -8850,9 +8934,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-22T22:48:02.077175+00:00",
       "id": "8332324b206bfc79",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T22:48:10.665121+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "16e3713459abd2fe": {
       "title": "How Independent Bands Can Get Their Music Into Theatre And Dance Productions - That Eric Alper",
@@ -8865,9 +8950,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-22T22:48:03.180997+00:00",
       "id": "16e3713459abd2fe",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T22:48:10.738406+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "3587ad4a8ca12951": {
       "title": "Theatrical production - Musical, Drama, Comedy - Britannica",
@@ -8880,9 +8966,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-22T22:48:03.505748+00:00",
       "id": "3587ad4a8ca12951",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T22:48:10.783058+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "79d9810a5320b86f": {
       "title": "The 90-Day Music Fan Retention Plan After a Release - RouteNote",
@@ -8895,9 +8982,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-22T22:48:03.565650+00:00",
       "id": "79d9810a5320b86f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T22:48:10.836672+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "ab066103b5efd5c3": {
       "title": "Clip highlight: TOP 10 Dog Breeds That Look Like Wolves #shorts #shortsfeed #dogshorts",
@@ -9127,9 +9215,10 @@
       "discovered_at": "2026-11-22T23:07:44.519440+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "843eb837dfb9acf4",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T23:07:58.453316+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "e33f8fe40f22b434": {
       "title": "Iranian president turns out office lights to urge citizens to save energy - The Washington Post",
@@ -9142,9 +9231,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-22T23:07:53.406686+00:00",
       "id": "e33f8fe40f22b434",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T23:07:58.554234+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "0832ecb8e627c00a": {
       "title": "Fire breaks out at popular tourist hotspot in Zanzibar",
@@ -9158,9 +9248,10 @@
       "discovered_at": "2026-11-22T23:07:46.473102+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "0832ecb8e627c00a",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T23:07:58.616722+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "4f1e771da239b52d": {
       "title": "Explosion on Russian ship at Libya port caused by suspected drone attack, officials say",
@@ -9174,9 +9265,10 @@
       "discovered_at": "2026-11-22T23:07:43.949976+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "4f1e771da239b52d",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T23:07:58.710036+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "9b7900370320075a": {
       "title": "President Trump comments on new Iranian aerial attacks as Middle East tensions rise - Fox News",
@@ -9189,9 +9281,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-22T23:07:53.296484+00:00",
       "id": "9b7900370320075a",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T23:07:58.816969+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "3f8c006c74d5c1e6": {
       "title": "U.S. intelligence chief says Trump's description of Putin as a 'friend' is 'entirely appropriate' - PBS",
@@ -9204,9 +9297,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-22T23:07:52.896231+00:00",
       "id": "3f8c006c74d5c1e6",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T23:07:58.922361+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "c7213d7331b1dacc": {
       "title": "Susan Boyle | Biography, Songs, & Facts - Britannica",
@@ -9219,9 +9313,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-22T23:07:52.303748+00:00",
       "id": "c7213d7331b1dacc",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T23:07:58.976138+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "ba717d455472a182": {
       "title": "Anthony Opara highlights challenges of staging concerts in Nigeria - The Nation Newspaper",
@@ -9234,9 +9329,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-22T23:07:52.405217+00:00",
       "id": "ba717d455472a182",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-22T23:07:59.071332+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "4ec45e1477a38363": {
       "title": "Clip highlight: Kabar Bahagia! Miley Cyrus dan Maxx Morando Disebut Segera Naik Pelaminan",
@@ -9502,9 +9598,10 @@
       "discovered_at": "2026-11-24T07:24:14.655298+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "e32c57879d333a3e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T07:24:29.267830+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "c3d6fee77993e7b7": {
       "title": "BREAKING NEWS: Japan PM vows support for U.S. sanction-hit ICC at meeting: president Akane - Japan Wire by Kyodo News",
@@ -9517,9 +9614,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-24T07:24:23.883745+00:00",
       "id": "c3d6fee77993e7b7",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T07:24:29.385235+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "3f7bef8d00becd24": {
       "title": "Why Eisenkot is negotiating with Netanyahu",
@@ -9533,9 +9631,10 @@
       "discovered_at": "2026-11-24T07:24:14.712347+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "3f7bef8d00becd24",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T07:24:29.438969+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "4a235e4644e68404": {
       "title": "Nvidia live: Markets surge as Jensen Huang returns as CEO",
@@ -9549,9 +9648,10 @@
       "discovered_at": "2026-11-24T07:24:14.784561+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "4a235e4644e68404",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T07:24:29.507528+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "4d6a14c1aba58c6f": {
       "title": "Trump owned at least $12 million in Nvidia stock at the end of last year - ABC News - Breaking News, Latest News and Videos",
@@ -9564,9 +9664,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-24T07:24:23.098721+00:00",
       "id": "4d6a14c1aba58c6f",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T07:24:29.639359+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "88ea1656f85da943": {
       "title": "Iran: US launches fresh strikes as hostilities flare again - DW.com",
@@ -9579,9 +9680,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-24T07:24:22.694432+00:00",
       "id": "88ea1656f85da943",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T07:24:29.719120+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "c59f98e67501214b": {
       "title": "Rethinking Autoimmune Drug Discovery: From Pathway Targeting to Immune System Reprogramming - Technology Networks",
@@ -9594,9 +9696,10 @@
       "headline_score": 1,
       "discovered_at": "2026-11-24T07:24:18.181813+00:00",
       "id": "c59f98e67501214b",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T07:24:29.836851+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "b4d65dc5d2bed033": {
       "title": "Ghana-Morocco final puts spotlight on unique rules of amputee football - Modern Ghana",
@@ -9609,9 +9712,10 @@
       "headline_score": 1,
       "discovered_at": "2026-11-24T07:24:19.401170+00:00",
       "id": "b4d65dc5d2bed033",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T07:24:29.932910+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "68e15d90b314ff97": {
       "title": "Asmongold Defends GTA 6 \"Gay\" Scene After Streamers React to Jason and Cal’s Moment - NDTV Sports",
@@ -9624,9 +9728,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-24T07:24:17.344990+00:00",
       "id": "68e15d90b314ff97",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T07:24:30.042183+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "851c1dced6ba3fa4": {
       "title": "What babies eat could shape their adult sweet tooth. Here’s what scientists found - ThePrint",
@@ -9639,9 +9744,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-24T07:24:18.479955+00:00",
       "id": "851c1dced6ba3fa4",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T07:24:30.149161+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "38f9b359647f7a7d": {
       "title": "The Origin of Species: Darwin and the theory that changed our understanding of life - The Tribune",
@@ -9654,9 +9760,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-24T07:24:18.795948+00:00",
       "id": "38f9b359647f7a7d",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T07:24:30.259444+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "16eb04ecf6e1be33": {
       "title": "Metallica at Sphere: Trujillo on screens and rehearsals - KarloBag.eu",
@@ -9669,9 +9776,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-24T07:24:21.116458+00:00",
       "id": "16eb04ecf6e1be33",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T07:24:30.340735+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "dc4080ff7d15a51b": {
       "title": "Parastoo Ahmadi Flogged: Iran's 74 Lashes and the Prohibition of Torture - Diplomacy and Law",
@@ -9684,9 +9792,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-24T07:24:21.292505+00:00",
       "id": "dc4080ff7d15a51b",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T07:24:30.442991+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "91fced5a788e5f76": {
       "title": "Kenya News Agency - KNA. . A HISTORIC MILESTONE FOR NZOIA SUGAR FACTORY - Facebook",
@@ -9699,9 +9808,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-24T07:24:21.547716+00:00",
       "id": "91fced5a788e5f76",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T07:24:30.526874+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "1cf57dca6078d633": {
       "title": "Clip highlight: $4 2M Fraud! Nigerian Pastor Jailed in U.S.",
@@ -9769,9 +9879,10 @@
       "discovered_at": "2026-11-24T09:18:06.789249+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "84c94237ad4d7ff3",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T09:22:34.846643+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "fbe859cfe16191f4": {
       "title": "DR Congo says aircraft missing as rebels claim to shoot down plane",
@@ -9785,9 +9896,10 @@
       "discovered_at": "2026-11-24T09:18:06.411988+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "fbe859cfe16191f4",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T09:22:34.906355+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "7cb8141a288a7173": {
       "title": "US army says detonation of lead explosives in Iowa will proceed",
@@ -9801,9 +9913,10 @@
       "discovered_at": "2026-11-24T09:18:07.481187+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "7cb8141a288a7173",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T09:22:34.962248+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "Pulse format: original-audio highlights only; narrated stories disabled"
     },
     "b79f43c949cc89d8": {
       "title": "Clip highlight: Streets blocked due to burning buses after firefight involving captured Ovidio Guzman",
@@ -9858,59 +9971,165 @@
       "status": "QUEUED",
       "created_at": "2026-11-24T09:22:35.162596+00:00",
       "attempts": 0
+    },
+    "57ff42e383460004": {
+      "title": "Clip highlight: MPA 7 AM News Update | November 23, 2026",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "Gwda1lq1w0c",
+      "discovery_query": "Malaysia set to return thousands of Rohingya refugees to Myanmar",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T09:32:09.742033+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=Gwda1lq1w0c",
+        "creator": "MPATV",
+        "license": "creativeCommon"
+      },
+      "id": "57ff42e383460004",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T09:32:45.513239+00:00",
+      "attempts": 0
+    },
+    "d5053836438db5a3": {
+      "title": "Clip highlight: Hundreds Decry Violence | Against Rohingya Muslims | at Ottawa Protest",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "yK0DFSXrBok",
+      "discovery_query": "Malaysia set to return thousands of Rohingya refugees to Myanmar",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T09:32:09.742058+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=yK0DFSXrBok",
+        "creator": "ETV Andhra Pradesh",
+        "license": "creativeCommon"
+      },
+      "id": "d5053836438db5a3",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T09:32:45.638698+00:00",
+      "attempts": 0
+    },
+    "0f9407bcc61fafb7": {
+      "title": "Clip highlight: Huge protest rally against atrocities on Rohingya Muslims #Kashmir",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "xe2kJgSCkDk",
+      "discovery_query": "Malaysia set to return thousands of Rohingya refugees to Myanmar",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T09:32:09.742060+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=xe2kJgSCkDk",
+        "creator": "Shakeel’s way",
+        "license": "creativeCommon"
+      },
+      "id": "0f9407bcc61fafb7",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T09:32:45.713764+00:00",
+      "attempts": 0
+    },
+    "0b3bbf521a81009f": {
+      "title": "Clip highlight: The Nvidia Scandal Is Deeper Than You Think",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "b_GI0A6lRAE",
+      "discovery_query": "Nvidia board reinstates Huang as president and CEO as probe",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T09:32:09.742062+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=b_GI0A6lRAE",
+        "creator": "Chez Hub",
+        "license": "creativeCommon"
+      },
+      "id": "0b3bbf521a81009f",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T09:32:45.772000+00:00",
+      "attempts": 0
+    },
+    "80e03b0869ebf598": {
+      "title": "Clip highlight: Nvidia Reinstates Jensen Huang as CEO—Stock Rockets 31% After Trump Backs Him",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "P0q9bTLse9A",
+      "discovery_query": "Nvidia board reinstates Huang as president and CEO as probe",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T09:32:09.742064+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=P0q9bTLse9A",
+        "creator": "Quỳnh Vũ Vlogs",
+        "license": "creativeCommon"
+      },
+      "id": "80e03b0869ebf598",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T09:32:45.852975+00:00",
+      "attempts": 0
+    },
+    "51a3f4696d583cfc": {
+      "title": "Clip highlight: How China Crashed America's Biggest AI Chip Company",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "aAM3gmDe58M",
+      "discovery_query": "Nvidia board reinstates Huang as president and CEO as probe",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T09:32:09.742067+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=aAM3gmDe58M",
+        "creator": "The Codename Files",
+        "license": "creativeCommon"
+      },
+      "id": "51a3f4696d583cfc",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T09:32:45.919063+00:00",
+      "attempts": 0
+    },
+    "02f925e2ac6cc93e": {
+      "title": "Clip highlight: Chimera l What are Chimera's l Biological words l Biology By Neha 🌻 #youtubeshorts #shorts #chimera",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "ILik1tULVsE",
+      "discovery_query": "Chimera | Genetics, Symptoms, & Microchimeras",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T09:32:09.742069+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=ILik1tULVsE",
+        "creator": "Dr. Neha Binwal Biology ",
+        "license": "creativeCommon"
+      },
+      "id": "02f925e2ac6cc93e",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T09:32:46.020450+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-24",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 3,
+    "youtube": 9,
     "ai": 12,
     "pixabay": 8
   },
-  "content_cycle_index": 0,
+  "content_cycle_index": 1,
   "content_batch": {
-    "category": "music",
-    "completed": 3,
-    "story_keys": [
-      "behind the curtain",
-      "30 can t miss shows on philly stages for fall the holidays",
-      "lady gaga biography grammys songs oscar facts"
-    ],
+    "category": "clipper",
+    "completed": 0,
+    "story_keys": [],
     "media_hashes": [],
-    "source_urls": [
-      "https://www.peoplesdefender.com/2026/11/14/behind-the-curtain/",
-      "https://charlestoncitypaper.com/2026/11/20/before-the-doors-open-reflecting-on-20-years-behind-the-curtain-of-charleston-hospitality/",
-      "https://www.visitphilly.com/articles/philadelphia/guide-performing-arts-and-live-theater-venues-in-greater-philadelphia/",
-      "https://www.biography.com/musicians/lady-gaga",
-      "https://www.grammy.com/news/lady-gaga-chromatica-ball-tour-bradley-cooper-tony-bennett-a-star-is-born-facts-songs-hits-stefani-germanotta-joker-folie-a-deux/"
-    ]
+    "source_urls": []
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-24T09:22:35.163164+00:00",
+    "started_at": "2026-11-24T09:32:46.033499+00:00",
     "attempted_ids": [
-      "5c2fc0b7929fbd7e",
-      "4264468155308d0d",
-      "0d3903eaaa721d2d",
-      "09d9f47c5e021faf",
-      "b9bec980ee3acc4a"
+      "ce971e52eddae261"
     ],
-    "completed_ids": [
-      "09d9f47c5e021faf",
-      "b9bec980ee3acc4a"
-    ],
+    "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "ai_requests_by_candidate": {
-      "5c2fc0b7929fbd7e": 1,
-      "4264468155308d0d": 2,
-      "0d3903eaaa721d2d": 0,
-      "09d9f47c5e021faf": 4,
-      "b9bec980ee3acc4a": 5
+      "ce971e52eddae261": 0
     },
-    "finished_at": "2026-11-24T09:24:22.828783+00:00",
-    "attempted": 5,
-    "completed": 2,
-    "gemini_request_attempts": 12
+    "pause_reason": "Service HTTP 429; no paid fallback attempted",
+    "finished_at": "2026-11-24T09:32:46.169040+00:00",
+    "attempted": 1,
+    "completed": 0,
+    "gemini_request_attempts": 0
   },
   "telegram_deliveries": {
     "2d869bc60f3da658c9197b934c45dfddb3c797a7bc940732029e92f431cf90f2": {
@@ -9949,18 +10168,5 @@
       "completed_at": "2026-11-24T09:24:42.262857+00:00"
     }
   },
-  "deferred_content_batches": {
-    "world_news": {
-      "category": "world_news",
-      "completed": 1,
-      "story_keys": [
-        "what is trump hoping to achieve at apec meeting in china"
-      ],
-      "media_hashes": [],
-      "source_urls": [
-        "https://www.aljazeera.com/news/2026/11/18/what-is-trump-hoping-to-achieve-at-apec-meeting-in-china?traffic_source=rss",
-        "https://www.yahoo.com/news/world/articles/trump-takes-twice-long-enter-173711942.html"
-      ]
-    }
-  }
+  "deferred_content_batches": {}
 }
