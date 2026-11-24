@@ -150,7 +150,7 @@ def gov_library(query, api):
 
 def discover(query, api):
     # Cache successful searches and empty results to avoid repeated free requests.
-    for provider in (commons, archive, nasa, gov_library):
+    for provider in (archive, nasa, gov_library, commons):
         cache = api.WORK / 'public-media-v2' / (hashlib.sha256((provider.__name__+'|'+query).encode()).hexdigest()+'.json')
         old = api.load(cache,{})
         if old and time.time()-old.get('time',0)<86400:
