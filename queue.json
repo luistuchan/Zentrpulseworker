@@ -10252,9 +10252,12 @@
         "license": "creativeCommon"
       },
       "id": "bf440c7236bcdf98",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:12.950858+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T16:02:51.769391+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
     },
     "820bb86b2c404a7a": {
       "title": "Clip highlight: JayDaddy’s Brain Needs to Be STUDIED 😂",
@@ -10271,9 +10274,12 @@
         "license": "creativeCommon"
       },
       "id": "820bb86b2c404a7a",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:12.985667+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T16:02:54.053964+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
     },
     "00fdff16fa0b6347": {
       "title": "Clip highlight: Killing Tarkov STREAMER SQUADS *With Reactions*",
@@ -10483,9 +10489,12 @@
         "license": "creativeCommon"
       },
       "id": "3574582629bb4e83",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:13.493461+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T16:02:47.579235+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
     },
     "8e01995bde2a8214": {
       "title": "Clip highlight: When Taekook Can't Hide It Anymore",
@@ -10502,9 +10511,12 @@
         "license": "creativeCommon"
       },
       "id": "8e01995bde2a8214",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:13.529000+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T16:02:49.715402+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
     },
     "69e25a79b52a1f89": {
       "title": "Clip highlight: INTHECLUTCH REACTS TO IShowSpeed Funniest Moments EVER",
@@ -10521,9 +10533,12 @@
         "license": "creativeCommon"
       },
       "id": "69e25a79b52a1f89",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:13.575500+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T16:02:56.078211+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
     },
     "77b5443a6621af40": {
       "title": "Clip highlight: Every Animatronic + Ankle Breaking = INSANITY..",
@@ -10540,9 +10555,12 @@
         "license": "creativeCommon"
       },
       "id": "77b5443a6621af40",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:13.613940+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T16:02:58.762460+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
     },
     "4ad5324e80d9bea7": {
       "title": "Clip highlight: Kaztro Solo Squad Best Moments | 4 Finger Claw Kill Montage | Kaztro Gaming",
@@ -10559,9 +10577,12 @@
         "license": "creativeCommon"
       },
       "id": "4ad5324e80d9bea7",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:13.670788+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T16:03:00.784347+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
     },
     "9b832e63db3e95b4": {
       "title": "Clip highlight: The Art of Raging in Valorant",
@@ -10578,9 +10599,12 @@
         "license": "creativeCommon"
       },
       "id": "9b832e63db3e95b4",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:13.702438+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T16:03:02.907527+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
     },
     "1345524eef3c9cdd": {
       "title": "Clip highlight: My Favorite Northernlion Balatro Moment (with context)",
@@ -10597,9 +10621,12 @@
         "license": "creativeCommon"
       },
       "id": "1345524eef3c9cdd",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:13.747399+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T16:03:05.195541+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
     },
     "d3a7eb505c9e7915": {
       "title": "Clip highlight: Betraying my Teammates with don Lorenzo in blue lock rivals",
@@ -10670,25 +10697,39 @@
   "content_batch": null,
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-24T10:07:13.868685+00:00",
+    "started_at": "2026-11-24T16:02:47.548110+00:00",
     "attempted_ids": [
-      "12f79fa67101d7d8",
-      "389435ade6c89a7b"
+      "3574582629bb4e83",
+      "8e01995bde2a8214",
+      "bf440c7236bcdf98",
+      "820bb86b2c404a7a",
+      "69e25a79b52a1f89",
+      "77b5443a6621af40",
+      "4ad5324e80d9bea7",
+      "9b832e63db3e95b4",
+      "1345524eef3c9cdd"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "ai_requests_by_candidate": {
-      "12f79fa67101d7d8": 0,
-      "389435ade6c89a7b": 0
+      "3574582629bb4e83": 0,
+      "8e01995bde2a8214": 0,
+      "bf440c7236bcdf98": 0,
+      "820bb86b2c404a7a": 0,
+      "69e25a79b52a1f89": 0,
+      "77b5443a6621af40": 0,
+      "4ad5324e80d9bea7": 0,
+      "9b832e63db3e95b4": 0,
+      "1345524eef3c9cdd": 0
     },
     "clip_download_failures": {
-      "www.youtube.com": 2
+      "www.youtube.com": 9
     },
     "categories_deferred": [
       "clipper"
     ],
-    "finished_at": "2026-11-24T10:07:18.183977+00:00",
-    "attempted": 2,
+    "finished_at": "2026-11-24T16:03:07.240273+00:00",
+    "attempted": 9,
     "completed": 0,
     "gemini_request_attempts": 0
   },
