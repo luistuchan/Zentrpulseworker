@@ -1881,7 +1881,16 @@ def produce_batch(state, budget, target):
         return (int(quota_wait), -int(approved_plan), -int(progress > 0), remaining, -progress, -int(has_plan), -int(verified),
                 -int(trusted_lead), -min(supplied, 2),
                 job.get('last_attempt_at', job.get('created_at', '')))
-    pending = sorted(state['jobs'].values(), key=priority)
+    def clip_rank(job):
+        if job.get('content_type') != 'clipper':
+            return (0, 0, 0)
+        media = job.get('media', {})
+        host = urllib.parse.urlsplit(media.get('source_url', '')).hostname or ''
+        text = (job.get('title', '') + ' ' + job.get('discovery_query', '')).lower()
+        entertaining = bool(re.search(r'funny|comedy|streamer|gaming|gameplay|reaction|prank|hilarious|podcast|challenge|speedrun|esports|sketch', text))
+        return (0 if media.get('path') else 1 if host not in ('youtube.com','www.youtube.com','youtu.be') else 2,
+                -int(entertaining), -int(job.get('views', 0) or 0))
+    pending = sorted(state['jobs'].values(), key=lambda job: (clip_rank(job), priority(job)))
     # Clipper jobs use local editing and remain eligible when AI is unavailable.
     ai_cap = int(os.getenv('MAX_AI_CALLS', '96'))
     ai_unavailable = budget.counts.get('ai', 0) >= ai_cap
@@ -1889,6 +1898,7 @@ def produce_batch(state, budget, target):
     # no usable candidate. Never break an in-progress three-video rotation.
     deferred = set()
     blocked_clip_hosts = set()
+    clip_download_failures = Counter()
     for category_hop in range(len(CONTENT_CYCLE) + 1):
         batch = current_batch(state, excluded=deferred)
         if not batch:
@@ -1975,6 +1985,11 @@ def produce_batch(state, budget, target):
                                 or 'http 429' in reason or 'quota' in reason or 'daily ' in reason)
                 except Hold as exc:
                     job.update(status='HOLD', blocker=str(exc))
+                    if is_clip and clip_host and 'source unavailable in both combined and split formats' in str(exc):
+                        clip_download_failures[clip_host] += 1
+                        if clip_download_failures[clip_host] >= 2:
+                            blocked_clip_hosts.add(clip_host)
+                        state['last_run']['clip_download_failures'] = dict(clip_download_failures)
                     stop = (str(exc).startswith(('Gemini model ', 'GEMINI_API_KEY missing',
                                                  'Confirm the API project is free-tier')))
                 except Exception:
@@ -2116,7 +2131,7 @@ def main():
             raise Hold('queue.json must be an array')
         if args.discover:
             try:
-                leads, errors = discover(30, [j['title'] for j in state['jobs'].values()])
+                leads, errors = [], []  # Pulse is footage-first, not news-story-first.
             except (Hold, Wait) as exc:
                 leads, errors = [], ['publisher feeds: ' + str(exc)]
             try:
