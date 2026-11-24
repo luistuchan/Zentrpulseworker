@@ -3,6 +3,7 @@ Provider metadata is not proof of ownership; all output is review-only.
 """
 import hashlib
 import html
+from html.parser import HTMLParser
 import re
 import time
 import urllib.parse as u
@@ -198,3 +199,83 @@ def select(scene, entry, folder, budget, api):
                     used.append(key)
                     return path,{**media,'id':key,'illustrative':True,'match_check':match,'sha256':api.digest(path)}
     return None
+
+
+SOCIAL_DOMAINS = ('instagram.com','tiktok.com','x.com','twitter.com','facebook.com','fb.watch')
+
+
+def social_host(host):
+    return any(host == domain or host.endswith('.'+domain) for domain in SOCIAL_DOMAINS)
+
+
+def media_links(page_url, raw):
+    """Find public publisher embeds and social links, without downloading them."""
+    class Links(HTMLParser):
+        def __init__(self):
+            super().__init__()
+            self.items = []
+        def handle_starttag(self, tag, attrs):
+            attrs = dict(attrs)
+            if tag in ('video','source','iframe','a'):
+                value = attrs.get('src') or attrs.get('href')
+            elif tag == 'meta' and attrs.get('property','') in ('og:video','og:video:url','og:video:secure_url','og:video:iframe'):
+                value = attrs.get('content')
+            else:
+                return
+            if not value:
+                return
+            url = u.urljoin(page_url,value)
+            p = u.urlsplit(url)
+            if p.scheme != 'https' or not p.hostname or p.username or p.password:
+                return
+            if social_host(p.hostname):
+                # Skip account/profile, login, sharing and generic navigation links.
+                if not (re.search(r'/(?:p|reel|reels|video|videos|status|watch|share/v)/[^/]+',p.path)
+                        or (p.path == '/watch/' and 'v=' in p.query)
+                        or p.hostname == 'fb.watch'):
+                    return
+                kind = 'Social media'
+            elif tag in ('video','source') or (tag == 'meta' and p.path.lower().endswith(('.mp4','.webm'))):
+                kind = 'Publisher video'
+            elif tag == 'iframe' or tag == 'meta':
+                kind = 'Publisher embed'
+            else:
+                return
+            # Do not persist signed CDN links or tracking query parameters.
+            query = p.query if p.hostname in ('www.facebook.com','facebook.com') and p.path == '/watch/' else ''
+            clean = u.urlunsplit((p.scheme,p.netloc,p.path,query,''))
+            if clean not in [x['source_url'] for x in self.items]:
+                self.items.append({'source_url':clean,'provider':kind})
+    parser = Links()
+    parser.feed(raw)
+    return parser.items[:12]
+
+
+def publisher_leads(topics, api):
+    """Research-only leads from accessible news pages and their video embeds."""
+    seen = set()
+    pages = 0
+    for topic in topics:
+        for url in (topic.get('source_urls') or [])[:2]:
+            if pages >= 8:
+                return
+            if not isinstance(url,str) or url in seen:
+                continue
+            seen.add(url)
+            pages += 1
+            try:
+                raw,final,kind = api.http(api.publisher_url(url),limit=3_000_000,retries=0)
+                if 'html' not in kind:
+                    continue
+                links = media_links(final,raw.decode('utf-8',errors='replace'))
+            except (api.Hold,api.Wait,ValueError,TypeError):
+                continue
+            for media in links:
+                if media['source_url'] in seen:
+                    continue
+                seen.add(media['source_url'])
+                yield {'title':'Media lead: '+topic['title'], 'category':'clipper',
+                       'content_type':'clipper','discovery_only':True,
+                       'discovered_at':api.now(),
+                       'media':{**media,'attribution_url':final,'license':'unverified',
+                                'rights_note':'Publisher or social link; verify permission and access before production'}}
