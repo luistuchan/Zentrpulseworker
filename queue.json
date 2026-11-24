@@ -149,15 +149,14 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T06:30:43.872170+00:00",
       "id": "4264468155308d0d",
-      "status": "HOLD",
+      "status": "WAITING",
       "created_at": "2026-11-14T06:30:43.881621+00:00",
-      "attempts": 4,
+      "attempts": 5,
       "youtube_signal": {
         "status": "not_checked"
       },
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-22T23:08:00.238687+00:00",
-      "blocker": "No matching Pixabay footage for s05: 9 hits for 'orchestral sheet music', 9 hits for 'orchestral sheet'; inspect diagnostics in review artifact",
+      "last_attempt_at": "2026-11-24T07:24:30.847563+00:00",
       "youtube_visual_discovery": [],
       "stock_reviews": {
         "6d3b8fd9530c366b7d5481744d900e9afd158d1641e742f4b749fc27e41d723c": {
@@ -191,8 +190,30 @@
         "26f75ea5b51528d9c6110b9a746f6d097ce01bc335f49f67fdc975b46f1f8ba1": {
           "matches": false,
           "reason": "Generic close-up of tree leaves that lacks any thematic or contextual relevance to the video topic."
+        },
+        "84815eee63ac939fa885458c8ebdced7ffe3f53b582d495f99aeef7d42387dc0": {
+          "matches": true,
+          "reason": "The frame shows a music production mixing console and audio equipment, which is directly relevant to a video about a composer and video game music theme creation."
+        },
+        "6381ac16981f303a1163c1a25b4f710185fc3e9c047b3766044c449ff50bb1f9": {
+          "matches": false,
+          "reason": "The video is about the musical theme 'Ezio's Family' from Assassin's Creed composed by Jesper Kyd, whereas this frame shows someone playing a saxophone by the sea, which is unrelated generic music B-roll."
+        },
+        "f25a17f783f98ffae4cae73aa99bc70490ff8fa7a1d8b5e821612d8e3f5c2b8e": {
+          "matches": true,
+          "reason": "The frame shows an Italian street with traditional architecture, which visually connects to the setting of Ezio Auditore's story in Assassin's Creed II set in Italy."
+        },
+        "d02d5aba01a50fe46096b2353ff9f35ca9a6bf26de3a984f9ac19b088a292080": {
+          "matches": true,
+          "reason": "The image shows ancient ruins with classical architecture, which is strongly associated with the historical settings of the Assassin's Creed series and fits the video's theme."
+        },
+        "3eac0282c2589878f9dfc1f7c561e021efd82840c7aaac545c6a870957995b49": {
+          "matches": true,
+          "reason": "The video is about the musical composition and theme 'Ezio's Family' from Assassin's Creed, and this frame shows someone playing an acoustic guitar, which directly relates to the musical theme of the video."
         }
-      }
+      },
+      "stock_pipeline_version": 5,
+      "blocker": "Stock footage review allowance reached for this draft; saved progress"
     },
     "b890da7c8bb20e5f": {
       "title": "xQc explains what his viral “six console” rant was really about - Dexerto",
@@ -322,12 +343,12 @@
       "headline_score": 1,
       "discovered_at": "2026-11-14T17:29:08.566644+00:00",
       "id": "0d3903eaaa721d2d",
-      "status": "WAITING",
+      "status": "HOLD",
       "created_at": "2026-11-14T17:29:08.576584+00:00",
-      "attempts": 4,
+      "attempts": 5,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-22T23:09:01.451411+00:00",
-      "blocker": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted",
+      "last_attempt_at": "2026-11-24T07:25:30.509269+00:00",
+      "blocker": "No matching Pixabay footage for s04: 9 hits for 'abandoned mall'; inspect diagnostics in review artifact",
       "youtube_visual_discovery": [],
       "stock_reviews": {
         "5608f1eb766cd764e0e76bade91e4dcf0d0adee97f3d26b68dd1807ed9c7241d": {
@@ -361,6 +382,26 @@
         "6293437980d9b2184bc2ab506b2340ba03ae3b9978061424f031329d24f174fd": {
           "matches": false,
           "reason": "The image shows a generic empty corridor or underpass, which is not meaningfully related to Ellie, the music store in Seattle, or the song 'Take On Me' from The Last of Us."
+        },
+        "be16b267e7433b07db45597946df5dc85fc146abb9ad934884a7f5be25258a43": {
+          "matches": true,
+          "reason": "Shows a musician playing a keyboard in a studio setting, which relates well to discussing the music and arrangement of the song in the video topic."
+        },
+        "40000fcb0533ca96ee43f6e846e414286417acb34dd2cd4f9840d2d22544b05f": {
+          "matches": true,
+          "reason": "Depicts musicians practicing in a studio setting, relevant to the discussion of musical arrangements and covers."
+        },
+        "2b81a451869042bb6e7a165b593e10f8bfb559b407844906e8c5ccc304c72490": {
+          "matches": true,
+          "reason": "Features a musician focused on playing an electronic keyboard setup, fitting the theme of music creation and performance discussed in the video."
+        },
+        "e4b88d3fa011b430dd72400dc3243a237487c59b551beb7cadfcbba7a8917903": {
+          "matches": true,
+          "reason": "The frame shows a close-up of someone playing an acoustic guitar, which directly relates to Ellie's acoustic performance of Take On Me in The Last of Us Part II."
+        },
+        "d6fcd5ac8fdbf8533cd7f8450ae04dba3375f143b9b3f0ff1a05864ded89fb5a": {
+          "matches": false,
+          "reason": "The image shows a generic staircase and hallway, which has no specific connection to The Last of Us, music stores, or the song Take On Me."
         }
       }
     },
@@ -522,9 +563,9 @@
       "id": "09d9f47c5e021faf",
       "status": "WAITING",
       "created_at": "2026-11-15T17:29:14.647911+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-22T22:50:36.465560+00:00",
+      "last_attempt_at": "2026-11-24T07:26:04.701681+00:00",
       "youtube_visual_discovery": [
         {
           "id": "zFzCCHEVtzA",
@@ -559,6 +600,30 @@
         "03170f649eb3d3a179c39d9ff22efce2c00aae5663d3dc135591c0425a742cce": {
           "matches": false,
           "reason": "The image shows old European-style architecture, likely in a city like Barcelona, which does not depict Philadelphia's theater district, stages, or cultural venues relevant to the video topic."
+        },
+        "8e200d652d815f443fa543d48e3bfdff6b461eea5b89e6190deebdcf97adc159": {
+          "matches": false,
+          "reason": "The footage shows a crowded street market in South Asia, which does not relate to Philadelphia's stage productions, theater, or holiday shows."
+        },
+        "ca3c1020d9bb80c79762828599fbc96984bf2e8daff3e62d5e8ae1cf74eb3230": {
+          "matches": true,
+          "reason": "The image shows a person playing the drums, which is relevant to music performances, concerts, and stage productions featured in Philadelphia's cultural events and orchestra holiday traditions."
+        },
+        "2df976d4c99f9ef2a72931348092e1eba44d984a4497630564aa2b0b3f28bfcf": {
+          "matches": true,
+          "reason": "The frame shows a live stage dance/theater production with performers in traditional costumes, which directly fits the theme of Philadelphia's stage and cultural shows."
+        },
+        "31036aa7fbdfac27db4f3fdb87c34b35e44bfb0d3c10ed0e04d2e83e9c0e62a5": {
+          "matches": false,
+          "reason": "The image shows a European-style white building and bell tower which does not represent Philadelphia stages, theaters, or cultural venues."
+        },
+        "eef1b2785e27e9705b6331b94d1895d34d2feceea65e1d275bceb4d5fb79446b": {
+          "matches": false,
+          "reason": "The footage shows a coastal European-style harbor and town, which is unrelated to Philadelphia theater and holiday shows."
+        },
+        "9b8c4198131bb0bb7e7e27b6a77e29d6bda45c76a8f7bbfbfbf53e9cb0364749": {
+          "matches": false,
+          "reason": "The footage shows a generic open sea with a sailboat and distant coastline, which does not relate to Philadelphia or its cultural stage productions."
         }
       },
       "blocker": "Stock footage review allowance reached for this draft; saved progress"
@@ -923,10 +988,74 @@
       "id": "b9bec980ee3acc4a",
       "status": "WAITING",
       "created_at": "2026-11-16T08:45:49.288892+00:00",
-      "attempts": 1,
+      "attempts": 2,
       "source_pipeline_version": 3,
-      "last_attempt_at": "2026-11-22T22:52:59.008867+00:00",
-      "blocker": "Per-run AI allowance reached; job saved for the next run"
+      "last_attempt_at": "2026-11-24T07:27:04.871652+00:00",
+      "blocker": "Stock footage review allowance reached for this draft; saved progress",
+      "youtube_visual_discovery": [
+        {
+          "id": "__Om6mS28mU",
+          "license": "youtube"
+        },
+        {
+          "id": "0mv4pP7a3vI",
+          "license": "youtube"
+        },
+        {
+          "id": "pgAkb_CKykw",
+          "license": "youtube"
+        },
+        {
+          "id": "cXJqnwlg0dc",
+          "license": "youtube"
+        },
+        {
+          "id": "Q0zR6exAo1A",
+          "license": "youtube"
+        },
+        {
+          "id": "e1Vx4rDydyM",
+          "license": "youtube"
+        },
+        {
+          "id": "QlMbt19DjeA",
+          "license": "youtube"
+        }
+      ],
+      "stock_reviews": {
+        "e71b6783a96666a300e6d127d3712256475f980c56ccd57324517a2de450e2ca": {
+          "matches": true,
+          "reason": "The frame shows a large crowd gathered at night with fireworks, which directly illustrates the massive beach gathering and event described in the video context about Lady Gaga."
+        },
+        "7252efee186f8d08de6c91f5437c55a2ac2d7cdcba8962ce2f94d94683cb08b1": {
+          "matches": false,
+          "reason": "The frame shows a person taking photos of colorful buildings in a town square, which has no clear relevance to the topic of Lady Gaga or the narrative."
+        },
+        "7b2660e2bf9acf5093bf72f89f23edbf3c9074b24dc7feb070bbd12728fe02b4": {
+          "matches": true,
+          "reason": "The cassette tape represents music and recording, which is meaningfully related to Lady Gaga's biography and songs."
+        },
+        "6dde4496800924fded869fba871cd89f923fdc7c8c7d5c37d89cf63739c756aa": {
+          "matches": true,
+          "reason": "The reel-to-reel audio tape depicts music production, fitting the video topic about a music artist."
+        },
+        "6463834516d5782d583edae5b9d5451d1785f1900291f2731ca26e84247cabec": {
+          "matches": false,
+          "reason": "The frame is completely black and unusable as b-roll footage."
+        },
+        "f31a97d9cae5a3f87f7958036ad49157f540715acc1fe77459b24b10590e18bd": {
+          "matches": false,
+          "reason": "The close-up of clockwork gears is generic and does not meaningfully relate to Lady Gaga or the video topic."
+        },
+        "940ffbe47e852ce30a64e22ccdf675734adba90bd3ed3ef798020f6c2118b92f": {
+          "matches": true,
+          "reason": "The shot depicts a scenic coastal/water view that aligns well with the narrative mention of a massive beach and setting."
+        },
+        "f2bee45c67ad83a0a5c340e4334ee0d4d7ebb6cfedf50d6f0683427777d43a47": {
+          "matches": true,
+          "reason": "The sunset over the water visually complements the beach and large gathering setting described in the video."
+        }
+      }
     },
     "98b05cefbe0e3d1c": {
       "title": "Norfolk council considers 'unfair burden' of major energy schemes - BBC",
@@ -1132,9 +1261,55 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:12.396048+00:00",
       "id": "5c2fc0b7929fbd7e",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-16T10:36:13.824771+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-24T07:27:58.828457+00:00",
+      "youtube_visual_discovery": [],
+      "stock_reviews": {
+        "ba51fa8b3804262ad3fa9329c96be49a9e07ede9aaea5ea85ca40bfe7312d1b4": {
+          "matches": true,
+          "reason": "The military helicopter fits the theme of the Call of Duty military conflict and modern battlegrounds."
+        },
+        "2ac9d76a2d4724b230087d00d274390f36b4aae83d18c59dfd5af09033a74ba7": {
+          "matches": true,
+          "reason": "The old map relates to strategy, settings, and the military conflict described in the video context."
+        },
+        "bfdbf929940862e7d36d395b3d23caae6ffa2f94a68f990d62af4d50dc891983": {
+          "matches": true,
+          "reason": "The shot of someone playing an acoustic instrument relates well to the video topic about musicians crafting traditional arrangements and playing instruments for the game's score."
+        },
+        "f64a59124ca6b0539124b16821f94bbc7010bd0f1f7bf9c79db9fb01cd626dd2": {
+          "matches": false,
+          "reason": "This shot prominently displays a visible brand logo (Epiphone) on the guitar headstock, which violates the negative criteria."
+        },
+        "74d032d151e22de43b550da458d2ddd8004ee2639b4763328f0da668cab33b46": {
+          "matches": true,
+          "reason": "Shows a music production studio setup, which is relevant to the video topic about scoring and audio production."
+        },
+        "9f31cbdb44dc9cae143ccc8b9fdb1cda99d49d1913d7528a7e8e7e6fbdc3825e": {
+          "matches": true,
+          "reason": "Displays audio waveforms on a computer screen, directly relating to the music composition and soundtrack creation discussed in the video."
+        },
+        "b61120896c4f0b4252d300e9c1265b8a3934b9a44f826b935c62a4d7ec21559a": {
+          "matches": false,
+          "reason": "This shows the Great Wall of China, which is located in China rather than Korea, making it geographically incorrect for the Korean setting."
+        },
+        "7a16bdcdefb5dd777c144a82c63a5cbe5e3800b1354bd2da5d20e0ef010bec56": {
+          "matches": true,
+          "reason": "This shows a professional music recording studio setup, which is relevant to the creation of the video game score and soundtrack mentioned in the video context."
+        },
+        "c5e0904e0144a01b17183071887cd4d12bc5118d5b834f36531caa65229fcb30": {
+          "matches": true,
+          "reason": "The audio mixing equipment is relevant to the video's focus on creating the score and soundtrack for Call of Duty."
+        },
+        "752f665bafcb300bd2863e99099ddbcb1b0d92fe4b753ca3763e139a3b6c0d5b": {
+          "matches": true,
+          "reason": "The speaker cone visually represents sound and audio production, aligning with the musical focus of the video."
+        }
+      },
+      "blocker": "Stock footage review allowance reached for this draft; saved progress"
     },
     "1dc34d956ddca456": {
       "title": "Virtual creators team with HYBE unit NEWEPICBASE to release single and YouTube series - Chosunbiz",
@@ -1147,9 +1322,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:12.405992+00:00",
       "id": "1dc34d956ddca456",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-16T10:36:13.834418+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-24T07:30:15.561653+00:00",
+      "blocker": "Script planning reached its three-request limit"
     },
     "5f0ddd8b703bd3b9": {
       "title": "'Female musicians work ten times harder than men to gain recognition' — Wendy Shay - Modern Ghana",
@@ -1162,9 +1340,12 @@
       "headline_score": 0,
       "discovered_at": "2026-11-16T10:36:12.415707+00:00",
       "id": "5f0ddd8b703bd3b9",
-      "status": "QUEUED",
+      "status": "WAITING",
       "created_at": "2026-11-16T10:36:13.843792+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 3,
+      "last_attempt_at": "2026-11-24T07:31:19.401513+00:00",
+      "blocker": "Per-run AI allowance reached; job saved for the next run"
     },
     "710b1ac83d1df7c7": {
       "title": "PGA Tour 2026 schedule: Winners from FedExCup, Signature Events and golf majors, including The Masters and US Open - Sky Sports",
@@ -7517,9 +7698,10 @@
       "discovered_at": "2026-11-20T23:45:51.108788+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "f5ae13ffcdc06dfd",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T23:45:57.290099+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "689651dbee17ac86": {
       "title": "Freewheeling Trump Promotes Data Centers, Asia Trip and His Veto Power - The New York Times",
@@ -7549,9 +7731,10 @@
       "discovered_at": "2026-11-20T23:45:50.659757+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "5e75d4189ed8faf1",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T23:45:57.365259+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "e14c923db9788adc": {
       "title": "Rahul Gandhi backs strong India-Israel ties despite Gaza war",
@@ -7565,9 +7748,10 @@
       "discovered_at": "2026-11-20T23:45:51.142261+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "e14c923db9788adc",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-20T23:45:57.397728+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "e086367841debbc6": {
       "title": "New Caravan of About 300 Migrants Crosses Into Southern Mexico - U.S. News & World Report",
@@ -7673,9 +7857,10 @@
       "discovered_at": "2026-11-21T02:06:29.977786+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "cd6dbe1f41178e9c",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T02:06:37.794615+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "a0494abe27b10b61": {
       "title": "What Trump addressed during his lengthy White House news conference - PBS",
@@ -7688,9 +7873,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-21T02:06:36.104874+00:00",
       "id": "a0494abe27b10b61",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T02:06:37.850055+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "905dcbbf64cbea20": {
       "title": "COP31 deal stalls as nations struggle to agree on climate plan",
@@ -7704,9 +7890,10 @@
       "discovered_at": "2026-11-21T02:06:30.027373+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "905dcbbf64cbea20",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T02:06:37.897559+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "5874551a5b4ee567": {
       "title": "Can Africa’s new credit rating agency change how the continent is assessed?",
@@ -7720,9 +7907,10 @@
       "discovered_at": "2026-11-21T02:06:30.085873+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "5874551a5b4ee567",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T02:06:37.953864+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "19dd6c9f2c3211e9": {
       "title": "Mounting tech disruptions raise concerns about U.S. cybersecurity - PBS",
@@ -7735,9 +7923,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-21T02:06:37.172055+00:00",
       "id": "19dd6c9f2c3211e9",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T02:06:38.004592+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "0015c76e229b1bb1": {
       "title": "'Do you wanna run for president?' Trump floats chief of staff for 2028 - AFP.com",
@@ -7847,9 +8036,10 @@
       "discovered_at": "2026-11-21T20:43:40.430081+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "2810c54490466ad7",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:51.247856+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "fa0cc2fbc22b74db": {
       "title": "US senator says Pentagon restrictions on Canada focus on think tanks and social events - ABC News - Breaking News, Latest News and Videos",
@@ -7862,9 +8052,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-21T20:43:47.470431+00:00",
       "id": "fa0cc2fbc22b74db",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:51.343978+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "de01b912b12918e0": {
       "title": "Fight over fossil fuels leaves COP31 climate talks in deadlock",
@@ -7878,9 +8069,10 @@
       "discovered_at": "2026-11-21T20:43:39.018095+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "de01b912b12918e0",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:51.391955+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "1952b77f07a3678c": {
       "title": "Russia-bound ship attacked in Gulf of Finland",
@@ -7894,9 +8086,10 @@
       "discovered_at": "2026-11-21T20:43:38.916052+00:00",
       "discovery_quality": "publisher_feed_v1",
       "id": "1952b77f07a3678c",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:51.428730+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "3268000fbffbea05": {
       "title": "President Trump signs new law that ends penny production after almost 250 years - HELLO!",
@@ -7909,9 +8102,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-21T20:43:46.266324+00:00",
       "id": "3268000fbffbea05",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:51.492945+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "9dd495fd1ea4be81": {
       "title": "Lock of George Washington's hair sold at auction for $4,000 - CBS News",
@@ -7924,9 +8118,10 @@
       "headline_score": 0,
       "discovered_at": "2026-11-21T20:43:47.364138+00:00",
       "id": "9dd495fd1ea4be81",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:51.546957+00:00",
-      "attempts": 0
+      "attempts": 0,
+      "blocker": "News candidate expired; discover a recent story"
     },
     "be5bf18fc4f36c7b": {
       "title": "Glyphosate - Britannica",
@@ -9089,14 +9284,281 @@
       "status": "QUEUED",
       "created_at": "2026-11-22T23:08:00.201303+00:00",
       "attempts": 0
+    },
+    "e32c57879d333a3e": {
+      "title": "Australia warns tech giants of multibillion-dollar fines for online ‘harm’",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/2026/11/24/australia-warns-tech-giants-of-multibillion-dollar-fines-for-online-harm?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-24T07:02:52+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-24T07:24:14.655298+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "e32c57879d333a3e",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T07:24:29.267830+00:00",
+      "attempts": 0
+    },
+    "c3d6fee77993e7b7": {
+      "title": "BREAKING NEWS: Japan PM vows support for U.S. sanction-hit ICC at meeting: president Akane - Japan Wire by Kyodo News",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiWkFVX3lxTFBkM1pNMDY4Rk5qYTBHQnctYmVHZFc1clNVcTBGeXo5SWJBTXVoSWM3TG1FOEctQTB4UHFaVEJqcjJjNzBZXzRXcFBlZTFTTHIwNnUzdFlqc2w1Zw?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-24T07:00:24+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-24T07:24:23.883745+00:00",
+      "id": "c3d6fee77993e7b7",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T07:24:29.385235+00:00",
+      "attempts": 0
+    },
+    "3f7bef8d00becd24": {
+      "title": "Why Eisenkot is negotiating with Netanyahu",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/opinions/2026/11/24/why-eisenkot-is-negotiating-with-netanyahu?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-24T07:02:40+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-24T07:24:14.712347+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "3f7bef8d00becd24",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T07:24:29.438969+00:00",
+      "attempts": 0
+    },
+    "4a235e4644e68404": {
+      "title": "Nvidia live: Markets surge as Jensen Huang returns as CEO",
+      "category": "world_news",
+      "source_urls": [
+        "https://www.aljazeera.com/news/liveblog/2026/11/24/nvidia-live-markets-surge-as-jensen-huang-returns-as-ceo?traffic_source=rss"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-24T06:24:25+00:00",
+      "headline_score": 10,
+      "discovered_at": "2026-11-24T07:24:14.784561+00:00",
+      "discovery_quality": "publisher_feed_v1",
+      "id": "4a235e4644e68404",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T07:24:29.507528+00:00",
+      "attempts": 0
+    },
+    "4d6a14c1aba58c6f": {
+      "title": "Trump owned at least $12 million in Nvidia stock at the end of last year - ABC News - Breaking News, Latest News and Videos",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMijwFBVV95cUxPcm16eGltaFhHdnNpMi1kZi1vVERncG1Qc0pGa2Voa3B5WV82YnhTSTh1WXc3b3Q5VjFudjBpd2lFZExCT2Y4TkZZN0xIXzhlZ2d4dE9wbWpNRXNpcHhoRXRCaUJnWG9mdjJTa242VU9zQThKZVlGZEdUZUJPbi1lVVY4Q1psOXNxaW1jQkxhMNIBlAFBVV95cUxQOXhoLWhSci1qSU5XTHpYclFNTUd5V1NENzRzRksyS185Vmd3VDU4VmxtLUl1MFVtSktfRnpCUzE2RTFnMnd5TFIweHpKSjNITzVMMm9IUWlGMG9FMjl5enFYblFyb25wWHFFVjdCd1h6SFByVjlYQVphMDI4MlA3dE9jamR3N2ZBWlRDUURLOTFCMHRs?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-24T04:51:33+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-24T07:24:23.098721+00:00",
+      "id": "4d6a14c1aba58c6f",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T07:24:29.639359+00:00",
+      "attempts": 0
+    },
+    "88ea1656f85da943": {
+      "title": "Iran: US launches fresh strikes as hostilities flare again - DW.com",
+      "category": "president",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMilAFBVV95cUxNeWNFQTNYTzU5VkMwWjJocU5TQ3JwYzd4ZEFFV01sU21xREt6R19pZ0Z0YVdoV3ZyQWZ3aEptRFM3aVozMVU1U1g0OXFYWkdGZTBqUzUwdEtjMkhfZmkydk9VSGtBMzFzUUloM1BNVjl4NWJoeDhrOW1XbW04VDAxSldJVHY2empRQlMzQzdySWtRNlBZ0gGUAUFVX3lxTE45R2NyMUYtdVBUdFhQVk9YeTVqdWxZR0lDNXpIOE9YSVJrY254V1MxYTZud1E4VDFTazlROVZKd1BxcUNPdHpZQUx3X0xwajNnZ3lYN09McFNkeEY1SE9kM1VrU2cxaV8yR09McjlvcEN4V1ZpZnhZOTU1NVZiN2N4eUN3cDl2M1ZxaFhDZmFWR0ZqdGE?oc=5"
+      ],
+      "content_type": "news_update",
+      "source_published_at": "2026-11-24T04:02:05+00:00",
+      "headline_score": 0,
+      "discovered_at": "2026-11-24T07:24:22.694432+00:00",
+      "id": "88ea1656f85da943",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T07:24:29.719120+00:00",
+      "attempts": 0
+    },
+    "c59f98e67501214b": {
+      "title": "Rethinking Autoimmune Drug Discovery: From Pathway Targeting to Immune System Reprogramming - Technology Networks",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPd3pBNFlNRDB3Q1otUFpobDF5ZllUTHNIZ09xS3FZY0tRQ0V0bW5pakZmNndqYU56VnV5TkdTVmQtSzF5YkVYM3d0MEJoSlBOeENfM3JMdWdJRFhDeDhWVldwaXVtd0g4TldmZXhBcEZnOEljdXd1cUpPTVBBWFIxTm5zZDBabGg2aGFuN0Z1T3lxcURaWWlKQ2dteVNrX1JqTnRLYkJLVmdWajVDaGJBS1U2a2NUN09ZUW13RW5HS2twOGdRdUNNVWNGdFo5b1E2TkhVX2E5SQ?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 1,
+      "discovered_at": "2026-11-24T07:24:18.181813+00:00",
+      "id": "c59f98e67501214b",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T07:24:29.836851+00:00",
+      "attempts": 0
+    },
+    "b4d65dc5d2bed033": {
+      "title": "Ghana-Morocco final puts spotlight on unique rules of amputee football - Modern Ghana",
+      "category": "sports",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMinwFBVV95cUxPUVlncWtZMEcwWk5Kd2c1V0xYQ01keTRxazA5UEpPRkxjLXdud011TjJkSnI1MUhManZoNlFVYUZCRl9XWm1tT0kwMlBhOGNDRmt4a0ZQVVNPRVExS3RaSWFLNkhvMGp2UzJEUGo3ZzRvWlNVS3FBODllNTY4M3RVWjdKSXVwalV5V2V4NkNyOFR5U19YS0xNR3dQMG9fM0nSAZ4BQVVfeXFMUGpRMlNIdTFuT1AxeDFvRlp1dHZHWDdpSWtPOXROLW5xU1dUSWpBUVhaQnJkRkdBcTh3SDhsNXhKREZyZFRCSndYV3d4VkUwWXBZWG04a2VpVWRHSHF1N3dacFdxa0ViTU1JTkxfaTJOaFJEdGUtTy0yTUNuQ2p6Q3BjRGU0RFIzc3Nac0J1RUlseVc4dFM0VG9jMm1vUUE?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 1,
+      "discovered_at": "2026-11-24T07:24:19.401170+00:00",
+      "id": "b4d65dc5d2bed033",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T07:24:29.932910+00:00",
+      "attempts": 0
+    },
+    "68e15d90b314ff97": {
+      "title": "Asmongold Defends GTA 6 \"Gay\" Scene After Streamers React to Jason and Cal’s Moment - NDTV Sports",
+      "category": "creators",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiygFBVV95cUxPYkZGS3FSclF1Q2luSGJIY29rT0pvclg2b256dGpzRDZ6RHJsWnBRV0VWamxvclVZdk10QzB1aTdrdXc5YzFVVXJHWEVMN2xIZ3QybTZfNHBkZDE3NGtuYUhrZUxVeFNHeGlaWjFBN1FhTl90NXprVVRjUjB0MFdYUDZZMjN6VGI1dzdWdFRTMy1YVWMwOTVuNmd0QlFiQlFFUmZlVGNlQVBQYWloVElVTWtNYWItSTIxeGd2NkFPNnBZbHJjTUhscG5B?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-24T07:24:17.344990+00:00",
+      "id": "68e15d90b314ff97",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T07:24:30.042183+00:00",
+      "attempts": 0
+    },
+    "851c1dced6ba3fa4": {
+      "title": "What babies eat could shape their adult sweet tooth. Here’s what scientists found - ThePrint",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxQa3JSUnhkVjNfSXMtM3czTTV1a2VZS01BclNBaUVESTV1MlA0WHpudGVnV21EcXFYN1FGMzlkVzhHQ0hZUi1nOVRob3NWSWRrYXNpMUxTSGphX210RlFjdkNXMi10UlhZLWQ4bmk4bldmZTg1ajQ1NDcyNjBCQ0xmWkdfZWxreTF3SE0zRFN4eGVrcDJ3M25neFBJVVVzYVZyUEdxNTJMSE9qQ255cVpsaGptRkdOSEHSAbwBQVVfeXFMTnBvamFzWlJBYmpqcEw1MS1HSWdqUW5Vbi11V2FTY0JFSzloT3o1bWFyaVlPOFAxd3FuZ0JDWW1wQmxhbkY4WUpkTGI1c0NiLUdlVUlZTnN3bGk5MW4yTk5RNkdpWk0ydW1NcUg1TjRuaGNvdml1WHp0eTd0ekw4bzZKN1JURHhSMm9ZX3NHWXVTWm5xclZLN2pZMmxGeS1PY0Y1LWIxbGJSNmNCNlVXNkduN1lNS04tMGVYbDY?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-24T07:24:18.479955+00:00",
+      "id": "851c1dced6ba3fa4",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T07:24:30.149161+00:00",
+      "attempts": 0
+    },
+    "38f9b359647f7a7d": {
+      "title": "The Origin of Species: Darwin and the theory that changed our understanding of life - The Tribune",
+      "category": "science",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiyAFBVV95cUxONWwtb1E3dFJSMkJ4U2ZSbldQWU4wVkdZZEw1T2dBU2o3NzdVT25SR0I0RWQyNmdTaWtjWVloenBXUGl3NmE1UXdvcHJ0dHBrVzFRTk5iNnFTRW9SbjdpMkNhQjRGVHM5T0VoNXhydWNybktCUmszSUFOc2Z6T3Z3MzJubmdrQk9VNVFsWUg1YkV5VVdvR1p2dHBpVXRwYTNOTlhtT2h3TEZXNkwwa2p6bjBEUDBPUU9Bb2poWGt2Z2QtRzJvUnpjaNIBzAFBVV95cUxQcEFDOWE3NmwtUmNoNjJ2ckh0em1US2luUW12dHg4UGM1UjVGUE5ERzQ1eUlzWjBLOUxWdTd3Nzd5R1lmVklsUHhfVEdDcEdxRVVOTWRBM255ZVpxczBrLWVVNDRCanl5NWUwUlh3QlluTjgwNUVpVGZVRHA5VlVheVU3d2QzLVE5YUpMdmh1QlZ3R1d1WUdHMG9zaWVva1hfWmNyT0VPOE9zX05aTkltajROd20tcFdjLVBhRXhMNWpsTXIxUGxBRnBZM28?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-24T07:24:18.795948+00:00",
+      "id": "38f9b359647f7a7d",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T07:24:30.259444+00:00",
+      "attempts": 0
+    },
+    "16eb04ecf6e1be33": {
+      "title": "Metallica at Sphere: Trujillo on screens and rehearsals - KarloBag.eu",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMitwFBVV95cUxPQzFJSEZ1NUN2ZlNqM1paWTlLN053OTVmeGlSSi12NDV2ektidkhab0VUYy14R1U5dWdBcUx1S0taVy1XelY0X2dDMVpUeTNXQTF0ajlVaVB6VV9Hb1VpUEFRREVFVGxnRTJndWJqV1dEdnZvOGZsc2hyVEVFRERsc0xyVTA2RFdfTVFPcHNIeFYwckRKUzZoY0VZN1dpcVhKaHlDcFctekZDNFM2dXBHV2pIZGUxX1U?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-24T07:24:21.116458+00:00",
+      "id": "16eb04ecf6e1be33",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T07:24:30.340735+00:00",
+      "attempts": 0
+    },
+    "dc4080ff7d15a51b": {
+      "title": "Parastoo Ahmadi Flogged: Iran's 74 Lashes and the Prohibition of Torture - Diplomacy and Law",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA0akFTOURPUGxRY0t0cThDRkNRMEZfVFp3amV3bGxhMWZfOXpvSUNTQjVOZ2tQQldvVXlaa1pkRlZuTmhtNWRPM085dFZZcDlOSjFoVFhfUEdac19NOExkNXVn?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-24T07:24:21.292505+00:00",
+      "id": "dc4080ff7d15a51b",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T07:24:30.442991+00:00",
+      "attempts": 0
+    },
+    "91fced5a788e5f76": {
+      "title": "Kenya News Agency - KNA. . A HISTORIC MILESTONE FOR NZOIA SUGAR FACTORY - Facebook",
+      "category": "music",
+      "source_urls": [
+        "https://news.google.com/rss/articles/CBMirwFBVV95cUxPU09PYXhKOENSR0ZjNnNnUzBZbHpON1pMTVhIeHBGMFpJUEVCM0JUVzN4R29oY0xsVi1SOHBBZlEtNWN5WmhWbl9uazZtNTRjRTZIRmE2QW9iNXZ1b1VYQk9jVW92OXlLTVpFRXZaQTFaRUV3cVV1eEVYWXhTa0hCckNUd3l4Q25kUjlVNlZ3TW54czg2LVNzWk82cVVfU29XdzRELTlydVRZaU1pY0U0?oc=5"
+      ],
+      "content_type": "explainer",
+      "source_published_at": null,
+      "headline_score": 0,
+      "discovered_at": "2026-11-24T07:24:21.547716+00:00",
+      "id": "91fced5a788e5f76",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T07:24:30.526874+00:00",
+      "attempts": 0
+    },
+    "1cf57dca6078d633": {
+      "title": "Clip highlight: $4 2M Fraud! Nigerian Pastor Jailed in U.S.",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "4HWxHRh92KM",
+      "discovery_query": "Australia warns tech giants of multibillion-dollar fines for online ‘harm’",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T07:24:27.846278+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=4HWxHRh92KM",
+        "creator": "African Black Gold",
+        "license": "creativeCommon"
+      },
+      "id": "1cf57dca6078d633",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T07:24:30.599669+00:00",
+      "attempts": 0
+    },
+    "e8b3866baf3c6747": {
+      "title": "Clip highlight: Don’t Wait for Tomorrow: Good Health Begins Today at Cell Health Clinic",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "NWA_VLYRy_8",
+      "discovery_query": "Rethinking Autoimmune Drug Discovery: From Pathway Targeting to Immune System",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T07:24:27.846295+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=NWA_VLYRy_8",
+        "creator": " CellHealth Clinic",
+        "license": "creativeCommon"
+      },
+      "id": "e8b3866baf3c6747",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T07:24:30.701705+00:00",
+      "attempts": 0
+    },
+    "d77d808fe2f82a63": {
+      "title": "Clip highlight: Man in racist homophobic #TikTok video at #InNOut Burger charged with hate crimes",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "_DcQPkfufGI",
+      "discovery_query": "Asmongold Defends GTA 6 \"Gay\" Scene After Streamers React to",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T07:24:27.846299+00:00",
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=_DcQPkfufGI",
+        "creator": "NBC News",
+        "license": "creativeCommon"
+      },
+      "id": "d77d808fe2f82a63",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T07:24:30.809590+00:00",
+      "attempts": 0
     }
   },
   "budget": {
-    "day": "2026-11-22",
+    "day": "2026-11-23",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 18,
-    "pixabay": 21,
-    "ai": 42
+    "youtube": 11,
+    "pixabay": 30,
+    "ai": 32
   },
   "content_cycle_index": 11,
   "content_batch": {
@@ -9113,26 +9575,32 @@
   },
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-22T23:08:00.201895+00:00",
+    "started_at": "2026-11-24T07:24:30.810376+00:00",
     "attempted_ids": [
       "4264468155308d0d",
-      "e95fac783fd7233f",
-      "0d3903eaaa721d2d"
+      "0d3903eaaa721d2d",
+      "09d9f47c5e021faf",
+      "b9bec980ee3acc4a",
+      "5c2fc0b7929fbd7e",
+      "1dc34d956ddca456",
+      "5f0ddd8b703bd3b9"
     ],
-    "completed_ids": [
-      "e95fac783fd7233f"
-    ],
+    "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "ai_requests_by_candidate": {
-      "4264468155308d0d": 3,
-      "e95fac783fd7233f": 4,
-      "0d3903eaaa721d2d": 3
+      "4264468155308d0d": 5,
+      "0d3903eaaa721d2d": 3,
+      "09d9f47c5e021faf": 5,
+      "b9bec980ee3acc4a": 8,
+      "5c2fc0b7929fbd7e": 8,
+      "1dc34d956ddca456": 3,
+      "5f0ddd8b703bd3b9": 0
     },
-    "ai_pause_reason": "Gemini model gemini-3.5-flash-lite: Service HTTP 503; no paid fallback attempted",
-    "finished_at": "2026-11-22T23:09:19.266702+00:00",
-    "attempted": 3,
-    "completed": 1,
-    "gemini_request_attempts": 10
+    "pause_reason": "Per-run AI allowance reached; job saved for the next run",
+    "finished_at": "2026-11-24T07:31:55.788729+00:00",
+    "attempted": 7,
+    "completed": 0,
+    "gemini_request_attempts": 32
   },
   "telegram_deliveries": {
     "2d869bc60f3da658c9197b934c45dfddb3c797a7bc940732029e92f431cf90f2": {
