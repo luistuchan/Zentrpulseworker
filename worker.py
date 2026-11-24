@@ -1246,19 +1246,30 @@ def select_asset(scene, entry, folder, budget):
         return path, {'provider': 'local', **manifest}
     if scene['requires_exact_footage']:
         raise Hold('Exact footage required for ' + scene['id'] + '; provide scene-matched local footage')
-    youtube = select_youtube_visual(scene, entry, folder, budget)
-    if youtube:
-        return youtube
-    try:
-        return select_stock_video(scene, entry, folder, budget)
-    except Wait:
-        raise
-    except Hold:
-        if entry.get('content_type') == 'news_update':
-            photo = select_news_photo(scene, entry, folder, budget)
-            if photo:
-                return photo
-        raise
+    import public_media
+    # Try ordinary stock first; independent public sources and YouTube are
+    # fallbacks. A provider outage must not prevent another provider working.
+    errors = []
+    for provider in (select_stock_video,
+                     lambda s, e, f, b: public_media.select(s, e, f, b, __import__(__name__)),
+                     select_youtube_visual):
+        try:
+            asset = provider(scene, entry, folder, budget)
+            if asset:
+                return asset
+        except Wait as exc:
+            reason = str(exc).lower()
+            if any(x in reason for x in ('ai allowance', 'ai request', 'gemini', 'stock footage review', 'candidate reached')):
+                raise
+            errors.append(exc)
+        except Hold as exc:
+            errors.append(exc)
+    if entry.get('content_type') == 'news_update':
+        photo = select_news_photo(scene, entry, folder, budget)
+        if photo:
+            return photo
+    raise Hold('All available video providers exhausted for ' + scene['id'] +
+               (': ' + str(errors[-1]) if errors else ''))
 
 
 def select_stock_video(scene, entry, folder, budget):
@@ -1451,6 +1462,8 @@ def render(plan, entry, folder, budget, target):
             entry['_used_stock'].extend(x['id'] for x in prior['asset'].get('additional_photos', []))
             if prior['asset'].get('provider') in ('Pexels', 'YouTube'):
                 entry.setdefault('_used_stock', []).append(prior['asset']['id'])
+            elif str(prior['asset'].get('id', '')).startswith('public:'):
+                entry['_used_stock'].append(prior['asset']['id'])
             elif prior['asset'].get('provider') == 'Pixabay photo':
                 entry['_used_stock'].append(prior['asset']['id'])
             elif prior['asset'].get('provider') == 'Pixabay':
