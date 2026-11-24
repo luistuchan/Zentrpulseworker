@@ -3,7 +3,10 @@ on:
   push:
     paths:
       - '.github/workflows/render-check.yml'
-      - 'worker.py'
+      - '**.py'
+      - 'requirements.txt'
+      - 'queue.json'
+      - '.github/workflows/pulse.yml'
       - 'tests/**'
   workflow_dispatch:
 permissions:
@@ -33,3 +36,33 @@ jobs:
           name: synthetic-renderer-diagnostic
           path: renderer-diagnostic/
           if-no-files-found: error
+      - name: Notify Telegram of verification result
+        if: always()
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID || vars.TELEGRAM_CHAT_ID }}
+          CHECK_RESULT: ${{ job.status }}
+          RUN_LINK: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+          CHECK_SHA: ${{ github.sha }}
+        run: |
+          python - <<'PY'
+          import json, os, urllib.request
+          token = os.getenv('TELEGRAM_BOT_TOKEN')
+          chat = os.getenv('TELEGRAM_CHAT_ID')
+          if not token or not chat:
+              raise SystemExit('Telegram verification notification credentials missing')
+          result = os.environ['CHECK_RESULT']
+          message = ('ZENTR Pulse verification: ' + result.upper() +
+                     '\nCommit: ' + os.environ['CHECK_SHA'][:8] +
+                     '\n' + ('Worker and synthetic MP4 tests passed. Real footage still requires production verification.' if result == 'success' else 'Do not start production. Inspect failing tests.') +
+                     '\n' + os.environ['RUN_LINK'])
+          try:
+              request = urllib.request.Request('https://api.telegram.org/bot' + token + '/sendMessage',
+                  data=json.dumps({'chat_id': chat, 'text': message}).encode(),
+                  headers={'Content-Type': 'application/json'})
+              with urllib.request.urlopen(request, timeout=15) as response:
+                  if not json.load(response).get('ok'):
+                      raise RuntimeError()
+          except Exception:
+              raise SystemExit('Telegram verification notification failed')
+          PY
