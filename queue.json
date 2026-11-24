@@ -10214,12 +10214,455 @@
       "status": "QUEUED",
       "created_at": "2026-11-24T09:40:51.436698+00:00",
       "attempts": 0
+    },
+    "12f79fa67101d7d8": {
+      "title": "Clip highlight: I SHOCKED This YouTuber in a Spelling Bee...",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "a5Of0bsUVn8",
+      "discovery_query": "funny streamer reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402667+00:00",
+      "views": 3774640,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=a5Of0bsUVn8",
+        "creator": "StormyXV",
+        "license": "creativeCommon"
+      },
+      "id": "12f79fa67101d7d8",
+      "status": "HOLD",
+      "created_at": "2026-11-24T10:07:12.906156+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T10:07:13.891539+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
+    },
+    "bf440c7236bcdf98": {
+      "title": "Clip highlight: LIVE Destiny Election Stream | Funniest Cope Moments",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "twRlRN-5Llk",
+      "discovery_query": "funny streamer reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402681+00:00",
+      "views": 1526148,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=twRlRN-5Llk",
+        "creator": "Mr WhyzGuy Thinks",
+        "license": "creativeCommon"
+      },
+      "id": "bf440c7236bcdf98",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:12.950858+00:00",
+      "attempts": 0
+    },
+    "820bb86b2c404a7a": {
+      "title": "Clip highlight: JayDaddy’s Brain Needs to Be STUDIED 😂",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "1o7rBgbRSgc",
+      "discovery_query": "funny streamer reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402684+00:00",
+      "views": 1398180,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=1o7rBgbRSgc",
+        "creator": "TrueGawd",
+        "license": "creativeCommon"
+      },
+      "id": "820bb86b2c404a7a",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:12.985667+00:00",
+      "attempts": 0
+    },
+    "00fdff16fa0b6347": {
+      "title": "Clip highlight: Killing Tarkov STREAMER SQUADS *With Reactions*",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "Q3B_iaFh2U4",
+      "discovery_query": "funny streamer reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402685+00:00",
+      "views": 455994,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=Q3B_iaFh2U4",
+        "creator": "kearq",
+        "license": "creativeCommon"
+      },
+      "id": "00fdff16fa0b6347",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:13.024637+00:00",
+      "attempts": 0
+    },
+    "bd62f1de32c72c82": {
+      "title": "Clip highlight: Killing Tarkov Streamers and Getting REPORTED *With Reactions*",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "yWh5aOn7yyE",
+      "discovery_query": "funny streamer reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402687+00:00",
+      "views": 315056,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=yWh5aOn7yyE",
+        "creator": "kearq",
+        "license": "creativeCommon"
+      },
+      "id": "bd62f1de32c72c82",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:13.073331+00:00",
+      "attempts": 0
+    },
+    "ce6d78f867e2e8d9": {
+      "title": "Clip highlight: Reacting to Cursed Dinosaur Ai Content",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "4Lj15PbiW7E",
+      "discovery_query": "funny streamer reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402688+00:00",
+      "views": 229674,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=4Lj15PbiW7E",
+        "creator": "TheGamingBeaver",
+        "license": "creativeCommon"
+      },
+      "id": "ce6d78f867e2e8d9",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:13.111129+00:00",
+      "attempts": 0
+    },
+    "35cde2fdc49f6262": {
+      "title": "Clip highlight: SSB PULLS UP ON RICE WHILE STREAMING !!! 😂😂😂",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "z1Q1UyToz5I",
+      "discovery_query": "funny streamer reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402690+00:00",
+      "views": 83603,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=z1Q1UyToz5I",
+        "creator": "LOU WOP",
+        "license": "creativeCommon"
+      },
+      "id": "35cde2fdc49f6262",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:13.146593+00:00",
+      "attempts": 0
+    },
+    "06b633a4e6c21117": {
+      "title": "Clip highlight: Abbas Sanu Software Update 😱 | Abbas Sanu Latest Pashto Video 2026",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "wTz09Kr0Pbs",
+      "discovery_query": "funny streamer reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402692+00:00",
+      "views": 122722,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=wTz09Kr0Pbs",
+        "creator": "Metal",
+        "license": "creativeCommon"
+      },
+      "id": "06b633a4e6c21117",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:13.196711+00:00",
+      "attempts": 0
+    },
+    "13767baadb18d3f8": {
+      "title": "Clip highlight: Kai Cenat Spawning out of Nowhere at Streamer university",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "wWVKF9KdNZw",
+      "discovery_query": "funny streamer reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402693+00:00",
+      "views": 66187,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=wWVKF9KdNZw",
+        "creator": "InternetCity LIVE!",
+        "license": "creativeCommon"
+      },
+      "id": "13767baadb18d3f8",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:13.244620+00:00",
+      "attempts": 0
+    },
+    "dd2475af00fa881d": {
+      "title": "Clip highlight: Streamer University HILARIOUS Moments (Compilation) | Reaction",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "KBiDuFaIO_8",
+      "discovery_query": "funny streamer reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402696+00:00",
+      "views": 55810,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=KBiDuFaIO_8",
+        "creator": "Dee Shanell",
+        "license": "creativeCommon"
+      },
+      "id": "dd2475af00fa881d",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:13.292289+00:00",
+      "attempts": 0
+    },
+    "2250fce32de7dc40": {
+      "title": "Clip highlight: Rakai Being The FUNNIEST Streamer for 10 mins straight | Reaction",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "ckdDFJNtRCg",
+      "discovery_query": "funny streamer reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402697+00:00",
+      "views": 50964,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=ckdDFJNtRCg",
+        "creator": "Dee Shanell",
+        "license": "creativeCommon"
+      },
+      "id": "2250fce32de7dc40",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:13.344109+00:00",
+      "attempts": 0
+    },
+    "f4b3b92688980b69": {
+      "title": "Clip highlight: Cuffem Being The FUNNIEST Streamer For 12 Minutes | Reaction",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "Dr-rwboCyb4",
+      "discovery_query": "funny streamer reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402699+00:00",
+      "views": 86644,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=Dr-rwboCyb4",
+        "creator": "Dee Shanell",
+        "license": "creativeCommon"
+      },
+      "id": "f4b3b92688980b69",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:13.393333+00:00",
+      "attempts": 0
+    },
+    "389435ade6c89a7b": {
+      "title": "Clip highlight: NFL Best \"Ankle Breaking\" Jukes (PART 3)",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "5gP5DfJuycw",
+      "discovery_query": "gaming funny moments",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402700+00:00",
+      "views": 2555560,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=5gP5DfJuycw",
+        "creator": "Ding Productions",
+        "license": "creativeCommon"
+      },
+      "id": "389435ade6c89a7b",
+      "status": "HOLD",
+      "created_at": "2026-11-24T10:07:13.427891+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-24T10:07:15.846459+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; try another authorized source"
+    },
+    "3574582629bb4e83": {
+      "title": "Clip highlight: GOD LEVEL CAMPERS VS STREAMERS | PART 2 | FUNNY MOMENTS | PUBG MOBILE | Ft. Alpha, Carry, Gareebo...",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "DvhLMqCZrE4",
+      "discovery_query": "gaming funny moments",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402702+00:00",
+      "views": 2514490,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=DvhLMqCZrE4",
+        "creator": "Gaming Titanium",
+        "license": "creativeCommon"
+      },
+      "id": "3574582629bb4e83",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:13.493461+00:00",
+      "attempts": 0
+    },
+    "8e01995bde2a8214": {
+      "title": "Clip highlight: When Taekook Can't Hide It Anymore",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "mmYjronTA_I",
+      "discovery_query": "gaming funny moments",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402703+00:00",
+      "views": 1935203,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=mmYjronTA_I",
+        "creator": "K-pop Angels fans",
+        "license": "creativeCommon"
+      },
+      "id": "8e01995bde2a8214",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:13.529000+00:00",
+      "attempts": 0
+    },
+    "69e25a79b52a1f89": {
+      "title": "Clip highlight: INTHECLUTCH REACTS TO IShowSpeed Funniest Moments EVER",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "snruNVXb134",
+      "discovery_query": "gaming funny moments",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402704+00:00",
+      "views": 1152366,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=snruNVXb134",
+        "creator": "InTheClutch Ent",
+        "license": "creativeCommon"
+      },
+      "id": "69e25a79b52a1f89",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:13.575500+00:00",
+      "attempts": 0
+    },
+    "77b5443a6621af40": {
+      "title": "Clip highlight: Every Animatronic + Ankle Breaking = INSANITY..",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "xcGYkaoytkU",
+      "discovery_query": "gaming funny moments",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402706+00:00",
+      "views": 1036435,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=xcGYkaoytkU",
+        "creator": "Silvrz",
+        "license": "creativeCommon"
+      },
+      "id": "77b5443a6621af40",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:13.613940+00:00",
+      "attempts": 0
+    },
+    "4ad5324e80d9bea7": {
+      "title": "Clip highlight: Kaztro Solo Squad Best Moments | 4 Finger Claw Kill Montage | Kaztro Gaming",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "8vYi3w9E0Cs",
+      "discovery_query": "gaming funny moments",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402707+00:00",
+      "views": 845214,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=8vYi3w9E0Cs",
+        "creator": "Kaztro GAMING",
+        "license": "creativeCommon"
+      },
+      "id": "4ad5324e80d9bea7",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:13.670788+00:00",
+      "attempts": 0
+    },
+    "9b832e63db3e95b4": {
+      "title": "Clip highlight: The Art of Raging in Valorant",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "_IW4TJoEdsE",
+      "discovery_query": "gaming funny moments",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402709+00:00",
+      "views": 787657,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=_IW4TJoEdsE",
+        "creator": "TbOne",
+        "license": "creativeCommon"
+      },
+      "id": "9b832e63db3e95b4",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:13.702438+00:00",
+      "attempts": 0
+    },
+    "1345524eef3c9cdd": {
+      "title": "Clip highlight: My Favorite Northernlion Balatro Moment (with context)",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "vQr7imeiUAg",
+      "discovery_query": "gaming funny moments",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402711+00:00",
+      "views": 725024,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=vQr7imeiUAg",
+        "creator": "Ivly",
+        "license": "creativeCommon"
+      },
+      "id": "1345524eef3c9cdd",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:13.747399+00:00",
+      "attempts": 0
+    },
+    "d3a7eb505c9e7915": {
+      "title": "Clip highlight: Betraying my Teammates with don Lorenzo in blue lock rivals",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "zRefopbdFnE",
+      "discovery_query": "gaming funny moments",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402712+00:00",
+      "views": 676021,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=zRefopbdFnE",
+        "creator": "AirforceYEAH",
+        "license": "creativeCommon"
+      },
+      "id": "d3a7eb505c9e7915",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:13.797411+00:00",
+      "attempts": 0
+    },
+    "51e689afd9645d40": {
+      "title": "Clip highlight: Funny FILL IN THE BLANK game",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "QKqw1kWTiT8",
+      "discovery_query": "gaming funny moments",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402713+00:00",
+      "views": 677170,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=QKqw1kWTiT8",
+        "creator": "Shahveer Jafry Second",
+        "license": "creativeCommon"
+      },
+      "id": "51e689afd9645d40",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:13.827760+00:00",
+      "attempts": 0
+    },
+    "8ce92899b886cda9": {
+      "title": "Clip highlight: Gaming Beaver Funny Montage #9",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "84hWAB65Yoc",
+      "discovery_query": "gaming funny moments",
+      "discovery_only": false,
+      "discovered_at": "2026-11-24T10:06:23.402715+00:00",
+      "views": 610189,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=84hWAB65Yoc",
+        "creator": "TheGamingBeaver",
+        "license": "creativeCommon"
+      },
+      "id": "8ce92899b886cda9",
+      "status": "QUEUED",
+      "created_at": "2026-11-24T10:07:13.859514+00:00",
+      "attempts": 0
     }
   },
   "budget": {
     "day": "2026-11-24",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 15,
+    "youtube": 18,
     "ai": 12,
     "pixabay": 8
   },
@@ -10227,36 +10670,25 @@
   "content_batch": null,
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-24T09:40:51.449514+00:00",
+    "started_at": "2026-11-24T10:07:13.868685+00:00",
     "attempted_ids": [
-      "90fafab88514864a",
-      "2d2bab3ae4fe33ec",
-      "176997dde36fbd50",
-      "1fd861d9d2e518e8",
-      "8a6288f104a8ad43",
-      "d48d92d977f13a50",
-      "e5ce75aa673f34a8",
-      "d367d971bc82fe4e",
-      "2d842fa500a780e9"
+      "12f79fa67101d7d8",
+      "389435ade6c89a7b"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "ai_requests_by_candidate": {
-      "90fafab88514864a": 0,
-      "2d2bab3ae4fe33ec": 0,
-      "176997dde36fbd50": 0,
-      "1fd861d9d2e518e8": 0,
-      "8a6288f104a8ad43": 0,
-      "d48d92d977f13a50": 0,
-      "e5ce75aa673f34a8": 0,
-      "d367d971bc82fe4e": 0,
-      "2d842fa500a780e9": 0
+      "12f79fa67101d7d8": 0,
+      "389435ade6c89a7b": 0
+    },
+    "clip_download_failures": {
+      "www.youtube.com": 2
     },
     "categories_deferred": [
       "clipper"
     ],
-    "finished_at": "2026-11-24T09:41:11.084904+00:00",
-    "attempted": 9,
+    "finished_at": "2026-11-24T10:07:18.183977+00:00",
+    "attempted": 2,
     "completed": 0,
     "gemini_request_attempts": 0
   },
