@@ -5,6 +5,7 @@ from urllib.parse import parse_qs, urlsplit
 import unittest
 
 import clipper
+import public_media
 
 
 class Budget:
@@ -56,6 +57,13 @@ class API:
 
 
 class ViralDiscoveryTests(unittest.TestCase):
+    def setUp(self):
+        # These tests exercise YouTube discovery only; public adapters have their own fixtures.
+        for name in ('discover', 'publisher_leads'):
+            mock = patch.object(public_media, name, return_value=[])
+            mock.start()
+            self.addCleanup(mock.stop)
+
     def test_discovers_regular_creator_videos_with_broad_search(self):
         api = API()
         with patch.dict(os.environ, {'YOUTUBE_API_KEY': 'test-api-key'}):
