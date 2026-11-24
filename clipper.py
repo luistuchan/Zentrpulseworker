@@ -121,6 +121,18 @@ def discover(budget, *, api, topics=(), warnings=None):
                                     'rights_confirmed': True, 'rights_note': 'Wikimedia Commons license metadata'}})
     if not seen:
         warnings.append('Wikimedia Commons returned no eligible video files for the selected topics')
+    # Additional public video libraries; no new paid key or AI calls.
+    import public_media
+    for query in queries[:2]:
+        for media in list(public_media.discover(query, api))[:6]:
+            if media['source_url'] in seen:
+                continue
+            seen.add(media['source_url'])
+            leads.append({'title': media['provider'] + ' clip: ' + media['title'],
+                          'category': 'clipper', 'content_type': 'clipper',
+                          'discovery_query': query, 'discovered_at': api.now(),
+                          'media': {**media, 'rights_confirmed': True,
+                                    'rights_note': 'Public provider item-level rights metadata; verify before posting'}})
     return leads
 
 
@@ -144,7 +156,13 @@ def source_media(entry, folder, api):
     if (cached.get('source_url') == url and path.is_file()
             and cached.get('sha256') == api.digest(path)):
         return path, cached
-    if p.hostname in ('www.youtube.com', 'youtube.com', 'youtu.be'):
+    social_hosts = ('instagram.com', 'www.instagram.com', 'tiktok.com', 'www.tiktok.com',
+                    'x.com', 'www.x.com', 'twitter.com', 'www.twitter.com',
+                    'facebook.com', 'www.facebook.com', 'fb.watch')
+    if p.hostname in ('www.youtube.com', 'youtube.com', 'youtu.be') or p.hostname in social_hosts:
+        if p.hostname in social_hosts and (cc or media.get('rights_confirmed') is not True):
+            raise api.Hold('Social clip requires explicit reuse authorization')
+
         # Do not trust stale partial files from a previous failed download.
         for stale in folder.glob('source.*'):
             if stale.suffix in ('.mp4', '.webm', '.mkv', '.part', '.ytdl', '.json') and stale.is_file():
