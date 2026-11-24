@@ -274,7 +274,11 @@ def choose_highlight(words, target, api):
             content = set(re.findall(r'[a-z]{4,}', text.lower()))
             hook = sum(term in text.lower() for term in ('because', 'actually', 'but ', 'why ', 'never', 'first', 'what happened'))
             # A transparent heuristic, not a claim that the clip will go viral.
-            score = len(content) / max(1, len(selected)) + hook * .15 - abs(seconds - target) / target
+            opening = ' '.join(w['word'] for w in selected if w['start'] < start + 3).lower()
+            opening_hook = sum(term in opening for term in ('why', 'how', 'what', 'never', 'but', 'actually', '?', '!'))
+            pauses = sum(max(0, b['start'] - a['end'] - .35) for a, b in zip(selected, selected[1:]))
+            filler = sum(w['word'].lower().strip('.,!?') in ('um', 'uh', 'erm') for w in selected)
+            score = len(content) / max(1, len(selected)) + hook * .12 + opening_hook * .35 - abs(seconds - target) / target - pauses / max(seconds, 1) - filler * .08
             candidates.append((score, start, end, list(selected)))
     if not candidates:
         # Keep a short exchange when no complete passage fits the preferred duration.
@@ -429,7 +433,7 @@ def render(source, words, start, end, shots, folder, output, api):
         else:
             graph = ('[0:v]setpts=PTS-STARTPTS,split=2[bg][fg];'
                 '[bg]scale=1080:1920:force_original_aspect_ratio=increase,crop=1080:1920,boxblur=25:5[b];'
-                '[fg]scale=1080:1248:force_original_aspect_ratio=decrease[f];'
+                '[fg]scale=1080:1536:force_original_aspect_ratio=increase,crop=1080:1536[f];'
                 '[b][f]overlay=(W-w)/2:(H-h)/2,setsar=1[v]')
         graph += f';[v]fps=30,subtitles={subs.as_posix()},format=yuv420p[out]'
         api.run(['ffmpeg','-v','error','-y','-ss',f'{lo:.3f}','-i',str(source),'-t',f'{hi-lo:.3f}',
