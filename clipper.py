@@ -86,46 +86,11 @@ def discover(budget, *, api, topics=(), warnings=None):
         warnings.append('YouTube returned no verified reusable video leads for the selected topics')
 
     seen = set()
-    for query in queries[-1:]:
-        params = urllib.parse.urlencode({
-            'action': 'query', 'generator': 'search', 'gsrsearch': 'filetype:video ' + query,
-            'gsrnamespace': 6, 'gsrlimit': 6, 'prop': 'imageinfo', 'iilimit': 1,
-            'iiprop': 'url|mime|size|extmetadata',
-            'iiextmetadatafilter': 'LicenseShortName|LicenseUrl|Artist',
-            'format': 'json', 'formatversion': 2,
-        })
-        try:
-            result = api.json_http('https://commons.wikimedia.org/w/api.php?' + params, retries=0)
-        except (api.Hold, api.Wait):
-            warnings.append('Wikimedia Commons search unavailable for: ' + query)
-            continue
-        for page in result.get('query', {}).get('pages', []):
-            info = next(iter(page.get('imageinfo', [])), {})
-            metadata = info.get('extmetadata', {})
-            license_name = metadata.get('LicenseShortName', {}).get('value', '')
-            url = info.get('url', '')
-            if (url in seen or urllib.parse.urlsplit(url).hostname != 'upload.wikimedia.org'
-                    or not info.get('mime', '').startswith('video/')
-                    or not 0 < info.get('size', 0) <= 250_000_000
-                    or not re.fullmatch(r'CC BY [1-4]\.0|CC0|Public domain', license_name, re.I)):
-                continue
-            seen.add(url)
-            artist = metadata.get('Artist', {}).get('value', '')
-            leads.append({'title': 'Commons clip: ' + page['title'].removeprefix('File:'),
-                          'category': 'clipper', 'content_type': 'clipper',
-                          'discovery_query': query, 'discovered_at': api.now(),
-                          'media': {'source_url': url, 'attribution_url': info.get('descriptionurl', ''),
-                                    'creator': html.unescape(re.sub(r'<[^>]*>', '', artist)),
-                                    'license': license_name,
-                                    'license_url': metadata.get('LicenseUrl', {}).get('value', ''),
-                                    'rights_confirmed': True, 'rights_note': 'Wikimedia Commons license metadata'}})
-    if not seen:
-        warnings.append('Wikimedia Commons returned no eligible video files for the selected topics')
     # Additional public video libraries; no new paid key or AI calls.
     import public_media
     for query in queries[:2]:
         for media in list(public_media.discover(query, api))[:6]:
-            if media['source_url'] in seen:
+            if media['source_url'] in seen or is_wikimedia(media['source_url']):
                 continue
             seen.add(media['source_url'])
             leads.append({'title': media['provider'] + ' clip: ' + media['title'],
@@ -135,6 +100,12 @@ def discover(budget, *, api, topics=(), warnings=None):
                                     'rights_note': 'Public provider item-level rights metadata; verify before posting'}})
     leads.extend(public_media.publisher_leads(topics, api))
     return leads
+
+
+def is_wikimedia(url):
+    host = urllib.parse.urlsplit(url or '').hostname or ''
+    return any(host == domain or host.endswith('.' + domain)
+               for domain in ('wikimedia.org', 'wikipedia.org'))
 
 
 def source_media(entry, folder, api):
@@ -150,6 +121,8 @@ def source_media(entry, folder, api):
             raise api.Hold('Clipper local source changed or SHA256 confirmation missing')
         return path, {'provider': 'local', 'rights_note': media['rights_note']}
     url = media.get('source_url', '')
+    if is_wikimedia(url):
+        raise api.Hold('Wikimedia sources disabled for ZENTR Pulse')
     api.public_url(url)
     p = urllib.parse.urlsplit(url)
     cached = api.load(folder / 'source.json', {})
