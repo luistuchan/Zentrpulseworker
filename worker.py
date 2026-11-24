@@ -2036,6 +2036,19 @@ def produce_supplied_gameplay(state, budget, title, url):
     return []
 
 
+def enforce_pulse_format(state):
+    """Keep prior drafts for audit but never auto-produce narrated stories."""
+    for job in state['jobs'].values():
+        if job.get('content_type') != 'clipper' and job.get('status') in ('QUEUED','WAITING','PRODUCING'):
+            job.update(status='HOLD', blocker='Pulse format: original-audio highlights only; narrated stories disabled')
+    batch = state.get('content_batch')
+    if batch and batch.get('category') != 'clipper':
+        state['content_batch'] = None
+    state['deferred_content_batches'] = {
+        k:v for k,v in state.get('deferred_content_batches',{}).items() if k == 'clipper'}
+    state['content_cycle_index'] = CONTENT_CYCLE.index('clipper')
+
+
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--discover', action='store_true')
@@ -2110,7 +2123,7 @@ def main():
             # Viral discovery is unrestricted, but unlicensed leads are research only.
             # They remain in output/research/leads.json for rights review and must not
             # consume production attempts or Gemini quota.
-            queue += [lead for lead in leads if not lead.get('discovery_only')]
+            queue += [lead for lead in leads if lead.get('content_type') == 'clipper' and not lead.get('discovery_only')]
         for item in queue:
             if not isinstance(item, dict) or not isinstance(item.get('title'), str):
                 warnings.append('Skipped malformed queue entry')
@@ -2160,6 +2173,8 @@ def main():
                 retry.update(status='QUEUED', attempts=0)
                 retry.pop('blocker', None)
                 shutil.rmtree(WORK / args.retry, ignore_errors=True)
+        enforce_pulse_format(state)
+        atomic_json(STATE / 'queue.json', state)
         target = int(os.getenv('TARGET_SECONDS', '30'))
         if not 20 <= target <= 70:
             raise Hold('TARGET_SECONDS must be between 20 and 70')
