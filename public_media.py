@@ -148,9 +148,32 @@ def gov_library(query, api):
                     break
 
 
+def pixabay_video(query, api):
+    """Optional free video API; candidates still require original audio and review."""
+    import os
+    key = os.getenv('PIXABAY_API_KEY', '').strip()
+    if not key:
+        return
+    params = u.urlencode({'key': key, 'q': query, 'per_page': 10, 'safesearch': 'true'})
+    data = api.json_http('https://pixabay.com/api/videos/?'+params, retries=0)
+    for item in data.get('hits', []):
+        if not relevant(query, str(item.get('tags', ''))):
+            continue
+        video = item.get('videos', {}).get('medium', {})
+        url = video.get('url', '')
+        host = u.urlsplit(url).hostname or ''
+        if not (u.urlsplit(url).scheme == 'https' and (host == 'pixabay.com' or host.endswith('.pixabay.com'))):
+            continue
+        if not 0 < video.get('size', 0) <= 60_000_000:
+            continue
+        yield {'provider': 'Pixabay', 'source_url': url, 'title': item.get('tags', query),
+               'attribution_url': item.get('pageURL', ''), 'creator': item.get('user', ''),
+               'license': 'Pixabay Content License', 'license_url': 'https://pixabay.com/service/license-summary/'}
+
+
 def discover(query, api):
     # Cache successful searches and empty results to avoid repeated free requests.
-    for provider in (archive, nasa, gov_library):
+    for provider in (pixabay_video, archive, nasa, gov_library):
         cache = api.WORK / 'public-media-v2' / (hashlib.sha256((provider.__name__+'|'+query).encode()).hexdigest()+'.json')
         old = api.load(cache,{})
         if old and time.time()-old.get('time',0)<86400:
