@@ -8729,9 +8729,12 @@
         "license": "creativeCommon"
       },
       "id": "d200b1d9f859c8eb",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:52.416679+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-25T03:54:22.452263+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
     },
     "123d702afc66deea": {
       "title": "Clip highlight: Glyphosate kills. Let’s ban it.",
@@ -8747,9 +8750,12 @@
         "license": "creativeCommon"
       },
       "id": "123d702afc66deea",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:52.453836+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-25T03:54:23.577909+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
     },
     "995a30ea58b04ec7": {
       "title": "Clip highlight: Top 10 Best Motown Girl Groups of All Time",
@@ -8765,9 +8771,12 @@
         "license": "creativeCommon"
       },
       "id": "995a30ea58b04ec7",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:52.500771+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-25T03:54:24.737803+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
     },
     "3bfd20eb7ddcccbd": {
       "title": "Clip highlight: 10 Motown Songs That Changed Music Forever (You Won't Believe #3)",
@@ -8783,9 +8792,12 @@
         "license": "creativeCommon"
       },
       "id": "3bfd20eb7ddcccbd",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-21T20:43:52.608505+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-25T03:54:25.805277+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
     },
     "75fb1644d1f4d1b5": {
       "title": "'Danger seems greater all the time': Ukrainians search for missing after Russian strikes",
@@ -9890,9 +9902,12 @@
         "license": "creativeCommon"
       },
       "id": "d77d808fe2f82a63",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T07:24:30.809590+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-25T03:54:20.074285+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
     },
     "84c94237ad4d7ff3": {
       "title": "Watch: Moment troops raid home and capture Mexican drug lord",
@@ -10211,9 +10226,12 @@
         "license": "creativeCommon"
       },
       "id": "6a6282980e41899e",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T09:40:51.436698+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-25T03:54:21.153127+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
     },
     "12f79fa67101d7d8": {
       "title": "Clip highlight: I SHOCKED This YouTuber in a Spelling Bee...",
@@ -10406,9 +10424,12 @@
         "license": "creativeCommon"
       },
       "id": "13767baadb18d3f8",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:13.244620+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-25T03:54:16.652236+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
     },
     "dd2475af00fa881d": {
       "title": "Clip highlight: Streamer University HILARIOUS Moments (Compilation) | Reaction",
@@ -10425,9 +10446,12 @@
         "license": "creativeCommon"
       },
       "id": "dd2475af00fa881d",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:13.292289+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-25T03:54:17.905816+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
     },
     "2250fce32de7dc40": {
       "title": "Clip highlight: Rakai Being The FUNNIEST Streamer for 10 mins straight | Reaction",
@@ -10444,9 +10468,12 @@
         "license": "creativeCommon"
       },
       "id": "2250fce32de7dc40",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:13.344109+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-25T03:54:19.014123+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
     },
     "f4b3b92688980b69": {
       "title": "Clip highlight: Cuffem Being The FUNNIEST Streamer For 12 Minutes | Reaction",
@@ -10724,30 +10751,30 @@
   "content_batch": null,
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-25T02:39:34.697751+00:00",
+    "started_at": "2026-11-25T03:54:16.607792+00:00",
     "attempted_ids": [
-      "51e689afd9645d40",
-      "d3a7eb505c9e7915",
-      "8ce92899b886cda9",
-      "00fdff16fa0b6347",
-      "bd62f1de32c72c82",
-      "ce6d78f867e2e8d9",
-      "06b633a4e6c21117",
-      "f4b3b92688980b69",
-      "35cde2fdc49f6262"
+      "13767baadb18d3f8",
+      "dd2475af00fa881d",
+      "2250fce32de7dc40",
+      "d77d808fe2f82a63",
+      "6a6282980e41899e",
+      "d200b1d9f859c8eb",
+      "123d702afc66deea",
+      "995a30ea58b04ec7",
+      "3bfd20eb7ddcccbd"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "ai_requests_by_candidate": {
-      "51e689afd9645d40": 0,
-      "d3a7eb505c9e7915": 0,
-      "8ce92899b886cda9": 0,
-      "00fdff16fa0b6347": 0,
-      "bd62f1de32c72c82": 0,
-      "ce6d78f867e2e8d9": 0,
-      "06b633a4e6c21117": 0,
-      "f4b3b92688980b69": 0,
-      "35cde2fdc49f6262": 0
+      "13767baadb18d3f8": 0,
+      "dd2475af00fa881d": 0,
+      "2250fce32de7dc40": 0,
+      "d77d808fe2f82a63": 0,
+      "6a6282980e41899e": 0,
+      "d200b1d9f859c8eb": 0,
+      "123d702afc66deea": 0,
+      "995a30ea58b04ec7": 0,
+      "3bfd20eb7ddcccbd": 0
     },
     "clip_download_failures": {
       "www.youtube.com": 9
@@ -10755,7 +10782,7 @@
     "categories_deferred": [
       "clipper"
     ],
-    "finished_at": "2026-11-25T02:39:44.671994+00:00",
+    "finished_at": "2026-11-25T03:54:26.942302+00:00",
     "attempted": 9,
     "completed": 0,
     "gemini_request_attempts": 0
