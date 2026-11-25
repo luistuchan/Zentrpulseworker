@@ -10296,9 +10296,12 @@
         "license": "creativeCommon"
       },
       "id": "00fdff16fa0b6347",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:13.024637+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-25T02:39:37.972996+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
     },
     "bd62f1de32c72c82": {
       "title": "Clip highlight: Killing Tarkov Streamers and Getting REPORTED *With Reactions*",
@@ -10315,9 +10318,12 @@
         "license": "creativeCommon"
       },
       "id": "bd62f1de32c72c82",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:13.073331+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-25T02:39:39.123166+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
     },
     "ce6d78f867e2e8d9": {
       "title": "Clip highlight: Reacting to Cursed Dinosaur Ai Content",
@@ -10334,9 +10340,12 @@
         "license": "creativeCommon"
       },
       "id": "ce6d78f867e2e8d9",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:13.111129+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-25T02:39:40.164437+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
     },
     "35cde2fdc49f6262": {
       "title": "Clip highlight: SSB PULLS UP ON RICE WHILE STREAMING !!! 😂😂😂",
@@ -10353,9 +10362,12 @@
         "license": "creativeCommon"
       },
       "id": "35cde2fdc49f6262",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:13.146593+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-25T02:39:43.741629+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
     },
     "06b633a4e6c21117": {
       "title": "Clip highlight: Abbas Sanu Software Update 😱 | Abbas Sanu Latest Pashto Video 2026",
@@ -10372,9 +10384,12 @@
         "license": "creativeCommon"
       },
       "id": "06b633a4e6c21117",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:13.196711+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-25T02:39:41.439028+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
     },
     "13767baadb18d3f8": {
       "title": "Clip highlight: Kai Cenat Spawning out of Nowhere at Streamer university",
@@ -10448,9 +10463,12 @@
         "license": "creativeCommon"
       },
       "id": "f4b3b92688980b69",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:13.393333+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-25T02:39:42.518822+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
     },
     "389435ade6c89a7b": {
       "title": "Clip highlight: NFL Best \"Ankle Breaking\" Jukes (PART 3)",
@@ -10643,9 +10661,12 @@
         "license": "creativeCommon"
       },
       "id": "d3a7eb505c9e7915",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:13.797411+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-25T02:39:35.899363+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
     },
     "51e689afd9645d40": {
       "title": "Clip highlight: Funny FILL IN THE BLANK game",
@@ -10662,9 +10683,12 @@
         "license": "creativeCommon"
       },
       "id": "51e689afd9645d40",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:13.827760+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-25T02:39:34.724630+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
     },
     "8ce92899b886cda9": {
       "title": "Clip highlight: Gaming Beaver Funny Montage #9",
@@ -10681,9 +10705,12 @@
         "license": "creativeCommon"
       },
       "id": "8ce92899b886cda9",
-      "status": "QUEUED",
+      "status": "HOLD",
       "created_at": "2026-11-24T10:07:13.859514+00:00",
-      "attempts": 0
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-25T02:39:36.865311+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
     }
   },
   "budget": {
@@ -10697,30 +10724,30 @@
   "content_batch": null,
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-24T16:02:47.548110+00:00",
+    "started_at": "2026-11-25T02:39:34.697751+00:00",
     "attempted_ids": [
-      "3574582629bb4e83",
-      "8e01995bde2a8214",
-      "bf440c7236bcdf98",
-      "820bb86b2c404a7a",
-      "69e25a79b52a1f89",
-      "77b5443a6621af40",
-      "4ad5324e80d9bea7",
-      "9b832e63db3e95b4",
-      "1345524eef3c9cdd"
+      "51e689afd9645d40",
+      "d3a7eb505c9e7915",
+      "8ce92899b886cda9",
+      "00fdff16fa0b6347",
+      "bd62f1de32c72c82",
+      "ce6d78f867e2e8d9",
+      "06b633a4e6c21117",
+      "f4b3b92688980b69",
+      "35cde2fdc49f6262"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "ai_requests_by_candidate": {
-      "3574582629bb4e83": 0,
-      "8e01995bde2a8214": 0,
-      "bf440c7236bcdf98": 0,
-      "820bb86b2c404a7a": 0,
-      "69e25a79b52a1f89": 0,
-      "77b5443a6621af40": 0,
-      "4ad5324e80d9bea7": 0,
-      "9b832e63db3e95b4": 0,
-      "1345524eef3c9cdd": 0
+      "51e689afd9645d40": 0,
+      "d3a7eb505c9e7915": 0,
+      "8ce92899b886cda9": 0,
+      "00fdff16fa0b6347": 0,
+      "bd62f1de32c72c82": 0,
+      "ce6d78f867e2e8d9": 0,
+      "06b633a4e6c21117": 0,
+      "f4b3b92688980b69": 0,
+      "35cde2fdc49f6262": 0
     },
     "clip_download_failures": {
       "www.youtube.com": 9
@@ -10728,7 +10755,7 @@
     "categories_deferred": [
       "clipper"
     ],
-    "finished_at": "2026-11-24T16:03:07.240273+00:00",
+    "finished_at": "2026-11-25T02:39:44.671994+00:00",
     "attempted": 9,
     "completed": 0,
     "gemini_request_attempts": 0
