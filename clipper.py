@@ -11,6 +11,7 @@ import os
 from pathlib import Path
 import re
 import sys
+import subprocess
 import urllib.parse
 
 
@@ -139,19 +140,36 @@ def source_media(entry, folder, api):
             'bv*[height<=720]+ba/b[height<=720]/b',
         )
         download_ok = False
+        failure_kind = 'unknown download error'
+        # Keep diagnostic categories only, never raw extractor output or URLs.
         for fmt in formats:
             try:
-                api.run([sys.executable, '-m', 'yt_dlp', '--ignore-config', '--no-playlist',
+                subprocess.run([sys.executable, '-m', 'yt_dlp', '--ignore-config', '--no-playlist',
                      '--max-filesize', '250M', '--match-filter', 'duration <= 1200 & !is_live',
                      '--format', fmt, '--merge-output-format', 'mp4',
                      '--output', str(folder / 'source.%(ext)s'), '--write-info-json',
-                     '--no-warnings', '--quiet', '--no-progress', '--', url], timeout=360)
+                     '--no-warnings', '--quiet', '--no-progress', '--', url], timeout=360, check=True, capture_output=True)
                 download_ok = True
                 break
-            except api.Hold:
-                continue
+            except subprocess.TimeoutExpired:
+                failure_kind = 'download timeout'
+            except OSError:
+                failure_kind = 'downloader could not start'
+            except subprocess.CalledProcessError as exc:
+                detail = (exc.stderr or b'').decode('utf-8', errors='replace').lower()
+                if '429' in detail or 'too many requests' in detail:
+                    raise api.Wait('Clipper HTTP 429: source host rate limited') from None
+                if any(x in detail for x in ('sign in', 'login', 'bot', 'captcha', '403', 'forbidden', 'private video', 'age-restricted')):
+                    failure_kind = 'source requires access or refuses requests'
+                    break
+                if 'format' in detail:
+                    failure_kind = 'no compatible format'
+                elif 'unavailable' in detail:
+                    failure_kind = 'video unavailable'
+                elif 'javascript' in detail or 'challenge' in detail:
+                    failure_kind = 'extractor runtime or challenge failure'
         if not download_ok:
-            raise api.Hold('Clipper source unavailable in both combined and split formats; try another authorized source') from None
+            raise api.Hold('Clipper source unavailable in both combined and split formats; ' + failure_kind + '; try another authorized source') from None
         info = api.load(folder / 'source.info.json', {})
         if not info:
             raise api.Hold('Clipper source unavailable or exceeds 20-minute download limit')
