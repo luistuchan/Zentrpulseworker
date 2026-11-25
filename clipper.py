@@ -28,7 +28,7 @@ def discover(budget, *, api, topics=(), warnings=None):
     candidates = {}
     key = os.getenv('YOUTUBE_API_KEY', '').strip()
     cap = int(os.getenv('MAX_YOUTUBE_SEARCHES', '18'))
-    searches = [(query, True) for query in queries] + [(queries[0], False)]
+    searches = [(query, reusable) for query in queries for reusable in (True, False)]
     for query, reusable_only in searches:
         if not key or budget.counts.get('youtube', 0) + 2 > cap or not budget.take('youtube'):
             break
@@ -479,6 +479,8 @@ def process(entry, target, *, api, feedback=()):
         raise api.Hold('Clipper source exceeds the 20-minute CPU/transcription limit')
     words, method = transcript(entry, source, folder, seconds, source_hash, api)
     start, end, chosen = choose_highlight(words, target, api, feedback)
+    if end - start < min(target * .75, seconds):
+        raise api.Hold('Highlight too short for production target; try another source')
     points = track_faces(source, start, end, api)
     shots = shot_plan(chosen, start, end, points)
     output = api.OUTPUT / entry['id'] / 'video.mp4'
