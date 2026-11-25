@@ -261,7 +261,10 @@ def sentences(words):
     return groups
 
 
-def choose_highlight(words, target, api):
+def choose_highlight(words, target, api, feedback=()):
+    feedback = ' '.join(feedback).lower()
+    hook_weight = .9 if 'weak' in feedback or 'strongest' in feedback else .35
+    pace_weight = 2.5 if 'quickly' in feedback or 'boring' in feedback else 1.0
     groups = sentences(words)
     candidates = []
     for i, group in enumerate(groups):
@@ -282,7 +285,10 @@ def choose_highlight(words, target, api):
             opening_hook = sum(term in opening for term in ('why', 'how', 'what', 'never', 'but', 'actually', '?', '!'))
             pauses = sum(max(0, b['start'] - a['end'] - .35) for a, b in zip(selected, selected[1:]))
             filler = sum(w['word'].lower().strip('.,!?') in ('um', 'uh', 'erm') for w in selected)
-            score = len(content) / max(1, len(selected)) + hook * .12 + opening_hook * .35 - abs(seconds - target) / target - pauses / max(seconds, 1) - filler * .08
+            score = len(content) / max(1, len(selected)) + hook * .12 + opening_hook * hook_weight - abs(seconds - target) / target - pace_weight * pauses / max(seconds, 1) - filler * .08 * pace_weight
+            if 'boring' in feedback:
+                score += .30 * bool(re.search(r'\b(laugh|laughing|wow|unbelievable|unexpected|wait|seriously|crazy|no way)\b', text.lower()))
+                score -= .40 * bool(re.search(r'\b(welcome back|subscribe|sponsor|today we are going to|thanks for watching)\b', opening))
             candidates.append((score, start, end, list(selected)))
     if not candidates:
         # Keep a short exchange when no complete passage fits the preferred duration.
@@ -456,7 +462,7 @@ def render(source, words, start, end, shots, folder, output, api):
     return quality
 
 
-def process(entry, target, *, api):
+def process(entry, target, *, api, feedback=()):
     folder = api.WORK / entry['id']
     folder.mkdir(parents=True, exist_ok=True)
     source, metadata = source_media(entry, folder, api)
@@ -472,7 +478,7 @@ def process(entry, target, *, api):
     if seconds > 1200:
         raise api.Hold('Clipper source exceeds the 20-minute CPU/transcription limit')
     words, method = transcript(entry, source, folder, seconds, source_hash, api)
-    start, end, chosen = choose_highlight(words, target, api)
+    start, end, chosen = choose_highlight(words, target, api, feedback)
     points = track_faces(source, start, end, api)
     shots = shot_plan(chosen, start, end, points)
     output = api.OUTPUT / entry['id'] / 'video.mp4'
@@ -494,6 +500,7 @@ def process(entry, target, *, api):
         'source_media_sha256': source_hash, 'source_range': {'start': start, 'end': end},
         'attribution': attribution, 'transcript_method': method, 'transcript_words': chosen,
         'shots': shots, 'quality': quality, 'selection': 'sentence-bounded highlight heuristic; no virality claim',
+        'applied_review_guidance': list(feedback),
         'publishing': 'disabled; no upload endpoint is called'}
     api.atomic_json(output.parent / 'review.json', review)
     # Credit the actual originating channel without fabricating a social handle.
