@@ -1914,6 +1914,9 @@ def produce_batch(state, budget, target):
                     break
                 if job_category(job) != batch['category'] or job['status'] not in ('QUEUED', 'PRODUCING', 'WAITING'):
                     continue
+                if job.get('attempts', 0) >= 5:
+                    job.update(status='HOLD', blocker='Candidate retry limit reached; deliberate retry required')
+                    continue
                 if ai_unavailable and job.get('content_type') != 'clipper':
                     continue
                 blocker = str(job.get('blocker', '')).lower()
@@ -1995,8 +1998,8 @@ def produce_batch(state, budget, target):
                         state['last_run']['clip_download_failures'] = dict(clip_download_failures)
                     stop = (str(exc).startswith(('Gemini model ', 'GEMINI_API_KEY missing',
                                                  'Confirm the API project is free-tier')))
-                except Exception:
-                    job.update(status='FAILED', blocker='Unexpected worker error; inspect inputs and run tests. Secrets omitted.')
+                except Exception as exc:
+                    job.update(status='FAILED', blocker='Unexpected worker error (' + type(exc).__name__ + '); inspect inputs and run tests. Secrets omitted.')
                 finally:
                     state['last_run']['ai_requests_by_candidate'][job['id']] = (
                         budget.run_counts['ai'] - budget.candidate_ai_start)
