@@ -1661,7 +1661,8 @@ def process(entry, budget, target):
     content_type = entry.get('content_type', 'explainer')
     if content_type == 'clipper':
         import clipper
-        clipper.process(entry, target, api=__import__(__name__))
+        clipper.process(entry, target, api=__import__(__name__),
+                        feedback=review_guidance(entry, budget.state))
         return
     if content_type not in ('explainer', 'info', 'clip_commentary', 'news_update'):
         raise Hold('Unsupported content type')
