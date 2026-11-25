@@ -81,7 +81,12 @@ def discover(budget, *, api, topics=(), warnings=None):
     # Additional public video libraries; no new paid key or AI calls.
     import public_media
     for query in queries[:4]:
-        for media in list(public_media.discover(query, api))[:6]:
+        try:
+            discovered = list(public_media.discover(query, api))[:6]
+        except (api.Hold, api.Wait) as exc:
+            warnings.append('Public media discovery failed for ' + query + ': ' + type(exc).__name__)
+            continue
+        for media in discovered:
             if media['source_url'] in seen or is_wikimedia(media['source_url']):
                 continue
             seen.add(media['source_url'])
@@ -90,7 +95,10 @@ def discover(budget, *, api, topics=(), warnings=None):
                           'discovery_query': query, 'discovered_at': api.now(),
                           'media': {**media, 'rights_confirmed': True,
                                     'rights_note': 'Public provider item-level rights metadata; verify before posting'}})
-    leads.extend(public_media.publisher_leads(topics, api))
+    try:
+        leads.extend(public_media.publisher_leads(topics, api))
+    except (api.Hold, api.Wait) as exc:
+        warnings.append('Publisher discovery unavailable: ' + type(exc).__name__)
     return leads
 
 
