@@ -26,13 +26,16 @@ class PublicMediaTests(unittest.TestCase):
         api = API()
         with tempfile.TemporaryDirectory() as tmp:
             api.WORK = Path(tmp)
-            with patch.object(p, 'archive', side_effect=api.Wait('unavailable')) as archive, \
+            with patch.object(p, 'peertube', side_effect=api.Wait('unavailable')) as peer, \
+                 patch.object(p, 'pixabay_video', return_value=[]) as pixabay, \
+                 patch.object(p, 'archive', side_effect=api.Wait('unavailable')) as archive, \
                  patch.object(p, 'nasa', return_value=[{'source_url':'https://images-assets.nasa.gov/test.mp4'}]) as nasa, \
                  patch.object(p, 'gov_library', return_value=[]) as gov, \
                  patch.object(p, 'commons', return_value=[]) as commons:
-                for mock, name in ((archive,'archive'),(nasa,'nasa'),(gov,'gov_library'),(commons,'commons')):
+                for mock, name in ((peer,'peertube'),(pixabay,'pixabay_video'),(archive,'archive'),(nasa,'nasa'),(gov,'gov_library'),(commons,'commons')):
                     mock.__name__ = name
                 self.assertEqual(len(list(p.discover('moon landing', api))), 1)
+                peer.assert_called_once()
                 nasa.assert_called_once()
                 commons.assert_not_called()
 
@@ -55,3 +58,17 @@ class PublicMediaTests(unittest.TestCase):
             result = list(p.archive('moon landing',api))
         self.assertEqual(len(result),1)
         self.assertEqual(result[0]['source_url'],'https://archive.org/download/moon-film/film.mp4')
+
+    def test_peertube_direct_reusable_video(self):
+        api = API()
+        uid = '12345678-1234-1234-1234-123456789abc'
+        item = {'url':'https://video.example/w/abc','uuid':uid,'duration':60}
+        detail = {'licence':{'id':1},'downloadEnabled':True,'name':'Gaming highlight',
+                  'files':[{'fileUrl':'https://video.example/clip.mp4','size':2000}]}
+        with patch.object(api,'json_http',side_effect=[{'data':[item]},detail],create=True):
+            result = list(p.peertube('gaming',api))
+        self.assertEqual(len(result),1)
+        self.assertEqual(result[0]['source_url'],'https://video.example/clip.mp4')
+        for denied in ({**detail,'downloadEnabled':False},{**detail,'licence':{'id':3}}):
+            with patch.object(api,'json_http',side_effect=[{'data':[item]},denied],create=True):
+                self.assertEqual(list(p.peertube('gaming',api)),[])
