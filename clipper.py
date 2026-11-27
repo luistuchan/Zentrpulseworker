@@ -90,7 +90,8 @@ def discover(budget, *, api, topics=(), warnings=None):
             warnings.append('Public media discovery failed for ' + query + ': ' + type(exc).__name__)
             continue
         for media in discovered:
-            if media.get('provider') in ('NASA', 'Library of Congress'):
+            # Stock footage is generally silent and is not a highlight source.
+            if media.get('provider') in ('NASA', 'Library of Congress', 'Pixabay'):
                 continue
             if media['source_url'] in seen or is_wikimedia(media['source_url']):
                 continue
