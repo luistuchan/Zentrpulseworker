@@ -171,9 +171,48 @@ def pixabay_video(query, api):
                'license': 'Pixabay Content License', 'license_url': 'https://pixabay.com/service/license-summary/'}
 
 
+def peertube(query, api):
+    """Federated video search; only public, explicitly reusable downloadable files."""
+    params = u.urlencode({'search': query, 'count': 12, 'nsfw': 'false'})
+    data = api.json_http('https://sepiasearch.org/api/v1/search/videos?' + params, retries=0)
+    for item in data.get('data', [])[:8]:
+        url = item.get('url', '')
+        p = u.urlsplit(url)
+        uuid = item.get('uuid', '')
+        if (p.scheme != 'https' or not p.hostname or p.username or p.password
+                or not re.fullmatch(r'[0-9a-fA-F-]{36}', str(uuid))
+                or item.get('isLive') or item.get('nsfw')
+                or not 20 <= (item.get('duration') or 0) <= 1200):
+            continue
+        try:
+            detail = api.json_http('https://' + p.netloc + '/api/v1/videos/' + uuid, retries=0)
+        except (api.Hold, api.Wait, ValueError, TypeError):
+            continue
+        licence = detail.get('licence') or {}
+        licence_id = licence.get('id')
+        # PeerTube's CC BY identifier; no ND/NC or unknown licences.
+        if licence_id != 1 or detail.get('downloadEnabled') is not True:
+            continue
+        files = detail.get('files') or []
+        valid = []
+        for f in files:
+            src = f.get('fileUrl', '')
+            if (u.urlsplit(src).scheme == 'https' and src.lower().split('?')[0].endswith('.mp4')
+                    and 0 < (f.get('size') or 0) <= 60_000_000):
+                valid.append(f)
+        if not valid:
+            continue
+        f = max(valid, key=lambda x: x.get('size', 0))
+        license_url = 'https://creativecommons.org/licenses/by/4.0/'
+        yield {'provider': 'PeerTube', 'source_url': f['fileUrl'],
+               'title': str(detail.get('name') or item.get('name') or query),
+               'attribution_url': url, 'creator': str((detail.get('account') or {}).get('displayName', '')),
+               'license': license_url, 'license_url': license_url}
+
+
 def discover(query, api):
     # Cache successful searches and empty results to avoid repeated free requests.
-    for provider in (pixabay_video, archive, nasa, gov_library):
+    for provider in (peertube, archive, pixabay_video, nasa, gov_library):
         cache = api.WORK / 'public-media-v2' / (hashlib.sha256((provider.__name__+'|'+query).encode()).hexdigest()+'.json')
         old = api.load(cache,{})
         if old and time.time()-old.get('time',0)<86400:
