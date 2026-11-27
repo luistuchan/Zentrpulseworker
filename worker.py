@@ -1996,6 +1996,12 @@ def produce_batch(state, budget, target):
                         # Explicit rate limits still block the host in the Wait handler.
                         # Continue with distinct candidates within the existing run budget.
                         state['last_run']['clip_download_failures'] = dict(clip_download_failures)
+                    if is_clip and clip_host and 'source requires access or refuses requests' in str(exc):
+                        # Repeated access denials indicate a host-level obstacle for this runner.
+                        # Preserve the remaining candidate budget for other providers.
+                        if clip_download_failures[clip_host] >= 2:
+                            blocked_clip_hosts.add(clip_host)
+                            state['last_run']['access_blocked_clip_hosts'] = sorted(blocked_clip_hosts)
                     stop = (str(exc).startswith(('Gemini model ', 'GEMINI_API_KEY missing',
                                                  'Confirm the API project is free-tier')))
                 except Exception as exc:
