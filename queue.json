@@ -10738,52 +10738,826 @@
       "source_pipeline_version": 4,
       "last_attempt_at": "2026-11-25T02:39:36.865311+00:00",
       "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
+    },
+    "64e6330b94ae1f9d": {
+      "title": "Clip highlight: Kumpulan MOMEN KOCAK di MINECRAFT MODE MUSTAHIL !!",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "4UzaAnYS2bw",
+      "discovery_query": "funny streamer reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:20.977400+00:00",
+      "views": 45970,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=4UzaAnYS2bw",
+        "creator": "eMWe",
+        "license": "creativeCommon"
+      },
+      "id": "64e6330b94ae1f9d",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:30.988260+00:00",
+      "attempts": 0
+    },
+    "870cc1b83c178271": {
+      "title": "Clip highlight: GRANNY En VR Es Una LOCURA",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "wLALAFv3HxY",
+      "discovery_query": "gaming funny moments",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:20.977427+00:00",
+      "views": 1178290,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=wLALAFv3HxY",
+        "creator": "Leexer",
+        "license": "creativeCommon"
+      },
+      "id": "870cc1b83c178271",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:31.020718+00:00",
+      "attempts": 0
+    },
+    "cabf17de6fc52db7": {
+      "title": "Clip highlight: I Stole Goals with Kaiser and made them Rage quit in blue lock rivals",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "lweHod2Ef28",
+      "discovery_query": "gaming funny moments",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:20.977434+00:00",
+      "views": 819614,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=lweHod2Ef28",
+        "creator": "AirforceYEAH",
+        "license": "creativeCommon"
+      },
+      "id": "cabf17de6fc52db7",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:31.082066+00:00",
+      "attempts": 0
+    },
+    "b3edf42eb5109466": {
+      "title": "Clip highlight: 15 NBA Legends Share Their \"Welcome To The League\" Moment",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "iupPpx3w3XA",
+      "discovery_query": "funny podcast moment",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:20.977461+00:00",
+      "views": 1070441,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=iupPpx3w3XA",
+        "creator": "YounGala",
+        "license": "creativeCommon"
+      },
+      "id": "b3edf42eb5109466",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:31.132808+00:00",
+      "attempts": 0
+    },
+    "2c17261a3947a990": {
+      "title": "Clip highlight: Pat McAfee Show Funny Moments Compilation",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "6GzQRC0yL30",
+      "discovery_query": "funny podcast moment",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:20.977463+00:00",
+      "views": 336398,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=6GzQRC0yL30",
+        "creator": "The Locker Room Show",
+        "license": "creativeCommon"
+      },
+      "id": "2c17261a3947a990",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:31.174044+00:00",
+      "attempts": 0
+    },
+    "0dbfc16970f4a4b0": {
+      "title": "Clip highlight: Jenna Julien Podcast funny moments",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "9337Q8xk15k",
+      "discovery_query": "funny podcast moment",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:20.977465+00:00",
+      "views": 16950,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=9337Q8xk15k",
+        "creator": "Arielle",
+        "license": "creativeCommon"
+      },
+      "id": "0dbfc16970f4a4b0",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:31.210940+00:00",
+      "attempts": 0
+    },
+    "4754eea104fe350c": {
+      "title": "Clip highlight: Funny Moments & Life Lessons with @Notanki_rutyo | Roaster, Vlogger ,Comedian | Podcast with Godhra",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "dp8YsYIi3kM",
+      "discovery_query": "funny podcast moment",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176792+00:00",
+      "views": 7159,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=dp8YsYIi3kM",
+        "creator": "Podcast With Godhra ( Panchmahal ) By Nirav Parmar",
+        "license": "creativeCommon"
+      },
+      "id": "4754eea104fe350c",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:31.283872+00:00",
+      "attempts": 0
+    },
+    "049556bfd41a57a7": {
+      "title": "Clip highlight: Marty and Michael Fully Actual | PODCAST BEST MOMENTS | Season 2 Episode 31",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "fGTYrbXeQB4",
+      "discovery_query": "funny podcast moment",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176814+00:00",
+      "views": 3705,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=fGTYrbXeQB4",
+        "creator": "Marty and Michael Fully Actual",
+        "license": "creativeCommon"
+      },
+      "id": "049556bfd41a57a7",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:31.343785+00:00",
+      "attempts": 0
+    },
+    "9f1c3dcd24dae7b6": {
+      "title": "Clip highlight: Shark 🦈 tank   funniest moments   Jenna & Julien podcast",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "tie8gFxs198",
+      "discovery_query": "funny podcast moment",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176817+00:00",
+      "views": 3558,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=tie8gFxs198",
+        "creator": "Arielle",
+        "license": "creativeCommon"
+      },
+      "id": "9f1c3dcd24dae7b6",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:31.390606+00:00",
+      "attempts": 0
+    },
+    "50a80a20ab04a2b8": {
+      "title": "Clip highlight: Bitter Betty Podcast - @RenMakesStuff Funny moments PT 3",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "gC0EMd82f-k",
+      "discovery_query": "funny podcast moment",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176820+00:00",
+      "views": 1569,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=gC0EMd82f-k",
+        "creator": "Bitter Betty Podcast",
+        "license": "creativeCommon"
+      },
+      "id": "50a80a20ab04a2b8",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:31.438479+00:00",
+      "attempts": 0
+    },
+    "ac25f8a8d0508be2": {
+      "title": "Clip highlight: Fishtank live season 3 winner Burt's funniest moments on Matan Evan's Podcast",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "RQ1Jl9tRLeQ",
+      "discovery_query": "funny podcast moment",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176823+00:00",
+      "views": 1220,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=RQ1Jl9tRLeQ",
+        "creator": "Counterstrike 1911",
+        "license": "creativeCommon"
+      },
+      "id": "ac25f8a8d0508be2",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:31.559663+00:00",
+      "attempts": 0
+    },
+    "9981373fbdf2e901": {
+      "title": "Clip highlight: Slop City Podcast Funniest Moment",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "cTx1LuZnhIo",
+      "discovery_query": "funny podcast moment",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176825+00:00",
+      "views": 219,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=cTx1LuZnhIo",
+        "creator": "DillPhobia",
+        "license": "creativeCommon"
+      },
+      "id": "9981373fbdf2e901",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:31.596481+00:00",
+      "attempts": 0
+    },
+    "5869e903dcbd81e8": {
+      "title": "Clip highlight: Bitter Betty Podcast - Funny moments and behind the scenes",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "T6vmz-deA7Q",
+      "discovery_query": "funny podcast moment",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176826+00:00",
+      "views": 175,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=T6vmz-deA7Q",
+        "creator": "Bitter Betty Podcast",
+        "license": "creativeCommon"
+      },
+      "id": "5869e903dcbd81e8",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:31.646904+00:00",
+      "attempts": 0
+    },
+    "39bd03d06b88fc69": {
+      "title": "Clip highlight: Joining random and interesting Podcasts on Roblox | Podcast Funny Moments, Talent show, Liver King",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "d_n8ErS6ncY",
+      "discovery_query": "funny podcast moment",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176828+00:00",
+      "views": 97,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=d_n8ErS6ncY",
+        "creator": "Dirtyoldman",
+        "license": "creativeCommon"
+      },
+      "id": "39bd03d06b88fc69",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:31.721665+00:00",
+      "attempts": 0
+    },
+    "d26351968caf0ee3": {
+      "title": "Clip highlight: Food Fight! (Extended Version) | with The Swedish Chef | Muppisode | The Muppets",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "3KtIBPwaRkk",
+      "discovery_query": "comedy sketch",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176850+00:00",
+      "views": 17645095,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=3KtIBPwaRkk",
+        "creator": "The Muppets",
+        "license": "creativeCommon"
+      },
+      "id": "d26351968caf0ee3",
+      "status": "HOLD",
+      "created_at": "2026-11-27T08:45:31.781615+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-27T08:45:37.263075+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
+    },
+    "3624dffc3c56ce1a": {
+      "title": "Clip highlight: Chammak Chandra Performance | Extra Jabardasth | 25th January 2019   | ETV Telugu",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "PsYLVzTJFlo",
+      "discovery_query": "comedy sketch",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176852+00:00",
+      "views": 14435323,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=PsYLVzTJFlo",
+        "creator": "ETV Jabardasth",
+        "license": "creativeCommon"
+      },
+      "id": "3624dffc3c56ce1a",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:31.841259+00:00",
+      "attempts": 0
+    },
+    "e8065b7906713e28": {
+      "title": "Clip highlight: One of My Favorite \"Bernie Mac\" Jokes",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "X3nr1xqbsbA",
+      "discovery_query": "comedy sketch",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176854+00:00",
+      "views": 13562857,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=X3nr1xqbsbA",
+        "creator": "Walter Latham Comedy",
+        "license": "creativeCommon"
+      },
+      "id": "e8065b7906713e28",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:31.881004+00:00",
+      "attempts": 0
+    },
+    "5ac8cc550170d0e6": {
+      "title": "Clip highlight: Sudigaali Sudheer Performance | Extra Jabardasth | 24th August 2018 | ETV Telugu",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "U2eWOvZLtuY",
+      "discovery_query": "comedy sketch",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176855+00:00",
+      "views": 12854222,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=U2eWOvZLtuY",
+        "creator": "ETV Jabardasth",
+        "license": "creativeCommon"
+      },
+      "id": "5ac8cc550170d0e6",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:31.943491+00:00",
+      "attempts": 0
+    },
+    "53487fb9a6d1b7f4": {
+      "title": "Clip highlight: Bullet Bhaskar, Awesome Appi Performance | Extra Jabardasth | 27th September 2019    | ETV  Telugu",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "io5uPpPhxGE",
+      "discovery_query": "comedy sketch",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176862+00:00",
+      "views": 11163315,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=io5uPpPhxGE",
+        "creator": "ETV Jabardasth",
+        "license": "creativeCommon"
+      },
+      "id": "53487fb9a6d1b7f4",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:32.195078+00:00",
+      "attempts": 0
+    },
+    "fa24c9ef67431a0c": {
+      "title": "Clip highlight: George Lopez \"Mexican Relatives\" Latin Kings of Comedy Tour",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "lQdot11SVMw",
+      "discovery_query": "comedy sketch",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176863+00:00",
+      "views": 10671664,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=lQdot11SVMw",
+        "creator": "Walter Latham Comedy",
+        "license": "creativeCommon"
+      },
+      "id": "fa24c9ef67431a0c",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:32.247628+00:00",
+      "attempts": 0
+    },
+    "c1191e87cbc32a17": {
+      "title": "Clip highlight: Avinash & Karthik Performance | Extra Jabardasth| 19th October 2018 | ETV Telugu",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "HnkfzxoB7p8",
+      "discovery_query": "comedy sketch",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176865+00:00",
+      "views": 10214509,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=HnkfzxoB7p8",
+        "creator": "ETV Jabardasth",
+        "license": "creativeCommon"
+      },
+      "id": "c1191e87cbc32a17",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:32.315869+00:00",
+      "attempts": 0
+    },
+    "c2ce03deb486584e": {
+      "title": "Clip highlight: Reggie Reg - Denzel Washington - Bad Boys Of Comedy\"",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "n-mmxFdva4w",
+      "discovery_query": "comedy sketch",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176868+00:00",
+      "views": 8498583,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=n-mmxFdva4w",
+        "creator": "Walter Latham Comedy",
+        "license": "creativeCommon"
+      },
+      "id": "c2ce03deb486584e",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:32.424460+00:00",
+      "attempts": 0
+    },
+    "93c0c599aeec2d12": {
+      "title": "Clip highlight: Reading Mean Comments About My Dogs",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "rRbHTeAcJLQ",
+      "discovery_query": "funny pets reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176892+00:00",
+      "views": 17873197,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=rRbHTeAcJLQ",
+        "creator": "JennaMarbles",
+        "license": "creativeCommon"
+      },
+      "id": "93c0c599aeec2d12",
+      "status": "HOLD",
+      "created_at": "2026-11-27T08:45:32.463512+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-27T08:45:36.208166+00:00",
+      "blocker": "Clipper source unavailable in both combined and split formats; source requires access or refuses requests; try another authorized source"
+    },
+    "603181dca31f39a6": {
+      "title": "Clip highlight: Funny Dog Injection videos - Dog Injection Funny Compilation",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "WMUXshYefDo",
+      "discovery_query": "funny pets reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176893+00:00",
+      "views": 18659,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=WMUXshYefDo",
+        "creator": "Dog Crest",
+        "license": "creativeCommon"
+      },
+      "id": "603181dca31f39a6",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:32.517000+00:00",
+      "attempts": 0
+    },
+    "1bdca34c635dd1f7": {
+      "title": "Clip highlight: #Funny #Animals #Reaction | Motivational Animal Fun.",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "khDt1IR2Xqs",
+      "discovery_query": "funny pets reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176895+00:00",
+      "views": 8014,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=khDt1IR2Xqs",
+        "creator": "Meditation with #Finance #Tech & #News",
+        "license": "creativeCommon"
+      },
+      "id": "1bdca34c635dd1f7",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:32.562971+00:00",
+      "attempts": 0
+    },
+    "81b65a57ffceda52": {
+      "title": "Clip highlight: Dogs And Cats Reaction To Food - Funny Animal Reaction - Try not to laugh challenge",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "HPxvOf_NMuE",
+      "discovery_query": "funny pets reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176896+00:00",
+      "views": 6731,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=HPxvOf_NMuE",
+        "creator": "Kick Game Play",
+        "license": "creativeCommon"
+      },
+      "id": "81b65a57ffceda52",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:32.631448+00:00",
+      "attempts": 0
+    },
+    "1286d8a131330f41": {
+      "title": "Clip highlight: 😆 Pets Try On Snapchat Filter - Funny Pet Reaction 🤣Pets Tiktok Compilation",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "-iauLY_PS94",
+      "discovery_query": "funny pets reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.176898+00:00",
+      "views": 4736,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=-iauLY_PS94",
+        "creator": "Petzone",
+        "license": "creativeCommon"
+      },
+      "id": "1286d8a131330f41",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:32.697039+00:00",
+      "attempts": 0
+    },
+    "40ef52bea579cba3": {
+      "title": "Clip highlight: AWW SO FUNNY😂😂 Super Dogs Reaction Videos@all Dogs",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "GJ5xDveNM1I",
+      "discovery_query": "funny pets reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.343134+00:00",
+      "views": 3131,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=GJ5xDveNM1I",
+        "creator": "CUTE FUNNY ANIMALS ",
+        "license": "creativeCommon"
+      },
+      "id": "40ef52bea579cba3",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:32.746159+00:00",
+      "attempts": 0
+    },
+    "a64d486b940d4323": {
+      "title": "Clip highlight: funny animals | funny pets | funniest cat reactions | Footage No Copyright",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "lPhp-Td3FIw",
+      "discovery_query": "funny pets reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.343156+00:00",
+      "views": 2989,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=lPhp-Td3FIw",
+        "creator": "Footage No Copyright",
+        "license": "creativeCommon"
+      },
+      "id": "a64d486b940d4323",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:32.810167+00:00",
+      "attempts": 0
+    },
+    "80bdb03092b25941": {
+      "title": "Clip highlight: Try not to laugh - Funny dogs 🐶 and cats  😻 reaction || Funny pets compilation 2021 || Animal Gags",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "CFLxys_ytA8",
+      "discovery_query": "funny pets reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.343159+00:00",
+      "views": 1997,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=CFLxys_ytA8",
+        "creator": "Animal Gags",
+        "license": "creativeCommon"
+      },
+      "id": "80bdb03092b25941",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:32.881780+00:00",
+      "attempts": 0
+    },
+    "16405d44c46c1beb": {
+      "title": "Clip highlight: Funny Cats & Dogs reaction to Human Emoji's.",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "plIoFaJbSsY",
+      "discovery_query": "funny pets reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.343161+00:00",
+      "views": 1489,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=plIoFaJbSsY",
+        "creator": "CHEEKY PET VIDEOS",
+        "license": "creativeCommon"
+      },
+      "id": "16405d44c46c1beb",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:32.926370+00:00",
+      "attempts": 0
+    },
+    "401f87c9cd340623": {
+      "title": "Clip highlight: FUNNY ANIMAL VIDEOS 2019 - FUNNY ANIMAL REACTIONS",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "UuuRIu3-m3s",
+      "discovery_query": "funny pets reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.343163+00:00",
+      "views": 1415,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=UuuRIu3-m3s",
+        "creator": "BINGE TV",
+        "license": "creativeCommon"
+      },
+      "id": "401f87c9cd340623",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:32.973176+00:00",
+      "attempts": 0
+    },
+    "e4166c9aaa1edfbe": {
+      "title": "Clip highlight: Dogs And Cats Reaction To Food - Funny Animal Reaction",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "tG6-jRyXcCk",
+      "discovery_query": "funny pets reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.343165+00:00",
+      "views": 1379,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=tG6-jRyXcCk",
+        "creator": "أميرة مصر دودو",
+        "license": "creativeCommon"
+      },
+      "id": "e4166c9aaa1edfbe",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:33.024570+00:00",
+      "attempts": 0
+    },
+    "543362642de70b43": {
+      "title": "Clip highlight: Cute Kittens Funny Reactions, Playful Friends & Adorable Feline Fun 😂🐱",
+      "category": "clipper",
+      "content_type": "clipper",
+      "source_video_id": "4CNSykzgNc4",
+      "discovery_query": "funny pets reaction",
+      "discovery_only": false,
+      "discovered_at": "2026-11-27T08:42:21.343166+00:00",
+      "views": 1279,
+      "media": {
+        "source_url": "https://www.youtube.com/watch?v=4CNSykzgNc4",
+        "creator": "Cute Cat Cozy Corner",
+        "license": "creativeCommon"
+      },
+      "id": "543362642de70b43",
+      "status": "QUEUED",
+      "created_at": "2026-11-27T08:45:33.083967+00:00",
+      "attempts": 0
+    },
+    "bbf1ea5cce4f04eb": {
+      "title": "Pixabay clip: video game, arcade game, computer game, gamer, gaming controller, electronic game, digital games, game boy, game character, game pad, games, game, mobile game, gameplay, play the game, gaming background, gaming chair, gaming computer, gaming machine, gaming mouse, gaming set up",
+      "category": "clipper",
+      "content_type": "clipper",
+      "discovery_query": "gaming gameplay",
+      "discovered_at": "2026-11-27T08:43:27.595985+00:00",
+      "media": {
+        "provider": "Pixabay",
+        "source_url": "https://cdn.pixabay.com/video/2021/11/21/98615-649311005_medium.mp4",
+        "title": "video game, arcade game, computer game, gamer, gaming controller, electronic game, digital games, game boy, game character, game pad, games, game, mobile game, gameplay, play the game, gaming background, gaming chair, gaming computer, gaming machine, gaming mouse, gaming set up",
+        "attribution_url": "https://pixabay.com/videos/id-98615/",
+        "creator": "DEZYNE_3D",
+        "license": "Pixabay Content License",
+        "license_url": "https://pixabay.com/service/license-summary/",
+        "rights_confirmed": true,
+        "rights_note": "Public provider item-level rights metadata; verify before posting"
+      },
+      "id": "bbf1ea5cce4f04eb",
+      "status": "HOLD",
+      "created_at": "2026-11-27T08:45:33.254194+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-27T08:45:34.258163+00:00",
+      "blocker": "Downloaded source has no original audio or video"
+    },
+    "f935b77f974a63f7": {
+      "title": "Pixabay clip: stickman, dance, dancer, party, music, performance, cartoon, move, shimmy, humour, humor, comic, character, funny, jester, humorous, joke, silly, fun, comedy, clown, joker, salsa, gold, 3d",
+      "category": "clipper",
+      "content_type": "clipper",
+      "discovery_query": "comedy performance",
+      "discovered_at": "2026-11-27T08:43:45.827531+00:00",
+      "media": {
+        "provider": "Pixabay",
+        "source_url": "https://cdn.pixabay.com/video/2025/11/29/318752_medium.mp4",
+        "title": "stickman, dance, dancer, party, music, performance, cartoon, move, shimmy, humour, humor, comic, character, funny, jester, humorous, joke, silly, fun, comedy, clown, joker, salsa, gold, 3d",
+        "attribution_url": "https://pixabay.com/videos/id-318752/",
+        "creator": "DEZYNE_3D",
+        "license": "Pixabay Content License",
+        "license_url": "https://pixabay.com/service/license-summary/",
+        "rights_confirmed": true,
+        "rights_note": "Public provider item-level rights metadata; verify before posting"
+      },
+      "id": "f935b77f974a63f7",
+      "status": "HOLD",
+      "created_at": "2026-11-27T08:45:33.377344+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-27T08:45:34.528256+00:00",
+      "blocker": "Downloaded source has no original audio or video"
+    },
+    "9f932e36f005ad0d": {
+      "title": "Pixabay clip: cartoon, character, carlton, silly, dance, 3d, animated, toon, fun, funny, joke, comic, comedy, party, music, performance, disco, dancer, humor, happy, ridiculous, lol, goofy, humour",
+      "category": "clipper",
+      "content_type": "clipper",
+      "discovery_query": "comedy performance",
+      "discovered_at": "2026-11-27T08:43:45.827551+00:00",
+      "media": {
+        "provider": "Pixabay",
+        "source_url": "https://cdn.pixabay.com/video/2026/01/31/331598_medium.mp4",
+        "title": "cartoon, character, carlton, silly, dance, 3d, animated, toon, fun, funny, joke, comic, comedy, party, music, performance, disco, dancer, humor, happy, ridiculous, lol, goofy, humour",
+        "attribution_url": "https://pixabay.com/videos/id-331598/",
+        "creator": "DEZYNE_3D",
+        "license": "Pixabay Content License",
+        "license_url": "https://pixabay.com/service/license-summary/",
+        "rights_confirmed": true,
+        "rights_note": "Public provider item-level rights metadata; verify before posting"
+      },
+      "id": "9f932e36f005ad0d",
+      "status": "HOLD",
+      "created_at": "2026-11-27T08:45:33.730272+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-27T08:45:34.914263+00:00",
+      "blocker": "Downloaded source has no original audio or video"
+    },
+    "ef05a9661abf779b": {
+      "title": "Pixabay clip: skateboard, skate park, tricks, skateboarding, skateboarder, skate, outdoor, extreme, park, lifestyle, dynamic, sports, youth, people, skatepark, fun, skating, jump, active, action, practice, activity, young, sneakers, kid, boy, male",
+      "category": "clipper",
+      "content_type": "clipper",
+      "discovery_query": "skateboarding tricks",
+      "discovered_at": "2026-11-27T08:45:30.942436+00:00",
+      "media": {
+        "provider": "Pixabay",
+        "source_url": "https://cdn.pixabay.com/video/2016/02/29/2295-157183598_medium.mp4",
+        "title": "skateboard, skate park, tricks, skateboarding, skateboarder, skate, outdoor, extreme, park, lifestyle, dynamic, sports, youth, people, skatepark, fun, skating, jump, active, action, practice, activity, young, sneakers, kid, boy, male",
+        "attribution_url": "https://pixabay.com/videos/id-2295/",
+        "creator": "Coverr-Free-Footage",
+        "license": "Pixabay Content License",
+        "license_url": "https://pixabay.com/service/license-summary/",
+        "rights_confirmed": true,
+        "rights_note": "Public provider item-level rights metadata; verify before posting"
+      },
+      "id": "ef05a9661abf779b",
+      "status": "HOLD",
+      "created_at": "2026-11-27T08:45:34.114894+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-27T08:45:35.340116+00:00",
+      "blocker": "Downloaded source has no original audio or video"
+    },
+    "4f9d863427d41569": {
+      "title": "Pixabay clip: skateboard, park, skatepark, skate, rollerblades, inline skates, skating, sport, tricks, aggressive, skateboarding, skater, active, teenager, boy, outdoors",
+      "category": "clipper",
+      "content_type": "clipper",
+      "discovery_query": "skateboarding tricks",
+      "discovered_at": "2026-11-27T08:45:30.942450+00:00",
+      "media": {
+        "provider": "Pixabay",
+        "source_url": "https://cdn.pixabay.com/video/2024/06/29/218666_medium.mp4",
+        "title": "skateboard, park, skatepark, skate, rollerblades, inline skates, skating, sport, tricks, aggressive, skateboarding, skater, active, teenager, boy, outdoors",
+        "attribution_url": "https://pixabay.com/videos/id-218666/",
+        "creator": "GreenCardShow",
+        "license": "Pixabay Content License",
+        "license_url": "https://pixabay.com/service/license-summary/",
+        "rights_confirmed": true,
+        "rights_note": "Public provider item-level rights metadata; verify before posting"
+      },
+      "id": "4f9d863427d41569",
+      "status": "HOLD",
+      "created_at": "2026-11-27T08:45:34.224396+00:00",
+      "attempts": 1,
+      "source_pipeline_version": 4,
+      "last_attempt_at": "2026-11-27T08:45:35.563241+00:00",
+      "blocker": "Downloaded source has no original audio or video"
     }
   },
   "budget": {
-    "day": "2026-11-24",
+    "day": "2026-11-27",
     "reset_timezone": "America/Los_Angeles",
-    "youtube": 18,
-    "ai": 12,
-    "pixabay": 8
+    "youtube": 13
   },
   "content_cycle_index": 2,
   "content_batch": null,
   "production_runs": 5,
   "last_run": {
-    "started_at": "2026-11-25T03:54:16.607792+00:00",
+    "started_at": "2026-11-27T08:45:34.234454+00:00",
     "attempted_ids": [
-      "13767baadb18d3f8",
-      "dd2475af00fa881d",
-      "2250fce32de7dc40",
-      "d77d808fe2f82a63",
-      "6a6282980e41899e",
-      "d200b1d9f859c8eb",
-      "123d702afc66deea",
-      "995a30ea58b04ec7",
-      "3bfd20eb7ddcccbd"
+      "bbf1ea5cce4f04eb",
+      "f935b77f974a63f7",
+      "9f932e36f005ad0d",
+      "ef05a9661abf779b",
+      "4f9d863427d41569",
+      "93c0c599aeec2d12",
+      "d26351968caf0ee3"
     ],
     "completed_ids": [],
     "model": "gemini-3.5-flash-lite",
     "ai_requests_by_candidate": {
-      "13767baadb18d3f8": 0,
-      "dd2475af00fa881d": 0,
-      "2250fce32de7dc40": 0,
-      "d77d808fe2f82a63": 0,
-      "6a6282980e41899e": 0,
-      "d200b1d9f859c8eb": 0,
-      "123d702afc66deea": 0,
-      "995a30ea58b04ec7": 0,
-      "3bfd20eb7ddcccbd": 0
+      "bbf1ea5cce4f04eb": 0,
+      "f935b77f974a63f7": 0,
+      "9f932e36f005ad0d": 0,
+      "ef05a9661abf779b": 0,
+      "4f9d863427d41569": 0,
+      "93c0c599aeec2d12": 0,
+      "d26351968caf0ee3": 0
     },
     "clip_download_failures": {
-      "www.youtube.com": 9
+      "www.youtube.com": 2
     },
+    "access_blocked_clip_hosts": [
+      "www.youtube.com"
+    ],
     "categories_deferred": [
       "clipper"
     ],
-    "finished_at": "2026-11-25T03:54:26.942302+00:00",
-    "attempted": 9,
+    "finished_at": "2026-11-27T08:45:38.264082+00:00",
+    "attempted": 7,
     "completed": 0,
     "gemini_request_attempts": 0
   },
