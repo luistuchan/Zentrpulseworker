@@ -138,8 +138,11 @@ def source_media(entry, folder, api):
     social_hosts = ('instagram.com', 'www.instagram.com', 'tiktok.com', 'www.tiktok.com',
                     'x.com', 'www.x.com', 'twitter.com', 'www.twitter.com',
                     'facebook.com', 'www.facebook.com', 'fb.watch')
-    if p.hostname in ('www.youtube.com', 'youtube.com', 'youtu.be') or p.hostname in social_hosts:
-        if p.hostname in social_hosts and (cc or media.get('rights_confirmed') is not True):
+    authorized_video_hosts = ('vimeo.com', 'dailymotion.com', 'dai.ly', 'twitch.tv', 'reddit.com')
+    is_social = any(p.hostname == host or (p.hostname or '').endswith('.' + host)
+                    for host in social_hosts + authorized_video_hosts)
+    if p.hostname in ('www.youtube.com', 'youtube.com', 'youtu.be') or is_social:
+        if is_social and (cc or media.get('rights_confirmed') is not True):
             raise api.Hold('Social clip requires explicit reuse authorization')
 
         # Do not trust stale partial files from a previous failed download.
