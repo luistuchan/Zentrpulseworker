@@ -193,13 +193,17 @@ def peertube(query, api):
         # PeerTube's CC BY identifier; no ND/NC or unknown licences.
         if licence_id != 1 or detail.get('downloadEnabled') is not True:
             continue
-        files = detail.get('files') or []
+        files = list(detail.get('files') or [])
+        for playlist in detail.get('streamingPlaylists') or []:
+            files.extend(playlist.get('files') or [])
         valid = []
         for f in files:
-            src = f.get('fileUrl', '')
+            src = f.get('fileUrl') or f.get('fileDownloadUrl') or ''
+            if f.get('hasAudio') is False or f.get('hasVideo') is False:
+                continue
             if (u.urlsplit(src).scheme == 'https' and src.lower().split('?')[0].endswith('.mp4')
                     and 0 < (f.get('size') or 0) <= 60_000_000):
-                valid.append(f)
+                valid.append({**f, 'fileUrl': src})
         if not valid:
             continue
         f = max(valid, key=lambda x: x.get('size', 0))
@@ -213,7 +217,7 @@ def peertube(query, api):
 def discover(query, api):
     # Cache successful searches and empty results to avoid repeated free requests.
     for provider in (peertube, archive, pixabay_video, nasa, gov_library):
-        cache = api.WORK / 'public-media-v2' / (hashlib.sha256((provider.__name__+'|'+query).encode()).hexdigest()+'.json')
+        cache = api.WORK / 'public-media-v3' / (hashlib.sha256((provider.__name__+'|'+query).encode()).hexdigest()+'.json')
         old = api.load(cache,{})
         if old and time.time()-old.get('time',0)<86400:
             yield from old.get('items',[])
