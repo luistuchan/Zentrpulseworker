@@ -80,7 +80,10 @@ def discover(budget, *, api, topics=(), warnings=None):
     seen = set()
     # Additional public video libraries; no new paid key or AI calls.
     import public_media
-    for query in queries[:4]:
+    # Broader archive searches avoid requiring three exact words in every result.
+    # Keep entertainment-first queries and add reusable non-YouTube alternatives.
+    public_queries = list(dict.fromkeys(queries[:4] + ['gaming gameplay', 'comedy performance', 'funny animals', 'skateboarding tricks']))
+    for query in public_queries:
         try:
             discovered = list(public_media.discover(query, api))[:6]
         except (api.Hold, api.Wait) as exc:
